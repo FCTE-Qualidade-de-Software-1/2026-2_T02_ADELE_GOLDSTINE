@@ -1,7 +1,8 @@
 site_name: "T02 - Adele Goldstine"
 site_description: "Documentação do Projeto - Turma 02 - Adele Goldstine"
 site_author: "Daniel Nunes, Davi Nobre, Felipe Campêlo, Leonardo Bonetti"
-repo_url: ""
+site_url: "https://fcte-qualidade-de-software-1.github.io/2026-2_T02_ADELE_GOLDSTINE/"
+repo_url: "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE"
 
 theme:
   name: material

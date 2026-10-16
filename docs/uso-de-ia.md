@@ -1,11 +1,16 @@
 # Uso de IA
 
-<!-- Documentar aqui o uso de ferramentas de IA no projeto -->
+Esta página documenta todos os usos de ferramentas de Inteligência Artificial ao longo do projeto, incluindo a finalidade, a data de utilização e o responsável.
 
-## Usos de IA na entrega de 26/10/2026
+## Ferramentas utilizadas
 
-### Histórico de versão
+| Ferramenta | Finalidade | Data | Responsável |
+| :--------: | :--------: | :--: | :---------: |
+| DeepSeek v4 | Estruturação inicial do repositório MkDocs | 16/10/2026 | [Davi Nobre](https://github.com/Jagaima) |
 
-| Nome do Membro | Contribuição | Data |
-| :--- | :--- | :--- | :--- |
-| [Davi Nobre](https://github.com/Jagaima) | Aprimoramento da organização de pastas | 16/10 |
+## Histórico de Versão
+
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 16/10/2026 | Criação da página de uso de IA | [Davi Nobre](https://github.com/Jagaima) |
+
