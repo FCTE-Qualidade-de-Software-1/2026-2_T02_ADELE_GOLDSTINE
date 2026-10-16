@@ -3,6 +3,7 @@ site_description: "Documentação do Projeto - Turma 02 - Adele Goldstine"
 site_author: "Daniel Nunes, Davi Nobre, Felipe Campêlo, Leonardo Bonetti"
 site_url: "https://fcte-qualidade-de-software-1.github.io/2026-2_T02_ADELE_GOLDSTINE/"
 repo_url: "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE"
+copyright: "Equipe Adele Goldstine - FGA0315 Qualidade de Software 1 - Versão 1.1 - Atualizado em 16/10/2026"
 
 theme:
   name: material
@@ -33,7 +34,11 @@ extra_css:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - attr_list
   - md_in_html
   - tables
@@ -42,6 +47,12 @@ nav:
   - Início: index.md
   - Fase 1:
     - fase-1/index.md
+    - Propósito e Partes Interessadas: fase-1/proposito-stakeholders.md
+    - Software Avaliado: fase-1/software-avaliado.md
+    - Modelo de Qualidade: fase-1/modelo-qualidade.md
+    - Características Priorizadas: fase-1/caracteristicas.md
+    - Escopo e Rigor: fase-1/escopo.md
+    - ODS: fase-1/ods.md
   - Fase 2:
     - fase-2/index.md
     - Objetivos: fase-2/objetivos.md

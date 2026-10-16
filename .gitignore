@@ -17,3 +17,6 @@ env/
 .DS_Store
 Thumbs.db
 
+
+# Capturas originais com dados pessoais (usar as versões anonimizadas em docs/fase-1/img)
+Captura de Tela*.png
