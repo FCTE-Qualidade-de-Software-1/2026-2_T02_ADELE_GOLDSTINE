@@ -1,0 +1,59 @@
+site_name: "T02 - Adele Goldstine"
+site_description: "Documentação do Projeto - Turma 02 - Adele Goldstine"
+site_author: "Daniel Nunes, Davi Nobre, Felipe Campêlo, Leonardo Bonetti"
+repo_url: ""
+
+theme:
+  name: material
+  language: pt-BR
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Modo escuro
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - content.tabs.link
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - tables
+
+nav:
+  - Início: index.md
+  - Fase 1:
+    - fase-1/index.md
+  - Fase 2:
+    - fase-2/index.md
+    - Objetivos: fase-2/objetivos.md
+    - Questões: fase-2/questoes.md
+    - Hipóteses: fase-2/hipoteses.md
+    - Métricas: fase-2/metricas.md
+    - Níveis de Pontuação: fase-2/niveis-pontuacao.md
+    - Gráfico GQM: fase-2/grafico-gqm.md
+  - Artigo:
+    - Introdução: artigo/introducao.md
+    - Referencial Teórico: artigo/referencial-teorico.md
+    - Metodologia: artigo/metodologia.md
+  - Contribuição: contribuicao.md
+  - Referências: referencias.md
+  - Uso de IA: uso-de-ia.md
+
