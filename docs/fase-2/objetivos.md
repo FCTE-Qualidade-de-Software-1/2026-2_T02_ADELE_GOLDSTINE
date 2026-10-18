@@ -26,7 +26,7 @@ Foi definido um objetivo para cada uma das quatro características priorizadas n
 | -------- | --------- |
 | **Analisar** | a interface web do portal do discente do SIGAA/UnB |
 | **com o propósito de** | avaliar, a fim de identificar pontos fracos |
-| **com respeito à** | capacidade de interação (reconhecimento de adequação, apreensibilidade, operabilidade, proteção contra erros do usuário, inclusividade e autodescritividade) |
+| **com respeito à** | capacidade de interação (reconhecimento de adequação, apreensibilidade, operabilidade, proteção contra erros do usuário, inclusividade e autodescritividade), complementada pela satisfação (qualidade em uso) |
 | **do ponto de vista do** | estudante de graduação da UnB, com atenção a calouros e a estudantes com deficiência |
 | **no contexto** | da execução das tarefas T1 a T6 em computador, na versão v4.15.10.115 em uso no 2º semestre letivo de 2026 |
 
@@ -74,3 +74,4 @@ Foi definido um objetivo para cada uma das quatro características priorizadas n
 | 1.1 | 17/10/2026 | Definição dos objetivos G1, G2 e G3 no template GQM | Felipe Campêlo |
 | 1.2 | 18/10/2026 | Numeração e legendas de tabelas; propósito dos objetivos; recortes da Usabilidade e da Portabilidade | Felipe Campêlo |
 | 2.0 | 18/10/2026 | Alinhamento à Fase 1 reestruturada: objetivo G4 (Eficiência de Desempenho), nomenclatura da ISO/IEC 25010:2023 e subcaracterísticas mantidas na Fase 1 | Felipe Campêlo |
+| 2.1 | 18/10/2026 | Satisfação declarada no foco de qualidade de G2 | Felipe Campêlo |
