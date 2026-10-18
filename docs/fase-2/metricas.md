@@ -1,6 +1,6 @@
 # Métricas
 
-As métricas representam o **nível quantitativo** do GQM. Para cada métrica são documentados a questão que ela responde, a definição, o procedimento de cálculo, a fonte dos dados, o procedimento de coleta e o critério de interpretação. Sempre que possível, as fórmulas seguem as medidas propostas na ISO/IEC 25023 [1].
+As métricas representam o **nível quantitativo** do GQM. Para cada métrica são documentados a questão que ela responde, a definição, o procedimento de cálculo, a fonte dos dados, o procedimento de coleta e o critério de interpretação. Sempre que possível, as fórmulas seguem as medidas propostas na ISO/IEC 25023 [1]. As métricas obtidas na execução das tarefas pelos estudantes (conclusão, tempo e satisfação) também correspondem às medidas de eficácia, eficiência e satisfação da ISO/IEC 25022 [6].
 
 As métricas foram escolhidas por serem **simples** (calculadas com contagens, razões ou medianas), **objetivas** (dois avaliadores seguindo o mesmo procedimento obtêm o mesmo valor) e **válidas** (cada uma mede diretamente o atributo perguntado na questão).
 
@@ -8,7 +8,7 @@ As faixas de julgamento de cada métrica estão na página [Níveis de Pontuaç�
 
 ## Resumo
 
-A Tabela 1 resume as métricas, e as Tabelas 2 a 20 detalham cada uma delas.
+A Tabela 1 resume as métricas, e as Tabelas 2 a 21 detalham cada uma delas. A métrica auxiliar MA1 está na Tabela 22, e os artefatos de dados previstos, na Tabela 23.
 
 *Tabela 1 - Resumo das métricas.*
 
@@ -33,6 +33,18 @@ A Tabela 1 resume as métricas, e as Tabelas 2 a 20 detalham cada uma delas.
 | M17 | Tempo de carregamento em rede móvel simulada | Q13 | Mediana do LCP (s) | Menor possível |
 | M18 | Peso transferido por página | Q14 | Mediana do total transferido (MB) | Menor possível |
 | M19 | Requisições por página | Q14 | Mediana do número de requisições | Menor possível |
+| M20 | Cobertura de tratamento de cenários de erro | Q7 | X = A/B | 1 |
+
+Além delas, a métrica auxiliar **MA1** (taxa de declaração de função inexistente) é usada apenas para verificar a hipótese de relação HR3 e não recebe nível de pontuação (Tabela 22).
+
+## Definições comuns
+
+As definições abaixo valem para todas as métricas coletadas sobre as tarefas e são fixadas antes da coleta.
+
+- **Caminho mais curto (caminho ótimo):** menor sequência de passos que conclui a tarefa a partir da página inicial do portal do discente, definida pela equipe por inspeção antes do teste. Caminhos alternativos válidos também são registrados e são usados para classificar a primeira escolha em M4.
+- **Passo:** cada clique ou toque em link, botão, item de menu ou controle de seleção que muda o estado da interface, incluindo o envio de formulário. Rolagem, digitação dentro de um mesmo campo e cliques em áreas sem ação não contam como passo. Em M7, cada passo corresponde a um clique.
+- **Ajuda:** qualquer intervenção do moderador, consulta a colega ou consulta a fonte externa (busca na internet, tutorial). Consultar a legenda do próprio sistema não é ajuda para M5; em M11, porém, abrir a legenda invalida a resposta, conforme a ficha da métrica.
+- **Tarefa concluída:** o participante obtém a informação ou o documento pedido e o informa corretamente ao moderador, sem ajuda e em até 5 minutos, conforme os critérios de M5.
 
 ## G1 - Adequação Funcional
 
@@ -46,8 +58,8 @@ A Tabela 1 resume as métricas, e as Tabelas 2 a 20 detalham cada uma delas.
 | **Definição** | Proporção das funções necessárias ao estudante que estão implementadas no SIGAA. Baseada na medida de cobertura funcional da ISO/IEC 25023. |
 | **Cálculo** | X = 1 − A/B, onde A = número de funções da lista de referência ausentes no SIGAA e B = número total de funções da lista de referência. |
 | **Fonte dos dados** | Lista de referência de funções, montada a partir de (a) respostas à pergunta aberta sobre funções que o estudante sente falta no SIGAA, incluída no questionário de M3 (Tabela 4), (b) funções oferecidas por ferramentas comunitárias usadas pelos estudantes da UnB (OP-07) e (c) funções necessárias às tarefas T1 a T6. |
-| **Procedimento de coleta** | 1. Consolidar a lista de referência, removendo duplicatas. 2. Dois avaliadores verificam, de forma independente, se cada função existe no SIGAA, registrando a evidência (captura de tela e caminho de menus). 3. Divergências entre avaliadores são resolvidas por um terceiro membro. |
-| **Interpretação** | Quanto mais próximo de 1, mais completo é o SIGAA em relação às necessidades dos estudantes. |
+| **Procedimento de coleta** | 1. Consolidar a lista de referência, removendo duplicatas, e associar a cada tarefa as funções necessárias a ela (exemplo para T4: exibir o IRA; exibir a carga horária pendente por tipo de componente; listar os componentes obrigatórios pendentes). 2. Dois avaliadores verificam, de forma independente, se cada função existe no SIGAA, registrando a evidência (captura de tela e caminho de menus). 3. Divergências entre avaliadores são resolvidas por um terceiro membro. |
+| **Interpretação** | Quanto mais próximo de 1, mais completo é o SIGAA em relação às necessidades dos estudantes. O resultado é calculado no geral e por tarefa, considerando as funções associadas a cada tarefa. Uma função que existe, mas não foi encontrada por um participante, não é contada como ausente; esse caso é registrado na métrica auxiliar MA1 (Tabela 22). |
 
 ### M2 - Taxa de correção funcional
 
@@ -59,8 +71,8 @@ A Tabela 1 resume as métricas, e as Tabelas 2 a 20 detalham cada uma delas.
 | **Definição** | Proporção de verificações em que a informação exibida pelo SIGAA coincide com a fonte de referência. Baseada na medida de correção funcional da ISO/IEC 25023. |
 | **Cálculo** | X = 1 − A/B, onde A = número de verificações com divergência e B = número total de verificações realizadas. |
 | **Fonte dos dados** | (a) Fontes oficiais independentes do SIGAA: projeto pedagógico do curso (PPC) e calendário acadêmico publicado pela UnB. (b) Consistência interna entre documentos do próprio sistema, como o histórico emitido em T3 e os índices e a carga horária pendente exibidos em T4, conforme a técnica prevista no [escopo da Fase 1](../fase-1/escopo.md#3-profundidade-por-caracteristica). |
-| **Procedimento de coleta** | 1. Para o curso de cada avaliador, comparar com o PPC a carga horária, os créditos e os pré-requisitos de todas as disciplinas obrigatórias dos quatro primeiros semestres do fluxo. 2. Comparar as datas exibidas em T6 com o calendário acadêmico publicado. 3. Conferir se os índices e a carga horária pendente de T4 são coerentes com o histórico emitido em T3. 4. Cada atributo comparado conta como uma verificação; registrar o resultado em planilha (coincide ou diverge, com evidência). 5. Um segundo avaliador repete as verificações de forma independente; divergências entre avaliadores são resolvidas por um terceiro membro. |
-| **Interpretação** | Quanto mais próximo de 1, mais confiáveis são as informações. Qualquer divergência é registrada individualmente, por ter impacto direto na vida acadêmica. |
+| **Procedimento de coleta** | 1. Para o curso de cada avaliador, comparar com o PPC a carga horária, os créditos e os pré-requisitos de todas as disciplinas obrigatórias dos quatro primeiros semestres do fluxo. 2. Comparar as datas exibidas em T6 com o calendário acadêmico publicado. 3. Conferir se os índices e a carga horária pendente de T4 são coerentes com o histórico emitido em T3. 4. Conferir se as notas e menções exibidas em T1 coincidem com as do histórico emitido em T3, e se o dia, o horário e o local da turma exibidos em T2 coincidem com os da Turma Virtual. 5. Cada atributo comparado conta como uma verificação; registrar o resultado em planilha (coincide ou diverge, com evidência), marcando os itens críticos: menção, IRA e carga horária pendente. 6. Um segundo avaliador repete as verificações de forma independente; divergências entre avaliadores são resolvidas por um terceiro membro. |
+| **Interpretação** | Quanto mais próximo de 1, mais confiáveis são as informações. Qualquer divergência é registrada individualmente, por ter impacto direto na vida acadêmica. Uma divergência em item crítico (menção, IRA ou carga horária pendente) leva M2 ao nível Insatisfatório, qualquer que seja o valor de X (regra 2 de [Níveis de Pontuação](niveis-pontuacao.md#regra-2-itens-criticos-de-m2)). |
 
 ### M3 - Proporção de estudantes que usam ferramentas externas
 
@@ -77,7 +89,7 @@ A Tabela 1 resume as métricas, e as Tabelas 2 a 20 detalham cada uma delas.
 
 ## G2 - Capacidade de Interação (Usabilidade)
 
-As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: estudantes de graduação executam as tarefas T1 a T6 em computador, sem ajuda do moderador. As sessões são gravadas mediante consentimento, e os participantes são identificados apenas por código (P1, P2, ...) e por perfil (calouro, veterano ou formando), conforme os [perfis da Fase 1](../fase-1/proposito-stakeholders.md#22-perfis-de-usuarios-considerados). Durante as sessões, o moderador também registra as ocasiões em que o participante declara que uma função não existe, evidência usada na relação entre Capacidade de Interação e Adequação Funcional (Tabela 5 da [visão geral](index.md#24-relacoes-entre-as-caracteristicas)).
+As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: estudantes de graduação executam as tarefas T1 a T6 em computador, sem ajuda do moderador. As sessões são gravadas mediante consentimento, e os participantes são identificados apenas por código (P1, P2, ...) e por perfil (calouro, veterano ou formando), conforme os [perfis da Fase 1](../fase-1/proposito-stakeholders.md#22-perfis-de-usuarios-considerados). Durante as sessões, o moderador também registra as ocasiões em que o participante declara que uma função não existe (métrica auxiliar MA1, Tabela 22), evidência usada na relação entre Capacidade de Interação e Adequação Funcional (Tabela 5 da [visão geral](index.md#24-relacoes-entre-as-caracteristicas)).
 
 ### M4 - Acerto na primeira escolha de menu
 
@@ -102,8 +114,8 @@ As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: es
 | **Definição** | Proporção de tentativas de tarefa concluídas corretamente, sem ajuda do moderador. Baseada na medida de conclusão de tarefas da ISO/IEC 25023. |
 | **Cálculo** | X = A/B, onde A = número de tarefas concluídas corretamente e B = número total de tarefas tentadas (participantes × 6). |
 | **Fonte dos dados** | Gravações das sessões e formulário de observação do moderador. |
-| **Procedimento de coleta** | Para cada participante e tarefa, o moderador registra "concluída" ou "não concluída". A tarefa é considerada não concluída se o participante desistir, pedir ajuda, ultrapassar 5 minutos ou chegar a um resultado errado. |
-| **Interpretação** | Quanto mais próximo de 1, mais fácil é aprender a usar o sistema. O resultado também é apresentado por perfil (calouro, veterano e formando), porque a apreensibilidade se manifesta sobretudo no primeiro contato. |
+| **Procedimento de coleta** | Para cada participante e tarefa, o moderador registra "concluída" ou "não concluída". A tarefa é considerada não concluída se o participante desistir, pedir ajuda, ultrapassar 5 minutos ou chegar a um resultado errado. Antes da sessão, o participante informa se já executou cada tarefa no SIGAA; no recorte de calouros, as tarefas já executadas antes do estudo são excluídas, para que o recorte meça o primeiro contato. |
+| **Interpretação** | Quanto mais próximo de 1, mais fácil é aprender a usar o sistema. O resultado também é apresentado por perfil (calouro, veterano e formando), porque a apreensibilidade se manifesta sobretudo no primeiro contato. Diferença grande entre o recorte de calouros e o resultado geral indica dependência de experiência prévia. O recorte usa as mesmas faixas de M5 e não altera o nível da questão (regra 3 de [Níveis de Pontuação](niveis-pontuacao.md#regra-3-resultados-por-perfil-por-pagina-e-por-tarefa)). |
 
 ### M6 - Tempo relativo de execução
 
@@ -128,8 +140,8 @@ As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: es
 | **Definição** | Razão entre o número de cliques dos participantes e o número mínimo de cliques necessário para concluir a tarefa. |
 | **Cálculo** | X = C<sub>p</sub> / C<sub>min</sub>, onde C<sub>p</sub> = média de cliques dos participantes que concluíram a tarefa e C<sub>min</sub> = número de cliques do caminho mais curto, definido pela equipe antes do teste. O resultado final é a média das tarefas; uma tarefa que nenhum participante concluiu fica fora da média e é registrada à parte. |
 | **Fonte dos dados** | Gravações das sessões. |
-| **Procedimento de coleta** | Contar os cliques em links, botões e menus a partir das gravações, desconsiderando cliques em áreas sem ação. |
-| **Interpretação** | Quanto mais próximo de 1, mais direta é a navegação. Valores altos indicam que o estudante se perde nos menus. |
+| **Procedimento de coleta** | Contar os cliques em links, botões e menus a partir das gravações, desconsiderando cliques em áreas sem ação. Ao definir C<sub>min</sub>, dois avaliadores classificam também cada passo do caminho mais curto como necessário ou desnecessário. É **passo desnecessário** aquele que não fornece informação nova nem decisão ao estudante (ex.: tela de seleção com uma única opção, confirmação sem conteúdo). Essa classificação não altera o valor de M7 e é registrada como evidência do desenho dos fluxos. |
+| **Interpretação** | Quanto mais próximo de 1, mais direta é a navegação. Valores altos indicam que o estudante se perde nos menus. Passos desnecessários no próprio caminho mais curto indicam esforço imposto pelo desenho das funções, que nenhum participante consegue evitar. |
 
 ### M8 - Taxa de recuperação de erros
 
@@ -144,9 +156,22 @@ As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: es
 | **Procedimento de coleta** | Conta como erro: ação em item errado que leva a uma página fora do caminho, envio de formulário com dado inválido, mensagem de erro do sistema e expiração da sessão durante a tarefa (OP-06). Para cada erro, um avaliador registra se o participante retornou ao ponto anterior sem ajuda e sem refazer passos. Passo já concluído é uma página do caminho correto já visitada ou um campo já preenchido; voltar pelo menu ou pelo botão Voltar sem repetir esses passos conta como recuperação. |
 | **Interpretação** | Quanto mais próximo de 1, melhor o sistema protege o estudante das consequências dos próprios erros. |
 
+### M20 - Cobertura de tratamento de cenários de erro
+
+*Tabela 10 - Ficha da métrica M20 - Cobertura de tratamento de cenários de erro.*
+
+| Item | Descrição |
+| ---- | --------- |
+| **Questão** | Q7 - O sistema evita que o estudante perca o que já fez quando comete um erro ou quando a sessão expira? |
+| **Definição** | Proporção dos cenários de erro previstos em que o sistema evita o erro ou o trata adequadamente. |
+| **Cálculo** | X = A/B, onde A = número de cenários tratados e B = número de cenários verificados (6). |
+| **Fonte dos dados** | Inspeção das páginas das tarefas T1 a T6, com o estudante autenticado, segundo um roteiro de cenários de erro definido antes da coleta. |
+| **Procedimento de coleta** | Dois avaliadores provocam, de forma independente, os seis cenários: (C1) a sessão expira durante a tarefa (OP-06); (C2) uso do botão Voltar do navegador; (C3) recarregar a página após uma ação; (C4) abrir uma função em nova aba; (C5) acessar uma função indisponível no período do calendário; (C6) bloqueio de janela ao gerar documento em PDF. Um cenário é considerado **tratado** se o sistema o previne ou exibe mensagem que indica a causa e como continuar, sem obrigar o estudante a recomeçar a tarefa desde o login. Registrar a evidência de cada cenário (captura de tela e passos executados). Divergências entre avaliadores são resolvidas por um terceiro membro. Nenhum cenário altera dados acadêmicos. |
+| **Interpretação** | Quanto mais próximo de 1, melhor o sistema protege o estudante. Complementa M8 com cenários que podem não ocorrer espontaneamente nas sessões do teste com usuários. |
+
 ### M9 - Erros automáticos de acessibilidade por página
 
-*Tabela 10 - Ficha da métrica M9 - Erros automáticos de acessibilidade por página.*
+*Tabela 11 - Ficha da métrica M9 - Erros automáticos de acessibilidade por página.*
 
 | Item | Descrição |
 | ---- | --------- |
@@ -159,7 +184,7 @@ As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: es
 
 ### M10 - Critérios manuais de acessibilidade atendidos
 
-*Tabela 11 - Ficha da métrica M10 - Critérios manuais de acessibilidade atendidos.*
+*Tabela 12 - Ficha da métrica M10 - Critérios manuais de acessibilidade atendidos.*
 
 | Item | Descrição |
 | ---- | --------- |
@@ -172,7 +197,7 @@ As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: es
 
 ### M11 - Interpretação correta sem legenda
 
-*Tabela 12 - Ficha da métrica M11 - Interpretação correta sem legenda.*
+*Tabela 13 - Ficha da métrica M11 - Interpretação correta sem legenda.*
 
 | Item | Descrição |
 | ---- | --------- |
@@ -185,7 +210,7 @@ As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: es
 
 ### M12 - Pontuação SUS
 
-*Tabela 13 - Ficha da métrica M12 - Pontuação SUS.*
+*Tabela 14 - Ficha da métrica M12 - Pontuação SUS.*
 
 | Item | Descrição |
 | ---- | --------- |
@@ -200,7 +225,7 @@ As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: es
 
 ### M13 - Compatibilidade entre navegadores
 
-*Tabela 14 - Ficha da métrica M13 - Compatibilidade entre navegadores.*
+*Tabela 15 - Ficha da métrica M13 - Compatibilidade entre navegadores.*
 
 | Item | Descrição |
 | ---- | --------- |
@@ -213,20 +238,20 @@ As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: es
 
 ### M14 - Proporção de páginas adaptadas a telas pequenas e ao toque
 
-*Tabela 15 - Ficha da métrica M14 - Proporção de páginas adaptadas a telas pequenas e ao toque.*
+*Tabela 16 - Ficha da métrica M14 - Proporção de páginas adaptadas a telas pequenas e ao toque.*
 
 | Item | Descrição |
 | ---- | --------- |
 | **Questão** | Q12 - O SIGAA se adapta a telas de celular e tablet e à interação por toque? |
-| **Definição** | Proporção de verificações página × tamanho de tela em que a página das tarefas é exibida e operada corretamente. |
+| **Definição** | Proporção de verificações página × tamanho de tela em que a página das tarefas é exibida e operada corretamente: sem rolagem horizontal, sem conteúdo cortado, com menus acionáveis por toque e com alvos de toque de dimensão mínima. |
 | **Cálculo** | X = A/B, onde A = número de verificações adaptadas e B = número de verificações (6 páginas × 2 larguras = 12). |
 | **Fonte dos dados** | Páginas finais de T1 a T6 abertas em celular real (cerca de 360 px de largura) e em tablet ou no modo de dispositivo do navegador com 768 px e emulação de toque, conforme os [ambientes da Fase 1](../fase-1/escopo.md#22-ambientes-de-execucao). |
-| **Procedimento de coleta** | Uma página é considerada adaptada se atender aos quatro critérios: (a) não exige rolagem horizontal; (b) nenhum texto da tarefa tem fonte menor que 12 px, conferida no painel de ferramentas do desenvolvedor; (c) nenhum elemento fica sobreposto ou cortado; (d) menus e controles da tarefa podem ser acionados por toque (OP-02). Registrar captura de tela de cada verificação. |
-| **Interpretação** | Quanto mais próximo de 1, melhor a adaptação a dispositivos móveis. |
+| **Procedimento de coleta** | Uma página é considerada adaptada se atender aos cinco critérios: (a) não exige rolagem horizontal da página na largura verificada, sem zoom (no celular, 360 px; tabelas com rolagem própria dentro da página não contam como rolagem horizontal da página) (OP-03); (b) nenhum texto da tarefa tem fonte menor que 12 px, conferida no painel de ferramentas do desenvolvedor; (c) nenhum elemento fica sobreposto ou cortado; (d) todos os itens de menu usados na tarefa, nos menus horizontais do portal e no menu lateral da Turma Virtual, podem ser abertos e acionados apenas por toque (OP-02); (e) os controles da tarefa têm área de toque de pelo menos 24 × 24 px CSS, ou espaçamento equivalente, conforme o critério 2.5.8 da WCAG 2.2 [4], medida no inspetor de elementos. Registrar captura de tela de cada verificação e, quando a página não for adaptada, os critérios não atendidos. |
+| **Interpretação** | Quanto mais próximo de 1, melhor a adaptação a dispositivos móveis. Os critérios não atendidos indicam se o problema é de layout (a a c) ou de interação por toque (d e e). |
 
 ### M15 - Tempo relativo no celular
 
-*Tabela 16 - Ficha da métrica M15 - Tempo relativo no celular.*
+*Tabela 17 - Ficha da métrica M15 - Tempo relativo no celular.*
 
 | Item | Descrição |
 | ---- | --------- |
@@ -245,7 +270,7 @@ O Lighthouse mede a página recarregando o endereço dela. Como parte das págin
 
 ### M16 - Tempo de carregamento em rede comum
 
-*Tabela 17 - Ficha da métrica M16 - Tempo de carregamento em rede comum.*
+*Tabela 18 - Ficha da métrica M16 - Tempo de carregamento em rede comum.*
 
 | Item | Descrição |
 | ---- | --------- |
@@ -258,7 +283,7 @@ O Lighthouse mede a página recarregando o endereço dela. Como parte das págin
 
 ### M17 - Tempo de carregamento em rede móvel simulada
 
-*Tabela 18 - Ficha da métrica M17 - Tempo de carregamento em rede móvel simulada.*
+*Tabela 19 - Ficha da métrica M17 - Tempo de carregamento em rede móvel simulada.*
 
 | Item | Descrição |
 | ---- | --------- |
@@ -267,11 +292,11 @@ O Lighthouse mede a página recarregando o endereço dela. Como parte das págin
 | **Cálculo** | X = média, entre as seis páginas, da mediana do LCP (em segundos) das cinco execuções de cada página. |
 | **Fonte dos dados** | Relatórios do Lighthouse no modo *Mobile*, que simula rede móvel lenta e processador limitado. |
 | **Procedimento de coleta** | Igual a M16, trocando o modo do Lighthouse para *Mobile* e mantendo a mesma rede física. |
-| **Interpretação** | Quanto menor, melhor a experiência de quem acessa por rede móvel. A comparação com M16 verifica a relação entre Eficiência de Desempenho e Flexibilidade. |
+| **Interpretação** | Quanto menor, melhor a experiência de quem acessa por rede móvel. A comparação com M16 verifica a relação entre Eficiência de Desempenho e Flexibilidade. De forma complementar, sem alterar o valor de M17 nem seu nível, o resultado pode ser reportado também pelo percentil 75 do LCP entre as páginas, forma usada pelas métricas Core Web Vitals [5], para que poucas páginas rápidas não escondam as lentas. |
 
 ### M18 - Peso transferido por página
 
-*Tabela 19 - Ficha da métrica M18 - Peso transferido por página.*
+*Tabela 20 - Ficha da métrica M18 - Peso transferido por página.*
 
 | Item | Descrição |
 | ---- | --------- |
@@ -284,7 +309,7 @@ O Lighthouse mede a página recarregando o endereço dela. Como parte das págin
 
 ### M19 - Requisições por página
 
-*Tabela 20 - Ficha da métrica M19 - Requisições por página.*
+*Tabela 21 - Ficha da métrica M19 - Requisições por página.*
 
 | Item | Descrição |
 | ---- | --------- |
@@ -294,6 +319,49 @@ O Lighthouse mede a página recarregando o endereço dela. Como parte das págin
 | **Fonte dos dados** | Auditoria de requisições de rede (*network requests*) dos mesmos relatórios do Lighthouse de M16. |
 | **Procedimento de coleta** | Registrar o número de requisições em cada execução de M16. |
 | **Interpretação** | Quanto menor, menos idas ao servidor são necessárias, o que reduz o tempo de carregamento em redes com alta latência. |
+
+## Métrica auxiliar de relação
+
+A métrica abaixo não responde a uma questão e não recebe nível de pontuação. Ela serve apenas para verificar a hipótese de relação HR3 (Capacidade de Interação → Adequação Funcional), descrita em [Hipóteses](hipoteses.md#hipoteses-de-relacao-entre-as-caracteristicas).
+
+### MA1 - Taxa de declaração de função inexistente
+
+*Tabela 22 - Ficha da métrica auxiliar MA1 - Taxa de declaração de função inexistente.*
+
+| Item | Descrição |
+| ---- | --------- |
+| **Hipótese** | HR3 - Funções existentes, mas difíceis de localizar, são percebidas como ausentes |
+| **Definição** | Proporção de tentativas de tarefa em que o participante afirma que a função pedida não existe no SIGAA, embora ela conste como existente na verificação de M1. |
+| **Cálculo** | X = D/N, onde D = número de tentativas com essa declaração e N = número total de tentativas (participantes × 6). |
+| **Fonte dos dados** | Gravações das sessões do teste com usuários e formulário de observação do moderador. |
+| **Procedimento de coleta** | O moderador registra a declaração espontânea do participante ou a resposta à pergunta "o que você faria agora?" quando ele desiste da tarefa. A existência da função é conferida com a lista de referência verificada em M1. |
+| **Interpretação** | Qualquer ocorrência indica que um problema de capacidade de interação está sendo percebido pelo estudante como problema de adequação funcional. |
+
+## Artefatos de dados previstos
+
+Para garantir a rastreabilidade exigida pela premissa 5 do roteiro, todos os dados ficarão no repositório, na pasta `dados/`, com os participantes identificados apenas por código (P1, P2, ...). A Tabela 23 lista os arquivos previstos e as métricas que cada um alimenta.
+
+*Tabela 23 - Arquivos de dados previstos.*
+
+| Arquivo | Conteúdo | Métricas |
+| ------- | -------- | -------- |
+| `dados/referencia/caminhos.csv` | Para cada tarefa: caminho mais curto, C<sub>min</sub>, caminhos alternativos válidos, itens de menu válidos para a primeira escolha, classificação de cada passo (necessário ou desnecessário) e tempos do especialista | M4, M6, M7 |
+| `dados/brutos/questionario/respostas.csv` | Respostas anônimas do questionário online: uso de ferramenta externa, quais ferramentas e por quê, funções que o respondente sente falta | M3, M1 |
+| `dados/brutos/testes-usuarios/sessoes.csv` | Uma linha por participante e tarefa: código, perfil, se já executou a tarefa antes, concluiu, houve ajuda, tempo, cliques, primeira escolha, erros, erros recuperados e declaração de função inexistente | M4, M5, M6, M7, M8, MA1 |
+| `dados/brutos/testes-usuarios/compreensao.csv` | Resposta de cada participante às perguntas de compreensão e registro de abertura da legenda ou da ajuda | M11 |
+| `dados/brutos/testes-usuarios/sus.csv` | Respostas dos dez itens do SUS por participante | M12 |
+| `dados/brutos/inspecao/funcoes.csv` | Lista de referência de funções, tarefa associada e verificação de cada avaliador, com evidência | M1 |
+| `dados/brutos/inspecao/correcao.csv` | Verificações de dados (coincide ou diverge), indicação de item crítico e evidência | M2 |
+| `dados/brutos/inspecao/cenarios-erro.csv` | Resultado de cada cenário C1 a C6 por avaliador, com evidência | M20 |
+| `dados/brutos/inspecao/acessibilidade-manual.csv` | Verificações manuais de acessibilidade por página e avaliador | M10 |
+| `dados/brutos/acessibilidade/wave/` | Relatórios da extensão WAVE por página | M9 |
+| `dados/brutos/flexibilidade/navegadores.csv` | Resultado de cada combinação tarefa × navegador, com captura de tela | M13 |
+| `dados/brutos/flexibilidade/paginas-adaptadas.csv` | Resultado de cada verificação página × largura, com os critérios não atendidos | M14 |
+| `dados/brutos/flexibilidade/tempos-celular.csv` | Tempos de cada tarefa no computador e no celular, por avaliador | M15 |
+| `dados/brutos/desempenho/medicoes.csv` e `dados/brutos/desempenho/lighthouse/` | Uma linha por página, modo do Lighthouse e execução, com data, horário, rede, versões, LCP, total transferido e requisições; relatórios exportados do Lighthouse | M16, M17, M18, M19 |
+| `dados/consolidados/metricas.csv` | Valor e nível de cada métrica, no geral, por tarefa e por perfil | Todas |
+
+O formato detalhado de cada arquivo, os instrumentos e o roteiro de execução serão especificados na Fase 3. As gravações não serão publicadas abertamente, por conterem dados pessoais; o acesso a elas será definido na Fase 3, conforme as premissas 5 e 6 do roteiro.
 
 ## Referências
 
@@ -307,6 +375,8 @@ O Lighthouse mede a página recarregando o endereço dela. Como parte das págin
 
 [5] GOOGLE. *Web Vitals*. web.dev. Disponível em: <https://web.dev/articles/vitals>. Acesso em: 18 out. 2026.
 
+[6] ISO/IEC 25022:2016. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Measurement of quality in use*.
+
 ## Histórico de Versão
 
 | Versão | Data | Descrição | Autor |
@@ -315,3 +385,4 @@ O Lighthouse mede a página recarregando o endereço dela. Como parte das págin
 | 1.1 | 17/10/2026 | Definição das métricas M1 a M11 | Felipe Campêlo |
 | 1.2 | 18/10/2026 | Numeração e legendas de tabelas; fontes e amostra de M2; instrumento da lista de M1 | Felipe Campêlo |
 | 2.0 | 18/10/2026 | Alinhamento à Fase 1 reestruturada: métricas M1 a M19, tarefas T1 a T6, WCAG 2.2 e métricas de Eficiência de Desempenho | Felipe Campêlo |
+| 2.1 | 18/10/2026 | Integração da versão complementar: métrica M20 (cenários de erro) e métrica auxiliar MA1; definições comuns; artefatos de dados previstos; critérios de toque e rolagem em M14; recorte de calouros em M5; passo desnecessário em M7; itens críticos e conferências de T1 e T2 em M2; funções por tarefa em M1; P75 complementar em M17; referência à ISO/IEC 25022 | Leonardo Bonetti |
