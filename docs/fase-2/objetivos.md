@@ -4,6 +4,10 @@ Os objetivos de medição representam o **nível conceitual** do GQM. Cada objet
 
 Foi definido um objetivo para cada uma das quatro características priorizadas na [Fase 1](../fase-1/caracteristicas.md#3-caracteristicas-selecionadas) (Tabelas 1 a 4). O foco de qualidade de cada objetivo usa as subcaracterísticas da ISO/IEC 25010:2023 [2] mantidas na [adaptação do modelo de qualidade](../fase-1/modelo-qualidade.md#2-adaptacoes-ao-contexto-do-sigaa). As subcaracterísticas removidas na Fase 1, e a justificativa de cada remoção, estão naquela página e não são repetidas aqui.
 
+A numeração G1 a G4 não segue a ordem de prioridade da Fase 1. Na [matriz Impacto x Risco](../fase-1/caracteristicas.md#3-caracteristicas-selecionadas), a prioridade é: 1 - Capacidade de Interação (G2, P = 25); 2 - Adequação Funcional (G1, P = 20); 3 - Eficiência de Desempenho (G4, P = 16); 4 - Flexibilidade (G3, P = 16). Essa ordem de prioridade é a usada na apresentação dos resultados da Fase 4 (regra 5 de [Níveis de Pontuação](niveis-pontuacao.md#regra-5-ausencia-de-nota-unica)).
+
+Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em produção e sem alteração de dados acadêmicos, conforme as [implicações para a avaliação](../fase-1/software-avaliado.md#5-implicacoes-para-a-avaliacao) registradas na Fase 1.
+
 ## G1 - Adequação Funcional
 
 *Tabela 1 - Objetivo de medição G1 - Adequação Funcional.*
@@ -58,7 +62,7 @@ Foi definido um objetivo para cada uma das quatro características priorizadas n
 | **do ponto de vista do** | estudante de graduação da UnB, com atenção a quem acessa por rede móvel |
 | **no contexto** | da medição do lado do cliente, em rede comum e em rede móvel simulada, na versão v4.15.10.115 em uso no 2º semestre letivo de 2026 |
 
-**Justificativa:** Eficiência de Desempenho obteve P = 16 na Fase 1. A lentidão atrasa todas as tarefas e pesa mais para quem usa rede móvel, e a interface gera páginas com muitos elementos e requisições. G4 verifica o tempo de carregamento das páginas e o volume de dados que o navegador precisa baixar. A medição é feita apenas no cliente, sem testes de carga, conforme a restrição registrada no [escopo](../fase-1/escopo.md#4-o-que-fica-fora-do-escopo).
+**Justificativa:** Eficiência de Desempenho obteve P = 16 na Fase 1. A lentidão atrasa todas as tarefas e pesa mais para quem usa rede móvel, recurso dos estudantes de menor renda, o que liga este objetivo ao [ODS 10](../fase-1/ods.md#32-ods-10-reducao-das-desigualdades-meta-102), e a interface gera páginas com muitos elementos e requisições. G4 verifica o tempo de carregamento das páginas e o volume de dados que o navegador precisa baixar. A medição é feita apenas no cliente, sem testes de carga, conforme a restrição registrada no [escopo](../fase-1/escopo.md#4-o-que-fica-fora-do-escopo).
 
 ## Referências
 
@@ -75,3 +79,4 @@ Foi definido um objetivo para cada uma das quatro características priorizadas n
 | 1.2 | 18/10/2026 | Numeração e legendas de tabelas; propósito dos objetivos; recortes da Usabilidade e da Portabilidade | Felipe Campêlo |
 | 2.0 | 18/10/2026 | Alinhamento à Fase 1 reestruturada: objetivo G4 (Eficiência de Desempenho), nomenclatura da ISO/IEC 25010:2023 e subcaracterísticas mantidas na Fase 1 | Felipe Campêlo |
 | 2.1 | 18/10/2026 | Satisfação declarada no foco de qualidade de G2 | Felipe Campêlo |
+| 2.2 | 18/10/2026 | Integração da versão complementar: prioridade de cada objetivo na Fase 1, avaliação caixa-preta e vínculo de G4 com o ODS 10 | Leonardo Bonetti |
