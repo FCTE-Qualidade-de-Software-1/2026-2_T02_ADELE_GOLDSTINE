@@ -89,7 +89,7 @@ As definições abaixo valem para todas as métricas coletadas sobre as tarefas 
 
 ## G2 - Capacidade de Interação (Usabilidade)
 
-As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: estudantes de graduação executam as tarefas T1 a T6 em computador, sem ajuda do moderador. As sessões são gravadas mediante consentimento, e os participantes são identificados apenas por código (P1, P2, ...) e por perfil (calouro, veterano ou formando), conforme os [perfis da Fase 1](../fase-1/proposito-stakeholders.md#22-perfis-de-usuarios-considerados). Durante as sessões, o moderador também registra as ocasiões em que o participante declara que uma função não existe (métrica auxiliar MA1, Tabela 22), evidência usada na relação entre Capacidade de Interação e Adequação Funcional (Tabela 5 da [visão geral](index.md#24-relacoes-entre-as-caracteristicas)).
+As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: estudantes de graduação executam as tarefas T1 a T6 em computador, sem ajuda do moderador. As sessões são gravadas mediante consentimento, e os participantes são identificados apenas por código (P1, P2, ...) e por perfil (calouro, veterano ou formando), conforme os [perfis da Fase 1](../fase-1/proposito-stakeholders.md#22-perfis-de-usuarios-considerados). Durante as sessões, o moderador também registra as ocasiões em que o participante declara que uma função não existe (métrica auxiliar MA1, Tabela 22), evidência usada na relação entre Capacidade de Interação e Adequação Funcional (Tabela 6 da [visão geral](index.md#24-relacoes-entre-as-caracteristicas)).
 
 ### M4 - Acerto na primeira escolha de menu
 
