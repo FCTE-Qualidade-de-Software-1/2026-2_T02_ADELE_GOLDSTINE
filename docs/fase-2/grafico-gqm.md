@@ -50,6 +50,7 @@ flowchart LR
         M17["M17 - LCP em rede móvel"]
         M18["M18 - Peso por página"]
         M19["M19 - Requisições por página"]
+        M20["M20 - Cenários de erro tratados"]
     end
     G1 --> Q1 & Q2 & Q3
     G2 --> Q4 & Q5 & Q6 & Q7 & Q8 & Q9 & Q10
@@ -61,7 +62,7 @@ flowchart LR
     Q4 --> M4
     Q5 --> M5
     Q6 --> M6 & M7
-    Q7 --> M8
+    Q7 --> M8 & M20
     Q8 --> M9 & M10
     Q9 --> M11
     Q10 --> M12
@@ -71,7 +72,7 @@ flowchart LR
     Q14 --> M18 & M19
 ```
 
-*Figura 1 - Hierarquia GQM da avaliação (visão geral). Fonte: gerado pelo Claude e revisado por Felipe Campêlo (2026).*
+*Figura 1 - Hierarquia GQM da avaliação (visão geral). Fonte: gerado pelo Claude e revisado por Felipe Campêlo (2026); M20 acrescentada por Leonardo Bonetti (2026).*
 
 ## G1 - Adequação Funcional
 
@@ -124,18 +125,19 @@ flowchart LR
         M10["M10: Critérios manuais de acessibilidade atendidos"]
         M11["M11: Interpretação correta sem legenda"]
         M12["M12: Pontuação SUS"]
+        M20["M20: Cobertura de tratamento de cenários de erro"]
     end
     G2 --> Q4 & Q5 & Q6 & Q7 & Q8 & Q9 & Q10
     Q4 --> M4
     Q5 --> M5
     Q6 --> M6 & M7
-    Q7 --> M8
+    Q7 --> M8 & M20
     Q8 --> M9 & M10
     Q9 --> M11
     Q10 --> M12
 ```
 
-*Figura 3 - Hierarquia GQM do objetivo G2 - Capacidade de Interação. Fonte: gerado pelo Claude e revisado por Felipe Campêlo (2026).*
+*Figura 3 - Hierarquia GQM do objetivo G2 - Capacidade de Interação. Fonte: gerado pelo Claude e revisado por Felipe Campêlo (2026); M20 acrescentada por Leonardo Bonetti (2026).*
 
 ## G3 - Flexibilidade (Portabilidade)
 
@@ -184,6 +186,34 @@ flowchart TD
 
 *Figura 5 - Hierarquia GQM do objetivo G4 - Eficiência de Desempenho. Fonte: gerado pelo Claude e revisado por Felipe Campêlo (2026).*
 
+A métrica auxiliar MA1 não aparece nas figuras porque não responde a uma questão: ela serve apenas para verificar a hipótese de relação HR3 (Tabela 1).
+
+## Matriz de rastreabilidade
+
+A Tabela 1 liga cada característica priorizada na Fase 1 ao objetivo, às questões, às hipóteses e às métricas desta fase. A prioridade indicada é a da [matriz Impacto x Risco](../fase-1/caracteristicas.md#3-caracteristicas-selecionadas).
+
+*Tabela 1 - Rastreabilidade entre característica da Fase 1, objetivo, questão, hipótese e métrica.*
+
+| Característica (Fase 1) | Objetivo | Questão | Hipótese | Métricas |
+| ----------------------- | :------: | :-----: | :------: | -------- |
+| Adequação Funcional (prioridade 2) | G1 | Q1 | H1 | M1 |
+| | | Q2 | H2 | M2 |
+| | | Q3 | H3 | M3 |
+| Capacidade de Interação (prioridade 1) | G2 | Q4 | H4 | M4 |
+| | | Q5 | H5 | M5 |
+| | | Q6 | H6 | M6, M7 |
+| | | Q7 | H7 | M8, M20 |
+| | | Q8 | H8 | M9, M10 |
+| | | Q9 | H9 | M11 |
+| | | Q10 | H10 | M12 |
+| Flexibilidade (prioridade 4) | G3 | Q11 | H11 | M13 |
+| | | Q12 | H12 | M14, M15 |
+| Eficiência de Desempenho (prioridade 3) | G4 | Q13 | H13 | M16, M17 |
+| | | Q14 | H14 | M18, M19 |
+| Relações entre as características | - | - | HR1 a HR4 | M5, M6, M14, M15, M16 e M17; métrica auxiliar MA1 |
+
+Todas as métricas com nível de pontuação estão ligadas a uma única questão, e todas as questões estão ligadas a um objetivo; não há métrica sem questão nem questão sem métrica ou sem hipótese.
+
 ## Histórico de Versão
 
 | Versão | Data | Descrição | Autor |
@@ -192,3 +222,4 @@ flowchart TD
 | 1.1 | 17/10/2026 | Diagramas GQM geral e por objetivo | Felipe Campêlo |
 | 1.2 | 18/10/2026 | Numeração e legendas das figuras; nomes das métricas; níveis GQM nas Figuras 2 a 4 | Felipe Campêlo |
 | 2.0 | 18/10/2026 | Alinhamento à Fase 1 reestruturada: objetivo G4, questões Q1 a Q14, métricas M1 a M19 e legendas no padrão da Fase 1 | Felipe Campêlo |
+| 2.1 | 18/10/2026 | Integração da versão complementar: métrica M20 nas Figuras 1 e 3, nota sobre a métrica auxiliar MA1 e matriz de rastreabilidade Característica, Objetivo, Questão, Hipótese e Métrica | Leonardo Bonetti |
