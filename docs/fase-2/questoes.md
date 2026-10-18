@@ -50,7 +50,7 @@ A satisfação não é subcaracterística do modelo de qualidade de produto da I
 
 ## Relação com as métricas
 
-As métricas que respondem a cada questão (Tabela 5) estão detalhadas na página [Métricas](metricas.md).
+As métricas que respondem a cada questão (Tabela 5) estão detalhadas na página [Métricas](metricas.md), e a hipótese de cada questão, na página [Hipóteses](hipoteses.md).
 
 *Tabela 5 - Relação entre questões e métricas.*
 
@@ -62,7 +62,7 @@ As métricas que respondem a cada questão (Tabela 5) estão detalhadas na pági
 | Q4 | M4 |
 | Q5 | M5 |
 | Q6 | M6, M7 |
-| Q7 | M8 |
+| Q7 | M8, M20 |
 | Q8 | M9, M10 |
 | Q9 | M11 |
 | Q10 | M12 |
@@ -86,3 +86,4 @@ As métricas que respondem a cada questão (Tabela 5) estão detalhadas na pági
 | 1.2 | 18/10/2026 | Numeração e legendas de tabelas; classificação de Q6; referência à ISO/IEC 25010 | Felipe Campêlo |
 | 2.0 | 18/10/2026 | Alinhamento à Fase 1 reestruturada: questões Q1 a Q14, uma por subcaracterística mantida, e questões de G4 | Felipe Campêlo |
 | 2.1 | 18/10/2026 | Redação de Q6, Q10 e Q14 no nível do atributo, e não da métrica; coluna "Atributo do foco de qualidade" | Felipe Campêlo |
+| 2.2 | 18/10/2026 | Integração da versão complementar: métrica M20 (cenários de erro) associada a Q7 e referência às hipóteses | Leonardo Bonetti |
