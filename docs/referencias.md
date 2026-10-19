@@ -25,6 +25,14 @@ A Fase 2 também cita as referências 2, 3, 4, 5 e 8 da Fase 1.
 16. NIELSEN, J. *Usability Engineering*. San Francisco: Morgan Kaufmann, 1993.
 17. GOOGLE. *Web Vitals*. web.dev. Disponível em: <https://web.dev/articles/vitals>. Acesso em: 18 out. 2026.
 
+## Gestão do projeto e questionário
+
+18. McGARRY, J. et al. *Practical Software Measurement: Objective Information for Decision Makers*. Boston: Addison-Wesley, 2002.
+19. JONES, C. L. et al. *Practical Software and Systems Measurement Continuous Iterative Development Measurement Framework: Part 1 - Concepts, Definitions, Principles, and Measures*. Versão 2.1. PSM, NDIA e INCOSE, 2021.
+20. JONES, C. L. et al. *Practical Software and Systems Measurement Continuous Iterative Development Measurement Framework: Part 2 - Measurement Specifications and Enterprise Measures*. Versão 2.1. PSM, NDIA e INCOSE, 2021.
+21. ISO/IEC/IEEE 15939:2017. *Systems and software engineering - Measurement process*. Genebra: ISO, 2017.
+22. GOOGLE. *Introduction to Lighthouse*. Chrome for Developers. Disponível em: <https://developer.chrome.com/docs/lighthouse/overview>. Acesso em: 19 out. 2026.
+
 ## Histórico de Versão
 
 | Versão | Data | Descrição | Autor |
@@ -32,3 +40,4 @@ A Fase 2 também cita as referências 2, 3, 4, 5 e 8 da Fase 1.
 | 1.0 | 16/10/2026 | Criação do documento | Davi Nobre |
 | 1.1 | 16/10/2026 | Inclusão das referências da Fase 1 | Caio Borges |
 | 1.2 | 18/10/2026 | Inclusão das referências da Fase 2 (ISO/IEC 25022, ISO/IEC 25023, Brooke, Sauro e Lewis, Sauro, Nielsen e Web Vitals) | Leonardo Bonetti |
+| 1.3 | 19/10/2026 | Inclusão das referências de gestão do projeto (PSM, PSM/CID, ISO/IEC/IEEE 15939) e do Lighthouse | Arthur Leite |

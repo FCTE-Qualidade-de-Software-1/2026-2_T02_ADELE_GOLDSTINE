@@ -83,7 +83,7 @@ As definições abaixo valem para todas as métricas coletadas sobre as tarefas 
 | **Questão** | Q3 - As funções do SIGAA são suficientes para planejar o fluxo sem ferramentas externas? |
 | **Definição** | Proporção de respondentes que declaram usar alguma ferramenta fora do SIGAA (site, aplicativo ou planilha) para planejar o fluxo ou a grade de horários. |
 | **Cálculo** | X = A/B, onde A = número de respondentes que usam ferramenta externa e B = número total de respondentes válidos. |
-| **Fonte dos dados** | Questionário online anônimo aplicado a estudantes de graduação da UnB. |
+| **Fonte dos dados** | Questionário online anônimo aplicado a estudantes de graduação da UnB (item F1 da página [Questionário](questionario.md)). |
 | **Procedimento de coleta** | 1. Divulgar o questionário em grupos de estudantes e centros acadêmicos. 2. Considerar válidas apenas respostas de estudantes de graduação ativos. 3. Registrar também quais ferramentas são usadas, por quê e quais funções o respondente sente falta no SIGAA, como insumo da lista de referência de M1 (Tabela 2). |
 | **Interpretação** | Quanto menor o valor, mais adequadas são as funções do SIGAA para a tarefa de planejamento. |
 
