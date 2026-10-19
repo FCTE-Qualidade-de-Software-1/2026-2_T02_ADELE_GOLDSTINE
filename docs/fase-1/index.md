@@ -163,4 +163,4 @@ Cada página traz, ao final, um histórico de versão. As referências utilizada
 | 1.0 | 16/10/2026 | Criação do documento da Fase 1 | [Davi Nobre](https://github.com/Jagaima) |
 | 1.1 | 16/10/2026 | Parte da documentação da Fase 1 adicionada (métricas, rigor, características escolhidas) | [Davi Nobre](https://github.com/Jagaima) |
 | 1.2 | 18/10/2026 | Integração com as páginas detalhadas da Fase 1: síntese do propósito, atualização para a ISO/IEC 25010:2023, inclusão da Eficiência de Desempenho (1.4.4) com a priorização Impacto x Risco, seções 1.7 (ODS) e 1.8 (mapa da fase) e referências cruzadas | Caio Borges |
-| 1.3 | 19/10/2026 | Revisão de português e registro na seção 1.1 e na justificativa de Flexibilidade, sem alteração de conteúdo | Arthur Leite |
+| 1.3 | 19/10/2026 | Revisão de português e registro na seção 1.1 e na justificativa de Flexibilidade, sem alteração de conteúdo | [arthurlleite](https://github.com/arthurlleite) |

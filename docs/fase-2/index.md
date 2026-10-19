@@ -136,4 +136,4 @@ Além delas, quatro hipóteses de relação (HR1 a HR4) e uma métrica auxiliar 
 | 1.2 | 18/10/2026 | Numeração e legendas de tabelas; ajustes de rastreabilidade com a Fase 1; citação das referências | Felipe Campêlo |
 | 2.0 | 18/10/2026 | Alinhamento à Fase 1 reestruturada: ISO/IEC 25010:2023, quatro objetivos, tarefas T1 a T6, instrumentos de coleta e relações entre características | Felipe Campêlo |
 | 2.1 | 18/10/2026 | Integração da versão complementar: tabela de decisões da Fase 1 e métricas que as embasam, síntese de quantidades, métricas M20 e MA1, hipóteses de relação HR1 a HR4 e link para a regra do ranking das tarefas | Leonardo Bonetti |
-| 2.2 | 19/10/2026 | Link para a página do questionário e indicadores auxiliares IQ1 a IQ6 na Tabela 5 | Arthur Leite |
+| 2.2 | 19/10/2026 | Link para a página do questionário e indicadores auxiliares IQ1 a IQ6 na Tabela 5 | [arthurlleite](https://github.com/arthurlleite) |

@@ -156,4 +156,4 @@ As respostas exportadas ficam em `dados/brutos/questionario/respostas.csv`, uma 
 
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
-| 1.0 | 19/10/2026 | Especificação do questionário: termo de consentimento, itens dos blocos A a F, grupos de comparação, indicadores IQ1 a IQ6 e hipótese de perfil HP1 | Arthur Leite |
+| 1.0 | 19/10/2026 | Especificação do questionário: termo de consentimento, itens dos blocos A a F, grupos de comparação, indicadores IQ1 a IQ6 e hipótese de perfil HP1 | [arthurlleite](https://github.com/arthurlleite) |

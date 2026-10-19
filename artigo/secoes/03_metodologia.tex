@@ -1,0 +1,40 @@
+\section{Metodologia de desenvolvimento do projeto}
+\label{sec:metodologia}
+
+\subsection{Processo e organização do trabalho}
+
+A avaliação segue as quatro fases do processo de avaliação de produto (Seção~\ref{sec:processo}). A equipe atua como \textbf{avaliador independente}: não desenvolve nem opera o SIGAA e não tem acesso a código-fonte ou infraestrutura, o que torna a avaliação externa (caixa-preta).
+
+O trabalho é organizado no repositório Git da disciplina. Cada fase é desenvolvida em um ramo próprio (\texttt{fase-1}, \texttt{fase-2}) e integrada ao ramo principal por \textit{pull request} (PR), após revisão por outro membro. Os \textit{commits} recebem um identificador de tarefa (\texttt{[D01]} a \texttt{[D06]}), que permite rastrear cada alteração até a atividade de origem. A documentação é publicada automaticamente como GitPage (MkDocs), e cada página traz histórico de versões com data, descrição e autor. As decisões são tomadas em reunião: cada membro elabora sua proposta, as propostas são consolidadas e as divergências discutidas até o consenso, como na matriz Impacto~$\times$~Risco (Seção~\ref{sec:priorizacao}).
+
+\subsection{Gestão do projeto com indicadores PSM/CID}
+\label{sec:gestao}
+
+O roteiro exige acompanhar o projeto com métricas do PSM/CID nas categorias calendário e progresso, recursos e custos e desempenho dos processos \cite{ramos2026roteiro}. A Tabela~\ref{tab:psm} apresenta os indicadores, construídos segundo o modelo de informação do PSM \cite{mcgarry2002} e adaptados do \textit{framework} CID \cite{psmcid2}, com a primeira medição, feita em 19/10/2026 a partir do histórico do repositório, a sete dias da entrega. O procedimento de extração e os dados estão na página de gestão da GitPage.
+
+\begin{table*}[!t]
+	\caption{Indicadores PSM/CID para a gestão do projeto e primeira medição (19/10/2026)}
+	\label{tab:psm}
+	\centering
+	\footnotesize
+	\begin{tabularx}{\textwidth}{L{1.6cm} L{3.9cm} L{3.4cm} L{3.0cm} Y}
+		\toprule
+		\textbf{Categoria} & \textbf{Indicador (medidas)} & \textbf{Critério de decisão} & \textbf{Valor medido} & \textbf{Interpretação e decisão} \\
+		\midrule
+		Calendário e progresso & \textbf{I1} Comprometido \textit{vs.} concluído: artefatos da entrega integrados ao ramo principal / planejados & $<$80\% a uma semana da entrega exige redistribuição de tarefas & 14 de 17 (82\%): 14 páginas das Fases 1 e 2; artigo, contribuição e \textit{release} pendentes & Dentro do critério. Priorizar o artigo e a tabela de contribuição \\
+		& \textbf{I2} \textit{Burndown}: \textit{issues} abertas do marco da entrega, por dia & Desvio $>$10\% da linha planejada é discutido em reunião & Não mensurável: nenhuma \textit{issue} ou marco & Lacuna de processo. Criar marcos E1 e E2 e uma \textit{issue} por artefato \\
+		Recursos e custos & \textbf{I3} Esforço por membro: horas na planilha de esforço e participação (\%) & Participação $<$10\% ou $>$40\% exige rebalanceamento & Planilha não adotada; \textit{proxy}: \textit{commits} por membro = 9, 3, 3, 2 e 0 & \textit{Commits} não medem esforço. Adotar a planilha, que alimenta a tabela de contribuição \\
+		Desempenho dos processos & \textbf{I4} Tempo de ciclo: primeiro \textit{commit} do ramo até a integração do PR (h) & Ciclo $>$5 dias indica integração tardia & Fase 1: 49,0~h; Fase 2: 16,7~h & Dentro do critério. Manter um ramo e um PR por fase \\
+		& \textbf{I5} Retrabalho: correções após revisão / alterações do PR (\%) & $>$30\% motiva \textit{checklist} de revisão & Não medido: revisões não registradas & Registrar a revisão nos PRs a partir da Fase 3 \\
+		\bottomrule
+	\end{tabularx}
+	\fonte{elaborado pela equipe, com base em \cite{mcgarry2002,psmcid2} e no histórico do repositório.}
+\end{table*}
+
+\subsection{Aspectos éticos e rastreabilidade}
+
+Nenhuma tarefa altera dados acadêmicos: todas são consultas ou emissões de documentos feitas pelos participantes com as próprias credenciais. A participação em testes e no questionário é voluntária e precedida de termo de consentimento, e as sessões só são gravadas mediante consentimento \cite{ramos2026roteiro}. Os participantes são identificados por código (P1, P2, \ldots) e perfil, e capturas de tela têm os dados pessoais ocultados. Os dados brutos anonimizados, os consolidados e os procedimentos de cálculo ficarão na pasta \texttt{dados/} do repositório; as gravações terão acesso restrito à equipe e à professora.
+
+\subsection{Declaração de uso de inteligência artificial}
+
+A equipe usou o Claude Opus 5.5 (Claude Code) para: (a) apoiar a redação e a formatação das páginas da Fase 1; (b) apoiar a redação da Fase 2 e verificar a consistência entre as páginas e o roteiro; e (c) adaptar este artigo ao modelo IEEE, condensar as Fases 1 e 2, propor o questionário e extrair do histórico Git a primeira medição PSM/CID. O DeepSeek v4 foi usado na estruturação inicial do repositório. Todo conteúdo gerado foi conferido pela equipe contra as páginas do repositório e o roteiro; as referências foram verificadas uma a uma, e os números citados foram conferidos com as fontes originais. O registro completo está na página de uso de IA da GitPage.

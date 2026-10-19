@@ -1,33 +1,28 @@
 # Artigo - Entrega 1
 
-Código-fonte LaTeX do artigo do Projeto Final de FGA0315 Qualidade de Software 1, no modelo abnTeX2 da FCTE/UnB.
+Artigo do Projeto Final de FGA0315 Qualidade de Software 1, no **modelo IEEE para conferências** (IEEEtran), conforme a premissa 7 do roteiro.
 
-## Como compilar
-
-**Overleaf (recomendado):** envie a pasta `artigo/` compactada como novo projeto, defina `artigo.tex` como documento principal e use o compilador **pdfLaTeX**.
-
-**Localmente (TeX Live ou MiKTeX com abnTeX2):**
-
-```bash
-cd artigo
-latexmk -pdf artigo.tex
-```
-
-ou, sem `latexmk`: `pdflatex artigo`, `bibtex artigo`, `pdflatex artigo`, `pdflatex artigo`.
+- **PDF:** [`artigo.pdf`](artigo.pdf) (10 páginas, dentro do limite de 15 da premissa 9)
+- **Modelo original do IEEE:** [`modelo-ieee/`](modelo-ieee/) — pacote oficial IEEEtran v1.8b, sem alterações, obtido no CTAN em 19/10/2026 (<https://ctan.org/pkg/ieeetran>, arquivo <https://mirrors.ctan.org/macros/latex/contrib/IEEEtran.zip>). Contém a classe `IEEEtran.cls`, o modelo de conferência `bare_conf.tex`, o estilo de referências `bibtex/IEEEtran.bst` e os manuais `IEEEtran_HOWTO.pdf` e `bibtex/IEEEtran_bst_HOWTO.pdf`.
 
 ## Estrutura
 
-| Pasta/arquivo | Conteúdo |
+| Arquivo/pasta | Conteúdo |
 | ------------- | -------- |
-| `artigo.tex` | Documento principal: ordem dos elementos pré-textuais, textuais e pós-textuais |
-| `bibliografia.bib` | Referências (manter alinhado com `docs/referencias.md`) |
-| `fixos/` | Classe, pacotes, comandos, capa, ficha catalográfica, listas e sumário |
-| `editaveis/00_informacoes.tex` | Título, autores, disciplina, professora e palavras-chave |
-| `editaveis/01_*` a `08_*` | Resumo, abstract, siglas, símbolos e capítulos |
-| `editaveis/09_apendices.tex` | Apêndice A: tabela de contribuição (não conta no limite de páginas) |
-| `figuras/` | Capa do modelo e figuras do texto |
+| `artigo.tex` | Documento principal: capa, sumário e artigo no formato `\documentclass[conference]{IEEEtran}` |
+| `secoes/` | Resumo e seções (Introdução, Referencial teórico, Metodologia, Fase 1, Fase 2, Considerações) e apêndice de contribuição |
+| `bibliografia.bib` | Referências, formatadas pelo `IEEEtran.bst` (manter alinhado com `docs/referencias.md`) |
+| `IEEEtran.cls`, `IEEEtran.bst` | Cópias do modelo oficial, necessárias para compilar |
+| `figuras/` | Imagens usadas na capa e no texto |
+
+A capa e o sumário são acréscimos pedidos pela equipe; a partir da página 3 o texto segue o formato IEEE sem alterações de margens, fontes ou espaçamento.
+
+## Como compilar
+
+**Overleaf:** envie a pasta `artigo/` compactada, defina `artigo.tex` como documento principal e use pdfLaTeX.
+
+**Localmente:** `latexmk -pdf artigo.tex`, ou `pdflatex artigo`, `bibtex artigo`, `pdflatex artigo`, `pdflatex artigo`.
 
 ## Antes da entrega
 
-- Procure por `\pendente{` no código: os itens em vermelho (percentuais de esforço e atividades da tabela de contribuição) precisam ser preenchidos pela equipe.
-- O roteiro limita o artigo a 15 páginas, incluindo referências, e pede um modelo SBC, ACM ou IEEE (premissas 7 e 9). Confirme com a professora se o modelo abnTeX2 com capa, folha de rosto e listas é aceito.
+Procure por `\pendente{` em `secoes/07_apendice.tex`: os percentuais de esforço e as atividades em vermelho da tabela de contribuição precisam ser preenchidos pela equipe.

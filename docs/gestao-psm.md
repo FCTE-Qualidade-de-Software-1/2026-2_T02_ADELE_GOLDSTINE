@@ -68,4 +68,4 @@ git log --all --no-merges --format='%an' | sort | uniq -c
 
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
-| 1.0 | 19/10/2026 | Indicadores PSM/CID (I1 a I5), procedimento de coleta e medição 1 | Arthur Leite |
+| 1.0 | 19/10/2026 | Indicadores PSM/CID (I1 a I5), procedimento de coleta e medição 1 | [arthurlleite](https://github.com/arthurlleite) |

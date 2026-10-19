@@ -40,4 +40,4 @@ A Fase 2 também cita as referências 2, 3, 4, 5 e 8 da Fase 1.
 | 1.0 | 16/10/2026 | Criação do documento | Davi Nobre |
 | 1.1 | 16/10/2026 | Inclusão das referências da Fase 1 | Caio Borges |
 | 1.2 | 18/10/2026 | Inclusão das referências da Fase 2 (ISO/IEC 25022, ISO/IEC 25023, Brooke, Sauro e Lewis, Sauro, Nielsen e Web Vitals) | Leonardo Bonetti |
-| 1.3 | 19/10/2026 | Inclusão das referências de gestão do projeto (PSM, PSM/CID, ISO/IEC/IEEE 15939) e do Lighthouse | Arthur Leite |
+| 1.3 | 19/10/2026 | Inclusão das referências de gestão do projeto (PSM, PSM/CID, ISO/IEC/IEEE 15939) e do Lighthouse | [arthurlleite](https://github.com/arthurlleite) |
