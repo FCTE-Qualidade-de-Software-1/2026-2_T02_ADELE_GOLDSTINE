@@ -1,0 +1,27 @@
+\section{Referencial teórico}
+\label{sec:referencial}
+
+\subsection{Qualidade de produto e a família SQuaRE}
+\label{sec:square}
+
+A série ISO/IEC 25000 (SQuaRE) organiza os requisitos, modelos, medidas e o processo de avaliação da qualidade de sistemas e software \cite{iso25000}. A ISO/IEC 25010:2023 substitui a versão de 2011 e organiza a qualidade do produto em nove características \cite{iso25010_2023}: Adequação Funcional, Eficiência de Desempenho, Compatibilidade, Capacidade de Interação (Usabilidade, em 2011), Confiabilidade, Segurança, Manutenibilidade, Flexibilidade (Portabilidade, em 2011) e Segurança Operacional (nova). Neste texto, as características renomeadas aparecem com o nome de 2023 seguido do de 2011. A satisfação integrava o modelo de qualidade em uso da versão de 2011 \cite{iso25010_2011} e, quando usada, é tratada como medida complementar de qualidade em uso \cite{iso25022}.
+
+\subsection{Processo de avaliação de produto}
+\label{sec:processo}
+
+A ISO/IEC 25040 descreve a avaliação como um processo em atividades sucessivas \cite{iso25040}. No material da disciplina, ele é apresentado em quatro fases \cite{ramos2026processo}: (1) estabelecer os requisitos (propósito, tipo de produto e modelo de qualidade); (2) especificar a avaliação (métricas, níveis de pontuação e critérios de julgamento); (3) projetar a avaliação (plano com método, instruções, recursos e cronograma); e (4) executá-la (obter as medidas, compará-las com os critérios e julgar). A especificação deve ser detalhada o bastante para que a avaliação seja repetível e reprodutível. As Fases 1 e 2 formam a Entrega 1, e as Fases 3 e 4, a Entrega 2 \cite{ramos2026roteiro}.
+
+\subsection{Método Goal-Question-Metric}
+\label{sec:gqm}
+
+O GQM parte do princípio de que a medição deve ser orientada a objetivos \cite{basili1994}. A definição ocorre em três níveis: \textbf{conceitual} (objetivo), \textbf{operacional} (questões que caracterizam o objeto quanto ao foco de qualidade) e \textbf{quantitativo} (métricas que respondem às questões); a interpretação segue o caminho inverso \cite{ramos2026gqm}. Cada objetivo é escrito em um \textit{template} com objeto, propósito, foco de qualidade, ponto de vista e contexto \cite{basili1994}, e cada questão recebe uma hipótese, a resposta esperada antes da medição. Boas métricas são simples, objetivas, fáceis de coletar, robustas e válidas \cite{ramos2026gqm}.
+
+\subsection{Medição prática de software e sistemas}
+\label{sec:psm}
+
+O PSM é uma abordagem de medição dirigida por necessidades de informação e ligada à gestão de projetos \cite{mcgarry2002}. Seu modelo de informação, adotado pela ISO/IEC/IEEE 15939 \cite{iso15939}, liga atributos a medidas básicas, medidas derivadas e indicadores, estes associados a critérios de decisão \cite{ramos2026psm}. As necessidades de informação são agrupadas em categorias, entre elas calendário e progresso, recursos e custos e desempenho dos processos. O \textit{framework} CID adapta essas categorias a equipes que trabalham em ciclos curtos, com medidas como \textit{burndown}, comprometido \textit{versus} concluído e tempo de ciclo \cite{psmcid1,psmcid2}.
+
+\subsection{Medidas de referência}
+\label{sec:medidas-referencia}
+
+A ISO/IEC 25023 define medidas de produto como cobertura e correção funcional na forma $X = 1 - A/B$ \cite{iso25023}, e a ISO/IEC 25022, medidas de eficácia, eficiência e satisfação em uso \cite{iso25022}. A taxa de conclusão de tarefas tem média de referência de 78\% \cite{sauro2011}. O \textit{System Usability Scale} (SUS) produz uma pontuação de 0 a 100 \cite{brooke1996}, com média de referência 68 \cite{sauro2016}, e a \textit{Single Ease Question} (SEQ) mede a facilidade percebida de uma tarefa em um item \cite{sauro2016}. O \textit{Largest Contentful Paint} (LCP) é bom até 2,5~s e ruim acima de 4,0~s \cite{webvitals}; 1,0~s é o limite para o usuário manter o fluxo de pensamento \cite{nielsen1993}; ambos podem ser medidos com o Lighthouse \cite{lighthouse}. A acessibilidade é verificada pelos critérios A e AA das WCAG~2.2 \cite{wcag22}.

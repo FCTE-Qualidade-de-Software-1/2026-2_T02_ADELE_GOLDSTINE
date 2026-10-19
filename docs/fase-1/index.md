@@ -8,9 +8,9 @@ Nela são definidos o propósito da avaliação, quem a demanda e quem usará se
 
 ## 1.1 Objetivo da Avaliação
 
-O objetivo desta avaliação é analisar a qualidade do **SIGAA** (Sistema Integrado de Gestão de Atividades Acadêmicas) utilizado pela **Universidade de Brasília (UnB)**. O SIGAA é a base funcional de organização pra alunos, professores e alguns funcionários da instituição, abrangendo funcionalidades como matrícula em disciplinas, consulta de notas e menções, visualização de turmas e horários, visualização de grade e etc...
+O objetivo desta avaliação é analisar a qualidade do **SIGAA** (Sistema Integrado de Gestão de Atividades Acadêmicas) utilizado pela **Universidade de Brasília (UnB)**. O SIGAA é a base funcional de organização para estudantes, docentes e parte dos servidores técnico-administrativos da instituição, abrangendo funcionalidades como matrícula em disciplinas, consulta de notas e menções, visualização de turmas e horários e visualização da grade curricular.
 
-A avaliação tem como finalidade identificar pontos fortes e fracos no que diz respeito a consulta de grade e criação de fluxo no SIGAA, tendo como referêncial a experiência dos alunos E a existência de concorrentes de terceiros que vingaram por A) Serem mais acessíveis E/OU B) suprirem a necessidade de forma que o SIGAA não faz.
+A avaliação tem como finalidade identificar pontos fortes e fracos no que diz respeito à consulta da grade e ao planejamento do fluxo no SIGAA, tendo como referencial a experiência dos estudantes e a existência de ferramentas de terceiros que se consolidaram por serem mais acessíveis ou por suprirem necessidades que o SIGAA não atende.
 
 Em síntese:
 
@@ -31,7 +31,7 @@ Entre as principais funcionalidades do SIGAA, destacam-se:
 - **Gestão de processos institucionais**, como trancamento de disciplinas, aproveitamento de créditos e emissão de documentos;
 - **Comunicação** entre discentes e docentes por meio de fóruns e notícias das turmas.
 
-O SIGAA opera como uma aplicação web , sendo utilizado por uma ampla camada de dispositivos.
+O SIGAA opera como uma aplicação web e é acessado a partir de uma ampla variedade de dispositivos.
 
 A identificação da versão avaliada, o tipo de produto, os módulos do portal do discente, o diagrama de contexto, as telas de referência e as observações preliminares da interface (OP-01 a OP-08) estão em [Software Avaliado](software-avaliado.md).
 
@@ -86,7 +86,7 @@ A Capacidade de Interação (Usabilidade, na versão de 2011) avalia o grau em q
 
 A Flexibilidade (Portabilidade, na versão de 2011) avalia o grau de eficácia e eficiência com que o software pode ser transferido de um ambiente para outro. Suas subcaracterísticas são: **adaptabilidade**, **escalabilidade**, **capacidade de instalação** e **capacidade de substituição**; apenas a **adaptabilidade** é avaliada, pois as demais não se aplicam a um sistema web sem instalação no cliente ou exigem acesso ao servidor.
 
-**Justificativa:** Os usuários acessam o SIGAA a partir de diferentes dispositivos (computadores de mesa, notebooks, tablets e smartphones) e navegadores web (Chrome, Firefox, Safari, Edge, entre outros). Avaliar a adaptabilidade do sistema a diferentes ambientes de execução e a consistência da experiência de acesso em múltiplas plataformas é relevante para garantir que todos os usuários possam utilizar o sistema de forma adequada, independentemente do dispositivo ou navegador empregado, principalmente numa faculdade pública onde existe um leque de usuários extensos com limitações orçamentárias. É ideal saber se o SIGAA é portanto, inclusivo e democrático. 
+**Justificativa:** Os usuários acessam o SIGAA a partir de diferentes dispositivos (computadores de mesa, notebooks, tablets e smartphones) e navegadores web (Chrome, Firefox, Safari, Edge, entre outros). Avaliar a adaptabilidade do sistema a diferentes ambientes de execução e a consistência da experiência de acesso em múltiplas plataformas é relevante para garantir que todos os usuários possam utilizar o sistema de forma adequada, independentemente do dispositivo ou navegador empregado, principalmente em uma universidade pública, com um público amplo e com limitações orçamentárias. Por isso, é importante saber se o SIGAA é inclusivo e democrático.
 
 ### 1.4.4 Eficiência de Desempenho
 
@@ -161,5 +161,6 @@ Cada página traz, ao final, um histórico de versão. As referências utilizada
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 16/10/2026 | Criação do documento da Fase 1 | [Davi Nobre](https://github.com/Jagaima) |
-| 1.1 | 16/10/2026 | Parte da documentação da Fase 1 adcionada. (métricas, rigor, caracteriticas escolhidas)| [Davi Nobre](https://github.com/Jagaima) |
+| 1.1 | 16/10/2026 | Parte da documentação da Fase 1 adicionada (métricas, rigor, características escolhidas) | [Davi Nobre](https://github.com/Jagaima) |
 | 1.2 | 18/10/2026 | Integração com as páginas detalhadas da Fase 1: síntese do propósito, atualização para a ISO/IEC 25010:2023, inclusão da Eficiência de Desempenho (1.4.4) com a priorização Impacto x Risco, seções 1.7 (ODS) e 1.8 (mapa da fase) e referências cruzadas | Caio Borges |
+| 1.3 | 19/10/2026 | Revisão de português e registro na seção 1.1 e na justificativa de Flexibilidade, sem alteração de conteúdo | [arthurlleite](https://github.com/arthurlleite) |

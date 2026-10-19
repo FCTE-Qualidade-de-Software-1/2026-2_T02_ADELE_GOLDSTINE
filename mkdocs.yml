@@ -61,10 +61,12 @@ nav:
     - Métricas: fase-2/metricas.md
     - Níveis de Pontuação: fase-2/niveis-pontuacao.md
     - Gráfico GQM: fase-2/grafico-gqm.md
+    - Questionário: fase-2/questionario.md
   - Artigo:
     - Introdução: artigo/introducao.md
     - Referencial Teórico: artigo/referencial-teorico.md
     - Metodologia: artigo/metodologia.md
+  - Gestão do Projeto (PSM): gestao-psm.md
   - Contribuição: contribuicao.md
   - Referências: referencias.md
   - Uso de IA: uso-de-ia.md
