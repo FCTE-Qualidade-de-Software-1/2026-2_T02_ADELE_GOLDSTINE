@@ -20,3 +20,21 @@ Thumbs.db
 
 # Capturas originais com dados pessoais (usar as versões anonimizadas em docs/fase-1/img)
 Captura de Tela*.png
+
+# LaTeX (artigo)
+artigo/*.aux
+artigo/*.bbl
+artigo/*.blg
+artigo/*.brf
+artigo/*.fdb_latexmk
+artigo/*.fls
+artigo/*.idx
+artigo/*.ilg
+artigo/*.ind
+artigo/*.lof
+artigo/*.log
+artigo/*.lot
+artigo/*.out
+artigo/*.synctex.gz
+artigo/*.toc
+artigo/*.pdf

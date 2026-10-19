@@ -1,0 +1,59 @@
+% =====================================================================
+% Artigo - Projeto Final de FGA0315 Qualidade de Software 1 (2026/2)
+% Equipe Adele Goldstine - Turma T02
+%
+% Compilação: pdflatex + bibtex (ver README.md desta pasta).
+% Itens em vermelho (\pendente{...}) devem ser resolvidos pela equipe
+% antes da entrega; nenhum deve restar na versão final.
+% =====================================================================
+
+\input{fixos/pacotes}
+\input{fixos/comandos}
+\usepackage{fixos/customizacoes}
+
+\input{editaveis/00_informacoes}
+\input{fixos/informacoes}
+\input{fixos/setup}
+
+\begin{document}
+
+\frenchspacing
+\imprimircapa
+\imprimirfolhaderosto*
+
+\input{fixos/fichaCatalografica}
+
+% \input{editaveis/errata}
+% \input{fixos/folhaDeAprovacao}
+% \input{editaveis/dedicatoria}
+% \input{editaveis/agradecimentos}
+% \input{editaveis/epigrafe}
+
+\input{editaveis/01_resumo}
+\input{editaveis/01_abstract}
+\input{fixos/listasAutomaticas}
+\input{editaveis/02_siglas}
+\input{editaveis/02_simbolos}
+\input{fixos/indiceAutomatico}
+
+\textual
+
+\input{editaveis/03_introducao}
+\input{editaveis/04_referencial_teorico}
+\input{editaveis/05_metodologia}
+\input{editaveis/06_fase1}
+\input{editaveis/07_fase2}
+\input{editaveis/08_consideracoes}
+
+\bookmarksetup{startatroot}
+
+\postextual
+
+\bibliography{bibliografia}
+
+\input{editaveis/09_apendices}
+% \input{editaveis/10_anexos}
+
+\printindex
+
+\end{document}

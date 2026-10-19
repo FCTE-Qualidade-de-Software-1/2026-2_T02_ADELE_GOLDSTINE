@@ -1,0 +1,28 @@
+% ---
+% Comandos auxiliares
+% ---
+
+% Lista de referências: indica as páginas em que cada obra foi citada
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+\renewcommand{\backref}{}
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+
+% Endereços do projeto (premissa 12 do roteiro: link direto ao repositório)
+\newcommand{\urlrepositorio}{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE}}
+\newcommand{\urlgitpage}{\url{https://fcte-qualidade-de-software-1.github.io/2026-2_T02_ADELE_GOLDSTINE/}}
+
+% Colunas de tabela com quebra de linha e alinhamento à esquerda
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+% Marcação de pendências que a equipe precisa preencher antes da entrega.
+% Procure por \pendente no código-fonte; nenhuma deve restar na versão final.
+\newcommand{\pendente}[1]{\textcolor{red}{#1}}
