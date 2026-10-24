@@ -25,4 +25,4 @@ A capa e o sumário são acréscimos pedidos pela equipe; a partir da página 3 
 
 ## Antes da entrega
 
-Procure por `\pendente{` em `secoes/07_apendice.tex`: os percentuais de esforço e as atividades em vermelho da tabela de contribuição precisam ser preenchidos pela equipe.
+Os percentuais de esforço de `secoes/07_apendice.tex` vêm de `python gestao/esforco.py calcular --entrega E1` (metodologia em `docs/contribuicao.md`). Se alguém corrigir as próprias horas em `gestao/esforco.csv`, rode o cálculo de novo e atualize o apêndice e a página Contribuição.
