@@ -15,7 +15,7 @@ Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em pr
 | Elemento | Definição |
 | -------- | --------- |
 | **Analisar** | o portal do discente de graduação do SIGAA/UnB |
-| **com o propósito de** | avaliar, a fim de identificar pontos fracos |
+| **com o propósito de** | avaliar |
 | **com respeito à** | adequação funcional (completude funcional, correção funcional e adequação funcional, ou pertinência) |
 | **do ponto de vista do** | estudante de graduação da UnB |
 | **no contexto** | das tarefas T1 a T6 e do planejamento do fluxo de disciplinas (OP-07), na versão v4.15.10.115 em uso no 2º semestre letivo de 2026 |
@@ -29,7 +29,7 @@ Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em pr
 | Elemento | Definição |
 | -------- | --------- |
 | **Analisar** | a interface web do portal do discente do SIGAA/UnB |
-| **com o propósito de** | avaliar, a fim de identificar pontos fracos |
+| **com o propósito de** | avaliar |
 | **com respeito à** | capacidade de interação (reconhecimento de adequação, apreensibilidade, operabilidade, proteção contra erros do usuário, inclusividade e autodescritividade), complementada pela satisfação (qualidade em uso) |
 | **do ponto de vista do** | estudante de graduação da UnB, com atenção a calouros e a estudantes com deficiência |
 | **no contexto** | da execução das tarefas T1 a T6 em computador, na versão v4.15.10.115 em uso no 2º semestre letivo de 2026 |
@@ -43,7 +43,7 @@ Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em pr
 | Elemento | Definição |
 | -------- | --------- |
 | **Analisar** | a interface web do portal do discente do SIGAA/UnB |
-| **com o propósito de** | avaliar, a fim de identificar pontos fracos |
+| **com o propósito de** | avaliar |
 | **com respeito à** | flexibilidade (adaptabilidade) |
 | **do ponto de vista do** | estudante de graduação da UnB, com atenção ao estudante que acessa o sistema apenas pelo celular |
 | **no contexto** | do acesso pelos navegadores Chrome, Firefox, Edge e Safari, em computador, tablet e celular, com interação por mouse e por toque |
@@ -67,3 +67,4 @@ Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em pr
 | 2.1 | 18/10/2026 | Satisfação declarada no foco de qualidade de G2 | Felipe Campêlo |
 | 2.2 | 18/10/2026 | Integração da versão complementar: prioridade de cada objetivo na Fase 1, avaliação caixa-preta e vínculo de G4 com o ODS 10 | Leonardo Bonetti |
 | 2.3 | 25/10/2026 | Remoção do objetivo G4 (Eficiência de Desempenho), por orientação da professora no ponto de controle; prioridade das três características avaliadas | Leonardo Bonetti |
+| 2.4 | 25/10/2026 | Propósito dos objetivos reduzido ao verbo "avaliar" | Leonardo Bonetti |
