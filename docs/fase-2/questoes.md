@@ -76,4 +76,4 @@ As métricas que respondem a cada questão (Tabela 4) estão detalhadas na pági
 | 2.0 | 18/10/2026 | Alinhamento à Fase 1 reestruturada: questões Q1 a Q14, uma por subcaracterística mantida, e questões de G4 | Felipe Campêlo |
 | 2.1 | 18/10/2026 | Redação de Q6, Q10 e Q14 no nível do atributo, e não da métrica; coluna "Atributo do foco de qualidade" | Felipe Campêlo |
 | 2.2 | 18/10/2026 | Integração da versão complementar: métrica M20 (cenários de erro) associada a Q7 e referência às hipóteses | Leonardo Bonetti |
-| 2.3 | 25/10/2026 | Remoção das questões Q13 e Q14 do objetivo G4 (Eficiência de Desempenho), por orientação da professora no ponto de controle | Leonardo Bonetti |
+| 2.3 | 25/10/2026 | Remoção das questões Q13 e Q14 do objetivo G4 (Eficiência de Desempenho) | Leonardo Bonetti |

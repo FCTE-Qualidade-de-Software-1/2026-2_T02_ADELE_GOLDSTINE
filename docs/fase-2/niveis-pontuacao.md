@@ -162,4 +162,4 @@ Pontuação de G3 = (2 + 1) / 2 = 1,5. Não há questão Insatisfatória, mas a 
 | 1.1 | 17/10/2026 | Definição dos níveis de pontuação e dos critérios de julgamento | Felipe Campêlo |
 | 2.0 | 18/10/2026 | Estrutura da página alinhada à Fase 1 reestruturada (M1 a M19, G1 a G4), para preenchimento | Felipe Campêlo |
 | 2.1 | 18/10/2026 | Preenchimento a partir da versão complementar: escala com regra de fronteira, faixas de M1 a M20 com origem, Etapas 1 a 3, regras complementares (métricas não aplicáveis, itens críticos de M2, recortes, ranking das tarefas, ausência de nota única, classificação das hipóteses) e exemplo de aplicação em G4 | Leonardo Bonetti |
-| 2.2 | 25/10/2026 | Remoção das faixas de M16 a M19 e do objetivo G4 (Eficiência de Desempenho), por orientação da professora no ponto de controle; exemplo de aplicação refeito em G3; MA1 ligada à HR2 (antiga HR3) | Leonardo Bonetti |
+| 2.2 | 25/10/2026 | Remoção das faixas de M16 a M19 e do objetivo G4 (Eficiência de Desempenho); exemplo de aplicação refeito em G3; MA1 ligada à HR2 (antiga HR3) | Leonardo Bonetti |

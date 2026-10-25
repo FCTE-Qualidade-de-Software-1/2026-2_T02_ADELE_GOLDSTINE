@@ -154,4 +154,4 @@ As respostas exportadas ficam em `dados/brutos/questionario/respostas.csv`, uma 
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 19/10/2026 | Especificação do questionário: termo de consentimento, itens dos blocos A a F, grupos de comparação, indicadores IQ1 a IQ6 e hipótese de perfil HP1 | [arthurlleite](https://github.com/arthurlleite) |
-| 1.1 | 25/10/2026 | Remoção dos itens B3 e B4 e do indicador IQ6, ligados ao objetivo G4 (Eficiência de Desempenho), retirado por orientação da professora no ponto de controle | Leonardo Bonetti |
+| 1.1 | 25/10/2026 | Remoção dos itens B3 e B4 e do indicador IQ6, ligados ao objetivo G4 (Eficiência de Desempenho) | Leonardo Bonetti |

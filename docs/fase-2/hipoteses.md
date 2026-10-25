@@ -64,4 +64,4 @@ O roteiro exige discutir, ao final, as relações entre as características (pre
 | 1.1 | 17/10/2026 | Definição das hipóteses H1 a H9 | Felipe Campêlo |
 | 2.0 | 18/10/2026 | Estrutura da página alinhada à Fase 1 reestruturada (H1 a H14), para preenchimento | Felipe Campêlo |
 | 2.1 | 18/10/2026 | Preenchimento das hipóteses H1 a H14 a partir da versão complementar, com fundamento na Fase 1 e critério de confirmação numérico; critérios de classificação das hipóteses; hipóteses de relação HR1 a HR4 | Leonardo Bonetti |
-| 2.2 | 25/10/2026 | Remoção de H13, H14 e das hipóteses de relação com Eficiência de Desempenho (antigas HR2 e HR4), por orientação da professora no ponto de controle; antiga HR3 renumerada para HR2; fundamento de H8 reescrito | Leonardo Bonetti |
+| 2.2 | 25/10/2026 | Remoção de H13, H14 e das hipóteses de relação com Eficiência de Desempenho (antigas HR2 e HR4); antiga HR3 renumerada para HR2; fundamento de H8 reescrito | Leonardo Bonetti |

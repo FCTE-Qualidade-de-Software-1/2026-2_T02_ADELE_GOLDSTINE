@@ -66,6 +66,6 @@ Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em pr
 | 2.0 | 18/10/2026 | Alinhamento à Fase 1 reestruturada: objetivo G4 (Eficiência de Desempenho), nomenclatura da ISO/IEC 25010:2023 e subcaracterísticas mantidas na Fase 1 | Felipe Campêlo |
 | 2.1 | 18/10/2026 | Satisfação declarada no foco de qualidade de G2 | Felipe Campêlo |
 | 2.2 | 18/10/2026 | Integração da versão complementar: prioridade de cada objetivo na Fase 1, avaliação caixa-preta e vínculo de G4 com o ODS 10 | Leonardo Bonetti |
-| 2.3 | 25/10/2026 | Remoção do objetivo G4 (Eficiência de Desempenho), por orientação da professora no ponto de controle; prioridade das três características avaliadas | Leonardo Bonetti |
+| 2.3 | 25/10/2026 | Remoção do objetivo G4 (Eficiência de Desempenho); prioridade das três características avaliadas | Leonardo Bonetti |
 | 2.4 | 25/10/2026 | Propósito dos objetivos reduzido ao verbo "avaliar" | Leonardo Bonetti |
 | 2.5 | 25/10/2026 | Mesmo objeto de estudo em G1 a G3: "o portal do discente de graduação do SIGAA/UnB" | Leonardo Bonetti |
