@@ -51,6 +51,7 @@ nav:
     - Software Avaliado: fase-1/software-avaliado.md
     - Modelo de Qualidade: fase-1/modelo-qualidade.md
     - Características Priorizadas: fase-1/caracteristicas.md
+    - Personas: fase-1/personas.md
     - Escopo e Rigor: fase-1/escopo.md
     - ODS: fase-1/ods.md
   - Fase 2:
@@ -70,4 +71,3 @@ nav:
   - Contribuição: contribuicao.md
   - Referências: referencias.md
   - Uso de IA: uso-de-ia.md
-
