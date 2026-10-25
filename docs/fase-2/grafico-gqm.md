@@ -69,7 +69,7 @@ flowchart LR
 ```mermaid
 flowchart TD
     subgraph C["Nível conceitual"]
-        G1["G1: Avaliar a adequação funcional do portal do discente do SIGAA/UnB, do ponto de vista do estudante de graduação"]
+        G1["G1: Avaliar a adequação funcional do portal do discente de graduação do SIGAA/UnB, do ponto de vista do estudante de graduação"]
     end
     subgraph O["Nível operacional"]
         Q1["Q1: O SIGAA oferece as funções de que o estudante precisa?"]
@@ -94,7 +94,7 @@ flowchart TD
 ```mermaid
 flowchart LR
     subgraph C["Nível conceitual"]
-        G2["G2: Avaliar a capacidade de interação do portal do discente do SIGAA/UnB, do ponto de vista do estudante de graduação"]
+        G2["G2: Avaliar a capacidade de interação do portal do discente de graduação do SIGAA/UnB, do ponto de vista do estudante de graduação"]
     end
     subgraph O["Nível operacional"]
         Q4["Q4: O estudante identifica onde está a função?"]
@@ -134,7 +134,7 @@ flowchart LR
 ```mermaid
 flowchart TD
     subgraph C["Nível conceitual"]
-        G3["G3: Avaliar a flexibilidade do portal do discente do SIGAA/UnB, do ponto de vista do estudante de graduação"]
+        G3["G3: Avaliar a flexibilidade do portal do discente de graduação do SIGAA/UnB, do ponto de vista do estudante de graduação"]
     end
     subgraph O["Nível operacional"]
         Q11["Q11: As tarefas funcionam nos navegadores mais usados?"]
@@ -188,3 +188,4 @@ Todas as métricas com nível de pontuação estão ligadas a uma única questã
 | 2.0 | 18/10/2026 | Alinhamento à Fase 1 reestruturada: objetivo G4, questões Q1 a Q14, métricas M1 a M19 e legendas no padrão da Fase 1 | Felipe Campêlo |
 | 2.1 | 18/10/2026 | Integração da versão complementar: métrica M20 nas Figuras 1 e 3, nota sobre a métrica auxiliar MA1 e matriz de rastreabilidade Característica, Objetivo, Questão, Hipótese e Métrica | Leonardo Bonetti |
 | 2.2 | 25/10/2026 | Remoção do objetivo G4 (Eficiência de Desempenho) da Figura 1, da Figura 5 e da matriz de rastreabilidade, por orientação da professora no ponto de controle; MA1 ligada à HR2 (antiga HR3) | Leonardo Bonetti |
+| 2.3 | 25/10/2026 | Objeto dos objetivos nas Figuras 2 a 4: "portal do discente de graduação do SIGAA/UnB" | Leonardo Bonetti |

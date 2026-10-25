@@ -28,7 +28,7 @@ Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em pr
 
 | Elemento | Definição |
 | -------- | --------- |
-| **Analisar** | a interface web do portal do discente do SIGAA/UnB |
+| **Analisar** | o portal do discente de graduação do SIGAA/UnB |
 | **com o propósito de** | avaliar |
 | **com respeito à** | capacidade de interação (reconhecimento de adequação, apreensibilidade, operabilidade, proteção contra erros do usuário, inclusividade e autodescritividade), complementada pela satisfação (qualidade em uso) |
 | **do ponto de vista do** | estudante de graduação da UnB, com atenção a calouros e a estudantes com deficiência |
@@ -42,7 +42,7 @@ Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em pr
 
 | Elemento | Definição |
 | -------- | --------- |
-| **Analisar** | a interface web do portal do discente do SIGAA/UnB |
+| **Analisar** | o portal do discente de graduação do SIGAA/UnB |
 | **com o propósito de** | avaliar |
 | **com respeito à** | flexibilidade (adaptabilidade) |
 | **do ponto de vista do** | estudante de graduação da UnB, com atenção ao estudante que acessa o sistema apenas pelo celular |
@@ -68,3 +68,4 @@ Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em pr
 | 2.2 | 18/10/2026 | Integração da versão complementar: prioridade de cada objetivo na Fase 1, avaliação caixa-preta e vínculo de G4 com o ODS 10 | Leonardo Bonetti |
 | 2.3 | 25/10/2026 | Remoção do objetivo G4 (Eficiência de Desempenho), por orientação da professora no ponto de controle; prioridade das três características avaliadas | Leonardo Bonetti |
 | 2.4 | 25/10/2026 | Propósito dos objetivos reduzido ao verbo "avaliar" | Leonardo Bonetti |
+| 2.5 | 25/10/2026 | Mesmo objeto de estudo em G1 a G3: "o portal do discente de graduação do SIGAA/UnB" | Leonardo Bonetti |
