@@ -1,0 +1,70 @@
+entrega,data,membro,horas,categoria,descricao,evidencia,origem
+E1,19/10/2026,Arthur Carvalho Leite,0.18,consolidacao,artigo/artigo.tex: 404 palavras / 2200 por hora,git log cf12104,estimada
+E1,19/10/2026,Arthur Carvalho Leite,0.64,consolidacao,artigo/bibliografia.bib: 1404 palavras / 2200 por hora,git log cf12104,estimada
+E1,19/10/2026,Arthur Carvalho Leite,0.08,consolidacao,artigo/secoes/00_resumo.tex: 184 palavras / 2200 por hora,git log cf12104,estimada
+E1,19/10/2026,Arthur Carvalho Leite,0.17,consolidacao,artigo/secoes/01_introducao.tex: 385 palavras / 2200 por hora,git log cf12104,estimada
+E1,19/10/2026,Arthur Carvalho Leite,0.25,consolidacao,artigo/secoes/02_referencial.tex: 551 palavras / 2200 por hora,git log cf12104,estimada
+E1,19/10/2026,Arthur Carvalho Leite,0.39,consolidacao,artigo/secoes/03_metodologia.tex: 857 palavras / 2200 por hora,git log cf12104,estimada
+E1,19/10/2026,Arthur Carvalho Leite,0.50,consolidacao,artigo/secoes/04_fase1.tex: 1093 palavras / 2200 por hora,git log cf12104,estimada
+E1,19/10/2026,Arthur Carvalho Leite,1.14,consolidacao,artigo/secoes/05_fase2.tex: 2513 palavras / 2200 por hora,git log cf12104,estimada
+E1,19/10/2026,Arthur Carvalho Leite,0.11,consolidacao,artigo/secoes/06_consideracoes.tex: 237 palavras / 2200 por hora,git log cf12104,estimada
+E1,19/10/2026,Arthur Carvalho Leite,0.13,consolidacao,artigo/secoes/07_apendice.tex: 286 palavras / 2200 por hora,git log cf12104,estimada
+E1,19/10/2026,Arthur Carvalho Leite,0.31,redacao,docs/contribuicao.md: 344 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Arthur Carvalho Leite,0.27,redacao,docs/fase-1/index.md: 299 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Arthur Carvalho Leite,0.11,redacao,docs/fase-2/index.md: 121 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Arthur Carvalho Leite,0.02,redacao,docs/fase-2/metricas.md: 21 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Arthur Carvalho Leite,2.08,redacao,docs/fase-2/questionario.md: 2285 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Arthur Carvalho Leite,0.91,redacao,docs/gestao-psm.md: 1002 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Arthur Carvalho Leite,0.02,redacao,docs/index.md: 23 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Arthur Carvalho Leite,0.14,redacao,docs/referencias.md: 158 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Arthur Carvalho Leite,0.24,redacao,docs/uso-de-ia.md: 266 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Caio Melo Borges,1.47,redacao,docs/fase-1/caracteristicas.md: 1615 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Caio Melo Borges,1.10,redacao,docs/fase-1/escopo.md: 1215 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Caio Melo Borges,2.14,redacao,docs/fase-1/index.md: 2359 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Caio Melo Borges,0.92,redacao,docs/fase-1/modelo-qualidade.md: 1008 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Caio Melo Borges,0.62,redacao,docs/fase-1/ods.md: 681 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Caio Melo Borges,1.08,redacao,docs/fase-1/proposito-stakeholders.md: 1184 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Caio Melo Borges,1.43,redacao,docs/fase-1/software-avaliado.md: 1568 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Caio Melo Borges,0.22,redacao,docs/referencias.md: 240 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Caio Melo Borges,0.05,redacao,docs/uso-de-ia.md: 53 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Davi dos Santos Brito Nobre,0.04,redacao,docs/artigo/introducao.md: 43 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Davi dos Santos Brito Nobre,0.04,redacao,docs/artigo/metodologia.md: 43 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Davi dos Santos Brito Nobre,0.04,redacao,docs/artigo/referencial-teorico.md: 45 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Davi dos Santos Brito Nobre,0.04,redacao,docs/contribuicao.md: 45 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Davi dos Santos Brito Nobre,0.88,redacao,docs/fase-1/index.md: 970 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Davi dos Santos Brito Nobre,0.04,redacao,docs/fase-2/grafico-gqm.md: 47 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Davi dos Santos Brito Nobre,0.04,redacao,docs/fase-2/hipoteses.md: 45 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Davi dos Santos Brito Nobre,0.04,redacao,docs/fase-2/index.md: 43 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Davi dos Santos Brito Nobre,0.04,redacao,docs/fase-2/metricas.md: 45 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Davi dos Santos Brito Nobre,0.04,redacao,docs/fase-2/niveis-pontuacao.md: 49 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Davi dos Santos Brito Nobre,0.04,redacao,docs/fase-2/objetivos.md: 45 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Davi dos Santos Brito Nobre,0.04,redacao,docs/fase-2/questoes.md: 45 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Davi dos Santos Brito Nobre,0.08,redacao,docs/index.md: 89 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Davi dos Santos Brito Nobre,0.04,redacao,docs/referencias.md: 45 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Davi dos Santos Brito Nobre,0.14,redacao,docs/uso-de-ia.md: 157 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Felipe de Aquino Campêlo,0.89,redacao,docs/fase-2/grafico-gqm.md: 976 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Felipe de Aquino Campêlo,0.29,redacao,docs/fase-2/hipoteses.md: 316 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Felipe de Aquino Campêlo,1.30,redacao,docs/fase-2/index.md: 1429 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Felipe de Aquino Campêlo,4.31,redacao,docs/fase-2/metricas.md: 4746 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Felipe de Aquino Campêlo,0.62,redacao,docs/fase-2/niveis-pontuacao.md: 677 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Felipe de Aquino Campêlo,0.89,redacao,docs/fase-2/objetivos.md: 977 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Felipe de Aquino Campêlo,1.00,redacao,docs/fase-2/questoes.md: 1096 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Felipe de Aquino Campêlo,0.06,redacao,docs/uso-de-ia.md: 63 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Leonardo Fachinello Bonetti,0.39,redacao,docs/fase-2/grafico-gqm.md: 424 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Leonardo Fachinello Bonetti,1.37,redacao,docs/fase-2/hipoteses.md: 1508 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Leonardo Fachinello Bonetti,0.79,redacao,docs/fase-2/index.md: 868 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Leonardo Fachinello Bonetti,2.42,redacao,docs/fase-2/metricas.md: 2658 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Leonardo Fachinello Bonetti,2.23,redacao,docs/fase-2/niveis-pontuacao.md: 2449 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Leonardo Fachinello Bonetti,0.20,redacao,docs/fase-2/objetivos.md: 219 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Leonardo Fachinello Bonetti,0.05,redacao,docs/fase-2/questoes.md: 54 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Leonardo Fachinello Bonetti,0.17,redacao,docs/referencias.md: 182 palavras / 1100 por hora,git log cf12104,estimada
+E1,19/10/2026,Leonardo Fachinello Bonetti,0.08,redacao,docs/uso-de-ia.md: 88 palavras / 1100 por hora,git log cf12104,estimada
+E1,16/10/2026,Davi dos Santos Brito Nobre,1.00,infraestrutura,"Criação do repositório, estrutura MkDocs (21 arquivos) e workflow de publicação da GitPage",commit ef63af2,estimada
+E1,16/10/2026,Caio Melo Borges,0.50,infraestrutura,"8 capturas de tela do SIGAA, com anonimização dos dados pessoais",commit a311cc4,estimada
+E1,19/10/2026,Arthur Carvalho Leite,1.00,infraestrutura,"Configuração do modelo IEEE (IEEEtran), migração do abnTeX2, figuras e compilação do PDF",commits 1e073c7 e ae19094,estimada
+E1,18/10/2026,Davi dos Santos Brito Nobre,0.25,integracao,Revisão e merge do PR #1 (Fase 1),PR #1,estimada
+E1,18/10/2026,Leonardo Fachinello Bonetti,0.25,integracao,Revisão e merge do PR #2 (Fase 2),PR #2,estimada
+E1,19/10/2026,Caio Melo Borges,0.25,integracao,Revisão e merge do PR #3 (artigo),PR #3,estimada
+E1,19/10/2026,Davi dos Santos Brito Nobre,6.97,fora-do-repositorio,"Trabalho sem registro no Git (organização da equipe, pesquisa e apoio às Fases 1 e 2), declarado pela equipe",declaração da equipe,declarada
+E1,19/10/2026,Caio Melo Borges,-0.78,ajuste,"Ajuste da estimativa definido pela equipe na revisão da tabela de contribuição",declaração da equipe,declarada
+E1,19/10/2026,Daniel Nunes Duarte,7.20,fora-do-repositorio,"Apoio à equipe sem registro no Git, principalmente na preparação e no dia da apresentação",declaração da equipe,declarada
