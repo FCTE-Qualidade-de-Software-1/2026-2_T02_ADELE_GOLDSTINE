@@ -29,6 +29,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Copy article PDF
+        run: cp artigo/artigo.pdf docs/artigo/artigo.pdf
+
       - name: Build MkDocs
         run: mkdocs build
 
