@@ -8,6 +8,8 @@ A numeração G1 a G3 não segue a ordem de prioridade da Fase 1. Na [matriz Imp
 
 Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em produção e sem alteração de dados acadêmicos, conforme as [implicações para a avaliação](../fase-1/software-avaliado.md#5-implicacoes-para-a-avaliacao) registradas na Fase 1.
 
+O contexto, igual em todos os objetivos, é o ambiente em que a avaliação é conduzida. Os elementos que delimitam a avaliação foram definidos na Fase 1 e não são repetidos no template: a versão do sistema e o período de observação, no [objeto da avaliação](../fase-1/escopo.md#1-objeto-da-avaliacao); as tarefas T1 a T6, nas [tarefas representativas](../fase-1/escopo.md#21-tarefas-representativas); e os navegadores, dispositivos, tamanhos de tela e redes, nos [ambientes de execução](../fase-1/escopo.md#22-ambientes-de-execucao). As observações preliminares OP-01 a OP-08, citadas nas justificativas, estão em [Software Avaliado](../fase-1/software-avaliado.md#4-observacoes-preliminares-da-interface).
+
 ## G1 - Adequação Funcional
 
 *Tabela 1 - Objetivo de medição G1 - Adequação Funcional.*
@@ -18,11 +20,11 @@ Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em pr
 | **com o propósito de** | avaliar |
 | **com respeito à** | adequação funcional |
 | **do ponto de vista do** | estudante de graduação da UnB |
-| **no contexto** | das tarefas T1 a T6 e do planejamento do fluxo de disciplinas (OP-07), na versão v4.15.10.115 em uso no 2º semestre letivo de 2026 |
+| **no contexto** | da disciplina Qualidade de Software 1 (FGA0315), no campus FCTE (Gama) da UnB |
 
 A adequação funcional é caracterizada pelas subcaracterísticas completude funcional, correção funcional e pertinência funcional, cada uma tratada por questões próprias.
 
-**Justificativa:** Adequação Funcional ficou em segundo lugar na matriz Impacto x Risco (P = 20). O estudante depende do SIGAA para tarefas sem alternativa institucional, e a existência de ferramentas comunitárias para planejar o fluxo (OP-07) indica lacunas de completude. G1 verifica se as funções necessárias existem, se produzem informações corretas e se bastam para a tarefa sem recurso a ferramentas externas.
+**Justificativa:** Adequação Funcional ficou em segundo lugar na matriz Impacto x Risco (P = 20). O estudante depende do SIGAA para tarefas sem alternativa institucional, e a existência de ferramentas comunitárias para planejar o fluxo (OP-07) indica lacunas de completude. G1 verifica, nas tarefas T1 a T6 e no planejamento do fluxo de disciplinas, se as funções necessárias existem, se produzem informações corretas e se bastam para a tarefa sem recurso a ferramentas externas.
 
 ## G2 - Capacidade de Interação (Usabilidade)
 
@@ -34,11 +36,11 @@ A adequação funcional é caracterizada pelas subcaracterísticas completude fu
 | **com o propósito de** | avaliar |
 | **com respeito à** | usabilidade (capacidade de interação) |
 | **do ponto de vista do** | estudante de graduação da UnB |
-| **no contexto** | da execução das tarefas T1 a T6 em computador, na versão v4.15.10.115 em uso no 2º semestre letivo de 2026 |
+| **no contexto** | da disciplina Qualidade de Software 1 (FGA0315), no campus FCTE (Gama) da UnB |
 
 A capacidade de interação é caracterizada pelas subcaracterísticas reconhecimento de adequação, apreensibilidade, operabilidade, proteção contra erros do usuário, inclusividade e autodescritividade, cada uma tratada por questões próprias, e é complementada pela satisfação (qualidade em uso).
 
-**Justificativa:** Capacidade de Interação é a característica de maior prioridade na Fase 1 (P = 25) e a que reúne mais observações preliminares (OP-01 a OP-06). G2 verifica se o estudante localiza as funções, aprende a usá-las sem ajuda, conclui as tarefas com esforço razoável, recupera-se de erros, encontra barreiras de acessibilidade e compreende as informações sem legenda externa. Dois [perfis da Fase 1](../fase-1/proposito-stakeholders.md#22-perfis-de-usuarios-considerados) recebem atenção especial: os calouros, que no primeiro contato ainda desconhecem a terminologia acadêmica e a organização dos menus (apreensibilidade), e os estudantes com deficiência, que dependem de recursos de acessibilidade (inclusividade).
+**Justificativa:** Capacidade de Interação é a característica de maior prioridade na Fase 1 (P = 25) e a que reúne mais observações preliminares (OP-01 a OP-06). G2 verifica, na execução das tarefas T1 a T6 em computador, se o estudante localiza as funções, aprende a usá-las sem ajuda, conclui as tarefas com esforço razoável, recupera-se de erros, encontra barreiras de acessibilidade e compreende as informações sem legenda externa. Dois [perfis da Fase 1](../fase-1/proposito-stakeholders.md#22-perfis-de-usuarios-considerados) recebem atenção especial: os calouros, que no primeiro contato ainda desconhecem a terminologia acadêmica e a organização dos menus (apreensibilidade), e os estudantes com deficiência, que dependem de recursos de acessibilidade (inclusividade).
 
 ## G3 - Flexibilidade (Portabilidade)
 
@@ -50,9 +52,9 @@ A capacidade de interação é caracterizada pelas subcaracterísticas reconheci
 | **com o propósito de** | avaliar |
 | **com respeito à** | flexibilidade |
 | **do ponto de vista do** | estudante de graduação da UnB |
-| **no contexto** | do acesso pelos navegadores Chrome, Firefox, Edge e Safari, em computador, tablet e celular, com interação por mouse e por toque |
+| **no contexto** | da disciplina Qualidade de Software 1 (FGA0315), no campus FCTE (Gama) da UnB |
 
-**Justificativa:** Flexibilidade obteve P = 16 na Fase 1. O layout de largura fixa e os menus acionados pela passagem do ponteiro (OP-02 e OP-03) podem impedir o estudante que só usa o celular de concluir suas tarefas, e por isso esse [perfil da Fase 1](../fase-1/proposito-stakeholders.md#22-perfis-de-usuarios-considerados) é o destaque deste objetivo. G3 verifica se o SIGAA funciona da mesma forma nos navegadores, tamanhos de tela e modos de interação considerados no escopo.
+**Justificativa:** Flexibilidade obteve P = 16 na Fase 1. O layout de largura fixa e os menus acionados pela passagem do ponteiro (OP-02 e OP-03) podem impedir o estudante que só usa o celular de concluir suas tarefas, e por isso esse [perfil da Fase 1](../fase-1/proposito-stakeholders.md#22-perfis-de-usuarios-considerados) é o destaque deste objetivo. G3 verifica se o SIGAA funciona da mesma forma nos navegadores Chrome, Firefox, Edge e Safari, em computador, tablet e celular e com interação por mouse e por toque, conforme os [ambientes de execução](../fase-1/escopo.md#22-ambientes-de-execucao) da Fase 1.
 
 ## Referências
 
@@ -76,3 +78,4 @@ A capacidade de interação é caracterizada pelas subcaracterísticas reconheci
 | 2.6 | 25/10/2026 | Foco de qualidade de G2 e G3 reduzido à característica; subcaracterísticas de G2 em frase abaixo da tabela | Leonardo Bonetti |
 | 2.7 | 25/10/2026 | Foco de qualidade de G1 reduzido à característica; subcaracterística *functional appropriateness* nomeada pertinência funcional | Leonardo Bonetti |
 | 2.8 | 25/10/2026 | Ponto de vista único em G1 a G3 (estudante de graduação da UnB); destaque aos perfis movido para as justificativas de G2 e G3 | Leonardo Bonetti |
+| 2.9 | 25/10/2026 | Contexto dos objetivos como ambiente da avaliação; versão, período, tarefas e ambientes remetidos à Fase 1; recortes de tarefa, dispositivo e navegador nas justificativas | Leonardo Bonetti |
