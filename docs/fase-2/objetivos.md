@@ -33,12 +33,12 @@ A adequação funcional é caracterizada pelas subcaracterísticas completude fu
 | **Analisar** | o portal do discente de graduação do SIGAA/UnB |
 | **com o propósito de** | avaliar |
 | **com respeito à** | usabilidade (capacidade de interação) |
-| **do ponto de vista do** | estudante de graduação da UnB, com atenção a calouros e a estudantes com deficiência |
+| **do ponto de vista do** | estudante de graduação da UnB |
 | **no contexto** | da execução das tarefas T1 a T6 em computador, na versão v4.15.10.115 em uso no 2º semestre letivo de 2026 |
 
 A capacidade de interação é caracterizada pelas subcaracterísticas reconhecimento de adequação, apreensibilidade, operabilidade, proteção contra erros do usuário, inclusividade e autodescritividade, cada uma tratada por questões próprias, e é complementada pela satisfação (qualidade em uso).
 
-**Justificativa:** Capacidade de Interação é a característica de maior prioridade na Fase 1 (P = 25) e a que reúne mais observações preliminares (OP-01 a OP-06). G2 verifica se o estudante localiza as funções, aprende a usá-las sem ajuda, conclui as tarefas com esforço razoável, recupera-se de erros, encontra barreiras de acessibilidade e compreende as informações sem legenda externa.
+**Justificativa:** Capacidade de Interação é a característica de maior prioridade na Fase 1 (P = 25) e a que reúne mais observações preliminares (OP-01 a OP-06). G2 verifica se o estudante localiza as funções, aprende a usá-las sem ajuda, conclui as tarefas com esforço razoável, recupera-se de erros, encontra barreiras de acessibilidade e compreende as informações sem legenda externa. Dois [perfis da Fase 1](../fase-1/proposito-stakeholders.md#22-perfis-de-usuarios-considerados) recebem atenção especial: os calouros, que no primeiro contato ainda desconhecem a terminologia acadêmica e a organização dos menus (apreensibilidade), e os estudantes com deficiência, que dependem de recursos de acessibilidade (inclusividade).
 
 ## G3 - Flexibilidade (Portabilidade)
 
@@ -49,10 +49,10 @@ A capacidade de interação é caracterizada pelas subcaracterísticas reconheci
 | **Analisar** | o portal do discente de graduação do SIGAA/UnB |
 | **com o propósito de** | avaliar |
 | **com respeito à** | flexibilidade |
-| **do ponto de vista do** | estudante de graduação da UnB, com atenção ao estudante que acessa o sistema apenas pelo celular |
+| **do ponto de vista do** | estudante de graduação da UnB |
 | **no contexto** | do acesso pelos navegadores Chrome, Firefox, Edge e Safari, em computador, tablet e celular, com interação por mouse e por toque |
 
-**Justificativa:** Flexibilidade obteve P = 16 na Fase 1. O layout de largura fixa e os menus acionados pela passagem do ponteiro (OP-02 e OP-03) podem impedir o estudante que só usa o celular de concluir suas tarefas. G3 verifica se o SIGAA funciona da mesma forma nos navegadores, tamanhos de tela e modos de interação considerados no escopo.
+**Justificativa:** Flexibilidade obteve P = 16 na Fase 1. O layout de largura fixa e os menus acionados pela passagem do ponteiro (OP-02 e OP-03) podem impedir o estudante que só usa o celular de concluir suas tarefas, e por isso esse [perfil da Fase 1](../fase-1/proposito-stakeholders.md#22-perfis-de-usuarios-considerados) é o destaque deste objetivo. G3 verifica se o SIGAA funciona da mesma forma nos navegadores, tamanhos de tela e modos de interação considerados no escopo.
 
 ## Referências
 
@@ -75,3 +75,4 @@ A capacidade de interação é caracterizada pelas subcaracterísticas reconheci
 | 2.5 | 25/10/2026 | Mesmo objeto de estudo em G1 a G3: "o portal do discente de graduação do SIGAA/UnB" | Leonardo Bonetti |
 | 2.6 | 25/10/2026 | Foco de qualidade de G2 e G3 reduzido à característica; subcaracterísticas de G2 em frase abaixo da tabela | Leonardo Bonetti |
 | 2.7 | 25/10/2026 | Foco de qualidade de G1 reduzido à característica; subcaracterística *functional appropriateness* nomeada pertinência funcional | Leonardo Bonetti |
+| 2.8 | 25/10/2026 | Ponto de vista único em G1 a G3 (estudante de graduação da UnB); destaque aos perfis movido para as justificativas de G2 e G3 | Leonardo Bonetti |
