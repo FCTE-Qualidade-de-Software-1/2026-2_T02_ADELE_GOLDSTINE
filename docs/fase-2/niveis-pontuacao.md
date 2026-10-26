@@ -1,6 +1,6 @@
 # Níveis de Pontuação e Critérios de Julgamento
 
-Esta página define como os valores medidos (M1 a M20, página [Métricas](metricas.md)) serão julgados na Fase 4: a escala de níveis, as faixas de cada métrica e os critérios para combinar as métricas por questão e por objetivo (G1 a G4). Os limites foram definidos **antes da coleta** e não serão alterados após a obtenção dos dados, para que o julgamento não seja ajustado aos resultados.
+Esta página define como os valores medidos (M1 a M15 e M20, página [Métricas](metricas.md)) serão julgados na Fase 4: a escala de níveis, as faixas de cada métrica e os critérios para combinar as métricas por questão e por objetivo (G1 a G3). Os limites foram definidos **antes da coleta** e não serão alterados após a obtenção dos dados, para que o julgamento não seja ajustado aos resultados.
 
 ## Escala de níveis
 
@@ -50,12 +50,8 @@ Quando existe referência externa reconhecida, ela foi usada para definir os lim
 | M7 - Desvio de caminho | ≤ 1,11 | > 1,11 a 1,33 | > 1,33 a 2,00 | > 2,00 | Definidas pela equipe como o inverso da eficiência do caminho (caminho mais curto / realizado) de 0,90, 0,75 e 0,50: acima de 2,00, o participante faz mais que o dobro dos cliques necessários |
 | M9 - Erros automáticos de acessibilidade por página | 0 | > 0 a 2 | > 2 a 5 | > 5 | Definidas pela equipe: a WCAG 2.2 [2] não admite erros, por isso só a ausência de erros é Excelente; como a ferramenta detecta apenas parte dos problemas, mais de cinco erros por página indica barreiras generalizadas |
 | M15 - Tempo relativo no celular | ≤ 1,2 | > 1,2 a 1,5 | > 1,5 a 2,0 | > 2,0 | Definidas pela equipe: até 20% a mais de tempo no celular é atribuível à tela menor; acima do dobro, o celular não é alternativa prática ao computador |
-| M16 - Tempo de carregamento em rede comum (s) | ≤ 1,0 | > 1,0 a 2,5 | > 2,5 a 4,0 | > 4,0 | Limites de 2,5 s e 4,0 s do LCP nas métricas Core Web Vitals [4]; 1,0 s é o limite para manter o fluxo de pensamento do usuário (Nielsen [5]) |
-| M17 - Tempo de carregamento em rede móvel simulada (s) | ≤ 1,0 | > 1,0 a 2,5 | > 2,5 a 4,0 | > 4,0 | Mesmas referências de M16 [4] [5] |
-| M18 - Peso transferido por página (MB) | ≤ 0,5 | > 0,5 a 1,0 | > 1,0 a 2,0 | > 2,0 | Definidas pela equipe, considerando a franquia limitada de dados móveis dos estudantes de menor renda (ODS 10). Valores em MB decimais (1 MB = 1.000 KB) |
-| M19 - Requisições por página | ≤ 25 | > 25 a 50 | > 50 a 80 | > 80 | Definidas pela equipe: cada requisição soma latência, que é alta em redes móveis |
 
-A métrica auxiliar MA1 não recebe nível de pontuação, porque serve apenas para verificar a hipótese de relação HR3 ([Hipóteses](hipoteses.md#hipoteses-de-relacao-entre-as-caracteristicas)).
+A métrica auxiliar MA1 não recebe nível de pontuação, porque serve apenas para verificar a hipótese de relação HR2 ([Hipóteses](hipoteses.md#hipoteses-de-relacao-entre-as-caracteristicas)).
 
 ## Critérios de julgamento
 
@@ -89,7 +85,6 @@ A pontuação do objetivo é a **média dos níveis das suas questões** (Tabela
 | G1 - Adequação Funcional | Q1, Q2, Q3 |
 | G2 - Capacidade de Interação (Usabilidade) | Q4, Q5, Q6, Q7, Q8, Q9, Q10 |
 | G3 - Flexibilidade (Portabilidade) | Q11, Q12 |
-| G4 - Eficiência de Desempenho | Q13, Q14 |
 
 ### Etapa 3 - Julgamento da característica
 
@@ -111,7 +106,7 @@ Uma questão Insatisfatória impede o julgamento "Atende", mesmo com média alta
 
 #### Regra 1 - Métricas não aplicáveis
 
-Uma métrica sem dados suficientes é registrada como **não aplicável** e fica fora do cálculo da questão. Exemplos: M6 e M7 de uma tarefa que nenhum participante concluiu (registradas à parte, conforme as fichas), ou a página de uma tarefa que não pôde ser medida pelo Lighthouse nem substituída. Uma questão sem nenhuma métrica aplicável fica **sem dados** e fora da Etapa 2, e sua hipótese é classificada como inconclusiva. Em M8, a ausência de erros não torna a métrica não aplicável: a ficha define X = 1 quando B = 0.
+Uma métrica sem dados suficientes é registrada como **não aplicável** e fica fora do cálculo da questão. Exemplo: M6 e M7 de uma tarefa que nenhum participante concluiu (registradas à parte, conforme as fichas). Uma questão sem nenhuma métrica aplicável fica **sem dados** e fora da Etapa 2, e sua hipótese é classificada como inconclusiva. Em M8, a ausência de erros não torna a métrica não aplicável: a ficha define X = 1 quando B = 0.
 
 #### Regra 2 - Itens críticos de M2
 
@@ -119,7 +114,7 @@ Menção, IRA e carga horária pendente são itens críticos. Qualquer divergên
 
 #### Regra 3 - Resultados por perfil, por página e por tarefa
 
-Além do valor geral, que é o único usado nas Etapas 1 a 3, os resultados são apresentados por perfil (calouro, veterano e formando, em M5, M6, M7 e M11), por página (M9, M10, M14 e M16 a M19) e por tarefa, com as mesmas faixas das Tabelas 2 e 3. Esses recortes localizam os problemas, mas não alteram o nível da questão. Um recorte com menos de três participantes é apresentado apenas de forma descritiva, sem nível.
+Além do valor geral, que é o único usado nas Etapas 1 a 3, os resultados são apresentados por perfil (calouro, veterano e formando, em M5, M6, M7 e M11), por página (M9, M10 e M14) e por tarefa, com as mesmas faixas das Tabelas 2 e 3. Esses recortes localizam os problemas, mas não alteram o nível da questão. Um recorte com menos de três participantes é apresentado apenas de forma descritiva, sem nível.
 
 #### Regra 4 - Ranking das tarefas
 
@@ -131,7 +126,7 @@ M1 por tarefa considera apenas as funções da lista de referência associadas �
 
 #### Regra 5 - Ausência de nota única
 
-**Não será calculada uma nota única para o SIGAA.** As quatro características medem aspectos diferentes, e uma média geral esconderia exatamente os problemas que a STI precisa priorizar. O resultado final é o quadro com o julgamento de cada característica, apresentado na ordem de prioridade da Fase 1 (Capacidade de Interação, Adequação Funcional, Eficiência de Desempenho e Flexibilidade), acompanhado do ranking das tarefas (regra 4).
+**Não será calculada uma nota única para o SIGAA.** As três características avaliadas medem aspectos diferentes, e uma média geral esconderia exatamente os problemas que a STI precisa priorizar. O resultado final é o quadro com o julgamento de cada característica, apresentado na ordem de prioridade da Fase 1 (Capacidade de Interação, Adequação Funcional e Flexibilidade), acompanhado do ranking das tarefas (regra 4).
 
 #### Regra 6 - Classificação das hipóteses
 
@@ -141,16 +136,15 @@ Cada hipótese é classificada como confirmada, refutada ou inconclusiva compara
 
 O exemplo abaixo usa **valores fictícios**, apenas para mostrar como um resultado é transformado em julgamento. Não são resultados da avaliação.
 
-*Tabela 7 - Exemplo ilustrativo de julgamento de G4 (valores fictícios).*
+*Tabela 7 - Exemplo ilustrativo de julgamento de G3 (valores fictícios).*
 
 | Métrica | Valor fictício | Nível | Questão | Nível da questão |
 | ------- | :------------: | ----- | :-----: | ---------------- |
-| M16 - Tempo de carregamento em rede comum | 2,1 s | Bom (2) | Q13 | Regular (1), menor entre M16 e M17 |
-| M17 - Tempo de carregamento em rede móvel simulada | 3,2 s | Regular (1) | | |
-| M18 - Peso transferido por página | 0,74 MB | Bom (2) | Q14 | Regular (1), menor entre M18 e M19 |
-| M19 - Requisições por página | 62 | Regular (1) | | |
+| M13 - Compatibilidade entre navegadores | 23 de 24 (95,8%) | Bom (2) | Q11 | Bom (2) |
+| M14 - Páginas adaptadas a telas pequenas e ao toque | 7 de 12 (58,3%) | Regular (1) | Q12 | Regular (1), menor entre M14 e M15 |
+| M15 - Tempo relativo no celular | 1,8 | Regular (1) | | |
 
-Pontuação de G4 = (1 + 1) / 2 = 1,0. Não há questão Insatisfatória, mas a média é menor que 2,0. **Julgamento: Atende parcialmente.** Neste exemplo, H13 seria confirmada (esperava-se M16 Bom e M17 acima de 2,5 s) e H14 também (esperava-se M18 Bom e M19 Regular).
+Pontuação de G3 = (2 + 1) / 2 = 1,5. Não há questão Insatisfatória, mas a média é menor que 2,0. **Julgamento: Atende parcialmente.** Neste exemplo, H11 seria confirmada (esperava-se M13 Bom) e H12 seria refutada (esperava-se M14 Insatisfatório, e o valor fictício ficou em Regular).
 
 ## Referências
 
@@ -160,10 +154,6 @@ Pontuação de G4 = (1 + 1) / 2 = 1,0. Não há questão Insatisfatória, mas a 
 
 [3] SAURO, J.; LEWIS, J. R. *Quantifying the User Experience: Practical Statistics for User Research*. 2. ed. Morgan Kaufmann, 2016.
 
-[4] GOOGLE. *Web Vitals*. web.dev. Disponível em: <https://web.dev/articles/vitals>. Acesso em: 18 out. 2026.
-
-[5] NIELSEN, J. *Usability Engineering*. Morgan Kaufmann, 1993.
-
 ## Histórico de Versão
 
 | Versão | Data | Descrição | Autor |
@@ -172,3 +162,4 @@ Pontuação de G4 = (1 + 1) / 2 = 1,0. Não há questão Insatisfatória, mas a 
 | 1.1 | 17/10/2026 | Definição dos níveis de pontuação e dos critérios de julgamento | Felipe Campêlo |
 | 2.0 | 18/10/2026 | Estrutura da página alinhada à Fase 1 reestruturada (M1 a M19, G1 a G4), para preenchimento | Felipe Campêlo |
 | 2.1 | 18/10/2026 | Preenchimento a partir da versão complementar: escala com regra de fronteira, faixas de M1 a M20 com origem, Etapas 1 a 3, regras complementares (métricas não aplicáveis, itens críticos de M2, recortes, ranking das tarefas, ausência de nota única, classificação das hipóteses) e exemplo de aplicação em G4 | Leonardo Bonetti |
+| 2.2 | 25/10/2026 | Remoção das faixas de M16 a M19 e do objetivo G4 (Eficiência de Desempenho); exemplo de aplicação refeito em G3; MA1 ligada à HR2 (antiga HR3) | Leonardo Bonetti |

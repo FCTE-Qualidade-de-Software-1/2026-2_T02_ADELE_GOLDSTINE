@@ -10,7 +10,7 @@ Esta página especifica o **questionário online anônimo** previsto na [seção
 | ---- | --------- |
 | Público | Estudantes de graduação ativos da UnB, de qualquer curso e campus |
 | Formato | Formulário online (Google Forms ou equivalente), sem coleta de e-mail, nome ou matrícula |
-| Duração estimada | 5 a 8 minutos (31 itens fechados e 2 abertos opcionais) |
+| Duração estimada | 5 a 8 minutos (29 itens fechados e 2 abertos opcionais) |
 | Divulgação | Grupos de estudantes, centros acadêmicos e listas de turmas, durante a janela de coleta da Fase 4 |
 | Amostra-alvo | Ao menos 60 respostas válidas, com ao menos 15 por perfil (calouro, intermediário e veterano) |
 | Validade | Só são consideradas as respostas com "Sim" no item A1 e com o termo de consentimento aceito |
@@ -41,8 +41,6 @@ As tarefas T1 a T6 são as do [escopo da Fase 1](../fase-1/escopo.md#21-tarefas-
 | -- | -------- | ------------------ |
 | B1* | Em qual dispositivo você mais acessa o SIGAA? | Computador ou notebook / Celular / Tablet / Uso computador e celular igualmente |
 | B2* | Você tem computador (próprio ou de uso frequente) com internet para acessar o SIGAA? | Sim / Só às vezes / Não |
-| B3* | Que conexão você mais usa para acessar o SIGAA? | Wi-Fi de casa / Wi-Fi da UnB / Dados móveis do celular |
-| B4* | Com que frequência o SIGAA parece lento para você? | Nunca / Raramente / Às vezes / Frequentemente / Sempre |
 | B5* | Quando usa o SIGAA no celular, quais problemas você já teve? (marque todos que se aplicam) | Precisei dar zoom ou rolar para o lado / Um menu não abriu ao tocar / Botões ou links pequenos demais / Conteúdo cortado ou sobreposto / Não consegui concluir o que queria / Nenhum problema / Não uso o SIGAA no celular |
 
 ### Bloco C - Facilidade das tarefas (cerca de 2 minutos)
@@ -117,7 +115,7 @@ O semestre informado em A2 define o grupo de comparação. A Tabela 2 mostra a c
 
 ## 5. Indicadores produzidos e ligação com o GQM
 
-O questionário alimenta a métrica M3 (com nível de pontuação) e a lista de referência de M1. Os demais itens produzem **indicadores auxiliares de percepção** (IQ1 a IQ6). Como a métrica auxiliar MA1, eles **não recebem nível de pontuação e não alteram o julgamento das características**: servem para interpretar as questões GQM, verificar a hipótese de perfil HP1 e comparar a percepção dos estudantes com as medidas observadas no teste com usuários.
+O questionário alimenta a métrica M3 (com nível de pontuação) e a lista de referência de M1. Os demais itens produzem **indicadores auxiliares de percepção** (IQ1 a IQ5). Como a métrica auxiliar MA1, eles **não recebem nível de pontuação e não alteram o julgamento das características**: servem para interpretar as questões GQM, verificar a hipótese de perfil HP1 e comparar a percepção dos estudantes com as medidas observadas no teste com usuários.
 
 *Tabela 3 - Indicadores do questionário.*
 
@@ -130,7 +128,6 @@ O questionário alimenta a métrica M3 (com nível de pontuação) e a lista de 
 | IQ3 | Acerto na interpretação sem legenda | D1, D2 | Proporção de respostas corretas por item e por grupo | Q9; compara com M11 |
 | IQ4 | SUS do questionário | E1 a E10 | Mesmo cálculo de M12 (0 a 100), média por grupo | Q10; compara com M12 |
 | IQ5 | Dependência do celular e problemas no celular | B1, B2, B5 | Proporção de dependentes do celular; frequência de cada problema | Q12; decisão da STI sobre interface responsiva |
-| IQ6 | Lentidão percebida | B3, B4 | Proporção de "Frequentemente" ou "Sempre", por tipo de conexão | Q13; hipótese de relação HR4 |
 
 ## 6. Hipótese de perfil HP1
 
@@ -144,7 +141,7 @@ Um resultado em que calouros e veteranos têm a mesma dificuldade também é inf
 
 ## 7. Arquivo de dados
 
-As respostas exportadas ficam em `dados/brutos/questionario/respostas.csv`, uma linha por resposta válida, com as colunas `id` (R001, R002, ...), `data`, `A1` a `A4`, `B1` a `B5`, `C1_1` a `C1_6`, `C2`, `D1`, `D2`, `E1` a `E10` e `F1` a `F5`. O cálculo dos indicadores será registrado em script ou planilha versionada, conforme a premissa 5 do roteiro.
+As respostas exportadas ficam em `dados/brutos/questionario/respostas.csv`, uma linha por resposta válida, com as colunas `id` (R001, R002, ...), `data`, `A1` a `A4`, `B1`, `B2`, `B5`, `C1_1` a `C1_6`, `C2`, `D1`, `D2`, `E1` a `E10` e `F1` a `F5`. O cálculo dos indicadores será registrado em script ou planilha versionada, conforme a premissa 5 do roteiro.
 
 ## Referências
 
@@ -157,3 +154,4 @@ As respostas exportadas ficam em `dados/brutos/questionario/respostas.csv`, uma 
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 19/10/2026 | Especificação do questionário: termo de consentimento, itens dos blocos A a F, grupos de comparação, indicadores IQ1 a IQ6 e hipótese de perfil HP1 | [arthurlleite](https://github.com/arthurlleite) |
+| 1.1 | 25/10/2026 | Remoção dos itens B3 e B4 e do indicador IQ6, ligados ao objetivo G4 (Eficiência de Desempenho) | Leonardo Bonetti |

@@ -1,6 +1,6 @@
 # Questões
 
-As questões representam o **nível operacional** do GQM. Cada questão caracteriza um atributo do foco de qualidade do objetivo correspondente, de modo que o conjunto de questões de um objetivo cubra todos os atributos declarados nele (Tabelas 1 a 4). Com exceção da satisfação (Q10), cada atributo é uma subcaracterística da ISO/IEC 25010:2023 [1].
+As questões representam o **nível operacional** do GQM. Cada questão caracteriza um atributo do foco de qualidade do objetivo correspondente, de modo que o conjunto de questões de um objetivo cubra todos os atributos declarados nele (Tabelas 1 a 3). Com exceção da satisfação (Q10), cada atributo é uma subcaracterística da ISO/IEC 25010:2023 [1].
 
 ## G1 - Adequação Funcional
 
@@ -39,20 +39,11 @@ A satisfação não é subcaracterística do modelo de qualidade de produto da I
 | Q11 | As tarefas do escopo funcionam corretamente nos navegadores mais usados? | Adaptabilidade (ambiente de software) |
 | Q12 | O SIGAA se adapta a telas de celular e tablet e à interação por toque? | Adaptabilidade (ambiente de hardware) |
 
-## G4 - Eficiência de Desempenho
-
-*Tabela 4 - Questões do objetivo G4 - Eficiência de Desempenho.*
-
-| ID | Questão | Atributo do foco de qualidade |
-| -- | ------- | ----------------------------- |
-| Q13 | As páginas das tarefas carregam em tempo aceitável, em rede comum e em rede móvel? | Comportamento temporal |
-| Q14 | As páginas das tarefas usam os recursos do cliente de forma compatível com o acesso por rede móvel e plano de dados limitado? | Utilização de recursos |
-
 ## Relação com as métricas
 
-As métricas que respondem a cada questão (Tabela 5) estão detalhadas na página [Métricas](metricas.md), e a hipótese de cada questão, na página [Hipóteses](hipoteses.md).
+As métricas que respondem a cada questão (Tabela 4) estão detalhadas na página [Métricas](metricas.md), e a hipótese de cada questão, na página [Hipóteses](hipoteses.md).
 
-*Tabela 5 - Relação entre questões e métricas.*
+*Tabela 4 - Relação entre questões e métricas.*
 
 | Questão | Métricas |
 | ------- | -------- |
@@ -68,8 +59,6 @@ As métricas que respondem a cada questão (Tabela 5) estão detalhadas na pági
 | Q10 | M12 |
 | Q11 | M13 |
 | Q12 | M14, M15 |
-| Q13 | M16, M17 |
-| Q14 | M18, M19 |
 
 ## Referências
 
@@ -87,3 +76,4 @@ As métricas que respondem a cada questão (Tabela 5) estão detalhadas na pági
 | 2.0 | 18/10/2026 | Alinhamento à Fase 1 reestruturada: questões Q1 a Q14, uma por subcaracterística mantida, e questões de G4 | Felipe Campêlo |
 | 2.1 | 18/10/2026 | Redação de Q6, Q10 e Q14 no nível do atributo, e não da métrica; coluna "Atributo do foco de qualidade" | Felipe Campêlo |
 | 2.2 | 18/10/2026 | Integração da versão complementar: métrica M20 (cenários de erro) associada a Q7 e referência às hipóteses | Leonardo Bonetti |
+| 2.3 | 25/10/2026 | Remoção das questões Q13 e Q14 do objetivo G4 (Eficiência de Desempenho) | Leonardo Bonetti |
