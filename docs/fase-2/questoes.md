@@ -10,9 +10,9 @@ As questões representam o **nível operacional** do GQM. Cada questão caracter
 | -- | ------- | ----------------------------- |
 | Q1 | O SIGAA oferece as funções de que o estudante precisa para consultar sua situação acadêmica, planejar o fluxo e emitir documentos? | Completude funcional |
 | Q2 | As informações exibidas pelo SIGAA nas tarefas do escopo estão corretas? | Correção funcional |
-| Q3 | As funções do SIGAA são suficientes para que o estudante planeje seu fluxo sem depender de ferramentas externas? | Adequação funcional (pertinência) |
+| Q3 | As funções do SIGAA são suficientes para que o estudante planeje seu fluxo sem depender de ferramentas externas? | Pertinência funcional |
 
-A Fase 1 descreve a adequação funcional como a conclusão das tarefas sem passos desnecessários. Q3 a observa pelo indício registrado em OP-07: quando as funções não bastam, o estudante recorre a ferramentas externas. Os passos desnecessários dentro do próprio SIGAA são medidos em Q6, pelo desvio de caminho (M7).
+A Fase 1 descreve a pertinência funcional (*functional appropriateness*, chamada de adequação na [adaptação do modelo de qualidade](../fase-1/modelo-qualidade.md#2-adaptacoes-ao-contexto-do-sigaa)) como a conclusão das tarefas sem passos desnecessários. Q3 a observa pelo indício registrado em OP-07: quando as funções não bastam, o estudante recorre a ferramentas externas. Os passos desnecessários dentro do próprio SIGAA são medidos em Q6, pelo desvio de caminho (M7).
 
 ## G2 - Capacidade de Interação (Usabilidade)
 
@@ -77,3 +77,4 @@ As métricas que respondem a cada questão (Tabela 4) estão detalhadas na pági
 | 2.1 | 18/10/2026 | Redação de Q6, Q10 e Q14 no nível do atributo, e não da métrica; coluna "Atributo do foco de qualidade" | Felipe Campêlo |
 | 2.2 | 18/10/2026 | Integração da versão complementar: métrica M20 (cenários de erro) associada a Q7 e referência às hipóteses | Leonardo Bonetti |
 | 2.3 | 25/10/2026 | Remoção das questões Q13 e Q14 do objetivo G4 (Eficiência de Desempenho) | Leonardo Bonetti |
+| 2.4 | 25/10/2026 | Subcaracterística de Q3 nomeada pertinência funcional | Leonardo Bonetti |

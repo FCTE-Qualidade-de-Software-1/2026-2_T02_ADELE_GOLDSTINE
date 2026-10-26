@@ -16,7 +16,7 @@ flowchart LR
     subgraph O["Nível operacional"]
         Q1["Q1 - Completude funcional"]
         Q2["Q2 - Correção funcional"]
-        Q3["Q3 - Adequação funcional (pertinência)"]
+        Q3["Q3 - Pertinência funcional"]
         Q4["Q4 - Reconhecimento de adequação"]
         Q5["Q5 - Apreensibilidade"]
         Q6["Q6 - Operabilidade"]
@@ -189,3 +189,4 @@ Todas as métricas com nível de pontuação estão ligadas a uma única questã
 | 2.1 | 18/10/2026 | Integração da versão complementar: métrica M20 nas Figuras 1 e 3, nota sobre a métrica auxiliar MA1 e matriz de rastreabilidade Característica, Objetivo, Questão, Hipótese e Métrica | Leonardo Bonetti |
 | 2.2 | 25/10/2026 | Remoção do objetivo G4 (Eficiência de Desempenho) da Figura 1, da Figura 5 e da matriz de rastreabilidade; MA1 ligada à HR2 (antiga HR3) | Leonardo Bonetti |
 | 2.3 | 25/10/2026 | Objeto dos objetivos nas Figuras 2 a 4: "portal do discente de graduação do SIGAA/UnB" | Leonardo Bonetti |
+| 2.4 | 25/10/2026 | Subcaracterística de Q3 nomeada pertinência funcional na Figura 1 | Leonardo Bonetti |

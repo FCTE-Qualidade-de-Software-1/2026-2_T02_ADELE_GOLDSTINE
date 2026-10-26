@@ -16,9 +16,11 @@ Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em pr
 | -------- | --------- |
 | **Analisar** | o portal do discente de graduação do SIGAA/UnB |
 | **com o propósito de** | avaliar |
-| **com respeito à** | adequação funcional (completude funcional, correção funcional e adequação funcional, ou pertinência) |
+| **com respeito à** | adequação funcional |
 | **do ponto de vista do** | estudante de graduação da UnB |
 | **no contexto** | das tarefas T1 a T6 e do planejamento do fluxo de disciplinas (OP-07), na versão v4.15.10.115 em uso no 2º semestre letivo de 2026 |
+
+A adequação funcional é caracterizada pelas subcaracterísticas completude funcional, correção funcional e pertinência funcional, cada uma tratada por questões próprias.
 
 **Justificativa:** Adequação Funcional ficou em segundo lugar na matriz Impacto x Risco (P = 20). O estudante depende do SIGAA para tarefas sem alternativa institucional, e a existência de ferramentas comunitárias para planejar o fluxo (OP-07) indica lacunas de completude. G1 verifica se as funções necessárias existem, se produzem informações corretas e se bastam para a tarefa sem recurso a ferramentas externas.
 
@@ -72,3 +74,4 @@ A capacidade de interação é caracterizada pelas subcaracterísticas reconheci
 | 2.4 | 25/10/2026 | Propósito dos objetivos reduzido ao verbo "avaliar" | Leonardo Bonetti |
 | 2.5 | 25/10/2026 | Mesmo objeto de estudo em G1 a G3: "o portal do discente de graduação do SIGAA/UnB" | Leonardo Bonetti |
 | 2.6 | 25/10/2026 | Foco de qualidade de G2 e G3 reduzido à característica; subcaracterísticas de G2 em frase abaixo da tabela | Leonardo Bonetti |
+| 2.7 | 25/10/2026 | Foco de qualidade de G1 reduzido à característica; subcaracterística *functional appropriateness* nomeada pertinência funcional | Leonardo Bonetti |
