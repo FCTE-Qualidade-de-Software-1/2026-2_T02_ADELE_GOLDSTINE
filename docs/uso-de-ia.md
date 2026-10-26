@@ -12,6 +12,7 @@ Esta página documenta todos os usos de ferramentas de Inteligência Artificial 
 | Claude Opus 5.5 (Claude Code) | Integração da versão complementar à versão de Felipe Campêlo da Fase 2: conversão da numeração, preenchimento de hipóteses e níveis de pontuação, inclusão de M20, MA1, HR1 a HR4 e matriz de rastreabilidade, e verificação de consistência entre as páginas e da compilação do MkDocs. Commits revisados pela equipe antes do envio ao repositório | 18/10/2026 | Leonardo Bonetti |
 | Claude Opus 5.5 (Claude Code) | Pesquisa sobre as características de qualidade oficiais e padronizadas (ISO/IEC 25010) e consulta à padronização do IEEE (modelo IEEEtran) para a documentação em LaTeX. Conteúdo revisado pela equipe | 19/10/2026 | [arthurlleite](https://github.com/arthurlleite) |
 | Claude Opus 5.5 (Claude Code) | Proposta da metodologia de esforço por horas trabalhadas, *script* de estimativa e cálculo (`gestao/esforco.py`) e reconstrução das horas da Entrega 1 a partir do histórico Git. Taxas e horas fixas revisadas pela equipe | 24/10/2026 | Caio Borges |
+| Claude Opus 5.5 (Claude Code) | Atualização do artigo em LaTeX após os ajustes da Fase 2 (retirada do objetivo G4) e a inclusão das personas, remoção da capa e do sumário e nova compilação do PDF. Conteúdo conferido com as páginas da GitPage | 25/10/2026 | [arthurlleite](https://github.com/arthurlleite) |
 
 ## Histórico de Versão
 
@@ -23,4 +24,5 @@ Esta página documenta todos os usos de ferramentas de Inteligência Artificial 
 | 1.3 | 18/10/2026 | Registro do uso de IA na integração das versões da Fase 2 | Leonardo Bonetti |
 | 1.4 | 19/10/2026 | Registro do uso de IA na pesquisa das características de qualidade e da padronização IEEE | [arthurlleite](https://github.com/arthurlleite) |
 | 1.5 | 24/10/2026 | Registro do uso de IA na metodologia de esforço | Caio Borges |
+| 1.6 | 25/10/2026 | Registro do uso de IA na atualização do artigo | [arthurlleite](https://github.com/arthurlleite) |
 

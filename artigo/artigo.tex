@@ -6,13 +6,27 @@
 % CTAN (https://ctan.org/pkg/ieeetran). O modelo original, sem alterações,
 % está em modelo-ieee/. Compilação: ver README.md.
 %
-% Itens em vermelho (\pendente{...}) devem ser resolvidos pela equipe
-% antes da entrega.
+% Conforme orientação da professora, o artigo não tem capa nem sumário:
+% começa direto no título, autores, resumo e Introdução, como no modelo
+% do IEEE.
 % =====================================================================
 \documentclass[conference,a4paper]{IEEEtran}
 
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+\usepackage{iftex}
+\ifXeTeX
+	% XeLaTeX/Tectonic: equivalentes OpenType das fontes do IEEEtran
+	% (Times, Helvetica e Courier)
+	\usepackage{fontspec}
+	\setmainfont{texgyretermes}[Extension=.otf, UprightFont=*-regular,
+		BoldFont=*-bold, ItalicFont=*-italic, BoldItalicFont=*-bolditalic]
+	\setsansfont{texgyreheros}[Extension=.otf, UprightFont=*-regular,
+		BoldFont=*-bold, ItalicFont=*-italic, BoldItalicFont=*-bolditalic]
+	\setmonofont{texgyrecursor}[Extension=.otf, UprightFont=*-regular,
+		BoldFont=*-bold, ItalicFont=*-italic, BoldItalicFont=*-bolditalic]
+\else
+	\usepackage[T1]{fontenc}
+	\usepackage[utf8]{inputenc}
+\fi
 \usepackage[brazil]{babel}
 \usepackage{cite}
 \usepackage{amsmath}
@@ -33,8 +47,6 @@
 
 % Fonte de tabelas e figuras (exigida pelos critérios da disciplina)
 \newcommand{\fonte}[1]{\par\vspace{2pt}{\footnotesize Fonte: #1}}
-% Pendências que a equipe precisa preencher antes da entrega
-\newcommand{\pendente}[1]{\textcolor{red}{#1}}
 
 \newcommand{\repositorio}{\url{https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE}}
 \newcommand{\gitpage}{\url{https://fcte-qualidade-de-software-1.github.io/2026-2_T02_ADELE_GOLDSTINE/}}
@@ -45,53 +57,11 @@
 
 \begin{document}
 
-% ---------------------------------------------------------------------
-% Capa
-% ---------------------------------------------------------------------
-\onecolumn
-\thispagestyle{empty}
-\begin{center}
-	\includegraphics[width=\textwidth]{figuras/fga.png}\\[1.2cm]
-	{\large\bfseries Universidade de Brasília -- UnB}\\[2pt]
-	{\large Faculdade de Ciências e Tecnologias em Engenharia -- FCTE}\\[2pt]
-	{\large Engenharia de Software}\\[2.2cm]
-	{\Huge\bfseries Avaliação da Qualidade do SIGAA/UnB\\[6pt] na Perspectiva do Estudante de Graduação}\\[1.2cm]
-	{\Large Entrega 1 -- Fases 1 e 2 do processo de avaliação}\\[0.4cm]
-	{\large FGA0315 -- Qualidade de Software 1 -- Turma T02 -- 2026/2}\\[0.2cm]
-	{\large Equipe Adele Goldstine}
-	\vfill
-	\begin{flushright}
-		\large
-		\textbf{Autores:}\\
-		Arthur Carvalho Leite\\
-		Caio Melo Borges\\
-		Daniel Nunes Duarte\\
-		Davi dos Santos Brito Nobre\\
-		Felipe de Aquino Campêlo\\
-		Leonardo Fachinello Bonetti\\[0.5cm]
-		\textbf{Professora:} Cristiane Soares Ramos
-	\end{flushright}
-	\vspace{1cm}
-	{\large Brasília, DF -- outubro de 2026}
-\end{center}
-\clearpage
-
-% ---------------------------------------------------------------------
-% Sumário
-% ---------------------------------------------------------------------
-\thispagestyle{empty}
-\tableofcontents
-\clearpage
-
-% ---------------------------------------------------------------------
-% Artigo (formato IEEE para conferências)
-% ---------------------------------------------------------------------
-\twocolumn
 \title{Avaliação da Qualidade do SIGAA/UnB na\\Perspectiva do Estudante de Graduação}
 
 \author{\IEEEauthorblockN{Arthur Carvalho Leite, Caio Melo Borges, Daniel Nunes Duarte,\\
 Davi dos Santos Brito Nobre, Felipe de Aquino Campêlo e Leonardo Fachinello Bonetti}
-\IEEEauthorblockA{Equipe Adele Goldstine -- FGA0315 Qualidade de Software 1, Turma T02\\
+\IEEEauthorblockA{Equipe Adele Goldstine -- FGA0315 Qualidade de Software 1, Turma T02 -- Profa. Cristiane Soares Ramos\\
 Faculdade de Ciências e Tecnologias em Engenharia (FCTE), Universidade de Brasília (UnB), Brasília, DF\\
 Repositório: \repositorio}}
 
