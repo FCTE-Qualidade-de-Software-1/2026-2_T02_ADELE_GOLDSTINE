@@ -20,16 +20,16 @@ A Tabela 1 resume as métricas, e as Tabelas 2 a 17 detalham cada uma delas. A m
 | M4 | Acerto na primeira escolha de menu | Q4 | X = A/B | 1 |
 | M5 | Taxa de conclusão de tarefas sem ajuda | Q5 | X = A/B | 1 |
 | M6 | Tempo relativo de execução | Q6 | X = T<sub>p</sub> / T<sub>e</sub> | 1 |
-| M7 | Desvio de caminho | Q6 | X = C<sub>p</sub> / C<sub>min</sub> | 1 |
-| M8 | Taxa de recuperação de erros | Q7 | X = A/B | 1 |
-| M9 | Erros automáticos de acessibilidade por página | Q8 | X = A/B | 0 |
-| M10 | Critérios manuais de acessibilidade atendidos | Q8 | X = A/B | 1 |
-| M11 | Interpretação correta sem legenda | Q9 | X = A/B | 1 |
-| M12 | Pontuação SUS | Q10 | Escala SUS (0 a 100) | 100 |
-| M13 | Compatibilidade entre navegadores | Q11 | X = A/B | 1 |
-| M14 | Proporção de páginas adaptadas a telas pequenas e ao toque | Q12 | X = A/B | 1 |
-| M15 | Tempo relativo no celular | Q12 | X = T<sub>m</sub> / T<sub>d</sub> | 1 |
-| M20 | Cobertura de tratamento de cenários de erro | Q7 | X = A/B | 1 |
+| M7 | Desvio de caminho | Q7 | X = C<sub>p</sub> / C<sub>min</sub> | 1 |
+| M8 | Taxa de recuperação de erros | Q8 | X = A/B | 1 |
+| M9 | Erros automáticos de acessibilidade por página | Q10 | X = A/B | 0 |
+| M10 | Critérios manuais de acessibilidade atendidos | Q11 | X = A/B | 1 |
+| M11 | Interpretação correta sem legenda | Q12 | X = A/B | 1 |
+| M12 | Pontuação SUS | Q13 | Escala SUS (0 a 100) | 100 |
+| M13 | Compatibilidade entre navegadores | Q14 | X = A/B | 1 |
+| M14 | Proporção de páginas adaptadas a telas pequenas e ao toque | Q15 | X = A/B | 1 |
+| M15 | Tempo relativo no celular | Q16 | X = T<sub>m</sub> / T<sub>d</sub> | 1 |
+| M20 | Cobertura de tratamento de cenários de erro | Q9 | X = A/B | 1 |
 
 Além delas, a métrica auxiliar **MA1** (taxa de declaração de função inexistente) é usada apenas para verificar a hipótese de relação HR2 e não recebe nível de pontuação (Tabela 18).
 
@@ -119,7 +119,7 @@ As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: es
 
 | Item | Descrição |
 | ---- | --------- |
-| **Questão** | Q6 - A navegação permite concluir as tarefas sem esforço desnecessário em relação a um usuário experiente? |
+| **Questão** | Q6 - A navegação permite concluir as tarefas sem demora excessiva em relação a um usuário experiente? |
 | **Definição** | Razão entre o tempo médio dos participantes e o tempo de um usuário experiente para a mesma tarefa. |
 | **Cálculo** | X = T<sub>p</sub> / T<sub>e</sub>, onde T<sub>p</sub> = tempo médio dos participantes que concluíram a tarefa e T<sub>e</sub> = tempo do especialista (membro da equipe que executa a tarefa pelo caminho mais curto, média de 3 execuções). O resultado final é a média das tarefas; uma tarefa que nenhum participante concluiu fica fora da média e é registrada à parte. |
 | **Fonte dos dados** | Gravações das sessões, com marcação de início (leitura da tarefa concluída) e fim (resultado obtido). |
@@ -132,7 +132,7 @@ As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: es
 
 | Item | Descrição |
 | ---- | --------- |
-| **Questão** | Q6 - A navegação permite concluir as tarefas sem esforço desnecessário em relação a um usuário experiente? |
+| **Questão** | Q7 - A navegação leva o estudante até a função sem passos desnecessários? |
 | **Definição** | Razão entre o número de cliques dos participantes e o número mínimo de cliques necessário para concluir a tarefa. |
 | **Cálculo** | X = C<sub>p</sub> / C<sub>min</sub>, onde C<sub>p</sub> = média de cliques dos participantes que concluíram a tarefa e C<sub>min</sub> = número de cliques do caminho mais curto, definido pela equipe antes do teste. O resultado final é a média das tarefas; uma tarefa que nenhum participante concluiu fica fora da média e é registrada à parte. |
 | **Fonte dos dados** | Gravações das sessões. |
@@ -145,7 +145,7 @@ As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: es
 
 | Item | Descrição |
 | ---- | --------- |
-| **Questão** | Q7 - O sistema evita que o estudante perca o que já fez quando comete um erro ou quando a sessão expira? |
+| **Questão** | Q8 - O estudante consegue se recuperar quando comete um erro, sem perder o que já fez? |
 | **Definição** | Proporção dos erros ocorridos durante as tarefas dos quais o participante se recupera sem ajuda e sem precisar refazer passos já concluídos. |
 | **Cálculo** | X = A/B, onde A = número de erros recuperados sem ajuda e sem retrabalho e B = número total de erros. Se nenhum erro ocorrer (B = 0), X = 1. |
 | **Fonte dos dados** | Gravações das sessões do teste com usuários. |
@@ -158,7 +158,7 @@ As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: es
 
 | Item | Descrição |
 | ---- | --------- |
-| **Questão** | Q7 - O sistema evita que o estudante perca o que já fez quando comete um erro ou quando a sessão expira? |
+| **Questão** | Q9 - O sistema trata situações de erro previsíveis, como a expiração da sessão ou o uso do botão Voltar, sem obrigar o estudante a recomeçar a tarefa? |
 | **Definição** | Proporção dos cenários de erro previstos em que o sistema evita o erro ou o trata adequadamente. |
 | **Cálculo** | X = A/B, onde A = número de cenários tratados e B = número de cenários verificados (6). |
 | **Fonte dos dados** | Inspeção das páginas das tarefas T1 a T6, com o estudante autenticado, segundo um roteiro de cenários de erro definido antes da coleta. |
@@ -171,7 +171,7 @@ As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: es
 
 | Item | Descrição |
 | ---- | --------- |
-| **Questão** | Q8 - As páginas do escopo podem ser usadas por pessoas com deficiência? |
+| **Questão** | Q10 - As páginas do escopo atendem aos critérios de acessibilidade verificáveis por ferramenta automática? |
 | **Definição** | Número médio de erros de acessibilidade por página, considerando os critérios de nível A e AA das WCAG 2.2 [4] verificáveis automaticamente. |
 | **Cálculo** | X = A/B, onde A = total de erros detectados e B = número de páginas analisadas (a página final de cada tarefa T1 a T6). |
 | **Fonte dos dados** | Relatórios da extensão WAVE (WebAIM) executada nas páginas do escopo. |
@@ -184,7 +184,7 @@ As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: es
 
 | Item | Descrição |
 | ---- | --------- |
-| **Questão** | Q8 - As páginas do escopo podem ser usadas por pessoas com deficiência? |
+| **Questão** | Q11 - As páginas do escopo podem ser usadas com teclado, leitor de tela e ampliação, aspectos que exigem inspeção manual? |
 | **Definição** | Proporção de verificações manuais de acessibilidade atendidas nas páginas do escopo, com base em critérios das WCAG 2.2 [4] que as ferramentas automáticas não avaliam. |
 | **Cálculo** | X = A/B, onde A = número de verificações atendidas e B = número de verificações realizadas (4 critérios × 6 páginas = 24). |
 | **Fonte dos dados** | Inspeção manual das páginas finais de T1 a T6, com teclado, zoom do navegador e leitor de tela (NVDA no Windows ou VoiceOver no macOS). |
@@ -197,7 +197,7 @@ As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: es
 
 | Item | Descrição |
 | ---- | --------- |
-| **Questão** | Q9 - O estudante compreende as informações exibidas sem consultar legenda ou ajuda externa? |
+| **Questão** | Q12 - O estudante compreende as informações exibidas sem consultar legenda ou ajuda externa? |
 | **Definição** | Proporção de perguntas de compreensão respondidas corretamente pelo participante a partir da informação exibida, sem abrir legenda, ícone de ajuda ou fonte externa. |
 | **Cálculo** | X = A/B, onde A = número de respostas corretas sem consulta e B = número total de perguntas (participantes × 3). |
 | **Fonte dos dados** | Respostas dos participantes registradas nas sessões do teste com usuários. |
@@ -210,7 +210,7 @@ As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: es
 
 | Item | Descrição |
 | ---- | --------- |
-| **Questão** | Q10 - O estudante fica satisfeito ao usar o SIGAA nas tarefas de rotina? |
+| **Questão** | Q13 - O estudante fica satisfeito ao usar o SIGAA nas tarefas de rotina? |
 | **Definição** | Pontuação no questionário *System Usability Scale* (SUS) [2], instrumento padronizado de dez itens em escala Likert de 1 a 5. |
 | **Cálculo** | Para itens ímpares, soma-se (resposta − 1); para itens pares, soma-se (5 − resposta). A soma é multiplicada por 2,5, gerando um valor de 0 a 100 por participante. O resultado é a média entre participantes. |
 | **Fonte dos dados** | Questionário SUS em português, aplicado ao final de cada sessão do teste com usuários. |
@@ -225,7 +225,7 @@ As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: es
 
 | Item | Descrição |
 | ---- | --------- |
-| **Questão** | Q11 - As tarefas do escopo funcionam corretamente nos navegadores mais usados? |
+| **Questão** | Q14 - As tarefas do escopo funcionam corretamente nos navegadores mais usados? |
 | **Definição** | Proporção de combinações tarefa × navegador executadas sem falha. |
 | **Cálculo** | X = A/B, onde A = número de combinações sem falha e B = número total de combinações (6 tarefas × 4 navegadores = 24). |
 | **Fonte dos dados** | Execução das tarefas T1 a T6 pela equipe nas versões estáveis vigentes de Chrome, Firefox, Edge e Safari, em computador. |
@@ -238,7 +238,7 @@ As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: es
 
 | Item | Descrição |
 | ---- | --------- |
-| **Questão** | Q12 - O SIGAA se adapta a telas de celular e tablet e à interação por toque? |
+| **Questão** | Q15 - As páginas do escopo se adaptam a telas de celular e tablet e à interação por toque? |
 | **Definição** | Proporção de verificações página × tamanho de tela em que a página das tarefas é exibida e operada corretamente: sem rolagem horizontal, sem conteúdo cortado, com menus acionáveis por toque e com alvos de toque de dimensão mínima. |
 | **Cálculo** | X = A/B, onde A = número de verificações adaptadas e B = número de verificações (6 páginas × 2 larguras = 12). |
 | **Fonte dos dados** | Páginas finais de T1 a T6 abertas em celular real (cerca de 360 px de largura) e em tablet ou no modo de dispositivo do navegador com 768 px e emulação de toque, conforme os [ambientes da Fase 1](../fase-1/escopo.md#22-ambientes-de-execucao). |
@@ -251,7 +251,7 @@ As métricas M4 a M8, M11 e M12 são coletadas em um **teste com usuários**: es
 
 | Item | Descrição |
 | ---- | --------- |
-| **Questão** | Q12 - O SIGAA se adapta a telas de celular e tablet e à interação por toque? |
+| **Questão** | Q16 - O estudante conclui as tarefas no celular com esforço semelhante ao do computador? |
 | **Definição** | Razão entre o tempo para executar as tarefas no celular e o tempo para executá-las no computador, pelo mesmo avaliador. |
 | **Cálculo** | X = T<sub>m</sub> / T<sub>d</sub>, onde T<sub>m</sub> = soma dos tempos das tarefas T1 a T6 no celular e T<sub>d</sub> = soma dos tempos no computador. Média entre os avaliadores. Para o resultado por tarefa, calcula-se também a razão de cada tarefa. |
 | **Fonte dos dados** | Gravação de tela das execuções em ambos os dispositivos. |
@@ -322,3 +322,4 @@ O formato detalhado de cada arquivo, os instrumentos e o roteiro de execução s
 | 2.0 | 18/10/2026 | Alinhamento à Fase 1 reestruturada: métricas M1 a M19, tarefas T1 a T6, WCAG 2.2 e métricas de Eficiência de Desempenho | Felipe Campêlo |
 | 2.1 | 18/10/2026 | Integração da versão complementar: métrica M20 (cenários de erro) e métrica auxiliar MA1; definições comuns; artefatos de dados previstos; critérios de toque e rolagem em M14; recorte de calouros em M5; passo desnecessário em M7; itens críticos e conferências de T1 e T2 em M2; funções por tarefa em M1; P75 complementar em M17; referência à ISO/IEC 25022 | Leonardo Bonetti |
 | 2.2 | 25/10/2026 | Remoção das métricas M16 a M19 do objetivo G4 (Eficiência de Desempenho); MA1 ligada à HR2 (antiga HR3); renumeração das tabelas e das referências | Leonardo Bonetti |
+| 2.3 | 25/10/2026 | Questão de cada métrica atualizada para a numeração Q1 a Q16, em relação 1:1 | Leonardo Bonetti |
