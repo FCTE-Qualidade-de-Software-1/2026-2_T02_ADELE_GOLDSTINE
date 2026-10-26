@@ -2,7 +2,7 @@
 
 Os objetivos de medição representam o **nível conceitual** do GQM. Cada objetivo foi escrito no template proposto por Basili, Caldiera e Rombach [1], que exige cinco elementos: objeto de estudo, propósito, foco de qualidade, ponto de vista e contexto.
 
-Foi definido um objetivo para cada uma das três características avaliadas, dentre as priorizadas na [Fase 1](../fase-1/caracteristicas.md#3-caracteristicas-selecionadas) (Tabelas 1 a 3). O foco de qualidade de cada objetivo usa as subcaracterísticas da ISO/IEC 25010:2023 [2] mantidas na [adaptação do modelo de qualidade](../fase-1/modelo-qualidade.md#2-adaptacoes-ao-contexto-do-sigaa). As subcaracterísticas removidas na Fase 1, e a justificativa de cada remoção, estão naquela página e não são repetidas aqui.
+Foi definido um objetivo para cada uma das três características avaliadas, dentre as priorizadas na [Fase 1](../fase-1/caracteristicas.md#3-caracteristicas-selecionadas) (Tabelas 1 a 3). O foco de qualidade de cada objetivo é a característica da ISO/IEC 25010:2023 [2]. As subcaracterísticas mantidas na [adaptação do modelo de qualidade](../fase-1/modelo-qualidade.md#2-adaptacoes-ao-contexto-do-sigaa) são tratadas pelas questões de cada objetivo, na página [Questões](questoes.md). As subcaracterísticas removidas na Fase 1, e a justificativa de cada remoção, estão naquela página e não são repetidas aqui.
 
 A numeração G1 a G3 não segue a ordem de prioridade da Fase 1. Na [matriz Impacto x Risco](../fase-1/caracteristicas.md#3-caracteristicas-selecionadas), a ordem de prioridade entre as características avaliadas é: Capacidade de Interação (G2, P = 25), Adequação Funcional (G1, P = 20) e Flexibilidade (G3, P = 16). Eficiência de Desempenho também foi priorizada na Fase 1 (P = 16), mas ficou fora desta especificação por orientação da professora no ponto de controle. Essa ordem de prioridade é a usada na apresentação dos resultados da Fase 4 (regra 5 de [Níveis de Pontuação](niveis-pontuacao.md#regra-5-ausencia-de-nota-unica)).
 
@@ -30,9 +30,11 @@ Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em pr
 | -------- | --------- |
 | **Analisar** | o portal do discente de graduação do SIGAA/UnB |
 | **com o propósito de** | avaliar |
-| **com respeito à** | capacidade de interação (reconhecimento de adequação, apreensibilidade, operabilidade, proteção contra erros do usuário, inclusividade e autodescritividade), complementada pela satisfação (qualidade em uso) |
+| **com respeito à** | usabilidade (capacidade de interação) |
 | **do ponto de vista do** | estudante de graduação da UnB, com atenção a calouros e a estudantes com deficiência |
 | **no contexto** | da execução das tarefas T1 a T6 em computador, na versão v4.15.10.115 em uso no 2º semestre letivo de 2026 |
+
+A capacidade de interação é caracterizada pelas subcaracterísticas reconhecimento de adequação, apreensibilidade, operabilidade, proteção contra erros do usuário, inclusividade e autodescritividade, cada uma tratada por questões próprias, e é complementada pela satisfação (qualidade em uso).
 
 **Justificativa:** Capacidade de Interação é a característica de maior prioridade na Fase 1 (P = 25) e a que reúne mais observações preliminares (OP-01 a OP-06). G2 verifica se o estudante localiza as funções, aprende a usá-las sem ajuda, conclui as tarefas com esforço razoável, recupera-se de erros, encontra barreiras de acessibilidade e compreende as informações sem legenda externa.
 
@@ -44,7 +46,7 @@ Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em pr
 | -------- | --------- |
 | **Analisar** | o portal do discente de graduação do SIGAA/UnB |
 | **com o propósito de** | avaliar |
-| **com respeito à** | flexibilidade (adaptabilidade) |
+| **com respeito à** | flexibilidade |
 | **do ponto de vista do** | estudante de graduação da UnB, com atenção ao estudante que acessa o sistema apenas pelo celular |
 | **no contexto** | do acesso pelos navegadores Chrome, Firefox, Edge e Safari, em computador, tablet e celular, com interação por mouse e por toque |
 
@@ -69,3 +71,4 @@ Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em pr
 | 2.3 | 25/10/2026 | Remoção do objetivo G4 (Eficiência de Desempenho); prioridade das três características avaliadas | Leonardo Bonetti |
 | 2.4 | 25/10/2026 | Propósito dos objetivos reduzido ao verbo "avaliar" | Leonardo Bonetti |
 | 2.5 | 25/10/2026 | Mesmo objeto de estudo em G1 a G3: "o portal do discente de graduação do SIGAA/UnB" | Leonardo Bonetti |
+| 2.6 | 25/10/2026 | Foco de qualidade de G2 e G3 reduzido à característica; subcaracterísticas de G2 em frase abaixo da tabela | Leonardo Bonetti |
