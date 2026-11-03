@@ -9,7 +9,7 @@ Esta página registra as atividades e o percentual de esforço de cada membro em
 | Membro | Matrícula | Atividades | Horas | Esforço (%) |
 | ------ | :-------: | ---------- | :---: | :---------: |
 | Arthur Carvalho Leite | 222037595 | Artigo no modelo IEEE (estrutura, redação das seções, diagrama GQM e compilação); [questionário com estudantes](fase-2/questionario.md) (itens, grupos por semestre, indicadores IQ1 a IQ6 e hipótese HP1); página de [gestão PSM/CID](gestao-psm.md) com a primeira medição; revisão de português da Fase 1 | 8,7 | 16,7 |
-| Caio Melo Borges | a preencher | Fase 1 completa: propósito e partes interessadas, software avaliado, modelo de qualidade, matriz Impacto x Risco, escopo e rigor, ODS; síntese da Fase 1; referências da Fase 1; capturas do SIGAA; integração do PR do artigo | 9,0 | 17,3 |
+| Caio Melo Borges | 211030952 | Fase 1 completa: propósito e partes interessadas, software avaliado, modelo de qualidade, matriz Impacto x Risco, escopo e rigor, ODS; síntese da Fase 1; referências da Fase 1; capturas do SIGAA; integração do PR do artigo | 9,0 | 17,3 |
 | Daniel Nunes Duarte | 211062910 | Apoio à equipe fora do repositório, principalmente na preparação e no dia da apresentação | 7,2 | 13,9 |
 | Davi dos Santos Brito Nobre | 211062929 | Repositório, estrutura MkDocs e publicação da GitPage; primeira versão da Fase 1; integração do PR da Fase 1; organização da equipe, pesquisa e apoio às Fases 1 e 2 fora do repositório | 9,8 | 18,8 |
 | Felipe de Aquino Campêlo | 231011328 | Fase 2: visão geral e rastreabilidade, objetivos G1 a G4, questões Q1 a Q14, métricas M1 a M19, primeira versão dos níveis de pontuação e gráficos GQM | 9,4 | 18,0 |
@@ -89,9 +89,9 @@ Como não havia registro de horas na Entrega 1, as horas foram estimadas por **e
 | Caio | 8 capturas de tela do SIGAA, com anonimização | 0,5 | *commit* `a311cc4` |
 | Arthur | Configuração do IEEEtran, migração do abnTeX2, figuras e compilação | 1,0 | *commits* `1e073c7` e `ae19094` |
 | Davi, Leonardo, Caio | Revisão e *merge* dos PRs #1, #2 e #3 | 0,25 cada | PRs #1, #2 e #3 |
-| Davi | Trabalho sem registro no Git: organização da equipe, pesquisa e apoio às Fases 1 e 2 | 7,0 | Declaração da equipe |
+| Davi | Trabalho sem registro no Git: organização da equipe, pesquisa e apoio às Fases 1 e 2. A equipe fixou o total de Davi em 9,8 h; esta linha é a diferença sobre as 2,83 h medidas no Git | 6,97 | Declaração da equipe |
 | Daniel | Apoio à equipe sem registro no Git, principalmente na preparação e no dia da apresentação | 7,2 | Declaração da equipe |
-| Caio | Ajuste da estimativa definido pela equipe na revisão da tabela | −0,8 | Declaração da equipe |
+| Caio | Ajuste definido pela equipe na revisão da tabela: o total de Caio foi fixado em 9,0 h, contra 9,78 h estimadas | −0,78 | Declaração da equipe |
 
 **Passo 4. Sensibilidade.** As taxas são uma escolha da equipe, por isso o cálculo foi repetido com outras taxas:
 
@@ -104,7 +104,7 @@ Como não havia registro de horas na Entrega 1, as horas foram estimadas por **e
 | 1.500 / 3.000 | 15,6 | 15,5 | 16,9 | 22,1 | 16,1 | 13,8 |
 | 1.100 / 1.100 (artigo igual às páginas) | 22,1 | 16,2 | 12,9 | 17,7 | 16,8 | 14,3 |
 
-Entre os membros com trabalho medido no Git, mudar as taxas mantendo a proporção entre elas altera os percentuais em até 2,4 pontos. Os percentuais de Daniel e Davi variam mais (11,0% a 16,9% e 15,9% a 22,1%) porque a maior parte das horas deles é declarada e não depende das taxas. Em todos os cenários, todos os membros ficam entre 10% e 40%. Tratar o artigo como texto original favorece Arthur; a equipe considera que o artigo consolida o conteúdo das páginas, o que justifica a taxa maior.
+Entre os membros com trabalho medido no Git, mudar as taxas mantendo a proporção entre elas altera os percentuais em até 1,9 ponto percentual. Os percentuais de Daniel e Davi variam mais (11,0% a 16,9% e 15,9% a 22,1%) porque a maior parte das horas deles é declarada e não depende das taxas. Em todos os cenários, todos os membros ficam entre 10% e 40%. Tratar o artigo como texto original favorece Arthur; a equipe considera que o artigo consolida o conteúdo das páginas, o que justifica a taxa maior.
 
 ### 3.4 Limitações
 
@@ -121,3 +121,4 @@ Entre os membros com trabalho medido no Git, mudar as taxas mantendo a proporç�
 | 1.2 | 24/10/2026 | Metodologia de esforço por horas trabalhadas, estimativa das horas da Entrega 1 e percentuais | Caio Borges |
 | 1.3 | 24/10/2026 | Taxas calibradas para no máximo 10 h por membro e inclusão do trabalho de Davi fora do repositório | Caio Borges |
 | 1.4 | 24/10/2026 | Horas declaradas pela equipe para Daniel e Davi e ajuste das horas de Caio | Caio Borges |
+| 1.5 | 03/11/2026 | Matrícula de Caio, descrição das horas declaradas de Davi e Caio e correção da análise de sensibilidade | Caio Borges |
