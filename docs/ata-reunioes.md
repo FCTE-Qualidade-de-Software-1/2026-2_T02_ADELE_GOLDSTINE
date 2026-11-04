@@ -124,6 +124,11 @@ quatro características de qualidade selecionadas segundo a norma ISO/IEC
 3.  Eficiência de Desempenho;
 4.  Portabilidade.
 
+Na reestruturação da Fase 1, em 18/10/2026 (seção 4), a equipe adotou a
+ISO/IEC 25010:2023, em que Usabilidade passou a se chamar **Capacidade
+de Interação** e Portabilidade passou a se chamar **Flexibilidade**.
+Esses são os nomes usados na GitPage.
+
 Ainda em 09/09/2026 e 10/09/2026, Daniel Nunes Duarte acompanhou
 remotamente as definições tomadas em sala, buscou alinhamento sobre os
 entregáveis da semana seguinte e ficou encarregado de verificar as
@@ -194,6 +199,16 @@ Fase 1 para o documento LaTeX. Às 20h48, Felipe de Aquino Campêlo e
 Leonardo Fachinello Bonetti finalizaram a Fase 2 e integraram-na à
 branch `main`.
 
+**Reestruturação da Fase 1 (16/10/2026 a 18/10/2026):** Caio Melo Borges
+redigiu as páginas detalhadas da Fase 1 e as integrou à síntese no PR
+[#1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/pull/1). O modelo de qualidade passou a seguir a ISO/IEC
+25010:2023, e as características foram priorizadas pela [matriz Impacto
+x Risco](fase-1/caracteristicas.md): Capacidade de Interação (P = 25),
+Adequação Funcional (P = 20), Eficiência de Desempenho e Flexibilidade
+(empatadas, P = 16). Confiabilidade (P = 12) ficou de fora. No mesmo
+dia, Felipe de Aquino Campêlo e Leonardo Fachinello Bonetti realinharam
+a Fase 2 à Fase 1 reestruturada, com os objetivos G1 a G4.
+
 ### 19/10/2026 — Elaboração do artigo IEEE e apresentação do Ponto de Controle 1
 
 **09h30 às 09h40:** Arthur Carvalho Leite informou a conclusão da
@@ -227,6 +242,21 @@ de áudio de Davi dos Santos Brito Nobre):
 6.  Manter exclusivamente o verbo "avaliar" na formulação dos objetivos;
 7.  Definir e documentar no GitHub as métricas de gestão (PSM) para
     avaliar o desempenho do próprio grupo.
+
+**Medição 1 dos indicadores PSM (19/10/2026):** no PR #3, Arthur
+Carvalho Leite publicou a página [Gestão do Projeto](gestao-psm.md), com
+os indicadores I1 a I5 e a primeira medição, feita a sete dias da
+Entrega 1:
+
+| Indicador | Resultado | Decisão |
+| --------- | --------- | ------- |
+| I1 – % concluído | 14 de 17 artefatos (82%) | Priorizar o artigo e a tabela de contribuição |
+| I2 – *Burndown* | Não mensurável: sem marcos nem *issues* | Criar os marcos E1 e E2 e uma *issue* por artefato |
+| I3 – Esforço | Planilha de esforço ainda não adotada | Adotar a planilha; a tabela de contribuição passa a usar horas |
+| I4 – Tempo de ciclo | Fase 1: 49,0 h; Fase 2: 16,7 h (limite de cinco dias) | Manter um ramo e um PR por fase |
+| I5 – Retrabalho | Não medido: revisões não registradas | Registrar a revisão como comentários nos PRs a partir da Fase 3 |
+
+*Fonte: [Gestão do Projeto](gestao-psm.md), Tabela 3.*
 
 ### 23/10/2026 a 25/10/2026 — Ajustes pós-controle, métricas PSM e fechamento da Entrega 1 (E1)
 
@@ -262,6 +292,64 @@ determinado que todo commit de grande porte deve obrigatoriamente ser
 realizado em uma branch dedicada e integrado via Pull Request (PR)
 revisado por outro integrante, ficando vedados commits diretos na
 `main`.
+
+### 24/10/2026 — Medida de contribuição da equipe (I3)
+
+Na elaboração da tabela de contribuição (PR [#4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/pull/4)), a
+equipe decidiu medir a contribuição em **horas-pessoa**, como no
+indicador *Personnel Effort* do PSM/CID. *Commits* foram descartados
+porque medem o hábito de enviar alterações, e não o trabalho; *issues*,
+porque não foram usadas na Entrega 1. Como a planilha só foi adotada
+depois da medição 1, as horas da Entrega 1 foram reconstruídas a partir
+do texto escrito no repositório (1.100 palavras por hora nas páginas e
+2.200 no artigo). No mesmo dia, a equipe:
+
+-   calibrou as taxas para que nenhum membro passasse de 10 h;
+-   declarou as horas de trabalho sem registro no Git de Daniel Nunes
+    Duarte (7,2 h) e de Davi dos Santos Brito Nobre (total de 9,8 h);
+-   fixou o total de Caio Melo Borges em 9,0 h, contra 9,78 h estimadas.
+
+Com isso, as participações ficaram entre 13,9% e 18,8%, todas dentro da
+faixa de 10% a 40% do critério de decisão do I3. A partir da Entrega 2,
+as horas são registradas na planilha `gestao/esforco.csv` a cada sessão
+de trabalho, e as reuniões contam para os participantes listados nesta
+ata.
+
+*Fonte: [Contribuição](contribuicao.md), versões 1.2 a 1.4.*
+
+### 25/10/2026 — Atendimento dos feedbacks do Ponto de Controle 1
+
+Leonardo Fachinello Bonetti aplicou as correções da Fase 2 no PR
+[#5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/pull/5), integrado por Davi dos Santos Brito Nobre às 23h07.
+Por orientação da professora no ponto de controle, a equipe também
+retirou o objetivo G4 (Eficiência de Desempenho), com as métricas M16 a
+M19, as hipóteses H13 e H14 e os itens B3 e B4 do questionário. A
+avaliação segue com três características: Adequação Funcional (G1),
+Capacidade de Interação (G2) e Flexibilidade (G3).
+
+| Feedback | Situação em 03/11/2026 | Evidência |
+| -------- | ---------------------- | --------- |
+| 1. Uma questão por métrica | Cada métrica responde a uma única questão | [Questões](fase-2/questoes.md), Tabela 4 |
+| 2. Retirar "a fim de identificar pontos fracos" | Atendido em 25/10/2026 | [Objetivos](fase-2/objetivos.md), versão 2.4 |
+| 3. Ajustar "com respeito a" | Sem alteração identificada no repositório | — |
+| 4. Mover o contexto dos objetivos para a Fase 1 | Sem alteração identificada no repositório | — |
+| 5. Detalhar o contexto do ambiente | Sem alteração identificada no repositório | — |
+| 6. Manter apenas o verbo "avaliar" | Atendido em 25/10/2026 | [Objetivos](fase-2/objetivos.md), versão 2.4 |
+| 7. Métricas de gestão (PSM) no GitHub | Atendido: indicadores e medição 1 (19/10/2026), metodologia de esforço (24/10/2026) e medição 2 (03/11/2026) | [Gestão do Projeto](gestao-psm.md) e [Contribuição](contribuicao.md) |
+| Retirar o objetivo G4 | Atendido em 25/10/2026 | [Objetivos](fase-2/objetivos.md), versão 2.3 |
+
+*Fonte: histórico de versões das páginas da Fase 2 e PR #5.*
+
+### 25/10/2026 a 28/10/2026 — Cumprimento da regra de PR
+
+A medição 2 (03/11/2026) verificou que, entre 25 e 28/10/2026, sete
+*commits* ainda foram enviados direto ao ramo `main`: as personas
+(25/10), a atualização do artigo e sua publicação na GitPage (25 e
+26/10) e a retrospectiva da Entrega 1 (28/10). Os PRs #3 a #5 ficaram
+abaixo do limite de cinco dias de tempo de ciclo (0,4 h, 27,8 h e 6,6
+h). A equipe decidiu que, a partir da Entrega 2, todo artefato entra no
+ramo `main` por PR, revisado por outro membro antes do *merge* (ação C2
+da retrospectiva).
 
 ## 5. Retrospectiva da Entrega 1 e planejamento de melhorias (28 de outubro de 2026)
 
@@ -360,9 +448,76 @@ repositório Git:
     registros referentes às discussões e decisões tomadas
     presencialmente durante as aulas.
 
+### 03/11/2026 — Medição 2 dos indicadores PSM e revisão dos PRs
+
+Caio Melo Borges registrou a [medição 2](gestao-psm.md) no PR
+[#6](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/pull/6). Ela fecha a Entrega 1 e acompanha as decisões da
+medição 1:
+
+| Indicador | Resultado em 03/11/2026 | Decisão (responsável) |
+| --------- | ----------------------- | --------------------- |
+| I1 – % concluído | 17 de 17 artefatos (100%); *release* 1.0 em 25/10/2026 | Fixar a lista de artefatos da Entrega 2 com prazos internos e acompanhar toda semana (Caio Melo Borges) |
+| I2 – *Burndown* | Não mensurável: marcos e *issues* ainda não criados | Criar o marco E2 e uma *issue* por artefato antes do início da Fase 3 (Caio Melo Borges) |
+| I3 – Esforço | Entrega 1 entre 13,9% e 18,8%; Entrega 2 sem horas registradas | Registrar as horas de cada sessão, com evidência (Felipe de Aquino Campêlo) |
+| I4 – Tempo de ciclo | PRs #3 a #5 abaixo de cinco dias; sete *commits* fora de PR | Todo artefato entra no ramo `main` por PR |
+| I5 – Retrabalho | Não mensurável: 1 revisão formal em 5 PRs | Todo PR revisado por outro membro antes do *merge*, com comentários (Leonardo Fachinello Bonetti) |
+
+*Fonte: [Gestão do Projeto](gestao-psm.md), Tabelas 4 e 5.*
+
+No mesmo PR, Caio Melo Borges revisou a tabela de contribuição e o
+*script* de esforço, e preparou os slides da apresentação de 04/11/2026.
+Daniel Nunes Duarte abriu o PR [#8](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/pull/8) com esta ata, que
+Caio Melo Borges complementou com as decisões registradas no
+repositório. Os dois PRs aguardam a revisão de outro membro antes do
+*merge*, conforme a ação C2 da retrospectiva.
+
+### Encaminhamentos em aberto (03/11/2026)
+
+| Encaminhamento | Responsável | Prazo | Indicador |
+| -------------- | ----------- | ----- | --------- |
+| Cronograma com prazos internos por artefato e status rápido toda semana em aula | Caio Melo Borges | Semanal, durante a Entrega 2 | I1 |
+| Criar o marco E2 e uma *issue* por artefato | Caio Melo Borges | Antes do início da Fase 3 | I2 |
+| Iniciar a pesquisa de cada área e publicar um resumo curto no repositório | Caio Melo Borges (acompanhamento) | Fim da primeira semana da etapa | I1 |
+| Registrar as horas de cada sessão em `gestao/esforco.csv` | Felipe de Aquino Campêlo (acompanhamento) | A cada sessão de trabalho | I3 |
+| Revisar os PRs #6 e #8 antes do *merge* | Leonardo Fachinello Bonetti (acompanhamento) | Antes do *merge* | I4 e I5 |
+| Registrar nesta ata a apresentação de 04/11/2026 e o retorno da professora | Caio Melo Borges | 04/11/2026 | — |
+
+## 7. Registro de decisões
+
+Resumo das decisões desta ata, em ordem cronológica, com a evidência de
+cada uma.
+
+| Nº | Data | Decisão | Registro | Evidência |
+| :-: | :--: | ------- | -------- | --------- |
+| 1 | 09/09/2026 | SIGAA/UnB (portal do discente de graduação) como objeto de avaliação | Seção 3 | Validação da professora em aula |
+| 2 | 16/10/2026 | Três subequipes (Fase 1, Fase 2 e artigo) e um ramo por frente, primeiro no MkDocs e depois no LaTeX | Seção 4 | PRs #1, #2 e #3 |
+| 3 | 18/10/2026 | Fase 1 com a ISO/IEC 25010:2023 e quatro características priorizadas pela matriz Impacto x Risco | Seção 4 | PR [#1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/pull/1) |
+| 4 | 19/10/2026 | Decisões da medição 1 (I1 a I5) | Seção 4 | [Gestão do Projeto](gestao-psm.md), Tabela 3 |
+| 5 | 24/10/2026 | Contribuição medida em horas-pessoa, com horas declaradas para o trabalho fora do Git | Seção 4 | PR [#4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/pull/4) e [Contribuição](contribuicao.md) |
+| 6 | 25/10/2026 | Retirada do objetivo G4 (Eficiência de Desempenho) por orientação da professora | Seção 4 | PR [#5](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/pull/5) |
+| 7 | 25/10/2026 | Todo commit de grande porte em ramo próprio, por PR revisado | Seção 4 | Esta ata |
+| 8 | 28/10/2026 | Ações C1 e C2 da retrospectiva, com um responsável por ação | Seção 5 | [Retrospectiva da Entrega 1](assets/retrospectiva-e1.pdf) |
+| 9 | 03/11/2026 | Ata formal das deliberações: Daniel Nunes Duarte pelo grupo, Caio Melo Borges pelas aulas | Seção 6 | PR [#8](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/pull/8) |
+| 10 | 03/11/2026 | Decisões da medição 2 (I1 a I5) | Seção 6 | [Gestão do Projeto](gestao-psm.md), Tabela 5 |
+
+## 8. Padrão de registro a partir da Entrega 2
+
+Cada reunião, em sala ou remota, passa a ser registrada nesta página com
+os campos abaixo. A lista de presentes é a evidência das horas de reunião
+no indicador I3: na [planilha de esforço](contribuicao.md), uma reunião
+conta para cada participante listado na ata.
+
+-   **Data, local e duração** (sala de aula, WhatsApp ou chamada);
+-   **Presentes e ausentes**;
+-   **Pauta**, incluindo o status semanal dos artefatos (ação C1);
+-   **Decisões**, que entram também no registro da seção 7;
+-   **Encaminhamentos**, com responsável, prazo e *issue*;
+-   **Evidência**: link do PR, do *commit* ou do arquivo.
+
 ## Histórico de Versão
 
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :------- | :---: |
 | 1.0 | 03/11/2026 | Registro cronológico das reuniões, deliberações e comunicações do projeto | Daniel Nunes Duarte |
 | 1.1 | 03/11/2026 | Correção da formatação (travessões e quebras de linha), do responsável pela revisão de PRs na retrospectiva e da descrição do PR #4, conferidos com o repositório | Caio Borges |
+| 1.2 | 03/11/2026 | Reestruturação da Fase 1, medição 1, medida de contribuição, atendimento dos feedbacks do Ponto de Controle 1, cumprimento da regra de PR, medição 2, encaminhamentos, registro de decisões e padrão de registro | Caio Borges |
