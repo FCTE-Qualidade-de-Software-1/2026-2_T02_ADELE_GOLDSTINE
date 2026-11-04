@@ -1,11 +1,11 @@
 # Ata de Reuniões e Comunicação do Projeto
 
-**Universidade de Brasília (UnB)**\
-**Faculdade de Ciências e Tecnologias em Engenharia (FCTE)**\
-**Disciplina:** FGA0315 -- Qualidade de Software 1 (Turma T02 -- 2026.2)
+**Universidade de Brasília (UnB)**<br>
+**Faculdade de Ciências e Tecnologias em Engenharia (FCTE)**<br>
+**Disciplina:** FGA0315 – Qualidade de Software 1 (Turma T02 – 2026.2)
 
 **Histórico cronológico de deliberações, divisão de tarefas e gestão do
-projeto**\
+projeto**<br>
 *Agosto a novembro de 2026*
 
 ------------------------------------------------------------------------
@@ -15,8 +15,8 @@ projeto**\
 | Item | Descrição |
 | ---- | --------- |
 | **Título do Projeto** | Avaliação da Qualidade do SIGAA/UnB na Perspectiva do Estudante de Graduação |
-| **Equipe e Turma** | Equipe Adele Goldstine --- Turma T02 (Semestre 2026.2) |
-| **Disciplina e Docente** | FGA0315 -- Qualidade de Software 1 --- Profa. Cristiane Soares Ramos |
+| **Equipe e Turma** | Equipe Adele Goldstine — Turma T02 (Semestre 2026.2) |
+| **Disciplina e Docente** | FGA0315 – Qualidade de Software 1 — Profa. Cristiane Soares Ramos |
 | **Repositório Oficial** | [2026-2_T02_ADELE_GOLDSTINE](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE) |
 | **Integrantes da Equipe** | Arthur Carvalho Leite, Caio Melo Borges, Daniel Nunes Duarte, Davi dos Santos Brito Nobre, Felipe de Aquino Campêlo e Leonardo Fachinello Bonetti |
 
@@ -24,7 +24,7 @@ projeto**\
 
 ## 2. Fase inicial: formação da equipe e Seminário ISO/IEC 25000 (agosto de 2026)
 
-### 16/08/2026 a 19/08/2026 --- Criação do canal de comunicação e primeiro encontro
+### 16/08/2026 a 19/08/2026 — Criação do canal de comunicação e primeiro encontro
 
 Arthur Carvalho Leite criou o grupo de comunicação oficial da equipe no
 WhatsApp (**"ADELE GOLDSTINE-Qualidades"**) em 16/08/2026, com ingresso
@@ -32,7 +32,7 @@ dos demais membros em 17/08/2026. No dia 19/08/2026, os integrantes
 presentes em sala de aula realizaram o primeiro encontro presencial para
 alinhamento inicial da equipe.
 
-### 24/08/2026 a 28/08/2026 --- Planejamento e divisão do seminário inicial
+### 24/08/2026 a 28/08/2026 — Planejamento e divisão do seminário inicial
 
 Na aula de 24/08/2026, Daniel Nunes Duarte propôs que a equipe
 realizasse a apresentação na segunda-feira seguinte (31/08/2026),
@@ -55,7 +55,7 @@ consolidação padronizada da pesquisa até sábado (29/08/2026):
     Borges, Arthur Carvalho Leite e Daniel Nunes Duarte (apoio na edição
     dos slides e revisão).
 
-### 29/08/2026 a 31/08/2026 --- Execução, submissão e apresentação do seminário
+### 29/08/2026 a 31/08/2026 — Execução, submissão e apresentação do seminário
 
 **29/08/2026:** Davi dos Santos Brito Nobre acompanhou o andamento do
 documento e esclareceu que deveria ser adotada a versão específica da
@@ -91,7 +91,7 @@ o controle rigoroso dos horários de submissão nas etapas seguintes.
 
 ## 3. Definição do projeto final e configuração do repositório (setembro de 2026)
 
-### 02/09/2026 a 08/09/2026 --- Configuração do GitHub
+### 02/09/2026 a 08/09/2026 — Configuração do GitHub
 
 Em 02/09/2026, Caio Melo Borges contatou a professora via Microsoft
 Teams sobre o reenvio dos slides revisados, sendo informado de que a
@@ -103,11 +103,11 @@ repositório oficial criado na organização da disciplina
 Carvalho Leite retomaram a proposta de avaliar fluxos do SIGAA.
 
 Em 08/09/2026, após receber permissões administrativas, Davi dos Santos
-Brito Nobre coletou as contas do GitHub dos demais integrantes ---
+Brito Nobre coletou as contas do GitHub dos demais integrantes —
 incluindo a confirmação de Daniel Nunes Duarte, Arthur Carvalho Leite e
-Felipe de Aquino Campêlo --- e enviou os convites de acesso.
+Felipe de Aquino Campêlo — e enviou os convites de acesso.
 
-### 09/09/2026 a 13/09/2026 --- Escolha oficial do objeto de avaliação e características SQuaRE
+### 09/09/2026 a 13/09/2026 — Escolha oficial do objeto de avaliação e características SQuaRE
 
 Na aula de 09/09/2026, destinada à aprovação das propostas de projeto
 final, a equipe definiu oficialmente o **SIGAA/UnB (Portal do Discente
@@ -133,7 +133,7 @@ Em 13/09/2026, Caio Melo Borges compartilhou o documento oficial
 `Cronograma_-_versao_1_assinado.pdf` para acompanhamento das datas de
 avaliações individuais, pontos de controle e entregas.
 
-### 29/09/2026 a 30/09/2026 --- Primeira Avaliação Individual (TAI1)
+### 29/09/2026 a 30/09/2026 — Primeira Avaliação Individual (TAI1)
 
 Davi dos Santos Brito Nobre, Arthur Carvalho Leite e Caio Melo Borges
 alinharam a revisão do conteúdo teórico dos três blocos de slides
@@ -143,14 +143,14 @@ demandas do projeto prático.
 
 ## 4. Desenvolvimento da Entrega 1: Fases 1 e 2, GQM e Ponto de Controle 1 (outubro de 2026)
 
-### 05/10/2026 a 14/10/2026 --- Especificação do trabalho final e planejamento
+### 05/10/2026 a 14/10/2026 — Especificação do trabalho final e planejamento
 
 Em 05/10/2026, a docente publicou a especificação completa do Trabalho
 Final (Versão 1.0). Daniel Nunes Duarte verificou com a equipe os
 critérios de presença e controle de frequência durante as sessões de
 apresentação, enquanto Felipe de Aquino Campêlo, Leonardo Fachinello
 Bonetti e Arthur Carvalho Leite transmitiram as diretrizes definidas em
-sala para Davi dos Santos Brito Nobre (ausente por motivos médicos):
+sala para Davi dos Santos Brito Nobre (ausente):
 levantar métricas de custos e esforço (modelo PSM/CID), estruturar o
 GitHub Projects para gestão de tarefas e dividir as atividades visando à
 Entrega 1 prevista para 26/10/2026.
@@ -161,20 +161,20 @@ grupo. Na aula presencial de 14/10/2026, Daniel Nunes Duarte coordenou a
 reunião presencial da equipe em sala de aula (posicionando o grupo
 próximo à professora) para consolidar a divisão das etapas do trabalho.
 
-### 15/10/2026 a 18/10/2026 --- Estruturação do MkDocs e execução das Fases 1, 2 e artigo LaTeX
+### 15/10/2026 a 18/10/2026 — Estruturação do MkDocs e execução das Fases 1, 2 e artigo LaTeX
 
 Nos dias 15/10/2026 e 16/10/2026, Davi dos Santos Brito Nobre estruturou
 e publicou a GitPage do projeto utilizando o Material for MkDocs (Versão
 1.0 datada de 16/10/2026) e formalizou a alocação dos integrantes em
 três subequipes:
 
--   **Fase 1 --- Estabelecimento dos Requisitos da Avaliação, Contexto,
+-   **Fase 1 — Estabelecimento dos Requisitos da Avaliação, Contexto,
     Perfis de Usuário e Matriz Impacto × Risco:** Caio Melo Borges e
     Davi dos Santos Brito Nobre.
--   **Fase 2 --- Especificação da Avaliação via método
+-   **Fase 2 — Especificação da Avaliação via método
     Goal-Question-Metric (GQM):** Felipe de Aquino Campêlo e Leonardo
     Fachinello Bonetti.
--   **Artigo Científico em LaTeX --- Estruturação, Redação e Formatação
+-   **Artigo Científico em LaTeX — Estruturação, Redação e Formatação
     IEEE:** Arthur Carvalho Leite e Daniel Nunes Duarte.
 
 Ficou estabelecido o fluxo de desenvolvimento em branches separadas,
@@ -194,7 +194,7 @@ Fase 1 para o documento LaTeX. Às 20h48, Felipe de Aquino Campêlo e
 Leonardo Fachinello Bonetti finalizaram a Fase 2 e integraram-na à
 branch `main`.
 
-### 19/10/2026 --- Elaboração do artigo IEEE e apresentação do Ponto de Controle 1
+### 19/10/2026 — Elaboração do artigo IEEE e apresentação do Ponto de Controle 1
 
 **09h30 às 09h40:** Arthur Carvalho Leite informou a conclusão da
 primeira versão do artigo no Overleaf (elaborada em conjunto pela frente
@@ -210,7 +210,7 @@ apresentação, enquanto Caio Melo Borges e Arthur Carvalho Leite geraram
 a apresentação no Canva a partir da documentação do repositório e
 conduziram a defesa perante a professora.
 
-**11h04 --- Registro de feedbacks do Ponto de Controle 1:** Leonardo
+**11h04 — Registro de feedbacks do Ponto de Controle 1:** Leonardo
 Fachinello Bonetti registrou por escrito no grupo todas as correções
 exigidas pela Profa. Cristiane Soares Ramos (complementadas por gravação
 de áudio de Davi dos Santos Brito Nobre):
@@ -228,25 +228,25 @@ de áudio de Davi dos Santos Brito Nobre):
 7.  Definir e documentar no GitHub as métricas de gestão (PSM) para
     avaliar o desempenho do próprio grupo.
 
-### 23/10/2026 a 25/10/2026 --- Ajustes pós-controle, métricas PSM e fechamento da Entrega 1 (E1)
+### 23/10/2026 a 25/10/2026 — Ajustes pós-controle, métricas PSM e fechamento da Entrega 1 (E1)
 
 **23/10/2026:** Diante do alerta de Davi dos Santos Brito Nobre sobre o
 prazo final da Entrega 1, Daniel Nunes Duarte prontificou-se a agilizar
 as pendências e correções do trabalho durante o final de semana.
 
-**24/10/2026:** Caio Melo Borges abriu o Pull Request #4 (`pull/4`)
-contendo a estruturação das métricas de avaliação e gestão do grupo
-(PSM/CID) e estimativas de esforço.
+**24/10/2026:** Caio Melo Borges abriu o Pull Request [#4](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/pull/4)
+com a metodologia de esforço por horas e a tabela de contribuição da
+Entrega 1 (indicador I3 do PSM/CID).
 
-**25/10/2026 (manhã e tarde):** Davi dos Santos Brito Nobre revisou e
-aprovou o PR #4 de Caio Melo Borges e elaborou as Personas para
+**25/10/2026 (manhã e tarde):** Davi dos Santos Brito Nobre integrou
+o PR #4 de Caio Melo Borges ao ramo `main` (16h58) e elaborou as Personas para
 concretizar os perfis de estudantes na Fase 1. Arthur Carvalho Leite e
 Daniel Nunes Duarte ficaram responsáveis pela frente do artigo
 científico em LaTeX (tendo ambos como coautores na versão final
 submetida). Leonardo Fachinello Bonetti confirmou que não haveria aula
 presencial nem prova (TAI2) no dia 26/10/2026.
 
-**25/10/2026 (noite --- resolução de conflito no Git e release E1):** Às
+**25/10/2026 (noite — resolução de conflito no Git e release E1):** Às
 23h08, durante a consolidação final, Davi dos Santos Brito Nobre
 identificou que um commit direto na `main` havia sobrescrito os arquivos
 do artigo no MkDocs. Em caráter emergencial, Arthur Carvalho Leite
@@ -265,25 +265,25 @@ revisado por outro integrante, ficando vedados commits diretos na
 
 ## 5. Retrospectiva da Entrega 1 e planejamento de melhorias (28 de outubro de 2026)
 
-### 28/10/2026 --- Avaliação por pares e dinâmica de retrospectiva em sala
+### 28/10/2026 — Avaliação por pares e dinâmica de retrospectiva em sala
 
 Caio Melo Borges lembrou os integrantes de responderem à autoavaliação e
 à avaliação por pares na plataforma TEAMMATES (link enviado ao e-mail
 institucional com prazo até sexta-feira, 30/10/2026).
 
-Em sala de aula, os integrantes presentes --- Caio Melo Borges
+Em sala de aula, os integrantes presentes — Caio Melo Borges
 (Relator), Felipe de Aquino Campêlo (Facilitador) e Leonardo Fachinello
-Bonetti --- conduziram a retrospectiva da Entrega 1 e preencheram o
+Bonetti — conduziram a retrospectiva da Entrega 1 e preencheram o
 documento oficial `T01 T02 - E1 RETROSPECTIVA 4.pdf`.
 
-#### Tarefa 1 --- O projeto como filme ou carro
+#### Tarefa 1 — O projeto como filme ou carro
 
 A equipe associou a Entrega 1 a um **Renault Kwid**, justificando que:
 "não é o carro dos sonhos, mas é econômico, confiável e cumpre muito bem
 a sua função. Assim foi a Entrega 1: sem sobras de tempo ou recursos,
 mas entregou o que foi pedido".
 
-#### Atividade 2 --- Retrospectiva dos Três Porquinhos
+#### Atividade 2 — Retrospectiva dos Três Porquinhos
 
 -   **Casa de Palha (o que colocou em risco):** A gestão de horário do
     grupo foi o principal gargalo, ocasionando acúmulo de tarefas
@@ -296,13 +296,13 @@ mas entregou o que foi pedido".
     Organização e clareza na distribuição das tarefas desde o início da
     etapa.
 
-#### Atividades 3 e 4 --- Priorização e plano de ação (Quê, Quem, Quando)
+#### Atividades 3 e 4 — Priorização e plano de ação (Quê, Quem, Quando)
 
-Na votação da equipe, foram priorizados os tópicos **C1 -- Gestão de
-horário e acúmulo de tarefas perto do prazo** (3 votos --- corrigir) e
-**C2 -- Domínio de cada membro sobre a própria área com apoio às
-demais** (3 votos --- aperfeiçoar). C3 (distribuição clara de tarefas
---- 2 votos) e C4 (falta de issues e marcos --- 1 voto) não foram
+Na votação da equipe, foram priorizados os tópicos **C1 – Gestão de
+horário e acúmulo de tarefas perto do prazo** (3 votos — corrigir) e
+**C2 – Domínio de cada membro sobre a própria área com apoio às
+demais** (3 votos — aperfeiçoar). C3 (distribuição clara de tarefas
+— 2 votos) e C4 (falta de issues e marcos — 1 voto) não foram
 priorizados.
 
 Foram estabelecidas quatro ações práticas monitoradas por métricas PSM
@@ -310,12 +310,12 @@ para a Entrega 2, conforme o quadro:
 
 | Código / tópico priorizado | Ação definida | Responsável | Métrica de controle (PSM) |
 | -------------------------- | ------------- | ----------- | ------------------------- |
-| **C1 -- Gestão de horário** | Cronograma com prazos internos por artefato, uma issue por artefato no marco E2 e status rápido toda semana em aula. | Caio Melo Borges | **I1:** ≥ 80% concluído a uma semana da entrega; **I2:** desvio do burndown ≤ 10%. |
-| **C1 -- Gestão de horário** | Registrar as horas de cada sessão de trabalho na planilha `gestao/esforco.csv`. | Felipe de Aquino Campêlo | **I3:** participação de cada membro entre 10% e 40% do esforço total. |
-| **C2 -- Domínio das áreas** | Iniciar a pesquisa de cada área na primeira semana da etapa e publicar um resumo curto no repositório. | Caio Melo Borges | **I1:** resumos concluídos / previstos ao fim da primeira semana. |
-| **C2 -- Domínio das áreas** | Manter o apoio entre áreas: todo Pull Request (PR) revisado por outro membro antes do merge. | Felipe de Aquino Campêlo | **I5:** percentual de retrabalho; **I4:** tempo de ciclo ≤ 5 dias. |
+| **C1 – Gestão de horário** | Cronograma com prazos internos por artefato, uma issue por artefato no marco E2 e status rápido toda semana em aula. | Caio Melo Borges | **I1:** ≥ 80% concluído a uma semana da entrega; **I2:** desvio do burndown ≤ 10%. |
+| **C1 – Gestão de horário** | Registrar as horas de cada sessão de trabalho na planilha `gestao/esforco.csv`. | Felipe de Aquino Campêlo | **I3:** participação de cada membro entre 10% e 40% do esforço total. |
+| **C2 – Domínio das áreas** | Iniciar a pesquisa de cada área na primeira semana da etapa e publicar um resumo curto no repositório. | Caio Melo Borges | **I1:** resumos concluídos / previstos ao fim da primeira semana. |
+| **C2 – Domínio das áreas** | Manter o apoio entre áreas: todo Pull Request (PR) revisado por outro membro antes do merge. | Leonardo Fachinello Bonetti | **I5:** percentual de retrabalho; **I4:** tempo de ciclo ≤ 5 dias. |
 
-*Fonte: Adaptado de Retrospectiva da Entrega 1 -- Equipe Adele Goldstine
+*Fonte: Adaptado de Retrospectiva da Entrega 1 – Equipe Adele Goldstine
 (2026).*
 
 Às 11h02 de 28/10/2026, Caio Melo Borges enviou o PDF da retrospectiva
@@ -325,11 +325,11 @@ documento no repositório do GitHub, orientando todos a executarem
 
 ## 6. Preparação para apresentação de métricas PSM e formalização de atas (3 de novembro de 2026)
 
-### 03/11/2026 --- Alinhamento para o Ponto de Controle 2 (métricas PSM) e documentação de decisões
+### 03/11/2026 — Alinhamento para o Ponto de Controle 2 (métricas PSM) e documentação de decisões
 
 Às 10h25, Caio Melo Borges comunicou à equipe a necessidade de
 preparação para a atividade do dia seguinte (04/11/2026):
-**"Apresentações das métricas de gestão de projetos (PSM) -- equipes
+**"Apresentações das métricas de gestão de projetos (PSM) – equipes
 sorteadas"**, informando que revisaria o PR da tabela de horas e esforço
 para refinar os indicadores.
 
@@ -365,3 +365,4 @@ repositório Git:
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :------- | :---: |
 | 1.0 | 03/11/2026 | Registro cronológico das reuniões, deliberações e comunicações do projeto | Daniel Nunes Duarte |
+| 1.1 | 03/11/2026 | Correção da formatação (travessões e quebras de linha), do responsável pela revisão de PRs na retrospectiva e da descrição do PR #4, conferidos com o repositório | Caio Borges |
