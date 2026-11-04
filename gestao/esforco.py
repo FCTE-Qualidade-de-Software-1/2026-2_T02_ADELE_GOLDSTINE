@@ -114,9 +114,12 @@ def calcular(args):
             h = float(linha["horas"])
             horas[linha["membro"]] += h
             por_categoria[linha["membro"]][linha["categoria"]] += h
+    total = sum(horas.values())
+    if not total:
+        print(f"Nenhuma hora registrada para a entrega {args.entrega}." if args.entrega else "Nenhuma hora registrada na planilha.")
+        return
     cats = sorted({c for m in por_categoria.values() for c in m})
     pct = percentuais(horas)
-    total = sum(horas.values())
     print("| Membro | " + " | ".join(cats) + " | Horas | Esforço (%) |")
     print("| ------ | " + " | ".join(":-:" for _ in cats) + " | :-: | :-: |")
     for m in MEMBROS:
