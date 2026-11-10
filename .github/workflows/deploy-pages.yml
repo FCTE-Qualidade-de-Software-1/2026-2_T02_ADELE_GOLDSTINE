@@ -20,6 +20,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Histórico completo e tags: o dashboard de esforço é calculado a partir do Git
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5

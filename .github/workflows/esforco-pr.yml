@@ -1,0 +1,53 @@
+name: Esforço do PR (I3)
+
+# Comenta em cada PR as horas estimadas dos commits e a participação de cada membro
+# na entrega se o PR for integrado. O comentário é atualizado a cada novo push.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: esforco-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  esforco:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Calcula o esforço do PR
+        run: >
+          python gestao/esforco.py pr
+          --base "${{ github.event.pull_request.base.sha }}"
+          --head "${{ github.event.pull_request.head.sha }}"
+          --numero "${{ github.event.pull_request.number }}"
+          > "$RUNNER_TEMP/comentario.md"
+
+      - name: Publica ou atualiza o comentário
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          id=$(gh api "repos/$REPO/issues/$PR/comments" --paginate \
+            --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("<!-- esforco-pr -->"))) | .id' | head -n 1)
+          if [ -n "$id" ]; then
+            gh api -X PATCH "repos/$REPO/issues/comments/$id" -F body=@"$RUNNER_TEMP/comentario.md" > /dev/null
+          else
+            gh api "repos/$REPO/issues/$PR/comments" -F body=@"$RUNNER_TEMP/comentario.md" > /dev/null
+          fi
