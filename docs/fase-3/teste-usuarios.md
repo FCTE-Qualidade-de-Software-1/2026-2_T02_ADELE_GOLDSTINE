@@ -4,7 +4,7 @@ Esta página define como cada sessão do teste com usuários é conduzida, para 
 
 ## 1. Participantes
 
-São **6 participantes**, em dois grupos de três. Os grupos usam os mesmos cortes de semestre do [questionário](../fase-2/questionario.md#4-perfis-usados-na-comparacao), para que os resultados do teste e do questionário possam ser comparados.
+São **6 participantes**, em dois grupos de três que **diferem apenas no semestre**. Os grupos usam os mesmos cortes de semestre do [questionário](../fase-2/questionario.md#4-perfis-usados-na-comparacao), para que os resultados do teste e do questionário possam ser comparados.
 
 *Tabela 1 - Grupos de participantes.*
 
@@ -16,6 +16,8 @@ São **6 participantes**, em dois grupos de três. Os grupos usam os mesmos cort
 *Fonte: elaboração da equipe.*
 
 **Critérios de inclusão:** ser estudante de graduação ativo da UnB, com acesso ao próprio SIGAA, e consentir com a gravação da sessão (premissa 6 do roteiro do trabalho).
+
+**Perfis que não são recrutados:** não é preciso encontrar estudantes com deficiência nem estudantes que usam só o celular. Esses perfis da Fase 1 são cobertos por inspeção da equipe: a inclusividade por M9 e M10 e o uso no celular por M14 e M15.
 
 **Critérios de exclusão:** membros da equipe e pessoas que já conheçam os enunciados das tarefas, por exemplo por terem participado da sessão piloto ou conversado com outro participante.
 
@@ -184,3 +186,4 @@ Os dados do piloto não entram nas métricas. Os ajustes feitos depois dele são
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 10/11/2026 | Protocolo do teste com usuários: participantes, papéis, ambiente, roteiro, enunciados, ordem das tarefas, registro, SUS e sessão piloto | Leonardo Bonetti |
+| 1.1 | 10/11/2026 | Grupos diferem apenas no semestre; perfis com deficiência e só celular cobertos por inspeção, sem recrutamento | Leonardo Bonetti |
