@@ -66,6 +66,10 @@ nav:
     - Níveis de Pontuação: fase-2/niveis-pontuacao.md
     - Gráfico GQM: fase-2/grafico-gqm.md
     - Questionário: fase-2/questionario.md
+  - Fase 3:
+    - fase-3/index.md
+    - Protocolo do Teste com Usuários: fase-3/teste-usuarios.md
+    - Planilhas de Coleta: fase-3/planilhas.md
   - Artigo:
     - Artigo (PDF): artigo/index.md
     - Introdução: artigo/introducao.md
