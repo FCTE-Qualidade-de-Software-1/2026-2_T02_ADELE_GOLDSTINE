@@ -33,6 +33,10 @@ A Fase 2 também cita as referências 2, 3, 4, 5 e 8 da Fase 1.
 21. ISO/IEC/IEEE 15939:2017. *Systems and software engineering - Measurement process*. Genebra: ISO, 2017.
 22. GOOGLE. *Introduction to Lighthouse*. Chrome for Developers. Disponível em: <https://developer.chrome.com/docs/lighthouse/overview>. Acesso em: 19 out. 2026.
 
+## Personas
+
+23. COOPER, A. *The Inmates Are Running the Asylum: Why High-Tech Products Drive Us Crazy and How to Restore the Sanity*. Indianapolis: Sams, 1999.
+
 ## Histórico de Versão
 
 | Versão | Data | Descrição | Autor |
@@ -41,3 +45,4 @@ A Fase 2 também cita as referências 2, 3, 4, 5 e 8 da Fase 1.
 | 1.1 | 16/10/2026 | Inclusão das referências da Fase 1 | Caio Borges |
 | 1.2 | 18/10/2026 | Inclusão das referências da Fase 2 (ISO/IEC 25022, ISO/IEC 25023, Brooke, Sauro e Lewis, Sauro, Nielsen e Web Vitals) | Leonardo Bonetti |
 | 1.3 | 19/10/2026 | Inclusão das referências de gestão do projeto (PSM, PSM/CID, ISO/IEC/IEEE 15939) e do Lighthouse | [arthurlleite](https://github.com/arthurlleite) |
+| 1.4 | 25/10/2026 | Inclusão da referência de personas (Cooper), citada no artigo | [arthurlleite](https://github.com/arthurlleite) |

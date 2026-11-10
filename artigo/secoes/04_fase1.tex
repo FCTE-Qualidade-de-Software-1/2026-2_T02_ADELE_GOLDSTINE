@@ -5,7 +5,7 @@
 
 O propósito é \textbf{identificar, com evidências mensuráveis, os pontos fracos do SIGAA nas tarefas acadêmicas mais frequentes do estudante de graduação}, para apoiar a priorização de melhorias pela STI/UnB e embasar a ação de melhoria da Fase 4. O ponto de vista é o do estudante, com atenção a perfis vulneráveis: calouros, que desconhecem a terminologia acadêmica; estudantes que acessam o sistema apenas pelo celular; e estudantes com deficiência. Veteranos e formandos servem de contraste: problemas que persistem com experiência indicam falhas de operabilidade.
 
-A demanda parte da disciplina FGA0315, que define o processo e os critérios de aceitação. Os resultados destinam-se à STI/UnB, operadora do sistema, que decidirá quais telas e fluxos priorizar (pelo ranking das tarefas), se investe em interface responsiva (pela Flexibilidade cruzada com o perfil de acesso) e se otimiza páginas específicas (pelo desempenho por página); ao Decanato de Ensino de Graduação e às coordenações, que decidirão quais procedimentos precisam de orientação (pelas tarefas com mais erro ou abandono); à comunidade estudantil; e à UFRN, desenvolvedora do produto.
+A demanda parte da disciplina FGA0315, que define o processo e os critérios de aceitação. Os resultados destinam-se à STI/UnB, operadora do sistema, que decidirá quais telas e fluxos priorizar (pelo ranking das tarefas), e se investe em interface responsiva (pela Flexibilidade cruzada com o perfil de acesso); ao Decanato de Ensino de Graduação e às coordenações, que decidirão quais procedimentos precisam de orientação (pelas tarefas com mais erro ou abandono); à comunidade estudantil; e à UFRN, desenvolvedora do produto.
 
 \subsection{Produto avaliado}
 \label{sec:produto}
@@ -60,7 +60,7 @@ O modelo da ISO/IEC 25010:2023 foi adaptado por três filtros: relevância para 
 		\midrule
 		Cap. de Interação & 5 & 5 & \textbf{25} & Selecionada (1): seis das oito OP \\
 		Adequação Funcional & 5 & 4 & \textbf{20} & Selecionada (2): dados afetam decisões (OP-07) \\
-		Efic. de Desempenho & 4 & 4 & \textbf{16} & Selecionada (3): pesa em rede móvel \\
+		Efic. de Desempenho & 4 & 4 & \textbf{16} & Selecionada (3); fora da Fase 2 por orientação da professora \\
 		Flexibilidade & 4 & 4 & \textbf{16} & Selecionada (4): OP-02 e OP-03 \\
 		Confiabilidade & 4 & 3 & 12 & Preterida: falhas na matrícula, fora da coleta \\
 		Segurança & 5 & 2 & 10 & Inviável: exigiria testes de invasão \\
@@ -74,10 +74,36 @@ O modelo da ISO/IEC 25010:2023 foi adaptado por três filtros: relevância para 
 
 Nas características selecionadas, foram removidas as subcaracterísticas não mensuráveis no contexto: engajamento e assistência ao usuário (Capacidade de Interação), capacidade (Eficiência de Desempenho, por exigir testes de carga) e instalabilidade, substituibilidade e escalabilidade (Flexibilidade). O custo dessa seleção é que a avaliação descreve a qualidade do sistema em uso pelo estudante, e não a robustez interna da implementação.
 
+Eficiência de Desempenho permanece registrada como prioridade da Fase 1, mas, por orientação da professora no ponto de controle, ficou fora da especificação da Fase 2, que se concentra nas outras três características. Com isso, a ordem de prioridade entre as características avaliadas é Capacidade de Interação ($P = 25$), Adequação Funcional ($P = 20$) e Flexibilidade ($P = 16$), e as relações esperadas que envolviam desempenho deixam de ser verificadas.
+
+\subsection{Personas}
+\label{sec:personas}
+
+Para dar concretude aos perfis de usuários, a equipe elaborou quatro personas e uma antipersona (Seção~\ref{sec:personas-ref}), com necessidades, expectativas, frustrações e perguntas norteadoras, relacionadas às tarefas do escopo (Tabela~\ref{tab:personas}). A persona principal é a caloura que acessa o sistema pelo celular, coerente com o ponto de vista da avaliação; as demais funcionam como contraste ou como partes interessadas indiretas, cujo trabalho afeta o que o estudante vê no portal.
+
+\begin{table}[!t]
+	\caption{Personas e antipersona}
+	\label{tab:personas}
+	\centering
+	\footnotesize
+	\begin{tabularx}{\columnwidth}{L{1.85cm} Y L{2.0cm}}
+		\toprule
+		\textbf{Persona} & \textbf{Perfil e principal frustração} & \textbf{Uso na avaliação} \\
+		\midrule
+		Mariana, 19 anos (principal) & Caloura de Engenharia de Software, sem computador em casa, usa o SIGAA pelo celular; não entende o código de horário e os menus não abrem ao toque & T1 a T6; calouros em Q5 e Q9; celular em Q12 \\
+		Rafael, 28 anos & Mestrando que já usou o SIGAA na graduação e cursa disciplinas de graduação; estranha a organização diferente dos módulos & Contraste: usuário experiente \\
+		Ana Beatriz, 42 anos & Professora que lança notas e publica materiais; já perdeu lançamentos por expiração da sessão e tem falhas no Safari & Indireta: dados de T1 e T5; Q7 e Q11 \\
+		Carlos Eduardo, 35 anos & Servidor da Secretaria Acadêmica que atende estudantes que não concluem tarefas sozinhos; usa tabela impressa para ler horários & Indireta: T3, T4 e T6; Q3 e Q9 \\
+		Jorge, 52 anos (antipersona) & Pai de estudante, sem vínculo nem credenciais; quer ver horários e notas da filha & Fora do escopo: acesso público \\
+		\bottomrule
+	\end{tabularx}
+	\fonte{elaborado pela equipe; descrições completas na GitPage.}
+\end{table}
+
 \subsection{Escopo, tarefas e rigor}
 \label{sec:escopo}
 
-A avaliação usa seis tarefas representativas, escolhidas por frequência, criticidade e disponibilidade na coleta (Tabela~\ref{tab:tarefas}), executadas nos navegadores Chrome, Firefox, Safari e Edge, em telas de cerca de 360, 768 e 1280~px, e em rede comum e móvel simulada.
+A avaliação usa seis tarefas representativas, escolhidas por frequência, criticidade e disponibilidade na coleta (Tabela~\ref{tab:tarefas}), executadas nos navegadores Chrome, Firefox, Safari e Edge e em telas de cerca de 360, 768 e 1280~px, com interação por mouse e por toque.
 
 \begin{table}[!t]
 	\caption{Tarefas representativas}
@@ -99,4 +125,4 @@ A avaliação usa seis tarefas representativas, escolhidas por frequência, crit
 	\fonte{elaborado pela equipe.}
 \end{table}
 
-Ficam fora do escopo os portais de docentes e servidores, a pós-graduação, matrícula e trancamento (que alterariam dados reais), os demais sistemas SIG e os testes de carga e de segurança. O rigor é \textbf{intermediário}: a avaliação apoia decisões de priorização, sem impacto sobre segurança ou finanças, e é garantido por métricas objetivas, critérios fixados antes da coleta, medições repetidas e dois avaliadores nas inspeções. A amostra de conveniência, concentrada na FCTE, a versão do sistema e o período de coleta são declarados como limites de validade. A avaliação também se relaciona às metas 4.3, 10.2 e 16.6 dos Objetivos de Desenvolvimento Sustentável \cite{onu2015,ipea2018}: a permanência no ensino superior depende do sistema, estudantes de menor renda dependem mais do celular e de redes móveis, e o indicador 16.6.2 mede a satisfação com serviços públicos.
+Ficam fora do escopo os portais de docentes e servidores, a pós-graduação, matrícula e trancamento (que alterariam dados reais), os demais sistemas SIG e os testes de carga e de segurança. O rigor é \textbf{intermediário}: a avaliação apoia decisões de priorização, sem impacto sobre segurança ou finanças, e é garantido por métricas objetivas, critérios fixados antes da coleta, execuções repetidas do especialista e dois avaliadores nas inspeções. A amostra de conveniência, concentrada na FCTE, a versão do sistema e o período de coleta são declarados como limites de validade. A avaliação também se relaciona às metas 4.3, 10.2 e 16.6 dos Objetivos de Desenvolvimento Sustentável \cite{onu2015,ipea2018}: a permanência no ensino superior depende do sistema, estudantes de menor renda dependem mais do celular e de redes móveis, e o indicador 16.6.2 mede a satisfação com serviços públicos.

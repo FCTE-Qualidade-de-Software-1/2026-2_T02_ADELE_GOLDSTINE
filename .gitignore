@@ -37,3 +37,6 @@ artigo/*.lot
 artigo/*.out
 artigo/*.synctex.gz
 artigo/*.toc
+
+# PDF do artigo copiado pelo workflow de deploy (fonte: artigo/artigo.pdf)
+docs/artigo/artigo.pdf

@@ -31,6 +31,9 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+hooks:
+  - gestao/esforco.py
+
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -51,6 +54,7 @@ nav:
     - Software Avaliado: fase-1/software-avaliado.md
     - Modelo de Qualidade: fase-1/modelo-qualidade.md
     - Características Priorizadas: fase-1/caracteristicas.md
+    - Personas: fase-1/personas.md
     - Escopo e Rigor: fase-1/escopo.md
     - ODS: fase-1/ods.md
   - Fase 2:
@@ -63,11 +67,15 @@ nav:
     - Gráfico GQM: fase-2/grafico-gqm.md
     - Questionário: fase-2/questionario.md
   - Artigo:
+    - Artigo (PDF): artigo/index.md
     - Introdução: artigo/introducao.md
     - Referencial Teórico: artigo/referencial-teorico.md
     - Metodologia: artigo/metodologia.md
+    - Considerações Finais: artigo/consideracoes.md
+    - Referências do Artigo: artigo/referencias.md
   - Gestão do Projeto (PSM): gestao-psm.md
+  - Dashboard de Contribuição: gestao-esforco.md
+  - Ata de Reuniões: ata-reunioes.md
   - Contribuição: contribuicao.md
   - Referências: referencias.md
   - Uso de IA: uso-de-ia.md
-

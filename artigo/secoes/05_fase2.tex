@@ -5,25 +5,45 @@ A Fase 2 seleciona as métricas e estabelece os níveis de pontuação e os crit
 
 \subsection{Rastreabilidade com a Fase 1}
 
-Todos os elementos do GQM derivam de decisões da Fase 1: as quatro características priorizadas originam os objetivos G1 a G4; as subcaracterísticas mantidas originam as questões; o ponto de vista e os perfis definem os recortes de análise (por perfil em M5, M6, M7 e M11; celular em Q12; questionário por semestre); as observações preliminares fundamentam as hipóteses (OP-01 em M11, OP-02 e OP-03 em M14, OP-04 em M4, OP-05 em M6 e M7, OP-06 em M8 e M20, OP-07 em M1 e M3); as decisões apoiadas definem a forma dos resultados (ranking das tarefas, G3 para a interface responsiva, M16 a M19 por página); e o rigor intermediário define dois avaliadores em M1, M2, M10 e M20 e cinco execuções em M16 a M19.
+Todos os elementos do GQM derivam de decisões da Fase 1: as três características avaliadas originam os objetivos G1 a G3; as subcaracterísticas mantidas originam as questões; o ponto de vista, os perfis e as personas definem os recortes de análise (por perfil em M5, M6, M7 e M11; celular em Q12; questionário por semestre); as observações preliminares fundamentam as hipóteses (OP-01 em M11, OP-02 e OP-03 em M14, OP-04 em M4, OP-05 em M6 e M7, OP-06 em M8 e M20, OP-07 em M1 e M3); as decisões apoiadas definem a forma dos resultados (ranking das tarefas e G3 para a interface responsiva); e o rigor intermediário define dois avaliadores em M1, M2, M10 e M20 e três execuções do especialista em M6. A Tabela~\ref{tab:sintese} resume a quantidade de elementos por objetivo.
+
+\begin{table}[!t]
+	\caption{Elementos GQM por objetivo}
+	\label{tab:sintese}
+	\centering
+	\footnotesize
+	\begin{tabularx}{\columnwidth}{L{0.45cm} Y C{1.25cm} C{1.25cm} C{1.45cm}}
+		\toprule
+		& \textbf{Característica (prioridade)} & \textbf{Questões} & \textbf{Hipóteses} & \textbf{Métricas} \\
+		\midrule
+		G1 & Adequação Funcional (2) & Q1--Q3 & H1--H3 & M1--M3 \\
+		G2 & Capacidade de Interação (1) & Q4--Q10 & H4--H10 & M4--M12, M20 \\
+		G3 & Flexibilidade (4) & Q11, Q12 & H11, H12 & M13--M15 \\
+		\midrule
+		& \textbf{Total} & \textbf{12} & \textbf{12} & \textbf{16} \\
+		\bottomrule
+	\end{tabularx}
+	\fonte{elaborado pela equipe.}
+\end{table}
 
 \subsection{Objetivos de medição}
 
-Cada objetivo segue o \textit{template} GQM (Tabela~\ref{tab:objetivos}). Em todos, o propósito é \textbf{avaliar, a fim de identificar pontos fracos}, do ponto de vista do \textbf{estudante de graduação da UnB}, com o recorte indicado. Os resultados serão apresentados na ordem de prioridade da Fase 1: G2, G1, G4 e G3.
+Cada objetivo segue o \textit{template} GQM (Tabela~\ref{tab:objetivos}). Os três têm o mesmo objeto de estudo, \textbf{o portal do discente de graduação do SIGAA/UnB}, o mesmo propósito, \textbf{avaliar}, e o ponto de vista do \textbf{estudante de graduação da UnB}, com o recorte indicado. Os resultados serão apresentados na ordem de prioridade da Fase 1: G2, G1 e G3.
 
 \begin{table*}[!t]
 	\caption{Objetivos de medição no template GQM}
 	\label{tab:objetivos}
 	\centering
 	\footnotesize
-	\begin{tabularx}{\textwidth}{L{2.1cm} Y Y Y Y}
+	\begin{tabularx}{\textwidth}{L{3.3cm} Y Y Y}
 		\toprule
-		& \textbf{G1 -- Adequação Funcional} & \textbf{G2 -- Capacidade de Interação} & \textbf{G3 -- Flexibilidade} & \textbf{G4 -- Eficiência de Desempenho} \\
+		& \textbf{G1 -- Adequação Funcional} & \textbf{G2 -- Capacidade de Interação} & \textbf{G3 -- Flexibilidade} \\
 		\midrule
-		\textbf{Analisar} & o portal do discente do SIGAA/UnB & a interface web do portal do discente & a interface web do portal do discente & as páginas das tarefas T1 a T6 \\
-		\textbf{Com respeito à} & completude, correção e pertinência funcional & reconhecimento de adequação, apreensibilidade, operabilidade, proteção contra erros, inclusividade, autodescritividade e satisfação & adaptabilidade a navegadores, telas e toque & comportamento temporal e utilização de recursos no cliente \\
-		\textbf{Recorte do ponto de vista} & estudante de graduação & calouros e pessoas com deficiência & quem acessa só pelo celular & quem acessa por rede móvel \\
-		\textbf{Contexto} & T1 a T6 e planejamento do fluxo; v4.15.10.115, 2026/2 & execução de T1 a T6 em computador & Chrome, Firefox, Edge e Safari; computador, tablet e celular & medição no cliente, em rede comum e móvel simulada \\
+		\textbf{Analisar} & \multicolumn{3}{l}{o portal do discente de graduação do SIGAA/UnB} \\
+		\textbf{Com o propósito de} & \multicolumn{3}{l}{avaliar} \\
+		\textbf{Com respeito à} & completude, correção e pertinência funcional & reconhecimento de adequação, apreensibilidade, operabilidade, proteção contra erros, inclusividade e autodescritividade, complementada pela satisfação & adaptabilidade a navegadores, telas e interação por toque \\
+		\textbf{Do ponto de vista do} & estudante de graduação & estudante, com atenção a calouros e a pessoas com deficiência & estudante, com atenção a quem acessa só pelo celular \\
+		\textbf{No contexto} & das tarefas T1 a T6 e do planejamento do fluxo; v4.15.10.115, 2026/2 & da execução de T1 a T6 em computador; v4.15.10.115, 2026/2 & do Chrome, Firefox, Edge e Safari, em computador, tablet e celular \\
 		\bottomrule
 	\end{tabularx}
 	\fonte{elaborado pela equipe.}
@@ -42,10 +62,12 @@ Cada questão caracteriza um atributo do foco de qualidade e recebe uma hipótes
 		\toprule
 		\textbf{ID} & \textbf{Questão} & \textbf{Atributo} & \textbf{Hipótese (critério de confirmação)} \\
 		\midrule
+		\multicolumn{4}{l}{\textit{G1 -- Adequação Funcional}} \\
 		Q1 & O SIGAA oferece as funções de que o estudante precisa? & Completude & H1: cobertura entre 75\% e 90\%, pior em T4 e no planejamento do fluxo (M1 Regular) \\
 		Q2 & As informações exibidas estão corretas? & Correção & H2: nenhuma divergência com as fontes oficiais (M2 = 100\%) \\
 		Q3 & As funções bastam para planejar o fluxo sem ferramentas externas? & Pertinência & H3: 25\% a 50\% dos respondentes usam ferramenta externa (M3 Regular) \\
 		\midrule
+		\multicolumn{4}{l}{\textit{G2 -- Capacidade de Interação}} \\
 		Q4 & O estudante identifica onde está a função? & Reconhecimento de adequação & H4: 50\% a 75\% de acerto na primeira escolha de menu (M4 Regular) \\
 		Q5 & Conclui as tarefas sem ajuda, inclusive no primeiro contato? & Apreensibilidade & H5: conclusão geral de 78\% a 90\% (M5 Bom), mas abaixo de 65\% entre calouros \\
 		Q6 & A navegação evita esforço desnecessário? & Operabilidade & H6: tempo relativo de 2,5 a 4,0 e desvio de caminho de 1,33 a 2,00 (M6 e M7 Regular) \\
@@ -54,11 +76,9 @@ Cada questão caracteriza um atributo do foco de qualidade e recebe uma hipótes
 		Q9 & Compreende as informações sem legenda? & Autodescritividade & H9: 50\% a 75\% de acertos, com o código de horário de T2 abaixo de 50\% (M11 Regular) \\
 		Q10 & O estudante fica satisfeito? & Satisfação (em uso) & H10: SUS médio entre 51 e 68 (M12 Regular) \\
 		\midrule
+		\multicolumn{4}{l}{\textit{G3 -- Flexibilidade}} \\
 		Q11 & As tarefas funcionam nos navegadores mais usados? & Adaptabilidade (software) & H11: 22 ou 23 das 24 combinações sem falha (M13 Bom) \\
 		Q12 & O SIGAA se adapta a celular, tablet e toque? & Adaptabilidade (hardware) & H12: até 5 de 12 verificações adaptadas (M14 Insatisfatório) e tempo no celular 1,5 a 2,0 vezes o do computador (M15 Regular) \\
-		\midrule
-		Q13 & As páginas carregam em tempo aceitável, em rede comum e móvel? & Comportamento temporal & H13: LCP até 2,5~s em rede comum (M16 Bom) e acima de 2,5~s em rede móvel (M17) \\
-		Q14 & O uso de recursos é compatível com rede móvel e plano limitado? & Utilização de recursos & H14: até 1~MB por página (M18 Bom), mas mais de 50 requisições (M19 Regular) \\
 		\bottomrule
 	\end{tabularx}
 	\fonte{elaborado pela equipe.}
@@ -66,9 +86,9 @@ Cada questão caracteriza um atributo do foco de qualidade e recebe uma hipótes
 
 \subsection{Métricas e níveis de pontuação}
 
-As métricas são simples (contagens, razões ou medianas), objetivas (dois avaliadores obtêm o mesmo valor) e válidas (medem o atributo perguntado) e seguem, sempre que possível, a ISO/IEC 25023 e a ISO/IEC 25022 \cite{iso25023,iso25022}. Antes da coleta, a equipe fixa o caminho mais curto de cada tarefa e as definições de passo (clique ou toque que muda a interface), ajuda (intervenção do moderador, de colega ou de fonte externa) e tarefa concluída (resultado correto, sem ajuda, em até 5 minutos). Toda medição registra data, horário, dispositivo, navegador e rede.
+As métricas são simples (contagens, razões ou medianas), objetivas (dois avaliadores obtêm o mesmo valor) e válidas (medem o atributo perguntado) e seguem, sempre que possível, a ISO/IEC 25023 e a ISO/IEC 25022 \cite{iso25023,iso25022}. Antes da coleta, a equipe fixa o caminho mais curto de cada tarefa e as definições de passo (clique ou toque que muda a interface), ajuda (intervenção do moderador, de colega ou de fonte externa) e tarefa concluída (resultado correto, sem ajuda, em até 5 minutos). Toda medição registra data, horário, dispositivo e navegador.
 
-Todas as métricas usam uma escala de quatro níveis: Excelente (3), Bom (2), Regular (1) e Insatisfatório (0); um valor no limite entre dois níveis pertence ao superior. Quando há referência externa, ela define os limites (Seção~\ref{sec:medidas-referencia}); nos demais casos, os limites foram definidos e justificados pela equipe. A Tabela~\ref{tab:metricas} resume as 20 métricas com seus níveis, fixados antes da coleta.
+Todas as métricas usam uma escala de quatro níveis: Excelente (3), Bom (2), Regular (1) e Insatisfatório (0); um valor no limite entre dois níveis pertence ao superior. Quando há referência externa, ela define os limites (Seção~\ref{sec:medidas-referencia}); nos demais casos, os limites foram definidos e justificados pela equipe. A Tabela~\ref{tab:metricas} resume as 16 métricas com seus níveis, fixados antes da coleta. A numeração original foi preservada para manter a rastreabilidade com o histórico da GitPage: M16 a M19 pertenciam ao objetivo retirado, e M20 foi acrescentada a Q7.
 
 \begin{table*}[!t]
 	\caption{Métricas da avaliação e níveis de pontuação}
@@ -83,6 +103,7 @@ Todas as métricas usam uma escala de quatro níveis: Excelente (3), Bom (2), Re
 		M1 & Cobertura funcional (Q1) & $1-A/B$; $A$ = funções ausentes & Lista de referência (questionário, ferramentas, tarefas); 2 avaliadores & 100\% & 90--$<$100\% & 75--$<$90\% & $<$75\% \\
 		M2 & Correção funcional (Q2) & $1-A/B$; $A$ = verificações divergentes & Projeto pedagógico, calendário e histórico; 2 avaliadores & 100\% & 97--$<$100\% & 90--$<$97\% & $<$90\% ou item crítico \\
 		M3 & Uso de ferramentas externas (Q3) & $A/B$; $A$ = usam ferramenta & Questionário (Seção~\ref{sec:questionario}) & $\leq$10\% & $>$10--25\% & $>$25--50\% & $>$50\% \\
+		\midrule
 		M4 & Primeira escolha de menu correta (Q4) & $A/B$; $B$ = tentativas & Gravações do teste com usuários & $\geq$90\% & 75--$<$90\% & 50--$<$75\% & $<$50\% \\
 		M5 & Conclusão sem ajuda (Q5) & $A/B$; $A$ = concluídas & Gravações e formulário; por perfil & $\geq$90\% & 78--$<$90\% & 60--$<$78\% & $<$60\% \\
 		M6 & Tempo relativo (Q6) & $T_p/T_e$ & Gravações; especialista, 3 execuções & $\leq$1,5 & $>$1,5--2,5 & $>$2,5--4,0 & $>$4,0 \\
@@ -93,16 +114,13 @@ Todas as métricas usam uma escala de quatro níveis: Excelente (3), Bom (2), Re
 		M10 & Critérios manuais de acessibilidade (Q8) & $A/24$ & Teclado, foco, zoom 200\%, leitor de tela; 2 avaliadores & 24 & 22 ou 23 & 18 a 21 & $\leq$17 \\
 		M11 & Interpretação sem legenda (Q9) & $A/B$; 3 perguntas & Perguntas em T2, T4 e T6 & $\geq$90\% & 75--$<$90\% & 50--$<$75\% & $<$50\% \\
 		M12 & Pontuação SUS (Q10) & SUS, 0 a 100 & Questionário após o teste \cite{brooke1996} & $\geq$80,3 & 68--$<$80,3 & 51--$<$68 & $<$51 \\
+		\midrule
 		M13 & Compatibilidade de navegadores (Q11) & $A/24$ (6 tarefas $\times$ 4) & Execução pela equipe, com captura & 24 & 22 ou 23 & 18 a 21 & $\leq$17 \\
 		M14 & Páginas adaptadas (Q12) & $A/12$ (6 páginas $\times$ 2) & 360 e 768~px: rolagem, fonte, sobreposição, toque, alvo de 24~px & 12 & 10 ou 11 & 6 a 9 & $\leq$5 \\
 		M15 & Tempo relativo no celular (Q12) & $T_{cel}/T_{comp}$ & Execução cronometrada & $\leq$1,2 & $>$1,2--1,5 & $>$1,5--2,0 & $>$2,0 \\
-		M16 & LCP em rede comum (Q13) & média das medianas (s) & Lighthouse \textit{Desktop}, 5 execuções \cite{lighthouse} & $\leq$1,0 & $>$1,0--2,5 & $>$2,5--4,0 & $>$4,0 \\
-		M17 & LCP em rede móvel (Q13) & média das medianas (s) & Lighthouse \textit{Mobile} & $\leq$1,0 & $>$1,0--2,5 & $>$2,5--4,0 & $>$4,0 \\
-		M18 & Peso por página (Q14) & média das medianas (MB) & Lighthouse (\textit{total byte weight}) & $\leq$0,5 & $>$0,5--1,0 & $>$1,0--2,0 & $>$2,0 \\
-		M19 & Requisições por página (Q14) & média das medianas & Lighthouse (\textit{network requests}) & $\leq$25 & $>$25--50 & $>$50--80 & $>$80 \\
 		\bottomrule
 	\end{tabularx}
-	\fonte{elaborado pela equipe, com base em \cite{iso25023,iso25022,sauro2011,sauro2016,wcag22,webvitals,nielsen1993}.}
+	\fonte{elaborado pela equipe, com base em \cite{iso25023,iso25022,sauro2011,sauro2016,wcag22}.}
 \end{table*}
 
 \subsection{Critérios de julgamento}
@@ -111,14 +129,16 @@ O julgamento vai do nível quantitativo ao conceitual. (1) A \textbf{questão} r
 
 Regras complementares: métricas sem dados ficam fora do cálculo; divergência em menção, IRA ou carga horária pendente leva M2 a Insatisfatório; recortes por perfil, página ou tarefa localizam problemas, mas não alteram o nível, e recortes com menos de três participantes são descritivos; cada tarefa recebe um índice (média dos níveis de M5, M6, M7 e M1 na tarefa) para ordenar as tarefas da pior para a melhor; e \textbf{não é calculada nota única} para o SIGAA, pois uma média geral esconderia os problemas a priorizar.
 
+Como exemplo, com valores fictícios: se M13 = 23 de 24 (Bom), M14 = 7 de 12 (Regular) e M15 = 1,8 (Regular), Q11 é Bom (2) e Q12 é Regular (1), o menor entre M14 e M15. A pontuação de G3 é $(2+1)/2 = 1{,}5$ e, como não há questão Insatisfatória mas a média é menor que 2,0, Flexibilidade \textit{atende parcialmente}; H11 seria confirmada e H12, refutada.
+
 \subsection{Hierarquia GQM}
 
-A Fig.~\ref{fig:gqm} apresenta a hierarquia completa nos três níveis do GQM. Toda métrica está ligada a uma questão, e toda questão, a um objetivo e a uma hipótese.
+A Fig.~\ref{fig:gqm} apresenta a hierarquia completa nos três níveis do GQM. Toda métrica está ligada a uma única questão, e toda questão, a um objetivo e a uma hipótese; não há métrica sem questão nem questão sem métrica.
 
 \begin{figure*}[!t]
 	\centering
 	\begin{tikzpicture}[
-		y=-0.5cm,
+		y=-0.52cm,
 		g/.style={draw=blue!60!black, fill=blue!12, rounded corners, align=center, text width=3.0cm, font=\scriptsize, inner sep=2pt},
 		q/.style={draw=teal!60!black, fill=teal!8, rounded corners, align=left, text width=5.6cm, font=\scriptsize, inner sep=1.5pt},
 		m/.style={draw=orange!70!black, fill=orange!8, rounded corners, align=left, text width=5.8cm, font=\scriptsize, inner sep=1.5pt},
@@ -132,26 +152,23 @@ A Fig.~\ref{fig:gqm} apresenta a hierarquia completa nos três níveis do GQM. T
 			M7/Desvio de caminho/6, M8/Recuperação de erros/7, M20/Cenários de erro tratados/8,
 			M9/Erros automáticos de acessibilidade/9, M10/Critérios manuais de acessibilidade/10,
 			M11/Interpretação sem legenda/11, M12/Pontuação SUS/12, M13/Compatibilidade de navegadores/13,
-			M14/Páginas adaptadas a telas pequenas e toque/14, M15/Tempo relativo no celular/15, M16/LCP em rede comum/16,
-			M17/LCP em rede móvel simulada/17, M18/Peso transferido por página/18, M19/Requisições por página/19}
+			M14/Páginas adaptadas a telas pequenas e toque/14, M15/Tempo relativo no celular/15}
 			\node[m] (\id) at (12.4,\y) {\textbf{\id} -- \txt};
 		\foreach \id/\txt/\y in {
 			Q1/Completude funcional/0, Q2/Correção funcional/1, Q3/Pertinência funcional/2,
 			Q4/Reconhecimento de adequação/3, Q5/Apreensibilidade/4, Q6/Operabilidade/5.5,
 			Q7/Proteção contra erros do usuário/7.5, Q8/Inclusividade/9.5, Q9/Autodescritividade/11,
 			Q10/Satisfação (qualidade em uso)/12, Q11/Adaptabilidade a navegadores/13,
-			Q12/Adaptabilidade a telas e toque/14.5, Q13/Comportamento temporal/16.5,
-			Q14/Utilização de recursos/18.5}
+			Q12/Adaptabilidade a telas e toque/14.5}
 			\node[q] (\id) at (5.6,\y) {\textbf{\id} -- \txt};
 		\node[g] (G1) at (0,1)     {\textbf{G1} Adequação Funcional};
 		\node[g] (G2) at (0,7.5)   {\textbf{G2} Capacidade de Interação (Usabilidade)};
 		\node[g] (G3) at (0,13.75) {\textbf{G3} Flexibilidade (Portabilidade)};
-		\node[g] (G4) at (0,17.5)  {\textbf{G4} Eficiência de Desempenho};
 		\foreach \gg/\qq in {G1/Q1, G1/Q2, G1/Q3, G2/Q4, G2/Q5, G2/Q6, G2/Q7, G2/Q8, G2/Q9, G2/Q10,
-			G3/Q11, G3/Q12, G4/Q13, G4/Q14}
+			G3/Q11, G3/Q12}
 			\draw[lig] (\gg.east) -- (\qq.west);
 		\foreach \qq/\mm in {Q1/M1, Q2/M2, Q3/M3, Q4/M4, Q5/M5, Q6/M6, Q6/M7, Q7/M8, Q7/M20, Q8/M9,
-			Q8/M10, Q9/M11, Q10/M12, Q11/M13, Q12/M14, Q12/M15, Q13/M16, Q13/M17, Q14/M18, Q14/M19}
+			Q8/M10, Q9/M11, Q10/M12, Q11/M13, Q12/M14, Q12/M15}
 			\draw[lig] (\qq.east) -- (\mm.west);
 	\end{tikzpicture}
 	\caption{Hierarquia GQM da avaliação. Fonte: elaborado pela equipe.}
@@ -160,7 +177,7 @@ A Fig.~\ref{fig:gqm} apresenta a hierarquia completa nos três níveis do GQM. T
 
 \subsection{Relações entre as características}
 
-O roteiro exige discutir, ao final, as relações entre as características \cite{ramos2026roteiro}. As relações esperadas na Fase 1 viraram quatro hipóteses, sem nível de pontuação, que serão declaradas estabelecidas ou não na Fase 4 (Tabela~\ref{tab:relacoes}).
+O roteiro exige discutir, ao final, as relações entre as características \cite{ramos2026roteiro}. Das relações esperadas na Fase 1, duas envolvem apenas as características avaliadas e viraram hipóteses, sem nível de pontuação, que serão declaradas estabelecidas ou não na Fase 4 (Tabela~\ref{tab:relacoes}). As relações que partiam da Eficiência de Desempenho saíram junto com o objetivo correspondente.
 
 \begin{table}[!t]
 	\caption{Hipóteses de relação entre as características}
@@ -171,10 +188,8 @@ O roteiro exige discutir, ao final, as relações entre as características \cit
 		\toprule
 		\textbf{ID} & \textbf{Relação} & \textbf{Hipótese e verificação} \\
 		\midrule
-		HR1 & Flexibilidade $\rightarrow$ Cap. Interação & O esforço extra no celular se concentra nas páginas não adaptadas: M15 por tarefa cruzado com M14 \\
-		HR2 & Desempenho $\rightarrow$ Cap. Interação & Tarefas com maior LCP têm maior tempo relativo: ordenações de M16 e M6 (Spearman descritivo) \\
-		HR3 & Cap. Interação $\rightarrow$ Adequação Funcional & Funções existentes são declaradas inexistentes: métrica auxiliar MA1 \\
-		HR4 & Desempenho $\rightarrow$ Flexibilidade & O LCP em rede móvel é ao menos o dobro do LCP em rede comum: razão M17/M16 \\
+		HR1 & Flexibilidade $\rightarrow$ Cap. Interação & O esforço extra no celular se concentra nas páginas não adaptadas: M15 por tarefa cruzado com M14; com ao menos três participantes nos dois dispositivos, M5 e M6 ficam ao menos um nível abaixo no celular \\
+		HR2 & Cap. Interação $\rightarrow$ Adequação Funcional & Funções existentes, mas difíceis de localizar, são declaradas inexistentes: métrica auxiliar MA1, registrada nas sessões de teste; não estabelecida se MA1 = 0 \\
 		\bottomrule
 	\end{tabularx}
 	\fonte{elaborado pela equipe.}
@@ -183,4 +198,4 @@ O roteiro exige discutir, ao final, as relações entre as características \cit
 \subsection{Questionário com estudantes de diferentes semestres}
 \label{sec:questionario}
 
-O teste com usuários mede o comportamento em profundidade, mas com poucos participantes. Para ampliar a amostra e comparar estudantes em diferentes momentos do curso, a especificação inclui um questionário online anônimo, de 5 a 8 minutos, com seis blocos: perfil (semestre, campus, previsão de formatura), acesso (dispositivo, rede e problemas no celular), facilidade percebida em T1 a T6 (escala SEQ de 1 a 5 \cite{sauro2016}), compreensão sem legenda (código de horário ``35T23'' e sigla IRA), satisfação (SUS \cite{brooke1996}) e ferramentas externas. Ele é a fonte de M3 e de parte da lista de referência de M1 e produz indicadores auxiliares de percepção (IQ1 a IQ6) que, como a MA1, não recebem nível nem alteram o julgamento. Esses indicadores verificam a hipótese de perfil \textbf{HP1}: estudantes de 1º e 2º semestres relatam menor facilidade e acertam menos o código de horário do que estudantes a partir do 5º semestre. A comparação usa medianas e proporções e, com ao menos dez respondentes por grupo, os testes de Mann-Whitney e exato de Fisher, com significância de 5\%; caso contrário, é descritiva. O instrumento completo está na GitPage.
+O teste com usuários mede o comportamento em profundidade, mas com poucos participantes. Para ampliar a amostra e comparar estudantes em diferentes momentos do curso, a especificação inclui um questionário online anônimo, de 5 a 8 minutos, com 29 itens fechados e 2 abertos opcionais em seis blocos: perfil (semestre, campus, previsão de formatura), acesso (dispositivo, disponibilidade de computador e problemas no celular), facilidade percebida em T1 a T6 (escala SEQ de 1 a 5 \cite{sauro2016}), compreensão sem legenda (código de horário ``35T23'' e sigla IRA), satisfação (SUS \cite{brooke1996}) e ferramentas externas. Ele é a fonte de M3 e de parte da lista de referência de M1 e produz indicadores auxiliares de percepção (IQ1 a IQ5) que, como a MA1, não recebem nível nem alteram o julgamento. Esses indicadores verificam a hipótese de perfil \textbf{HP1}: estudantes de 1º e 2º semestres relatam menor facilidade e acertam menos o código de horário do que estudantes a partir do 5º semestre. A comparação usa medianas e proporções e, com ao menos dez respondentes por grupo, os testes de Mann-Whitney e exato de Fisher, com significância de 5\%; caso contrário, é descritiva. O instrumento completo está na GitPage.
