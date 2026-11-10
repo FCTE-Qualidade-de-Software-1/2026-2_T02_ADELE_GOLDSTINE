@@ -37,6 +37,4 @@ O resultado soma as horas por integrante e categoria e calcula o percentual de c
 
 ## Situação atual
 
-Os registros existentes em `esforco.csv` são da Entrega 1 e incluem horas estimadas ou declaradas, identificadas pela coluna `origem`. Ainda não há registros da Entrega 2; lance apenas horas efetivamente trabalhadas e acompanhadas de evidência.
-
-O código fornecido para a GitPage espera outra planilha (`dados/gestao/horas.csv`) e outros nomes de coluna. Este projeto mantém `esforco.csv` como fonte única no formato já usado pelo cálculo de contribuição.
+Os registros existentes em `esforco.csv` são da Entrega 1 e incluem horas estimadas ou declaradas, identificadas pela coluna `origem`. Lance apenas horas efetivamente trabalhadas e acompanhadas de evidência.

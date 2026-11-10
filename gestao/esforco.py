@@ -118,14 +118,16 @@ def dashboard_markdown(repo_url=""):
     """Monta o painel HTML a partir do esquema existente de gestao/esforco.csv."""
     entregas = defaultdict(list)
     with PLANILHA.open(encoding="utf-8", newline="") as f:
-        for linha in csv.DictReader(f):
+        # Mesmas validações do comando calcular: uma linha inválida interrompe o build do
+        # site em vez de ser descartada, para o painel nunca divergir da tabela de contribuição.
+        for numero, linha in enumerate(csv.DictReader(f), start=2):
             membro = (linha.get("membro") or "").strip()
             if membro not in MEMBROS:
-                continue
+                raise ValueError(f"esforco.csv, linha {numero}: membro não cadastrado em MEMBROS: {membro!r}")
             try:
-                horas = float((linha.get("horas") or "0").strip().replace(",", "."))
+                horas = float((linha.get("horas") or "").strip().replace(",", "."))
             except ValueError:
-                continue
+                raise ValueError(f"esforco.csv, linha {numero}: horas inválidas: {linha.get('horas')!r}") from None
             entregas[(linha.get("entrega") or "Sem entrega").strip()].append(
                 {**linha, "membro": membro, "horas_num": horas}
             )
@@ -248,7 +250,7 @@ def calcular(args):
         print("\n### Registros atribuídos por integrante")
         print("\n| Integrante | Data | Categoria | Atividade | Evidência | Horas | Origem |")
         print("|---|---|---|---|---|---:|---|")
-        for linha in sorted(registros, key=lambda l: (MEMBROS.index(l["membro"]), l["data"])):
+        for linha in sorted(registros, key=lambda l: (MEMBROS.index(l["membro"]), datetime.strptime(l["data"], "%d/%m/%Y"))):
             texto = lambda valor: str(valor or "").replace("|", "\\|").replace("\n", " ").strip()
             print(f"| {texto(linha['membro'])} | {texto(linha['data'])} | {texto(linha['categoria'])} | "
                   f"{texto(linha['descricao'])} | {texto(linha['evidencia'])} | {br(linha['horas_num'])} | "
