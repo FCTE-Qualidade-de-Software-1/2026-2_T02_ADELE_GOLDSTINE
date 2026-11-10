@@ -31,6 +31,9 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+hooks:
+  - gestao/esforco.py
+
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -71,6 +74,7 @@ nav:
     - Considerações Finais: artigo/consideracoes.md
     - Referências do Artigo: artigo/referencias.md
   - Gestão do Projeto (PSM): gestao-psm.md
+  - Dashboard de Contribuição: gestao-esforco.md
   - Ata de Reuniões: ata-reunioes.md
   - Contribuição: contribuicao.md
   - Referências: referencias.md

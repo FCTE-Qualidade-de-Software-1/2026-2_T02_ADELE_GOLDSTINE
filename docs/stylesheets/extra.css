@@ -7,3 +7,64 @@
   --md-mermaid-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
+/* Dashboard de contribuição: cards, barras e tabelas responsivas. */
+.esforco-entrega {
+  margin: 1.5rem 0 2.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .6rem;
+  background: var(--md-default-bg-color);
+}
+.esforco-kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: .75rem;
+  margin: 1rem 0 1.5rem;
+}
+.esforco-kpi {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  padding: .9rem 1rem;
+  border-radius: .45rem;
+  background: var(--md-code-bg-color);
+}
+.esforco-kpi span { font-size: .75rem; opacity: .75; }
+.esforco-kpi strong { font-size: 1.2rem; }
+.esforco-linha-grafico {
+  display: grid;
+  grid-template-columns: minmax(150px, 1fr) minmax(90px, 2fr) minmax(110px, .8fr);
+  align-items: center;
+  gap: .75rem;
+  margin: .55rem 0;
+}
+.esforco-nome, .esforco-valor { font-size: .78rem; }
+.esforco-valor { text-align: right; white-space: nowrap; }
+.esforco-trilho {
+  height: .7rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: var(--md-default-fg-color--lightest);
+}
+.esforco-barra {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--md-primary-fg-color);
+}
+.esforco-barra.fora-limite { background: var(--md-accent-fg-color); }
+.esforco-tabela-wrap { overflow-x: auto; }
+.esforco-tabela { width: 100%; font-size: .8rem; }
+.esforco-tabela td, .esforco-tabela th { vertical-align: top; }
+.esforco-tabela ul { margin: 0; padding-left: 1rem; }
+.esforco-total { font-weight: 700; border-top: 2px solid var(--md-default-fg-color--lightest); }
+.esforco-origens { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; padding-left: 1rem; }
+.esforco-fonte { margin-top: 1rem; font-size: .75rem; opacity: .8; }
+.esforco-vazio { padding: 1rem; border-left: .2rem solid var(--md-primary-fg-color); }
+@media (max-width: 600px) {
+  .esforco-entrega { padding: .8rem; }
+  .esforco-linha-grafico { grid-template-columns: 1fr auto; gap: .35rem .6rem; }
+  .esforco-trilho { grid-column: 1 / -1; grid-row: 2; }
+  .esforco-valor { grid-column: 2; grid-row: 1; }
+}
+
