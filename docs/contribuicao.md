@@ -67,12 +67,15 @@ Ficam de fora o modelo IEEE copiado, PDFs, imagens, documentos binários e a pr�
 | `redacao` | Textos fora de `artigo/` (páginas da GitPage, READMEs) | 1.100 palavras/h | Mesma taxa da Entrega 1 (Tabela 4) |
 | `consolidacao` | Textos em `artigo/` | 2.200 palavras/h | Mesma taxa da Entrega 1 (Tabela 4) |
 | `infraestrutura` | Código e configuração (`.py`, `.yml`, `.css`, `.js`) | 100 linhas/h | Scripts e estilos escritos com apoio de IA e revisados pelo autor. Taxa inicial, a ser calibrada pela equipe como as da Tabela 4 |
+| `revisao` | Revisões e comentários de revisão dos PRs (API do GitHub) | 0,25 h por revisor em cada PR + 1.100 palavras/h dos comentários | Tempo fixo das revisões da Entrega 1 (Tabela 5), mais o texto escrito na revisão |
 
-**Passo 3. Trabalho fora do repositório.** Reuniões, pesquisa e estudo não geram *commit*. Eles continuam registrados em `gestao/esforco.csv`, uma linha por sessão, com a ata, a mensagem ou o rascunho como evidência. O trabalho que já está no Git não entra na planilha, para não ser contado duas vezes. As instruções de preenchimento estão em [`gestao/README.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/gestao/README.md).
+**Passo 3. Revisões de PR.** Revisar não adiciona texto ao repositório, então as revisões são lidas da API do GitHub. Cada membro que revisa um PR recebe **0,25 h fixas**, o mesmo valor atribuído às revisões da Entrega 1 (Tabela 5), mais as **palavras dos seus comentários de revisão** pela taxa de redação. Uma aprovação sem comentário vale 0,25 h, e uma revisão detalhada vale mais. O autor do PR não recebe horas de revisão pelas respostas no próprio PR, porque o trabalho dele já está nos *commits*.
 
-**Passo 4. Validação no PR.** A cada PR, o *workflow* `esforco-pr.yml` comenta as horas estimadas de cada autor e a participação de cada membro na entrega se o PR for integrado, com alerta fora da faixa de 10% a 40% do I3. O revisor confere a estimativa junto com o conteúdo. Mais de 4 h de um membro num único PR exige justificativa na revisão, como o teto de plausibilidade da versão manual.
+**Passo 4. Trabalho fora do repositório.** Reuniões, pesquisa e estudo não geram *commit*. Eles continuam registrados em `gestao/esforco.csv`, uma linha por sessão, com a ata, a mensagem ou o rascunho como evidência. O trabalho que já está no Git não entra na planilha, para não ser contado duas vezes. As instruções de preenchimento estão em [`gestao/README.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/gestao/README.md).
 
-**Passo 5. Publicação.** A cada publicação do site, o [dashboard de contribuição](gestao-esforco.md) é recalculado com a planilha e o histórico do Git. Uma linha inválida na planilha ou um *commit* de autor desconhecido interrompem a publicação, para que o painel nunca mostre um total errado. No fechamento da entrega, o responsável pela gestão cria a tag da *release*, roda `python gestao/esforco.py calcular --entrega E2`, copia a tabela para esta página e para o apêndice do artigo, e registra o I3 na [Gestão do Projeto](gestao-psm.md).
+**Passo 5. Validação no PR.** A cada PR e a cada revisão enviada, o *workflow* `esforco-pr.yml` comenta as horas estimadas de cada autor e revisor e a participação de cada membro na entrega se o PR for integrado, com alerta fora da faixa de 10% a 40% do I3. O revisor confere a estimativa junto com o conteúdo. Mais de 4 h de um membro num único PR exige justificativa na revisão, como o teto de plausibilidade da versão manual.
+
+**Passo 6. Publicação.** A cada publicação do site, o [dashboard de contribuição](gestao-esforco.md) é recalculado com a planilha, o histórico do Git e as revisões dos PRs. Uma linha inválida na planilha, um *commit* de autor desconhecido ou uma falha na API do GitHub interrompem a publicação, para que o painel nunca mostre um total errado. No fechamento da entrega, o responsável pela gestão cria a tag da *release*, roda `python gestao/esforco.py calcular --entrega E2`, copia a tabela para esta página e para o apêndice do artigo, e registra o I3 na [Gestão do Projeto](gestao-psm.md).
 
 ### 3.3 Reconstrução das horas da Entrega 1
 
@@ -120,9 +123,9 @@ Entre os membros com trabalho medido no Git, mudar as taxas mantendo a proporç�
 
 - **Uso de IA.** Vários membros usaram IA na redação (ver [Uso de IA](uso-de-ia.md)), o que aumenta as palavras por hora. As taxas já consideram esse apoio, e como são as mesmas para todos, a proporção entre os membros se mantém.
 - **Trabalho fora do Git.** Reuniões, conversas no grupo e pesquisa sem *commit* não aparecem na contagem de palavras. Na Entrega 1, esse trabalho foi incluído por declaração da equipe (casos de Davi e Daniel); a partir da Entrega 2, ele entra pela planilha, com evidência (mensagens, ata, rascunho).
-- **Volume não é qualidade.** Palavras e linhas medem esforço de produção, não o valor do conteúdo. Por isso a estimativa de cada PR é validada pelo revisor (seção 3.2, passo 4).
+- **Volume não é qualidade.** Palavras e linhas medem esforço de produção, não o valor do conteúdo. Por isso a estimativa de cada PR é validada pelo revisor (seção 3.2, passo 5).
 - **Autoria do *commit*.** A estimativa automática credita o autor de cada *commit*. Trabalho feito em par, ou enviado por outro membro, precisa ser ajustado na planilha com evidência.
-- **Revisão de PRs.** Revisar um PR não adiciona texto e por isso não aparece na estimativa automática. O tempo de revisão entra na planilha, com o PR como evidência.
+- **Revisão de PRs.** O tempo fixo de 0,25 h não distingue uma revisão rápida de uma revisão longa sem comentários. Revisões feitas fora do GitHub (por exemplo, numa chamada) entram na planilha, com o PR como evidência.
 
 ## Histórico de Versão
 
@@ -134,4 +137,4 @@ Entre os membros com trabalho medido no Git, mudar as taxas mantendo a proporç�
 | 1.3 | 24/10/2026 | Taxas calibradas para no máximo 10 h por membro e inclusão do trabalho de Davi fora do repositório | Caio Borges |
 | 1.4 | 24/10/2026 | Horas declaradas pela equipe para Daniel e Davi e ajuste das horas de Caio | Caio Borges |
 | 1.5 | 03/11/2026 | Matrícula de Caio, descrição das horas declaradas de Davi e Caio e correção da análise de sensibilidade | Caio Borges |
-| 1.6 | 10/11/2026 | Coleta automática do esforço a partir da Entrega 2 (palavras e linhas adicionadas por PR, calculadas pelo GitHub Actions) | Caio Borges |
+| 1.6 | 10/11/2026 | Coleta automática do esforço a partir da Entrega 2 (palavras e linhas adicionadas por PR e revisões dos PRs, calculadas pelo GitHub Actions) | Caio Borges |

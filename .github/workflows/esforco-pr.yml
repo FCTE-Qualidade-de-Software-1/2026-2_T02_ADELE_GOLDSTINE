@@ -1,11 +1,14 @@
 name: Esforço do PR (I3)
 
-# Comenta em cada PR as horas estimadas dos commits e a participação de cada membro
-# na entrega se o PR for integrado. O comentário é atualizado a cada novo push.
+# Comenta em cada PR as horas estimadas dos commits e das revisões e a participação de cada membro
+# na entrega se o PR for integrado. O comentário é atualizado a cada push e a cada revisão.
 
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+  # Recalcula quando alguém envia uma revisão
+  pull_request_review:
+    types: [submitted, edited, dismissed]
 
 permissions:
   contents: read
@@ -31,6 +34,8 @@ jobs:
           python-version: "3.x"
 
       - name: Calcula o esforço do PR
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: >
           python gestao/esforco.py pr
           --base "${{ github.event.pull_request.base.sha }}"

@@ -18,11 +18,14 @@ A metodologia está descrita em docs/contribuicao.md.
 import argparse
 import csv
 import html
+import json
+import os
 import re
 import subprocess
 import sys
 from collections import defaultdict
-from datetime import date, datetime
+from datetime import date, datetime, timedelta, timezone
+from functools import lru_cache
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -74,6 +77,11 @@ TAXAS = {
     "consolidacao": (2200, "palavras"),  # artigo em LaTeX: reescrita de conteúdo já produzido nas páginas
     "infraestrutura": (100, "linhas"),  # scripts, workflows, estilos e configuração do site, com apoio de IA
 }
+
+# Revisão de PR: tempo fixo por revisor em cada PR (o mesmo da Entrega 1, Tabela 5 da metodologia)
+# mais as palavras dos comentários de revisão, pela taxa de redação
+HORAS_POR_REVISAO = 0.25
+TAXA_COMENTARIOS = TAXAS["redacao"][0]
 
 TEXTO = (".md", ".tex", ".bib")
 CODIGO = (".py", ".yml", ".yaml", ".css", ".js", ".sh", ".html")
@@ -230,18 +238,109 @@ def medir(faixa, evidencia, data, entrega):
 
 
 def integracoes(inicio, fim):
-    """Cada entrada na main entre `inicio` e `fim`: (faixa de commits, evidência, data)."""
+    """Cada entrada na main entre `inicio` e `fim`: (faixa de commits, evidência, data, PRs).
+
+    PRs lista o PR integrado e os PRs integrados antes no mesmo ramo (por exemplo, o #8,
+    integrado no ramo do #6), para buscar as revisões de todos.
+    """
     saida = git("log", "--first-parent", "--date=format:%d/%m/%Y",
                 "--format=%H %P%x09%cd%x09%s", f"{inicio}..{fim}")
     for linha in saida.splitlines():
         hashes, data, assunto = linha.split("\t", 2)
         commit, *pais = hashes.split()
         if len(pais) > 1:  # merge de PR: os commits do ramo integrado
+            faixa = [f"{pais[0]}..{pais[1]}"]
             pr = re.search(r"Merge pull request #(\d+)", assunto)
-            yield [f"{pais[0]}..{pais[1]}"], f"PR #{pr.group(1)}" if pr else f"merge {commit[:7]}", data
+            internos = re.findall(r"Merge pull request #(\d+)", git("log", "--merges", "--format=%s", *faixa))
+            prs = ([pr.group(1)] if pr else []) + internos
+            yield faixa, f"PR #{pr.group(1)}" if pr else f"merge {commit[:7]}", data, prs
         else:  # squash de PR ou commit direto na main
             pr = re.search(r"\(#(\d+)\)$", assunto)
-            yield ["-1", commit], f"PR #{pr.group(1)}" if pr else f"commit {commit[:7]}", data
+            yield ["-1", commit], f"PR #{pr.group(1)}" if pr else f"commit {commit[:7]}", data, [pr.group(1)] if pr else []
+
+
+# ---------------------------------------------------------------------------
+# Revisões de PR (API do GitHub, via gh)
+# ---------------------------------------------------------------------------
+
+FUSO = timezone(timedelta(hours=-3))
+AVISOS = set()
+
+
+class RevisoesIndisponiveis(Exception):
+    pass
+
+
+def repositorio():
+    if os.environ.get("GITHUB_REPOSITORY"):
+        return os.environ["GITHUB_REPOSITORY"]
+    url = git("remote", "get-url", "origin").strip()
+    return re.search(r"github\.com[:/](.+?)(?:\.git)?$", url).group(1)
+
+
+def api(caminho, jq=".[] | tojson"):
+    """Resultado de um endpoint da API do GitHub (por padrão, os itens de uma lista, um JSON por linha)."""
+    try:
+        saida = subprocess.run(
+            ["gh", "api", "--paginate", f"repos/{repositorio()}/{caminho}", "--jq", jq],
+            cwd=RAIZ, capture_output=True, text=True, check=True,
+        ).stdout
+    except FileNotFoundError:
+        raise RevisoesIndisponiveis("GitHub CLI (gh) não instalado") from None
+    except subprocess.CalledProcessError as erro:
+        raise RevisoesIndisponiveis(f"falha na API do GitHub ({caminho}): {erro.stderr.strip()}") from None
+    if jq != ".[] | tojson":
+        return saida.strip()
+    return [json.loads(linha) for linha in saida.splitlines() if linha]
+
+
+@lru_cache(maxsize=None)
+def dados_do_pr(numero):
+    """Autor do PR e manifestações de revisão: (login, palavras, data/hora) de cada uma."""
+    autor = api(f"pulls/{numero}", jq=".user.login")
+    manifestacoes = []
+    for r in api(f"pulls/{numero}/reviews?per_page=100"):
+        if r.get("submitted_at"):  # revisões pendentes ainda não foram enviadas
+            manifestacoes.append((r["user"]["login"], contar_palavras(r.get("body") or ""), r["submitted_at"]))
+    for c in api(f"pulls/{numero}/comments?per_page=100"):
+        manifestacoes.append((c["user"]["login"], contar_palavras(c.get("body") or ""), c["created_at"]))
+    return autor, tuple(manifestacoes)
+
+
+def revisoes(numero, entrega):
+    """Registros de revisão do PR: 0,25 h por revisor + palavras dos comentários."""
+    autor, manifestacoes = dados_do_pr(numero)
+    por_revisor = {}
+    for login, palavras, quando in manifestacoes:
+        if login == autor or login not in LOGINS:  # o autor responde à revisão; bots e a professora não são membros
+            continue
+        data = datetime.fromisoformat(quando.replace("Z", "+00:00")).astimezone(FUSO)
+        anterior = por_revisor.get(login, (0, data))
+        por_revisor[login] = (anterior[0] + palavras, min(anterior[1], data))
+    registros = []
+    fixas = f"{HORAS_POR_REVISAO:.2f}".replace(".", ",")
+    for login, (palavras, data) in sorted(por_revisor.items()):
+        horas = round(HORAS_POR_REVISAO + palavras / TAXA_COMENTARIOS, 2)
+        registros.append({
+            "entrega": entrega, "data": data.strftime("%d/%m/%Y"), "membro": LOGINS[login],
+            "horas": f"{horas:.2f}", "horas_num": horas, "categoria": "revisao",
+            "descricao": f"Revisão do PR #{numero}: {fixas} h fixas + "
+                         f"{palavras} palavras de comentários / {TAXA_COMENTARIOS} por hora",
+            "evidencia": f"PR #{numero}", "origem": "automatica",
+        })
+    return registros
+
+
+def revisoes_dos_prs(numeros, entrega):
+    """Revisões de vários PRs. No GitHub Actions a falha da API interrompe o cálculo;
+    fora dele, o cálculo segue sem as revisões e avisa."""
+    try:
+        return [r for n in numeros for r in revisoes(n, entrega)]
+    except RevisoesIndisponiveis as erro:
+        if os.environ.get("GITHUB_ACTIONS") == "true":
+            raise
+        AVISOS.add(f"Revisões de PR não incluídas: {erro}. Rode 'gh auth login' para incluí-las.")
+        return []
 
 
 def automaticas(entrega, ate="HEAD"):
@@ -252,8 +351,9 @@ def automaticas(entrega, ate="HEAD"):
         raise RuntimeError(f"Tag {tag(anterior)} não encontrada: rode git fetch --tags. Ela marca o início da {entrega}.")
     fim = tag(entrega) if existe(tag(entrega)) else ate
     registros = []
-    for faixa, evidencia, data in integracoes(tag(anterior), fim):
+    for faixa, evidencia, data, prs in integracoes(tag(anterior), fim):
         registros += medir(faixa, evidencia, data, entrega)
+        registros += revisoes_dos_prs(prs, entrega)
     return registros
 
 
@@ -341,6 +441,8 @@ def calcular(args):
         alerta = " ⚠" if fora_da_faixa(pct[m]) else ""
         print(f"| {m} | " + " | ".join(colunas) + f" | {br(horas[m])} | {br(pct[m])}{alerta} |")
     print("| **Total** | " + " | ".join("" for _ in cats) + f" | **{br(total)}** | **100,0** |")
+    for aviso in sorted(AVISOS):
+        print(f"⚠ {aviso}", file=sys.stderr)
 
     if args.detalhado:
         def texto(valor):
@@ -365,6 +467,8 @@ def comentario_pr(args):
     entrega = entrega_aberta()
     evidencia = f"PR #{args.numero}" if args.numero else "este PR"
     do_pr = medir([f"{args.base}..{args.head}"], evidencia, date.today().strftime("%d/%m/%Y"), entrega)
+    if args.numero:
+        do_pr += revisoes_dos_prs([args.numero], entrega)
     antes = todos_registros(entrega, ate=args.base)
     horas_pr, _ = somar(do_pr)
     horas_antes, _ = somar(antes)
@@ -372,12 +476,12 @@ def comentario_pr(args):
 
     linhas = [MARCADOR_COMENTARIO, f"### Esforço estimado deste PR (I3, {entrega})", ""]
     if not do_pr:
-        linhas.append("Este PR não altera textos nem código medidos, então não soma horas automáticas.")
+        linhas.append("Este PR não altera textos nem código medidos e ainda não tem revisões, então não soma horas automáticas.")
         print("\n".join(linhas))
         return
 
     linhas += [
-        f"Estimativa automática a partir das palavras e linhas adicionadas em cada commit, pela "
+        f"Estimativa automática a partir das palavras e linhas adicionadas em cada commit e das revisões do PR, pela "
         f"[metodologia de contribuição]({URL_METODOLOGIA}). Quem revisa o PR valida esta estimativa.",
         "", "| Membro | Horas neste PR |", "| ------ | :-: |",
     ]
@@ -423,6 +527,9 @@ def dashboard_markdown(repo_url=""):
         return '<p class="esforco-vazio">Ainda não há contribuições registradas.</p>'
 
     blocos = ['<div class="esforco-dashboard">']
+    for aviso in sorted(AVISOS):
+        print(f"esforco.py: {aviso}", file=sys.stderr)
+        blocos.append(f'<p class="esforco-vazio">⚠ {_html(aviso)}</p>')
     for entrega in sorted(entregas):
         registros = entregas[entrega]
         totais, categorias = somar(registros)
@@ -482,7 +589,7 @@ def dashboard_markdown(repo_url=""):
         planilha = "<code>gestao/esforco.csv</code>"
         if repo_url:
             planilha = f'<a href="{_html(repo_url.rstrip("/") + "/blob/main/gestao/esforco.csv")}">gestao/esforco.csv</a>'
-        blocos.append(f'<p class="esforco-fonte">Fonte: histórico do Git (origem automatica) e {planilha}. '
+        blocos.append(f'<p class="esforco-fonte">Fonte: histórico do Git e revisões dos PRs (origem automatica) e {planilha}. '
                       'Atualização calculada durante a publicação do site.</p>')
         blocos.append('</section>')
     blocos.append('</div>')
