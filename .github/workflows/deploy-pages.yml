@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: read  # revisões dos PRs para o dashboard de esforço
   pages: write
   id-token: write
 
@@ -20,6 +21,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Histórico completo e tags: o dashboard de esforço é calculado a partir do Git
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -33,6 +37,8 @@ jobs:
         run: cp artigo/artigo.pdf docs/artigo/artigo.pdf
 
       - name: Build MkDocs
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: mkdocs build
 
       - name: Upload artifact

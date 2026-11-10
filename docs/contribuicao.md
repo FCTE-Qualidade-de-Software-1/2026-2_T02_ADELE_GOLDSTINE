@@ -45,24 +45,37 @@ A unidade é a **hora-pessoa**: uma hora de trabalho de um membro em uma ativida
 
 Só entram no cálculo as horas validadas (seção 3.2). Os percentuais são arredondados para uma casa decimal pelo método dos maiores restos, para que a soma dê exatamente 100,0%.
 
-### 3.2 Registro e validação (a partir da Entrega 2)
+### 3.2 Coleta automática (a partir da Entrega 2)
 
-1. **Registro.** Ao final de cada sessão de trabalho, o membro adiciona uma linha em `gestao/esforco.csv`:
+O registro manual de horas por sessão, previsto inicialmente para a Entrega 2, foi substituído por uma **estimativa paramétrica automática**, calculada pelo GitHub Actions a partir do histórico do repositório. É o mesmo método da Entrega 1 (seção 3.3), com duas melhorias. A coleta deixa de depender de cada membro lembrar de preencher a planilha, e a evidência de cada hora passa a ser o próprio PR ou *commit*.
 
-    | Campo | Exemplo |
-    | ----- | ------- |
-    | `entrega` | `E2` |
-    | `data` | `03/11/2026` |
-    | `membro` | `Caio Melo Borges` |
-    | `horas` | `1.50` (frações de 0,25 h) |
-    | `categoria` | `redacao`, `pesquisa`, `revisao`, `integracao`, `reuniao`, `infraestrutura` ou `consolidacao` |
-    | `descricao` | `Medição das métricas M1 a M5 no SIGAA` |
-    | `evidencia` | *hash* do *commit*, número do PR ou da *issue*, ata da reunião |
-    | `origem` | `registrada` |
+**Não é contagem de *commits*.** A Tabela 2 descarta *commits* como medida porque o número de *commits* reflete o hábito de cada membro. Aqui o *commit* é só a fonte: o que se mede é o **volume adicionado** em cada um, e dividir o mesmo trabalho em 1 ou 9 *commits* produz as mesmas horas.
 
-2. **Validação.** Uma linha só entra no cálculo se a evidência existir e corresponder à descrição. Reuniões contam para cada participante listado na ata. Atividades sem artefato no Git (por exemplo, pesquisa) são aceitas quando outro membro confirma na revisão do PR.
-3. **Teto de plausibilidade.** Linhas com mais de 4 h em uma única sessão precisam de justificativa na descrição.
-4. **Fechamento.** Na véspera de cada entrega, o responsável pela gestão roda `python gestao/esforco.py calcular --entrega E2`, copia a tabela para esta página e para o apêndice do artigo, e registra o I3 na [Gestão do Projeto](gestao-psm.md).
+**Passo 1. Volume por integração.** Para cada entrada na `main` (PR ou *commit* direto) depois da tag da entrega anterior (`Entrega1` para a E2), o script soma, por autor de cada *commit* sem *merge*:
+
+- nos textos (`.md`, `.tex`, `.bib`), as **palavras realmente adicionadas**, obtidas com `git log --word-diff`. Corrigir uma palavra num parágrafo de 200 conta 1 palavra, não 200 como no método da Entrega 1. Sinais de *markdown* sem letras nem números (`|`, `---`, `*`) não contam;
+- no código e na configuração do site (`.py`, `.yml`, `.css`, `.js`), as **linhas adicionadas**, porque palavras não medem código.
+
+Ficam de fora o modelo IEEE copiado, PDFs, imagens, documentos binários e a própria planilha de esforço.
+
+**Passo 2. Conversão em horas.** O volume é dividido pela taxa da categoria:
+
+*Tabela 3 - Taxas de produção a partir da Entrega 2.*
+
+| Categoria | Arquivos | Taxa | Justificativa |
+| --------- | -------- | :--: | ------------- |
+| `redacao` | Textos fora de `artigo/` (páginas da GitPage, READMEs) | 1.100 palavras/h | Mesma taxa da Entrega 1 (Tabela 4) |
+| `consolidacao` | Textos em `artigo/` | 2.200 palavras/h | Mesma taxa da Entrega 1 (Tabela 4) |
+| `infraestrutura` | Código e configuração (`.py`, `.yml`, `.css`, `.js`) | 100 linhas/h | Scripts e estilos escritos com apoio de IA e revisados pelo autor. Taxa inicial, a ser calibrada pela equipe como as da Tabela 4 |
+| `revisao` | Revisões e comentários de revisão dos PRs (API do GitHub) | 0,25 h por revisor em cada PR + 1.100 palavras/h dos comentários | Tempo fixo das revisões da Entrega 1 (Tabela 5), mais o texto escrito na revisão |
+
+**Passo 3. Revisões de PR.** Revisar não adiciona texto ao repositório, então as revisões são lidas da API do GitHub. Cada membro que revisa um PR recebe **0,25 h fixas**, o mesmo valor atribuído às revisões da Entrega 1 (Tabela 5), mais as **palavras dos seus comentários de revisão** pela taxa de redação. Uma aprovação sem comentário vale 0,25 h, e uma revisão detalhada vale mais. O autor do PR não recebe horas de revisão pelas respostas no próprio PR, porque o trabalho dele já está nos *commits*.
+
+**Passo 4. Trabalho fora do repositório.** Reuniões, pesquisa e estudo não geram *commit*. Eles continuam registrados em `gestao/esforco.csv`, uma linha por sessão, com a ata, a mensagem ou o rascunho como evidência. O trabalho que já está no Git não entra na planilha, para não ser contado duas vezes. As instruções de preenchimento estão em [`gestao/README.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/gestao/README.md).
+
+**Passo 5. Validação no PR.** A cada PR e a cada revisão enviada, o *workflow* `esforco-pr.yml` comenta as horas estimadas de cada autor e revisor e a participação de cada membro na entrega se o PR for integrado, com alerta fora da faixa de 10% a 40% do I3. O revisor confere a estimativa junto com o conteúdo. Mais de 4 h de um membro num único PR exige justificativa na revisão, como o teto de plausibilidade da versão manual.
+
+**Passo 6. Publicação.** A cada publicação do site, o [dashboard de contribuição](gestao-esforco.md) é recalculado com a planilha, o histórico do Git e as revisões dos PRs. Uma linha inválida na planilha, um *commit* de autor desconhecido ou uma falha na API do GitHub interrompem a publicação, para que o painel nunca mostre um total errado. No fechamento da entrega, o responsável pela gestão cria a tag da *release*, roda `python gestao/esforco.py calcular --entrega E2`, copia a tabela para esta página e para o apêndice do artigo, e registra o I3 na [Gestão do Projeto](gestao-psm.md).
 
 ### 3.3 Reconstrução das horas da Entrega 1
 
@@ -72,7 +85,7 @@ Como não havia registro de horas na Entrega 1, as horas foram estimadas por **e
 
 **Passo 2. Conversão em horas.** As taxas foram calibradas para refletir o tempo real disponível: os membros estudam e trabalham, e a Entrega 1 foi produzida em cerca de uma semana, com apoio de IA na redação. Com essas taxas, nenhum membro passa de 10 h na entrega.
 
-*Tabela 3 - Taxas de produção usadas na estimativa.*
+*Tabela 4 - Taxas de produção usadas na estimativa.*
 
 | Categoria | Arquivos | Taxa | Justificativa |
 | --------- | -------- | :--: | ------------- |
@@ -81,7 +94,7 @@ Como não havia registro de horas na Entrega 1, as horas foram estimadas por **e
 
 **Passo 3. Atividades sem texto.** Atividades que não geram palavras receberam horas fixas, ligadas a uma evidência no repositório ou declaradas pela equipe:
 
-*Tabela 4 - Horas atribuídas a atividades sem texto.*
+*Tabela 5 - Horas atribuídas a atividades sem texto.*
 
 | Membro | Atividade | Horas | Evidência |
 | ------ | --------- | :---: | --------- |
@@ -95,7 +108,7 @@ Como não havia registro de horas na Entrega 1, as horas foram estimadas por **e
 
 **Passo 4. Sensibilidade.** As taxas são uma escolha da equipe, por isso o cálculo foi repetido com outras taxas:
 
-*Tabela 5 - Esforço (%) da Entrega 1 com taxas diferentes (redação / consolidação, em palavras/h).*
+*Tabela 6 - Esforço (%) da Entrega 1 com taxas diferentes (redação / consolidação, em palavras/h).*
 
 | Taxas | Arthur | Caio | Daniel | Davi | Felipe | Leonardo |
 | ----- | :----: | :--: | :----: | :--: | :----: | :------: |
@@ -110,7 +123,9 @@ Entre os membros com trabalho medido no Git, mudar as taxas mantendo a proporç�
 
 - **Uso de IA.** Vários membros usaram IA na redação (ver [Uso de IA](uso-de-ia.md)), o que aumenta as palavras por hora. As taxas já consideram esse apoio, e como são as mesmas para todos, a proporção entre os membros se mantém.
 - **Trabalho fora do Git.** Reuniões, conversas no grupo e pesquisa sem *commit* não aparecem na contagem de palavras. Na Entrega 1, esse trabalho foi incluído por declaração da equipe (casos de Davi e Daniel); a partir da Entrega 2, ele entra pela planilha, com evidência (mensagens, ata, rascunho).
-- **Volume não é qualidade.** Palavras medem esforço de produção, não o valor do conteúdo. Por isso a estimativa é revisada pelos membros e, a partir da Entrega 2, substituída pelas horas registradas.
+- **Volume não é qualidade.** Palavras e linhas medem esforço de produção, não o valor do conteúdo. Por isso a estimativa de cada PR é validada pelo revisor (seção 3.2, passo 5).
+- **Autoria do *commit*.** A estimativa automática credita o autor de cada *commit*. Trabalho feito em par, ou enviado por outro membro, precisa ser ajustado na planilha com evidência.
+- **Revisão de PRs.** O tempo fixo de 0,25 h não distingue uma revisão rápida de uma revisão longa sem comentários. Revisões feitas fora do GitHub (por exemplo, numa chamada) entram na planilha, com o PR como evidência.
 
 ## Histórico de Versão
 
@@ -122,3 +137,4 @@ Entre os membros com trabalho medido no Git, mudar as taxas mantendo a proporç�
 | 1.3 | 24/10/2026 | Taxas calibradas para no máximo 10 h por membro e inclusão do trabalho de Davi fora do repositório | Caio Borges |
 | 1.4 | 24/10/2026 | Horas declaradas pela equipe para Daniel e Davi e ajuste das horas de Caio | Caio Borges |
 | 1.5 | 03/11/2026 | Matrícula de Caio, descrição das horas declaradas de Davi e Caio e correção da análise de sensibilidade | Caio Borges |
+| 1.6 | 10/11/2026 | Coleta automática do esforço a partir da Entrega 2 (palavras e linhas adicionadas por PR e revisões dos PRs, calculadas pelo GitHub Actions) | Caio Borges |

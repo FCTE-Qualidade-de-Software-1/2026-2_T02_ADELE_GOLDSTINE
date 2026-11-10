@@ -1,8 +1,8 @@
 # Dashboard de contribuição
 
-Este painel é montado a cada publicação do site, diretamente dos registros de `gestao/esforco.csv`. Ele resume a contribuição por entrega, integrante, categoria e origem. Para corrigir ou adicionar dados, edite a planilha e publique a alteração no ramo `main`.
+Este painel é recalculado a cada publicação do site e resume a contribuição por entrega, integrante, categoria e origem. A partir da Entrega 2, as horas do trabalho no repositório são **estimadas automaticamente a partir do histórico do Git** (origem `automatica`): palavras adicionadas nos textos e linhas adicionadas no código de cada PR, além das revisões dos PRs, convertidas em horas pelas taxas da [metodologia](contribuicao.md#32-coleta-automatica-a-partir-da-entrega-2). O trabalho fora do repositório (reuniões, pesquisa) vem de `gestao/esforco.csv`.
 
-As horas estimadas ou declaradas da Entrega 1 aparecem identificadas pela origem. A Entrega 2 será exibida quando houver registros na planilha. Ajustes negativos reduzem o total líquido do integrante.
+As horas da Entrega 1 são estimadas ou declaradas e aparecem identificadas pela origem. Ajustes negativos reduzem o total líquido do integrante.
 
 [[DASHBOARD_ESFORCO]]
 

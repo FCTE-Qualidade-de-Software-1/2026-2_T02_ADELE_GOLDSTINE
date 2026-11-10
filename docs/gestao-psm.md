@@ -12,7 +12,7 @@ Os indicadores seguem o modelo de informação do PSM (atributo, medida básica,
 | -- | --------- | ------------------------- | --------------- | --------- | ------------------- | --------------- |
 | I1 | Calendário e Progresso | Os artefatos de cada entrega serão concluídos no prazo? | Artefatos planejados para a entrega; artefatos integrados ao ramo `main` | % concluído = concluídos / planejados | Faltando uma semana para a entrega, conclusão abaixo de 80% exige redistribuição de tarefas | Committed vs. Completed (CID 8.3) |
 | I2 | Calendário e Progresso | O trabalho restante está diminuindo no ritmo planejado? | *Issues* do marco da entrega abertas por dia | Curva de *burndown* real x planejada | Desvio maior que 10% em relação à linha planejada é discutido na reunião seguinte | Burndown (CID 8.2) |
-| I3 | Recursos e Custos | O esforço está distribuído entre os membros? | Horas registradas por membro na planilha de esforço | Participação percentual de cada membro | Participação abaixo de 10% ou acima de 40% do total exige rebalanceamento | Personnel Effort (CID, ICM linha 10) |
+| I3 | Recursos e Custos | O esforço está distribuído entre os membros? | Horas estimadas por membro a partir das palavras e linhas adicionadas em cada PR e das revisões dos PRs, mais horas fora do repositório registradas na planilha de esforço | Participação percentual de cada membro | Participação abaixo de 10% ou acima de 40% do total exige rebalanceamento | Personnel Effort (CID, ICM linha 10) |
 | I4 | Desempenho dos Processos | A integração das fases é ágil? | Data/hora do primeiro *commit* do ramo; data/hora do *merge* do PR | Tempo de ciclo (h) | Ciclo maior que cinco dias indica integração tardia e risco de conflito | Cycle Time (CID 8.5) |
 | I5 | Desempenho dos Processos | A revisão encontra problemas antes da integração? | Alterações do PR; correções feitas após comentários de revisão | % de retrabalho | Retrabalho acima de 30% motiva *checklist* de revisão baseado nos critérios do roteiro | Rework (CID, ICM linha 19) |
 
@@ -20,7 +20,7 @@ Os indicadores seguem o modelo de informação do PSM (atributo, medida básica,
 
 - **I1:** a lista de artefatos de cada entrega é fixada no início da fase (Tabela 2). Um artefato é concluído quando está integrado ao ramo `main`.
 - **I2:** cada artefato vira uma *issue* no marco da entrega (E1 ou E2). O número de *issues* abertas é lido no painel de *milestones* do GitHub.
-- **I3:** cada membro registra, ao fim de cada sessão de trabalho, data, horas, atividade e artefato em `gestao/esforco.csv`. O mesmo registro alimenta a [Tabela de Contribuição](contribuicao.md).
+- **I3:** a partir da Entrega 2, coletado automaticamente pelo GitHub Actions. Cada PR recebe um comentário com as horas estimadas dos *commits* e das revisões (palavras e linhas adicionadas e comentários de revisão convertidos pelas taxas da [metodologia de contribuição](contribuicao.md#32-coleta-automatica-a-partir-da-entrega-2)) e a participação de cada membro após o *merge*. O [dashboard de contribuição](gestao-esforco.md) é recalculado a cada publicação do site. Trabalho fora do repositório (reuniões, pesquisa) é registrado em `gestao/esforco.csv`, com evidência.
 - **I4:** extraído do histórico Git com o comando abaixo, para cada ramo de fase.
 - **I5:** contado nos PRs: alterações feitas após a primeira rodada de revisão sobre o total de *commits* do PR.
 
@@ -96,3 +96,4 @@ A medição 2 fecha a Entrega 1 (26/10/2026) e confere se as decisões da mediç
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 19/10/2026 | Indicadores PSM/CID (I1 a I5), procedimento de coleta e medição 1 | [arthurlleite](https://github.com/arthurlleite) |
 | 1.1 | 03/11/2026 | Medição 2: fechamento da Entrega 1 e acompanhamento das decisões da medição 1 | Caio Borges |
+| 1.2 | 10/11/2026 | Coleta automática do I3 pelo GitHub Actions, por recomendação da professora na apresentação dos indicadores | Caio Borges |
