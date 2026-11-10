@@ -47,7 +47,7 @@ A satisfação não é subcaracterística do modelo de qualidade de produto da I
 
 ## Relação com as métricas
 
-A métrica que responde a cada questão (Tabela 4) estão detalhadas na página [Métricas](metricas.md), e a hipótese de cada questão, na página [Hipóteses](hipoteses.md).
+A métrica que responde a cada questão (Tabela 4) está detalhada na página [Métricas](metricas.md), e a hipótese de cada questão, na página [Hipóteses](hipoteses.md).
 
 *Tabela 4 - Relação entre questões e métricas.*
 
@@ -89,3 +89,4 @@ A métrica que responde a cada questão (Tabela 4) estão detalhadas na página 
 | 2.3 | 25/10/2026 | Remoção das questões Q13 e Q14 do objetivo G4 (Eficiência de Desempenho) | Leonardo Bonetti |
 | 2.4 | 25/10/2026 | Subcaracterística de Q3 nomeada pertinência funcional | Leonardo Bonetti |
 | 2.5 | 25/10/2026 | Uma métrica por questão: Q6, Q7, Q8 e Q12 divididas por aspecto do atributo; questões renumeradas de Q1 a Q16; Tabela 4 em relação 1:1 | Leonardo Bonetti |
+| 2.6 | 10/11/2026 | Concordância verbal no parágrafo da relação com as métricas | Leonardo Bonetti |
