@@ -56,7 +56,7 @@ Antes da **primeira** sessão:
 
 - Arquivo `caminhos.csv` preenchido, com o caminho mais curto, C<sub>min</sub> e os itens válidos de primeira escolha de cada tarefa ([Planilhas de Coleta](planilhas.md#2-arquivos-de-referencia)).
 - Tempos do especialista medidos: três execuções de cada tarefa, para M6.
-- Gabarito das perguntas de compreensão: tabela de horários da UnB para decodificar o código de horário (T2) e forma de leitura da carga horária pendente (T4).
+- Gabarito das perguntas de compreensão: tabela de horários da UnB para decodificar o código de horário (T2) forma de leitura da carga horária pendente (T4) e data-limite de trancamento do semestre, conforme o calendário acadêmico publicado pela UnB (T6).
 - Sessão piloto realizada (seção 10), com os ajustes registrados no Histórico de Versão desta página.
 
 Antes de **cada** sessão:
@@ -177,7 +177,8 @@ Uma sessão completa é feita antes da coleta com um estudante que não fará pa
 
 - se os enunciados são entendidos sem explicação;
 - se todas as tarefas são possíveis no período da coleta: nota já lançada (T1), índices disponíveis para quem está no 1º semestre (T4) e material publicado na Turma Virtual (T5);
-- se os gabaritos de T2 e T4 permitem decidir a resposta sem ambiguidade;
+- se os gabaritos de T2, T4 e T6 permitem decidir a resposta sem ambiguidade;
+- se o calendário acadêmico de T6 abre dentro do SIGAA ou em uma página externa. Se abrir fora, a regra que define se a resposta conta como consulta a fonte externa é registrada no Histórico de Versão antes da coleta;
 - se a gravação mostra os cliques com clareza e se a sessão cabe em 45 minutos.
 
 Os dados do piloto não entram nas métricas. Os ajustes feitos depois dele são registrados no Histórico de Versão desta página **antes** da primeira sessão válida.
@@ -194,3 +195,4 @@ Os dados do piloto não entram nas métricas. Os ajustes feitos depois dele são
 | 1.1 | 10/11/2026 | Grupos diferem apenas no semestre; perfis com deficiência e só celular cobertos por inspeção, sem recrutamento | Leonardo Bonetti |
 | 1.2 | 11/11/2026 | Instrução do SUS restrita ao que o participante usou na sessão | Leonardo Bonetti |
 | 1.3 | 11/11/2026 | Justificativa dos recortes de T3 e T4 em relação à Fase 1 | Leonardo Bonetti |
+| 1.4 | 11/11/2026 | Gabarito da pergunta de compreensão de T6 e verificação do link do calendário no piloto | Leonardo Bonetti |
