@@ -79,7 +79,7 @@ As falas entre aspas são lidas como estão escritas, para que todos os particip
     2. O participante lê em voz alta. O tempo começa ao fim da leitura (marcação de início de M6).
     3. A tarefa termina quando ocorre um dos fins da Tabela 6 (seção 8).
     4. Em T2, T4 e T6, com a página ainda aberta, o moderador faz a pergunta de compreensão da Tabela 4 e anota a resposta e se o participante abriu legenda ou ajuda.
-6. **Questionário SUS (cerca de 3 min).** Logo após a última tarefa, o moderador lê: "Agora responda a este questionário sozinho, pensando no SIGAA como um todo. Marque uma opção em cada item. Se não tiver certeza, marque o meio da escala." Depois se afasta e não comenta os itens.
+6. **Questionário SUS (cerca de 3 min).** Logo após a última tarefa, o moderador lê: "Agora responda a este questionário sozinho, pensando no que você usou hoje no SIGAA. Marque uma opção em cada item. Se não tiver certeza, marque o meio da escala." Depois se afasta e não comenta os itens.
 7. **Encerramento (cerca de 2 min).** O moderador para a gravação. O participante sai do SIGAA e o moderador fecha a janela anônima e apaga o atestado baixado em T3. O moderador agradece e pede: "Por favor, não comente as tarefas com colegas que ainda possam participar."
 
 A sessão dura cerca de 45 minutos.
@@ -147,7 +147,7 @@ Depois da sessão, o avaliador da gravação registra:
 
 ## 9. Questionário SUS
 
-O SUS [1] é aplicado em português, com escala de 1 (discordo totalmente) a 5 (concordo totalmente). A pontuação segue a ficha de M12.
+O SUS [1] é aplicado em português, com escala de 1 (discordo totalmente) a 5 (concordo totalmente). A pontuação segue a ficha de M12. Nos itens, "este sistema" se refere ao que o participante usou na sessão: o portal do discente nas tarefas T1 a T6, e não módulos fora do [escopo](../fase-1/escopo.md#4-o-que-fica-fora-do-escopo), como a matrícula on-line.
 
 *Tabela 7 - Itens do questionário SUS.*
 
@@ -187,3 +187,4 @@ Os dados do piloto não entram nas métricas. Os ajustes feitos depois dele são
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 10/11/2026 | Protocolo do teste com usuários: participantes, papéis, ambiente, roteiro, enunciados, ordem das tarefas, registro, SUS e sessão piloto | Leonardo Bonetti |
 | 1.1 | 10/11/2026 | Grupos diferem apenas no semestre; perfis com deficiência e só celular cobertos por inspeção, sem recrutamento | Leonardo Bonetti |
+| 1.2 | 11/11/2026 | Instrução do SUS restrita ao que o participante usou na sessão | Leonardo Bonetti |
