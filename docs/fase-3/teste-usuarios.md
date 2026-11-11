@@ -88,6 +88,11 @@ A sessão dura cerca de 45 minutos.
 
 Os enunciados dizem o que obter, sem nomes de menu, para não indicar o caminho, o que afetaria M4. As tarefas são as T1 a T6 do [escopo da Fase 1](../fase-1/escopo.md#21-tarefas-representativas). Em T2, T4 e T6, a tarefa pede para **localizar** a informação, o que é medido por M5, e a pergunta de compreensão pede para **interpretá-la**, o que é medido por M11.
 
+Duas tarefas usam só parte da descrição da Fase 1, para manter um único resultado por tarefa:
+
+- **T3** pede apenas o atestado de matrícula, sem o histórico escolar. Os dois documentos ficam no mesmo menu, e o histórico repetiria o caminho sem medir nada novo. O histórico continua sendo emitido pela equipe, que o usa nas conferências de M2.
+- **T4** pede apenas a carga horária cumprida e a pendente, sem os índices acadêmicos. Pedir os índices exigiria usar o mesmo termo do menu, o que indicaria o caminho e afetaria M4. A existência e a correção dos índices são verificadas pela equipe em M1 e M2.
+
 *Tabela 4 - Enunciados, critério de conclusão e perguntas de compreensão.*
 
 | Tarefa | Descrição curta (pergunta inicial) | Enunciado do cartão | Concluída quando o participante | Pergunta de compreensão (M11) |
@@ -95,7 +100,7 @@ Os enunciados dizem o que obter, sem nomes de menu, para não indicar o caminho,
 | T1 | Consultar notas | "Descubra a nota que você tem até agora em uma das suas disciplinas deste semestre, à sua escolha." | Informa a nota da disciplina exatamente como a página de notas a exibe | - |
 | T2 | Ver o horário e o local de uma turma | "Encontre o horário e o local da aula de uma das suas turmas deste semestre, à sua escolha." | Mostra a informação de horário da turma e informa o local | "Pelo que aparece na tela, em quais dias da semana e em que horário essa turma tem aula?" |
 | T3 | Emitir atestado de matrícula | "Gere o seu atestado de matrícula deste semestre." | Abre ou baixa o documento | - |
-| T4 | Ver índices e o que falta para se formar | "Encontre a página que mostra o quanto você já cumpriu do seu curso e o quanto ainda falta." | Mostra a página com a carga horária cumprida e a pendente | "Pelo que aparece na tela, quantas horas ainda faltam para você concluir o curso?" |
+| T4 | Ver o que falta para se formar | "Encontre a página que mostra o quanto você já cumpriu do seu curso e o quanto ainda falta." | Mostra a página com a carga horária cumprida e a pendente | "Pelo que aparece na tela, quantas horas ainda faltam para você concluir o curso?" |
 | T5 | Abrir um material da Turma Virtual | "Abra um arquivo ou link que um professor publicou para uma das suas turmas deste semestre." | Abre o material | - |
 | T6 | Consultar o calendário acadêmico | "Abra o calendário acadêmico deste semestre." | Mostra o calendário do semestre corrente | "Pelo calendário, até que dia é possível trancar uma disciplina neste semestre?" |
 
@@ -188,3 +193,4 @@ Os dados do piloto não entram nas métricas. Os ajustes feitos depois dele são
 | 1.0 | 10/11/2026 | Protocolo do teste com usuários: participantes, papéis, ambiente, roteiro, enunciados, ordem das tarefas, registro, SUS e sessão piloto | Leonardo Bonetti |
 | 1.1 | 10/11/2026 | Grupos diferem apenas no semestre; perfis com deficiência e só celular cobertos por inspeção, sem recrutamento | Leonardo Bonetti |
 | 1.2 | 11/11/2026 | Instrução do SUS restrita ao que o participante usou na sessão | Leonardo Bonetti |
+| 1.3 | 11/11/2026 | Justificativa dos recortes de T3 e T4 em relação à Fase 1 | Leonardo Bonetti |
