@@ -19,7 +19,7 @@ São **6 participantes**, em dois grupos de três que **diferem apenas no semest
 
 **Perfis que não são recrutados:** não é preciso encontrar estudantes com deficiência nem estudantes que usam só o celular. Esses perfis da Fase 1 são cobertos por inspeção da equipe: a inclusividade por M9 e M10 e o uso no celular por M14 e M15.
 
-**Critérios de exclusão:** membros da equipe e pessoas que já conheçam os enunciados das tarefas, por exemplo por terem participado da sessão piloto ou conversado com outro participante.
+**Critérios de exclusão:** membros da equipe e pessoas que já conheçam os enunciados das tarefas, por exemplo por terem conversado com outro participante.
 
 **Por que há reservas:** com três participantes por grupo, cada grupo fica exatamente no mínimo da regra 3 de [Níveis de Pontuação](../fase-2/niveis-pontuacao.md#regra-3-resultados-por-perfil-por-pagina-e-por-tarefa). Uma falta faria o recorte do grupo virar apenas descritivo, e a hipótese H5, que depende do recorte de calouros, ficaria inconclusiva.
 
@@ -57,13 +57,18 @@ Antes da **primeira** sessão:
 - Arquivo `caminhos.csv` preenchido, com o caminho mais curto, C<sub>min</sub> e os itens válidos de primeira escolha de cada tarefa ([Planilhas de Coleta](planilhas.md#2-arquivos-de-referencia)).
 - Tempos do especialista medidos: três execuções de cada tarefa, para M6.
 - Gabarito das perguntas de compreensão: tabela de horários da UnB para decodificar o código de horário (T2), forma de leitura da carga horária pendente (T4) e data-limite de trancamento do semestre, conforme o calendário acadêmico publicado pela UnB (T6).
-- Sessão piloto realizada (seção 10), com os ajustes registrados no Histórico de Versão desta página.
+- Verificação feita pela equipe nas próprias contas, ao medir os tempos do especialista:
+    - os gabaritos de T2, T4 e T6 permitem decidir a resposta sem ambiguidade;
+    - o calendário acadêmico de T6 abre dentro do SIGAA ou em página externa. Se abrir fora, a regra que define se a resposta conta como consulta a fonte externa é registrada no Histórico de Versão desta página antes da primeira sessão;
+    - a gravação mostra os cliques com clareza.
 
 Antes de **cada** sessão:
 
 - Código do participante (P1 a P6) e ordem das tarefas definidos (seção 7).
 - SIGAA acessível e janela anônima aberta na página de login.
 - Gravador testado, ainda sem gravar.
+
+Não há sessão piloto. Por isso, não são verificados antes da coleta o entendimento dos enunciados por quem nunca os viu, a duração da sessão e a disponibilidade de cada tarefa na conta de cada participante, como nota lançada (T1), carga horária exibida no 1º semestre (T4) e material publicado (T5). Essas limitações são declaradas na análise.
 
 ## 5. Roteiro da sessão
 
@@ -171,18 +176,6 @@ O SUS [1] é aplicado em português, com escala de 1 (discordo totalmente) a 5 (
 
 *Fonte: tradução dos itens de Brooke [1].*
 
-## 10. Sessão piloto
-
-Uma sessão completa é feita antes da coleta com um estudante que não fará parte da amostra. O piloto verifica:
-
-- se os enunciados são entendidos sem explicação;
-- se todas as tarefas são possíveis no período da coleta: nota já lançada (T1), índices disponíveis para quem está no 1º semestre (T4) e material publicado na Turma Virtual (T5);
-- se os gabaritos de T2, T4 e T6 permitem decidir a resposta sem ambiguidade;
-- se o calendário acadêmico de T6 abre dentro do SIGAA ou em uma página externa. Se abrir fora, a regra que define se a resposta conta como consulta a fonte externa é registrada no Histórico de Versão antes da coleta;
-- se a gravação mostra os cliques com clareza e se a sessão cabe em 45 minutos.
-
-Os dados do piloto não entram nas métricas. Os ajustes feitos depois dele são registrados no Histórico de Versão desta página **antes** da primeira sessão válida.
-
 ## Referências
 
 [1] BROOKE, J. SUS: a "quick and dirty" usability scale. In: *Usability Evaluation in Industry*. Taylor & Francis, 1996.
@@ -196,3 +189,4 @@ Os dados do piloto não entram nas métricas. Os ajustes feitos depois dele são
 | 1.2 | 11/11/2026 | Instrução do SUS restrita ao que o participante usou na sessão | Leonardo Bonetti |
 | 1.3 | 11/11/2026 | Justificativa dos recortes de T3 e T4 em relação à Fase 1 | Leonardo Bonetti |
 | 1.4 | 11/11/2026 | Gabarito da pergunta de compreensão de T6 e verificação do link do calendário no piloto | Leonardo Bonetti |
+| 1.5 | 11/11/2026 | Retirada da sessão piloto; verificações possíveis passam à preparação feita pela equipe e as demais são declaradas como limitação | Leonardo Bonetti |
