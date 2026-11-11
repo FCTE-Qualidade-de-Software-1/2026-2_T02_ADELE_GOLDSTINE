@@ -56,7 +56,7 @@ Antes da **primeira** sessão:
 
 - Arquivo `caminhos.csv` preenchido, com o caminho mais curto, C<sub>min</sub> e os itens válidos de primeira escolha de cada tarefa ([Planilhas de Coleta](planilhas.md#2-arquivos-de-referencia)).
 - Tempos do especialista medidos: três execuções de cada tarefa, para M6.
-- Gabarito das perguntas de compreensão: tabela de horários da UnB para decodificar o código de horário (T2) forma de leitura da carga horária pendente (T4) e data-limite de trancamento do semestre, conforme o calendário acadêmico publicado pela UnB (T6).
+- Gabarito das perguntas de compreensão: tabela de horários da UnB para decodificar o código de horário (T2), forma de leitura da carga horária pendente (T4) e data-limite de trancamento do semestre, conforme o calendário acadêmico publicado pela UnB (T6).
 - Sessão piloto realizada (seção 10), com os ajustes registrados no Histórico de Versão desta página.
 
 Antes de **cada** sessão:
