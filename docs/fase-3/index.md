@@ -23,7 +23,7 @@ Todas as decisões de planejamento da Fase 3 são derivadas diretamente das nece
 | Métricas M1 a M3 (Adequação Funcional) | Roteiro de conferência funcional e inspeção com 2 avaliadores independentes | Em elaboração |
 | Métricas M4 a M8, M11, M12 e M20 (Capacidade de Interação) | Roteiro do moderador, termo de consentimento (TCLE) e protocolo de testes com usuários | Em elaboração |
 | Métricas M13 a M15 (Flexibilidade / Portabilidade) | Matriz de testes de adaptabilidade (resoluções desktop, tablet e celular em 4 navegadores) | Em elaboração |
-| Questionário discente e escala SUS (Blocos A a F) | Formulário online com anonimização e cálculo padronizado do escore SUS | [Questionário da Fase 2](../fase-2/questionario.md) |
+| Questionário discente e escala SUS (Blocos A a F) | Roteiro estruturado de entrevista com aplicação presencial/remota e gravação consentida (TCLE) | [Questionário da Fase 2](../fase-2/questionario.md) |
 | Cronograma e acompanhamento das tarefas | Cronograma operacional planejado x realizado alinhado ao PSM/CID | [Cronograma](cronograma.md) |
 
 ---
@@ -32,10 +32,10 @@ Todas as decisões de planejamento da Fase 3 são derivadas diretamente das nece
 
 A documentação desta fase compreende as seguintes seções estruturantes:
 
-1. **[Cronograma da Avaliação](cronograma.md):** planejamento detalhado das 28 atividades da Entrega 2, prazos, esforço e acompanhamento planejado vs. realizado.
+1. **[Cronograma da Avaliação](cronograma.md):** planejamento detalhado das 22 atividades da Entrega 2, prazos, esforço e acompanhamento planejado vs. realizado.
 2. **Métodos e Instruções de Medição (POPs):** passos detalhados para cada métrica, garantindo repetibilidade e minimizando desvios. *(Em elaboração)*
 3. **Recursos e Ambiente de Avaliação:** especificação das configurações de hardware, software, rede, massa de dados simulada e perfil de participantes. *(Em elaboração)*
-4. **Instrumentos de Coleta:** roteiro do moderador, guia de observação, termo de consentimento (TCLE) e questionário estruturado. *(Em elaboração)*
+4. **Instrumentos de Coleta:** roteiro do moderador, guia de observação, termo de consentimento (TCLE) e roteiro estruturado de entrevista. *(Em elaboração)*
 
 ---
 
@@ -44,3 +44,4 @@ A documentação desta fase compreende as seguintes seções estruturantes:
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 12/11/2026 | Criação da página inicial da Fase 3: visão geral, rastreabilidade com as fases anteriores e estrutura documental | [Davi Nobre](https://github.com/Jagaima) |
+| 1.1 | 12/11/2026 | Correção do número de atividades (22), remoção de referência a formulário online e alinhamento com cronograma v1.2 | [Davi Nobre](https://github.com/Jagaima) |

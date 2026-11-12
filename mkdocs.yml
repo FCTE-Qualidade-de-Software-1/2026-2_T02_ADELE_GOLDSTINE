@@ -31,6 +31,9 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+hooks:
+  - gestao/esforco.py
+
 markdown_extensions:
   - admonition
   - pymdownx.details
