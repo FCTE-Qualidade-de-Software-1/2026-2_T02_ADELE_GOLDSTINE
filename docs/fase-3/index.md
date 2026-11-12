@@ -2,7 +2,7 @@
 
 Esta fase corresponde à terceira atividade do processo de avaliação de produto da **ISO/IEC 25040** [1], na qual a avaliação é projetada: para cada métrica especificada na [Fase 2](../fase-2/index.md), definem-se o método de coleta, os instrumentos, os recursos, o ambiente e o cronograma. O resultado é o plano seguido na Fase 4.
 
-A Fase 2 deixou três itens para esta fase: o formato dos arquivos de dados, os instrumentos e o roteiro de execução, e o acesso às gravações ([Métricas, artefatos de dados previstos](../fase-2/metricas.md#artefatos-de-dados-previstos)). Os dois primeiros estão nas páginas da Tabela 1. O acesso às gravações será definido pela equipe.
+A Fase 2 deixou três itens para esta fase: o formato dos arquivos de dados, os instrumentos e o roteiro de execução, e o acesso às gravações ([Métricas, artefatos de dados previstos](../fase-2/metricas.md#artefatos-de-dados-previstos)). Os dois primeiros estão nas páginas da Tabela 1, e o acesso às gravações está em [Recursos e Ambiente](recursos-ambiente.md#5-gravacoes).
 
 *Tabela 1 - Páginas da Fase 3.*
 
@@ -10,6 +10,7 @@ A Fase 2 deixou três itens para esta fase: o formato dos arquivos de dados, os 
 | ------ | -------- |
 | [Protocolo do Teste com Usuários](teste-usuarios.md) | Participantes, roteiro da sessão, enunciados das tarefas, ordem, registro e SUS |
 | [Planilhas de Coleta](planilhas.md) | Formato de cada arquivo de dados e convenções de preenchimento |
+| [Recursos e Ambiente](recursos-ambiente.md) | Produto avaliado, hardware e software por método, pessoas e conhecimento exigido, massa de dados e gravações |
 
 *Fonte: elaboração da equipe.*
 
@@ -64,3 +65,4 @@ A Tabela 3 liga cada métrica ao instrumento que a coleta e ao arquivo em que o 
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 10/11/2026 | Criação da fase: métodos de coleta, rastreabilidade entre métricas, instrumentos e arquivos de dados | Leonardo Bonetti |
+| 1.1 | 12/11/2026 | Página de Recursos e Ambiente na Tabela 1; acesso às gravações remetido a ela | [Felipe Campêlo](https://github.com/felipeacampelo) |
