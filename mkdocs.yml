@@ -1,9 +1,9 @@
 site_name: "T02 - Adele Goldstine"
 site_description: "Documentação do Projeto - Turma 02 - Adele Goldstine"
-site_author: "Arthur Leite, Daniel Nunes, Davi Nobre, Felipe Campêlo, Leonardo Bonetti"
+site_author: "Arthur Leite, Caio Borges, Daniel Nunes, Davi Nobre, Felipe Campêlo, Leonardo Bonetti"
 site_url: "https://fcte-qualidade-de-software-1.github.io/2026-2_T02_ADELE_GOLDSTINE/"
 repo_url: "https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE"
-copyright: "Equipe Adele Goldstine - FGA0315 Qualidade de Software 1 - Versão 1.1 - Atualizado em 16/10/2026"
+copyright: "Equipe Adele Goldstine - FGA0315 Qualidade de Software 1 - Versão 1.2 - Atualizado em 12/11/2026"
 
 theme:
   name: material
@@ -66,6 +66,9 @@ nav:
     - Níveis de Pontuação: fase-2/niveis-pontuacao.md
     - Gráfico GQM: fase-2/grafico-gqm.md
     - Questionário: fase-2/questionario.md
+  - Fase 3:
+    - fase-3/index.md
+    - Cronograma e Tarefas E2: fase-3/cronograma.md
   - Artigo:
     - Artigo (PDF): artigo/index.md
     - Introdução: artigo/introducao.md

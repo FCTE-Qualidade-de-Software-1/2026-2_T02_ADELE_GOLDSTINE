@@ -15,6 +15,7 @@ Esta página documenta todos os usos de ferramentas de Inteligência Artificial 
 | Claude Opus 5.5 (Claude Code) | Atualização do artigo em LaTeX após os ajustes da Fase 2 (retirada do objetivo G4) e a inclusão das personas, remoção da capa e do sumário e nova compilação do PDF. Conteúdo conferido com as páginas da GitPage | 25/10/2026 | [arthurlleite](https://github.com/arthurlleite) |
 | Claude Opus 5.5 (Claude Code) | Revisão da tabela de contribuição e do *script* de esforço, cálculo da medição 2 dos indicadores PSM a partir do GitHub e apoio na produção dos slides da apresentação de gestão do projeto (Canva). Cada número foi conferido com a planilha, o *script* e o GitHub, e as alterações passam por revisão no PR | 03/11/2026 | Caio Borges |
 | Claude Opus 5.5 (Claude Code) | Complemento da ata de reuniões com as decisões registradas no repositório (*commits*, PRs, histórico de versões das páginas e retrospectiva) e correção da formatação da ata. Cada data e número foi conferido com o GitHub e com as páginas citadas | 03/11/2026 | Caio Borges |
+| Deepseek v4 | Utilização para gerar o gráfico visual em Janela operacional na fase 3, documento cronograma.md | 12/11/2026 | [Davi Nobre](https://github.com/Jagaima) |
 
 ## Histórico de Versão
 
@@ -29,4 +30,5 @@ Esta página documenta todos os usos de ferramentas de Inteligência Artificial 
 | 1.6 | 25/10/2026 | Registro do uso de IA na atualização do artigo | [arthurlleite](https://github.com/arthurlleite) |
 | 1.7 | 03/11/2026 | Registro do uso de IA na medição 2, na revisão da tabela de contribuição e nos slides de gestão | Caio Borges |
 | 1.8 | 03/11/2026 | Registro do uso de IA no complemento da ata de reuniões | Caio Borges |
+| 1.9 | 12/11/2026 | Registro do uso de IA na fase 3 | [Davi Nobre](https://github.com/Jagaima) |
 
