@@ -15,7 +15,7 @@ São **6 participantes**, em dois grupos de três que **diferem apenas no semest
 
 *Fonte: elaboração da equipe.*
 
-**Critérios de inclusão:** ser estudante de graduação ativo da UnB, com acesso ao próprio SIGAA, e consentir com a gravação da sessão (premissa 6 do roteiro do trabalho).
+**Critérios de inclusão:** ser estudante de graduação ativo da UnB, com acesso ao próprio SIGAA, e consentir com a gravação da sessão (premissa 6 da especificação do trabalho).
 
 **Perfis que não são recrutados:** não é preciso encontrar estudantes com deficiência nem estudantes que usam só o celular. Esses perfis da Fase 1 são cobertos por inspeção da equipe: a inclusividade por M9 e M10 e o uso no celular por M14 e M15.
 
@@ -74,7 +74,7 @@ Não há sessão piloto. Por isso, não são verificados antes da coleta o enten
 
 As falas entre aspas são lidas como estão escritas, para que todos os participantes recebam as mesmas instruções.
 
-1. **Consentimento (cerca de 5 min).** O moderador explica o objetivo da sessão e o que será gravado, responde a dúvidas e obtém o consentimento do participante para a gravação, antes de qualquer gravação. Sem consentimento, a sessão não acontece, porque M4, M6 e M7 dependem da gravação.
+1. **Consentimento (cerca de 5 min).** O moderador entrega o Termo de Consentimento Livre e Esclarecido em duas vias, explica o objetivo da sessão e o que será gravado e responde a dúvidas. O participante marca a opção de gravação e assina as duas vias, antes de qualquer gravação, e fica com uma delas. Se o participante não autorizar a gravação, a sessão não acontece, porque M4, M6, M7 e M8 dependem dela. A via assinada fica guardada separada dos dados da sessão e não vai para o repositório, porque contém o nome do participante.
 2. **Perguntas iniciais (cerca de 3 min).** O moderador anota no formulário: semestre; se prevê concluir o curso nos próximos dois semestres; e, para cada tarefa, se o participante já a fez no SIGAA alguma vez. A pergunta é feita com a descrição curta da Tabela 4, sem citar menus. Essa resposta alimenta o recorte de calouros de M5.
 3. **Entrada no sistema.** O participante entra no SIGAA com a própria conta. O moderador não olha o teclado. Só depois que a página inicial do Portal do Discente aparece o moderador inicia a gravação.
 4. **Instruções (cerca de 2 min).** O moderador lê:
@@ -190,3 +190,4 @@ O SUS [1] é aplicado em português, com escala de 1 (discordo totalmente) a 5 (
 | 1.3 | 11/11/2026 | Justificativa dos recortes de T3 e T4 em relação à Fase 1 | Leonardo Bonetti |
 | 1.4 | 11/11/2026 | Gabarito da pergunta de compreensão de T6 e verificação do link do calendário no piloto | Leonardo Bonetti |
 | 1.5 | 11/11/2026 | Retirada da sessão piloto; verificações possíveis passam à preparação feita pela equipe e as demais são declaradas como limitação | Leonardo Bonetti |
+| 1.6 | 14/11/2026 | Consentimento pelo Termo de Consentimento Livre e Esclarecido em duas vias, guardado separado dos dados; M8 incluída entre as métricas que dependem da gravação | Leonardo Bonetti |
