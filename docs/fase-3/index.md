@@ -6,42 +6,74 @@
 <!-- Critério F3-C7: GitPage organizada, com seção Fase 3 e rastreabilidade. -->
 <!-- Critério F3-C8: Consistência entre as Fases 2 e 3 (rastreabilidade total e justificada). -->
 
-Esta fase corresponde à terceira etapa do processo de avaliação de produto de software da norma **ISO/IEC 25040**, na qual a equipe planeja detalhadamente os procedimentos práticos de medição e inspeção que serão executados na **Fase 4**.
+Esta fase corresponde à terceira atividade do processo de avaliação de produto da **ISO/IEC 25040** [1], na qual a avaliação é projetada: para cada métrica especificada na [Fase 2](../fase-2/index.md), definem-se o método de coleta, os instrumentos, os recursos, o ambiente e o cronograma. O resultado é o plano seguido na Fase 4.
 
-O objetivo desta fase é assegurar que todas as medições derivadas do método **GQM** na [Fase 2](../fase-2/index.md) disponham de métodos objetivos, ambientes operacionais especificados, instrumentos de coleta validados e instruções passo a passo que garantam a **repetibilidade** e a **reprodutibilidade** dos resultados por qualquer avaliador independente.
+A Fase 2 deixou três itens para esta fase: o formato dos arquivos de dados, os instrumentos e o roteiro de execução, e o acesso às gravações ([Métricas, artefatos de dados previstos](../fase-2/metricas.md#artefatos-de-dados-previstos)). Os dois primeiros estão nas páginas da Tabela 1, e o acesso às gravações está em [Recursos e Ambiente](recursos-ambiente.md#5-gravacoes).
 
----
+*Tabela 1 - Páginas da Fase 3.*
 
-## 3.1 Rastreabilidade com as Fases 1 e 2
+| Página | Conteúdo |
+| ------ | -------- |
+| [Protocolo do Teste com Usuários](teste-usuarios.md) | Participantes, roteiro da sessão, enunciados das tarefas, ordem, registro e SUS |
+| [Planilhas de Coleta](planilhas.md) | Formato de cada arquivo de dados e convenções de preenchimento |
+| [Recursos e Ambiente](recursos-ambiente.md) | Produto avaliado, hardware e software por método, pessoas e conhecimento exigido, massa de dados e gravações |
+| [Cronograma](cronograma.md) | Atividades da Entrega 2, responsáveis, prazos e acompanhamento do planejado e do realizado |
 
-Todas as decisões de planejamento da Fase 3 são derivadas diretamente das necessidades estabelecidas na [Fase 1](../fase-1/index.md) e das métricas especificadas na [Fase 2](../fase-2/index.md):
+*Fonte: elaboração da equipe.*
 
-*Tabela 1 — Rastreabilidade entre a especificação da Fase 2 e o planejamento da Fase 3.*
+## 3.1 Métodos de coleta
 
-| Elemento da Fase 2 | O que foi planejado na Fase 3 | Onde está documentado |
-| :--- | :--- | :--- |
-| Métricas M1 a M3 (Adequação Funcional) | Roteiro de conferência funcional e inspeção com 2 avaliadores independentes | Em elaboração |
-| Métricas M4 a M8, M11, M12 e M20 (Capacidade de Interação) | Roteiro do moderador, termo de consentimento (TCLE) e protocolo de testes com usuários | Em elaboração |
-| Métricas M13 a M15 (Flexibilidade / Portabilidade) | Matriz de testes de adaptabilidade (resoluções desktop, tablet e celular em 4 navegadores) | Em elaboração |
-| Questionário discente e escala SUS (Blocos A a F) | Roteiro estruturado de entrevista com aplicação presencial/remota e gravação consentida (TCLE) | [Questionário da Fase 2](../fase-2/questionario.md) |
-| Cronograma e acompanhamento das tarefas | Cronograma operacional planejado x realizado alinhado ao PSM/CID | [Cronograma](cronograma.md) |
+As métricas são obtidas por três métodos, já previstos nos [instrumentos de coleta da Fase 2](../fase-2/index.md#23-instrumentos-de-coleta).
 
----
+*Tabela 2 - Métodos de coleta.*
 
-## 3.2 Estrutura da Documentação da Fase 3
+| Método | Métricas | Quem executa | Fonte do procedimento |
+| ------ | -------- | ------------ | --------------------- |
+| Teste com usuários | M4, M5, M6, M7, M8, M11, M12 e MA1 | Moderador e avaliador da gravação, com 6 estudantes | [Protocolo do Teste com Usuários](teste-usuarios.md) |
+| Questionário ao fim da sessão | M3 e lista de referência de M1 | Os 6 participantes do teste com usuários, logo após o SUS, identificados só pelo código | [Questionário](../fase-2/questionario.md), aplicado no passo 7 do [roteiro da sessão](teste-usuarios.md#5-roteiro-da-sessao) |
+| Inspeção pela equipe | M1, M2, M9, M10, M13, M14, M15 e M20 | Dois avaliadores independentes e um terceiro para divergências, nas métricas em que a ficha o exige | Fichas das métricas em [Métricas](../fase-2/metricas.md) |
 
-A documentação desta fase compreende as seguintes seções estruturantes:
+*Fonte: elaboração da equipe.*
 
-1. **[Cronograma da Avaliação](cronograma.md):** planejamento detalhado das 22 atividades da Entrega 2, prazos, esforço e acompanhamento planejado vs. realizado.
-2. **Métodos e Instruções de Medição (POPs):** passos detalhados para cada métrica, garantindo repetibilidade e minimizando desvios. *(Em elaboração)*
-3. **Recursos e Ambiente de Avaliação:** especificação das configurações de hardware, software, rede, massa de dados simulada e perfil de participantes. *(Em elaboração)*
-4. **Instrumentos de Coleta:** roteiro do moderador, guia de observação, termo de consentimento (TCLE) e roteiro estruturado de entrevista. *(Em elaboração)*
+## 3.2 Rastreabilidade com a Fase 2
 
----
+A Tabela 3 liga cada métrica ao instrumento que a coleta e ao arquivo em que o dado bruto fica registrado. Assim, cada valor calculado na Fase 4 pode ser conferido até a sua origem.
+
+*Tabela 3 - Métrica, instrumento e arquivo de dados.*
+
+| Métrica | Instrumento | Arquivo de dados |
+| ------- | ----------- | ---------------- |
+| M1 | Lista de referência verificada por dois avaliadores | `inspecao/funcoes.csv` |
+| M2 | Conferência com o PPC, o calendário e os documentos do próprio SIGAA | `inspecao/correcao.csv` |
+| M3 | Questionário, item F1 | `questionario/respostas.csv` |
+| M4 | Gravações, comparadas com os itens válidos de primeira escolha | `testes-usuarios/sessoes.csv` e `referencia/caminhos.csv` |
+| M5 | Formulário de observação do moderador | `testes-usuarios/sessoes.csv` |
+| M6 | Gravações e tempos do especialista | `testes-usuarios/sessoes.csv` e `referencia/tempos-especialista.csv` |
+| M7 | Gravações e caminho mais curto | `testes-usuarios/sessoes.csv` e `referencia/caminhos.csv` |
+| M8 | Gravações, um registro por erro | `testes-usuarios/erros.csv` |
+| M9 | Extensão WAVE | `acessibilidade/wave/resumo.csv` e relatórios |
+| M10 | Inspeção manual com teclado, zoom e leitor de tela | `inspecao/acessibilidade-manual.csv` |
+| M11 | Perguntas de compreensão de T2, T4 e T6 | `testes-usuarios/compreensao.csv` |
+| M12 | Questionário SUS | `testes-usuarios/sus.csv` |
+| M13 | Matriz de 6 tarefas × 4 navegadores | `flexibilidade/navegadores.csv` |
+| M14 | Verificação das páginas em 360 px e 768 px | `flexibilidade/paginas-adaptadas.csv` |
+| M15 | Execução das tarefas no computador e no celular | `flexibilidade/tempos-celular.csv` |
+| M20 | Roteiro dos cenários de erro C1 a C6 | `inspecao/cenarios-erro.csv` |
+| MA1 | Formulário de observação do moderador | `testes-usuarios/sessoes.csv` |
+
+*Fonte: elaboração da equipe. Os arquivos ficam em `dados/brutos/`, exceto os de `referencia/`, que ficam em `dados/referencia/`.*
+
+## Referências
+
+[1] ISO/IEC 25040:2024. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Quality evaluation framework*.
 
 ## Histórico de Versão
 
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
-| 1.0 | 12/11/2026 | Criação da página inicial da Fase 3: visão geral, rastreabilidade com as fases anteriores e estrutura documental | [Davi Nobre](https://github.com/Jagaima) |
-| 1.1 | 12/11/2026 | Correção do número de atividades (22), remoção de referência a formulário online e alinhamento com cronograma v1.2 | [Davi Nobre](https://github.com/Jagaima) |
+| 1.0 | 10/11/2026 | Criação da fase: métodos de coleta, rastreabilidade entre métricas, instrumentos e arquivos de dados | Leonardo Bonetti |
+| 1.1 | 12/11/2026 | Criação da página inicial da Fase 3: visão geral, rastreabilidade com as fases anteriores e estrutura documental | [Davi Nobre](https://github.com/Jagaima) |
+| 1.2 | 12/11/2026 | Correção do número de atividades (22), remoção de referência a formulário online e alinhamento com cronograma v1.2 | [Davi Nobre](https://github.com/Jagaima) |
+| 1.3 | 14/11/2026 | Integração das duas versões da página: a tabela de rastreabilidade e a lista de seções em elaboração dão lugar às Tabelas 1 a 3, e o cronograma entra na Tabela 1 | Leonardo Bonetti |
+| 1.4 | 14/11/2026 | Questionário aplicado aos participantes do teste com usuários, ao fim da sessão | Leonardo Bonetti |
+| 1.5 | 14/11/2026 | Página de Recursos e Ambiente na Tabela 1; acesso às gravações remetido a ela | [Felipe Campêlo](https://github.com/felipeacampelo) |
