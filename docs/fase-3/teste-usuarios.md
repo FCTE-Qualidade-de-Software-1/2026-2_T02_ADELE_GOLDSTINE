@@ -4,7 +4,7 @@ Esta página define como cada sessão do teste com usuários é conduzida, para 
 
 ## 1. Participantes
 
-São **6 participantes**, em dois grupos de três. Os grupos usam os mesmos cortes de semestre do [questionário](../fase-2/questionario.md#4-perfis-usados-na-comparacao), para que os resultados do teste e do questionário possam ser comparados.
+São **6 participantes**, em dois grupos de três que **diferem apenas no semestre**. Os grupos usam os mesmos cortes de semestre do [questionário](../fase-2/questionario.md#4-perfis-usados-na-comparacao), para que os resultados do teste e do questionário possam ser comparados.
 
 *Tabela 1 - Grupos de participantes.*
 
@@ -15,9 +15,11 @@ São **6 participantes**, em dois grupos de três. Os grupos usam os mesmos cort
 
 *Fonte: elaboração da equipe.*
 
-**Critérios de inclusão:** ser estudante de graduação ativo da UnB, com acesso ao próprio SIGAA, e consentir com a gravação da sessão (premissa 6 do roteiro do trabalho).
+**Critérios de inclusão:** ser estudante de graduação ativo da UnB, com acesso ao próprio SIGAA, e consentir com a gravação da sessão (premissa 6 da especificação do trabalho).
 
-**Critérios de exclusão:** membros da equipe e pessoas que já conheçam os enunciados das tarefas, por exemplo por terem participado da sessão piloto ou conversado com outro participante.
+**Perfis que não são recrutados:** não é preciso encontrar estudantes com deficiência nem estudantes que usam só o celular. Esses perfis da Fase 1 são cobertos por inspeção da equipe: a inclusividade por M9 e M10 e o uso no celular por M14 e M15.
+
+**Critérios de exclusão:** membros da equipe e pessoas que já conheçam os enunciados das tarefas, por exemplo por terem conversado com outro participante.
 
 **Por que há reservas:** com três participantes por grupo, cada grupo fica exatamente no mínimo da regra 3 de [Níveis de Pontuação](../fase-2/niveis-pontuacao.md#regra-3-resultados-por-perfil-por-pagina-e-por-tarefa). Uma falta faria o recorte do grupo virar apenas descritivo, e a hipótese H5, que depende do recorte de calouros, ficaria inconclusiva.
 
@@ -54,8 +56,11 @@ Antes da **primeira** sessão:
 
 - Arquivo `caminhos.csv` preenchido, com o caminho mais curto, C<sub>min</sub> e os itens válidos de primeira escolha de cada tarefa ([Planilhas de Coleta](planilhas.md#2-arquivos-de-referencia)).
 - Tempos do especialista medidos: três execuções de cada tarefa, para M6.
-- Gabarito das perguntas de compreensão: tabela de horários da UnB para decodificar o código de horário (T2) e forma de leitura da carga horária pendente (T4).
-- Sessão piloto realizada (seção 10), com os ajustes registrados no Histórico de Versão desta página.
+- Gabarito das perguntas de compreensão: tabela de horários da UnB para decodificar o código de horário (T2), forma de leitura da carga horária pendente (T4) e data-limite de trancamento do semestre, conforme o calendário acadêmico publicado pela UnB (T6).
+- Verificação feita pela equipe nas próprias contas, ao medir os tempos do especialista:
+    - os gabaritos de T2, T4 e T6 permitem decidir a resposta sem ambiguidade;
+    - o calendário acadêmico de T6 abre dentro do SIGAA ou em página externa. Se abrir fora, a regra que define se a resposta conta como consulta a fonte externa é registrada no Histórico de Versão desta página antes da primeira sessão;
+    - a gravação mostra os cliques com clareza.
 
 Antes de **cada** sessão:
 
@@ -63,11 +68,13 @@ Antes de **cada** sessão:
 - SIGAA acessível e janela anônima aberta na página de login.
 - Gravador testado, ainda sem gravar.
 
+Não há sessão piloto. Por isso, não são verificados antes da coleta o entendimento dos enunciados por quem nunca os viu, a duração da sessão e a disponibilidade de cada tarefa na conta de cada participante, como nota lançada (T1), carga horária exibida no 1º semestre (T4) e material publicado (T5). Essas limitações são declaradas na análise.
+
 ## 5. Roteiro da sessão
 
 As falas entre aspas são lidas como estão escritas, para que todos os participantes recebam as mesmas instruções.
 
-1. **Consentimento (cerca de 5 min).** O moderador explica o objetivo da sessão e o que será gravado, responde a dúvidas e obtém o consentimento do participante para a gravação, antes de qualquer gravação. Sem consentimento, a sessão não acontece, porque M4, M6 e M7 dependem da gravação.
+1. **Consentimento (cerca de 5 min).** O moderador entrega o [Termo de Consentimento Livre e Esclarecido](termo-consentimento.docx) em duas vias, explica o objetivo da sessão e o que será gravado e responde a dúvidas. O participante marca a opção de gravação e assina as duas vias, antes de qualquer gravação, e fica com uma delas. Se o participante não autorizar a gravação, a sessão não acontece, porque M4, M6, M7 e M8 dependem dela. A via assinada fica guardada separada dos dados da sessão e não vai para o repositório, porque contém o nome do participante.
 2. **Perguntas iniciais (cerca de 3 min).** O moderador anota no formulário: semestre; se prevê concluir o curso nos próximos dois semestres; e, para cada tarefa, se o participante já a fez no SIGAA alguma vez. A pergunta é feita com a descrição curta da Tabela 4, sem citar menus. Essa resposta alimenta o recorte de calouros de M5.
 3. **Entrada no sistema.** O participante entra no SIGAA com a própria conta. O moderador não olha o teclado. Só depois que a página inicial do Portal do Discente aparece o moderador inicia a gravação.
 4. **Instruções (cerca de 2 min).** O moderador lê:
@@ -77,7 +84,7 @@ As falas entre aspas são lidas como estão escritas, para que todos os particip
     2. O participante lê em voz alta. O tempo começa ao fim da leitura (marcação de início de M6).
     3. A tarefa termina quando ocorre um dos fins da Tabela 6 (seção 8).
     4. Em T2, T4 e T6, com a página ainda aberta, o moderador faz a pergunta de compreensão da Tabela 4 e anota a resposta e se o participante abriu legenda ou ajuda.
-6. **Questionário SUS (cerca de 3 min).** Logo após a última tarefa, o moderador lê: "Agora responda a este questionário sozinho, pensando no SIGAA como um todo. Marque uma opção em cada item. Se não tiver certeza, marque o meio da escala." Depois se afasta e não comenta os itens.
+6. **Questionário SUS (cerca de 3 min).** Logo após a última tarefa, o moderador lê: "Agora responda a este questionário sozinho, pensando no que você usou hoje no SIGAA. Marque uma opção em cada item. Se não tiver certeza, marque o meio da escala." Depois se afasta e não comenta os itens.
 7. **Encerramento (cerca de 2 min).** O moderador para a gravação. O participante sai do SIGAA e o moderador fecha a janela anônima e apaga o atestado baixado em T3. O moderador agradece e pede: "Por favor, não comente as tarefas com colegas que ainda possam participar."
 
 A sessão dura cerca de 45 minutos.
@@ -86,6 +93,11 @@ A sessão dura cerca de 45 minutos.
 
 Os enunciados dizem o que obter, sem nomes de menu, para não indicar o caminho, o que afetaria M4. As tarefas são as T1 a T6 do [escopo da Fase 1](../fase-1/escopo.md#21-tarefas-representativas). Em T2, T4 e T6, a tarefa pede para **localizar** a informação, o que é medido por M5, e a pergunta de compreensão pede para **interpretá-la**, o que é medido por M11.
 
+Duas tarefas usam só parte da descrição da Fase 1, para manter um único resultado por tarefa:
+
+- **T3** pede apenas o atestado de matrícula, sem o histórico escolar. Os dois documentos ficam no mesmo menu, e o histórico repetiria o caminho sem medir nada novo. O histórico continua sendo emitido pela equipe, que o usa nas conferências de M2.
+- **T4** pede apenas a carga horária cumprida e a pendente, sem os índices acadêmicos. Pedir os índices exigiria usar o mesmo termo do menu, o que indicaria o caminho e afetaria M4. A existência e a correção dos índices são verificadas pela equipe em M1 e M2.
+
 *Tabela 4 - Enunciados, critério de conclusão e perguntas de compreensão.*
 
 | Tarefa | Descrição curta (pergunta inicial) | Enunciado do cartão | Concluída quando o participante | Pergunta de compreensão (M11) |
@@ -93,7 +105,7 @@ Os enunciados dizem o que obter, sem nomes de menu, para não indicar o caminho,
 | T1 | Consultar notas | "Descubra a nota que você tem até agora em uma das suas disciplinas deste semestre, à sua escolha." | Informa a nota da disciplina exatamente como a página de notas a exibe | - |
 | T2 | Ver o horário e o local de uma turma | "Encontre o horário e o local da aula de uma das suas turmas deste semestre, à sua escolha." | Mostra a informação de horário da turma e informa o local | "Pelo que aparece na tela, em quais dias da semana e em que horário essa turma tem aula?" |
 | T3 | Emitir atestado de matrícula | "Gere o seu atestado de matrícula deste semestre." | Abre ou baixa o documento | - |
-| T4 | Ver índices e o que falta para se formar | "Encontre a página que mostra o quanto você já cumpriu do seu curso e o quanto ainda falta." | Mostra a página com a carga horária cumprida e a pendente | "Pelo que aparece na tela, quantas horas ainda faltam para você concluir o curso?" |
+| T4 | Ver o que falta para se formar | "Encontre a página que mostra o quanto você já cumpriu do seu curso e o quanto ainda falta." | Mostra a página com a carga horária cumprida e a pendente | "Pelo que aparece na tela, quantas horas ainda faltam para você concluir o curso?" |
 | T5 | Abrir um material da Turma Virtual | "Abra um arquivo ou link que um professor publicou para uma das suas turmas deste semestre." | Abre o material | - |
 | T6 | Consultar o calendário acadêmico | "Abra o calendário acadêmico deste semestre." | Mostra o calendário do semestre corrente | "Pelo calendário, até que dia é possível trancar uma disciplina neste semestre?" |
 
@@ -145,7 +157,7 @@ Depois da sessão, o avaliador da gravação registra:
 
 ## 9. Questionário SUS
 
-O SUS [1] é aplicado em português, com escala de 1 (discordo totalmente) a 5 (concordo totalmente). A pontuação segue a ficha de M12.
+O SUS [1] é aplicado em português, com escala de 1 (discordo totalmente) a 5 (concordo totalmente). A pontuação segue a ficha de M12. Nos itens, "este sistema" se refere ao que o participante usou na sessão: o portal do discente nas tarefas T1 a T6, e não módulos fora do [escopo](../fase-1/escopo.md#4-o-que-fica-fora-do-escopo), como a matrícula on-line.
 
 *Tabela 7 - Itens do questionário SUS.*
 
@@ -164,17 +176,6 @@ O SUS [1] é aplicado em português, com escala de 1 (discordo totalmente) a 5 (
 
 *Fonte: tradução dos itens de Brooke [1].*
 
-## 10. Sessão piloto
-
-Uma sessão completa é feita antes da coleta com um estudante que não fará parte da amostra. O piloto verifica:
-
-- se os enunciados são entendidos sem explicação;
-- se todas as tarefas são possíveis no período da coleta: nota já lançada (T1), índices disponíveis para quem está no 1º semestre (T4) e material publicado na Turma Virtual (T5);
-- se os gabaritos de T2 e T4 permitem decidir a resposta sem ambiguidade;
-- se a gravação mostra os cliques com clareza e se a sessão cabe em 45 minutos.
-
-Os dados do piloto não entram nas métricas. Os ajustes feitos depois dele são registrados no Histórico de Versão desta página **antes** da primeira sessão válida.
-
 ## Referências
 
 [1] BROOKE, J. SUS: a "quick and dirty" usability scale. In: *Usability Evaluation in Industry*. Taylor & Francis, 1996.
@@ -184,3 +185,10 @@ Os dados do piloto não entram nas métricas. Os ajustes feitos depois dele são
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 10/11/2026 | Protocolo do teste com usuários: participantes, papéis, ambiente, roteiro, enunciados, ordem das tarefas, registro, SUS e sessão piloto | Leonardo Bonetti |
+| 1.1 | 10/11/2026 | Grupos diferem apenas no semestre; perfis com deficiência e só celular cobertos por inspeção, sem recrutamento | Leonardo Bonetti |
+| 1.2 | 11/11/2026 | Instrução do SUS restrita ao que o participante usou na sessão | Leonardo Bonetti |
+| 1.3 | 11/11/2026 | Justificativa dos recortes de T3 e T4 em relação à Fase 1 | Leonardo Bonetti |
+| 1.4 | 11/11/2026 | Gabarito da pergunta de compreensão de T6 e verificação do link do calendário no piloto | Leonardo Bonetti |
+| 1.5 | 11/11/2026 | Retirada da sessão piloto; verificações possíveis passam à preparação feita pela equipe e as demais são declaradas como limitação | Leonardo Bonetti |
+| 1.6 | 14/11/2026 | Consentimento pelo Termo de Consentimento Livre e Esclarecido em duas vias, guardado separado dos dados; M8 incluída entre as métricas que dependem da gravação | Leonardo Bonetti |
+| 1.7 | 14/11/2026 | Termo de Consentimento Livre e Esclarecido incluído na Fase 3 e ligado ao passo 1 do roteiro | Leonardo Bonetti |
