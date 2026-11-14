@@ -30,7 +30,7 @@ As métricas são obtidas por três métodos, já previstos nos [instrumentos de
 | Método | Métricas | Quem executa | Fonte do procedimento |
 | ------ | -------- | ------------ | --------------------- |
 | Teste com usuários | M4, M5, M6, M7, M8, M11, M12 e MA1 | Moderador e avaliador da gravação, com 6 estudantes | [Protocolo do Teste com Usuários](teste-usuarios.md) |
-| Questionário online | M3 e lista de referência de M1 | Estudantes de graduação, de forma anônima | [Questionário](../fase-2/questionario.md) |
+| Questionário ao fim da sessão | M3 e lista de referência de M1 | Os 6 participantes do teste com usuários, logo após o SUS, identificados só pelo código | [Questionário](../fase-2/questionario.md), aplicado no passo 7 do [roteiro da sessão](teste-usuarios.md#5-roteiro-da-sessao) |
 | Inspeção pela equipe | M1, M2, M9, M10, M13, M14, M15 e M20 | Dois avaliadores independentes e um terceiro para divergências, nas métricas em que a ficha o exige | Fichas das métricas em [Métricas](../fase-2/metricas.md) |
 
 *Fonte: elaboração da equipe.*
@@ -45,7 +45,7 @@ A Tabela 3 liga cada métrica ao instrumento que a coleta e ao arquivo em que o 
 | ------- | ----------- | ---------------- |
 | M1 | Lista de referência verificada por dois avaliadores | `inspecao/funcoes.csv` |
 | M2 | Conferência com o PPC, o calendário e os documentos do próprio SIGAA | `inspecao/correcao.csv` |
-| M3 | Questionário online, item F1 | `questionario/respostas.csv` |
+| M3 | Questionário, item F1 | `questionario/respostas.csv` |
 | M4 | Gravações, comparadas com os itens válidos de primeira escolha | `testes-usuarios/sessoes.csv` e `referencia/caminhos.csv` |
 | M5 | Formulário de observação do moderador | `testes-usuarios/sessoes.csv` |
 | M6 | Gravações e tempos do especialista | `testes-usuarios/sessoes.csv` e `referencia/tempos-especialista.csv` |
@@ -75,4 +75,5 @@ A Tabela 3 liga cada métrica ao instrumento que a coleta e ao arquivo em que o 
 | 1.1 | 12/11/2026 | Criação da página inicial da Fase 3: visão geral, rastreabilidade com as fases anteriores e estrutura documental | [Davi Nobre](https://github.com/Jagaima) |
 | 1.2 | 12/11/2026 | Correção do número de atividades (22), remoção de referência a formulário online e alinhamento com cronograma v1.2 | [Davi Nobre](https://github.com/Jagaima) |
 | 1.3 | 14/11/2026 | Integração das duas versões da página: a tabela de rastreabilidade e a lista de seções em elaboração dão lugar às Tabelas 1 a 3, e o cronograma entra na Tabela 1 | Leonardo Bonetti |
-| 1.4 | 14/11/2026 | Página de Recursos e Ambiente na Tabela 1; acesso às gravações remetido a ela | [Felipe Campêlo](https://github.com/felipeacampelo) |
+| 1.4 | 14/11/2026 | Questionário aplicado aos participantes do teste com usuários, ao fim da sessão | Leonardo Bonetti |
+| 1.5 | 14/11/2026 | Página de Recursos e Ambiente na Tabela 1; acesso às gravações remetido a ela | [Felipe Campêlo](https://github.com/felipeacampelo) |

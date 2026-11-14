@@ -60,11 +60,11 @@ Em `sessoes.csv`, `tempo_s` e `cliques` só são usados em M6 e M7 quando `concl
 
 | Arquivo | Uma linha por | Colunas | Métricas |
 | ------- | ------------- | ------- | -------- |
-| `dados/brutos/questionario/respostas.csv` | Resposta válida | `resposta` (R1, R2...); `data_hora`; `consentimento`; uma coluna por item da página [Questionário](../fase-2/questionario.md#3-itens-do-questionario), de `a1` a `f5` (o item C1.1 vira `c1_1`) | M3, M1 |
+| `dados/brutos/questionario/respostas.csv` | Participante do teste com usuários | `participante` (P1 a P6); uma coluna por item da página [Questionário](../fase-2/questionario.md#3-itens-do-questionario), de `a1` a `f5`, exceto os do bloco E, que não é aplicado porque o SUS já foi respondido na sessão (o item C1.1 vira `c1_1`) | M3, M1 |
 
 *Fonte: elaboração da equipe.*
 
-A exportação do formulário é convertida para esses nomes de coluna. Respostas abertas (F2 a F5) são revisadas antes da publicação para retirar qualquer dado que identifique o respondente.
+Respostas abertas (F2 a F5) são revisadas antes da publicação para retirar qualquer dado que identifique o respondente.
 
 ## 5. Inspeções
 
@@ -111,3 +111,4 @@ Só a linha `geral` de cada métrica entra no julgamento. Os demais recortes loc
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 10/11/2026 | Formato dos arquivos de dados da Tabela 19 de Métricas e convenções de preenchimento | Leonardo Bonetti |
+| 1.1 | 14/11/2026 | Questionário com uma linha por participante (P1 a P6), sem as colunas de data, consentimento e bloco E | Leonardo Bonetti |

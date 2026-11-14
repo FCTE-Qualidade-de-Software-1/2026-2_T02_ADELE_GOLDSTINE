@@ -1,6 +1,6 @@
 # Protocolo do Teste com Usuários
 
-Esta página define como cada sessão do teste com usuários é conduzida, para que qualquer membro da equipe a execute do mesmo jeito e as medidas possam ser comparadas. O teste fornece as métricas M4, M5, M6, M7, M8, M11 e M12 e a métrica auxiliar MA1. As regras de medição vêm das fichas da página [Métricas](../fase-2/metricas.md) e não são alteradas aqui: este protocolo diz como obter os dados que elas pedem.
+Esta página define como cada sessão do teste com usuários é conduzida, para que qualquer membro da equipe a execute do mesmo jeito e as medidas possam ser comparadas. O teste fornece as métricas M4, M5, M6, M7, M8, M11 e M12 e a métrica auxiliar MA1. O questionário da Fase 2, aplicado ao fim da sessão, fornece M3 e parte da lista de referência de M1. As regras de medição vêm das fichas da página [Métricas](../fase-2/metricas.md) e não são alteradas aqui: este protocolo diz como obter os dados que elas pedem.
 
 ## 1. Participantes
 
@@ -15,7 +15,7 @@ São **6 participantes**, em dois grupos de três que **diferem apenas no semest
 
 *Fonte: elaboração da equipe.*
 
-**Critérios de inclusão:** ser estudante de graduação ativo da UnB, com acesso ao próprio SIGAA, e consentir com a gravação da sessão (premissa 6 da especificação do trabalho).
+**Critérios de inclusão:** ser estudante de graduação ativo da UnB, ter 18 anos ou mais, ter acesso ao próprio SIGAA e consentir com a gravação da sessão (premissa 6 da especificação do trabalho). A idade mínima existe porque a participação de menores de 18 anos exigiria a autorização de um responsável, que o termo de consentimento não prevê.
 
 **Perfis que não são recrutados:** não é preciso encontrar estudantes com deficiência nem estudantes que usam só o celular. Esses perfis da Fase 1 são cobertos por inspeção da equipe: a inclusividade por M9 e M10 e o uso no celular por M14 e M15.
 
@@ -46,7 +46,7 @@ Estudantes do 3º ou 4º semestre não são recrutados, porque formam o grupo de
 | Navegador | Google Chrome na versão estável vigente, em janela anônima, sem extensões e com zoom de 100%. Um único navegador em todas as sessões evita que diferenças entre navegadores afetem os tempos. A comparação entre navegadores é feita à parte, em M13 |
 | Gravação | Tela e áudio, sem câmera, em vídeo com marcação de tempo. Se o gravador permitir, destacar os cliques, o que facilita a contagem de M7 |
 | Rede | A rede disponível no local, registrada no formulário |
-| Materiais impressos ou em tela separada | Cartões com um enunciado por tarefa, formulário de observação e questionário SUS |
+| Materiais impressos ou em tela separada | Cartões com um enunciado por tarefa, formulário de observação, questionário SUS e questionário da Fase 2 sem o bloco E |
 
 *Fonte: elaboração da equipe.*
 
@@ -85,9 +85,10 @@ As falas entre aspas são lidas como estão escritas, para que todos os particip
     3. A tarefa termina quando ocorre um dos fins da Tabela 6 (seção 8).
     4. Em T2, T4 e T6, com a página ainda aberta, o moderador faz a pergunta de compreensão da Tabela 4 e anota a resposta e se o participante abriu legenda ou ajuda.
 6. **Questionário SUS (cerca de 3 min).** Logo após a última tarefa, o moderador lê: "Agora responda a este questionário sozinho, pensando no que você usou hoje no SIGAA. Marque uma opção em cada item. Se não tiver certeza, marque o meio da escala." Depois se afasta e não comenta os itens.
-7. **Encerramento (cerca de 2 min).** O moderador para a gravação. O participante sai do SIGAA e o moderador fecha a janela anônima e apaga o atestado baixado em T3. O moderador agradece e pede: "Por favor, não comente as tarefas com colegas que ainda possam participar."
+7. **Questionário (cerca de 6 min).** Logo após o SUS, o moderador entrega o [questionário da Fase 2](../fase-2/questionario.md#3-itens-do-questionario) sem o bloco E, que repetiria o SUS já respondido, e anota nele o código do participante, sem o nome. O texto de apresentação do questionário não é lido, porque o consentimento já foi obtido pelo termo. O moderador lê: "Agora, um último questionário. Desta vez, pense em como você usa o SIGAA no dia a dia, e não só no que fez hoje. Responda sozinho. As perguntas abertas são opcionais." Depois se afasta e não comenta os itens.
+8. **Encerramento (cerca de 2 min).** O moderador para a gravação. O participante sai do SIGAA e o moderador fecha a janela anônima e apaga o atestado baixado em T3. O moderador agradece e pede: "Por favor, não comente as tarefas com colegas que ainda possam participar."
 
-A sessão dura cerca de 45 minutos.
+A sessão dura cerca de 35 minutos. Se todas as tarefas chegarem ao limite de 5 minutos, chega a cerca de 50 minutos.
 
 ## 6. Tarefas e perguntas de compreensão
 
@@ -192,3 +193,5 @@ O SUS [1] é aplicado em português, com escala de 1 (discordo totalmente) a 5 (
 | 1.5 | 11/11/2026 | Retirada da sessão piloto; verificações possíveis passam à preparação feita pela equipe e as demais são declaradas como limitação | Leonardo Bonetti |
 | 1.6 | 14/11/2026 | Consentimento pelo Termo de Consentimento Livre e Esclarecido em duas vias, guardado separado dos dados; M8 incluída entre as métricas que dependem da gravação | Leonardo Bonetti |
 | 1.7 | 14/11/2026 | Termo de Consentimento Livre e Esclarecido incluído na Fase 3 e ligado ao passo 1 do roteiro | Leonardo Bonetti |
+| 1.8 | 14/11/2026 | Questionário da Fase 2 aplicado ao fim da sessão, sem o bloco E | Leonardo Bonetti |
+| 1.9 | 14/11/2026 | Idade mínima de 18 anos nos critérios de inclusão e duração da sessão igual à do termo (cerca de 35 minutos) | Leonardo Bonetti |
