@@ -15,7 +15,7 @@ São **6 participantes**, em dois grupos de três que **diferem apenas no semest
 
 *Fonte: elaboração da equipe.*
 
-**Critérios de inclusão:** ser estudante de graduação ativo da UnB, com acesso ao próprio SIGAA, e consentir com a gravação da sessão (premissa 6 da especificação do trabalho).
+**Critérios de inclusão:** ser estudante de graduação ativo da UnB, ter 18 anos ou mais, ter acesso ao próprio SIGAA e consentir com a gravação da sessão (premissa 6 da especificação do trabalho). A idade mínima existe porque a participação de menores de 18 anos exigiria a autorização de um responsável, que o termo de consentimento não prevê.
 
 **Perfis que não são recrutados:** não é preciso encontrar estudantes com deficiência nem estudantes que usam só o celular. Esses perfis da Fase 1 são cobertos por inspeção da equipe: a inclusividade por M9 e M10 e o uso no celular por M14 e M15.
 
@@ -88,7 +88,7 @@ As falas entre aspas são lidas como estão escritas, para que todos os particip
 7. **Questionário (cerca de 6 min).** Logo após o SUS, o moderador entrega o [questionário da Fase 2](../fase-2/questionario.md#3-itens-do-questionario) sem o bloco E, que repetiria o SUS já respondido, e anota nele o código do participante, sem o nome. O texto de apresentação do questionário não é lido, porque o consentimento já foi obtido pelo termo. O moderador lê: "Agora, um último questionário. Desta vez, pense em como você usa o SIGAA no dia a dia, e não só no que fez hoje. Responda sozinho. As perguntas abertas são opcionais." Depois se afasta e não comenta os itens.
 8. **Encerramento (cerca de 2 min).** O moderador para a gravação. O participante sai do SIGAA e o moderador fecha a janela anônima e apaga o atestado baixado em T3. O moderador agradece e pede: "Por favor, não comente as tarefas com colegas que ainda possam participar."
 
-A sessão dura cerca de 45 minutos.
+A sessão dura cerca de 35 minutos. Se todas as tarefas chegarem ao limite de 5 minutos, chega a cerca de 50 minutos.
 
 ## 6. Tarefas e perguntas de compreensão
 
@@ -194,3 +194,4 @@ O SUS [1] é aplicado em português, com escala de 1 (discordo totalmente) a 5 (
 | 1.6 | 14/11/2026 | Consentimento pelo Termo de Consentimento Livre e Esclarecido em duas vias, guardado separado dos dados; M8 incluída entre as métricas que dependem da gravação | Leonardo Bonetti |
 | 1.7 | 14/11/2026 | Termo de Consentimento Livre e Esclarecido incluído na Fase 3 e ligado ao passo 1 do roteiro | Leonardo Bonetti |
 | 1.8 | 14/11/2026 | Questionário da Fase 2 aplicado ao fim da sessão, sem o bloco E | Leonardo Bonetti |
+| 1.9 | 14/11/2026 | Idade mínima de 18 anos nos critérios de inclusão e duração da sessão igual à do termo (cerca de 35 minutos) | Leonardo Bonetti |
