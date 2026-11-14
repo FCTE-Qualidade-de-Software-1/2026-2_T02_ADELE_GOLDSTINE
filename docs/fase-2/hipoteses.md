@@ -2,13 +2,13 @@
 
 ## Como as hipóteses são formuladas e classificadas
 
-Cada questão tem uma hipótese (H1 a H12 ↔ Q1 a Q12) que declara, **antes da coleta**, a resposta esperada. A hipótese é expressa como o nível esperado de cada métrica da questão, com um critério de confirmação numérico que usa as faixas de [Níveis de Pontuação](niveis-pontuacao.md#faixas-por-metrica). Cada hipótese indica seu fundamento na Fase 1: as observações preliminares OP-01 a OP-08 ([Software Avaliado](../fase-1/software-avaliado.md#4-observacoes-preliminares-da-interface)) ou a justificativa das notas da [matriz Impacto x Risco](../fase-1/caracteristicas.md#21-justificativa-das-notas).
+Cada questão tem uma hipótese com o mesmo número (H1 a H16 ↔ Q1 a Q16) que declara, **antes da coleta**, a resposta esperada. Como cada questão tem uma única métrica, a hipótese é expressa como o nível esperado dessa métrica, com um critério de confirmação numérico que usa as faixas de [Níveis de Pontuação](niveis-pontuacao.md#faixas-por-metrica). Cada hipótese indica seu fundamento na Fase 1: as observações preliminares OP-01 a OP-08 ([Software Avaliado](../fase-1/software-avaliado.md#4-observacoes-preliminares-da-interface)) ou a justificativa das notas da [matriz Impacto x Risco](../fase-1/caracteristicas.md#21-justificativa-das-notas).
 
 Na Fase 4, cada hipótese será classificada como:
 
-- **Confirmada:** todas as métricas do critério de confirmação ficaram nas faixas esperadas;
-- **Refutada:** ao menos uma métrica com dados ficou fora da faixa esperada;
-- **Inconclusiva:** ao menos uma métrica do critério ficou sem dados suficientes (métrica não aplicável, regra 1, ou recorte com menos de três participantes, regra 3 de [Níveis de Pontuação](niveis-pontuacao.md#regras-complementares)), e as demais não bastam para refutar a hipótese.
+- **Confirmada:** todas as condições do critério de confirmação foram atendidas;
+- **Refutada:** ao menos uma condição com dados não foi atendida;
+- **Inconclusiva:** ao menos uma condição do critério ficou sem dados suficientes (métrica não aplicável, regra 1, ou recorte com menos de três participantes, regra 3 de [Níveis de Pontuação](niveis-pontuacao.md#regras-complementares)), e as demais não bastam para refutar a hipótese.
 
 Uma hipótese refutada não é uma falha da avaliação: ela indica que a percepção registrada na Fase 1 não se confirmou e é discutida na Fase 4.
 
@@ -30,11 +30,14 @@ Uma hipótese refutada não é uma falha da avaliação: ela indica que a percep
 | -- | ------- | -------- | ----------------------- |
 | H4 | Q4 | Entre 50% e 75% das tentativas começam com a primeira escolha de menu correta, porque o menu Ensino reúne cerca de 20 itens de naturezas diferentes em um único nível. Fundamento: OP-04. | M4 ≥ 50% e < 75% (Regular) |
 | H5 | Q5 | Os estudantes concluem a maior parte das tarefas sem ajuda, mas os calouros, por desconhecerem a terminologia acadêmica e a organização dos menus, concluem menos de 65% das tarefas no primeiro contato. Fundamento: OP-01 e OP-04; perfil calouro. | M5 ≥ 78% e < 90% (Bom); no recorte de calouros, com ao menos três participantes, M5 < 65% (Regular ou Insatisfatório) |
-| H6 | Q6 | Os participantes que concluem as tarefas gastam bem mais tempo e cliques que o especialista, por causa do menu extenso e das duas estruturas de navegação: o sistema é usável, porém trabalhoso. Fundamento: OP-04 e OP-05; justificativa R = 5 de Capacidade de Interação. | M6 > 2,5 e ≤ 4,0 (Regular) e M7 > 1,33 e ≤ 2,00 (Regular); Q6 Regular |
-| H7 | Q7 | O sistema trata no máximo dois dos seis cenários de erro previstos, falhando sobretudo no uso do botão Voltar do navegador e na expiração da sessão, e os estudantes se recuperam sem ajuda e sem retrabalho de 50% a 70% dos erros. Fundamento: OP-06. | M20 < 50%, isto é, 0 a 2 cenários tratados (Insatisfatório), e M8 ≥ 50% e < 70% (Regular); Q7 Insatisfatório |
-| H8 | Q8 | As páginas têm erros automáticos de acessibilidade frequentes, como campos sem rótulo e links sem texto, típicos de uma interface antiga com muitos elementos, mas parte dos critérios manuais é atendida, com apoio do recurso de ampliação de fonte (A+/A-). Fundamento: OP-08 (ponto positivo); interface JSF que gera páginas com muitos elementos, registrada na [justificativa das notas](../fase-1/caracteristicas.md#21-justificativa-das-notas) da Fase 1. | M9 > 5 erros por página (Insatisfatório) e M10 ≥ 75% e < 90%, isto é, 18 a 21 das 24 verificações (Regular); Q8 Insatisfatório |
-| H9 | Q9 | A pergunta sobre o código de horário de T2 tem menos de 50% de acertos sem legenda, e o conjunto das três perguntas de compreensão fica entre 50% e 75%. Fundamento: OP-01. | M11 ≥ 50% e < 75% (Regular), com a pergunta de T2 abaixo de 50% no resultado por pergunta |
-| H10 | Q10 | A pontuação SUS média fica entre 51 e 68, abaixo da média de referência dos sistemas avaliados com o questionário. Fundamento: justificativa R = 5 de Capacidade de Interação (queixa mais frequente entre os colegas). | M12 ≥ 51 e < 68 (Regular) |
+| H6 | Q6 | Os participantes que concluem as tarefas levam bem mais tempo que o especialista, por causa do menu extenso e das duas estruturas de navegação: o sistema é usável, porém trabalhoso. Fundamento: OP-04 e OP-05; justificativa R = 5 de Capacidade de Interação. | M6 > 2,5 e ≤ 4,0 (Regular) |
+| H7 | Q7 | Os participantes fazem bem mais cliques que o caminho mais curto, porque o menu extenso e as duas estruturas de navegação levam a escolhas erradas e a retornos. Fundamento: OP-04 e OP-05. | M7 > 1,33 e ≤ 2,00 (Regular) |
+| H8 | Q8 | Os estudantes se recuperam sem ajuda e sem retrabalho de 50% a 70% dos erros, porque parte deles, como a expiração da sessão, obriga a refazer passos. Fundamento: OP-06. | M8 ≥ 50% e < 70% (Regular) |
+| H9 | Q9 | O sistema trata no máximo dois dos seis cenários de erro previstos, falhando sobretudo no uso do botão Voltar do navegador e na expiração da sessão. Fundamento: OP-06. | M20 < 50%, isto é, 0 a 2 cenários tratados (Insatisfatório) |
+| H10 | Q10 | As páginas têm erros automáticos de acessibilidade frequentes, como campos sem rótulo e links sem texto, típicos de uma interface antiga com muitos elementos. Fundamento: interface JSF que gera páginas com muitos elementos, registrada na [justificativa das notas](../fase-1/caracteristicas.md#21-justificativa-das-notas) da Fase 1. | M9 > 5 erros por página (Insatisfatório) |
+| H11 | Q11 | Parte dos critérios manuais de acessibilidade é atendida, com apoio do recurso de ampliação de fonte (A+/A-), mas não todos. Fundamento: OP-08 (ponto positivo). | M10 ≥ 75% e < 90%, isto é, 18 a 21 das 24 verificações (Regular) |
+| H12 | Q12 | A pergunta sobre o código de horário de T2 tem menos de 50% de acertos sem legenda, e o conjunto das três perguntas de compreensão fica entre 50% e 75%. Fundamento: OP-01. | M11 ≥ 50% e < 75% (Regular), com a pergunta de T2 abaixo de 50% no resultado por pergunta |
+| H13 | Q13 | A pontuação SUS média fica entre 51 e 68, abaixo da média de referência dos sistemas avaliados com o questionário. Fundamento: justificativa R = 5 de Capacidade de Interação (queixa mais frequente entre os colegas). | M12 ≥ 51 e < 68 (Regular) |
 
 ## G3 - Flexibilidade (Portabilidade)
 
@@ -42,8 +45,9 @@ Uma hipótese refutada não é uma falha da avaliação: ela indica que a percep
 
 | ID | Questão | Hipótese | Critério de confirmação |
 | -- | ------- | -------- | ----------------------- |
-| H11 | Q11 | As tarefas funcionam nos quatro navegadores de computador, com falhas pontuais em no máximo duas combinações, como a geração do documento em PDF de T3 em um navegador que bloqueia a janela. Os problemas de flexibilidade registrados na Fase 1 dizem respeito a telas pequenas e ao toque e são tratados em Q12. Fundamento: justificativa R = 4 de Flexibilidade, baseada em OP-02 e OP-03, que não afetam o computador. | M13 ≥ 90% e < 100%, isto é, 22 ou 23 das 24 combinações (Bom) |
-| H12 | Q12 | Menos da metade das verificações página × largura é adaptada, por causa do layout de largura fixa e dos menus abertos pela passagem do ponteiro, e as tarefas no celular levam entre 1,5 e 2 vezes o tempo no computador. Fundamento: OP-02 e OP-03. | M14 < 50%, isto é, 5 ou menos das 12 verificações (Insatisfatório), e M15 > 1,5 e ≤ 2,0 (Regular); Q12 Insatisfatório |
+| H14 | Q14 | As tarefas funcionam nos quatro navegadores de computador, com falhas pontuais em no máximo duas combinações, como a geração do documento em PDF de T3 em um navegador que bloqueia a janela. Os problemas de flexibilidade registrados na Fase 1 dizem respeito a telas pequenas e ao toque e são tratados em Q15 e Q16. Fundamento: justificativa R = 4 de Flexibilidade, baseada em OP-02 e OP-03, que não afetam o computador. | M13 ≥ 90% e < 100%, isto é, 22 ou 23 das 24 combinações (Bom) |
+| H15 | Q15 | Menos da metade das verificações página × largura é adaptada, por causa do layout de largura fixa e dos menus abertos pela passagem do ponteiro. Fundamento: OP-02 e OP-03. | M14 < 50%, isto é, 5 ou menos das 12 verificações (Insatisfatório) |
+| H16 | Q16 | As tarefas no celular levam entre 1,5 e 2 vezes o tempo no computador, pelo zoom, pela rolagem horizontal e pelos menus que não abrem ao toque. Fundamento: OP-02 e OP-03. | M15 > 1,5 e ≤ 2,0 (Regular) |
 
 ## Hipóteses de relação entre as características
 
@@ -65,3 +69,4 @@ O roteiro exige discutir, ao final, as relações entre as características (pre
 | 2.0 | 18/10/2026 | Estrutura da página alinhada à Fase 1 reestruturada (H1 a H14), para preenchimento | Felipe Campêlo |
 | 2.1 | 18/10/2026 | Preenchimento das hipóteses H1 a H14 a partir da versão complementar, com fundamento na Fase 1 e critério de confirmação numérico; critérios de classificação das hipóteses; hipóteses de relação HR1 a HR4 | Leonardo Bonetti |
 | 2.2 | 25/10/2026 | Remoção de H13, H14 e das hipóteses de relação com Eficiência de Desempenho (antigas HR2 e HR4); antiga HR3 renumerada para HR2; fundamento de H8 reescrito | Leonardo Bonetti |
+| 2.3 | 25/10/2026 | Uma hipótese por questão (H1 a H16 ↔ Q1 a Q16): H6, H7, H8 e H12 antigas divididas, cada uma com o valor esperado da sua métrica; critérios de classificação por condição | Leonardo Bonetti |

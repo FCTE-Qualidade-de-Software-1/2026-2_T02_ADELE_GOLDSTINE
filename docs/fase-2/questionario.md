@@ -125,9 +125,9 @@ O questionário alimenta a métrica M3 (com nível de pontuação) e a lista de 
 | - | Insumo da lista de referência de M1 | F2, F3, F4 | Funções citadas, consolidadas e sem duplicatas | Q1 |
 | IQ1 | Facilidade percebida por tarefa | C1.1 a C1.6 | Mediana e média por tarefa, ignorando "Nunca fiz"; também por grupo | Q4 e Q5; ranking das tarefas |
 | IQ2 | Proporção de tarefas em que o estudante já precisou de ajuda | C2 | Tarefas marcadas / 6, média por grupo | Q5 (apreensibilidade) |
-| IQ3 | Acerto na interpretação sem legenda | D1, D2 | Proporção de respostas corretas por item e por grupo | Q9; compara com M11 |
-| IQ4 | SUS do questionário | E1 a E10 | Mesmo cálculo de M12 (0 a 100), média por grupo | Q10; compara com M12 |
-| IQ5 | Dependência do celular e problemas no celular | B1, B2, B5 | Proporção de dependentes do celular; frequência de cada problema | Q12; decisão da STI sobre interface responsiva |
+| IQ3 | Acerto na interpretação sem legenda | D1, D2 | Proporção de respostas corretas por item e por grupo | Q12; compara com M11 |
+| IQ4 | SUS do questionário | E1 a E10 | Mesmo cálculo de M12 (0 a 100), média por grupo | Q13; compara com M12 |
+| IQ5 | Dependência do celular e problemas no celular | B1, B2, B5 | Proporção de dependentes do celular; frequência de cada problema | Q15 e Q16; decisão da STI sobre interface responsiva |
 
 ## 6. Hipótese de perfil HP1
 
@@ -155,3 +155,4 @@ As respostas exportadas ficam em `dados/brutos/questionario/respostas.csv`, uma 
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 19/10/2026 | Especificação do questionário: termo de consentimento, itens dos blocos A a F, grupos de comparação, indicadores IQ1 a IQ6 e hipótese de perfil HP1 | [arthurlleite](https://github.com/arthurlleite) |
 | 1.1 | 25/10/2026 | Remoção dos itens B3 e B4 e do indicador IQ6, ligados ao objetivo G4 (Eficiência de Desempenho) | Leonardo Bonetti |
+| 1.2 | 25/10/2026 | Questões GQM complementadas pelos indicadores IQ3 a IQ5 na numeração Q1 a Q16 | Leonardo Bonetti |
