@@ -20,7 +20,7 @@ Uma hipótese refutada não é uma falha da avaliação: ela indica que a percep
 | -- | ------- | -------- | ----------------------- |
 | H1 | Q1 | A cobertura funcional fica entre 75% e 90%, com o pior resultado em T4 (integralização) e nas funções de planejamento do fluxo, oferecidas por ferramentas da comunidade e ausentes no SIGAA. Fundamento: OP-07. | M1 ≥ 75% e < 90% (Regular) |
 | H2 | Q2 | Não há divergência entre os dados exibidos pelo SIGAA, as fontes oficiais e os documentos emitidos pelo próprio sistema. Fundamento: justificativa R = 4 de Adequação Funcional ("não há indício forte de problemas de correção"). | M2 = 100% (Excelente) |
-| H3 | Q3 | Entre um quarto e metade dos respondentes usa alguma ferramenta externa para planejar o fluxo ou a grade de horários, porque o SIGAA não oferece simulação do fluxo. Fundamento: OP-07; justificativa R = 4 de Adequação Funcional (lacunas de completude). | M3 > 25% e ≤ 50% (Regular) |
+| H3 | Q3 | Entre um quarto e metade dos participantes usa alguma ferramenta externa para planejar o fluxo ou a grade de horários, porque o SIGAA não oferece simulação do fluxo. Fundamento: OP-07; justificativa R = 4 de Adequação Funcional (lacunas de completude). | M3 > 25% e ≤ 50% (Regular) |
 
 ## G2 - Capacidade de Interação (Usabilidade)
 
@@ -70,3 +70,4 @@ O roteiro exige discutir, ao final, as relações entre as características (pre
 | 2.1 | 18/10/2026 | Preenchimento das hipóteses H1 a H14 a partir da versão complementar, com fundamento na Fase 1 e critério de confirmação numérico; critérios de classificação das hipóteses; hipóteses de relação HR1 a HR4 | Leonardo Bonetti |
 | 2.2 | 25/10/2026 | Remoção de H13, H14 e das hipóteses de relação com Eficiência de Desempenho (antigas HR2 e HR4); antiga HR3 renumerada para HR2; fundamento de H8 reescrito | Leonardo Bonetti |
 | 2.3 | 25/10/2026 | Uma hipótese por questão (H1 a H16 ↔ Q1 a Q16): H6, H7, H8 e H12 antigas divididas, cada uma com o valor esperado da sua métrica; critérios de classificação por condição | Leonardo Bonetti |
+| 2.4 | 14/11/2026 | H3 expressa em participantes do teste com usuários, que respondem o questionário ao fim da sessão | Caio Borges |

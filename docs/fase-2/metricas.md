@@ -53,7 +53,7 @@ As definições abaixo valem para todas as métricas coletadas sobre as tarefas 
 | **Questão** | Q1 - O SIGAA oferece as funções de que o estudante precisa? |
 | **Definição** | Proporção das funções necessárias ao estudante que estão implementadas no SIGAA. Baseada na medida de cobertura funcional da ISO/IEC 25023. |
 | **Cálculo** | X = 1 − A/B, onde A = número de funções da lista de referência ausentes no SIGAA e B = número total de funções da lista de referência. |
-| **Fonte dos dados** | Lista de referência de funções, montada a partir de (a) respostas à pergunta aberta sobre funções que o estudante sente falta no SIGAA, incluída no questionário de M3 (Tabela 4), (b) funções oferecidas por ferramentas comunitárias usadas pelos estudantes da UnB (OP-07) e (c) funções necessárias às tarefas T1 a T6. |
+| **Fonte dos dados** | Lista de referência de funções, montada a partir de (a) respostas à pergunta aberta sobre funções que o estudante sente falta no SIGAA, incluída no questionário aplicado ao fim da sessão do teste com usuários (Tabela 4), (b) funções oferecidas por ferramentas comunitárias usadas pelos estudantes da UnB (OP-07) e (c) funções necessárias às tarefas T1 a T6. |
 | **Procedimento de coleta** | 1. Consolidar a lista de referência, removendo duplicatas, e associar a cada tarefa as funções necessárias a ela (exemplo para T4: exibir o IRA; exibir a carga horária pendente por tipo de componente; listar os componentes obrigatórios pendentes). 2. Dois avaliadores verificam, de forma independente, se cada função existe no SIGAA, registrando a evidência (captura de tela e caminho de menus). 3. Divergências entre avaliadores são resolvidas por um terceiro membro. |
 | **Interpretação** | Quanto mais próximo de 1, mais completo é o SIGAA em relação às necessidades dos estudantes. O resultado é calculado no geral e por tarefa, considerando as funções associadas a cada tarefa. Uma função que existe, mas não foi encontrada por um participante, não é contada como ausente; esse caso é registrado na métrica auxiliar MA1 (Tabela 18). |
 
@@ -77,10 +77,10 @@ As definições abaixo valem para todas as métricas coletadas sobre as tarefas 
 | Item | Descrição |
 | ---- | --------- |
 | **Questão** | Q3 - As funções do SIGAA são suficientes para planejar o fluxo sem ferramentas externas? |
-| **Definição** | Proporção de respondentes que declaram usar alguma ferramenta fora do SIGAA (site, aplicativo ou planilha) para planejar o fluxo ou a grade de horários. |
-| **Cálculo** | X = A/B, onde A = número de respondentes que usam ferramenta externa e B = número total de respondentes válidos. |
-| **Fonte dos dados** | Questionário online anônimo aplicado a estudantes de graduação da UnB (item F1 da página [Questionário](questionario.md)). |
-| **Procedimento de coleta** | 1. Divulgar o questionário em grupos de estudantes e centros acadêmicos. 2. Considerar válidas apenas respostas de estudantes de graduação ativos. 3. Registrar também quais ferramentas são usadas, por quê e quais funções o respondente sente falta no SIGAA, como insumo da lista de referência de M1 (Tabela 2). |
+| **Definição** | Proporção de participantes que declaram usar alguma ferramenta fora do SIGAA (site, aplicativo ou planilha) para planejar o fluxo ou a grade de horários. |
+| **Cálculo** | X = A/B, onde A = número de participantes que usam ferramenta externa e B = número de participantes com questionário válido. |
+| **Fonte dos dados** | Questionário aplicado ao fim de cada sessão do teste com usuários, aos mesmos participantes (item F1 da página [Questionário](questionario.md)). Com 6 participantes, cada um equivale a cerca de 17 pontos percentuais, limitação declarada no julgamento. |
+| **Procedimento de coleta** | 1. O moderador entrega o questionário no passo 7 do [roteiro da sessão](../fase-3/teste-usuarios.md#5-roteiro-da-sessao), logo após o SUS, identificado só pelo código do participante. 2. Considerar válidos apenas os questionários de participantes que assinaram o termo de consentimento. 3. Registrar também quais ferramentas são usadas, por quê e quais funções o participante sente falta no SIGAA, como insumo da lista de referência de M1 (Tabela 2). |
 | **Interpretação** | Quanto menor o valor, mais adequadas são as funções do SIGAA para a tarefa de planejamento. |
 
 ## G2 - Capacidade de Interação (Usabilidade)
@@ -284,7 +284,7 @@ Para garantir a rastreabilidade exigida pela premissa 5 do roteiro, todos os dad
 | Arquivo | Conteúdo | Métricas |
 | ------- | -------- | -------- |
 | `dados/referencia/caminhos.csv` | Para cada tarefa: caminho mais curto, C<sub>min</sub>, caminhos alternativos válidos, itens de menu válidos para a primeira escolha, classificação de cada passo (necessário ou desnecessário) e tempos do especialista | M4, M6, M7 |
-| `dados/brutos/questionario/respostas.csv` | Respostas anônimas do questionário online: uso de ferramenta externa, quais ferramentas e por quê, funções que o respondente sente falta | M3, M1 |
+| `dados/brutos/questionario/respostas.csv` | Uma linha por participante do teste com usuários (P1 a P6): respostas do questionário aplicado ao fim da sessão, com uso de ferramenta externa, quais ferramentas e por quê, funções que o participante sente falta | M3, M1 |
 | `dados/brutos/testes-usuarios/sessoes.csv` | Uma linha por participante e tarefa: código, perfil, se já executou a tarefa antes, concluiu, houve ajuda, tempo, cliques, primeira escolha, erros, erros recuperados e declaração de função inexistente | M4, M5, M6, M7, M8, MA1 |
 | `dados/brutos/testes-usuarios/compreensao.csv` | Resposta de cada participante às perguntas de compreensão e registro de abertura da legenda ou da ajuda | M11 |
 | `dados/brutos/testes-usuarios/sus.csv` | Respostas dos dez itens do SUS por participante | M12 |
@@ -298,7 +298,7 @@ Para garantir a rastreabilidade exigida pela premissa 5 do roteiro, todos os dad
 | `dados/brutos/flexibilidade/tempos-celular.csv` | Tempos de cada tarefa no computador e no celular, por avaliador | M15 |
 | `dados/consolidados/metricas.csv` | Valor e nível de cada métrica, no geral, por tarefa e por perfil | Todas |
 
-O formato detalhado de cada arquivo, os instrumentos e o roteiro de execução serão especificados na Fase 3. As gravações não serão publicadas abertamente, por conterem dados pessoais; o acesso a elas será definido na Fase 3, conforme as premissas 5 e 6 do roteiro.
+O formato detalhado de cada arquivo está em [Planilhas de Coleta](../fase-3/planilhas.md), e o roteiro de execução, no [Protocolo do Teste com Usuários](../fase-3/teste-usuarios.md). As gravações não são publicadas abertamente, por conterem dados pessoais; o acesso e o prazo de guarda estão em [Recursos e Ambiente](../fase-3/recursos-ambiente.md), conforme as premissas 5 e 6 do roteiro.
 
 ## Referências
 
@@ -323,3 +323,4 @@ O formato detalhado de cada arquivo, os instrumentos e o roteiro de execução s
 | 2.1 | 18/10/2026 | Integração da versão complementar: métrica M20 (cenários de erro) e métrica auxiliar MA1; definições comuns; artefatos de dados previstos; critérios de toque e rolagem em M14; recorte de calouros em M5; passo desnecessário em M7; itens críticos e conferências de T1 e T2 em M2; funções por tarefa em M1; P75 complementar em M17; referência à ISO/IEC 25022 | Leonardo Bonetti |
 | 2.2 | 25/10/2026 | Remoção das métricas M16 a M19 do objetivo G4 (Eficiência de Desempenho); MA1 ligada à HR2 (antiga HR3); renumeração das tabelas e das referências | Leonardo Bonetti |
 | 2.3 | 25/10/2026 | Questão de cada métrica atualizada para a numeração Q1 a Q16, em relação 1:1 | Leonardo Bonetti |
+| 2.4 | 14/11/2026 | M3 e M1 com o questionário aplicado ao fim da sessão do teste com usuários; descrição de `respostas.csv`; artefatos de dados remetidos às páginas da Fase 3 | Caio Borges |
