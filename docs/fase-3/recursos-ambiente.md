@@ -124,10 +124,10 @@ A premissa 4 da especificação pede as gravações no repositório, e o [escopo
 | ---- | --------- |
 | Local | Pasta em um drive compartilhado da equipe, com acesso restrito (local definitivo a confirmar pela equipe) |
 | Quem acessa | Membros da equipe e a professora da disciplina |
-| Nome dos arquivos | `Entrevista_<número>_<data>`, por exemplo `Entrevista_3_2026-11-20`. O número é o mesmo do código do participante (`Entrevista_3` corresponde a P3). O nome do participante não aparece no arquivo: a ligação entre código e nome fica só no registro de consentimento, para que os nomes não apareçam se a pasta for compartilhada por engano |
+| Nome dos arquivos | `Entrevista_<número>_<data>`, por exemplo `Entrevista_3_2026-11-15`. O número é o mesmo do código do participante (`Entrevista_3` corresponde a P3). O nome do participante não aparece no arquivo: a ligação entre código e nome fica só no registro de consentimento, para que os nomes não apareçam se a pasta for compartilhada por engano |
 | Consentimento | Registrado antes de qualquer gravação, conforme o [roteiro do protocolo](teste-usuarios.md#5-roteiro-da-sessao). O registro de cada participante fica na mesma pasta restrita |
 | Ligação com o repositório | No repositório, os dados extraídos das gravações (tempos, cliques, primeira escolha e erros) apontam para o minuto do vídeo na coluna `evidencia` (ex.: `P3 04:12`). O link da pasta é informado à professora junto com a release da Entrega 2 |
-| Retenção | Até a publicação das menções finais da disciplina. Depois, as gravações são apagadas |
+| Retenção | Até 60 dias após a sessão, como informa o [termo de consentimento](termo-consentimento.docx). Depois, as gravações são apagadas |
 
 *Fonte: elaboração da equipe.*
 
@@ -158,3 +158,4 @@ A Tabela 8 mostra como os recursos especificados atendem ao que as fichas das m�
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 12/11/2026 | Criação da página: produto avaliado, hardware e software por método, pessoas e conhecimento exigido, massa de dados, gravações e coerência com a Fase 2 | [Felipe Campêlo](https://github.com/felipeacampelo) |
 | 1.1 | 14/11/2026 | Ajustes da revisão: retirada da sessão piloto, questionário aplicado ao fim da sessão, nome das gravações sem o nome do participante, fontes de M2 separadas conforme a ficha e justificativa das gravações fora do repositório | [Felipe Campêlo](https://github.com/felipeacampelo) |
+| 1.2 | 14/11/2026 | Retenção das gravações igual à do termo de consentimento (60 dias após a sessão) e data do exemplo de nome de arquivo dentro da janela de coleta | Caio Borges |
