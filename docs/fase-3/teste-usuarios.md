@@ -4,7 +4,7 @@ Esta página define como cada sessão do teste com usuários é conduzida, para 
 
 ## 1. Participantes
 
-São **6 participantes**, em dois grupos de três que **diferem apenas no semestre**. Os grupos usam os mesmos cortes de semestre do [questionário](../fase-2/questionario.md#4-perfis-usados-na-comparacao), para que os resultados do teste e do questionário possam ser comparados.
+São **6 participantes**, em dois grupos de três que **diferem apenas no semestre**. O [questionário](../fase-2/questionario.md#4-perfis-usados-na-comparacao) respondido ao fim da sessão usa os mesmos grupos, para que as respostas possam ser lidas junto com as medidas do teste.
 
 *Tabela 1 - Grupos de participantes.*
 
@@ -23,7 +23,7 @@ São **6 participantes**, em dois grupos de três que **diferem apenas no semest
 
 **Por que há reservas:** com três participantes por grupo, cada grupo fica exatamente no mínimo da regra 3 de [Níveis de Pontuação](../fase-2/niveis-pontuacao.md#regra-3-resultados-por-perfil-por-pagina-e-por-tarefa). Uma falta faria o recorte do grupo virar apenas descritivo, e a hipótese H5, que depende do recorte de calouros, ficaria inconclusiva.
 
-Estudantes do 3º ou 4º semestre não são recrutados, porque formam o grupo de transição do questionário, que não é analisado com nível. A amostra é de conveniência, limitação já aceita no [escopo da Fase 1](../fase-1/escopo.md#7-rigor-da-avaliacao).
+Estudantes do 3º ou 4º semestre não são recrutados: com só seis vagas, os dois grupos ficam nos extremos do curso, onde a diferença de experiência com o SIGAA é maior, e um grupo intermediário teria participantes de menos para qualquer recorte. A amostra é de conveniência, limitação já aceita no [escopo da Fase 1](../fase-1/escopo.md#7-rigor-da-avaliacao).
 
 ## 2. Papéis
 
@@ -85,7 +85,7 @@ As falas entre aspas são lidas como estão escritas, para que todos os particip
     3. A tarefa termina quando ocorre um dos fins da Tabela 6 (seção 8).
     4. Em T2, T4 e T6, com a página ainda aberta, o moderador faz a pergunta de compreensão da Tabela 4 e anota a resposta e se o participante abriu legenda ou ajuda.
 6. **Questionário SUS (cerca de 3 min).** Logo após a última tarefa, o moderador lê: "Agora responda a este questionário sozinho, pensando no que você usou hoje no SIGAA. Marque uma opção em cada item. Se não tiver certeza, marque o meio da escala." Depois se afasta e não comenta os itens.
-7. **Questionário (cerca de 6 min).** Logo após o SUS, o moderador entrega o [questionário da Fase 2](../fase-2/questionario.md#3-itens-do-questionario) sem o bloco E, que repetiria o SUS já respondido, e anota nele o código do participante, sem o nome. O texto de apresentação do questionário não é lido, porque o consentimento já foi obtido pelo termo. O moderador lê: "Agora, um último questionário. Desta vez, pense em como você usa o SIGAA no dia a dia, e não só no que fez hoje. Responda sozinho. As perguntas abertas são opcionais." Depois se afasta e não comenta os itens.
+7. **Questionário (cerca de 6 min).** Logo após o SUS, o moderador entrega o [questionário da Fase 2](../fase-2/questionario.md#3-itens-do-questionario), que já não tem o bloco E (repetiria o SUS) nem o item D1 (repetiria a pergunta de compreensão de T2), e anota nele o código do participante, sem o nome. O texto de apresentação do questionário não é lido, porque o consentimento já foi obtido pelo termo. O moderador lê: "Agora, um último questionário. Desta vez, pense em como você usa o SIGAA no dia a dia, e não só no que fez hoje. Responda sozinho. As perguntas abertas são opcionais." Depois se afasta e não comenta os itens.
 8. **Encerramento (cerca de 2 min).** O moderador para a gravação. O participante sai do SIGAA e o moderador fecha a janela anônima e apaga o atestado baixado em T3. O moderador agradece e pede: "Por favor, não comente as tarefas com colegas que ainda possam participar."
 
 A sessão dura cerca de 35 minutos. Se todas as tarefas chegarem ao limite de 5 minutos, chega a cerca de 50 minutos.
@@ -195,3 +195,4 @@ O SUS [1] é aplicado em português, com escala de 1 (discordo totalmente) a 5 (
 | 1.7 | 14/11/2026 | Termo de Consentimento Livre e Esclarecido incluído na Fase 3 e ligado ao passo 1 do roteiro | Leonardo Bonetti |
 | 1.8 | 14/11/2026 | Questionário da Fase 2 aplicado ao fim da sessão, sem o bloco E | Leonardo Bonetti |
 | 1.9 | 14/11/2026 | Idade mínima de 18 anos nos critérios de inclusão e duração da sessão igual à do termo (cerca de 35 minutos) | Leonardo Bonetti |
+| 1.10 | 14/11/2026 | Grupos definidos pelo protocolo e seguidos pelo questionário; justificativa da exclusão do 3º e 4º semestres; questionário sem o item D1 | Caio Borges |
