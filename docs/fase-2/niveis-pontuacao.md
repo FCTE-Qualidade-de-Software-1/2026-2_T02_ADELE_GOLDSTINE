@@ -1,6 +1,6 @@
 # Níveis de Pontuação e Critérios de Julgamento
 
-Esta página define como os valores medidos (M1 a M15 e M20, página [Métricas](metricas.md)) serão julgados na Fase 4: a escala de níveis, as faixas de cada métrica e os critérios para combinar as métricas por questão e por objetivo (G1 a G3). Os limites foram definidos **antes da coleta** e não serão alterados após a obtenção dos dados, para que o julgamento não seja ajustado aos resultados.
+Esta página define como os valores medidos (M1 a M15 e M20, página [Métricas](metricas.md)) serão julgados na Fase 4: a escala de níveis, as faixas de cada métrica e os critérios para passar do nível da métrica ao da questão e combinar as questões por objetivo (G1 a G3). Os limites foram definidos **antes da coleta** e não serão alterados após a obtenção dos dados, para que o julgamento não seja ajustado aos resultados.
 
 ## Escala de níveis
 
@@ -59,7 +59,7 @@ O julgamento é feito sempre do nível quantitativo para o conceitual: primeiro 
 
 ### Etapa 1 - Pontuação da questão
 
-O valor de cada métrica é comparado às faixas das Tabelas 2 e 3 e recebe um nível de 0 a 3. O nível de uma questão é o **menor nível entre as suas métricas** aplicáveis. A regra é conservadora: um atributo só é considerado Bom se todas as medidas que o descrevem estiverem no nível Bom ou acima. Exemplo: em Q6, se M6 = Bom e M7 = Regular, Q6 recebe Regular.
+O valor de cada métrica é comparado às faixas das Tabelas 2 e 3 e recebe um nível de 0 a 3. Como cada questão é respondida por uma única métrica, o nível da questão é o **nível da sua métrica**. Exemplo: se M7 = Regular, Q7 recebe Regular.
 
 A resposta textual à questão segue o nível obtido (Tabela 4).
 
@@ -76,15 +76,15 @@ Na mesma etapa, a hipótese da questão é classificada como confirmada, refutad
 
 ### Etapa 2 - Pontuação do objetivo
 
-A pontuação do objetivo é a **média dos níveis das suas questões** (Tabela 5). Usar as questões, e não as métricas, evita que uma subcaracterística com mais métricas pese mais que as outras. Questões sem dados suficientes ficam fora da média (regra 1).
+A pontuação do objetivo é a **média dos níveis das suas questões** (Tabela 5). Com a relação 1:1, a média das questões equivale à média das métricas do objetivo; as subcaracterísticas observadas por duas questões (operabilidade, proteção contra erros do usuário, inclusividade e adaptabilidade ao ambiente de hardware) contam duas vezes na média. Questões sem dados suficientes ficam fora da média (regra 1).
 
 *Tabela 5 - Questões combinadas em cada objetivo.*
 
 | Objetivo | Questões combinadas |
 | -------- | ------------------- |
 | G1 - Adequação Funcional | Q1, Q2, Q3 |
-| G2 - Capacidade de Interação (Usabilidade) | Q4, Q5, Q6, Q7, Q8, Q9, Q10 |
-| G3 - Flexibilidade (Portabilidade) | Q11, Q12 |
+| G2 - Capacidade de Interação (Usabilidade) | Q4 a Q13 |
+| G3 - Flexibilidade (Portabilidade) | Q14, Q15, Q16 |
 
 ### Etapa 3 - Julgamento da característica
 
@@ -106,7 +106,7 @@ Uma questão Insatisfatória impede o julgamento "Atende", mesmo com média alta
 
 #### Regra 1 - Métricas não aplicáveis
 
-Uma métrica sem dados suficientes é registrada como **não aplicável** e fica fora do cálculo da questão. Exemplo: M6 e M7 de uma tarefa que nenhum participante concluiu (registradas à parte, conforme as fichas). Uma questão sem nenhuma métrica aplicável fica **sem dados** e fora da Etapa 2, e sua hipótese é classificada como inconclusiva. Em M8, a ausência de erros não torna a métrica não aplicável: a ficha define X = 1 quando B = 0.
+Uma métrica sem dados suficientes é registrada como **não aplicável**. Exemplo: M6 e M7 de uma tarefa que nenhum participante concluiu (registradas à parte, conforme as fichas). Como cada questão tem uma única métrica, a questão de uma métrica não aplicável fica **sem dados** e fora da Etapa 2, e sua hipótese é classificada como inconclusiva. Em M8, a ausência de erros não torna a métrica não aplicável: a ficha define X = 1 quando B = 0.
 
 #### Regra 2 - Itens críticos de M2
 
@@ -140,11 +140,11 @@ O exemplo abaixo usa **valores fictícios**, apenas para mostrar como um resulta
 
 | Métrica | Valor fictício | Nível | Questão | Nível da questão |
 | ------- | :------------: | ----- | :-----: | ---------------- |
-| M13 - Compatibilidade entre navegadores | 23 de 24 (95,8%) | Bom (2) | Q11 | Bom (2) |
-| M14 - Páginas adaptadas a telas pequenas e ao toque | 7 de 12 (58,3%) | Regular (1) | Q12 | Regular (1), menor entre M14 e M15 |
-| M15 - Tempo relativo no celular | 1,8 | Regular (1) | | |
+| M13 - Compatibilidade entre navegadores | 23 de 24 (95,8%) | Bom (2) | Q14 | Bom (2) |
+| M14 - Páginas adaptadas a telas pequenas e ao toque | 7 de 12 (58,3%) | Regular (1) | Q15 | Regular (1) |
+| M15 - Tempo relativo no celular | 1,8 | Regular (1) | Q16 | Regular (1) |
 
-Pontuação de G3 = (2 + 1) / 2 = 1,5. Não há questão Insatisfatória, mas a média é menor que 2,0. **Julgamento: Atende parcialmente.** Neste exemplo, H11 seria confirmada (esperava-se M13 Bom) e H12 seria refutada (esperava-se M14 Insatisfatório, e o valor fictício ficou em Regular).
+Pontuação de G3 = (2 + 1 + 1) / 3 = 1,33. Não há questão Insatisfatória, mas a média é menor que 2,0. **Julgamento: Atende parcialmente.** Neste exemplo, H14 seria confirmada (esperava-se M13 Bom), H15 seria refutada (esperava-se M14 Insatisfatório, e o valor fictício ficou em Regular) e H16 seria confirmada (esperava-se M15 Regular).
 
 ## Referências
 
@@ -163,3 +163,4 @@ Pontuação de G3 = (2 + 1) / 2 = 1,5. Não há questão Insatisfatória, mas a 
 | 2.0 | 18/10/2026 | Estrutura da página alinhada à Fase 1 reestruturada (M1 a M19, G1 a G4), para preenchimento | Felipe Campêlo |
 | 2.1 | 18/10/2026 | Preenchimento a partir da versão complementar: escala com regra de fronteira, faixas de M1 a M20 com origem, Etapas 1 a 3, regras complementares (métricas não aplicáveis, itens críticos de M2, recortes, ranking das tarefas, ausência de nota única, classificação das hipóteses) e exemplo de aplicação em G4 | Leonardo Bonetti |
 | 2.2 | 25/10/2026 | Remoção das faixas de M16 a M19 e do objetivo G4 (Eficiência de Desempenho); exemplo de aplicação refeito em G3; MA1 ligada à HR2 (antiga HR3) | Leonardo Bonetti |
+| 2.3 | 25/10/2026 | Regra de agregação 1:1 (nível da questão = nível da sua métrica); questões por objetivo na numeração Q1 a Q16; exemplo de G3 com Q14 a Q16 | Leonardo Bonetti |

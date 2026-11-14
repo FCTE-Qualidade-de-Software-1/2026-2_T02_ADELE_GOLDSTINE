@@ -24,16 +24,16 @@ Todas as decisões desta fase derivam da [Fase 1](../fase-1/index.md). A Tabela 
 | ----------------- | ---------------------- |
 | Propósito: transformar percepções em evidências mensuráveis sobre os pontos fracos do SIGAA nas tarefas mais frequentes do estudante ([Propósito](../fase-1/proposito-stakeholders.md#1-proposito-da-avaliacao)) | Propósito dos três objetivos; níveis de pontuação definidos antes da coleta |
 | Decisões apoiadas, sobretudo a priorização de telas e fluxos pela STI/UnB ([Propósito](../fase-1/proposito-stakeholders.md#13-como-os-resultados-serao-usados)) | Resultados apresentados por tarefa e ranking das tarefas (regra 4 de [Níveis de Pontuação](niveis-pontuacao.md#regra-4-ranking-das-tarefas)); métricas que embasam cada decisão na Tabela 3; investimento em interface responsiva apoiado por G3 |
-| Perfis de usuários: calouro, veterano, formando, estudante que só usa o celular e estudante com deficiência ([Partes Interessadas](../fase-1/proposito-stakeholders.md#22-perfis-de-usuarios-considerados)) | Ponto de vista dos objetivos; análise por perfil em M5, M6, M7 e M11; inclusividade em Q8; uso no celular em Q12 |
-| Software avaliado: SIGAA/UnB, versão v4.15.10.115, e observações preliminares OP-01 a OP-08 ([Software Avaliado](../fase-1/software-avaliado.md#4-observacoes-preliminares-da-interface)) | Contexto dos objetivos; OP-01 em M11, OP-02 e OP-03 em M14, OP-04 em M4, OP-05 em M6 e M7, OP-06 em M8 e M20, OP-07 em M1 e M3; OP-08 (recurso A+/A-, ponto positivo) não gera métrica própria, e a ampliação é verificada pelo critério (c) de M10 |
-| Modelo de qualidade: ISO/IEC 25010:2023 [3] adaptado, com as subcaracterísticas mantidas ([Modelo de Qualidade](../fase-1/modelo-qualidade.md#2-adaptacoes-ao-contexto-do-sigaa)) | Uma ou mais questões para cada subcaracterística mantida (Q1 a Q9, Q11 e Q12) |
+| Perfis de usuários: calouro, veterano, formando, estudante que só usa o celular e estudante com deficiência ([Partes Interessadas](../fase-1/proposito-stakeholders.md#22-perfis-de-usuarios-considerados)) | Destaque nas justificativas dos objetivos; análise por perfil em M5, M6, M7 e M11; inclusividade em Q10 e Q11; uso no celular em Q15 e Q16 |
+| Software avaliado: SIGAA/UnB, com versão e período no [objeto da avaliação](../fase-1/escopo.md#1-objeto-da-avaliacao), e observações preliminares OP-01 a OP-08 ([Software Avaliado](../fase-1/software-avaliado.md#4-observacoes-preliminares-da-interface)) | Referência à Fase 1 em [Objetivos](objetivos.md); OP-01 em M11, OP-02 e OP-03 em M14, OP-04 em M4, OP-05 em M6 e M7, OP-06 em M8 e M20, OP-07 em M1 e M3; OP-08 (recurso A+/A-, ponto positivo) não gera métrica própria, e a ampliação é verificada pelo critério (c) de M10 |
+| Modelo de qualidade: ISO/IEC 25010:2023 [3] adaptado, com as subcaracterísticas mantidas ([Modelo de Qualidade](../fase-1/modelo-qualidade.md#2-adaptacoes-ao-contexto-do-sigaa)) | Uma ou mais questões para cada subcaracterística mantida (Q1 a Q12 e Q14 a Q16; Q13 trata da satisfação) |
 | Características priorizadas ([Características](../fase-1/caracteristicas.md#3-caracteristicas-selecionadas)) | Objetivos G1 a G3, para Adequação Funcional, Capacidade de Interação (Usabilidade) e Flexibilidade (Portabilidade); a quarta característica priorizada ficou fora da especificação, conforme registrado em [Objetivos](objetivos.md) |
 | Escopo: tarefas T1 a T6 e ambientes de execução ([Escopo](../fase-1/escopo.md#2-o-que-sera-avaliado-agora)) | Tarefas usadas em todas as medições (seção 2.2); navegadores e telas em G3 |
 | Profundidade e técnicas por característica ([Escopo](../fase-1/escopo.md#3-profundidade-por-caracteristica)) | Instrumentos de coleta das métricas (seção 2.3) |
 | Rigor intermediário: critérios antes da coleta, medições repetidas e mais de um avaliador ([Escopo](../fase-1/escopo.md#7-rigor-da-avaliacao)) | Dois avaliadores em M1, M2, M10 e M20; três execuções do especialista em M6 |
 | Relações esperadas entre as características ([Características](../fase-1/caracteristicas.md#5-relacoes-esperadas-entre-as-caracteristicas)) | Métricas que verificam cada relação (Tabela 6) e hipóteses de relação HR1 e HR2 ([Hipóteses](hipoteses.md#hipoteses-de-relacao-entre-as-caracteristicas)) |
 
-**Ponto de vista:** em todos os objetivos, o ponto de vista adotado é o do **estudante de graduação da UnB**, com atenção aos perfis definidos na Fase 1. Os principais usuários dos resultados são a STI/UnB, o DEG e as coordenações de curso, que precisam de evidências objetivas e resultados por tarefa para priorizar melhorias.
+**Ponto de vista:** em todos os objetivos, o ponto de vista adotado é o do **estudante de graduação da UnB**. Os perfis definidos na Fase 1 são destacados nas justificativas dos objetivos e analisados por recorte nas métricas. Os principais usuários dos resultados são a STI/UnB, o DEG e as coordenações de curso, que precisam de evidências objetivas e resultados por tarefa para priorizar melhorias.
 
 A Tabela 3 detalha, para cada decisão que a Fase 1 declarou apoiar, as métricas desta fase que a embasam.
 
@@ -75,7 +75,7 @@ A Tabela 5 relaciona as técnicas previstas na Fase 1 às métricas que cada uma
 | Ferramenta automática (WAVE) | Verificação automatizada de acessibilidade | M9 |
 | Questionário online anônimo ([Questionário](questionario.md)) | Complementa o roteiro de verificação de funções (Adequação Funcional); motivado pelo indício OP-07, sem técnica correspondente na Tabela 3 do escopo. Também compara a percepção de calouros e veteranos | M3 e insumo de M1; indicadores auxiliares IQ1 a IQ5 e hipótese de perfil HP1 |
 
-**Inspeção heurística:** prevista na Fase 1 para Capacidade de Interação, ela é usada como evidência qualitativa para interpretar Q4 (reconhecimento de adequação) e Q9 (autodescritividade) na Fase 4. Ela não gera métrica própria porque a severidade atribuída a cada problema depende do julgamento do avaliador, e as métricas desta fase precisam produzir o mesmo valor quando aplicadas por avaliadores diferentes.
+**Inspeção heurística:** prevista na Fase 1 para Capacidade de Interação, ela é usada como evidência qualitativa para interpretar Q4 (reconhecimento de adequação) e Q12 (autodescritividade) na Fase 4. Ela não gera métrica própria porque a severidade atribuída a cada problema depende do julgamento do avaliador, e as métricas desta fase precisam produzir o mesmo valor quando aplicadas por avaliadores diferentes.
 
 ## 2.4 Relações entre as características
 
@@ -93,8 +93,8 @@ As relações foram convertidas nas hipóteses de relação HR1 e HR2, com a for
 ## 2.5 Estrutura da especificação
 
 - [Objetivos](objetivos.md): objetivos de medição G1 a G3, no template GQM.
-- [Questões](questoes.md): questões Q1 a Q12 e a subcaracterística associada a cada uma.
-- [Hipóteses](hipoteses.md): resultado esperado para cada questão (H1 a H12) e hipóteses de relação entre as características (HR1 e HR2).
+- [Questões](questoes.md): questões Q1 a Q16, a subcaracterística associada a cada uma e a métrica que responde a cada questão.
+- [Hipóteses](hipoteses.md): resultado esperado para cada questão (H1 a H16) e hipóteses de relação entre as características (HR1 e HR2).
 - [Métricas](metricas.md): definição, cálculo, fonte de dados, coleta e interpretação das métricas M1 a M15 e M20 e da métrica auxiliar MA1, com base na ISO/IEC 25023 [4] quando há medida equivalente; definições comuns e artefatos de dados previstos.
 - [Níveis de Pontuação](niveis-pontuacao.md): faixas de cada métrica e critérios de julgamento por característica.
 - [Gráfico GQM](grafico-gqm.md): diagramas da hierarquia Objetivo, Questões e Métricas (Figuras 1 a 4) e matriz de rastreabilidade.
@@ -107,11 +107,11 @@ A Tabela 7 resume a quantidade de elementos GQM por objetivo.
 | Objetivo | Característica (prioridade na Fase 1) | Questões | Hipóteses | Métricas |
 | -------- | ------------------------------------- | :------: | :-------: | :------: |
 | G1 | Adequação Funcional (2) | 3 (Q1 a Q3) | 3 (H1 a H3) | 3 (M1 a M3) |
-| G2 | Capacidade de Interação (1) | 7 (Q4 a Q10) | 7 (H4 a H10) | 10 (M4 a M12 e M20) |
-| G3 | Flexibilidade (4) | 2 (Q11 e Q12) | 2 (H11 e H12) | 3 (M13 a M15) |
-| **Total** | | **12** | **12** | **16** |
+| G2 | Capacidade de Interação (1) | 10 (Q4 a Q13) | 10 (H4 a H13) | 10 (M4 a M12 e M20) |
+| G3 | Flexibilidade (4) | 3 (Q14 a Q16) | 3 (H14 a H16) | 3 (M13 a M15) |
+| **Total** | | **16** | **16** | **16** |
 
-Além delas, duas hipóteses de relação (HR1 e HR2) e uma métrica auxiliar sem nível de pontuação (MA1) tratam das relações entre as características.
+Cada questão tem uma única métrica e uma hipótese com o mesmo número (relação 1:1). Além delas, duas hipóteses de relação (HR1 e HR2) e uma métrica auxiliar sem nível de pontuação (MA1) tratam das relações entre as características.
 
 ## Referências
 
@@ -134,3 +134,6 @@ Além delas, duas hipóteses de relação (HR1 e HR2) e uma métrica auxiliar se
 | 2.1 | 18/10/2026 | Integração da versão complementar: tabela de decisões da Fase 1 e métricas que as embasam, síntese de quantidades, métricas M20 e MA1, hipóteses de relação HR1 a HR4 e link para a regra do ranking das tarefas | Leonardo Bonetti |
 | 2.2 | 19/10/2026 | Link para a página do questionário e indicadores auxiliares IQ1 a IQ6 na Tabela 5 | [arthurlleite](https://github.com/arthurlleite) |
 | 2.3 | 25/10/2026 | Remoção do objetivo G4 (Eficiência de Desempenho): rastreabilidade, decisões apoiadas, instrumentos de coleta (Lighthouse e rede móvel simulada), relações entre características (HR1 e HR2) e síntese de quantidades | Leonardo Bonetti |
+| 2.4 | 25/10/2026 | Ponto de vista único dos objetivos; perfis da Fase 1 tratados nas justificativas e nos recortes das métricas | Leonardo Bonetti |
+| 2.5 | 25/10/2026 | Versão do SIGAA remetida ao objeto da avaliação da Fase 1 | Leonardo Bonetti |
+| 2.6 | 25/10/2026 | Citações a questões e hipóteses na numeração Q1 a Q16 e H1 a H16; síntese de quantidades com a relação 1:1 | Leonardo Bonetti |

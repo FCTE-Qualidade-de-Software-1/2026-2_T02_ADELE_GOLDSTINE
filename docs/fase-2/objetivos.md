@@ -2,11 +2,13 @@
 
 Os objetivos de medição representam o **nível conceitual** do GQM. Cada objetivo foi escrito no template proposto por Basili, Caldiera e Rombach [1], que exige cinco elementos: objeto de estudo, propósito, foco de qualidade, ponto de vista e contexto.
 
-Foi definido um objetivo para cada uma das três características avaliadas, dentre as priorizadas na [Fase 1](../fase-1/caracteristicas.md#3-caracteristicas-selecionadas) (Tabelas 1 a 3). O foco de qualidade de cada objetivo usa as subcaracterísticas da ISO/IEC 25010:2023 [2] mantidas na [adaptação do modelo de qualidade](../fase-1/modelo-qualidade.md#2-adaptacoes-ao-contexto-do-sigaa). As subcaracterísticas removidas na Fase 1, e a justificativa de cada remoção, estão naquela página e não são repetidas aqui.
+Foi definido um objetivo para cada uma das três características avaliadas, dentre as priorizadas na [Fase 1](../fase-1/caracteristicas.md#3-caracteristicas-selecionadas) (Tabelas 1 a 3). O foco de qualidade de cada objetivo é a característica da ISO/IEC 25010:2023 [2]. As subcaracterísticas mantidas na [adaptação do modelo de qualidade](../fase-1/modelo-qualidade.md#2-adaptacoes-ao-contexto-do-sigaa) são tratadas pelas questões de cada objetivo, na página [Questões](questoes.md). As subcaracterísticas removidas na Fase 1, e a justificativa de cada remoção, estão naquela página e não são repetidas aqui.
 
-A numeração G1 a G3 não segue a ordem de prioridade da Fase 1. Na [matriz Impacto x Risco](../fase-1/caracteristicas.md#3-caracteristicas-selecionadas), a ordem de prioridade entre as características avaliadas é: Capacidade de Interação (G2, P = 25), Adequação Funcional (G1, P = 20) e Flexibilidade (G3, P = 16). Eficiência de Desempenho também foi priorizada na Fase 1 (P = 16), mas ficou fora desta especificação por orientação da professora no ponto de controle. Essa ordem de prioridade é a usada na apresentação dos resultados da Fase 4 (regra 5 de [Níveis de Pontuação](niveis-pontuacao.md#regra-5-ausencia-de-nota-unica)).
+A numeração G1 a G3 não segue a ordem de prioridade da Fase 1. Na [matriz Impacto x Risco](../fase-1/caracteristicas.md#3-caracteristicas-selecionadas), a ordem de prioridade entre as características avaliadas é: Capacidade de Interação (G2, P = 25), Adequação Funcional (G1, P = 20) e Flexibilidade (G3, P = 16). Eficiência de Desempenho também foi priorizada na Fase 1 (P = 16), mas ficou fora do escopo desta especificação. Essa ordem de prioridade é a usada na apresentação dos resultados da Fase 4 (regra 5 de [Níveis de Pontuação](niveis-pontuacao.md#regra-5-ausencia-de-nota-unica)).
 
 Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em produção e sem alteração de dados acadêmicos, conforme as [implicações para a avaliação](../fase-1/software-avaliado.md#5-implicacoes-para-a-avaliacao) registradas na Fase 1.
+
+O contexto, igual em todos os objetivos, é o ambiente em que a avaliação é conduzida. Os elementos que delimitam a avaliação foram definidos na Fase 1 e não são repetidos no template: a versão do sistema e o período de observação, no [objeto da avaliação](../fase-1/escopo.md#1-objeto-da-avaliacao); as tarefas T1 a T6, nas [tarefas representativas](../fase-1/escopo.md#21-tarefas-representativas); e os navegadores, dispositivos, tamanhos de tela e redes, nos [ambientes de execução](../fase-1/escopo.md#22-ambientes-de-execucao). As observações preliminares OP-01 a OP-08, citadas nas justificativas, estão em [Software Avaliado](../fase-1/software-avaliado.md#4-observacoes-preliminares-da-interface).
 
 ## G1 - Adequação Funcional
 
@@ -16,11 +18,13 @@ Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em pr
 | -------- | --------- |
 | **Analisar** | o portal do discente de graduação do SIGAA/UnB |
 | **com o propósito de** | avaliar |
-| **com respeito à** | adequação funcional (completude funcional, correção funcional e adequação funcional, ou pertinência) |
+| **com respeito à** | adequação funcional |
 | **do ponto de vista do** | estudante de graduação da UnB |
-| **no contexto** | das tarefas T1 a T6 e do planejamento do fluxo de disciplinas (OP-07), na versão v4.15.10.115 em uso no 2º semestre letivo de 2026 |
+| **no contexto** | da disciplina Qualidade de Software 1 (FGA0315), no campus FCTE (Gama) da UnB |
 
-**Justificativa:** Adequação Funcional ficou em segundo lugar na matriz Impacto x Risco (P = 20). O estudante depende do SIGAA para tarefas sem alternativa institucional, e a existência de ferramentas comunitárias para planejar o fluxo (OP-07) indica lacunas de completude. G1 verifica se as funções necessárias existem, se produzem informações corretas e se bastam para a tarefa sem recurso a ferramentas externas.
+A adequação funcional é caracterizada pelas subcaracterísticas completude funcional, correção funcional e pertinência funcional, cada uma tratada por questões próprias.
+
+**Justificativa:** Adequação Funcional ficou em segundo lugar na matriz Impacto x Risco (P = 20). O estudante depende do SIGAA para tarefas sem alternativa institucional, e a existência de ferramentas comunitárias para planejar o fluxo (OP-07) indica lacunas de completude. G1 verifica, nas tarefas T1 a T6 e no planejamento do fluxo de disciplinas, se as funções necessárias existem, se produzem informações corretas e se bastam para a tarefa sem recurso a ferramentas externas.
 
 ## G2 - Capacidade de Interação (Usabilidade)
 
@@ -30,11 +34,13 @@ Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em pr
 | -------- | --------- |
 | **Analisar** | o portal do discente de graduação do SIGAA/UnB |
 | **com o propósito de** | avaliar |
-| **com respeito à** | capacidade de interação (reconhecimento de adequação, apreensibilidade, operabilidade, proteção contra erros do usuário, inclusividade e autodescritividade), complementada pela satisfação (qualidade em uso) |
-| **do ponto de vista do** | estudante de graduação da UnB, com atenção a calouros e a estudantes com deficiência |
-| **no contexto** | da execução das tarefas T1 a T6 em computador, na versão v4.15.10.115 em uso no 2º semestre letivo de 2026 |
+| **com respeito à** | usabilidade (capacidade de interação) |
+| **do ponto de vista do** | estudante de graduação da UnB |
+| **no contexto** | da disciplina Qualidade de Software 1 (FGA0315), no campus FCTE (Gama) da UnB |
 
-**Justificativa:** Capacidade de Interação é a característica de maior prioridade na Fase 1 (P = 25) e a que reúne mais observações preliminares (OP-01 a OP-06). G2 verifica se o estudante localiza as funções, aprende a usá-las sem ajuda, conclui as tarefas com esforço razoável, recupera-se de erros, encontra barreiras de acessibilidade e compreende as informações sem legenda externa.
+A capacidade de interação é caracterizada pelas subcaracterísticas reconhecimento de adequação, apreensibilidade, operabilidade, proteção contra erros do usuário, inclusividade e autodescritividade, cada uma tratada por questões próprias, e é complementada pela satisfação (qualidade em uso).
+
+**Justificativa:** Capacidade de Interação é a característica de maior prioridade na Fase 1 (P = 25) e a que reúne mais observações preliminares (OP-01 a OP-06). G2 verifica, na execução das tarefas T1 a T6 em computador, se o estudante localiza as funções, aprende a usá-las sem ajuda, conclui as tarefas com esforço razoável, recupera-se de erros, encontra barreiras de acessibilidade e compreende as informações sem legenda externa. Dois [perfis da Fase 1](../fase-1/proposito-stakeholders.md#22-perfis-de-usuarios-considerados) recebem atenção especial: os calouros, que no primeiro contato ainda desconhecem a terminologia acadêmica e a organização dos menus (apreensibilidade), e os estudantes com deficiência, que dependem de recursos de acessibilidade (inclusividade). O teste com usuários não exige recrutar estudantes com deficiência: os participantes diferem apenas no semestre, e a inclusividade é verificada por inspeção da equipe (M9 e M10), como a Fase 1 prevê para esse perfil.
 
 ## G3 - Flexibilidade (Portabilidade)
 
@@ -44,11 +50,11 @@ Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em pr
 | -------- | --------- |
 | **Analisar** | o portal do discente de graduação do SIGAA/UnB |
 | **com o propósito de** | avaliar |
-| **com respeito à** | flexibilidade (adaptabilidade) |
-| **do ponto de vista do** | estudante de graduação da UnB, com atenção ao estudante que acessa o sistema apenas pelo celular |
-| **no contexto** | do acesso pelos navegadores Chrome, Firefox, Edge e Safari, em computador, tablet e celular, com interação por mouse e por toque |
+| **com respeito à** | flexibilidade |
+| **do ponto de vista do** | estudante de graduação da UnB |
+| **no contexto** | da disciplina Qualidade de Software 1 (FGA0315), no campus FCTE (Gama) da UnB |
 
-**Justificativa:** Flexibilidade obteve P = 16 na Fase 1. O layout de largura fixa e os menus acionados pela passagem do ponteiro (OP-02 e OP-03) podem impedir o estudante que só usa o celular de concluir suas tarefas. G3 verifica se o SIGAA funciona da mesma forma nos navegadores, tamanhos de tela e modos de interação considerados no escopo.
+**Justificativa:** Flexibilidade obteve P = 16 na Fase 1. O layout de largura fixa e os menus acionados pela passagem do ponteiro (OP-02 e OP-03) podem impedir o estudante que só usa o celular de concluir suas tarefas, e por isso esse [perfil da Fase 1](../fase-1/proposito-stakeholders.md#22-perfis-de-usuarios-considerados) é o destaque deste objetivo. Esse perfil também não precisa ser recrutado: a adaptação ao celular é verificada pela própria equipe (M14 e M15). G3 verifica se o SIGAA funciona da mesma forma nos navegadores Chrome, Firefox, Edge e Safari, em computador, tablet e celular e com interação por mouse e por toque, conforme os [ambientes de execução](../fase-1/escopo.md#22-ambientes-de-execucao) da Fase 1.
 
 ## Referências
 
@@ -69,3 +75,9 @@ Em todos os objetivos, a avaliação é de caixa-preta, feita na interface em pr
 | 2.3 | 25/10/2026 | Remoção do objetivo G4 (Eficiência de Desempenho); prioridade das três características avaliadas | Leonardo Bonetti |
 | 2.4 | 25/10/2026 | Propósito dos objetivos reduzido ao verbo "avaliar" | Leonardo Bonetti |
 | 2.5 | 25/10/2026 | Mesmo objeto de estudo em G1 a G3: "o portal do discente de graduação do SIGAA/UnB" | Leonardo Bonetti |
+| 2.6 | 25/10/2026 | Foco de qualidade de G2 e G3 reduzido à característica; subcaracterísticas de G2 em frase abaixo da tabela | Leonardo Bonetti |
+| 2.7 | 25/10/2026 | Foco de qualidade de G1 reduzido à característica; subcaracterística *functional appropriateness* nomeada pertinência funcional | Leonardo Bonetti |
+| 2.8 | 25/10/2026 | Ponto de vista único em G1 a G3 (estudante de graduação da UnB); destaque aos perfis movido para as justificativas de G2 e G3 | Leonardo Bonetti |
+| 2.9 | 25/10/2026 | Contexto dos objetivos como ambiente da avaliação; versão, período, tarefas e ambientes remetidos à Fase 1; recortes de tarefa, dispositivo e navegador nas justificativas | Leonardo Bonetti |
+| 2.10 | 10/11/2026 | Justificativas de G2 e G3: perfis de estudante com deficiência e de quem usa só o celular cobertos por inspeção, sem recrutamento | Leonardo Bonetti |
+| 2.11 | 10/11/2026 | Retirada de Eficiência de Desempenho registrada só como decisão de escopo | Leonardo Bonetti |

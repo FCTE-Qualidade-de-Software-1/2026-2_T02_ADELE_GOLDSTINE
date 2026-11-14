@@ -1,5 +1,11 @@
 # Fase 3 - Projeto da Avaliação
 
+<!-- Critério F3-C1: O método de avaliação é detalhadamente justificado e as instruções para o avaliador são claras, precisas e garantem a repetibilidade e reprodutibilidade. -->
+<!-- Critério F3-C2: Recursos e ambiente são especificados e adequados, com detalhamento de hardware, software e massa de dados. -->
+<!-- Critério F3-C3: O cronograma é realista e alinha as ações à execução da Fase 4. -->
+<!-- Critério F3-C7: GitPage organizada, com seção Fase 3 e rastreabilidade. -->
+<!-- Critério F3-C8: Consistência entre as Fases 2 e 3 (rastreabilidade total e justificada). -->
+
 Esta fase corresponde à terceira atividade do processo de avaliação de produto da **ISO/IEC 25040** [1], na qual a avaliação é projetada: para cada métrica especificada na [Fase 2](../fase-2/index.md), definem-se o método de coleta, os instrumentos, os recursos, o ambiente e o cronograma. O resultado é o plano seguido na Fase 4.
 
 A Fase 2 deixou três itens para esta fase: o formato dos arquivos de dados, os instrumentos e o roteiro de execução, e o acesso às gravações ([Métricas, artefatos de dados previstos](../fase-2/metricas.md#artefatos-de-dados-previstos)). Os dois primeiros estão nas páginas da Tabela 1. O acesso às gravações será definido pela equipe.
@@ -10,6 +16,7 @@ A Fase 2 deixou três itens para esta fase: o formato dos arquivos de dados, os 
 | ------ | -------- |
 | [Protocolo do Teste com Usuários](teste-usuarios.md) | Participantes, roteiro da sessão, enunciados das tarefas, ordem, registro e SUS |
 | [Planilhas de Coleta](planilhas.md) | Formato de cada arquivo de dados e convenções de preenchimento |
+| [Cronograma](cronograma.md) | Atividades da Entrega 2, responsáveis, prazos e acompanhamento do planejado e do realizado |
 
 *Fonte: elaboração da equipe.*
 
@@ -64,3 +71,6 @@ A Tabela 3 liga cada métrica ao instrumento que a coleta e ao arquivo em que o 
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 10/11/2026 | Criação da fase: métodos de coleta, rastreabilidade entre métricas, instrumentos e arquivos de dados | Leonardo Bonetti |
+| 1.1 | 12/11/2026 | Criação da página inicial da Fase 3: visão geral, rastreabilidade com as fases anteriores e estrutura documental | [Davi Nobre](https://github.com/Jagaima) |
+| 1.2 | 12/11/2026 | Correção do número de atividades (22), remoção de referência a formulário online e alinhamento com cronograma v1.2 | [Davi Nobre](https://github.com/Jagaima) |
+| 1.3 | 14/11/2026 | Integração das duas versões da página: a tabela de rastreabilidade e a lista de seções em elaboração dão lugar às Tabelas 1 a 3, e o cronograma entra na Tabela 1 | Leonardo Bonetti |
