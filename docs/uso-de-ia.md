@@ -17,6 +17,7 @@ Esta página documenta todos os usos de ferramentas de Inteligência Artificial 
 | Claude Opus 5.5 (Claude Code) | Complemento da ata de reuniões com as decisões registradas no repositório (*commits*, PRs, histórico de versões das páginas e retrospectiva) e correção da formatação da ata. Cada data e número foi conferido com o GitHub e com as páginas citadas | 03/11/2026 | Caio Borges |
 | Deepseek v4 | Utilização para gerar o gráfico visual em Janela operacional na fase 3, documento cronograma.md | 12/11/2026 | [Davi Nobre](https://github.com/Jagaima) |
 | Claude Opus 5.5 (Claude Code) | Revisão das páginas da Fase 3 contra os critérios F3-C1 a F3-C8 e apoio na redação da página Recursos e Ambiente, a partir das fichas das métricas, do escopo da Fase 1 e do protocolo do teste com usuários. Cada recurso foi conferido com a ficha da métrica correspondente, e os itens ainda não decididos ficaram marcados como "a definir" | 12/11/2026 | [Felipe Campêlo](https://github.com/felipeacampelo) |
+| Claude Opus 5.5 (Claude Code) | Varredura de consistência depois da integração da Fase 3: busca das páginas que ainda citavam o questionário online, a retenção das gravações e o prazo antigo da Entrega 2, e redação dos ajustes nas Fases 2 e 3 e no cronograma, a partir das decisões da equipe. Cada alteração foi conferida com o protocolo, o termo de consentimento e as fichas das métricas, e passa por revisão no PR | 14/11/2026 | Caio Borges |
 
 ## Histórico de Versão
 
@@ -33,4 +34,5 @@ Esta página documenta todos os usos de ferramentas de Inteligência Artificial 
 | 1.8 | 03/11/2026 | Registro do uso de IA no complemento da ata de reuniões | Caio Borges |
 | 1.9 | 12/11/2026 | Registro do uso de IA na fase 3 | [Davi Nobre](https://github.com/Jagaima) |
 | 1.10 | 12/11/2026 | Registro do uso de IA na página Recursos e Ambiente da Fase 3 | [Felipe Campêlo](https://github.com/felipeacampelo) |
+| 1.11 | 14/11/2026 | Registro do uso de IA na varredura de consistência das Fases 2 e 3 | Caio Borges |
 
