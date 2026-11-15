@@ -11,7 +11,7 @@ A versão anterior previa um questionário online anônimo, divulgado em grupos 
 | Item | Definição |
 | ---- | --------- |
 | Público | Os 6 participantes do teste com usuários (P1 a P6), definidos no [protocolo da Fase 3](../fase-3/teste-usuarios.md#1-participantes) |
-| Formato | Em papel ou em tela separada, entregue pelo moderador no passo 7 do [roteiro da sessão](../fase-3/teste-usuarios.md#5-roteiro-da-sessao), logo após o SUS. O moderador anota o código do participante, sem o nome |
+| Formato | Em papel ou em tela separada, entregue pelo moderador no passo 7 do [roteiro da sessão](../fase-3/teste-usuarios.md#5-roteiro-da-sessao), logo após o SUS, no [formulário em PDF preenchível](../fase-3/questionario-fase-2.pdf). O moderador anota o código do participante, sem o nome |
 | Duração estimada | Cerca de 6 minutos (18 itens fechados e 2 abertos opcionais) |
 | Validade | Só entram as respostas de participantes que assinaram o termo de consentimento da sessão |
 | Dados publicados | `dados/brutos/questionario/respostas.csv`, uma linha por participante, identificada só pelo código; respostas abertas revisadas para remover qualquer dado que identifique o participante |
@@ -145,3 +145,4 @@ As respostas ficam em `dados/brutos/questionario/respostas.csv`, uma linha por p
 | 1.2 | 25/10/2026 | Questões GQM complementadas pelos indicadores IQ3 a IQ5 na numeração Q1 a Q16 | Leonardo Bonetti |
 | 1.3 | 14/11/2026 | Questionário aplicado ao fim da sessão do teste com usuários, no lugar do questionário online: público P1 a P6, consentimento pelo termo da sessão, retirada do item D1 e do bloco E, dois grupos iguais aos do protocolo, indicadores IQ1 a IQ4 descritivos e HP1 com comparação descritiva | Caio Borges |
 | 1.4 | 15/11/2026 | Item A1 aceita estudantes de graduação e de pós-graduação; A2 pergunta o semestre do curso atual | Caio Borges |
+| 1.5 | 15/11/2026 | Link para o formulário em PDF preenchível usado nas sessões | Caio Borges |

@@ -48,7 +48,7 @@ Estudantes do 3º ou 4º semestre não são recrutados: com só seis vagas, os d
 | Navegador | Google Chrome na versão estável vigente, em janela anônima, sem extensões e com zoom de 100%. Um único navegador em todas as sessões evita que diferenças entre navegadores afetem os tempos. A comparação entre navegadores é feita à parte, em M13 |
 | Gravação | Tela e áudio, sem câmera, em vídeo com marcação de tempo. Se o gravador permitir, destacar os cliques, o que facilita a contagem de M7 |
 | Rede | A rede disponível no local, registrada no formulário |
-| Materiais impressos ou em tela separada | Cartões com um enunciado por tarefa, formulário de observação, questionário SUS e questionário da Fase 2 sem o bloco E |
+| Materiais impressos ou em tela separada | Cartões com um enunciado por tarefa, [formulário de observação](formulario-observacao.md), [questionário SUS](questionario-sus.pdf) e [questionário da Fase 2](questionario-fase-2.pdf) sem o bloco E e sem o item D1, os dois em PDF preenchível |
 
 *Fonte: elaboração da equipe.*
 
@@ -160,7 +160,7 @@ Depois da sessão, o avaliador da gravação registra:
 
 ## 9. Questionário SUS
 
-O SUS [1] é aplicado em português, com escala de 1 (discordo totalmente) a 5 (concordo totalmente). A pontuação segue a ficha de M12. Nos itens, "este sistema" se refere ao que o participante usou na sessão: o portal do discente nas tarefas T1 a T6, e não módulos fora do [escopo](../fase-1/escopo.md#4-o-que-fica-fora-do-escopo), como a matrícula on-line.
+O SUS [1] é aplicado em português, com escala de 1 (discordo totalmente) a 5 (concordo totalmente), no [formulário em PDF](questionario-sus.pdf). A pontuação segue a ficha de M12. Nos itens, "este sistema" se refere ao que o participante usou na sessão: o portal do discente nas tarefas T1 a T6, e não módulos fora do [escopo](../fase-1/escopo.md#4-o-que-fica-fora-do-escopo), como a matrícula on-line.
 
 *Tabela 7 - Itens do questionário SUS.*
 
@@ -199,3 +199,4 @@ O SUS [1] é aplicado em português, com escala de 1 (discordo totalmente) a 5 (
 | 1.9 | 14/11/2026 | Idade mínima de 18 anos nos critérios de inclusão e duração da sessão igual à do termo (cerca de 35 minutos) | Leonardo Bonetti |
 | 1.10 | 14/11/2026 | Grupos definidos pelo protocolo e seguidos pelo questionário; justificativa da exclusão do 3º e 4º semestres; questionário sem o item D1 | Caio Borges |
 | 1.11 | 15/11/2026 | Estudantes de pós-graduação incluídos entre os participantes, com o grupo definido pelo semestre do curso atual; nível do curso anotado nas perguntas iniciais | Caio Borges |
+| 1.12 | 15/11/2026 | Formulário de observação, questionário SUS e questionário da Fase 2 publicados e ligados à Tabela 3 e à seção 9 | Caio Borges |
