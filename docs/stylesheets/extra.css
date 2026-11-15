@@ -33,7 +33,7 @@
 .esforco-kpi strong { font-size: 1.2rem; }
 .esforco-linha-grafico {
   display: grid;
-  grid-template-columns: minmax(150px, 1fr) minmax(90px, 2fr) minmax(110px, .8fr);
+  grid-template-columns: minmax(130px, 1fr) minmax(90px, 2fr) auto;
   align-items: center;
   gap: .75rem;
   margin: .55rem 0;
@@ -63,9 +63,9 @@
 .esforco-vazio { padding: 1rem; border-left: .2rem solid var(--md-primary-fg-color); }
 @media (max-width: 600px) {
   .esforco-entrega { padding: .8rem; }
-  .esforco-linha-grafico { grid-template-columns: 1fr auto; gap: .35rem .6rem; }
-  .esforco-trilho { grid-column: 1 / -1; grid-row: 2; }
-  .esforco-valor { grid-column: 2; grid-row: 1; }
+  .esforco-linha-grafico { grid-template-columns: 1fr; gap: .3rem; }
+  .esforco-trilho { grid-row: 2; }
+  .esforco-valor { grid-row: 3; text-align: left; white-space: normal; }
 }
 
 
