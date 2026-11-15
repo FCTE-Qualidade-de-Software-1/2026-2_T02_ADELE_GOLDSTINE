@@ -122,12 +122,14 @@ A premissa 4 da especificação pede as gravações no repositório, e o [escopo
 
 | Item | Definição |
 | ---- | --------- |
-| Local | Pasta em um drive compartilhado da equipe, com acesso restrito (local definitivo a confirmar pela equipe) |
+| Local | Pasta no OneDrive institucional da UnB, compartilhada por nome só com os membros da equipe e a professora (nunca por link aberto), com uma subpasta para os termos assinados e outra para as gravações e transcrições |
 | Quem acessa | Membros da equipe e a professora da disciplina |
 | Nome dos arquivos | `Entrevista_<número>_<data>`, por exemplo `Entrevista_3_2026-11-15`. O número é o mesmo do código do participante (`Entrevista_3` corresponde a P3). O nome do participante não aparece no arquivo: a ligação entre código e nome fica só no registro de consentimento, para que os nomes não apareçam se a pasta for compartilhada por engano |
-| Consentimento | Registrado antes de qualquer gravação, conforme o [roteiro do protocolo](teste-usuarios.md#5-roteiro-da-sessao). O registro de cada participante fica na mesma pasta restrita |
+| Consentimento | Registrado antes de qualquer gravação, conforme o [roteiro do protocolo](teste-usuarios.md#5-roteiro-da-sessao). O termo assinado de cada participante fica na subpasta dos termos, separado das gravações, como promete o termo |
+| Transcrição | Transcrição automática do áudio, gerada pela ferramenta de videochamada nas sessões remotas e prevista no termo. Segue as mesmas regras da gravação, com o nome `Entrevista_<número>_<data>_transcricao`. Antes de ser usada na análise, o nome do participante é trocado pelo código e são removidos matrícula, curso, disciplinas e professores |
 | Ligação com o repositório | No repositório, os dados extraídos das gravações (tempos, cliques, primeira escolha e erros) apontam para o minuto do vídeo na coluna `evidencia` (ex.: `P3 04:12`). O link da pasta é informado à professora junto com a release da Entrega 2 |
-| Retenção | Até 60 dias após a sessão, como informa o [termo de consentimento](termo-consentimento.docx). Depois, as gravações são apagadas |
+| Retenção | Gravações, transcrições e termos assinados: até 60 dias após a sessão, como informa o [termo de consentimento](termo-consentimento.docx). Depois, são apagados. Sem o termo, os dados do repositório deixam de ter qualquer ligação com o nome do participante |
+| Base legal e direitos | O termo informa o tratamento conforme a LGPD (Lei nº 13.709/2018), com base no consentimento, e os direitos de acesso, correção, exclusão e retirada do consentimento. Se um participante retirar o consentimento, os registros dele são apagados e não entram nos resultados apresentados depois do pedido |
 
 *Fonte: elaboração da equipe.*
 
@@ -160,3 +162,4 @@ A Tabela 8 mostra como os recursos especificados atendem ao que as fichas das m�
 | 1.1 | 14/11/2026 | Ajustes da revisão: retirada da sessão piloto, questionário aplicado ao fim da sessão, nome das gravações sem o nome do participante, fontes de M2 separadas conforme a ficha e justificativa das gravações fora do repositório | [Felipe Campêlo](https://github.com/felipeacampelo) |
 | 1.2 | 14/11/2026 | Retenção das gravações igual à do termo de consentimento (60 dias após a sessão) e data do exemplo de nome de arquivo dentro da janela de coleta | Caio Borges |
 | 1.3 | 15/11/2026 | Conta e participantes do teste com usuários podem ser de graduação ou de pós-graduação, conforme o protocolo | Caio Borges |
+| 1.4 | 15/11/2026 | Local das gravações no OneDrive institucional, transcrição automática, retenção dos termos assinados e referência à LGPD, alinhados à nova versão do termo de consentimento | Caio Borges |
