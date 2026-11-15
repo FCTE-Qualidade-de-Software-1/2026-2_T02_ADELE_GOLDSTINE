@@ -18,6 +18,8 @@ Para cada entrada na `main` (PR ou *commit* direto) depois da tag da entrega ant
 
 O volume é convertido em horas pelas taxas de `TAXAS` em `esforco.py`. Cada revisor de um PR recebe ainda 0,25 h fixas mais as palavras dos seus comentários de revisão (`HORAS_POR_REVISAO`), lidas da API do GitHub pelo `gh`. O modelo IEEE copiado, PDFs, imagens e o próprio `esforco.csv` ficam de fora.
 
+Os gráficos do dashboard (horas por categoria, esforço acumulado e horas por semana) e o do tempo de ciclo dos PRs (I4), na página de Gestão do Projeto, são gerados em SVG no build por `gestao/graficos.py`, sem bibliotecas externas. O do I4 lê da API do GitHub as datas dos *commits* e do *merge* de cada PR.
+
 Em cada PR, a cada push e a cada revisão, o *workflow* `.github/workflows/esforco-pr.yml` comenta as horas estimadas e a participação de cada membro se o PR for integrado. O revisor valida a estimativa na revisão. O dashboard do site é recalculado a cada publicação (`deploy-pages.yml`).
 
 Se um *commit* for feito com um e-mail que o script não conhece, o cálculo para com um erro: adicione o e-mail em `EMAILS` ou o login do GitHub em `LOGINS`.

@@ -4,6 +4,8 @@ Este painel é recalculado a cada publicação do site e resume a contribuição
 
 As horas da Entrega 1 são estimadas ou declaradas e aparecem identificadas pela origem. Ajustes negativos reduzem o total líquido do integrante.
 
+Em cada entrega, o painel mostra a participação de cada integrante, as horas por categoria de atividade e, quando há registros em mais de uma data, o esforço acumulado ao longo do tempo e as horas da equipe por semana. Cada gráfico tem uma tabela com os mesmos dados, em "Ver os dados do gráfico".
+
 [[DASHBOARD_ESFORCO]]
 
 Consulte também a [metodologia e a tabela de contribuição](contribuicao.md) e a [gestão do projeto](gestao-psm.md).
