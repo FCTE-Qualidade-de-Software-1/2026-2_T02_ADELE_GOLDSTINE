@@ -19,6 +19,7 @@ Esta página documenta todos os usos de ferramentas de Inteligência Artificial 
 | Claude Opus 5.5 (Claude Code) | Revisão das páginas da Fase 3 contra os critérios F3-C1 a F3-C8 e apoio na redação da página Recursos e Ambiente, a partir das fichas das métricas, do escopo da Fase 1 e do protocolo do teste com usuários. Cada recurso foi conferido com a ficha da métrica correspondente, e os itens ainda não decididos ficaram marcados como "a definir" | 12/11/2026 | [Felipe Campêlo](https://github.com/felipeacampelo) |
 | Claude Opus 5.5 (Claude Code) | Varredura de consistência depois da integração da Fase 3: busca das páginas que ainda citavam o questionário online, a retenção das gravações e o prazo antigo da Entrega 2, e redação dos ajustes nas Fases 2 e 3 e no cronograma, a partir das decisões da equipe. Cada alteração foi conferida com o protocolo, o termo de consentimento e as fichas das métricas, e passa por revisão no PR | 14/11/2026 | Caio Borges |
 | Claude Opus 5.5 (Claude Code) | Busca das páginas que restringiam o teste com usuários a estudantes de graduação e redação dos ajustes no protocolo, no questionário, em Recursos e Ambiente, na página Métricas, no escopo da Fase 1 e no termo de consentimento, a partir da decisão da equipe de aceitar estudantes de pós-graduação. Cada alteração foi conferida com o protocolo e o termo, e passa por revisão no PR | 15/11/2026 | Caio Borges |
+| Claude Opus 5.5 (Claude Code) | Criação do formulário de observação do moderador, a partir das colunas de `sessoes.csv` e `compreensao.csv` e do roteiro do protocolo, e geração em PDF preenchível do questionário SUS e do questionário da Fase 2, com o texto dos itens copiado do protocolo e da página do questionário. Cada página do PDF foi conferida visualmente, e o conteúdo passa por revisão no PR | 15/11/2026 | Caio Borges |
 
 ## Histórico de Versão
 
@@ -37,3 +38,4 @@ Esta página documenta todos os usos de ferramentas de Inteligência Artificial 
 | 1.10 | 12/11/2026 | Registro do uso de IA na página Recursos e Ambiente da Fase 3 | [Felipe Campêlo](https://github.com/felipeacampelo) |
 | 1.11 | 14/11/2026 | Registro do uso de IA na varredura de consistência das Fases 2 e 3 | Caio Borges |
 | 1.12 | 15/11/2026 | Registro do uso de IA na inclusão de estudantes de pós-graduação no teste com usuários | Caio Borges |
+| 1.13 | 15/11/2026 | Registro do uso de IA no formulário de observação e nos questionários em PDF | Caio Borges |
