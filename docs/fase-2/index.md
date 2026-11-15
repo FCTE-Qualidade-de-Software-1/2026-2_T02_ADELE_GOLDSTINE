@@ -73,7 +73,7 @@ A Tabela 5 relaciona as técnicas previstas na Fase 1 às métricas que cada uma
 | Inspeção por dois avaliadores com roteiro | Roteiro de verificação de funções e conferência de dados (Adequação Funcional); verificação manual de acessibilidade; roteiro de cenários de erro (Capacidade de Interação) | M1, M2, M10, M20 |
 | Execução das tarefas em matriz de navegadores e telas | Matriz de navegadores e tamanhos de tela (Flexibilidade) | M13, M14, M15 |
 | Ferramenta automática (WAVE) | Verificação automatizada de acessibilidade | M9 |
-| Questionário online anônimo ([Questionário](questionario.md)) | Complementa o roteiro de verificação de funções (Adequação Funcional); motivado pelo indício OP-07, sem técnica correspondente na Tabela 3 do escopo. Também compara a percepção de calouros e veteranos | M3 e insumo de M1; indicadores auxiliares IQ1 a IQ5 e hipótese de perfil HP1 |
+| Questionário aplicado ao fim da sessão do teste com usuários ([Questionário](questionario.md)) | Complementa o roteiro de verificação de funções (Adequação Funcional); motivado pelo indício OP-07, sem técnica correspondente na Tabela 3 do escopo. Também compara, de forma descritiva, a percepção dos participantes do começo e do meio ou fim do curso | M3 e insumo de M1; indicadores auxiliares IQ1 a IQ4 e hipótese de perfil HP1 |
 
 **Inspeção heurística:** prevista na Fase 1 para Capacidade de Interação, ela é usada como evidência qualitativa para interpretar Q4 (reconhecimento de adequação) e Q12 (autodescritividade) na Fase 4. Ela não gera métrica própria porque a severidade atribuída a cada problema depende do julgamento do avaliador, e as métricas desta fase precisam produzir o mesmo valor quando aplicadas por avaliadores diferentes.
 
@@ -98,7 +98,7 @@ As relações foram convertidas nas hipóteses de relação HR1 e HR2, com a for
 - [Métricas](metricas.md): definição, cálculo, fonte de dados, coleta e interpretação das métricas M1 a M15 e M20 e da métrica auxiliar MA1, com base na ISO/IEC 25023 [4] quando há medida equivalente; definições comuns e artefatos de dados previstos.
 - [Níveis de Pontuação](niveis-pontuacao.md): faixas de cada métrica e critérios de julgamento por característica.
 - [Gráfico GQM](grafico-gqm.md): diagramas da hierarquia Objetivo, Questões e Métricas (Figuras 1 a 4) e matriz de rastreabilidade.
-- [Questionário](questionario.md): itens do questionário com estudantes, grupos de comparação por semestre, indicadores auxiliares IQ1 a IQ5 e hipótese de perfil HP1.
+- [Questionário](questionario.md): itens do questionário com estudantes, grupos de comparação por semestre, indicadores auxiliares IQ1 a IQ4 e hipótese de perfil HP1.
 
 A Tabela 7 resume a quantidade de elementos GQM por objetivo.
 
@@ -137,3 +137,4 @@ Cada questão tem uma única métrica e uma hipótese com o mesmo número (rela�
 | 2.4 | 25/10/2026 | Ponto de vista único dos objetivos; perfis da Fase 1 tratados nas justificativas e nos recortes das métricas | Leonardo Bonetti |
 | 2.5 | 25/10/2026 | Versão do SIGAA remetida ao objeto da avaliação da Fase 1 | Leonardo Bonetti |
 | 2.6 | 25/10/2026 | Citações a questões e hipóteses na numeração Q1 a Q16 e H1 a H16; síntese de quantidades com a relação 1:1 | Leonardo Bonetti |
+| 2.7 | 14/11/2026 | Questionário aplicado ao fim da sessão do teste com usuários, no lugar do questionário online, e indicadores IQ1 a IQ4 | Caio Borges |

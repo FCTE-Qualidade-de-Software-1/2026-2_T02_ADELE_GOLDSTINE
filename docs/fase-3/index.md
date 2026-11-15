@@ -15,6 +15,7 @@ A Fase 2 deixou três itens para esta fase: o formato dos arquivos de dados, os 
 | Página | Conteúdo |
 | ------ | -------- |
 | [Protocolo do Teste com Usuários](teste-usuarios.md) | Participantes, roteiro da sessão, enunciados das tarefas, ordem, registro e SUS |
+| [Formulário de Observação](formulario-observacao.md) | O que o moderador anota durante a sessão; links para o questionário SUS e o questionário da Fase 2 em PDF |
 | [Planilhas de Coleta](planilhas.md) | Formato de cada arquivo de dados e convenções de preenchimento |
 | [Recursos e Ambiente](recursos-ambiente.md) | Produto avaliado, hardware e software por método, pessoas e conhecimento exigido, massa de dados e gravações |
 | [Cronograma](cronograma.md) | Atividades da Entrega 2, responsáveis, prazos e acompanhamento do planejado e do realizado |
@@ -47,7 +48,7 @@ A Tabela 3 liga cada métrica ao instrumento que a coleta e ao arquivo em que o 
 | M2 | Conferência com o PPC, o calendário e os documentos do próprio SIGAA | `inspecao/correcao.csv` |
 | M3 | Questionário, item F1 | `questionario/respostas.csv` |
 | M4 | Gravações, comparadas com os itens válidos de primeira escolha | `testes-usuarios/sessoes.csv` e `referencia/caminhos.csv` |
-| M5 | Formulário de observação do moderador | `testes-usuarios/sessoes.csv` |
+| M5 | [Formulário de observação do moderador](formulario-observacao.md) | `testes-usuarios/sessoes.csv` |
 | M6 | Gravações e tempos do especialista | `testes-usuarios/sessoes.csv` e `referencia/tempos-especialista.csv` |
 | M7 | Gravações e caminho mais curto | `testes-usuarios/sessoes.csv` e `referencia/caminhos.csv` |
 | M8 | Gravações, um registro por erro | `testes-usuarios/erros.csv` |
@@ -59,7 +60,7 @@ A Tabela 3 liga cada métrica ao instrumento que a coleta e ao arquivo em que o 
 | M14 | Verificação das páginas em 360 px e 768 px | `flexibilidade/paginas-adaptadas.csv` |
 | M15 | Execução das tarefas no computador e no celular | `flexibilidade/tempos-celular.csv` |
 | M20 | Roteiro dos cenários de erro C1 a C6 | `inspecao/cenarios-erro.csv` |
-| MA1 | Formulário de observação do moderador | `testes-usuarios/sessoes.csv` |
+| MA1 | [Formulário de observação do moderador](formulario-observacao.md) | `testes-usuarios/sessoes.csv` |
 
 *Fonte: elaboração da equipe. Os arquivos ficam em `dados/brutos/`, exceto os de `referencia/`, que ficam em `dados/referencia/`.*
 
@@ -77,3 +78,4 @@ A Tabela 3 liga cada métrica ao instrumento que a coleta e ao arquivo em que o 
 | 1.3 | 14/11/2026 | Integração das duas versões da página: a tabela de rastreabilidade e a lista de seções em elaboração dão lugar às Tabelas 1 a 3, e o cronograma entra na Tabela 1 | Leonardo Bonetti |
 | 1.4 | 14/11/2026 | Questionário aplicado aos participantes do teste com usuários, ao fim da sessão | Leonardo Bonetti |
 | 1.5 | 14/11/2026 | Página de Recursos e Ambiente na Tabela 1; acesso às gravações remetido a ela | [Felipe Campêlo](https://github.com/felipeacampelo) |
+| 1.6 | 15/11/2026 | Formulário de Observação incluído na Tabela 1 e ligado às métricas M5 e MA1 | Caio Borges |

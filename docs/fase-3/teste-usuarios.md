@@ -4,18 +4,20 @@ Esta página define como cada sessão do teste com usuários é conduzida, para 
 
 ## 1. Participantes
 
-São **6 participantes**, em dois grupos de três que **diferem apenas no semestre**. Os grupos usam os mesmos cortes de semestre do [questionário](../fase-2/questionario.md#4-perfis-usados-na-comparacao), para que os resultados do teste e do questionário possam ser comparados.
+São **6 participantes**, em dois grupos de três que **diferem apenas no semestre**. O [questionário](../fase-2/questionario.md#4-perfis-usados-na-comparacao) respondido ao fim da sessão usa os mesmos grupos, para que as respostas possam ser lidas junto com as medidas do teste.
 
 *Tabela 1 - Grupos de participantes.*
 
 | Grupo | Critério | Participantes | Perfil da Fase 1 |
 | ----- | -------- | :-----------: | ---------------- |
-| Começo do curso | 1º ou 2º semestre | 3, mais 1 reserva | Calouro |
-| Meio ou fim do curso | 5º semestre ou mais | 3, mais 1 reserva | Veterano; formando, se prevê concluir o curso nos próximos dois semestres |
+| Começo do curso | 1º ou 2º semestre do curso atual | 3, mais 1 reserva | Calouro |
+| Meio ou fim do curso | 5º semestre ou mais do curso atual | 3, mais 1 reserva | Veterano; formando, se prevê concluir o curso nos próximos dois semestres |
 
 *Fonte: elaboração da equipe.*
 
-**Critérios de inclusão:** ser estudante de graduação ativo da UnB, ter 18 anos ou mais, ter acesso ao próprio SIGAA e consentir com a gravação da sessão (premissa 6 da especificação do trabalho). A idade mínima existe porque a participação de menores de 18 anos exigiria a autorização de um responsável, que o termo de consentimento não prevê.
+**Critérios de inclusão:** ser estudante ativo da UnB, de graduação ou de pós-graduação, ter 18 anos ou mais, ter acesso ao próprio SIGAA e consentir com a gravação da sessão (premissa 6 da especificação do trabalho). A idade mínima existe porque a participação de menores de 18 anos exigiria a autorização de um responsável, que o termo de consentimento não prevê.
+
+**Estudantes de pós-graduação:** podem participar porque usam o mesmo Portal do Discente e executam as mesmas tarefas T1 a T6. O que muda é só o curso, e por isso o semestre que define o grupo é o do curso atual. A experiência anterior com o SIGAA, por exemplo de quem fez a graduação na UnB, não muda o grupo: ela é registrada na pergunta inicial sobre cada tarefa (passo 2 do roteiro), que já exclui do recorte de calouros de M5 as tarefas executadas antes do estudo.
 
 **Perfis que não são recrutados:** não é preciso encontrar estudantes com deficiência nem estudantes que usam só o celular. Esses perfis da Fase 1 são cobertos por inspeção da equipe: a inclusividade por M9 e M10 e o uso no celular por M14 e M15.
 
@@ -23,7 +25,7 @@ São **6 participantes**, em dois grupos de três que **diferem apenas no semest
 
 **Por que há reservas:** com três participantes por grupo, cada grupo fica exatamente no mínimo da regra 3 de [Níveis de Pontuação](../fase-2/niveis-pontuacao.md#regra-3-resultados-por-perfil-por-pagina-e-por-tarefa). Uma falta faria o recorte do grupo virar apenas descritivo, e a hipótese H5, que depende do recorte de calouros, ficaria inconclusiva.
 
-Estudantes do 3º ou 4º semestre não são recrutados, porque formam o grupo de transição do questionário, que não é analisado com nível. A amostra é de conveniência, limitação já aceita no [escopo da Fase 1](../fase-1/escopo.md#7-rigor-da-avaliacao).
+Estudantes do 3º ou 4º semestre não são recrutados: com só seis vagas, os dois grupos ficam nos extremos do curso, onde a diferença de experiência com o SIGAA é maior, e um grupo intermediário teria participantes de menos para qualquer recorte. A amostra é de conveniência, limitação já aceita no [escopo da Fase 1](../fase-1/escopo.md#7-rigor-da-avaliacao).
 
 ## 2. Papéis
 
@@ -46,7 +48,7 @@ Estudantes do 3º ou 4º semestre não são recrutados, porque formam o grupo de
 | Navegador | Google Chrome na versão estável vigente, em janela anônima, sem extensões e com zoom de 100%. Um único navegador em todas as sessões evita que diferenças entre navegadores afetem os tempos. A comparação entre navegadores é feita à parte, em M13 |
 | Gravação | Tela e áudio, sem câmera, em vídeo com marcação de tempo. Se o gravador permitir, destacar os cliques, o que facilita a contagem de M7 |
 | Rede | A rede disponível no local, registrada no formulário |
-| Materiais impressos ou em tela separada | Cartões com um enunciado por tarefa, formulário de observação, questionário SUS e questionário da Fase 2 sem o bloco E |
+| Materiais impressos ou em tela separada | Cartões com um enunciado por tarefa, [formulário de observação](formulario-observacao.md), [questionário SUS](questionario-sus.pdf) e [questionário da Fase 2](questionario-fase-2.pdf) sem o bloco E e sem o item D1, os dois em PDF preenchível |
 
 *Fonte: elaboração da equipe.*
 
@@ -74,8 +76,8 @@ Não há sessão piloto. Por isso, não são verificados antes da coleta o enten
 
 As falas entre aspas são lidas como estão escritas, para que todos os participantes recebam as mesmas instruções.
 
-1. **Consentimento (cerca de 5 min).** O moderador entrega o [Termo de Consentimento Livre e Esclarecido](termo-consentimento.docx) em duas vias, explica o objetivo da sessão e o que será gravado e responde a dúvidas. O participante marca a opção de gravação e assina as duas vias, antes de qualquer gravação, e fica com uma delas. Se o participante não autorizar a gravação, a sessão não acontece, porque M4, M6, M7 e M8 dependem dela. A via assinada fica guardada separada dos dados da sessão e não vai para o repositório, porque contém o nome do participante.
-2. **Perguntas iniciais (cerca de 3 min).** O moderador anota no formulário: semestre; se prevê concluir o curso nos próximos dois semestres; e, para cada tarefa, se o participante já a fez no SIGAA alguma vez. A pergunta é feita com a descrição curta da Tabela 4, sem citar menus. Essa resposta alimenta o recorte de calouros de M5.
+1. **Consentimento (cerca de 5 min).** O moderador entrega o [Termo de Consentimento Livre e Esclarecido](termo-consentimento.docx) em duas vias, explica o objetivo da sessão e o que será gravado e responde a dúvidas. O participante marca a opção de gravação e assina as duas vias, antes de qualquer gravação, e fica com uma delas. Se o participante não autorizar a gravação, a sessão não acontece, porque M4, M6, M7 e M8 dependem dela. A via assinada fica guardada separada dos dados da sessão, não vai para o repositório, porque contém o nome do participante, e é apagada 60 dias após a sessão, junto com a gravação ([Recursos e Ambiente](recursos-ambiente.md#5-gravacoes)).
+2. **Perguntas iniciais (cerca de 3 min).** O moderador anota no formulário: se o curso é de graduação ou de pós-graduação; semestre no curso atual; se prevê concluir o curso nos próximos dois semestres; e, para cada tarefa, se o participante já a fez no SIGAA alguma vez. A pergunta é feita com a descrição curta da Tabela 4, sem citar menus. Essa resposta alimenta o recorte de calouros de M5.
 3. **Entrada no sistema.** O participante entra no SIGAA com a própria conta. O moderador não olha o teclado. Só depois que a página inicial do Portal do Discente aparece o moderador inicia a gravação.
 4. **Instruções (cerca de 2 min).** O moderador lê:
     > "Obrigado por participar. Estamos avaliando o SIGAA, não você: se algo for difícil, é um problema do sistema, e isso é exatamente o que queremos descobrir. Vou entregar seis tarefas, uma de cada vez. Leia cada uma em voz alta e comece em seguida. Quando terminar, me diga a resposta ou me avise que concluiu. Durante as tarefas eu não posso ajudar. Se não conseguir, você pode dizer 'desisto' a qualquer momento: isso também é um resultado útil. Não precisa narrar o que está fazendo. Alguma dúvida antes de começar?"
@@ -85,7 +87,7 @@ As falas entre aspas são lidas como estão escritas, para que todos os particip
     3. A tarefa termina quando ocorre um dos fins da Tabela 6 (seção 8).
     4. Em T2, T4 e T6, com a página ainda aberta, o moderador faz a pergunta de compreensão da Tabela 4 e anota a resposta e se o participante abriu legenda ou ajuda.
 6. **Questionário SUS (cerca de 3 min).** Logo após a última tarefa, o moderador lê: "Agora responda a este questionário sozinho, pensando no que você usou hoje no SIGAA. Marque uma opção em cada item. Se não tiver certeza, marque o meio da escala." Depois se afasta e não comenta os itens.
-7. **Questionário (cerca de 6 min).** Logo após o SUS, o moderador entrega o [questionário da Fase 2](../fase-2/questionario.md#3-itens-do-questionario) sem o bloco E, que repetiria o SUS já respondido, e anota nele o código do participante, sem o nome. O texto de apresentação do questionário não é lido, porque o consentimento já foi obtido pelo termo. O moderador lê: "Agora, um último questionário. Desta vez, pense em como você usa o SIGAA no dia a dia, e não só no que fez hoje. Responda sozinho. As perguntas abertas são opcionais." Depois se afasta e não comenta os itens.
+7. **Questionário (cerca de 6 min).** Logo após o SUS, o moderador entrega o [questionário da Fase 2](../fase-2/questionario.md#3-itens-do-questionario), que já não tem o bloco E (repetiria o SUS) nem o item D1 (repetiria a pergunta de compreensão de T2), e anota nele o código do participante, sem o nome. O texto de apresentação do questionário não é lido, porque o consentimento já foi obtido pelo termo. O moderador lê: "Agora, um último questionário. Desta vez, pense em como você usa o SIGAA no dia a dia, e não só no que fez hoje. Responda sozinho. As perguntas abertas são opcionais." Depois se afasta e não comenta os itens.
 8. **Encerramento (cerca de 2 min).** O moderador para a gravação. O participante sai do SIGAA e o moderador fecha a janela anônima e apaga o atestado baixado em T3. O moderador agradece e pede: "Por favor, não comente as tarefas com colegas que ainda possam participar."
 
 A sessão dura cerca de 35 minutos. Se todas as tarefas chegarem ao limite de 5 minutos, chega a cerca de 50 minutos.
@@ -158,7 +160,7 @@ Depois da sessão, o avaliador da gravação registra:
 
 ## 9. Questionário SUS
 
-O SUS [1] é aplicado em português, com escala de 1 (discordo totalmente) a 5 (concordo totalmente). A pontuação segue a ficha de M12. Nos itens, "este sistema" se refere ao que o participante usou na sessão: o portal do discente nas tarefas T1 a T6, e não módulos fora do [escopo](../fase-1/escopo.md#4-o-que-fica-fora-do-escopo), como a matrícula on-line.
+O SUS [1] é aplicado em português, com escala de 1 (discordo totalmente) a 5 (concordo totalmente), no [formulário em PDF](questionario-sus.pdf). A pontuação segue a ficha de M12. Nos itens, "este sistema" se refere ao que o participante usou na sessão: o portal do discente nas tarefas T1 a T6, e não módulos fora do [escopo](../fase-1/escopo.md#4-o-que-fica-fora-do-escopo), como a matrícula on-line.
 
 *Tabela 7 - Itens do questionário SUS.*
 
@@ -195,3 +197,7 @@ O SUS [1] é aplicado em português, com escala de 1 (discordo totalmente) a 5 (
 | 1.7 | 14/11/2026 | Termo de Consentimento Livre e Esclarecido incluído na Fase 3 e ligado ao passo 1 do roteiro | Leonardo Bonetti |
 | 1.8 | 14/11/2026 | Questionário da Fase 2 aplicado ao fim da sessão, sem o bloco E | Leonardo Bonetti |
 | 1.9 | 14/11/2026 | Idade mínima de 18 anos nos critérios de inclusão e duração da sessão igual à do termo (cerca de 35 minutos) | Leonardo Bonetti |
+| 1.10 | 14/11/2026 | Grupos definidos pelo protocolo e seguidos pelo questionário; justificativa da exclusão do 3º e 4º semestres; questionário sem o item D1 | Caio Borges |
+| 1.11 | 15/11/2026 | Estudantes de pós-graduação incluídos entre os participantes, com o grupo definido pelo semestre do curso atual; nível do curso anotado nas perguntas iniciais | Caio Borges |
+| 1.12 | 15/11/2026 | Formulário de observação, questionário SUS e questionário da Fase 2 publicados e ligados à Tabela 3 e à seção 9 | Caio Borges |
+| 1.13 | 15/11/2026 | Termo de consentimento com referência à LGPD, transcrição, sessão remota pelo Teams e prazo de guarda da via assinada | Caio Borges |

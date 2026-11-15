@@ -45,7 +45,7 @@ Quando existe referência externa reconhecida, ela foi usada para definir os lim
 
 | Métrica | Excelente | Bom | Regular | Insatisfatório | Origem das faixas |
 | ------- | --------- | --- | ------- | -------------- | ----------------- |
-| M3 - Uso de ferramentas externas | ≤ 10% | > 10% a 25% | > 25% a 50% | > 50% | Definidas pela equipe: até um em cada dez respondentes é compatível com preferências individuais; acima da metade, recorrer a ferramenta externa é a prática dominante |
+| M3 - Uso de ferramentas externas | ≤ 10% | > 10% a 25% | > 25% a 50% | > 50% | Definidas pela equipe: até um em cada dez participantes é compatível com preferências individuais; acima da metade, recorrer a ferramenta externa é a prática dominante. Com 6 participantes, cada um vale cerca de 17 pontos percentuais: 0 (Excelente), 1 (Bom), 2 ou 3 (Regular), 4 a 6 (Insatisfatório) |
 | M6 - Tempo relativo de execução | ≤ 1,5 | > 1,5 a 2,5 | > 2,5 a 4,0 | > 4,0 | Definidas pela equipe: até 1,5 vez o tempo de um usuário experiente é considerado excelente para um usuário comum |
 | M7 - Desvio de caminho | ≤ 1,11 | > 1,11 a 1,33 | > 1,33 a 2,00 | > 2,00 | Definidas pela equipe como o inverso da eficiência do caminho (caminho mais curto / realizado) de 0,90, 0,75 e 0,50: acima de 2,00, o participante faz mais que o dobro dos cliques necessários |
 | M9 - Erros automáticos de acessibilidade por página | 0 | > 0 a 2 | > 2 a 5 | > 5 | Definidas pela equipe: a WCAG 2.2 [2] não admite erros, por isso só a ausência de erros é Excelente; como a ferramenta detecta apenas parte dos problemas, mais de cinco erros por página indica barreiras generalizadas |
@@ -164,3 +164,4 @@ Pontuação de G3 = (2 + 1 + 1) / 3 = 1,33. Não há questão Insatisfatória, m
 | 2.1 | 18/10/2026 | Preenchimento a partir da versão complementar: escala com regra de fronteira, faixas de M1 a M20 com origem, Etapas 1 a 3, regras complementares (métricas não aplicáveis, itens críticos de M2, recortes, ranking das tarefas, ausência de nota única, classificação das hipóteses) e exemplo de aplicação em G4 | Leonardo Bonetti |
 | 2.2 | 25/10/2026 | Remoção das faixas de M16 a M19 e do objetivo G4 (Eficiência de Desempenho); exemplo de aplicação refeito em G3; MA1 ligada à HR2 (antiga HR3) | Leonardo Bonetti |
 | 2.3 | 25/10/2026 | Regra de agregação 1:1 (nível da questão = nível da sua métrica); questões por objetivo na numeração Q1 a Q16; exemplo de G3 com Q14 a Q16 | Leonardo Bonetti |
+| 2.4 | 14/11/2026 | Justificativa das faixas de M3 em participantes, com a correspondência para 6 participantes; faixas mantidas | Caio Borges |

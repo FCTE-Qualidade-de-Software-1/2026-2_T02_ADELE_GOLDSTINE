@@ -60,7 +60,7 @@ A maior profundidade em Capacidade de Interação acompanha a prioridade obtida 
 | Item excluído | Justificativa |
 | :--- | :--- |
 | Portais do docente, do servidor e da coordenação | A equipe não possui credenciais desses perfis e o ponto de vista definido é o do estudante |
-| Pós-graduação, ensino a distância e ensino básico/técnico | Funções e regras diferentes da graduação; ampliariam o escopo sem ganho para o propósito |
+| Funções próprias da pós-graduação, do ensino a distância e do ensino básico/técnico | Regras diferentes das da graduação; ampliariam o escopo sem ganho para o propósito. Estudantes de pós-graduação podem participar do teste com usuários, porque usam o mesmo Portal do Discente nas tarefas T1 a T6 ([Protocolo da Fase 3](../fase-3/teste-usuarios.md#1-participantes)) |
 | Matrícula on-line, ajuste e trancamento | Só ficam disponíveis em períodos definidos pelo calendário, possivelmente fora da janela de coleta; além disso, executá-los alteraria dados acadêmicos reais. Podem ser incluídos por inspeção se o período coincidir com a Fase 4 |
 | Módulos de Pesquisa, Extensão, Bolsas, Estágio e Mobilidade | Uso menos frequente e restrito a parte dos estudantes; mantêm o mesmo padrão de interface dos menus avaliados |
 | Demais sistemas SIG (SIGRH, SIPAC etc.) | São produtos distintos; a Autenticação Integrada é considerada apenas como passo inicial das tarefas |
@@ -75,7 +75,7 @@ A maior profundidade em Capacidade de Interação acompanha a prioridade obtida 
 Os resultados desta avaliação valerão nas seguintes condições:
 
 - **Versão e período:** a versão v4.15.10.115, no 2º semestre de 2026. Atualizações do sistema podem invalidar comparações posteriores.
-- **Perfil:** estudantes de graduação, com amostra concentrada na FCTE (campus Gama). A generalização para toda a UnB depende do tamanho e da diversidade da amostra, que serão definidos na Fase 3.
+- **Perfil:** estudantes de graduação e, no teste com usuários, também de pós-graduação, com amostra concentrada na FCTE (campus Gama). A generalização para toda a UnB depende do tamanho e da diversidade da amostra, que serão definidos na Fase 3.
 - **Desempenho do lado do cliente:** os tempos medidos incluem rede e navegador e variam com o horário; serão reportados com as condições de medição e não como medidas do servidor.
 - **Instância:** os resultados descrevem o SIGAA da UnB, com suas configurações locais; não se estendem automaticamente a outras instituições que usam o produto.
 - **Dados reais:** cada participante consulta os próprios dados; diferenças entre históricos acadêmicos podem afetar a comparabilidade de algumas tarefas.
@@ -100,3 +100,4 @@ O rigor (nível de avaliação) foi definido considerando o risco das decisões 
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 16/10/2026 | Criação do documento: objeto, tarefas representativas, ambientes, profundidade, exclusões, limites de validade, premissas e rigor | Caio Borges |
+| 1.1 | 15/11/2026 | Estudantes de pós-graduação aceitos no teste com usuários; ficam fora do escopo apenas as funções próprias da pós-graduação | Caio Borges |

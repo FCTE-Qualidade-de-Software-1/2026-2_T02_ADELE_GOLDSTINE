@@ -1,6 +1,8 @@
 # Questionário com Estudantes
 
-Esta página especifica o **questionário online anônimo** previsto na [seção 2.3](index.md#23-instrumentos-de-coleta). Ele é a fonte da métrica M3 e de parte da lista de referência de M1 ([Métricas](metricas.md)) e amplia a amostra do teste com usuários para **comparar estudantes em diferentes momentos do curso**, sobretudo calouros e veteranos, conforme os [perfis da Fase 1](../fase-1/proposito-stakeholders.md#22-perfis-de-usuarios-considerados).
+Esta página especifica o **questionário aplicado ao fim de cada sessão do teste com usuários**, previsto na [seção 2.3](index.md#23-instrumentos-de-coleta). Ele é a fonte da métrica M3 e de parte da lista de referência de M1 ([Métricas](metricas.md)) e complementa as medidas da sessão com a percepção do participante sobre o uso do SIGAA no dia a dia, comparando estudantes do começo e do meio ou fim do curso, conforme os [perfis da Fase 1](../fase-1/proposito-stakeholders.md#22-perfis-de-usuarios-considerados).
+
+A versão anterior previa um questionário online anônimo, divulgado em grupos de estudantes. A equipe o substituiu por orientação da professora: um questionário sozinho é uma fonte fraca, e aplicado depois da entrevista, aos mesmos participantes, as respostas podem ser lidas junto com o que foi observado na sessão. Em troca, a amostra fica limitada aos 6 participantes do teste, e essa limitação é declarada na Fase 4.
 
 ## 1. Características do instrumento
 
@@ -8,32 +10,30 @@ Esta página especifica o **questionário online anônimo** previsto na [seção
 
 | Item | Definição |
 | ---- | --------- |
-| Público | Estudantes de graduação ativos da UnB, de qualquer curso e campus |
-| Formato | Formulário online (Google Forms ou equivalente), sem coleta de e-mail, nome ou matrícula |
-| Duração estimada | 5 a 8 minutos (29 itens fechados e 2 abertos opcionais) |
-| Divulgação | Grupos de estudantes, centros acadêmicos e listas de turmas, durante a janela de coleta da Fase 4 |
-| Amostra-alvo | Ao menos 60 respostas válidas, com ao menos 15 por perfil (calouro, intermediário e veterano) |
-| Validade | Só são consideradas as respostas com "Sim" no item A1 e com o termo de consentimento aceito |
-| Dados publicados | Planilha anonimizada em `dados/brutos/questionario/respostas.csv`; respostas abertas revisadas para remover qualquer dado que identifique o respondente |
+| Público | Os 6 participantes do teste com usuários (P1 a P6), definidos no [protocolo da Fase 3](../fase-3/teste-usuarios.md#1-participantes) |
+| Formato | Em papel ou em tela separada, entregue pelo moderador no passo 7 do [roteiro da sessão](../fase-3/teste-usuarios.md#5-roteiro-da-sessao), logo após o SUS, no [formulário em PDF preenchível](../fase-3/questionario-fase-2.pdf). O moderador anota o código do participante, sem o nome |
+| Duração estimada | Cerca de 6 minutos (18 itens fechados e 2 abertos opcionais) |
+| Validade | Só entram as respostas de participantes que assinaram o termo de consentimento da sessão |
+| Dados publicados | `dados/brutos/questionario/respostas.csv`, uma linha por participante, identificada só pelo código; respostas abertas revisadas para remover qualquer dado que identifique o participante |
 
-## 2. Termo de consentimento (abertura do formulário)
+## 2. Consentimento
 
-> Este questionário faz parte de um trabalho da disciplina Qualidade de Software 1 (FCTE/UnB), que avalia a qualidade do SIGAA do ponto de vista do estudante. A participação é voluntária e anônima: não pedimos nome, e-mail nem matrícula. As respostas serão usadas apenas de forma agregada e publicadas, sem identificação, no repositório do projeto. Você pode desistir a qualquer momento, sem prejuízo. O preenchimento leva de 5 a 8 minutos.
->
-> ( ) Li e concordo em participar.
+O questionário não tem termo próprio. O consentimento é obtido no início da sessão, pelo [termo de consentimento da Fase 3](../fase-3/teste-usuarios.md#5-roteiro-da-sessao), que já menciona os dois questionários respondidos ao fim. Por isso o moderador não lê nenhum texto de apresentação, apenas a instrução do passo 7 do roteiro.
 
 ## 3. Itens do questionário
 
-As tarefas T1 a T6 são as do [escopo da Fase 1](../fase-1/escopo.md#21-tarefas-representativas). Itens marcados com (*) são obrigatórios.
+As tarefas T1 a T6 são as do [escopo da Fase 1](../fase-1/escopo.md#21-tarefas-representativas). Itens marcados com (*) são obrigatórios. Os blocos mantêm a numeração original para que os códigos dos itens coincidam com as colunas do arquivo de dados; por isso não há bloco E nem item D1 (ver as notas nos blocos D e E).
 
 ### Bloco A - Perfil (cerca de 1 minuto)
 
 | ID | Pergunta | Opções de resposta |
 | -- | -------- | ------------------ |
-| A1* | Você é estudante de graduação ativo(a) da UnB? | Sim / Não (encerra o formulário) |
-| A2* | Em qual semestre do curso você está? | 1º / 2º / 3º / 4º / 5º / 6º / 7º / 8º / 9º ou mais |
+| A1* | Você é estudante ativo(a) da UnB? | Sim, de graduação / Sim, de pós-graduação / Não |
+| A2* | Em qual semestre do seu curso atual você está? | 1º / 2º / 3º / 4º / 5º / 6º / 7º / 8º / 9º ou mais |
 | A3* | Você prevê concluir o curso nos próximos dois semestres? | Sim / Não / Não sei |
 | A4* | Em qual campus você estuda? | Darcy Ribeiro / Gama (FCTE) / Ceilândia / Planaltina |
+
+O item A1 confirma o critério de inclusão do protocolo, que aceita estudantes de graduação e de pós-graduação; um "Não" invalida a sessão inteira, não só o questionário.
 
 ### Bloco B - Acesso ao SIGAA (cerca de 1 minuto)
 
@@ -60,35 +60,21 @@ As tarefas T1 a T6 são as do [escopo da Fase 1](../fase-1/escopo.md#21-tarefas-
 | -- | -------- | ------------------ |
 | C2* | Em quais dessas tarefas você já precisou pedir ajuda (a colegas, vídeos ou tutoriais) para conseguir fazer? (marque todas) | T1 / T2 / T3 / T4 / T5 / T6 / Nenhuma |
 
-### Bloco D - Compreensão das informações (cerca de 1 minuto)
+Como o participante acabou de executar as tarefas, C1 pede explicitamente a percepção "no geral", e não só na sessão; a instrução do passo 7 do roteiro reforça isso.
+
+### Bloco D - Compreensão das informações (menos de 1 minuto)
 
 Responda **sem consultar o SIGAA, a legenda ou outra pessoa**. Errar não tem problema: queremos saber se as informações se explicam sozinhas.
 
 | ID | Pergunta | Opções de resposta (gabarito em negrito) |
 | -- | -------- | ---------------------------------------- |
-| D1* | No SIGAA, uma turma aparece com o horário **35T23**. O que isso significa? | **Aulas às terças e quintas-feiras, à tarde** / Aulas às quartas e sextas-feiras, à tarde / Turma 35, na sala T23 / Aulas nos dias 3 e 5 de cada mês, às 23h / Não sei |
 | D2* | No SIGAA, o que significa a sigla **IRA**? | **Índice de Rendimento Acadêmico** / Índice de Reprovação Acumulada / Inscrição de Registro Acadêmico / Não sei |
 
-No código de horário do SIGAA, os primeiros dígitos indicam os dias da semana (2 = segunda, 3 = terça, 4 = quarta, 5 = quinta, 6 = sexta, 7 = sábado), a letra indica o turno (M = manhã, T = tarde, N = noite) e os últimos dígitos indicam os horários dentro do turno. Os distratores representam leituras plausíveis de quem não conhece a notação: contar a semana a partir de segunda = 1, ler o código como número de turma e sala, ou como datas.
+O item D1, que pedia a leitura do código de horário (35T23), foi retirado: o participante acabou de ver o código em T2 e respondeu a pergunta de compreensão dessa tarefa (M11), então a resposta ao questionário estaria contaminada pela sessão e repetiria M11. A sigla IRA não aparece nas tarefas da sessão, por isso D2 é mantido.
 
-### Bloco E - Satisfação: System Usability Scale (cerca de 2 minutos)
+### Bloco E - Satisfação (não aplicado)
 
-*Pensando no seu uso do SIGAA, indique o quanto você concorda com cada afirmação.* Escala de 1 (discordo totalmente) a 5 (concordo totalmente). Versão em português dos dez itens de Brooke [2].
-
-| ID | Afirmação |
-| -- | --------- |
-| E1* | Eu acho que gostaria de usar este sistema com frequência. |
-| E2* | Eu achei o sistema desnecessariamente complexo. |
-| E3* | Eu achei o sistema fácil de usar. |
-| E4* | Eu acho que precisaria do apoio de alguém com conhecimento técnico para usar este sistema. |
-| E5* | Eu achei que as várias funções do sistema estão bem integradas. |
-| E6* | Eu achei que o sistema tem muita inconsistência. |
-| E7* | Eu imagino que a maioria das pessoas aprenderia a usar este sistema rapidamente. |
-| E8* | Eu achei o sistema muito complicado de usar. |
-| E9* | Eu me senti muito confiante usando o sistema. |
-| E10* | Eu precisei aprender várias coisas antes de conseguir usar este sistema. |
-
-O item E1 é mantido na forma original para preservar a comparabilidade com a média de referência do SUS, embora o uso do SIGAA seja obrigatório; esse efeito é discutido como limitação na Fase 4.
+O bloco E repetia os dez itens do SUS [2]. Como o participante responde o SUS logo antes, no passo 6 do roteiro (métrica M12), o bloco não é aplicado no questionário.
 
 ### Bloco F - Ferramentas externas e funções ausentes (cerca de 1 minuto)
 
@@ -102,46 +88,47 @@ O item E1 é mantido na forma original para preservar a comparabilidade com a m�
 
 ## 4. Perfis usados na comparação
 
-O semestre informado em A2 define o grupo de comparação. A Tabela 2 mostra a correspondência com os perfis da Fase 1.
+O semestre informado em A2 confirma o grupo do participante, definido no recrutamento pelo [protocolo da Fase 3](../fase-3/teste-usuarios.md#1-participantes). A Tabela 2 mostra a correspondência com os perfis da Fase 1.
 
 *Tabela 2 - Grupos de comparação.*
 
-| Grupo | Critério | Perfil da Fase 1 |
-| ----- | -------- | ---------------- |
-| Calouro | A2 = 1º ou 2º semestre | Calouro |
-| Intermediário | A2 = 3º ou 4º semestre | (grupo de transição, apresentado apenas de forma descritiva) |
-| Veterano | A2 = 5º semestre ou mais | Veterano; formando quando A3 = Sim |
-| Dependente do celular | B1 = Celular e B2 = Não ou Só às vezes | Estudante que acessa apenas pelo celular |
+| Grupo | Critério | Participantes | Perfil da Fase 1 |
+| ----- | -------- | :-----------: | ---------------- |
+| Começo do curso | A2 = 1º ou 2º semestre | 3 | Calouro |
+| Meio ou fim do curso | A2 = 5º semestre ou mais | 3 | Veterano; formando quando A3 = Sim |
+
+Estudantes do 3º e do 4º semestre não participam do teste, então não há grupo intermediário. A dependência do celular (B1 = Celular e B2 = Não ou Só às vezes) é apenas um recorte descritivo: o protocolo não recruta esse perfil, que é avaliado por inspeção em M14 e M15.
 
 ## 5. Indicadores produzidos e ligação com o GQM
 
-O questionário alimenta a métrica M3 (com nível de pontuação) e a lista de referência de M1. Os demais itens produzem **indicadores auxiliares de percepção** (IQ1 a IQ5). Como a métrica auxiliar MA1, eles **não recebem nível de pontuação e não alteram o julgamento das características**: servem para interpretar as questões GQM, verificar a hipótese de perfil HP1 e comparar a percepção dos estudantes com as medidas observadas no teste com usuários.
+O questionário alimenta a métrica M3 (com nível de pontuação) e a lista de referência de M1. Os demais itens produzem **indicadores auxiliares de percepção** (IQ1 a IQ4). Como a métrica auxiliar MA1, eles **não recebem nível de pontuação e não alteram o julgamento das características**: servem para interpretar as questões GQM, verificar a hipótese de perfil HP1 e comparar a percepção dos participantes com as medidas observadas na própria sessão.
+
+Com 6 participantes, todos os indicadores são apresentados de forma **descritiva** (contagens, proporções e medianas), sem testes estatísticos. Em M3, cada participante equivale a cerca de 17 pontos percentuais; as faixas de [Níveis de Pontuação](niveis-pontuacao.md) não mudam, e a limitação da amostra é declarada no julgamento.
 
 *Tabela 3 - Indicadores do questionário.*
 
 | ID | Indicador | Itens | Cálculo | Questão GQM que complementa |
 | -- | --------- | ----- | ------- | --------------------------- |
-| M3 | Proporção de estudantes que usam ferramentas externas | F1 | X = A/B, com A = respostas "Sim" e B = respostas válidas | Q3 (métrica com nível de pontuação) |
+| M3 | Proporção de participantes que usam ferramentas externas | F1 | X = A/B, com A = respostas "Sim" e B = participantes com questionário válido | Q3 (métrica com nível de pontuação) |
 | - | Insumo da lista de referência de M1 | F2, F3, F4 | Funções citadas, consolidadas e sem duplicatas | Q1 |
-| IQ1 | Facilidade percebida por tarefa | C1.1 a C1.6 | Mediana e média por tarefa, ignorando "Nunca fiz"; também por grupo | Q4 e Q5; ranking das tarefas |
-| IQ2 | Proporção de tarefas em que o estudante já precisou de ajuda | C2 | Tarefas marcadas / 6, média por grupo | Q5 (apreensibilidade) |
-| IQ3 | Acerto na interpretação sem legenda | D1, D2 | Proporção de respostas corretas por item e por grupo | Q12; compara com M11 |
-| IQ4 | SUS do questionário | E1 a E10 | Mesmo cálculo de M12 (0 a 100), média por grupo | Q13; compara com M12 |
-| IQ5 | Dependência do celular e problemas no celular | B1, B2, B5 | Proporção de dependentes do celular; frequência de cada problema | Q15 e Q16; decisão da STI sobre interface responsiva |
+| IQ1 | Facilidade percebida por tarefa | C1.1 a C1.6 | Mediana por tarefa, ignorando "Nunca fiz"; também por grupo | Q4 e Q5; ranking das tarefas |
+| IQ2 | Proporção de tarefas em que o estudante já precisou de ajuda | C2 | Tarefas marcadas / 6, por participante e por grupo | Q5 (apreensibilidade) |
+| IQ3 | Acerto na interpretação da sigla IRA sem legenda | D2 | Número de acertos por grupo | Q12; complementa M11 com um termo que não aparece nas tarefas |
+| IQ4 | Dependência do celular e problemas no celular | B1, B2, B5 | Número de participantes dependentes do celular; frequência de cada problema | Q15 e Q16; decisão da STI sobre interface responsiva |
 
 ## 6. Hipótese de perfil HP1
 
-**HP1:** estudantes de 1º e 2º semestres (calouros) relatam menor facilidade nas tarefas (IQ1) e acertam menos a interpretação do código de horário (IQ3, item D1) do que estudantes a partir do 5º semestre (veteranos).
+**HP1:** estudantes de 1º e 2º semestres (começo do curso) relatam menor facilidade nas tarefas (IQ1) do que estudantes a partir do 5º semestre (meio ou fim do curso).
 
 - **Fundamento:** perfil calouro da Fase 1 (desconhece a terminologia acadêmica) e observações OP-01 e OP-04.
-- **Verificação:** comparação das medianas de IQ1 e da proporção de acerto em D1 entre os grupos. Se cada grupo tiver ao menos dez respondentes, aplica-se o teste de Mann-Whitney para IQ1 e o teste exato de Fisher para D1, com nível de significância de 5%; caso contrário, a comparação é apenas descritiva.
-- **Classificação na Fase 4:** confirmada, se as duas diferenças ocorrerem na direção esperada e forem significativas; refutada, se alguma diferença for significativa na direção oposta ou se não houver diferença; inconclusiva, se algum grupo tiver menos de dez respondentes.
+- **Verificação:** comparação descritiva das medianas de IQ1 por tarefa entre os dois grupos. Com três participantes por grupo, não se aplica teste estatístico.
+- **Classificação na Fase 4:** tendência observada, se a mediana do grupo do começo do curso for menor na maioria das tarefas (ao menos quatro das seis); sem tendência, se for igual ou maior na maioria; inconclusiva, se algum grupo tiver menos de três questionários válidos. Em qualquer caso, o resultado é declarado como indício, não como confirmação, por causa do tamanho da amostra.
 
-Um resultado em que calouros e veteranos têm a mesma dificuldade também é informativo: indica que a experiência não compensa os problemas da interface, o que reforça falhas de operabilidade e autodescritividade.
+Um resultado em que os dois grupos têm a mesma dificuldade também é informativo: indica que a experiência não compensa os problemas da interface, o que reforça falhas de operabilidade e autodescritividade.
 
 ## 7. Arquivo de dados
 
-As respostas exportadas ficam em `dados/brutos/questionario/respostas.csv`, uma linha por resposta válida, com as colunas `id` (R001, R002, ...), `data`, `A1` a `A4`, `B1`, `B2`, `B5`, `C1_1` a `C1_6`, `C2`, `D1`, `D2`, `E1` a `E10` e `F1` a `F5`. O cálculo dos indicadores será registrado em script ou planilha versionada, conforme a premissa 5 do roteiro.
+As respostas ficam em `dados/brutos/questionario/respostas.csv`, uma linha por participante, com as colunas `participante` (P1 a P6), `a1` a `a4`, `b1`, `b2`, `b5`, `c1_1` a `c1_6`, `c2`, `d2` e `f1` a `f5`, conforme a [página Planilhas de Coleta](../fase-3/planilhas.md#4-questionario). O cálculo dos indicadores será registrado em script ou planilha versionada, conforme a premissa 5 do roteiro.
 
 ## Referências
 
@@ -156,3 +143,6 @@ As respostas exportadas ficam em `dados/brutos/questionario/respostas.csv`, uma 
 | 1.0 | 19/10/2026 | Especificação do questionário: termo de consentimento, itens dos blocos A a F, grupos de comparação, indicadores IQ1 a IQ6 e hipótese de perfil HP1 | [arthurlleite](https://github.com/arthurlleite) |
 | 1.1 | 25/10/2026 | Remoção dos itens B3 e B4 e do indicador IQ6, ligados ao objetivo G4 (Eficiência de Desempenho) | Leonardo Bonetti |
 | 1.2 | 25/10/2026 | Questões GQM complementadas pelos indicadores IQ3 a IQ5 na numeração Q1 a Q16 | Leonardo Bonetti |
+| 1.3 | 14/11/2026 | Questionário aplicado ao fim da sessão do teste com usuários, no lugar do questionário online: público P1 a P6, consentimento pelo termo da sessão, retirada do item D1 e do bloco E, dois grupos iguais aos do protocolo, indicadores IQ1 a IQ4 descritivos e HP1 com comparação descritiva | Caio Borges |
+| 1.4 | 15/11/2026 | Item A1 aceita estudantes de graduação e de pós-graduação; A2 pergunta o semestre do curso atual | Caio Borges |
+| 1.5 | 15/11/2026 | Link para o formulário em PDF preenchível usado nas sessões | Caio Borges |
