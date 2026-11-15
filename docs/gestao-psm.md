@@ -84,6 +84,12 @@ A medição 2 fecha a Entrega 1 (26/10/2026) e confere se as decisões da mediç
 
 *Fonte: PRs, release, marcos e issues do GitHub, `gestao/esforco.csv` e retrospectiva da Entrega 1, em 03/11/2026.*
 
+## 4. Acompanhamento contínuo
+
+Entre as medições, o tempo de ciclo dos PRs (I4) é recalculado a cada publicação do site, a partir da API do GitHub. O gráfico mostra, para cada PR integrado, o tempo entre o primeiro *commit* do ramo e o *merge*, com a linha do critério de decisão (cinco dias). A distribuição do esforço (I3) tem gráficos próprios no [Dashboard de Contribuição](gestao-esforco.md).
+
+[[GRAFICO_CICLO_PRS]]
+
 ## Referências
 
 [1] McGARRY, J. et al. *Practical Software Measurement: Objective Information for Decision Makers*. Boston: Addison-Wesley, 2002.
@@ -97,3 +103,4 @@ A medição 2 fecha a Entrega 1 (26/10/2026) e confere se as decisões da mediç
 | 1.0 | 19/10/2026 | Indicadores PSM/CID (I1 a I5), procedimento de coleta e medição 1 | [arthurlleite](https://github.com/arthurlleite) |
 | 1.1 | 03/11/2026 | Medição 2: fechamento da Entrega 1 e acompanhamento das decisões da medição 1 | Caio Borges |
 | 1.2 | 10/11/2026 | Coleta automática do I3 pelo GitHub Actions, por recomendação da professora na apresentação dos indicadores | Caio Borges |
+| 1.3 | 15/11/2026 | Gráfico do tempo de ciclo dos PRs (I4), recalculado a cada publicação | Caio Borges |

@@ -29,6 +29,8 @@ from functools import lru_cache
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(RAIZ / "gestao"))
+import graficos  # noqa: E402  (módulo irmão; o MkDocs carrega este arquivo como hook, fora de um pacote)
 PLANILHA = RAIZ / "gestao" / "esforco.csv"
 URL_METODOLOGIA = "https://fcte-qualidade-de-software-1.github.io/2026-2_T02_ADELE_GOLDSTINE/contribuicao/"
 
@@ -511,6 +513,107 @@ def comentario_pr(args):
 # ---------------------------------------------------------------------------
 
 MARCADOR_DASHBOARD = "[[DASHBOARD_ESFORCO]]"
+MARCADOR_CICLO_PRS = "[[GRAFICO_CICLO_PRS]]"
+
+# Categorias dos gráficos, na ordem fixa das cores (slot 1 a 8). Outras categorias positivas
+# entram em "Outras"; ajustes negativos não entram nas barras, só no total líquido.
+CATEGORIAS_GRAFICO = [
+    ("redacao", "Redação", 1),
+    ("infraestrutura", "Infraestrutura", 2),
+    ("revisao", "Revisão de PR", 3),
+    ("consolidacao", "Consolidação (artigo)", 4),
+    ("reuniao", "Reunião", 5),
+    ("pesquisa", "Pesquisa", 6),
+    ("integracao", "Integração", 7),
+    ("outras", "Outras", 8),
+]
+LIMITE_CICLO_DIAS = 5  # critério de decisão do I4 (docs/gestao-psm.md)
+
+
+def _segunda(d):
+    return d - timedelta(days=d.weekday())
+
+
+def _graficos_da_entrega(entrega, registros):
+    """Gráficos de uma entrega: categorias por integrante e, nas entregas com coleta automática,
+    a evolução no tempo. Na Entrega 1 as horas foram estimadas de uma vez, ao fim, e não têm data real."""
+    conhecidas = {c for c, _, _ in CATEGORIAS_GRAFICO}
+    por_membro = {m: defaultdict(float) for m in MEMBROS}
+    for r in registros:
+        cat = r["categoria"] if r["categoria"] in conhecidas else "outras"
+        if r["horas_num"] < 0:
+            cat = r["categoria"]  # ajuste: entra só no total líquido
+        por_membro[r["membro"]][cat] += r["horas_num"]
+    negativos = any(r["horas_num"] < 0 for r in registros)
+    partes = [graficos.barras_empilhadas(
+        "Horas por integrante e categoria", [(m, dict(por_membro[m])) for m in MEMBROS], CATEGORIAS_GRAFICO,
+        nota="Passe o mouse sobre um segmento para ver as horas. "
+             + ("Ajustes negativos não aparecem nas barras; o número à direita é o total líquido." if negativos else ""),
+    )]
+
+    datas = sorted({_data(r).date() for r in registros})
+    if entrega not in ENTREGAS_AUTOMATICAS or len(datas) < 2:
+        return partes
+    segundas = []
+    d = _segunda(datas[0])
+    while d <= datas[-1]:
+        segundas.append(d)
+        d += timedelta(days=7)
+    series = [(m, i + 1, [(_data(r).date(), r["horas_num"]) for r in registros if r["membro"] == m])
+              for i, m in enumerate(MEMBROS)]
+    partes.append(graficos.linhas_acumuladas(
+        "Esforço acumulado por integrante", series, segundas,
+        nota="Cada degrau é uma integração na main (PR ou commit), uma revisão de PR ou um registro da planilha, "
+             "na data em que entrou. Passe o mouse sobre um ponto para ver o valor.",
+    ))
+    por_semana = defaultdict(float)
+    for r in registros:
+        por_semana[_segunda(_data(r).date())] += r["horas_num"]
+    partes.append(graficos.colunas(
+        "Horas da equipe por semana", [f"{s:%d/%m}" for s in segundas], [por_semana[s] for s in segundas],
+        nota="Semanas de segunda a domingo, identificadas pela segunda-feira.", cabecalho=("Semana de", "Horas"),
+    ))
+    return partes
+
+
+def ciclos_dos_prs():
+    """Tempo de ciclo (I4) de cada PR integrado: do primeiro commit do ramo ao merge."""
+    ciclos = []
+    for pr in api("pulls?state=closed&per_page=100"):
+        if not pr.get("merged_at"):
+            continue
+        numero = pr["number"]
+        commits = api(f"pulls/{numero}/commits?per_page=100")
+        datas = [datetime.fromisoformat(c["commit"]["author"]["date"].replace("Z", "+00:00")) for c in commits]
+        merge = datetime.fromisoformat(pr["merged_at"].replace("Z", "+00:00"))
+        inicio = min(datas + [merge])
+        autor, manifestacoes = dados_do_pr(numero)
+        revisores = {login for login, _, _ in manifestacoes if login != autor and login in LOGINS}
+        ciclos.append((numero, pr["title"], inicio.astimezone(FUSO), merge.astimezone(FUSO), len(revisores)))
+    return sorted(ciclos, reverse=True)
+
+
+def grafico_ciclo_prs():
+    try:
+        ciclos = ciclos_dos_prs()
+    except RevisoesIndisponiveis as erro:
+        if os.environ.get("GITHUB_ACTIONS") == "true":
+            raise
+        print(f"esforco.py: gráfico do I4 não gerado: {erro}", file=sys.stderr)
+        return f'<p class="esforco-vazio">⚠ Gráfico do I4 indisponível neste build: {_html(erro)}</p>'
+    linhas = []
+    for numero, titulo, inicio, merge, revisores in ciclos:
+        dias = (merge - inicio).total_seconds() / 86400
+        dica = (f"PR #{numero} ({titulo}): primeiro commit em {inicio:%d/%m %H:%M}, merge em {merge:%d/%m %H:%M}; "
+                f"{graficos.num(dias)} dias; {revisores} revisor(es)")
+        linhas.append((f"PR #{numero}", dias, dica))
+    acima = sum(1 for _, d, _ in linhas if d > LIMITE_CICLO_DIAS)
+    return graficos.barras_com_limite(
+        "Tempo de ciclo dos PRs integrados (I4)", linhas, LIMITE_CICLO_DIAS, f"limite: {LIMITE_CICLO_DIAS} dias", "dias",
+        nota=f"Do primeiro commit do ramo ao merge, em dias. {acima} de {len(linhas)} PRs acima do limite. "
+             "Passe o mouse sobre uma barra para ver o título, as datas e o número de revisores.",
+        cabecalho=["PR", "Ciclo (dias)", "Detalhes"],
+    )
 
 
 def _html(texto):
@@ -565,6 +668,7 @@ def dashboard_markdown(repo_url=""):
                 f'<span class="esforco-valor">{br(valor)} h · {br(pct[membro])}% · {situacao}</span></div>'
             )
         blocos.append('</div>')
+        blocos += _graficos_da_entrega(entrega, registros)
 
         blocos += ['<h3>Resumo por integrante e categoria</h3>',
                    '<div class="esforco-tabela-wrap"><table class="esforco-tabela">',
@@ -600,6 +704,8 @@ def on_page_markdown(markdown, page, config, files):
     """Hook MkDocs: substitui o marcador do dashboard pelos dados de esforço."""
     if MARCADOR_DASHBOARD in markdown:
         markdown = markdown.replace(MARCADOR_DASHBOARD, dashboard_markdown(config.get("repo_url", "")))
+    if MARCADOR_CICLO_PRS in markdown:
+        markdown = markdown.replace(MARCADOR_CICLO_PRS, grafico_ciclo_prs())
     return markdown
 
 

@@ -33,7 +33,7 @@
 .esforco-kpi strong { font-size: 1.2rem; }
 .esforco-linha-grafico {
   display: grid;
-  grid-template-columns: minmax(150px, 1fr) minmax(90px, 2fr) minmax(110px, .8fr);
+  grid-template-columns: minmax(130px, 1fr) minmax(90px, 2fr) auto;
   align-items: center;
   gap: .75rem;
   margin: .55rem 0;
@@ -63,8 +63,50 @@
 .esforco-vazio { padding: 1rem; border-left: .2rem solid var(--md-primary-fg-color); }
 @media (max-width: 600px) {
   .esforco-entrega { padding: .8rem; }
-  .esforco-linha-grafico { grid-template-columns: 1fr auto; gap: .35rem .6rem; }
-  .esforco-trilho { grid-column: 1 / -1; grid-row: 2; }
-  .esforco-valor { grid-column: 2; grid-row: 1; }
+  .esforco-linha-grafico { grid-template-columns: 1fr; gap: .3rem; }
+  .esforco-trilho { grid-row: 2; }
+  .esforco-valor { grid-row: 3; text-align: left; white-space: normal; }
 }
 
+
+/* Gráficos SVG gerados no build (gestao/graficos.py). Cores categóricas em ordem fixa,
+   validadas para daltonismo e contraste nos dois temas; o tema escuro tem seus próprios tons. */
+.viz {
+  --viz-1: #2a78d6; --viz-2: #eb6834; --viz-3: #1baf7a; --viz-4: #eda100;
+  --viz-5: #e87ba4; --viz-6: #008300; --viz-7: #6250d6; --viz-8: #e34948;
+  --viz-grade: #e1e0d9; --viz-base: #c3c2b7; --viz-limite: #52514e;
+  margin: 1.5rem 0;
+}
+[data-md-color-scheme="slate"] .viz {
+  --viz-1: #3987e5; --viz-2: #d95926; --viz-3: #199e70; --viz-4: #c98500;
+  --viz-5: #d55181; --viz-6: #008300; --viz-7: #9085e9; --viz-8: #e66767;
+  --viz-grade: #2f3240; --viz-base: #4a4e5e; --viz-limite: #c3c2b7;
+}
+.viz .viz-titulo { font-style: normal; font-weight: 700; font-size: .85rem; margin: 0 0 .4rem; max-width: none; text-align: left; }
+.viz-scroll { overflow-x: auto; }
+.viz svg { display: block; width: 100%; min-width: 560px; height: auto; font-family: inherit; }
+.viz text { fill: var(--md-default-fg-color--light); font-size: 12px; }
+.viz .viz-rotulo { fill: var(--md-default-fg-color); }
+.viz .viz-valor { fill: var(--md-default-fg-color); font-variant-numeric: tabular-nums; paint-order: stroke; stroke: var(--md-default-bg-color); stroke-width: 3px; stroke-linejoin: round; }
+.viz .viz-eixo { font-variant-numeric: tabular-nums; }
+.viz .viz-grade { stroke: var(--viz-grade); stroke-width: 1; }
+.viz .viz-base { stroke: var(--viz-base); stroke-width: 1; }
+.viz .viz-limite { stroke: var(--viz-limite); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.viz .viz-linha { fill: none; stroke: var(--c); stroke-width: 2; stroke-linejoin: round; }
+.viz .viz-ponto { fill: var(--c); stroke: var(--md-default-bg-color); stroke-width: 2; }
+.viz .viz-barra { fill: var(--c); }
+.viz .viz-alvo { fill: transparent; pointer-events: all; }
+.viz .viz-alvo:hover { fill: var(--md-default-fg-color--lightest); fill-opacity: .35; }
+.viz path.viz-barra:hover { opacity: .8; }
+.viz-legenda { display: flex; flex-wrap: wrap; gap: .25rem 1rem; list-style: none; margin: .25rem 0 .5rem !important; padding: 0 !important; font-size: .75rem; }
+.viz-legenda li { display: flex; align-items: center; gap: .4rem; margin: 0 !important; }
+.viz-amostra { display: inline-block; background: var(--c); flex: none; }
+.viz-quadrado { width: 12px; height: 12px; border-radius: 3px; }
+.viz-traco { width: 16px; height: 3px; border-radius: 2px; }
+.md-typeset .viz-nota { font-size: .72rem; opacity: .8; margin: .4rem 0 0; text-align: left; }
+.viz-dados { font-size: .75rem; margin-top: .4rem; }
+.viz-dados summary { cursor: pointer; }
+.viz-tabela-wrap { overflow-x: auto; }
+@media print { .viz-scroll { overflow: visible; } }
+/* O tema centraliza figuras com largura do conteúdo; os gráficos ocupam a coluna inteira */
+.md-typeset figure.viz { display: block; width: 100%; max-width: none; margin: 1.5rem 0; }
