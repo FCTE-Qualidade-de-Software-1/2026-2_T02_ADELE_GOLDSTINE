@@ -9,7 +9,7 @@ Esta página especifica o que é necessário para executar a avaliação na Fase
 | Item | Especificação |
 | ---- | ------------- |
 | Sistema | Portal do discente de graduação do SIGAA/UnB, versão v4.15.10.115, conforme o [objeto da avaliação](../fase-1/escopo.md#1-objeto-da-avaliacao) |
-| Acesso | Interface web em produção, com a conta institucional de um estudante de graduação ativo |
+| Acesso | Interface web em produção, com a conta institucional de um estudante ativo, de graduação ou de pós-graduação, que usa o mesmo Portal do Discente |
 | Tipo de avaliação | Caixa-preta, só por consultas e emissão de documentos, sem alteração de dados acadêmicos ([premissas da Fase 1](../fase-1/escopo.md#6-premissas-e-restricoes)) |
 | Controle de versão | A versão exibida no rodapé do SIGAA é conferida no primeiro dia de coleta e em cada dia seguinte. Se mudar durante a Fase 4, a mudança e a data são registradas na página de resultados, e as medidas obtidas antes e depois são identificadas |
 
@@ -56,7 +56,7 @@ A Tabela 2 lista os recursos de cada método de coleta da [Tabela 2 da Fase 3](i
 
 | Papel | Quantidade | Conhecimento em informática | Conhecimento do domínio (SIGAA e vida acadêmica) | Preparação antes da coleta |
 | ----- | :--------: | --------------------------- | ------------------------------------------------ | -------------------------- |
-| Participante do teste com usuários | 6, mais 2 reservas | Uso básico de computador e navegador | Variável por grupo, de propósito: calouros do 1º ou 2º semestre e estudantes a partir do 5º semestre ([Protocolo](teste-usuarios.md#1-participantes)) | Nenhuma. O participante não recebe treinamento nem explicação do sistema |
+| Participante do teste com usuários | 6, mais 2 reservas | Uso básico de computador e navegador | Variável por grupo, de propósito: calouros do 1º ou 2º semestre e estudantes a partir do 5º semestre, contados no curso atual, de graduação ou de pós-graduação ([Protocolo](teste-usuarios.md#1-participantes)) | Nenhuma. O participante não recebe treinamento nem explicação do sistema |
 | Moderador | 1 por sessão | Uso de gravador de tela | Conhecer as tarefas T1 a T6 e os enunciados | Leitura do protocolo |
 | Avaliador da gravação | 1 por sessão, de preferência diferente do moderador | Leitura de vídeo com marcação de tempo | Conhecer os caminhos de `caminhos.csv` e as definições comuns de [Métricas](../fase-2/metricas.md#definicoes-comuns) | Leitura da seção 8 do protocolo |
 | Especialista (M6) | 1 | Uso fluente do navegador | Uso frequente do SIGAA; executar as tarefas pelo caminho mais curto sem hesitar | Ensaiar cada tarefa antes das três execuções medidas |
@@ -159,3 +159,4 @@ A Tabela 8 mostra como os recursos especificados atendem ao que as fichas das m�
 | 1.0 | 12/11/2026 | Criação da página: produto avaliado, hardware e software por método, pessoas e conhecimento exigido, massa de dados, gravações e coerência com a Fase 2 | [Felipe Campêlo](https://github.com/felipeacampelo) |
 | 1.1 | 14/11/2026 | Ajustes da revisão: retirada da sessão piloto, questionário aplicado ao fim da sessão, nome das gravações sem o nome do participante, fontes de M2 separadas conforme a ficha e justificativa das gravações fora do repositório | [Felipe Campêlo](https://github.com/felipeacampelo) |
 | 1.2 | 14/11/2026 | Retenção das gravações igual à do termo de consentimento (60 dias após a sessão) e data do exemplo de nome de arquivo dentro da janela de coleta | Caio Borges |
+| 1.3 | 15/11/2026 | Conta e participantes do teste com usuários podem ser de graduação ou de pós-graduação, conforme o protocolo | Caio Borges |

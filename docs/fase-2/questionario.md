@@ -28,12 +28,12 @@ As tarefas T1 a T6 são as do [escopo da Fase 1](../fase-1/escopo.md#21-tarefas-
 
 | ID | Pergunta | Opções de resposta |
 | -- | -------- | ------------------ |
-| A1* | Você é estudante de graduação ativo(a) da UnB? | Sim / Não |
-| A2* | Em qual semestre do curso você está? | 1º / 2º / 3º / 4º / 5º / 6º / 7º / 8º / 9º ou mais |
+| A1* | Você é estudante ativo(a) da UnB? | Sim, de graduação / Sim, de pós-graduação / Não |
+| A2* | Em qual semestre do seu curso atual você está? | 1º / 2º / 3º / 4º / 5º / 6º / 7º / 8º / 9º ou mais |
 | A3* | Você prevê concluir o curso nos próximos dois semestres? | Sim / Não / Não sei |
 | A4* | Em qual campus você estuda? | Darcy Ribeiro / Gama (FCTE) / Ceilândia / Planaltina |
 
-O item A1 confirma o critério de inclusão do protocolo; um "Não" invalida a sessão inteira, não só o questionário.
+O item A1 confirma o critério de inclusão do protocolo, que aceita estudantes de graduação e de pós-graduação; um "Não" invalida a sessão inteira, não só o questionário.
 
 ### Bloco B - Acesso ao SIGAA (cerca de 1 minuto)
 
@@ -144,3 +144,4 @@ As respostas ficam em `dados/brutos/questionario/respostas.csv`, uma linha por p
 | 1.1 | 25/10/2026 | Remoção dos itens B3 e B4 e do indicador IQ6, ligados ao objetivo G4 (Eficiência de Desempenho) | Leonardo Bonetti |
 | 1.2 | 25/10/2026 | Questões GQM complementadas pelos indicadores IQ3 a IQ5 na numeração Q1 a Q16 | Leonardo Bonetti |
 | 1.3 | 14/11/2026 | Questionário aplicado ao fim da sessão do teste com usuários, no lugar do questionário online: público P1 a P6, consentimento pelo termo da sessão, retirada do item D1 e do bloco E, dois grupos iguais aos do protocolo, indicadores IQ1 a IQ4 descritivos e HP1 com comparação descritiva | Caio Borges |
+| 1.4 | 15/11/2026 | Item A1 aceita estudantes de graduação e de pós-graduação; A2 pergunta o semestre do curso atual | Caio Borges |

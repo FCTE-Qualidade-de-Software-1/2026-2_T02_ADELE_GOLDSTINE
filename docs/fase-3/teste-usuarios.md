@@ -10,12 +10,14 @@ São **6 participantes**, em dois grupos de três que **diferem apenas no semest
 
 | Grupo | Critério | Participantes | Perfil da Fase 1 |
 | ----- | -------- | :-----------: | ---------------- |
-| Começo do curso | 1º ou 2º semestre | 3, mais 1 reserva | Calouro |
-| Meio ou fim do curso | 5º semestre ou mais | 3, mais 1 reserva | Veterano; formando, se prevê concluir o curso nos próximos dois semestres |
+| Começo do curso | 1º ou 2º semestre do curso atual | 3, mais 1 reserva | Calouro |
+| Meio ou fim do curso | 5º semestre ou mais do curso atual | 3, mais 1 reserva | Veterano; formando, se prevê concluir o curso nos próximos dois semestres |
 
 *Fonte: elaboração da equipe.*
 
-**Critérios de inclusão:** ser estudante de graduação ativo da UnB, ter 18 anos ou mais, ter acesso ao próprio SIGAA e consentir com a gravação da sessão (premissa 6 da especificação do trabalho). A idade mínima existe porque a participação de menores de 18 anos exigiria a autorização de um responsável, que o termo de consentimento não prevê.
+**Critérios de inclusão:** ser estudante ativo da UnB, de graduação ou de pós-graduação, ter 18 anos ou mais, ter acesso ao próprio SIGAA e consentir com a gravação da sessão (premissa 6 da especificação do trabalho). A idade mínima existe porque a participação de menores de 18 anos exigiria a autorização de um responsável, que o termo de consentimento não prevê.
+
+**Estudantes de pós-graduação:** podem participar porque usam o mesmo Portal do Discente e executam as mesmas tarefas T1 a T6. O que muda é só o curso, e por isso o semestre que define o grupo é o do curso atual. A experiência anterior com o SIGAA, por exemplo de quem fez a graduação na UnB, não muda o grupo: ela é registrada na pergunta inicial sobre cada tarefa (passo 2 do roteiro), que já exclui do recorte de calouros de M5 as tarefas executadas antes do estudo.
 
 **Perfis que não são recrutados:** não é preciso encontrar estudantes com deficiência nem estudantes que usam só o celular. Esses perfis da Fase 1 são cobertos por inspeção da equipe: a inclusividade por M9 e M10 e o uso no celular por M14 e M15.
 
@@ -75,7 +77,7 @@ Não há sessão piloto. Por isso, não são verificados antes da coleta o enten
 As falas entre aspas são lidas como estão escritas, para que todos os participantes recebam as mesmas instruções.
 
 1. **Consentimento (cerca de 5 min).** O moderador entrega o [Termo de Consentimento Livre e Esclarecido](termo-consentimento.docx) em duas vias, explica o objetivo da sessão e o que será gravado e responde a dúvidas. O participante marca a opção de gravação e assina as duas vias, antes de qualquer gravação, e fica com uma delas. Se o participante não autorizar a gravação, a sessão não acontece, porque M4, M6, M7 e M8 dependem dela. A via assinada fica guardada separada dos dados da sessão e não vai para o repositório, porque contém o nome do participante.
-2. **Perguntas iniciais (cerca de 3 min).** O moderador anota no formulário: semestre; se prevê concluir o curso nos próximos dois semestres; e, para cada tarefa, se o participante já a fez no SIGAA alguma vez. A pergunta é feita com a descrição curta da Tabela 4, sem citar menus. Essa resposta alimenta o recorte de calouros de M5.
+2. **Perguntas iniciais (cerca de 3 min).** O moderador anota no formulário: se o curso é de graduação ou de pós-graduação; semestre no curso atual; se prevê concluir o curso nos próximos dois semestres; e, para cada tarefa, se o participante já a fez no SIGAA alguma vez. A pergunta é feita com a descrição curta da Tabela 4, sem citar menus. Essa resposta alimenta o recorte de calouros de M5.
 3. **Entrada no sistema.** O participante entra no SIGAA com a própria conta. O moderador não olha o teclado. Só depois que a página inicial do Portal do Discente aparece o moderador inicia a gravação.
 4. **Instruções (cerca de 2 min).** O moderador lê:
     > "Obrigado por participar. Estamos avaliando o SIGAA, não você: se algo for difícil, é um problema do sistema, e isso é exatamente o que queremos descobrir. Vou entregar seis tarefas, uma de cada vez. Leia cada uma em voz alta e comece em seguida. Quando terminar, me diga a resposta ou me avise que concluiu. Durante as tarefas eu não posso ajudar. Se não conseguir, você pode dizer 'desisto' a qualquer momento: isso também é um resultado útil. Não precisa narrar o que está fazendo. Alguma dúvida antes de começar?"
@@ -196,3 +198,4 @@ O SUS [1] é aplicado em português, com escala de 1 (discordo totalmente) a 5 (
 | 1.8 | 14/11/2026 | Questionário da Fase 2 aplicado ao fim da sessão, sem o bloco E | Leonardo Bonetti |
 | 1.9 | 14/11/2026 | Idade mínima de 18 anos nos critérios de inclusão e duração da sessão igual à do termo (cerca de 35 minutos) | Leonardo Bonetti |
 | 1.10 | 14/11/2026 | Grupos definidos pelo protocolo e seguidos pelo questionário; justificativa da exclusão do 3º e 4º semestres; questionário sem o item D1 | Caio Borges |
+| 1.11 | 15/11/2026 | Estudantes de pós-graduação incluídos entre os participantes, com o grupo definido pelo semestre do curso atual; nível do curso anotado nas perguntas iniciais | Caio Borges |
