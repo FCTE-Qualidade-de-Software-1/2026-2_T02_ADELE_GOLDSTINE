@@ -1,26 +1,18 @@
 # Uso de IA
 
-Esta página documenta todos os usos de ferramentas de Inteligência Artificial ao longo do projeto, incluindo a finalidade, a data de utilização e o responsável.
+Esta página resume como a equipe usou ferramentas de Inteligência Artificial no projeto. Todo conteúdo produzido com apoio de IA foi revisado e validado pela equipe antes de entrar no repositório, por *pull request*.
 
 ## Ferramentas utilizadas
 
-| Ferramenta | Finalidade | Data | Responsável |
-| :--------: | :--------: | :--: | :---------: |
-| DeepSeek v4 | Estruturação inicial do repositório MkDocs | 16/10/2026 | [Davi Nobre](https://github.com/Jagaima) |
-| Claude Opus 5.5 (Claude Code) | Análise do roteiro e do repositório; apoio na redação e formatação da primeira versão da Fase 1. Conteúdo revisado e validado pela equipe | 16/10/2026 | Caio Borges |
-| Claude Opus 5.5 (Claude Code) | Apoio na redação e formatação da Fase 2 (GQM), com uso de agentes para revisão contra os critérios do roteiro e análise de inconsistências entre as páginas. Conteúdo revisado e validado pela equipe | 17-18/10/2026 | [Felipe Campêlo](https://github.com/felipeacampelo) |
-| Claude Opus 5.5 (Claude Code) | Integração da versão complementar à versão de Felipe Campêlo da Fase 2: conversão da numeração, preenchimento de hipóteses e níveis de pontuação, inclusão de M20, MA1, HR1 a HR4 e matriz de rastreabilidade, e verificação de consistência entre as páginas e da compilação do MkDocs. Commits revisados pela equipe antes do envio ao repositório | 18/10/2026 | Leonardo Bonetti |
-| Claude Opus 5.5 (Claude Code) | Pesquisa sobre as características de qualidade oficiais e padronizadas (ISO/IEC 25010) e consulta à padronização do IEEE (modelo IEEEtran) para a documentação em LaTeX. Conteúdo revisado pela equipe | 19/10/2026 | [arthurlleite](https://github.com/arthurlleite) |
-| Claude Opus 5.5 (Claude Code) | Proposta da metodologia de esforço por horas trabalhadas, *script* de estimativa e cálculo (`gestao/esforco.py`) e reconstrução das horas da Entrega 1 a partir do histórico Git. Taxas e horas fixas revisadas pela equipe | 24/10/2026 | Caio Borges |
-| Claude Opus 5.5 (Claude Code) | Atualização do artigo em LaTeX após os ajustes da Fase 2 (retirada do objetivo G4) e a inclusão das personas, remoção da capa e do sumário e nova compilação do PDF. Conteúdo conferido com as páginas da GitPage | 25/10/2026 | [arthurlleite](https://github.com/arthurlleite) |
-| Claude Opus 5.5 (Claude Code) | Revisão da tabela de contribuição e do *script* de esforço, cálculo da medição 2 dos indicadores PSM a partir do GitHub e apoio na produção dos slides da apresentação de gestão do projeto (Canva). Cada número foi conferido com a planilha, o *script* e o GitHub, e as alterações passam por revisão no PR | 03/11/2026 | Caio Borges |
-| Claude Opus 5.5 (Claude Code) | Complemento da ata de reuniões com as decisões registradas no repositório (*commits*, PRs, histórico de versões das páginas e retrospectiva) e correção da formatação da ata. Cada data e número foi conferido com o GitHub e com as páginas citadas | 03/11/2026 | Caio Borges |
-| Deepseek v4 | Utilização para gerar o gráfico visual em Janela operacional na fase 3, documento cronograma.md | 12/11/2026 | [Davi Nobre](https://github.com/Jagaima) |
-| Claude Opus 5.5 (Claude Code) | Revisão das páginas da Fase 3 contra os critérios F3-C1 a F3-C8 e apoio na redação da página Recursos e Ambiente, a partir das fichas das métricas, do escopo da Fase 1 e do protocolo do teste com usuários. Cada recurso foi conferido com a ficha da métrica correspondente, e os itens ainda não decididos ficaram marcados como "a definir" | 12/11/2026 | [Felipe Campêlo](https://github.com/felipeacampelo) |
-| Claude Opus 5.5 (Claude Code) | Varredura de consistência depois da integração da Fase 3: busca das páginas que ainda citavam o questionário online, a retenção das gravações e o prazo antigo da Entrega 2, e redação dos ajustes nas Fases 2 e 3 e no cronograma, a partir das decisões da equipe. Cada alteração foi conferida com o protocolo, o termo de consentimento e as fichas das métricas, e passa por revisão no PR | 14/11/2026 | Caio Borges |
-| Claude Opus 5.5 (Claude Code) | Busca das páginas que restringiam o teste com usuários a estudantes de graduação e redação dos ajustes no protocolo, no questionário, em Recursos e Ambiente, na página Métricas, no escopo da Fase 1 e no termo de consentimento, a partir da decisão da equipe de aceitar estudantes de pós-graduação. Cada alteração foi conferida com o protocolo e o termo, e passa por revisão no PR | 15/11/2026 | Caio Borges |
-| Claude Opus 5.5 (Claude Code) | Criação do formulário de observação do moderador, a partir das colunas de `sessoes.csv` e `compreensao.csv` e do roteiro do protocolo, e geração em PDF preenchível do questionário SUS e do questionário da Fase 2, com o texto dos itens copiado do protocolo e da página do questionário. Cada página do PDF foi conferida visualmente, e o conteúdo passa por revisão no PR | 15/11/2026 | Caio Borges |
-| Claude Opus 5.5 (Claude Code) | Análise do comentário do Davi no PR #15 sobre LGPD e guarda dos dados, redação da nova versão do termo de consentimento (LGPD, pseudonimização, transcrição, sessão remota, prazo de guarda do termo e direitos do participante) e ajuste de Recursos e Ambiente e do protocolo. O texto foi conferido com o termo anterior e com a seção 5 de Recursos e Ambiente; o prazo de guarda do termo (60 dias) e o contato (Leonardo) foram decididos pela equipe | 15/11/2026 | Caio Borges |
+| Ferramenta | Finalidade | Período | Responsáveis |
+| :--------: | :--------: | :-----: | :----------: |
+| DeepSeek v4 | Estruturação inicial do repositório MkDocs e gráfico do cronograma da Fase 3 | 10/2026 a 11/2026 | [Davi Nobre](https://github.com/Jagaima) |
+| Claude Opus 5.5 (Claude Code) | Refinamento da escrita e da formatação dos documentos das Fases 1 a 3 e do artigo | 10/2026 a 11/2026 | Caio Borges, [Felipe Campêlo](https://github.com/felipeacampelo), Leonardo Bonetti, [arthurlleite](https://github.com/arthurlleite) |
+| Claude Opus 5.5 (Claude Code) | Revisão dos documentos contra os critérios do roteiro e verificação de consistência entre as páginas | 10/2026 a 11/2026 | Caio Borges, [Felipe Campêlo](https://github.com/felipeacampelo), Leonardo Bonetti |
+| Claude Opus 5.5 (Claude Code) | Pesquisa de referências (ISO/IEC 25010 e modelo IEEE) | 10/2026 | [arthurlleite](https://github.com/arthurlleite) |
+| Claude Opus 5.5 (Claude Code) | Scripts e automação do site: cálculo do esforço, *workflows* e gráficos de gestão | 10/2026 a 11/2026 | Caio Borges |
+| Claude Opus 5.5 (Claude Code) | Apoio à gestão do projeto: medições PSM, ata de reuniões e slides de apresentação | 11/2026 | Caio Borges |
+| Claude Opus 5.5 (Claude Code) | Materiais e dados do teste com usuários: formulários, termo de consentimento e transcrição dos dados das sessões | 11/2026 | Caio Borges |
 
 ## Histórico de Versão
 
@@ -41,3 +33,4 @@ Esta página documenta todos os usos de ferramentas de Inteligência Artificial 
 | 1.12 | 15/11/2026 | Registro do uso de IA na inclusão de estudantes de pós-graduação no teste com usuários | Caio Borges |
 | 1.13 | 15/11/2026 | Registro do uso de IA no formulário de observação e nos questionários em PDF | Caio Borges |
 | 1.14 | 15/11/2026 | Registro do uso de IA na nova versão do termo de consentimento | Caio Borges |
+| 1.15 | 15/11/2026 | Página resumida: usos agrupados por finalidade, incluindo os dados do teste com usuários e os gráficos de gestão | Caio Borges |
