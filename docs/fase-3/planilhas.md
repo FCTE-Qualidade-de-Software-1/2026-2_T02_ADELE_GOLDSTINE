@@ -64,11 +64,33 @@ Em `sessoes.csv`, `tempo_s` e `cliques` só são usados em M6 e M7 quando `concl
 
 *Fonte: elaboração da equipe.*
 
+As respostas fechadas são gravadas com os códigos da Tabela 5. Nos itens em que se marcam várias opções (B5, C2, F2 e F3), os códigos são separados por ponto e vírgula, sem espaço (ex.: `T2;T4`). Em F2 e F3, a opção "Outro" vira `outro:` seguido do texto.
+
+*Tabela 5 - Códigos das respostas do questionário.*
+
+| Item | Códigos, na ordem das opções |
+| ---- | ---------------------------- |
+| A1 | `graduacao`, `pos_graduacao`, `nao` |
+| A2 | `1` a `8`; `9` para "9º ou mais" |
+| A3 | `sim`, `nao`, `nao_sei` |
+| A4 | `darcy_ribeiro`, `gama`, `ceilandia`, `planaltina` |
+| B1 | `computador`, `celular`, `tablet`, `ambos` |
+| B2 | `sim`, `as_vezes`, `nao` |
+| B5 | `zoom_rolagem`, `menu_nao_abriu`, `botoes_pequenos`, `conteudo_cortado`, `nao_concluiu`, `nenhum`, `nao_usa` |
+| C1.1 a C1.6 | `1` a `5`; `nunca_fiz` |
+| C2 | `T1` a `T6`; `nenhuma` |
+| D2 | `rendimento` (gabarito), `reprovacao`, `inscricao`, `nao_sei` |
+| F1 | `sim`, `nao` |
+| F2 | `no_fluxo`, `planilha`, `outro:` |
+| F3 | `nao_tem`, `dificil`, `mais_clara`, `mais_rapida`, `outro:` |
+
+*Fonte: elaboração da equipe.*
+
 Respostas abertas (F2 a F5) são revisadas antes da publicação para retirar qualquer dado que identifique o participante.
 
 ## 5. Inspeções
 
-*Tabela 5 - Arquivos das inspeções.*
+*Tabela 6 - Arquivos das inspeções.*
 
 | Arquivo | Uma linha por | Colunas | Métricas |
 | ------- | ------------- | ------- | -------- |
@@ -84,7 +106,7 @@ O `resumo.csv` do WAVE não estava na Tabela 19, que previa só a pasta com os r
 
 ## 6. Flexibilidade
 
-*Tabela 6 - Arquivos de flexibilidade.*
+*Tabela 7 - Arquivos de flexibilidade.*
 
 | Arquivo | Uma linha por | Colunas | Métricas |
 | ------- | ------------- | ------- | -------- |
@@ -96,7 +118,7 @@ O `resumo.csv` do WAVE não estava na Tabela 19, que previa só a pasta com os r
 
 ## 7. Consolidação
 
-*Tabela 7 - Arquivo consolidado.*
+*Tabela 8 - Arquivo consolidado.*
 
 | Arquivo | Uma linha por | Colunas |
 | ------- | ------------- | ------- |
@@ -113,3 +135,4 @@ Só a linha `geral` de cada métrica entra no julgamento. Os demais recortes loc
 | 1.0 | 10/11/2026 | Formato dos arquivos de dados da Tabela 19 de Métricas e convenções de preenchimento | Leonardo Bonetti |
 | 1.1 | 14/11/2026 | Questionário com uma linha por participante (P1 a P6), sem as colunas de data, consentimento e bloco E | Leonardo Bonetti |
 | 1.2 | 14/11/2026 | Questionário sem a coluna `d1`, retirada do item D1 | Caio Borges |
+| 1.3 | 15/11/2026 | Códigos das respostas do questionário (Tabela 5) | Caio Borges |
