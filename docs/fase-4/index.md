@@ -14,7 +14,7 @@ Esta fase corresponde à quarta atividade do processo de avaliação de produto 
 | Inspeção por pares | M1, M2, M9, M10, M20 | Não iniciada | - |
 | Execução instrumentada | M13, M14 | M14 concluída; M13 em 12 das 24 combinações (Chrome e Firefox) | [Flexibilidade](flexibilidade.md) |
 | Execução manual em celular | M15 | Não iniciada | - |
-| Dados complementares (fora do julgamento) | Desempenho | Concluída | [Desempenho (complementar)](desempenho.md) |
+| Dados complementares (fora do julgamento) | Rapidez, responsividade, estabilidade e fluidez | Concluída (46 de 48 execuções válidas) | [Desempenho (complementar)](desempenho.md) |
 
 *Fonte: elaboração da equipe.*
 
