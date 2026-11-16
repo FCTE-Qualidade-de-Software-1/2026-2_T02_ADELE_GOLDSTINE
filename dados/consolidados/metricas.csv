@@ -1,1 +1,13 @@
 metrica,recorte,valor_recorte,n,valor,nivel,observacao
+M13,geral,,12,1.0000,,"12 de 12 combinações executadas sem falha; parcial: faltam 12 combinações (Microsoft Edge e Safari), intervalo possível de 12/24 a 24/24; sem nível até a conclusão"
+M13,navegador,"Firefox (Gecko, build do Playwright)",6,1.0000,,recorte descritivo
+M13,navegador,Google Chrome,6,1.0000,,recorte descritivo
+M14,geral,,12,0.0000,Insatisfatório,0 de 12 verificações adaptadas; 360 px e 768 px por emulação
+M14,pagina,T1,2,0.0000,,recorte por página (regra 3)
+M14,pagina,T2,2,0.0000,,recorte por página (regra 3)
+M14,pagina,T3,2,0.0000,,recorte por página (regra 3)
+M14,pagina,T4,2,0.0000,,recorte por página (regra 3)
+M14,pagina,T5,2,0.0000,,recorte por página (regra 3)
+M14,pagina,T6,2,0.0000,,recorte por página (regra 3)
+M14,largura,360px,6,0.0000,,recorte descritivo
+M14,largura,768px,6,0.0000,,recorte descritivo

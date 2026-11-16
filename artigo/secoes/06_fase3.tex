@@ -1,0 +1,48 @@
+\section{Fase 3: projeto da avaliação}
+\label{sec:fase3}
+
+A Fase 3 transforma a especificação em um plano executável: para cada métrica, define o método de coleta, os instrumentos, os recursos, o ambiente e o cronograma \cite{iso25040,ramos2026processo}. O critério que orientou as decisões foi a \textbf{repetibilidade}: qualquer membro da equipe, seguindo o plano, deve obter as mesmas medidas.
+
+\subsection{Métodos de coleta e rastreabilidade}
+
+As 16 métricas são obtidas por quatro métodos (Tabela~\ref{tab:metodos}). Cada métrica aponta para um instrumento e para um arquivo de dados em \texttt{dados/brutos/}, com formato e convenções fixados antes da coleta (CSV em UTF-8, datas no formato AAAA-MM-DD, tarefas T1 a T6, participantes P1 a P6 e coluna \texttt{evidencia} com o caminho da captura ou o minuto da gravação). Assim, cada valor calculado na Fase 4 pode ser conferido até a sua origem.
+
+\begin{table}[!t]
+	\caption{Métodos de coleta da avaliação}
+	\label{tab:metodos}
+	\centering
+	\footnotesize
+	\begin{tabularx}{\columnwidth}{L{2.0cm} L{1.75cm} Y}
+		\toprule
+		\textbf{Método} & \textbf{Métricas} & \textbf{Execução} \\
+		\midrule
+		Teste com usuários & M4--M8, M11, M12, MA1 & Seis estudantes, sessão gravada, moderador e avaliador da gravação \\
+		Questionário ao fim da sessão & M3 e insumo de M1 & Os mesmos seis participantes, após o SUS \\
+		Inspeção pela equipe & M1, M2, M9, M10, M20 & Dois avaliadores independentes e um terceiro para divergências; WAVE em M9 \\
+		Execução instrumentada & M13, M14 (M15 manual) & \textit{Scripts} versionados que executam T1 a T6 em navegadores e larguras de tela \\
+		\bottomrule
+	\end{tabularx}
+	\fonte{elaborado pela equipe.}
+\end{table}
+
+\subsection{Protocolo do teste com usuários}
+\label{sec:protocolo}
+
+Participam seis estudantes ativos, maiores de 18 anos, em dois grupos de três que diferem apenas no semestre do curso atual: \textbf{começo} (1º e 2º semestres, perfil calouro) e \textbf{meio ou fim} (a partir do 5º, perfis veterano e formando), com um reserva por grupo. Estudantes de pós-graduação são aceitos, porque usam o mesmo portal. A sessão, de cerca de 35 minutos, segue um roteiro com falas padronizadas: (1) termo de consentimento livre e esclarecido, em conformidade com a LGPD; (2) perguntas iniciais, incluindo se o participante já executou cada tarefa; (3) entrada no SIGAA com a própria conta, sem o moderador olhar o teclado; (4) instruções; (5) tarefas T1 a T6, entregues em cartões que dizem \textit{o que} obter e nunca \textit{onde} clicar, para não indicar o caminho, com limite de 5 minutos e pergunta de compreensão em T2, T4 e T6; (6) SUS; (7) questionário; e (8) encerramento.
+
+A ordem das tarefas é rotacionada em três sequências, repetidas em cada grupo, para que cada tarefa apareça no início, no meio e no fim da sessão uma vez por grupo. O fim de cada tarefa é definido por cinco eventos (resultado correto, resultado errado, desistência, pedido de ajuda e tempo esgotado), e o moderador não ajuda o participante. Depois da sessão, um avaliador, de preferência diferente do moderador, extrai da gravação o tempo, os cliques, a primeira escolha e os erros, pelas regras das fichas. A sessão usa o Google Chrome em janela anônima, com zoom de 100\%, em tela de pelo menos 1.280~px: um único navegador evita que diferenças entre navegadores afetem os tempos, que são comparados à parte em M13.
+
+\subsection{Recursos, ambiente e massa de dados}
+
+O produto é o portal do discente do SIGAA/UnB em produção, cuja versão (v4.15.10.115 na Fase 1) é conferida a cada dia de coleta. Não há ambiente de testes acessível à equipe; a massa de dados são as \textbf{contas reais} dos estudantes, e cada conta precisa ter os dados que tornam a tarefa possível, como nota lançada (T1) e material publicado na Turma Virtual (T5). Nenhum dado acadêmico é criado ou alterado. As gravações mostram dados pessoais e, por isso, ficam em pasta institucional restrita à equipe e à professora e são apagadas 60 dias após a sessão. O repositório guarda apenas os dados extraídos, ligados ao minuto do vídeo, e capturas com os dados pessoais ocultados.
+
+\subsection{Execução instrumentada de Flexibilidade}
+\label{sec:instrumentacao}
+
+O plano original previa executar M13 e M14 manualmente, em quatro navegadores e em celular real. Para dar a essas métricas a mesma objetividade das demais, a coleta foi \textbf{instrumentada} com o Playwright \cite{playwright}, biblioteca que controla navegadores reais (Chrome, Firefox e WebKit) por \textit{script}. O \textit{script} versionado em \texttt{coleta/} entra no SIGAA com a conta de um avaliador, executa T1 a T6 pelo caminho principal da Fase 1 e, na página final de cada tarefa, mede os critérios de M14 com as próprias APIs do navegador: largura de \textit{layout} e de conteúdo e escala de exibição (critério a, ligado ao critério 1.4.10 das WCAG~2.2); tamanho efetivo de fonte de cada texto visível (b); sobreposição entre as caixas reais dos textos, obtidas por \texttt{Range.getClientRects} (c); abertura dos menus por toque (d); e área efetiva dos alvos de toque, com a exceção de espaçamento do critério 2.5.8 das WCAG~2.2 (e) \cite{wcag22}. O mesmo \textit{script} registra, pelas APIs de medição do navegador, o tempo de carregamento de cada página (Navigation Timing do W3C \cite{navtiming}), o tempo até o maior conteúdo pintado, as tarefas longas da \textit{thread} principal, o deslocamento do conteúdo depois de pintado e a fluidez da rolagem, que alimentam os dados complementares de desempenho (Seção~\ref{sec:desempenho}).
+
+Três regras garantem que a coleta seja ética e não intrusiva: o \textit{script} só aciona itens de menu de uma lista fechada de consultas (nunca matrícula ou trancamento); executa uma sessão por vez, com pausa de 3~s entre as tarefas, volume equivalente ao de um estudante navegando; e lê usuário e senha apenas de variáveis de ambiente. Os registros não guardam texto das páginas, só medidas, e as capturas publicadas recebem dois borrões (por CSS, no momento da captura, e gaussiano, depois), que tornam nome, notas e foto ilegíveis sem esconder a estrutura que as evidências comprovam.
+
+\subsection{Cronograma}
+
+O cronograma tem 25 atividades com responsável, prazo e esforço planejados, acompanhadas pelo programado contra o realizado (indicador I1). A coleta ocorre de 13 a 17/11/2026, com o Ponto de Controle 2 em 15 e 16/11; o cálculo das métricas, o julgamento e a verificação das hipóteses, de 17 a 19/11; a seleção e a execução da ação de melhoria, de 19 a 21/11; e a entrega, em 22/11/2026. Em 15/11, as cinco atividades da Fase 3 estavam concluídas, quatro delas com um dia de atraso.

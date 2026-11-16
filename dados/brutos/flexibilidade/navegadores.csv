@@ -1,1 +1,13 @@
 tarefa,navegador,versao,sistema,resultado,tipo_falha,avaliador,data,evidencia
+T1,"Firefox (Gecko, build do Playwright)",159.0,Linux 6.17.0-41-generic,sem_falha,,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/navegadores/T1-firefox-t1.jpg
+T2,"Firefox (Gecko, build do Playwright)",159.0,Linux 6.17.0-41-generic,sem_falha,,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/navegadores/T2-firefox-t1.jpg
+T3,"Firefox (Gecko, build do Playwright)",159.0,Linux 6.17.0-41-generic,sem_falha,,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/navegadores/T3-firefox-t1.jpg
+T4,"Firefox (Gecko, build do Playwright)",159.0,Linux 6.17.0-41-generic,sem_falha,,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/navegadores/T4-firefox-t1.jpg
+T5,"Firefox (Gecko, build do Playwright)",159.0,Linux 6.17.0-41-generic,sem_falha,,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/navegadores/T5-firefox-t1.jpg
+T6,"Firefox (Gecko, build do Playwright)",159.0,Linux 6.17.0-41-generic,sem_falha,,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/navegadores/T6-firefox-t1.jpg
+T1,Google Chrome,146.0.7680.153,Linux 6.17.0-41-generic,sem_falha,,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/navegadores/T1-chromium-t1.jpg
+T2,Google Chrome,146.0.7680.153,Linux 6.17.0-41-generic,sem_falha,,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/navegadores/T2-chromium-t1.jpg
+T3,Google Chrome,146.0.7680.153,Linux 6.17.0-41-generic,sem_falha,,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/navegadores/T3-chromium-t1.jpg
+T4,Google Chrome,146.0.7680.153,Linux 6.17.0-41-generic,sem_falha,,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/navegadores/T4-chromium-t1.jpg
+T5,Google Chrome,146.0.7680.153,Linux 6.17.0-41-generic,sem_falha,,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/navegadores/T5-chromium-t1.jpg
+T6,Google Chrome,146.0.7680.153,Linux 6.17.0-41-generic,sem_falha,,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/navegadores/T6-chromium-t1.jpg

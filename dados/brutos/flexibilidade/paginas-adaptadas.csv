@@ -1,1 +1,13 @@
 tarefa,pagina,largura_px,dispositivo,crit_a,crit_b,crit_c,crit_d,crit_e,adaptada,avaliador,data,evidencia
+T1,Relatório de notas do aluno,360,"emulação do Google Chrome (modo de dispositivo, toque ativado)",nao,nao,sim,sim,nao,nao,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/telas/T1-celular_360.jpg
+T2,Portal do Discente (Turmas do Semestre),360,"emulação do Google Chrome (modo de dispositivo, toque ativado)",nao,nao,sim,sim,nao,nao,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/telas/T2-celular_360.jpg
+T3,Atestado de matrícula,360,"emulação do Google Chrome (modo de dispositivo, toque ativado)",nao,nao,sim,sim,nao,nao,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/telas/T3-celular_360.jpg
+T4,Índices acadêmicos,360,"emulação do Google Chrome (modo de dispositivo, toque ativado)",nao,nao,sim,sim,nao,nao,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/telas/T4-celular_360.jpg
+T5,"Turma Virtual (página inicial da turma, com os materiais)",360,"emulação do Google Chrome (modo de dispositivo, toque ativado)",nao,nao,nao,sim,nao,nao,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/telas/T5-celular_360.jpg
+T6,Calendário acadêmico 2026.2,360,"emulação do Google Chrome (modo de dispositivo, toque ativado)",nao,nao,sim,sim,nao,nao,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/telas/T6-celular_360.jpg
+T1,Relatório de notas do aluno,768,"emulação do Google Chrome (modo de dispositivo, toque ativado)",nao,nao,sim,sim,nao,nao,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/telas/T1-tablet_768.jpg
+T2,Portal do Discente (Turmas do Semestre),768,"emulação do Google Chrome (modo de dispositivo, toque ativado)",nao,nao,sim,sim,nao,nao,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/telas/T2-tablet_768.jpg
+T3,Atestado de matrícula,768,"emulação do Google Chrome (modo de dispositivo, toque ativado)",nao,nao,sim,sim,nao,nao,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/telas/T3-tablet_768.jpg
+T4,Índices acadêmicos,768,"emulação do Google Chrome (modo de dispositivo, toque ativado)",nao,nao,sim,sim,nao,nao,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/telas/T4-tablet_768.jpg
+T5,"Turma Virtual (página inicial da turma, com os materiais)",768,"emulação do Google Chrome (modo de dispositivo, toque ativado)",nao,nao,nao,sim,nao,nao,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/telas/T5-tablet_768.jpg
+T6,Calendário acadêmico 2026.2,768,"emulação do Google Chrome (modo de dispositivo, toque ativado)",nao,nao,sim,sim,nao,nao,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/telas/T6-tablet_768.jpg
