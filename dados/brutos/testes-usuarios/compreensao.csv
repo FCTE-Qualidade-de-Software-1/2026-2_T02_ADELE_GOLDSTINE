@@ -2,3 +2,6 @@ participante,tarefa,pergunta,resposta_dada,resposta_esperada,abriu_legenda_ajuda
 P1,T2,Pergunta feita com outras palavras e citando a caixa de ajuda,"Sem passar aqui na caixinha, eu não consigo saber qual o horário, só consigo saber os períodos das aulas, que vai de 10/8 até 14/12","Sexta-feira, das 10h00 às 11h50 (código 6M34, conforme a tabela do atestado de matrícula)",sim,sim,nao,Caio
 P1,T4,Não perguntada (tarefa não concluída),,,,nao,nao,Caio
 P1,T6,Até que dia é possível trancar uma disciplina nesse semestre?,"Aqui tem datas para turmas regulares, trancamento de turmas dia 10/8 a 9/10",09/10/2026 (trancamento de turmas de 10/08/2026 a 09/10/2026),nao,sim,sim,Caio
+P3,T4,"Pelo que aparece na tela, quantas horas ainda faltam para você concluir o curso?",3210h,3210 h pendentes (conferido pelo moderador na tela),nao,sim,sim,Felipe
+P3,T6,Não perguntada (tarefa não concluída),,,,nao,nao,Felipe
+P3,T2,"Pelo que aparece na tela, em quais dias da semana e em que horário essa turma tem aula?","Sexta, 10h da manhã",Sexta-feira às 10h (conferido pelo moderador na tela),nao,sim,sim,Felipe
