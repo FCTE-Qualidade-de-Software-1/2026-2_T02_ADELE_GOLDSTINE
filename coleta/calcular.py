@@ -235,6 +235,7 @@ def desempenho():
             "resposta_pagina_final_mediana_s": med("load_ms", 1 / 1000),
             "tbt_mediana_ms": med("tbt_ms"), "tarefas_longas_mediana": med("tarefas_longas"),
             "maior_tarefa_longa_ms": max((p.get("maior_tarefa_ms") or 0) for r in rs for p in r["passos"]) if any("maior_tarefa_ms" in p for r in rs for p in r["passos"]) else "",
+            "cls_mediana": round(st.median([max((p.get("cls") or 0) for p in r["passos"]) for r in rs]), 4) if any("cls" in p for r in rs for p in r["passos"]) else "",
             "cls_max": max((p.get("cls") or 0) for r in rs for p in r["passos"]) if any("cls" in p for r in rs for p in r["passos"]) else "",
             "abertura_menu_mediana_ms": round(st.median([r["abertura_menu_ms"] for r in rs if r.get("abertura_menu_ms") is not None])) if any(r.get("abertura_menu_ms") is not None for r in rs) else "",
             "rolagem_fps_mediana": round(st.median([r["rolagem"]["fps_medio"] for r in rs if (r.get("rolagem") or {}).get("fps_medio")]), 1) if any((r.get("rolagem") or {}).get("fps_medio") for r in rs) else "",
