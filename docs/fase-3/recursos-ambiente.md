@@ -36,6 +36,8 @@ A Tabela 2 lista os recursos de cada método de coleta da [Tabela 2 da Fase 3](i
 
 *Fonte: elaboração da equipe.*
 
+**Execução instrumentada de M13 e M14:** na Fase 4, as verificações de M13 e M14 foram feitas por um *script* versionado (`coleta/`), que controla navegadores reais com o Playwright e mede os critérios das fichas com as APIs do navegador, em vez da inspeção manual descrita na Tabela 2. Os navegadores, as larguras de tela e os desvios em relação a esta tabela (360 px por emulação, Edge e Safari ainda manuais) estão em [Fase 4 - Flexibilidade](../fase-4/flexibilidade.md#7-desvios-em-relacao-ao-plano-da-fase-3-e-ameacas-a-validade).
+
 **Celulares:** os aparelhos usados em M14 e M15 ainda serão definidos pela equipe. A Tabela 3 é preenchida antes da primeira coleta, e o mesmo aparelho é usado em M14 e M15 para que os dois resultados possam ser comparados.
 
 *Tabela 3 - Celulares usados na coleta.*
@@ -163,3 +165,4 @@ A Tabela 8 mostra como os recursos especificados atendem ao que as fichas das m�
 | 1.2 | 14/11/2026 | Retenção das gravações igual à do termo de consentimento (60 dias após a sessão) e data do exemplo de nome de arquivo dentro da janela de coleta | Caio Borges |
 | 1.3 | 15/11/2026 | Conta e participantes do teste com usuários podem ser de graduação ou de pós-graduação, conforme o protocolo | Caio Borges |
 | 1.4 | 15/11/2026 | Local das gravações no OneDrive institucional, transcrição automática, retenção dos termos assinados e referência à LGPD, alinhados à nova versão do termo de consentimento | Caio Borges |
+| 1.5 | 15/11/2026 | Nota sobre a execução instrumentada de M13 e M14 na Fase 4 | [arthurlleite](https://github.com/arthurlleite) |
