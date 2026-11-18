@@ -11,3 +11,22 @@ M14,pagina,T5,2,0.0000,,recorte por página (regra 3)
 M14,pagina,T6,2,0.0000,,recorte por página (regra 3)
 M14,largura,360px,6,0.0000,,recorte descritivo
 M14,largura,768px,6,0.0000,,recorte descritivo
+M3,geral,,4,0.7500,,"3 de 4 usam ferramenta externa (F1); parcial: 4 de 6 participantes (P1, P2, P3, P4); sem nível até a conclusão; nível provisório: Insatisfatório"
+M5,geral,,24,0.8333,,"20 de 24 tentativas concluídas sem ajuda; parcial: 4 de 6 participantes (P1, P2, P3, P4); sem nível até a conclusão; nível provisório: Bom"
+M5,tarefa,T1,4,1.0000,,recorte por tarefa (regra 3)
+M5,tarefa,T2,4,1.0000,,recorte por tarefa (regra 3)
+M5,tarefa,T3,4,1.0000,,recorte por tarefa (regra 3)
+M5,tarefa,T4,4,0.5000,,recorte por tarefa (regra 3)
+M5,tarefa,T5,4,0.7500,,recorte por tarefa (regra 3)
+M5,tarefa,T6,4,0.7500,,recorte por tarefa (regra 3)
+M5,grupo,comeco,12,0.8333,,recorte descritivo (2 participantes)
+M5,grupo,meio_fim,12,0.8333,,recorte descritivo (2 participantes)
+M5,grupo,calouros_primeiro_contato,3,1.0000,,"grupo do começo do curso, só tarefas nunca executadas antes (ficha de M5)"
+M11,geral,,12,0.5000,,"6 de 12 respostas corretas sem legenda; 2 pergunta(s) não feita(s) em tarefa concluída, contadas como incorretas; parcial: 4 de 6 participantes (P1, P2, P3, P4); sem nível até a conclusão; nível provisório: Regular"
+M11,tarefa,T2,4,0.7500,,recorte por pergunta
+M11,tarefa,T4,4,0.2500,,recorte por pergunta
+M11,tarefa,T6,4,0.5000,,recorte por pergunta
+M12,geral,,4,32.5000,,"média de 4 questionários (mín. 17.5, máx. 45); parcial: 4 de 6 participantes (P1, P2, P3, P4); sem nível até a conclusão; nível provisório: Insatisfatório"
+M12,grupo,comeco,2,22.5000,,recorte descritivo (2 participantes)
+M12,grupo,meio_fim,2,42.5000,,recorte descritivo (2 participantes)
+MA1,geral,,24,0.0000,,"0 de 24 tentativas com declaração de função inexistente; sem nível (métrica auxiliar); parcial: 4 de 6 participantes (P1, P2, P3, P4); sem nível até a conclusão"
