@@ -5,3 +5,9 @@ P1,T6,Até que dia é possível trancar uma disciplina nesse semestre?,"Aqui tem
 P3,T4,"Pelo que aparece na tela, quantas horas ainda faltam para você concluir o curso?",3210h,3210 h pendentes (conferido pelo moderador na tela),nao,sim,sim,Felipe
 P3,T6,Não perguntada (tarefa não concluída),,,,nao,nao,Felipe
 P3,T2,"Pelo que aparece na tela, em quais dias da semana e em que horário essa turma tem aula?","Sexta, 10h da manhã",Sexta-feira às 10h (conferido pelo moderador na tela),nao,sim,sim,Felipe
+P2,T2,"Não feita com o texto do protocolo: o participante perguntou ""O que significa o código?"" e interpretou o código sozinho","Quarta, sexta, manhã, 1h e 2h, ou seja, das 8h até as 10h. Na I9 ou na S9?","Quarta e sexta, das 8h00 às 9h50, em I9/S9 (46M12, conforme a Tabela de Horários do atestado de matrícula)",nao,sim,sim,Leonardo
+P2,T4,Não perguntada,,,,sim,nao,Leonardo
+P2,T6,Até que dia é possível trancar uma disciplina nesse semestre?,Até dia 9 do 10.,09/10/2026 (trancamento de turmas de 10/08/2026 a 09/10/2026),nao,sim,sim,Leonardo
+P4,T2,Pergunta feita com outras palavras: Qual que é o horário?,"Mecânica dos sólidos, aqui ela tem terça e quinta, oito até as dez.","Terça e quinta, das 8h00 às 9h50 (35M12, na tabela Turmas do Semestre)",nao,sim,sim,Leonardo
+P4,T4,Não perguntada (tarefa não concluída),,,,nao,nao,Leonardo
+P4,T6,Não perguntada,,,,sim,nao,Leonardo
