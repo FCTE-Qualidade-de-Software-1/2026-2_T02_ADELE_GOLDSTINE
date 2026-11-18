@@ -3,3 +3,4 @@ P1,pos_graduacao,1,nao,gama,computador,sim,zoom_rolagem;botoes_pequenos;nao_conc
 P3,graduacao,1,nao,darcy_ribeiro,celular,nao,zoom_rolagem;menu_nao_abriu;botoes_pequenos;conteudo_cortado,5,5,5,4,5,1,T6,rendimento,sim,planilha,dificil,,
 P2,graduacao,9,nao,gama,computador,sim,zoom_rolagem;menu_nao_abriu;botoes_pequenos;nao_concluiu,5,4,4,5,5,5,T1;T2;T4,rendimento,sim,no_fluxo;planilha,dificil;mais_clara;mais_rapida,,
 P4,graduacao,9,nao,gama,ambos,sim,zoom_rolagem;botoes_pequenos,5,4,5,3,5,2,nenhuma,rendimento,sim,planilha,mais_clara,,
+P6,graduacao,9,nao,gama,celular,sim,zoom_rolagem;botoes_pequenos,5,4,4,4,2,2,T6,rendimento,nao,,,,
