@@ -30,7 +30,7 @@ Se um *commit* for feito com um e-mail que o script não conhece, o cálculo par
 
 | Campo | Como preencher |
 |---|---|
-| `entrega` | `E1` ou `E2` |
+| `entrega` | `E1`, `E2` ou `E3` |
 | `data` | Data no formato `dd/mm/aaaa` |
 | `membro` | Nome completo, igual ao cadastrado em `MEMBROS` no `esforco.py` |
 | `horas` | Horas-pessoa em decimal, por exemplo `1.50` |
