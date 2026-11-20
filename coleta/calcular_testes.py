@@ -102,16 +102,25 @@ def m5(sess: list[dict]) -> list[tuple]:
     return out
 
 
+def nao_perguntada(r: dict) -> bool:
+    """Tarefa concluída sem a pergunta de compreensão: conta como correta (ficha de M11)."""
+    return r["tarefa_concluida"] == "sim" and not r["resposta_dada"]
+
+
+def correta_m11(r: dict) -> bool:
+    return r["correta"] == "sim" or nao_perguntada(r)
+
+
 def m11(comp: list[dict]) -> list[tuple]:
-    a, b = proporcao(comp, lambda r: r["correta"] == "sim")
+    a, b = proporcao(comp, correta_m11)
     completo, obs = situacao({r["participante"] for r in comp})
-    nao_perg = sum(1 for r in comp if r["tarefa_concluida"] == "sim" and not r["resposta_dada"])
-    extra = f"; {nao_perg} pergunta(s) não feita(s) em tarefa concluída, contadas como incorretas" if nao_perg else ""
+    nao_perg = sum(1 for r in comp if nao_perguntada(r))
+    extra = f"; inclui {nao_perg} pergunta(s) não feita(s) em tarefa concluída, contadas como corretas" if nao_perg else ""
     out = [geral("M11", b, a / b, completo, f"{a} de {b} respostas corretas sem legenda{extra}; {obs}".rstrip("; "))]
     for t in ("T2", "T4", "T6"):
         lt = [r for r in comp if r["tarefa"] == t]
         if lt:
-            x, y = proporcao(lt, lambda r: r["correta"] == "sim")
+            x, y = proporcao(lt, correta_m11)
             out.append(("M11", "tarefa", t, y, x / y, "", "recorte por pergunta"))
     return out
 
