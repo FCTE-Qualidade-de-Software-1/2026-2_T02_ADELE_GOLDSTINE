@@ -29,7 +29,11 @@ PROPRIAS = {"M3", "M4", "M5", "M6", "M7", "M8", "M11", "M12", "MA1"}
 # Tabelas 2 e 3 de Níveis de Pontuação (Fase 2). (limite, rótulo, maior_melhor)
 FAIXAS = {
     "M3": ([(0.10, "Excelente"), (0.25, "Bom"), (0.50, "Regular")], False),
+    "M4": ([(0.90, "Excelente"), (0.75, "Bom"), (0.50, "Regular")], True),
     "M5": ([(0.90, "Excelente"), (0.78, "Bom"), (0.60, "Regular")], True),
+    "M6": ([(1.5, "Excelente"), (2.5, "Bom"), (4.0, "Regular")], False),
+    "M7": ([(1.11, "Excelente"), (1.33, "Bom"), (2.00, "Regular")], False),
+    "M8": ([(0.90, "Excelente"), (0.70, "Bom"), (0.50, "Regular")], True),
     "M11": ([(0.90, "Excelente"), (0.75, "Bom"), (0.50, "Regular")], True),
     "M12": ([(80.3, "Excelente"), (68.0, "Bom"), (51.0, "Regular")], True),
 }
@@ -99,6 +103,106 @@ def m5(sess: list[dict]) -> list[tuple]:
         x, y = proporcao(cal, lambda r: r["concluida"] == "sim")
         out.append(("M5", "grupo", "calouros_primeiro_contato", y, x / y, "",
                     "grupo do começo do curso, só tarefas nunca executadas antes (ficha de M5)"))
+    return out
+
+
+def caminhos() -> tuple[dict[str, int], dict[str, list[str]]]:
+    """C_min de cada tarefa (maior ordem do caminho ótimo) e itens válidos de primeira escolha."""
+    cmin: dict[str, int] = {}
+    validos: dict[str, list[str]] = defaultdict(list)
+    for r in ler(REF / "caminhos.csv"):
+        if r["tipo"] == "otimo":
+            cmin[r["tarefa"]] = max(cmin.get(r["tarefa"], 0), int(r["ordem"]))
+        if r["ordem"] in {"0", "1"}:
+            validos[r["tarefa"]].append(r["passo"])
+    return cmin, validos
+
+
+def m4(sess: list[dict]) -> list[tuple]:
+    """Primeira escolha válida. Sem clique só é válida se a tarefa foi concluída sem cliques (caminho de 0 passos)."""
+    if any(not r["primeira_escolha_valida"] for r in sess):
+        return []
+    a, b = proporcao(sess, lambda r: r["primeira_escolha_valida"] == "sim")
+    completo, obs = situacao({r["participante"] for r in sess})
+    out = [geral("M4", b, a / b, completo, f"{a} de {b} tentativas com a primeira escolha no caminho; {obs}".rstrip("; "))]
+    for t in TAREFAS:
+        lt = [r for r in sess if r["tarefa"] == t]
+        x, y = proporcao(lt, lambda r: r["primeira_escolha_valida"] == "sim")
+        out.append(("M4", "tarefa", t, y, x / y, "", "recorte por tarefa (regra 3)"))
+    return out
+
+
+def m6(sess: list[dict]) -> list[tuple]:
+    esp = defaultdict(list)
+    for r in ler(REF / "tempos-especialista.csv"):
+        esp[r["tarefa"]].append(float(r["tempo_s"]))
+    if not esp:
+        return []
+    razoes, out, fora = [], [], []
+    for t in TAREFAS:
+        tp = [float(r["tempo_s"]) for r in sess if r["tarefa"] == t and r["concluida"] == "sim"]
+        if not tp:
+            fora.append(t)
+            continue
+        if not esp.get(t):
+            return []  # falta o tempo do especialista de uma tarefa concluída
+        te = st.mean(esp[t])
+        razoes.append(st.mean(tp) / te)
+        out.append(("M6", "tarefa", t, len(tp), razoes[-1], "",
+                    f"Tp = {st.mean(tp):.1f} s ({len(tp)} concluídas); Te = {te:.1f} s ({len(esp[t])} execuções)"))
+    completo, obs = situacao({r["participante"] for r in sess})
+    extra = f"; fora da média (nenhuma conclusão): {', '.join(fora)}" if fora else ""
+    return [geral("M6", len(razoes), st.mean(razoes), completo,
+                  f"média de {len(razoes)} tarefas{extra}; {obs}".rstrip("; "))] + out
+
+
+def m7(sess: list[dict]) -> list[tuple]:
+    """Cliques dos que concluíram / C_min. Tarefa com C_min = 0 (informação já na página inicial) fica fora da média."""
+    cmin, _ = caminhos()
+    if not cmin or any(r["concluida"] == "sim" and not r["cliques"] for r in sess):
+        return []
+    razoes, out, sem_cmin, sem_conc = [], [], [], []
+    for t in TAREFAS:
+        cp = [int(r["cliques"]) for r in sess if r["tarefa"] == t and r["concluida"] == "sim"]
+        if not cp:
+            sem_conc.append(t)
+            continue
+        if cmin.get(t, 0) == 0:
+            sem_cmin.append(t)
+            out.append(("M7", "tarefa", t, len(cp), st.mean(cp), "",
+                        f"C_min = 0 (a informação está na página inicial): fora da média; valor = média de cliques"))
+            continue
+        razoes.append(st.mean(cp) / cmin[t])
+        out.append(("M7", "tarefa", t, len(cp), razoes[-1], "",
+                    f"Cp = {st.mean(cp):.2f} cliques ({len(cp)} concluídas); C_min = {cmin[t]}"))
+    completo, obs = situacao({r["participante"] for r in sess})
+    extra = ""
+    if sem_cmin:
+        extra += f"; fora da média por C_min = 0: {', '.join(sem_cmin)}"
+    if sem_conc:
+        extra += f"; fora da média (nenhuma conclusão): {', '.join(sem_conc)}"
+    return [geral("M7", len(razoes), st.mean(razoes), completo,
+                  f"média de {len(razoes)} tarefas{extra}; {obs}".rstrip("; "))] + out
+
+
+def m8(sess: list[dict]) -> list[tuple]:
+    if any(not r["avaliador_gravacao"] for r in sess):
+        return []
+    erros = ler(TESTES / "erros.csv")
+    for r in sess:  # as contagens de sessoes.csv devem bater com as linhas de erros.csv
+        le = [e for e in erros if e["participante"] == r["participante"] and e["tarefa"] == r["tarefa"]]
+        rec = sum(1 for e in le if e["recuperado"] == "sim")
+        if (len(le), rec) != (int(r["erros"] or 0), int(r["erros_recuperados"] or 0)):
+            raise SystemExit(f"{r['participante']} {r['tarefa']}: erros em sessoes.csv não batem com erros.csv")
+    a, b = proporcao(erros, lambda e: e["recuperado"] == "sim")
+    valor = a / b if b else 1.0
+    completo, obs = situacao({r["participante"] for r in sess})
+    out = [geral("M8", b, valor, completo, f"{a} de {b} erros recuperados sem ajuda e sem refazer passos; {obs}".rstrip("; "))]
+    for t in TAREFAS:
+        lt = [e for e in erros if e["tarefa"] == t]
+        if lt:
+            x, y = proporcao(lt, lambda e: e["recuperado"] == "sim")
+            out.append(("M8", "tarefa", t, y, x / y, "", "recorte por tarefa (regra 3)"))
     return out
 
 
@@ -181,12 +285,12 @@ def atualizar(novas: list[tuple]):
 
 def main():
     sess = ler(TESTES / "sessoes.csv")
-    novas = (m3(ler(QUEST / "respostas.csv")) + m5(sess) + m11(ler(TESTES / "compreensao.csv"))
+    novas = (m3(ler(QUEST / "respostas.csv")) + m4(sess) + m5(sess) + m6(sess) + m7(sess) + m8(sess) + m11(ler(TESTES / "compreensao.csv"))
              + m12(ler(TESTES / "sus.csv")) + ma1(sess))
     atualizar(novas)
     for m in novas:
         if m[1] == "geral":
-            fmt = f"{m[4]:.1f}" if m[0] == "M12" else f"{m[4]:.1%}"
+            fmt = f"{m[4]:.2f}" if m[0] in {"M6", "M7", "M12"} else f"{m[4]:.1%}"
             print(f"{m[0]}: {fmt} {m[5] or '(sem nível)'} - {m[6]}")
     for p in pendentes(sess):
         print("pendente -", p)

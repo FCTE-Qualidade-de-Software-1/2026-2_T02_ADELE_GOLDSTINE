@@ -12,6 +12,13 @@ M14,pagina,T6,2,0.0000,,recorte por página (regra 3)
 M14,largura,360px,6,0.0000,,recorte descritivo
 M14,largura,768px,6,0.0000,,recorte descritivo
 M3,geral,,5,0.6000,,"3 de 5 usam ferramenta externa (F1); parcial: 5 de 6 participantes (P1, P2, P3, P4, P6); sem nível até a conclusão; nível provisório: Insatisfatório"
+M4,geral,,30,0.7333,,"22 de 30 tentativas com a primeira escolha no caminho; parcial: 5 de 6 participantes (P1, P2, P3, P4, P6); sem nível até a conclusão; nível provisório: Regular"
+M4,tarefa,T1,5,1.0000,,recorte por tarefa (regra 3)
+M4,tarefa,T2,5,0.8000,,recorte por tarefa (regra 3)
+M4,tarefa,T3,5,1.0000,,recorte por tarefa (regra 3)
+M4,tarefa,T4,5,0.2000,,recorte por tarefa (regra 3)
+M4,tarefa,T5,5,1.0000,,recorte por tarefa (regra 3)
+M4,tarefa,T6,5,0.4000,,recorte por tarefa (regra 3)
 M5,geral,,30,0.8333,,"25 de 30 tentativas concluídas sem ajuda; parcial: 5 de 6 participantes (P1, P2, P3, P4, P6); sem nível até a conclusão; nível provisório: Bom"
 M5,tarefa,T1,5,1.0000,,recorte por tarefa (regra 3)
 M5,tarefa,T2,5,1.0000,,recorte por tarefa (regra 3)
@@ -22,6 +29,18 @@ M5,tarefa,T6,5,0.6000,,recorte por tarefa (regra 3)
 M5,grupo,comeco,12,0.8333,,recorte descritivo (2 participantes)
 M5,grupo,meio_fim,18,0.8333,,recorte descritivo (3 participantes)
 M5,grupo,calouros_primeiro_contato,3,1.0000,,"grupo do começo do curso, só tarefas nunca executadas antes (ficha de M5)"
+M7,geral,,4,1.4646,,"média de 4 tarefas; fora da média por C_min = 0: T2, T4; parcial: 5 de 6 participantes (P1, P2, P3, P4, P6); sem nível até a conclusão; nível provisório: Regular"
+M7,tarefa,T1,5,1.4000,,Cp = 1.40 cliques (5 concluídas); C_min = 1
+M7,tarefa,T2,5,1.4000,,C_min = 0 (a informação está na página inicial): fora da média; valor = média de cliques
+M7,tarefa,T3,5,1.0000,,Cp = 1.00 cliques (5 concluídas); C_min = 1
+M7,tarefa,T4,3,5.6667,,C_min = 0 (a informação está na página inicial): fora da média; valor = média de cliques
+M7,tarefa,T5,4,1.6250,,Cp = 3.25 cliques (4 concluídas); C_min = 2
+M7,tarefa,T6,3,1.8333,,Cp = 3.67 cliques (3 concluídas); C_min = 2
+M8,geral,,16,0.8125,,"13 de 16 erros recuperados sem ajuda e sem refazer passos; parcial: 5 de 6 participantes (P1, P2, P3, P4, P6); sem nível até a conclusão; nível provisório: Bom"
+M8,tarefa,T2,1,1.0000,,recorte por tarefa (regra 3)
+M8,tarefa,T4,3,1.0000,,recorte por tarefa (regra 3)
+M8,tarefa,T5,8,0.8750,,recorte por tarefa (regra 3)
+M8,tarefa,T6,4,0.5000,,recorte por tarefa (regra 3)
 M11,geral,,15,0.6667,,"10 de 15 respostas corretas sem legenda; inclui 2 pergunta(s) não feita(s) em tarefa concluída, contadas como corretas; parcial: 5 de 6 participantes (P1, P2, P3, P4, P6); sem nível até a conclusão; nível provisório: Regular"
 M11,tarefa,T2,5,0.8000,,recorte por pergunta
 M11,tarefa,T4,5,0.6000,,recorte por pergunta
