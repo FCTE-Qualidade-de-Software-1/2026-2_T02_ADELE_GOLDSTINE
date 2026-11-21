@@ -155,8 +155,8 @@ def estimar(args):
 # ---------------------------------------------------------------------------
 
 # Cada entrega termina na tag Entrega<n> (a release). A Entrega 1 fica congelada na planilha.
-ENTREGAS = ["E1", "E2"]
-ENTREGAS_AUTOMATICAS = ["E2"]
+ENTREGAS = ["E1", "E2", "E3"]
+ENTREGAS_AUTOMATICAS = ["E2", "E3"]
 
 
 def tag(entrega):
