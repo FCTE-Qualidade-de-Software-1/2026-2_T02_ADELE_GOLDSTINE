@@ -33,6 +33,7 @@ extra_css:
 
 hooks:
   - gestao/esforco.py
+  - coleta/graficos_testes.py
 
 markdown_extensions:
   - admonition
@@ -76,6 +77,7 @@ nav:
   - Fase 4:
     - fase-4/index.md
     - Acessibilidade Automática (M9): fase-4/acessibilidade.md
+    - Teste com usuários (gráficos): fase-4/teste-usuarios.md
     - Flexibilidade: fase-4/flexibilidade.md
     - Desempenho (complementar): fase-4/desempenho.md
   - Artigo:

@@ -26,6 +26,7 @@ Esta página documenta todos os usos de ferramentas de Inteligência Artificial 
 | Claude Opus 5.5 (Claude Code) | Roteiro da sessão em PDF a partir do protocolo, leitura dos PDFs do SUS e do questionário respondidos pelo P3, cálculo da pontuação SUS e transcrição das respostas e das anotações do moderador para `sus.csv`, `respostas.csv`, `sessoes.csv` e `compreensao.csv`, com tempos aproximados tirados da transcrição. Os valores foram conferidos com os PDFs e com o formulário de observação; tempos, cliques, primeira escolha e erros ficam para o avaliador da gravação | 15/11/2026 | [Felipe Campêlo](https://github.com/felipeacampelo) |
 | Whisper (modelo medium, pt) | Transcrição automática do áudio da sessão do P3, revisada pelo moderador | 15/11/2026 | [Felipe Campêlo](https://github.com/felipeacampelo) |
 | Gemini (Antigravity) | Adaptação dos *scripts* de coleta (`coleta/sigaa_coleta.py`, `coleta/calcular.py` e `coleta/borrar.py`) para concluir M13 (Microsoft Edge e WebKit), criação de `coleta/coleta_wave.py` para executar o motor oficial do WAVE v3.3.4.0 nas páginas de T1 a T6 (M9) sem textos pessoais, e redação/atualização das páginas da Fase 4 (`docs/fase-4/flexibilidade.md`, `docs/fase-4/acessibilidade.md`, `docs/fase-4/index.md` e `docs/fase-3/recursos-ambiente.md`). Todos os registros JSONL/JSON, CSVs, capturas borradas e os julgamentos de Q10/H10 e Q14/H14 foram conferidos contra as fichas da Fase 2 e as saídas reais da execução | 21/11/2026 | [Felipe Campêlo](https://github.com/felipeacampelo) |
+| Claude Opus 5.5 (Claude Code) | Auxílio no cálculo das métricas | 21/11/2026 | Caio Borges |
 
 ## Histórico de Versão
 
@@ -50,3 +51,4 @@ Esta página documenta todos os usos de ferramentas de Inteligência Artificial 
 | 1.16 | 15/11/2026 | Registro do uso de IA nos gráficos de gestão | Caio Borges |
 | 1.17 | 15/11/2026 | Registro do uso de IA na sessão do P3 | [Felipe Campêlo](https://github.com/felipeacampelo) |
 | 1.18 | 21/11/2026 | Registro do uso de IA na conclusão instrumentada de M13 (Edge e WebKit) e na coleta automatizada de M9 (WAVE) | [Felipe Campêlo](https://github.com/felipeacampelo) |
+| 1.19 | 21/11/2026 | Registro do uso de IA no cálculo das métricas | Caio Borges |

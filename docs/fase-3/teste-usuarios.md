@@ -110,11 +110,11 @@ Duas tarefas usam só parte da descrição da Fase 1, para manter um único resu
 | T3 | Emitir atestado de matrícula | "Gere o seu atestado de matrícula deste semestre." | Abre ou baixa o documento | - |
 | T4 | Ver o que falta para se formar | "Encontre a página que mostra o quanto você já cumpriu do seu curso e o quanto ainda falta." | Mostra a página com a carga horária cumprida e a pendente | "Pelo que aparece na tela, quantas horas ainda faltam para você concluir o curso?" |
 | T5 | Abrir um material da Turma Virtual | "Abra um arquivo ou link que um professor publicou para uma das suas turmas deste semestre." | Abre o material | - |
-| T6 | Consultar o calendário acadêmico | "Abra o calendário acadêmico deste semestre." | Mostra o calendário do semestre corrente | "Pelo calendário, até que dia é possível trancar uma disciplina neste semestre?" |
+| T6 | Consultar o calendário acadêmico | "Abra o calendário acadêmico deste semestre." | Mostra o calendário do semestre corrente dentro do SIGAA | "Pelo calendário, até que dia é possível trancar uma disciplina neste semestre?" |
 
 *Fonte: elaboração da equipe.*
 
-A resposta de compreensão é **correta** quando coincide com o gabarito (seção 4) e o participante não abriu legenda, ícone de ajuda ou fonte externa. Se a tarefa não foi concluída, a pergunta não é feita e conta como incorreta, conforme a ficha de M11.
+A resposta de compreensão é **correta** quando coincide com o gabarito (seção 4) e o participante não abriu legenda, ícone de ajuda ou fonte externa. Se a tarefa não foi concluída, a pergunta não é feita e conta como incorreta, conforme a ficha de M11. Se a tarefa foi concluída e a pergunta não foi feita, ela conta como correta, e uma pergunta sobre outro dado da mesma tela vale como pergunta de compreensão, também conforme a ficha.
 
 ## 7. Ordem das tarefas
 
@@ -148,6 +148,8 @@ Cada grupo recebe as mesmas três ordens. Assim, cada tarefa aparece no início,
 | 5 minutos sem conclusão | Interrompe: "Pode parar aqui, obrigado. Vamos para a próxima." | `concluida` = `nao`, motivo `tempo_esgotado` |
 
 *Fonte: elaboração da equipe.*
+
+Todas as tarefas precisam ser concluídas dentro do SIGAA. Um resultado obtido fora dele, como o calendário aberto no site da SAA em T6, é registrado como `resultado_errado`, conforme a ficha de M5.
 
 Uma dúvida sobre o **enunciado**, e não sobre o sistema, não é pedido de ajuda: o moderador apenas relê o cartão. Se, em qualquer momento, o participante disser que a função pedida não existe no SIGAA, o moderador anota a frase literal (MA1). A existência da função é conferida depois, com a lista verificada em M1.
 
@@ -201,3 +203,4 @@ O SUS [1] é aplicado em português, com escala de 1 (discordo totalmente) a 5 (
 | 1.11 | 15/11/2026 | Estudantes de pós-graduação incluídos entre os participantes, com o grupo definido pelo semestre do curso atual; nível do curso anotado nas perguntas iniciais | Caio Borges |
 | 1.12 | 15/11/2026 | Formulário de observação, questionário SUS e questionário da Fase 2 publicados e ligados à Tabela 3 e à seção 9 | Caio Borges |
 | 1.13 | 15/11/2026 | Termo de consentimento com referência à LGPD, transcrição, sessão remota pelo Teams e prazo de guarda da via assinada | Caio Borges |
+| 1.14 | 20/11/2026 | Tarefas concluídas só dentro do SIGAA (T6 no site da SAA conta como resultado errado); pergunta de compreensão não feita em tarefa concluída e pergunta sobre outro dado da mesma tela, conforme as fichas de M5 e M11 | Caio Borges |

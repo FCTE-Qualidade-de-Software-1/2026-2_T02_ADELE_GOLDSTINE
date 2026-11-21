@@ -8,6 +8,7 @@ Scripts que executam as tarefas T1 a T6 no SIGAA/UnB com o [Playwright](https://
 | `coleta_wave.py` | Injeta o motor oficial da extensão WAVE (`wave.min.js`) nas páginas finais de T1 a T6, grava os relatórios JSON sanitizados e gera `dados/brutos/acessibilidade/wave/resumo.csv` |
 | `borrar.py` | Aplica o segundo borrão nas capturas publicáveis (dados pessoais ilegíveis) |
 | `calcular.py` | Gera `navegadores.csv`, `paginas-adaptadas.csv`, `dados/consolidados/desempenho.csv` e as linhas de M9, M13 e M14 em `metricas.csv` |
+| `calcular_testes.py` | Gera as linhas de M3, M5, M11, M12 e MA1 em `metricas.csv` a partir das planilhas do teste com usuários e do questionário; lista o que falta para M4, M6, M7 e M8 |
 
 ## Regras de segurança da coleta
 
