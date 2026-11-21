@@ -8,7 +8,9 @@ Scripts que executam as tarefas T1 a T6 no SIGAA/UnB com o [Playwright](https://
 | `coleta_wave.py` | Injeta o motor oficial da extensão WAVE (`wave.min.js`) nas páginas finais de T1 a T6, grava os relatórios JSON sanitizados e gera `dados/brutos/acessibilidade/wave/resumo.csv` |
 | `borrar.py` | Aplica o segundo borrão nas capturas publicáveis (dados pessoais ilegíveis) |
 | `calcular.py` | Gera `navegadores.csv`, `paginas-adaptadas.csv`, `dados/consolidados/desempenho.csv` e as linhas de M9, M13 e M14 em `metricas.csv` |
-| `calcular_testes.py` | Gera as linhas de M3, M5, M11, M12 e MA1 em `metricas.csv` a partir das planilhas do teste com usuários e do questionário; lista o que falta para M4, M6, M7 e M8 |
+| `calcular_testes.py` | Gera as linhas de M3, M4, M5, M6, M7, M8, M11, M12, MA1, IQ1 a IQ4 e HP1 em `metricas.csv` a partir das planilhas do teste com usuários e do questionário |
+| `graficos_testes.py` | Gera os gráficos SVG/PNG de `docs/assets/graficos/teste-usuarios/` e injeta os gráficos com tabelas via hook do MkDocs (`[[GRAFICO_TU:...]]`) |
+| `prototipo_mobile.py` | Gera as telas SVG/PNG (`docs/assets/prototipo-mobile/`) e o simulador HTML interativo do Protótipo Mobile-First via hook do MkDocs (`[[PROTOTIPO_MOBILE_INTERATIVO]]`) |
 
 ## Regras de segurança da coleta
 
