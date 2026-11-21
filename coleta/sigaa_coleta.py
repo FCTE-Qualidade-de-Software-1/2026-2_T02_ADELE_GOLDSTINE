@@ -41,6 +41,7 @@ MENU_PERMITIDO = {"Consultar Minhas Notas", "Emitir Atestado de Matrícula",
 
 TURMA_T5 = "FUNDAMENTOS DE REDES DE COMPUTADORES"
 MATERIAL_T5 = "Plano de Ensino"
+MODO_T5 = "arquivo"
 SEMESTRE = "2026.2"
 
 # Marcadores que indicam que a página final da tarefa foi exibida corretamente
@@ -332,6 +333,10 @@ class Sessao:
         pg.fill("input[name=password]", os.environ["SIGAA_SENHA"])
         pg.click("button[name=submit]")
         pg.wait_for_load_state("networkidle", timeout=120000)
+        if "telaAvisoLogon" in pg.url:
+            with pg.expect_navigation(wait_until="load", timeout=120000):
+                pg.locator("input[type=submit][value*='Continuar']").first.click()
+            pg.wait_for_load_state("networkidle", timeout=120000)
         if "discente" not in pg.url:
             raise SystemExit(f"Login não chegou ao Portal do Discente: {pg.url}")
         self.home = pg.url
@@ -449,33 +454,41 @@ def executar_tarefa(s: Sessao, tarefa: str) -> dict:
         turma = pg.locator(f"a:text-is('{TURMA_T5}')").first
         s.alvos_usados.append(s.medir_alvo(turma))
         passo("turma virtual", lambda: s.acionar(turma))
-        menu_mat = pg.locator("#formMenu div:text-is('Materiais'), #formMenu td:text-is('Materiais'), #formMenu :text-is('Materiais')").first
-        try:
-            s.alvos_usados.append(s.medir_alvo(menu_mat))
-            s.acionar(menu_mat)
+        if MODO_T5 == "noticia":
+            not_loc = pg.locator("#formMenu .itemMenu:has-text('Notícias')").first
+            s.alvos_usados.append(s.medir_alvo(not_loc))
+            passo("notícias", lambda: s.acionar(not_loc))
+            vis = pg.locator("a[title*='Visualizar'], img[title*='Visualizar']").first
+            s.alvos_usados.append(s.medir_alvo(vis))
+            passo("visualizar notícia", lambda: s.acionar(vis))
+        else:
+            menu_mat = pg.locator("#formMenu div:text-is('Materiais'), #formMenu td:text-is('Materiais'), #formMenu :text-is('Materiais')").first
             try:
-                pg.locator("#formMenu :text-is('Conteúdo'), #formMenu :text-is('Arquivos')").first.wait_for(state="visible", timeout=3000)
-                reg["toque_menu"] = True
-            except Exception:  # noqa: BLE001
+                s.alvos_usados.append(s.medir_alvo(menu_mat))
+                s.acionar(menu_mat)
+                try:
+                    pg.locator("#formMenu :text-is('Conteúdo'), #formMenu :text-is('Arquivos')").first.wait_for(state="visible", timeout=3000)
+                    reg["toque_menu"] = True
+                except Exception:  # noqa: BLE001
+                    reg["toque_menu"] = False
+            except Exception as e:  # noqa: BLE001
                 reg["toque_menu"] = False
-        except Exception as e:  # noqa: BLE001
-            reg["toque_menu"] = False
-            reg["erro_menu_materiais"] = type(e).__name__
-        mat = pg.locator(f"#formAva a:text-is('{MATERIAL_T5}')").first
-        s.alvos_usados.append(s.medir_alvo(mat))
-        t0 = time.perf_counter()
-        try:
-            with pg.expect_download(timeout=120000) as d:
-                s.acionar(mat)
-            dl = d.value
-            caminho = dl.path()
-            reg["download"] = {"tempo_ms": round((time.perf_counter() - t0) * 1000),
-                               "bytes": os.path.getsize(caminho) if caminho else None,
-                               "extensao": Path(dl.suggested_filename).suffix.lower(),
-                               "falha": dl.failure()}
-            dl.delete()
-        except Exception as e:  # noqa: BLE001
-            reg["download"] = {"falha": type(e).__name__}
+                reg["erro_menu_materiais"] = type(e).__name__
+            mat = pg.locator(f"#formAva a:text-is('{MATERIAL_T5}')").first
+            s.alvos_usados.append(s.medir_alvo(mat))
+            t0 = time.perf_counter()
+            try:
+                with pg.expect_download(timeout=120000) as d:
+                    s.acionar(mat)
+                dl = d.value
+                caminho = dl.path()
+                reg["download"] = {"tempo_ms": round((time.perf_counter() - t0) * 1000),
+                                   "bytes": os.path.getsize(caminho) if caminho else None,
+                                   "extensao": Path(dl.suggested_filename).suffix.lower(),
+                                   "falha": dl.failure()}
+                dl.delete()
+            except Exception as e:  # noqa: BLE001
+                reg["download"] = {"falha": type(e).__name__}
     else:
         raise ValueError(tarefa)
 
@@ -487,7 +500,7 @@ def executar_tarefa(s: Sessao, tarefa: str) -> dict:
             reg["rolagem"] = {"erro": type(e).__name__}
     texto = pg.locator("body").inner_text()
     reg["marcadores_ok"] = all(m.lower() in texto.lower() for m in MARCADORES[tarefa])
-    if tarefa == "T5":
+    if tarefa == "T5" and MODO_T5 == "arquivo":
         reg["marcadores_ok"] = reg["marcadores_ok"] and bool(reg["download"]) and not reg["download"].get("falha")
     reg["assinatura"] = pg.evaluate(JS_ASSINATURA)
     reg["falhas_estaticos_antes"] = falhas_estaticos
@@ -553,18 +566,20 @@ def gravar(arquivo: Path, reg: dict):
 # Rotinas de coleta
 # --------------------------------------------------------------------------
 
-NAVEGADORES = [  # (rótulo, motor do Playwright, canal)
-    ("Google Chrome", "chromium", "chrome"),
-    ("Firefox (Gecko, build do Playwright)", "firefox", None),
-    ("WebKit (motor do Safari, build do Playwright)", "webkit", None),
-]
+NAVEGADORES = {  # chave: (rótulo, motor do Playwright, canal, slug da evidência)
+    "chrome": ("Google Chrome", "chromium", "chrome", "chromium"),
+    "firefox": ("Firefox (Gecko, build do Playwright)", "firefox", None, "firefox"),
+    "webkit": ("WebKit (motor do Safari, build do Playwright)", "webkit", None, "webkit"),
+    "edge": ("Microsoft Edge", "chromium", "msedge", "msedge"),
+}
 
 
 def coletar_navegadores(args):
     saida = RAIZ / "dados/brutos/flexibilidade/automatizado/navegadores.jsonl"
     evid = RAIZ / "dados/brutos/flexibilidade/evidencias/navegadores"
     with sync_playwright() as pw:
-        for rotulo, motor, canal in NAVEGADORES:
+        for chave in args.navegadores:
+            rotulo, motor, canal, slug = NAVEGADORES[chave]
             s = Sessao(pw, motor, "computador", canal=canal)
             try:
                 s.login()
@@ -575,12 +590,20 @@ def coletar_navegadores(args):
                         except Exception as e:  # noqa: BLE001
                             reg = {"tarefa": t, "erro": f"{type(e).__name__}: {str(e)[:300]}"}
                         reg["tentativa"] = tentativa
-                        nome = f"{t}-{motor}-t{tentativa}"
-                        try:
-                            reg["evidencia"] = capturar(s.pg, evid, args.local and Path(args.local) / "navegadores", nome)
-                        except Exception:  # noqa: BLE001
+                        if args.apenas_referencia:
                             reg["evidencia"] = None
-                        gravar(saida, base_registro(s, {"navegador": rotulo, **reg}))
+                        else:
+                            nome = f"{t}-{slug}-t{tentativa}"
+                            try:
+                                reg["evidencia"] = capturar(s.pg, evid, args.local and Path(args.local) / "navegadores", nome)
+                            except Exception:  # noqa: BLE001
+                                reg["evidencia"] = None
+                        extra = {"navegador": rotulo, **reg}
+                        if args.avaliador:
+                            extra["avaliador"] = args.avaliador
+                        if args.apenas_referencia:
+                            extra["apenas_referencia"] = True
+                        gravar(saida, base_registro(s, extra))
                         print(rotulo, t, "ok" if reg.get("marcadores_ok") else "FALHA", flush=True)
                         if reg.get("marcadores_ok"):
                             break
@@ -635,13 +658,24 @@ def coletar_desempenho(args):
 
 
 def main():
+    global TURMA_T5, MATERIAL_T5, MODO_T5
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("rotina", choices=["navegadores", "telas", "desempenho"])
     ap.add_argument("--tarefas", nargs="+", default=["T1", "T2", "T3", "T4", "T5", "T6"])
+    ap.add_argument("--navegadores", nargs="+", choices=list(NAVEGADORES), default=["chrome", "firefox", "webkit", "edge"])
+    ap.add_argument("--avaliador", help="primeiro nome do avaliador registrado no JSONL")
+    ap.add_argument("--turma-t5", default=TURMA_T5, help="nome exato do link da turma no Portal do Discente para T5")
+    ap.add_argument("--material-t5", default=MATERIAL_T5, help="nome exato do arquivo/material na Turma Virtual para T5")
+    ap.add_argument("--modo-t5", choices=["arquivo", "noticia"], default="arquivo", help="arquivo (baixa material) ou noticia (abre notícia na Turma Virtual)")
+    ap.add_argument("--apenas-referencia", action="store_true", help="registra Chrome só como referência de tabelas da mesma conta (não substitui M13)")
     ap.add_argument("--repeticoes", type=int, default=5)
     ap.add_argument("--cenarios", nargs="+", choices=["computador", "celular_4g"], default=["computador", "celular_4g"])
     ap.add_argument("--local", help="pasta FORA do repositório para as capturas sem borrão")
     args = ap.parse_args()
+    TURMA_T5 = args.turma_t5
+    MATERIAL_T5 = args.material_t5
+    MODO_T5 = args.modo_t5
+    MARCADORES["T5"] = ["Turma Virtual", "Notícia"] if MODO_T5 == "noticia" else ["Turma Virtual", MATERIAL_T5]
     for v in ("SIGAA_USUARIO", "SIGAA_SENHA"):
         if not os.environ.get(v):
             sys.exit(f"Defina a variável de ambiente {v}.")

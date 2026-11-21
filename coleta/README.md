@@ -20,16 +20,19 @@ Scripts que executam as tarefas T1 a T6 no SIGAA/UnB com o [Playwright](https://
 ```bash
 python -m venv .venv && . .venv/bin/activate
 pip install playwright pillow
-playwright install chromium firefox          # navegadores do Playwright
-# O Google Chrome estável precisa estar instalado no sistema (canal "chrome").
+playwright install chromium firefox webkit   # navegadores do Playwright
+# Google Chrome e Microsoft Edge estáveis precisam estar instalados no sistema (canais "chrome" e "msedge").
 
 export SIGAA_USUARIO=...                      # matrícula do avaliador
 read -s SIGAA_SENHA && export SIGAA_SENHA     # senha digitada sem eco
 
-python coleta/sigaa_coleta.py navegadores --local ~/sigaa-originais   # M13
+python coleta/sigaa_coleta.py navegadores --local ~/sigaa-originais   # M13 (todos os navegadores)
+# Para rodar navegadores específicos em outra conta mantendo referência estrutural própria no Chrome:
+# python coleta/sigaa_coleta.py navegadores --navegadores chrome --avaliador Felipe --apenas-referencia --turma-t5 "TURMA" --modo-t5 noticia
+# python coleta/sigaa_coleta.py navegadores --navegadores webkit edge --avaliador Felipe --turma-t5 "TURMA" --modo-t5 noticia
 python coleta/sigaa_coleta.py telas --local ~/sigaa-originais         # M14
 python coleta/sigaa_coleta.py desempenho --repeticoes 5               # desempenho
-python coleta/borrar.py dados/brutos/flexibilidade/evidencias
+python coleta/borrar.py dados/brutos/flexibilidade/evidencias         # aceita pasta ou arquivos específicos
 python coleta/calcular.py
 ```
 

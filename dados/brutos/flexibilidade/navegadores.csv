@@ -11,3 +11,15 @@ T3,Google Chrome,146.0.7680.153,Linux 6.17.0-41-generic,sem_falha,,Arthur,2026-1
 T4,Google Chrome,146.0.7680.153,Linux 6.17.0-41-generic,sem_falha,,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/navegadores/T4-chromium-t1.jpg
 T5,Google Chrome,146.0.7680.153,Linux 6.17.0-41-generic,sem_falha,,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/navegadores/T5-chromium-t1.jpg
 T6,Google Chrome,146.0.7680.153,Linux 6.17.0-41-generic,sem_falha,,Arthur,2026-11-15,dados/brutos/flexibilidade/evidencias/navegadores/T6-chromium-t1.jpg
+T1,Microsoft Edge,158.0.4370.33,Darwin 25.6.0,sem_falha,,Felipe,2026-11-21,dados/brutos/flexibilidade/evidencias/navegadores/T1-msedge-t1.jpg
+T2,Microsoft Edge,158.0.4370.33,Darwin 25.6.0,sem_falha,,Felipe,2026-11-21,dados/brutos/flexibilidade/evidencias/navegadores/T2-msedge-t1.jpg
+T3,Microsoft Edge,158.0.4370.33,Darwin 25.6.0,sem_falha,,Felipe,2026-11-21,dados/brutos/flexibilidade/evidencias/navegadores/T3-msedge-t1.jpg
+T4,Microsoft Edge,158.0.4370.33,Darwin 25.6.0,sem_falha,,Felipe,2026-11-21,dados/brutos/flexibilidade/evidencias/navegadores/T4-msedge-t1.jpg
+T5,Microsoft Edge,158.0.4370.33,Darwin 25.6.0,sem_falha,,Felipe,2026-11-21,dados/brutos/flexibilidade/evidencias/navegadores/T5-msedge-t1.jpg
+T6,Microsoft Edge,158.0.4370.33,Darwin 25.6.0,sem_falha,,Felipe,2026-11-21,dados/brutos/flexibilidade/evidencias/navegadores/T6-msedge-t1.jpg
+T1,"WebKit (motor do Safari, build do Playwright)",27.2,Darwin 25.6.0,sem_falha,,Felipe,2026-11-21,dados/brutos/flexibilidade/evidencias/navegadores/T1-webkit-t1.jpg
+T2,"WebKit (motor do Safari, build do Playwright)",27.2,Darwin 25.6.0,sem_falha,,Felipe,2026-11-21,dados/brutos/flexibilidade/evidencias/navegadores/T2-webkit-t1.jpg
+T3,"WebKit (motor do Safari, build do Playwright)",27.2,Darwin 25.6.0,sem_falha,,Felipe,2026-11-21,dados/brutos/flexibilidade/evidencias/navegadores/T3-webkit-t1.jpg
+T4,"WebKit (motor do Safari, build do Playwright)",27.2,Darwin 25.6.0,sem_falha,,Felipe,2026-11-21,dados/brutos/flexibilidade/evidencias/navegadores/T4-webkit-t1.jpg
+T5,"WebKit (motor do Safari, build do Playwright)",27.2,Darwin 25.6.0,sem_falha,,Felipe,2026-11-21,dados/brutos/flexibilidade/evidencias/navegadores/T5-webkit-t1.jpg
+T6,"WebKit (motor do Safari, build do Playwright)",27.2,Darwin 25.6.0,sem_falha,,Felipe,2026-11-21,dados/brutos/flexibilidade/evidencias/navegadores/T6-webkit-t1.jpg
