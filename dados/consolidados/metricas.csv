@@ -48,11 +48,50 @@ M8,tarefa,T2,1,1.0000,,recorte por tarefa (regra 3)
 M8,tarefa,T4,3,1.0000,,recorte por tarefa (regra 3)
 M8,tarefa,T5,8,0.8750,,recorte por tarefa (regra 3)
 M8,tarefa,T6,4,0.5000,,recorte por tarefa (regra 3)
-M11,geral,,15,0.6667,Regular,"10 de 15 respostas corretas sem legenda; inclui 2 pergunta(s) não feita(s) em tarefa concluída, contadas como corretas"
-M11,tarefa,T2,5,0.8000,,recorte por pergunta
+M11,geral,,15,0.5333,Regular,"8 de 15 respostas corretas sem legenda; inclui 2 pergunta(s) não feita(s) em tarefa concluída, contadas como corretas"
+M11,tarefa,T2,5,0.4000,,recorte por pergunta
 M11,tarefa,T4,5,0.6000,,recorte por pergunta
 M11,tarefa,T6,5,0.6000,,recorte por pergunta
 M12,geral,,5,32.5000,Insatisfatório,"média de 5 questionários (mín. 17.5, máx. 45)"
 M12,grupo,comeco,2,22.5000,,recorte descritivo (2 participantes)
 M12,grupo,meio_fim,3,39.1667,,recorte descritivo (3 participantes)
 MA1,geral,,30,0.0000,,0 de 30 tentativas com declaração de função inexistente; sem nível (métrica auxiliar)
+IQ1,tarefa,T1,5,5.0000,,"mediana da facilidade percebida (C1, 1 a 5); sem nível"
+IQ1,tarefa_comeco,T1,2,4.0000,,recorte descritivo (2 participantes)
+IQ1,tarefa_meio_fim,T1,3,5.0000,,recorte descritivo (3 participantes)
+IQ1,tarefa,T2,5,4.0000,,"mediana da facilidade percebida (C1, 1 a 5); sem nível"
+IQ1,tarefa_comeco,T2,2,5.0000,,recorte descritivo (2 participantes)
+IQ1,tarefa_meio_fim,T2,3,4.0000,,recorte descritivo (3 participantes)
+IQ1,tarefa,T3,5,4.0000,,"mediana da facilidade percebida (C1, 1 a 5); sem nível"
+IQ1,tarefa_comeco,T3,2,4.0000,,recorte descritivo (2 participantes)
+IQ1,tarefa_meio_fim,T3,3,4.0000,,recorte descritivo (3 participantes)
+IQ1,tarefa,T4,5,4.0000,,"mediana da facilidade percebida (C1, 1 a 5); sem nível"
+IQ1,tarefa_comeco,T4,2,4.5000,,recorte descritivo (2 participantes)
+IQ1,tarefa_meio_fim,T4,3,4.0000,,recorte descritivo (3 participantes)
+IQ1,tarefa,T5,5,5.0000,,"mediana da facilidade percebida (C1, 1 a 5); sem nível"
+IQ1,tarefa_comeco,T5,2,4.5000,,recorte descritivo (2 participantes)
+IQ1,tarefa_meio_fim,T5,3,5.0000,,recorte descritivo (3 participantes)
+IQ1,tarefa,T6,5,2.0000,,"mediana da facilidade percebida (C1, 1 a 5); sem nível"
+IQ1,tarefa_comeco,T6,2,2.0000,,recorte descritivo (2 participantes)
+IQ1,tarefa_meio_fim,T6,3,2.0000,,recorte descritivo (3 participantes)
+IQ2,geral,,5,0.2333,,"média, por participante, de tarefas marcadas em C2 / 6; sem nível"
+IQ2,grupo,comeco,2,0.2500,,recorte descritivo (2 participantes)
+IQ2,grupo,meio_fim,3,0.2222,,recorte descritivo (3 participantes)
+IQ2,tarefa,T1,5,0.2000,,1 de 5 já precisaram de ajuda nesta tarefa
+IQ2,tarefa,T2,5,0.4000,,2 de 5 já precisaram de ajuda nesta tarefa
+IQ2,tarefa,T3,5,0.0000,,0 de 5 já precisaram de ajuda nesta tarefa
+IQ2,tarefa,T4,5,0.4000,,2 de 5 já precisaram de ajuda nesta tarefa
+IQ2,tarefa,T5,5,0.0000,,0 de 5 já precisaram de ajuda nesta tarefa
+IQ2,tarefa,T6,5,0.4000,,2 de 5 já precisaram de ajuda nesta tarefa
+IQ3,geral,,5,1.0000,,5 de 5 acertaram a sigla IRA (D2); sem nível
+IQ3,grupo,comeco,2,1.0000,,2 de 2 acertos
+IQ3,grupo,meio_fim,3,1.0000,,3 de 3 acertos
+IQ4,dependentes_celular,,5,0.2000,,1 de 5 dependem do celular (B1 = celular e B2 = não ou só às vezes); 3 usam o celular como principal ou tanto quanto o computador; sem nível
+IQ4,problema_celular,zoom_rolagem,5,1.0000,,5 de 5 marcaram em B5
+IQ4,problema_celular,menu_nao_abriu,5,0.4000,,2 de 5 marcaram em B5
+IQ4,problema_celular,botoes_pequenos,5,1.0000,,5 de 5 marcaram em B5
+IQ4,problema_celular,conteudo_cortado,5,0.2000,,1 de 5 marcaram em B5
+IQ4,problema_celular,nao_concluiu,5,0.4000,,2 de 5 marcaram em B5
+IQ4,problema_celular,nenhum,5,0.0000,,0 de 5 marcaram em B5
+IQ4,problema_celular,nao_usa,5,0.0000,,0 de 5 marcaram em B5
+HP1,geral,,5,2.0000,,"inconclusiva: grupo com menos de três questionários válidos (começo: 2, meio ou fim: 3); tarefas com mediana menor no começo do curso: T1, T5 (valor = número dessas tarefas; indício descritivo, não confirmação)"

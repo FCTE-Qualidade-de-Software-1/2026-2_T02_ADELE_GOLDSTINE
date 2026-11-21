@@ -25,7 +25,7 @@ METRICAS = RAIZ / "dados/consolidados/metricas.csv"
 # O protocolo previa 6 participantes; a coleta foi encerrada com 5 (P1, P2, P3, P4 e P6), decisão da equipe em 21/11/2026.
 PARTICIPANTES_PREVISTOS = 5
 TAREFAS = ["T1", "T2", "T3", "T4", "T5", "T6"]
-PROPRIAS = {"M3", "M4", "M5", "M6", "M7", "M8", "M11", "M12", "MA1"}
+PROPRIAS = {"M3", "M4", "M5", "M6", "M7", "M8", "M11", "M12", "MA1", "IQ1", "IQ2", "IQ3", "IQ4", "HP1"}
 
 # Tabelas 2 e 3 de Níveis de Pontuação (Fase 2). (limite, rótulo, maior_melhor)
 FAIXAS = {
@@ -257,6 +257,81 @@ def ma1(sess: list[dict]) -> list[tuple]:
     return [("MA1", "geral", "", b, a / b, "", f"{a} de {b} tentativas com declaração de função inexistente; sem nível (métrica auxiliar); {obs}".rstrip("; "))]
 
 
+GRUPOS = ("comeco", "meio_fim")
+PROBLEMAS_B5 = ["zoom_rolagem", "menu_nao_abriu", "botoes_pequenos", "conteudo_cortado", "nao_concluiu", "nenhum", "nao_usa"]
+
+
+def indicadores(resp: list[dict], sess: list[dict]) -> list[tuple]:
+    """IQ1 a IQ4 e HP1 (página Questionário, seções 5 e 6): descritivos, sem nível de pontuação."""
+    if not resp:
+        return []
+    grupo = {r["participante"]: r["grupo"] for r in sess}
+    por_grupo = {g: [r for r in resp if grupo.get(r["participante"]) == g] for g in GRUPOS}
+    n = {g: len(v) for g, v in por_grupo.items()}
+    out = []
+
+    def mediana_c1(linhas, t):
+        v = [int(r[f"c1_{t[1]}"]) for r in linhas if r[f"c1_{t[1]}"] not in {"", "nunca_fiz"}]
+        return (st.median(v), len(v)) if v else (None, 0)
+
+    # IQ1 - facilidade percebida (1 a 5), mediana por tarefa ignorando "Nunca fiz"; também por grupo
+    med_grupo = {g: {} for g in GRUPOS}
+    for t in TAREFAS:
+        m, k = mediana_c1(resp, t)
+        out.append(("IQ1", "tarefa", t, k, m, "", "mediana da facilidade percebida (C1, 1 a 5); sem nível"))
+        for g in GRUPOS:
+            mg, kg = mediana_c1(por_grupo[g], t)
+            med_grupo[g][t] = mg
+            out.append(("IQ1", f"tarefa_{g}", t, kg, mg, "", f"recorte descritivo ({kg} participantes)"))
+
+    # IQ2 - proporção de tarefas em que já precisou de ajuda (C2)
+    def prop_c2(r):
+        marc = [x for x in r["c2"].split(";") if x in TAREFAS]
+        return len(marc) / len(TAREFAS)
+    out.append(("IQ2", "geral", "", len(resp), st.mean(prop_c2(r) for r in resp), "",
+                "média, por participante, de tarefas marcadas em C2 / 6; sem nível"))
+    for g in GRUPOS:
+        if por_grupo[g]:
+            out.append(("IQ2", "grupo", g, n[g], st.mean(prop_c2(r) for r in por_grupo[g]), "",
+                        f"recorte descritivo ({n[g]} participantes)"))
+    for t in TAREFAS:
+        k = sum(1 for r in resp if t in r["c2"].split(";"))
+        out.append(("IQ2", "tarefa", t, len(resp), k / len(resp), "",
+                    f"{k} de {len(resp)} já precisaram de ajuda nesta tarefa"))
+
+    # IQ3 - acerto da sigla IRA (D2)
+    a = sum(1 for r in resp if r["d2"] == "rendimento")
+    out.append(("IQ3", "geral", "", len(resp), a / len(resp), "", f"{a} de {len(resp)} acertaram a sigla IRA (D2); sem nível"))
+    for g in GRUPOS:
+        if por_grupo[g]:
+            ag = sum(1 for r in por_grupo[g] if r["d2"] == "rendimento")
+            out.append(("IQ3", "grupo", g, n[g], ag / n[g], "", f"{ag} de {n[g]} acertos"))
+
+    # IQ4 - dependência do celular (B1 = celular e B2 = não ou só às vezes) e problemas no celular (B5)
+    dep = sum(1 for r in resp if r["b1"] == "celular" and r["b2"] in {"nao", "as_vezes"})
+    usa = sum(1 for r in resp if r["b1"] in {"celular", "ambos"})
+    out.append(("IQ4", "dependentes_celular", "", len(resp), dep / len(resp), "",
+                f"{dep} de {len(resp)} dependem do celular (B1 = celular e B2 = não ou só às vezes); "
+                f"{usa} usam o celular como principal ou tanto quanto o computador; sem nível"))
+    for prob in PROBLEMAS_B5:
+        k = sum(1 for r in resp if prob in r["b5"].split(";"))
+        out.append(("IQ4", "problema_celular", prob, len(resp), k / len(resp), "", f"{k} de {len(resp)} marcaram em B5"))
+
+    # HP1 - o começo do curso relata menor facilidade (IQ1) que o meio ou fim, em ao menos 4 das 6 tarefas
+    menor = [t for t in TAREFAS if None not in (med_grupo["comeco"][t], med_grupo["meio_fim"][t])
+             and med_grupo["comeco"][t] < med_grupo["meio_fim"][t]]
+    if min(n.values()) < 3:
+        clas = "inconclusiva"
+        motivo = f"grupo com menos de três questionários válidos (começo: {n['comeco']}, meio ou fim: {n['meio_fim']})"
+    else:
+        clas = "tendência observada" if len(menor) >= 4 else "sem tendência"
+        motivo = f"mediana do começo menor em {len(menor)} de 6 tarefas"
+    out.append(("HP1", "geral", "", len(resp), len(menor), "",
+                f"{clas}: {motivo}; tarefas com mediana menor no começo do curso: {', '.join(menor) or 'nenhuma'} "
+                f"(valor = número dessas tarefas; indício descritivo, não confirmação)"))
+    return out
+
+
 def pendentes(sess: list[dict]) -> list[str]:
     """Métricas que ainda dependem de dados não preenchidos."""
     msg = []
@@ -276,7 +351,7 @@ def atualizar(novas: list[tuple]):
     linhas = [r for r in ler(METRICAS) if r["metrica"] not in PROPRIAS]
     for m, rec, vr, n, v, niv, obs in novas:
         linhas.append({"metrica": m, "recorte": rec, "valor_recorte": vr, "n": n,
-                       "valor": f"{v:.4f}", "nivel": niv, "observacao": obs})
+                       "valor": "" if v is None else f"{v:.4f}", "nivel": niv, "observacao": obs})
     METRICAS.parent.mkdir(parents=True, exist_ok=True)
     with METRICAS.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=campos)
@@ -287,10 +362,10 @@ def atualizar(novas: list[tuple]):
 def main():
     sess = ler(TESTES / "sessoes.csv")
     novas = (m3(ler(QUEST / "respostas.csv")) + m4(sess) + m5(sess) + m6(sess) + m7(sess) + m8(sess) + m11(ler(TESTES / "compreensao.csv"))
-             + m12(ler(TESTES / "sus.csv")) + ma1(sess))
+             + m12(ler(TESTES / "sus.csv")) + ma1(sess) + indicadores(ler(QUEST / "respostas.csv"), sess))
     atualizar(novas)
     for m in novas:
-        if m[1] == "geral":
+        if m[1] == "geral" and m[0].startswith("M"):
             fmt = f"{m[4]:.2f}" if m[0] in {"M6", "M7", "M12"} else f"{m[4]:.1%}"
             print(f"{m[0]}: {fmt} {m[5] or '(sem nível)'} - {m[6]}")
     for p in pendentes(sess):

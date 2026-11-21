@@ -4,7 +4,7 @@ P1,T4,Não perguntada (tarefa não concluída),,,,nao,nao,Caio
 P1,T6,Até que dia é possível trancar uma disciplina nesse semestre?,"Aqui tem datas para turmas regulares, trancamento de turmas dia 10/8 a 9/10",09/10/2026 (trancamento de turmas de 10/08/2026 a 09/10/2026),nao,sim,sim,Caio
 P3,T4,"Pelo que aparece na tela, quantas horas ainda faltam para você concluir o curso?",3210h,3210 h pendentes (conferido pelo moderador na tela),nao,sim,sim,Felipe
 P3,T6,Não perguntada (tarefa não concluída),,,,nao,nao,Felipe
-P3,T2,"Pelo que aparece na tela, em quais dias da semana e em que horário essa turma tem aula?","Sexta, 10h da manhã",Sexta-feira às 10h (conferido pelo moderador na tela),nao,sim,sim,Felipe
+P3,T2,"Pelo que aparece na tela, em quais dias da semana e em que horário essa turma tem aula?","Sexta, 10h da manhã",Sexta-feira às 10h (conferido pelo moderador na tela),sim,sim,nao,Felipe
 P2,T2,"Não feita com o texto do protocolo: o participante perguntou ""O que significa o código?"" e interpretou o código sozinho","Quarta, sexta, manhã, 1h e 2h, ou seja, das 8h até as 10h. Na I9 ou na S9?","Quarta e sexta, das 8h00 às 9h50, em I9/S9 (46M12, conforme a Tabela de Horários do atestado de matrícula)",nao,sim,sim,Leonardo
 P2,T4,Não perguntada,,,,sim,nao,Leonardo
 P2,T6,Até que dia é possível trancar uma disciplina nesse semestre?,Até dia 9 do 10.,09/10/2026 (trancamento de turmas de 10/08/2026 a 09/10/2026),nao,sim,sim,Leonardo
@@ -12,5 +12,5 @@ P4,T2,Pergunta feita com outras palavras: Qual que é o horário?,"Mecânica dos
 P4,T4,Não perguntada (tarefa não concluída),,,,nao,nao,Leonardo
 P4,T6,Não perguntada (tarefa não concluída no SIGAA),,,,nao,nao,Leonardo
 P6,T4,Não perguntada,,,,sim,nao,Leonardo
-P6,T6,"Pergunta diferente do protocolo: Qual foi a data de início do semestre?","No semestre atual, 10 de agosto.","10/08/2026 (Período Letivo de 10/08/2026 a 14/12/2026, no calendário 2026/2)",nao,sim,sim,Leonardo
-P6,T2,"Pergunta feita com outras palavras: Dessa primeira turma aí, qual é o horário?","Terça e quinta, 16h-17h50, e sexta-feira, 16h-16h55.","Terça e quinta, das 16h00 às 17h50, e sexta, das 16h00 às 16h55 (35T45 6T4, na tabela Turmas do Semestre)",nao,sim,sim,Leonardo
+P6,T6,Pergunta diferente do protocolo: Qual foi a data de início do semestre?,"No semestre atual, 10 de agosto.","10/08/2026 (Período Letivo de 10/08/2026 a 14/12/2026, no calendário 2026/2)",nao,sim,sim,Leonardo
+P6,T2,"Pergunta feita com outras palavras: Dessa primeira turma aí, qual é o horário?","Terça e quinta, 16h-17h50, e sexta-feira, 16h-16h55.","Terça e quinta, das 16h00 às 17h50, e sexta, das 16h00 às 16h55 (35T45 6T4, na tabela Turmas do Semestre)",sim,sim,nao,Leonardo

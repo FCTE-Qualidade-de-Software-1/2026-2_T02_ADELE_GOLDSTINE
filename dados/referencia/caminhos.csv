@@ -1,16 +1,16 @@
 tarefa,caminho,tipo,ordem,passo,pagina_destino,classificacao_av1,classificacao_av2,classificacao_final,evidencia
-T1,C1,otimo,1,Ensino > Consultar Minhas Notas,Relatório de notas do aluno,,,,escopo da Fase 1 (T1); coleta/sigaa_coleta.py (T1); sessões P2 e P4
+T1,C1,otimo,1,Ensino > Consultar Minhas Notas,Relatório de notas do aluno,necessario,necessario,necessario,escopo da Fase 1 (T1); coleta/sigaa_coleta.py (T1); sessões P2 e P4; classificação por consenso da equipe em 21/11/2026
 T1,C2,alternativo,1,nome da turma (Turmas do Semestre),Turma Virtual,,,,sessão P1 (T1)
 T1,C2,alternativo,2,Estudantes (menu lateral da Turma Virtual),submenu Estudantes,,,,sessão P1 (T1)
 T1,C2,alternativo,3,Ver Notas,Notas da turma,,,,sessão P1 (T1)
 T2,C1,otimo,0,nenhum clique: tabela Turmas do Semestre da página inicial,Portal do Discente (Turmas do Semestre),,,,escopo da Fase 1 (T2); coleta/sigaa_coleta.py (T2); sessões P4 e P6
 T2,C2,alternativo,1,Ensino > Emitir Atestado de Matrícula,Atestado de matrícula (coluna Horário e Tabela de Horários),,,,sessão P2 (T2)
-T3,C1,otimo,1,Ensino > Emitir Atestado de Matrícula,Atestado de matrícula,,,,escopo da Fase 1 (T3); coleta/sigaa_coleta.py (T3); sessão P1 (T3)
+T3,C1,otimo,1,Ensino > Emitir Atestado de Matrícula,Atestado de matrícula,necessario,necessario,necessario,escopo da Fase 1 (T3); coleta/sigaa_coleta.py (T3); sessão P1 (T3); classificação por consenso da equipe em 21/11/2026
 T4,C1,otimo,0,nenhum clique: painel Integralizações da página inicial (CH pendente e % integralizado),Portal do Discente (Integralizações),,,,"gravação do P3 (T4, 02:26)"
 T4,C2,alternativo,1,Ensino > Emitir Histórico,Histórico escolar (Carga Horária Integralizada/Pendente),,,,"gravação do P6 (T4, 00:58); escopo da Fase 1 (T3 e T4)"
 T4,C3,alternativo,1,Ensino > Emitir Histórico Completo (Ementa e Programa),Histórico com Componentes Curriculares Obrigatórios Pendentes,,,,"gravação do P2 (T4, 04:13)"
-T5,C1,otimo,1,nome da turma (Turmas do Semestre),Turma Virtual (página principal),,,,escopo da Fase 1 (T5); coleta/sigaa_coleta.py (T5); sessão P4 (T5)
-T5,C1,otimo,2,material anexado na página principal da turma,arquivo aberto ou baixado,,,,sessão P4 (T5); sessão P1 (T5)
+T5,C1,otimo,1,nome da turma (Turmas do Semestre),Turma Virtual (página principal),necessario,necessario,necessario,escopo da Fase 1 (T5); coleta/sigaa_coleta.py (T5); sessão P4 (T5); classificação por consenso da equipe em 21/11/2026
+T5,C1,otimo,2,material anexado na página principal da turma,arquivo aberto ou baixado,necessario,necessario,necessario,sessão P4 (T5); sessão P1 (T5); classificação por consenso da equipe em 21/11/2026
 T5,C2,alternativo,1,nome da turma (Turmas do Semestre),Turma Virtual (página principal),,,,sessão P6 (T5)
 T5,C2,alternativo,2,Materiais (menu lateral da Turma Virtual),submenu Materiais,,,,sessão P6 (T5)
 T5,C2,alternativo,3,Arquivos,lista de arquivos da turma,,,,sessão P6 (T5)
@@ -23,5 +23,5 @@ T5,C4,alternativo,1,nome da turma (Turmas do Semestre),Turma Virtual (página pr
 T5,C4,alternativo,2,Materiais (menu lateral da Turma Virtual),submenu Materiais,,,,gravações do P1 e do P2 (T5)
 T5,C4,alternativo,3,Conteúdo/Página web,lista de conteúdos da turma,,,,gravações do P1 e do P2 (T5)
 T5,C4,alternativo,4,título do conteúdo,conteúdo aberto,,,,enunciado de T5 (arquivo ou link)
-T6,C1,otimo,1,Ensino > Calendário Acadêmico,Consulta de Calendário Acadêmico,,,,escopo da Fase 1 (T6); coleta/sigaa_coleta.py (T6); sessões P1 e P6
-T6,C1,otimo,2,lupa do calendário do semestre corrente,Calendário acadêmico 2026.2,,,,coleta/sigaa_coleta.py (T6); sessões P1 e P6
+T6,C1,otimo,1,Ensino > Calendário Acadêmico,Consulta de Calendário Acadêmico,necessario,necessario,necessario,escopo da Fase 1 (T6); coleta/sigaa_coleta.py (T6); sessões P1 e P6; classificação por consenso da equipe em 21/11/2026
+T6,C1,otimo,2,lupa do calendário do semestre corrente,Calendário acadêmico 2026.2,necessario,necessario,necessario,coleta/sigaa_coleta.py (T6); sessões P1 e P6; classificação por consenso da equipe em 21/11/2026
