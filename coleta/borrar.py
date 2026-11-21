@@ -12,7 +12,12 @@ from pathlib import Path
 
 from PIL import Image, ImageFilter
 
-for arq in sorted(Path(sys.argv[1]).rglob("*.jpg")):
+alvos = []
+for arg in sys.argv[1:]:
+    p = Path(arg)
+    alvos.extend(sorted(p.rglob("*.jpg")) if p.is_dir() else [p])
+
+for arq in alvos:
     img = Image.open(arq)
     raio = max(4, img.width / 280)
     img.convert("RGB").filter(ImageFilter.GaussianBlur(raio)).save(arq, quality=60, optimize=True)

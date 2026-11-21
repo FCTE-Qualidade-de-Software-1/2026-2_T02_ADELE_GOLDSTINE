@@ -52,7 +52,12 @@ def sim(v: bool) -> str:
 
 
 def nivel(metrica: str, valor: float) -> str:
-    """Faixas da Tabela 2 de Níveis de Pontuação (Fase 2), fixadas antes da coleta."""
+    """Faixas das Tabelas 2 e 3 de Níveis de Pontuação (Fase 2), fixadas antes da coleta."""
+    if metrica == "M9":
+        for limite, rotulo in [(0.0, "Excelente"), (2.0, "Bom"), (5.0, "Regular")]:
+            if valor <= limite + 1e-9:
+                return rotulo
+        return "Insatisfatório"
     faixas = {"M13": [(1.0, "Excelente"), (0.90, "Bom"), (0.75, "Regular")],
               "M14": [(1.0, "Excelente"), (0.80, "Bom"), (0.50, "Regular")]}[metrica]
     for limite, rotulo in faixas:
@@ -69,13 +74,21 @@ def m13():
     regs = ler_jsonl(BRUTOS / "flexibilidade/automatizado/navegadores.jsonl")
     ultimo: dict[tuple[str, str], dict] = {}
     tentativas: dict[tuple[str, str], int] = defaultdict(int)
+    ref_por_av: dict[tuple[str, str], dict] = {}
     for r in regs:
+        av = r.get("avaliador") or AVALIADOR
+        if r["navegador"].startswith("Google Chrome"):
+            ref_por_av[(av, r["tarefa"])] = r
+        if r.get("apenas_referencia"):
+            continue
         k = (r["navegador"], r["tarefa"])
         tentativas[k] += 1
         ultimo[k] = r  # vale a última tentativa (a segunda só ocorre se a primeira falhou)
-    ref = {t: r for (n, t), r in ultimo.items() if n.startswith("Google Chrome")}
+    ref_geral = {t: r for (n, t), r in ultimo.items() if n.startswith("Google Chrome")}
     linhas, por_nav = [], defaultdict(list)
     for (nav, t), r in sorted(ultimo.items(), key=lambda x: (x[0][0], x[0][1])):
+        av = r.get("avaliador") or AVALIADOR
+        ref_t = ref_por_av.get((av, t)) or ref_geral.get(t)
         falhas = []
         if r.get("erro"):
             falhas.append("erro de execução: " + r["erro"].split(":")[0])
@@ -83,7 +96,7 @@ def m13():
             falhas.append("página final sem o conteúdo esperado")
         if r.get("erros_js"):
             falhas.append(f"{len(r['erros_js'])} erro(s) de JavaScript")
-        a, b = r.get("assinatura") or {}, (ref.get(t) or {}).get("assinatura") or {}
+        a, b = r.get("assinatura") or {}, (ref_t or {}).get("assinatura") or {}
         if a and b and not nav.startswith("Google Chrome") and a.get("tabelas") != b.get("tabelas"):
             falhas.append(f"estrutura diferente do Chrome ({a.get('tabelas')} x {b.get('tabelas')} tabelas)")
         # Erros de JavaScript que não impedem a tarefa são registrados, mas não contam como falha,
@@ -94,7 +107,7 @@ def m13():
             obs = (obs + "; " if obs else "") + f"{tentativas[(nav, t)]} tentativas"
         linhas.append({"tarefa": t, "navegador": nav, "versao": r.get("navegador_versao", ""),
                        "sistema": r.get("sistema", ""), "resultado": "sem_falha" if sem_falha else "com_falha",
-                       "tipo_falha": obs, "avaliador": AVALIADOR, "data": r["data_hora"][:10],
+                       "tipo_falha": obs, "avaliador": av, "data": r["data_hora"][:10],
                        "evidencia": r.get("evidencia") or ""})
         por_nav[nav].append(sem_falha)
     escrever(BRUTOS / "flexibilidade/navegadores.csv", linhas,
@@ -107,7 +120,7 @@ def m13():
         completo = B == COMBINACOES_M13
         met.append(("M13", "geral", "", B, A / B, nivel("M13", A / B) if completo else "",
                     f"{A} de {B} combinações executadas sem falha" + ("" if completo else
-                    f"; parcial: faltam {COMBINACOES_M13 - B} combinações (Microsoft Edge e Safari), "
+                    f"; parcial: faltam {COMBINACOES_M13 - B} combinações, "
                     f"intervalo possível de {A}/{COMBINACOES_M13} a {A + COMBINACOES_M13 - B}/{COMBINACOES_M13}; sem nível até a conclusão")))
         for nav, v in por_nav.items():
             met.append(("M13", "navegador", nav, len(v), sum(v) / len(v), "", "recorte descritivo"))
@@ -250,6 +263,32 @@ def desempenho():
 
 
 # --------------------------------------------------------------------------
+# M9 - erros automáticos de acessibilidade por página (WAVE)
+# --------------------------------------------------------------------------
+
+def m9():
+    arq = BRUTOS / "acessibilidade/wave/resumo.csv"
+    if not arq.exists():
+        return []
+    linhas = list(csv.DictReader(arq.open(encoding="utf-8")))
+    if not linhas:
+        return []
+    total_erros = sum(int(l["erros"]) for l in linhas)
+    total_alertas = sum(int(l["alertas"]) for l in linhas)
+    n_pags = len(linhas)
+    media = total_erros / n_pags
+    completo = n_pags == len(TAREFAS)
+    met = [
+        ("M9", "geral", "", n_pags, media, nivel("M9", media) if completo else "",
+         f"{total_erros} erros (WCAG A/AA: Errors + Contrast Errors) em {n_pags} páginas; {total_alertas} alertas fora da métrica"),
+    ]
+    for l in sorted(linhas, key=lambda x: x["tarefa"]):
+        met.append(("M9", "pagina", l["tarefa"], 1, float(l["erros"]), "",
+                    f"recorte por página (regra 3); {l['alertas']} alertas"))
+    return met
+
+
+# --------------------------------------------------------------------------
 
 def escrever(caminho: Path, linhas: list[dict], campos: list[str]):
     caminho.parent.mkdir(parents=True, exist_ok=True)
@@ -262,9 +301,10 @@ def escrever(caminho: Path, linhas: list[dict], campos: list[str]):
 def atualizar_metricas(novas: list[tuple]):
     arq = CONSOLIDADOS / "metricas.csv"
     campos = ["metrica", "recorte", "valor_recorte", "n", "valor", "nivel", "observacao"]
+    calculadas = {m[0] for m in novas}
     existentes = []
     if arq.exists():
-        existentes = [r for r in csv.DictReader(arq.open(encoding="utf-8")) if r["metrica"] not in {"M13", "M14"}]
+        existentes = [r for r in csv.DictReader(arq.open(encoding="utf-8")) if r["metrica"] not in calculadas]
     for m, rec, vr, n, v, niv, obs in novas:
         existentes.append({"metrica": m, "recorte": rec, "valor_recorte": vr, "n": n,
                            "valor": f"{v:.4f}", "nivel": niv, "observacao": obs})
@@ -272,12 +312,13 @@ def atualizar_metricas(novas: list[tuple]):
 
 
 def main():
-    novas = m13() + m14()
+    novas = m9() + m13() + m14()
     atualizar_metricas(novas)
     n = desempenho()
     for m in novas:
         if m[1] == "geral":
-            print(f"{m[0]}: {m[4]:.1%} ({m[5]}) - {m[6]}")
+            fmt = f"{m[4]:.2f}" if m[0] == "M9" else f"{m[4]:.1%}"
+            print(f"{m[0]}: {fmt} ({m[5]}) - {m[6]}")
     print(f"desempenho: {n} execuções válidas")
 
 
