@@ -33,6 +33,7 @@ extra_css:
 
 hooks:
   - gestao/esforco.py
+  - coleta/graficos_testes.py
 
 markdown_extensions:
   - admonition
@@ -75,6 +76,7 @@ nav:
     - Cronograma e Tarefas E2: fase-3/cronograma.md
   - Fase 4:
     - fase-4/index.md
+    - Teste com usuários (gráficos): fase-4/teste-usuarios.md
     - Flexibilidade: fase-4/flexibilidade.md
     - Desempenho (complementar): fase-4/desempenho.md
   - Artigo:
