@@ -30,11 +30,11 @@ Se um *commit* for feito com um e-mail que o script não conhece, o cálculo par
 
 | Campo | Como preencher |
 |---|---|
-| `entrega` | `E1` ou `E2` |
+| `entrega` | `E1`, `E2` ou `E3` |
 | `data` | Data no formato `dd/mm/aaaa` |
 | `membro` | Nome completo, igual ao cadastrado em `MEMBROS` no `esforco.py` |
 | `horas` | Horas-pessoa em decimal, por exemplo `1.50` |
-| `categoria` | `pesquisa`, `reuniao` ou outra atividade sem artefato no Git (revisões feitas no GitHub já são contadas) |
+| `categoria` | `pesquisa`, `reuniao`, `coleta` ou outra atividade sem artefato no Git (revisões feitas no GitHub já são contadas). Cada sessão do teste com usuários vale 1,00 h em `coleta` para o moderador, cobrindo preparo, sessão e formulário de observação; o registro dos dados no repositório já é contado pelo Git |
 | `descricao` | Trabalho realizado |
 | `evidencia` | Ata, mensagem, rascunho, issue ou PR que comprove a atividade |
 | `origem` | `registrada` (ou `estimada`/`declarada`, usadas na Entrega 1) |
