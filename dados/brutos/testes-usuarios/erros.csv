@@ -1,1 +1,17 @@
 participante,tarefa,erro,tempo_video,tipo,recuperado_sem_ajuda,refez_passos,recuperado,descricao
+P1,T2,1,02:22,item_errado,sim,nao,sim,"Entrou na Turma Virtual (Estudo Orientado), que mostra o código de horário mas não o local; voltou pelo botão do navegador"
+P3,T6,1,03:52,item_errado,nao,nao,nao,"Link ""Calendário Acadêmico de Graduação"" do painel do portal abriu o site da SAA na página de Pós-Graduação; desistiu sem voltar ao SIGAA"
+P2,T4,1,02:47,item_errado,sim,nao,sim,Ensino > Consultas Gerais > Consultar Componente Curricular; voltou ao portal por Cancelar
+P2,T4,2,03:19,item_errado,sim,nao,sim,Ensino > Consultas Gerais > Consultar Estrutura Curricular; voltou ao portal pelo botão Voltar
+P2,T5,1,05:19,item_errado,sim,nao,sim,Participantes (Turma Virtual de Métodos Numéricos)
+P2,T5,2,05:23,item_errado,sim,nao,sim,"Plano de Ensino (""Esta turma ainda não possui um plano cadastrado"")"
+P2,T5,3,05:25,item_errado,sim,nao,sim,Gerenciar Perfil
+P2,T5,4,05:37,mensagem_sistema,sim,sim,nao,"Voltar do navegador abriu ""Document Expired"" (Firefox); depois de Try Again voltou ao portal e reabriu a Turma Virtual de Testes de Software"
+P2,T5,5,05:57,item_errado,sim,nao,sim,Gerenciar Perfil (Turma Virtual de Testes de Software)
+P2,T5,6,05:59,item_errado,sim,nao,sim,"Plano de Ensino (""Esta turma ainda não possui um plano cadastrado"")"
+P2,T5,7,06:01,item_errado,sim,nao,sim,Participantes
+P2,T5,8,06:05,item_errado,sim,nao,sim,"Visualizar Programa (""não possui um programa cadastrado"")"
+P4,T6,1,01:58,item_errado,nao,nao,nao,"Link ""Calendário Acadêmico de Graduação"" do painel do portal abriu o site da SAA na página de Pós-Graduação; concluiu fora do SIGAA"
+P6,T4,1,00:48,item_errado,sim,nao,sim,Seta Voltar do navegador reabriu o atestado de matrícula do T3; voltou ao portal sem ajuda e emitiu o histórico
+P6,T6,1,01:50,item_errado,sim,nao,sim,"Link ""Calendário Acadêmico de Graduação"" do painel do portal abriu o site da SAA na página de Pós-Graduação; voltou ao SIGAA"
+P6,T6,2,02:18,item_errado,sim,nao,sim,Lupa do calendário 2027.1 em vez de 2026.2; voltou à lista pelo botão Voltar
