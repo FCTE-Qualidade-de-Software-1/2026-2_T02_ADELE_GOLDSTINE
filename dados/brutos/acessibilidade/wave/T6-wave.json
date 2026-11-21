@@ -1,0 +1,154 @@
+{
+  "tarefa": "T6",
+  "pagina": "Calendário acadêmico 2026.2",
+  "data_hora": "2026-11-21T15:58:04",
+  "avaliador": "Felipe",
+  "navegador": "Google Chrome 157.0.8103.79",
+  "sistema": "Darwin 25.6.0",
+  "ferramenta": "WAVE Evaluation Tool 3.3.4.0",
+  "versao_sigaa": "4.15.10.116",
+  "url_final": "https://sigaa.unb.br/sigaa/administracao/calendario_academico/consulta.jsf",
+  "erros_gerais": 1,
+  "erros_contraste": 1,
+  "erros_total_wcag_a_aa": 2,
+  "alertas": 9,
+  "wave": {
+    "statistics": {
+      "totalelements": 252,
+      "allitemcount": 54,
+      "aim": 9.5,
+      "error": 1,
+      "contrast": 1,
+      "alert": 9,
+      "feature": 0,
+      "structure": 43,
+      "aria": 0
+    },
+    "categories": {
+      "error": {
+        "description": "Errors",
+        "count": 1,
+        "items": {
+          "language_missing": {
+            "id": "language_missing",
+            "description": "Language missing or invalid",
+            "count": 1,
+            "hidden_count": 0
+          }
+        }
+      },
+      "contrast": {
+        "description": "Contrast Errors",
+        "count": 1,
+        "items": {
+          "contrast": {
+            "id": "contrast",
+            "description": "Very low contrast",
+            "count": 1,
+            "hidden_count": 0
+          }
+        }
+      },
+      "alert": {
+        "description": "Alerts",
+        "count": 9,
+        "items": {
+          "region_missing": {
+            "id": "region_missing",
+            "description": "No page regions",
+            "count": 1,
+            "hidden_count": 0
+          },
+          "heading_skipped": {
+            "id": "heading_skipped",
+            "description": "Skipped heading level",
+            "count": 1,
+            "hidden_count": 0
+          },
+          "link_redundant": {
+            "id": "link_redundant",
+            "description": "Redundant link",
+            "count": 1,
+            "hidden_count": 0
+          },
+          "text_small": {
+            "id": "text_small",
+            "description": "Very small text",
+            "count": 5,
+            "hidden_count": 0
+          },
+          "title_redundant": {
+            "id": "title_redundant",
+            "description": "Redundant title text",
+            "count": 1,
+            "hidden_count": 0
+          }
+        }
+      },
+      "feature": {
+        "description": "Features",
+        "count": 0,
+        "items": {}
+      },
+      "structure": {
+        "description": "Structural Elements",
+        "count": 43,
+        "items": {
+          "table_data": {
+            "id": "table_data",
+            "description": "Data table",
+            "count": 1,
+            "hidden_count": 0
+          },
+          "table_caption": {
+            "id": "table_caption",
+            "description": "Table caption",
+            "count": 1,
+            "hidden_count": 0
+          },
+          "th": {
+            "id": "th",
+            "description": "Table header cell",
+            "count": 36,
+            "hidden_count": 0
+          },
+          "h1": {
+            "id": "h1",
+            "description": "Heading level 1",
+            "count": 1,
+            "hidden_count": 0
+          },
+          "h2": {
+            "id": "h2",
+            "description": "Heading level 2",
+            "count": 1,
+            "hidden_count": 0
+          },
+          "h3": {
+            "id": "h3",
+            "description": "Heading level 3",
+            "count": 1,
+            "hidden_count": 0
+          },
+          "ul": {
+            "id": "ul",
+            "description": "Unordered list",
+            "count": 1,
+            "hidden_count": 1
+          },
+          "iframe": {
+            "id": "iframe",
+            "description": "Inline frame",
+            "count": 1,
+            "hidden_count": 1
+          }
+        }
+      },
+      "aria": {
+        "description": "ARIA",
+        "count": 0,
+        "items": {}
+      }
+    }
+  }
+}
