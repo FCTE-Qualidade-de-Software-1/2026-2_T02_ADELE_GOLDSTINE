@@ -25,6 +25,7 @@ Esta página documenta todos os usos de ferramentas de Inteligência Artificial 
 | Claude Opus 5.5 (Claude Code) | Proposta e implementação dos gráficos do Dashboard de Contribuição (horas por categoria, esforço acumulado e horas por semana) e do tempo de ciclo dos PRs (I4) na Gestão do Projeto, gerados em SVG no build a partir dos mesmos dados do `esforco.py` e da API do GitHub. A paleta foi validada para daltonismo e contraste nos temas claro e escuro, e os gráficos foram conferidos renderizados nos dois temas; cada gráfico tem a tabela com os dados | 15/11/2026 | Caio Borges |
 | Claude Opus 5.5 (Claude Code) | Roteiro da sessão em PDF a partir do protocolo, leitura dos PDFs do SUS e do questionário respondidos pelo P3, cálculo da pontuação SUS e transcrição das respostas e das anotações do moderador para `sus.csv`, `respostas.csv`, `sessoes.csv` e `compreensao.csv`, com tempos aproximados tirados da transcrição. Os valores foram conferidos com os PDFs e com o formulário de observação; tempos, cliques, primeira escolha e erros ficam para o avaliador da gravação | 15/11/2026 | [Felipe Campêlo](https://github.com/felipeacampelo) |
 | Whisper (modelo medium, pt) | Transcrição automática do áudio da sessão do P3, revisada pelo moderador | 15/11/2026 | [Felipe Campêlo](https://github.com/felipeacampelo) |
+| Claude Opus 5.5 (Claude Code) | Auxílio no cálculo das métricas | 21/11/2026 | Caio Borges |
 
 ## Histórico de Versão
 
@@ -48,3 +49,4 @@ Esta página documenta todos os usos de ferramentas de Inteligência Artificial 
 | 1.15 | 15/11/2026 | Registro do uso de IA na transcrição dos dados do P1 e na primeira passada na gravação | Caio Borges |
 | 1.16 | 15/11/2026 | Registro do uso de IA nos gráficos de gestão | Caio Borges |
 | 1.17 | 15/11/2026 | Registro do uso de IA na sessão do P3 | [Felipe Campêlo](https://github.com/felipeacampelo) |
+| 1.18 | 21/11/2026 | Registro do uso de IA no cálculo das métricas | Caio Borges |
