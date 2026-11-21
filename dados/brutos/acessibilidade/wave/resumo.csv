@@ -1,1 +1,7 @@
 tarefa,pagina,data,navegador,erros,alertas,relatorio
+T1,Relatório de notas do aluno,2026-11-21,Google Chrome 157.0.8103.79,4,307,T1-wave.json
+T2,Portal do Discente (Turmas do Semestre),2026-11-21,Google Chrome 157.0.8103.79,22,232,T2-wave.json
+T3,Atestado de matrícula,2026-11-21,Google Chrome 157.0.8103.79,3,87,T3-wave.json
+T4,Índices acadêmicos,2026-11-21,Google Chrome 157.0.8103.79,11,14,T4-wave.json
+T5,Turma Virtual (notícia da turma),2026-11-21,Google Chrome 157.0.8103.79,37,46,T5-wave.json
+T6,Calendário acadêmico 2026.2,2026-11-21,Google Chrome 157.0.8103.79,2,9,T6-wave.json

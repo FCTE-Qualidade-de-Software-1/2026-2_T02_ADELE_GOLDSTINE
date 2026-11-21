@@ -1,0 +1,190 @@
+{
+  "tarefa": "T2",
+  "pagina": "Portal do Discente (Turmas do Semestre)",
+  "data_hora": "2026-11-21T15:57:02",
+  "avaliador": "Felipe",
+  "navegador": "Google Chrome 157.0.8103.79",
+  "sistema": "Darwin 25.6.0",
+  "ferramenta": "WAVE Evaluation Tool 3.3.4.0",
+  "versao_sigaa": "4.15.10.116",
+  "url_final": "https://sigaa.unb.br/sigaa/portais/discente/discente.jsf",
+  "erros_gerais": 22,
+  "erros_contraste": 0,
+  "erros_total_wcag_a_aa": 22,
+  "alertas": 232,
+  "wave": {
+    "statistics": {
+      "totalelements": 1264,
+      "allitemcount": 464,
+      "aim": 5.8,
+      "error": 22,
+      "contrast": 0,
+      "alert": 232,
+      "feature": 188,
+      "structure": 22,
+      "aria": 0
+    },
+    "categories": {
+      "error": {
+        "description": "Errors",
+        "count": 22,
+        "items": {
+          "alt_missing": {
+            "id": "alt_missing",
+            "description": "Missing alternative text",
+            "count": 16,
+            "hidden_count": 0
+          },
+          "alt_input_missing": {
+            "id": "alt_input_missing",
+            "description": "Image button missing alternative text",
+            "count": 1,
+            "hidden_count": 0
+          },
+          "language_missing": {
+            "id": "language_missing",
+            "description": "Language missing or invalid",
+            "count": 1,
+            "hidden_count": 0
+          },
+          "th_empty": {
+            "id": "th_empty",
+            "description": "Empty table header",
+            "count": 4,
+            "hidden_count": 1
+          }
+        }
+      },
+      "contrast": {
+        "description": "Contrast Errors",
+        "count": 0,
+        "items": {}
+      },
+      "alert": {
+        "description": "Alerts",
+        "count": 232,
+        "items": {
+          "image_title": {
+            "id": "image_title",
+            "description": "Image with title",
+            "count": 6,
+            "hidden_count": 0
+          },
+          "region_missing": {
+            "id": "region_missing",
+            "description": "No page regions",
+            "count": 1,
+            "hidden_count": 0
+          },
+          "heading_skipped": {
+            "id": "heading_skipped",
+            "description": "Skipped heading level",
+            "count": 1,
+            "hidden_count": 0
+          },
+          "table_caption_possible": {
+            "id": "table_caption_possible",
+            "description": "Possible table caption",
+            "count": 1,
+            "hidden_count": 0
+          },
+          "event_handler": {
+            "id": "event_handler",
+            "description": "Device dependent event handler",
+            "count": 119,
+            "hidden_count": 0
+          },
+          "text_small": {
+            "id": "text_small",
+            "description": "Very small text",
+            "count": 62,
+            "hidden_count": 22
+          },
+          "title_redundant": {
+            "id": "title_redundant",
+            "description": "Redundant title text",
+            "count": 1,
+            "hidden_count": 0
+          },
+          "table_layout": {
+            "id": "table_layout",
+            "description": "Layout table",
+            "count": 41,
+            "hidden_count": 9
+          }
+        }
+      },
+      "feature": {
+        "description": "Features",
+        "count": 188,
+        "items": {
+          "alt_null": {
+            "id": "alt_null",
+            "description": "Null or empty alternative text",
+            "count": 20,
+            "hidden_count": 0
+          },
+          "alt_spacer": {
+            "id": "alt_spacer",
+            "description": "Null or empty alternative text on spacer",
+            "count": 168,
+            "hidden_count": 0
+          }
+        }
+      },
+      "structure": {
+        "description": "Structural Elements",
+        "count": 22,
+        "items": {
+          "table_data": {
+            "id": "table_data",
+            "description": "Data table",
+            "count": 3,
+            "hidden_count": 0
+          },
+          "th": {
+            "id": "th",
+            "description": "Table header cell",
+            "count": 9,
+            "hidden_count": 0
+          },
+          "h1": {
+            "id": "h1",
+            "description": "Heading level 1",
+            "count": 1,
+            "hidden_count": 0
+          },
+          "h3": {
+            "id": "h3",
+            "description": "Heading level 3",
+            "count": 1,
+            "hidden_count": 0
+          },
+          "h4": {
+            "id": "h4",
+            "description": "Heading level 4",
+            "count": 5,
+            "hidden_count": 0
+          },
+          "ul": {
+            "id": "ul",
+            "description": "Unordered list",
+            "count": 2,
+            "hidden_count": 1
+          },
+          "iframe": {
+            "id": "iframe",
+            "description": "Inline frame",
+            "count": 1,
+            "hidden_count": 1
+          }
+        }
+      },
+      "aria": {
+        "description": "ARIA",
+        "count": 0,
+        "items": {}
+      }
+    }
+  }
+}

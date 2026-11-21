@@ -1,7 +1,16 @@
 metrica,recorte,valor_recorte,n,valor,nivel,observacao
-M13,geral,,12,1.0000,,"12 de 12 combinações executadas sem falha; parcial: faltam 12 combinações (Microsoft Edge e Safari), intervalo possível de 12/24 a 24/24; sem nível até a conclusão"
+M9,geral,,6,13.1667,Insatisfatório,79 erros (WCAG A/AA: Errors + Contrast Errors) em 6 páginas; 695 alertas fora da métrica
+M9,pagina,T1,1,4.0000,,recorte por página (regra 3); 307 alertas
+M9,pagina,T2,1,22.0000,,recorte por página (regra 3); 232 alertas
+M9,pagina,T3,1,3.0000,,recorte por página (regra 3); 87 alertas
+M9,pagina,T4,1,11.0000,,recorte por página (regra 3); 14 alertas
+M9,pagina,T5,1,37.0000,,recorte por página (regra 3); 46 alertas
+M9,pagina,T6,1,2.0000,,recorte por página (regra 3); 9 alertas
+M13,geral,,24,1.0000,Excelente,24 de 24 combinações executadas sem falha
 M13,navegador,"Firefox (Gecko, build do Playwright)",6,1.0000,,recorte descritivo
 M13,navegador,Google Chrome,6,1.0000,,recorte descritivo
+M13,navegador,Microsoft Edge,6,1.0000,,recorte descritivo
+M13,navegador,"WebKit (motor do Safari, build do Playwright)",6,1.0000,,recorte descritivo
 M14,geral,,12,0.0000,Insatisfatório,0 de 12 verificações adaptadas; 360 px e 768 px por emulação
 M14,pagina,T1,2,0.0000,,recorte por página (regra 3)
 M14,pagina,T2,2,0.0000,,recorte por página (regra 3)

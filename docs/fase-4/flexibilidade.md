@@ -40,14 +40,14 @@ O que a automação **não** substitui foi mantido manual: a conferência visual
 
 | Item | Especificação |
 | ---- | ------------- |
-| Data e horário | 15/11/2026: M13 das 22h39 às 22h42; M14 das 23h19 às 23h23 (horário de Brasília) |
-| Produto | Portal do Discente do SIGAA/UnB **v4.15.10.116**, lida no rodapé de cada página. A Fase 1 registrou a v4.15.10.115: a versão mudou antes da coleta, como prevê o controle de versão de [Recursos e Ambiente](../fase-3/recursos-ambiente.md#1-produto-avaliado). Todas as medidas desta página são da v4.15.10.116 |
-| Computador | Notebook com 8 GB de memória e Linux (núcleo 6.17), em rede doméstica de banda larga |
-| Ferramenta | Playwright 1.65 (Python), em modo sem interface gráfica (*headless*) |
-| Navegadores (M13) | Google Chrome 146 estável, instalado no sistema; Firefox 159 (motor Gecko, compilação do Playwright). Versões exatas na coluna `versao` de `navegadores.csv` |
+| Data e horário | 15/11/2026 (Arthur): M13 Chrome e Firefox das 22h39 às 22h42; M14 das 23h19 às 23h23. 21/11/2026 (Felipe): M13 WebKit das 14h54 às 14h55 (com referência no Chrome das 14h53 às 14h54) e Microsoft Edge das 15h39 às 15h40 (horário de Brasília) |
+| Produto | Portal do Discente do SIGAA/UnB **v4.15.10.116**, lida no rodapé de cada página em todas as execuções (15/11 e 21/11). A Fase 1 registrou a v4.15.10.115: a versão mudou antes da coleta, como prevê o controle de versão de [Recursos e Ambiente](../fase-3/recursos-ambiente.md#1-produto-avaliado). Todas as medidas desta página são da v4.15.10.116 |
+| Computadores | Em 15/11 (Arthur): notebook com 8 GB de memória e Linux (núcleo 6.17), em rede doméstica de banda larga. Em 21/11 (Felipe): Mac com macOS (Darwin 25.6.0), em rede doméstica de banda larga |
+| Ferramenta | Playwright 1.65.2 (Python), em modo sem interface gráfica (*headless*) |
+| Navegadores (M13) | Google Chrome 146 estável (Linux), Firefox 159 (motor Gecko, compilação do Playwright, Linux), Microsoft Edge 158 estável (macOS) e WebKit 27.2 (motor do Safari, compilação do Playwright, macOS). Versões exatas na coluna `versao` de `navegadores.csv` |
 | Telas (M14) | Google Chrome no modo de dispositivo: celular de 360 × 800 px e tablet de 768 × 1024 px, com emulação de toque, de aparelho móvel e *user agent* do Chrome para Android |
-| Conta | Conta de estudante de graduação de um membro da equipe, que atende aos [requisitos de massa de dados](../fase-3/recursos-ambiente.md#41-requisitos-de-cada-conta) de T1 a T6 |
-| Materiais de T5 | Turma *Fundamentos de Redes de Computadores*, arquivo "Plano de Ensino" (PDF publicado pelo professor) |
+| Contas | Em 15/11: conta de estudante de graduação de Arthur, atendendo aos [requisitos de massa de dados](../fase-3/recursos-ambiente.md#41-requisitos-de-cada-conta) de T1 a T6. Em 21/11: conta de estudante de graduação de Felipe, com referência própria no Google Chrome 157 para comparação estrutural das páginas |
+| Materiais de T5 | Em 15/11 (Chrome e Firefox): turma *Fundamentos de Redes de Computadores*, download do arquivo "Plano de Ensino" (PDF). Em 21/11 (Edge e WebKit): turma *Técnicas de Programação em Plataformas Emergentes*, visualização de notícia publicada na Turma Virtual (nenhuma turma matriculada na conta tinha arquivo anexado; desvio registrado na seção 7) |
 
 *Fonte: elaboração da equipe; valores registrados em cada linha dos arquivos `.jsonl`.*
 
@@ -81,26 +81,26 @@ Para cada combinação tarefa × navegador, o *script* executa a tarefa em uma j
 
 *Fonte: elaboração da equipe, a partir da ficha de M13.*
 
-Em T5, a tarefa só conta como concluída se o PDF do material for de fato baixado. Erros de JavaScript na página são registrados, mas só contam como falha se causarem um dos efeitos da Tabela 3, porque a ficha define falha pelo efeito visível para o estudante.
+Em T5, na coleta de Chrome e Firefox a tarefa exigiu o download do PDF do material; na coleta de Edge e WebKit, por ausência de arquivos anexados nas turmas da conta do avaliador, a verificação abriu uma notícia publicada na Turma Virtual (seção 7). Erros de JavaScript na página são registrados, mas só contam como falha se causarem um dos efeitos da Tabela 3, porque a ficha define falha pelo efeito visível para o estudante.
 
 ### 3.2 Resultado
 
 *Tabela 4 - Resultado de M13 por combinação tarefa × navegador.*
 
-| Tarefa | Google Chrome 146 | Firefox 159 | Microsoft Edge | Safari |
+| Tarefa | Google Chrome 146 | Firefox 159 | Microsoft Edge 158 | WebKit 27.2 (motor do Safari) |
 | ------ | :-: | :-: | :-: | :-: |
-| T1 | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T1-chromium-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T1-firefox-t1.jpg)) | Pendente | Pendente |
-| T2 | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T2-chromium-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T2-firefox-t1.jpg)) | Pendente | Pendente |
-| T3 | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T3-chromium-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T3-firefox-t1.jpg)) | Pendente | Pendente |
-| T4 | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T4-chromium-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T4-firefox-t1.jpg)) | Pendente | Pendente |
-| T5 | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T5-chromium-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T5-firefox-t1.jpg)) | Pendente | Pendente |
-| T6 | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T6-chromium-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T6-firefox-t1.jpg)) | Pendente | Pendente |
+| T1 | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T1-chromium-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T1-firefox-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T1-msedge-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T1-webkit-t1.jpg)) |
+| T2 | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T2-chromium-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T2-firefox-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T2-msedge-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T2-webkit-t1.jpg)) |
+| T3 | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T3-chromium-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T3-firefox-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T3-msedge-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T3-webkit-t1.jpg)) |
+| T4 | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T4-chromium-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T4-firefox-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T4-msedge-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T4-webkit-t1.jpg)) |
+| T5 | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T5-chromium-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T5-firefox-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T5-msedge-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T5-webkit-t1.jpg)) |
+| T6 | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T6-chromium-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T6-firefox-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T6-msedge-t1.jpg)) | Sem falha ([captura](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/evidencias/navegadores/T6-webkit-t1.jpg)) |
 
 *Fonte: `dados/brutos/flexibilidade/navegadores.csv`.*
 
-**Valor:** A = 12 combinações sem falha, de B = 12 executadas. Faltam as 12 combinações de Edge e Safari, então o valor final de M13 = A/24 ficará entre 12/24 (50%, se todas falharem) e 24/24 (100%). Pela regra 1 de [Níveis de Pontuação](../fase-2/niveis-pontuacao.md#regra-1-metricas-nao-aplicaveis), **M13 ainda não recebe nível**.
+**Valor:** A = 24 combinações sem falha, de B = 24 executadas. **M13 = 24/24 = 100%**, nível **Excelente** (faixa = 100% na Tabela 2 de [Níveis de Pontuação](../fase-2/niveis-pontuacao.md#faixas-por-metrica)).
 
-**O que o valor revela:** no computador, o SIGAA funciona igualmente nos dois motores de renderização testados (Blink e Gecko): todas as tarefas chegaram à página final com o mesmo conteúdo, e o PDF de T5 foi baixado nos dois. A hipótese H14 previa justamente que os problemas de Flexibilidade não estariam no navegador de computador, mas em telas pequenas e no toque, e o resultado parcial vai nessa direção. A única falha de rede registrada nas 12 execuções é a imagem externa `close12_1.gif`, bloqueada pelo navegador (`ERR_BLOCKED_BY_ORB`) porque o endereço antigo do Yahoo não devolve mais uma imagem; ela não afeta nenhuma tarefa.
+**O que o valor revela:** no computador, o SIGAA funciona igualmente nos três motores de renderização testados (Blink no Chrome e no Edge, Gecko no Firefox e WebKit no Safari): todas as 24 combinações chegaram à página final com os marcadores esperados, sem erros de JavaScript e com o mesmo número de tabelas da execução de referência no Chrome da respectiva conta. A hipótese H14 previa compatibilidade alta com 1 ou 2 falhas pontuais (faixa Bom, 22 ou 23 de 24); o resultado superou a previsão, confirmando que os problemas de Flexibilidade não estão no navegador de computador, e sim em telas pequenas e no toque. A única falha de rede registrada nas 24 execuções é a imagem externa `close12_1.gif`, bloqueada pelo navegador porque o endereço antigo do Yahoo não devolve mais uma imagem; ela não afeta nenhuma tarefa.
 
 ## 4. M14 - Páginas adaptadas a telas pequenas e ao toque
 
@@ -178,15 +178,17 @@ Dois resultados contrariam parte das expectativas da Fase 1:
 
 | Questão | Métrica | Valor | Nível da questão | Hipótese | Classificação |
 | ------- | ------- | ----- | ---------------- | -------- | ------------- |
-| Q14 | M13 | 12 de 12 executadas (parcial, 12 de 24 combinações) | Sem nível (regra 1) | H14: 22 ou 23 de 24 (Bom) | Inconclusiva por enquanto |
+| Q14 | M13 | 24 de 24 (100%) | **Excelente (3)** | H14: 22 ou 23 de 24 (Bom) | **Refutada** (superou a faixa prevista: Excelente) |
 | Q15 | M14 | 0 de 12 (0%) | **Insatisfatório (0)** | H15: até 5 de 12 (Insatisfatório) | **Confirmada** |
 | Q16 | M15 | Não executada | Sem dados | H16: 1,5 a 2,0 (Regular) | Inconclusiva por enquanto |
 
 *Fonte: elaboração da equipe, pelas regras de [Níveis de Pontuação](../fase-2/niveis-pontuacao.md#criterios-de-julgamento).*
 
+**Resposta a Q14** (Tabela 4 de Níveis de Pontuação, nível Excelente): **Sim, plenamente.** Todas as seis tarefas foram executadas sem falha nos quatro navegadores de computador (Chrome, Firefox, Edge e WebKit/Safari). H14 é classificada formalmente como **refutada** porque o critério de confirmação exigia a faixa Bom (22 ou 23 de 24), prevendo uma ou duas falhas pontuais que não ocorreram; o resultado é melhor do que o esperado.
+
 **Resposta a Q15** (Tabela 4 de Níveis de Pontuação, nível Insatisfatório): **Não.** As páginas do escopo não se adaptam a telas de celular e tablet: o conteúdo é exibido reduzido, com texto e alvos de toque abaixo dos mínimos, embora os menus respondam ao toque.
 
-**G3 ainda não pode ser julgado:** duas das três questões estão sem dados, e a regra de julgamento classifica como *inconclusivo* um objetivo com mais da metade das questões sem dados. O resultado de Q15 já restringe o julgamento final: como uma questão Insatisfatória impede os julgamentos *atende* e *atende plenamente*, Flexibilidade será julgada, no máximo, como **atende parcialmente**, quaisquer que sejam os resultados de M13 e M15.
+**Julgamento parcial de G3:** com Q14 = Excelente (3) e Q15 = Insatisfatório (0), a média parcial é 1,50, e Q16 (M15) segue pendente. Independentemente do nível que M15 venha a receber (de 0 a 3), a média final de G3 ficará entre 1,00 e 2,00 e a presença de uma questão Insatisfatória (Q15) impede os julgamentos *Atende* e *Atende plenamente*; assim, o julgamento final de Flexibilidade será **Atende parcialmente**, aguardando apenas a medição de M15 para o fechamento oficial da pontuação.
 
 ## 6. Triangulação com o teste com usuários
 
@@ -213,18 +215,19 @@ P3 acessa o SIGAA principalmente pelo celular, o perfil que a Fase 1 associou ao
 | Plano da Fase 3 | O que foi feito | Efeito e tratamento |
 | --------------- | --------------- | ------------------- |
 | M14 em 360 px num **celular real** | Emulação do Chrome com dimensões, toque, escala e *user agent* de um celular Android | O motor de renderização é o mesmo do Chrome para Android. Os critérios que falharam dependem da largura e da falta de *viewport*, que a emulação reproduz. A verificação em um celular real fica para M15, que usa o mesmo aparelho, e confirma ou não os resultados |
-| M13 em Chrome, Firefox, **Edge e Safari** | Chrome e Firefox (12 das 24 combinações) | O Safari exige macOS, e o motor WebKit do Playwright não roda neste sistema sem bibliotecas que exigem permissão de administrador. O Edge não estava instalado. Pela regra 1 de [Níveis de Pontuação](../fase-2/niveis-pontuacao.md#regra-1-metricas-nao-aplicaveis), M13 fica sem nível até as 12 combinações restantes serem executadas manualmente, como previa a tarefa T08 do [cronograma](../fase-3/cronograma.md) |
-| Firefox na versão estável vigente | Firefox 159 da compilação do Playwright (motor Gecko com ajustes para automação), à frente do Firefox estável 155 instalado no sistema | O motor é o mesmo, e os ajustes do Playwright servem para controlar o navegador, sem mudar a renderização. Como a versão é mais nova que a estável, o resultado do Firefox é confirmado na execução manual da T08, junto com Edge e Safari |
-| Execução por um avaliador | Execução por *script* e conferência visual por um avaliador | Ganho de objetividade nos critérios de M14. O *script* e os dados brutos estão no repositório para que outro membro repita a coleta |
+| M13 em Safari (macOS) | WebKit 27.2 (compilação do Playwright no macOS, mesmo motor de renderização do Safari) | O Playwright automatiza o motor WebKit, não o aplicativo Safari diretamente, de forma análoga ao uso do Firefox compilado pelo Playwright para o motor Gecko. A renderização das páginas e o comportamento dos scripts seguem o motor WebKit nativo do macOS |
+| M13 em T5 com download de arquivo | Em Edge e WebKit (21/11), visualização de notícia na Turma Virtual de *Técnicas de Programação em Plataformas Emergentes* (`--modo-t5 noticia`) | Nenhuma turma matriculada na conta de Felipe em 2026.2 tinha arquivo anexado para download. A navegação dentro da Turma Virtual (entrada na turma, menu lateral e abertura de conteúdo publicado) foi exercitada integralmente e comparada contra a execução de referência no Chrome da mesma conta |
+| Firefox na versão estável vigente | Firefox 159 da compilação do Playwright (motor Gecko com ajustes para automação), à frente do Firefox estável 155 instalado no sistema | O motor é o mesmo, e os ajustes do Playwright servem para controlar o navegador, sem mudar a renderização |
+| Execução por um avaliador em uma conta | Dois avaliadores em contas diferentes (Arthur em Chrome e Firefox; Felipe em Edge e WebKit) | Para que diferenças de histórico entre contas não gerassem falsos positivos na contagem de tabelas, o script executou o Google Chrome também na conta de Felipe como linha de base estrutural (`--apenas-referencia`), mantendo 24 combinações únicas em `navegadores.csv` |
 | M15 | Não executada | Depende de um avaliador cronometrando as tarefas em celular real; segue no cronograma (T08) |
 
 *Fonte: elaboração da equipe.*
 
-Outras ameaças: os resultados são de uma única conta e de um único dia, e o SIGAA pode mudar de versão antes do fim da Fase 4 (a versão de cada medida está registrada). Como as falhas de M14 vêm de uma causa estrutural, presente em todas as páginas e nas duas larguras, é pouco provável que outra conta ou outro dia mudem o resultado.
+Outras ameaças: as execuções de M13 foram feitas em duas datas (15/11 e 21/11), ambas na versão **v4.15.10.116** do SIGAA (conferida no rodapé). Como as falhas de M14 vêm de uma causa estrutural, presente em todas as páginas e nas duas larguras, é pouco provável que outra conta ou outro dia mudem o resultado.
 
 ## 8. Como reproduzir
 
-Os comandos estão em [`coleta/README.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/coleta/README.md). Em resumo: instalar o Playwright, definir as variáveis `SIGAA_USUARIO` e `SIGAA_SENHA` e rodar `python coleta/sigaa_coleta.py navegadores`, `python coleta/sigaa_coleta.py telas`, `python coleta/borrar.py dados/brutos/flexibilidade/evidencias` e `python coleta/calcular.py`. O cálculo é determinístico: sobre os mesmos registros, produz os mesmos arquivos.
+Os comandos estão em [`coleta/README.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/coleta/README.md). Em resumo: instalar o Playwright, definir as variáveis `SIGAA_USUARIO` e `SIGAA_SENHA` e rodar `python coleta/sigaa_coleta.py navegadores`, `python coleta/sigaa_coleta.py telas`, `python coleta/borrar.py <evidencias>` e `python coleta/calcular.py`. O cálculo é determinístico: sobre os mesmos registros, produz os mesmos arquivos.
 
 ## Referências
 
@@ -241,3 +244,4 @@ Os comandos estão em [`coleta/README.md`](https://github.com/FCTE-Qualidade-de-
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 15/11/2026 | Execução instrumentada de M13 e M14: método, operacionalização dos critérios, resultados, julgamento de Q14 e Q15, triangulação com o teste com usuários e desvios do plano | [arthurlleite](https://github.com/arthurlleite) |
+| 1.1 | 21/11/2026 | Conclusão de M13 com Microsoft Edge 158 e WebKit 27.2 (24/24, Excelente), julgamento de Q14, classificação de H14 e registro dos desvios da coleta no macOS | [Felipe Campêlo](https://github.com/felipeacampelo) |
