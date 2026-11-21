@@ -22,7 +22,8 @@ TESTES = RAIZ / "dados/brutos/testes-usuarios"
 QUEST = RAIZ / "dados/brutos/questionario"
 REF = RAIZ / "dados/referencia"
 METRICAS = RAIZ / "dados/consolidados/metricas.csv"
-PARTICIPANTES_PREVISTOS = 6
+# O protocolo previa 6 participantes; a coleta foi encerrada com 5 (P1, P2, P3, P4 e P6), decisão da equipe em 21/11/2026.
+PARTICIPANTES_PREVISTOS = 5
 TAREFAS = ["T1", "T2", "T3", "T4", "T5", "T6"]
 PROPRIAS = {"M3", "M4", "M5", "M6", "M7", "M8", "M11", "M12", "MA1"}
 
