@@ -140,6 +140,25 @@ A pontuação de cada objetivo é a média dos níveis das questões com dados (
 
 HR2 previa que a dificuldade de interação levaria o estudante a concluir que uma função não existe. Isso não ocorreu: quando não encontraram a função, os participantes desistiram ou concluíram a tarefa fora do SIGAA, como nos dois casos de T6 em que o link do painel levou ao site da SAA. A dificuldade de interação aparece no tempo, nos desvios e na satisfação, mas não se converteu em percepção de falta de função.
 
+## 5. Ranking das tarefas
+
+A [regra 4](../fase-2/niveis-pontuacao.md#regra-4-ranking-das-tarefas) ordena as tarefas pela média dos níveis de M5, M6, M7 e M1 calculados para cada uma, com as mesmas faixas da Tabela 1. M1 por tarefa ainda não tem dados, e M7 não se aplica a T2 e T4, cujo caminho mais curto é zero clique (a informação está na página inicial); essas métricas ficam fora da média (regra 1). O ranking é, portanto, provisório: quando M1 for medida, cada tarefa ganha mais um termo na média.
+
+*Tabela 8 - Índice das tarefas pela regra 4 (do pior para o melhor).*
+
+| Posição | Tarefa | M5 (conclusão sem ajuda) | M6 (tempo relativo) | M7 (desvio de caminho) | M1 | Índice |
+| :-----: | ------ | ------------------------ | ------------------- | ---------------------- | :-: | :----: |
+| 1 | T4 - Índices e carga horária pendente | 60% - Regular (1) | 8,48 - Insatisfatório (0) | Não se aplica | Sem dados | **0,50** |
+| 2 | T6 - Calendário acadêmico | 60% - Regular (1) | 4,67 - Insatisfatório (0) | 1,83 - Regular (1) | Sem dados | **0,67** |
+| 3 | T1 - Notas de uma disciplina | 100% - Excelente (3) | 4,50 - Insatisfatório (0) | 1,40 - Regular (1) | Sem dados | **1,33** |
+| 4 | T5 - Material na Turma Virtual | 80% - Bom (2) | 2,32 - Bom (2) | 1,63 - Regular (1) | Sem dados | **1,67** |
+| 5 | T2 - Dia, horário e local de uma turma | 100% - Excelente (3) | 2,58 - Regular (1) | Não se aplica | Sem dados | **2,00** |
+| 6 | T3 - Atestado ou histórico | 100% - Excelente (3) | 3,78 - Regular (1) | 1,00 - Excelente (3) | Sem dados | **2,33** |
+
+*Fonte: elaboração da equipe, a partir dos recortes por tarefa de `dados/consolidados/metricas.csv`.*
+
+T4 e T6 são as tarefas de pior índice e as únicas com conclusão sem ajuda no nível Regular: dois em cada cinco participantes não as concluíram. Em T4, a informação está na página inicial, mas os participantes que a encontraram fizeram, em média, 5,67 cliques até ela e levaram 8,48 vezes o tempo do especialista. Em T6, o link do calendário no painel do portal leva ao site da SAA, na página de Pós-Graduação, o que explica dois dos três erros não recuperados do teste. T1 fica em terceiro, apesar da conclusão de 100%, porque o tempo dos participantes foi 4,5 vezes o do especialista.
+
 ## Referências
 
 [1] ISO/IEC 25040:2024. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Quality evaluation framework*.
@@ -150,3 +169,4 @@ HR2 previa que a dificuldade de interação levaria o estudante a concluir que u
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 21/11/2026 | Situação das 16 métricas, respostas às questões e classificação das hipóteses H1 a H16 | Leonardo Bonetti |
 | 1.1 | 21/11/2026 | Julgamento de G1, G2 e G3 e verificação das hipóteses de relação HR1 e HR2 | Leonardo Bonetti |
+| 1.2 | 21/11/2026 | Ranking das tarefas pela regra 4 | Leonardo Bonetti |
