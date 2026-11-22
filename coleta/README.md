@@ -10,6 +10,8 @@ Scripts que executam as tarefas T1 a T6 no SIGAA/UnB com o [Playwright](https://
 | `calcular.py` | Gera `navegadores.csv`, `paginas-adaptadas.csv`, `dados/consolidados/desempenho.csv` e as linhas de M9, M13 e M14 em `metricas.csv` |
 | `calcular_testes.py` | Gera as linhas de M3, M4, M5, M6, M7, M8, M11, M12, MA1, IQ1 a IQ4 e HP1 em `metricas.csv` a partir das planilhas do teste com usuários e do questionário |
 | `graficos_testes.py` | Gera os gráficos SVG/PNG de `docs/assets/graficos/teste-usuarios/` e injeta os gráficos com tabelas via hook do MkDocs (`[[GRAFICO_TU:...]]`) |
+| `inspecao_coleta.py` | Primeiro avaliador automatizado da inspeção: critérios (a) a (d) de M10 nas páginas de T1 a T6, cenários C1 a C6 de M20, menus do portal (M1) e, com `documentos`, as páginas e o histórico usados em M2, gravados só numa pasta local fora do repositório |
+| `calcular_inspecao.py` | Gera as linhas de M1, M2, M10 e M20 em `metricas.csv` a partir das colunas `*_final` de `dados/brutos/inspecao/` |
 | `prototipo_mobile.py` | Gera as telas SVG/PNG (`docs/assets/prototipo-mobile/`) e o simulador HTML interativo do Protótipo Mobile-First via hook do MkDocs (`[[PROTOTIPO_MOBILE_INTERATIVO]]`) |
 
 ## Regras de segurança da coleta
@@ -39,6 +41,10 @@ python coleta/sigaa_coleta.py desempenho --repeticoes 5               # desempen
 python coleta/coleta_wave.py --wave-js /caminho/para/wave.min.js      # M9 (WAVE oficial)
 python coleta/borrar.py dados/brutos/flexibilidade/evidencias         # aceita pasta ou arquivos específicos
 python coleta/calcular.py
+python coleta/inspecao_coleta.py m10 --turma-t5 "TURMA" --material-t5 "ARQUIVO.pdf"   # M10
+python coleta/inspecao_coleta.py m20                   # M20 (C1 real: inspecao_coleta.py c1-real, ~42 min)
+python coleta/inspecao_coleta.py documentos --local ~/sigaa-originais/inspecao   # M1 e M2 (fora do repositório)
+python coleta/calcular_inspecao.py
 ```
 
 Os registros são acrescentados aos arquivos `.jsonl`; para refazer uma coleta do zero, apague o `.jsonl` correspondente antes. Os valores dependem do horário, da rede e do nó do servidor que atendeu a sessão (registrado em cada linha, campo `assinatura.rodape`).
