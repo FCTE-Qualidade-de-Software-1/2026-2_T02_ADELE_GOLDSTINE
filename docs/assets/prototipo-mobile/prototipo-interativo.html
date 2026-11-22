@@ -1,0 +1,466 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Protótipo Mobile SIGAA/UnB (Fase 4 — Adele Goldstine)</title><style>body{margin:0;padding:20px;background:#f1f5f9;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#0f172a}h1{text-align:center;font-size:1.15rem;margin:0 0 .4rem;color:#003366}p.topo{text-align:center;font-size:.85rem;margin:0 0 1rem;color:#475569}</style></head><body><h1>Protótipo Mobile-First de Alta Fidelidade — SIGAA/UnB (360 × 800 px)</h1><p class="topo">Ação de Melhoria Técnica Obrigatória (Fase 4) — Equipe T02 Adele Goldstine (FGA0315/UnB)</p>
+<style>
+.pm-wrap{margin:1.5rem 0;display:flex;flex-wrap:wrap;gap:1.5rem;align-items:flex-start;justify-content:center}
+.pm-guide{flex:1 1 280px;max-width:380px;background:var(--md-code-bg-color,#f8fafc);border:1px solid var(--md-default-fg-color--lightest,#cbd5e1);border-radius:12px;padding:1rem 1.15rem;font-size:.82rem;line-height:1.5}
+.pm-guide h4{margin:0 0 .6rem;font-size:.92rem}
+.pm-guide-btn{display:block;width:100%;text-align:left;padding:.55rem .7rem;margin:.4rem 0;border-radius:8px;border:1px solid var(--md-default-fg-color--lightest,#cbd5e1);background:var(--md-default-bg-color,#fff);color:var(--md-default-fg-color,#0f172a);cursor:pointer;font-size:.78rem;transition:border-color .15s,background .15s}
+.pm-guide-btn:hover,.pm-guide-btn.ativo{border-color:#1d4ed8;background:#eff6ff;color:#0f172a}
+.pm-phone{width:360px;max-width:100%;height:730px;background:#1e293b;border-radius:30px;padding:10px;box-shadow:0 16px 36px rgba(15,23,42,.22);display:flex;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#0f172a;box-sizing:border-box}
+.pm-screen{background:#f1f5f9;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;height:100%;position:relative}
+.pm-status{background:#002244;color:#fff;font-size:10.5px;padding:4px 14px;display:flex;justify-content:space-between;font-weight:600;flex:none}
+.pm-header{background:#003366;color:#fff;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;gap:8px;flex:none}
+.pm-brand{display:flex;align-items:center;gap:8px}
+.pm-logo-box{background:#fff;border-radius:4px;padding:2px 3px;display:flex;align-items:center;justify-content:center;flex:none}
+.pm-logo-box img{width:38px;height:19px;display:block;object-fit:contain}
+.pm-header-title{font-size:13.5px;font-weight:700;line-height:1.15}
+.pm-header-sub{font-size:10.5px;color:#e2e8f0;margin-top:1px}
+.pm-font-btns{display:flex;gap:5px;flex:none}
+.pm-font-btn{min-width:30px;min-height:30px;border-radius:7px;border:1px solid #60a5fa;background:#0f4c81;color:#fff;font-weight:700;font-size:11px;cursor:pointer}
+.pm-utils,.pm-mods{display:flex;flex-wrap:wrap;gap:4px;padding:5px 10px;background:#e2e8f0;border-bottom:1px solid #cbd5e1;flex:none}
+.pm-mods{background:#fff}
+.pm-dis{padding:3px 7px;border-radius:5px;border:1px dashed #cbd5e1;background:#f1f5f9;color:#64748b;font-size:9.5px;font-weight:600;cursor:not-allowed}
+.pm-mod-ativo{padding:3px 9px;border-radius:5px;border:1px solid #1d4ed8;background:#1d4ed8;color:#fff;font-size:9.5px;font-weight:700}
+.pm-body{flex:1;overflow-y:auto;padding:10px;display:flex;flex-direction:column;gap:8px;font-size:13.5px}
+.pm-body.fs-lg{font-size:15.5px}
+.pm-body.fs-sm{font-size:12px}
+.pm-card{background:#fff;border:1px solid #cbd5e1;border-radius:10px;padding:10px;box-sizing:border-box}
+.pm-card-navy{background:#003366;color:#fff;border:none}
+.pm-card-amber{background:#fffbeb;border:1.5px solid #fde68a}
+.pm-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.pm-btn-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pm-btn{min-height:46px;padding:7px 9px;border-radius:8px;border:1px solid #cbd5e1;background:#fff;color:#003366;font-weight:700;font-size:12px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;line-height:1.2}
+.pm-btn-primary{background:#1d4ed8;border-color:#1d4ed8;color:#fff}
+.pm-btn-soft{background:#eff6ff;border-color:#bfdbfe;color:#1d4ed8;min-height:38px}
+.pm-bar-bg{height:7px;border-radius:4px;background:#e2e8f0;overflow:hidden;margin:5px 0}
+.pm-bar-fill{height:100%;background:#059669;border-radius:4px}
+.pm-seg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:#e2e8f0;padding:4px;border-radius:9px}
+.pm-seg-2{grid-template-columns:repeat(2,1fr)}
+.pm-seg button{min-height:38px;border:none;border-radius:6px;background:transparent;color:#334155;font-weight:600;font-size:11.5px;cursor:pointer}
+.pm-seg button.ativo{background:#1d4ed8;color:#fff}
+.pm-box-hor{background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:7px;margin:6px 0;font-size:11.5px;line-height:1.35}
+.pm-chip-row{display:flex;flex-wrap:wrap;gap:5px}
+.pm-chip{min-height:32px;padding:4px 9px;border-radius:16px;border:1px solid #cbd5e1;background:#fff;color:#334155;font-size:11px;font-weight:600;cursor:pointer}
+.pm-chip.ativo{background:#003366;border-color:#003366;color:#fff}
+.pm-mat-item{display:flex;justify-content:space-between;align-items:center;gap:8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;padding:9px}
+.pm-icon-btn{min-width:48px;min-height:44px;border-radius:8px;border:1px solid #bfdbfe;background:#eff6ff;color:#1d4ed8;font-weight:700;font-size:11px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.pm-nav{background:#fff;border-top:1px solid #cbd5e1;display:grid;grid-template-columns:repeat(4,1fr);flex:none}
+.pm-nav button{min-height:52px;border:none;background:#fff;color:#475569;font-size:11px;font-weight:600;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:4px}
+.pm-nav button.ativo{color:#1d4ed8;font-weight:700;box-shadow:inset 0 3px 0 #1d4ed8}
+.pm-toast{background:#065f46;color:#fff;font-size:11.5px;padding:8px 12px;border-radius:8px;margin-top:4px;display:none}
+.pm-toast.vis{display:block}
+.pm-grade-tbl{width:100%;border-collapse:collapse;font-size:10.5px;background:#fff}
+.pm-grade-tbl th,.pm-grade-tbl td{border:1px solid #cbd5e1;padding:5px 4px;text-align:center}
+.pm-grade-tbl th{background:#eff6ff;color:#003366}
+</style>
+
+<div class="pm-wrap" id="pm-simulador">
+  <div class="pm-guide">
+    <h4>Simulador Interativo Mobile (360 × 800 px)</h4>
+    <p style="margin:0 0 .5rem">Navegue pelas quatro telas principais do Portal do Discente reformulado. Os botões tracejados representam funções existentes no SIGAA original que ficam fora do escopo avaliado e permanecem exibidos apenas visualmente:</p>
+    <button type="button" class="pm-guide-btn ativo" data-goto="inicio"><strong>1. Início</strong> — Integralização, emissão de atestado/histórico, últimas atualizações e turmas com horários decodificados.</button>
+    <button type="button" class="pm-guide-btn" data-goto="turmas"><strong>2. Turmas e Notas</strong> — Central única de materiais e acesso direto às notas sem menus suspensos.</button>
+    <button type="button" class="pm-guide-btn" data-goto="progresso"><strong>3. Progresso</strong> — Detalhamento de horas pendentes, siglas explicadas (IRA/MP) e serviços do menu Ensino.</button>
+    <button type="button" class="pm-guide-btn" data-goto="calendario"><strong>4. Calendário 2026.2</strong> — Aberto diretamente no semestre vigente dentro do SIGAA, sem redirecionar ao site da SAA.</button>
+    <p style="margin:.6rem 0 0;font-size:.74rem;opacity:.8">Use os botões <strong>A- / A+</strong> no topo para testar a escala tipográfica acessível.</p>
+  </div>
+
+  <div class="pm-phone" role="region" aria-label="Protótipo interativo do SIGAA Mobile da UnB em 360 pixels">
+    <div class="pm-screen">
+      <div class="pm-status">
+        <span>09:41 · UnB SIGAA</span>
+        <span>Sessão: 00:40 · 360 px</span>
+      </div>
+      <div class="pm-header">
+        <div class="pm-brand">
+          <div class="pm-logo-box"><img src="data:image/png;base64,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" alt="Logo da Universidade de Brasília"></div>
+          <div>
+            <div class="pm-header-title" id="pm-title">UnB - SIGAA</div>
+            <div class="pm-header-sub" id="pm-sub">Portal do Discente · 2026.2</div>
+          </div>
+        </div>
+        <div class="pm-font-btns">
+          <button type="button" class="pm-font-btn" id="pm-f-down" aria-label="Diminuir fonte">A-</button>
+          <button type="button" class="pm-font-btn" id="pm-f-up" aria-label="Aumentar fonte">A+</button>
+        </div>
+      </div>
+
+      <div class="pm-utils" aria-label="Atalhos institucionais do SIGAA fora do escopo">
+        <button type="button" class="pm-dis" disabled title="Função fora do escopo (exibição visual)">Portal Público</button>
+        <button type="button" class="pm-dis" disabled title="Função fora do escopo (exibição visual)">Ajuda?</button>
+        <button type="button" class="pm-dis" disabled title="Função fora do escopo (exibição visual)">Caixa Postal</button>
+        <button type="button" class="pm-dis" disabled title="Função fora do escopo (exibição visual)">Módulos</button>
+        <button type="button" class="pm-dis" disabled title="Função fora do escopo (exibição visual)">Sair</button>
+      </div>
+
+      <div class="pm-mods" aria-label="Módulos do Portal do Discente">
+        <span class="pm-mod-ativo">Ensino</span>
+        <button type="button" class="pm-dis" disabled title="Módulo fora do escopo (apenas visual)">Pesquisa</button>
+        <button type="button" class="pm-dis" disabled title="Módulo fora do escopo (apenas visual)">Extensão</button>
+        <button type="button" class="pm-dis" disabled title="Módulo fora do escopo (apenas visual)">Bolsas</button>
+        <button type="button" class="pm-dis" disabled title="Módulo fora do escopo (apenas visual)">Estágio</button>
+        <button type="button" class="pm-dis" disabled title="Módulo fora do escopo (apenas visual)">Mobilidade</button>
+        <button type="button" class="pm-dis" disabled title="Módulo fora do escopo (apenas visual)">Outros</button>
+      </div>
+
+      <div class="pm-body" id="pm-body">
+        <div id="pm-toast" class="pm-toast" role="status"></div>
+
+        <!-- ABA 1: INÍCIO -->
+        <div id="pm-tab-inicio" class="pm-panel">
+          <div class="pm-card">
+            <div style="font-size:10.5px;font-weight:700;color:#003366;margin-bottom:5px">CAMPUS UNB GAMA: FCTE · ENGENHARIA DE SOFTWARE (ATIVO)</div>
+            <div class="pm-chip-row">
+              <button type="button" class="pm-dis" disabled>Abrir Chamado</button>
+              <button type="button" class="pm-dis" disabled>Alterar Senha</button>
+              <button type="button" class="pm-dis" disabled>Dados e Foto</button>
+              <button type="button" class="pm-dis" disabled>Mensagens</button>
+            </div>
+          </div>
+
+          <div class="pm-card" style="border-color:#bfdbfe">
+            <div class="pm-row">
+              <strong style="color:#003366;font-size:12px">Integralizações e Índices</strong>
+              <strong style="color:#065f46;font-size:12px">62% Integralizado</strong>
+            </div>
+            <div style="margin-top:3px;font-size:15px;font-weight:700;color:#1d4ed8">1.320 h pendentes <span style="font-size:11px;font-weight:400;color:#475569">(Obrig: 930 h · Opt: 390 h · Comp: 0 h)</span></div>
+            <div class="pm-bar-bg"><div class="pm-bar-fill" style="width:62%"></div></div>
+            <div class="pm-row" style="font-size:11px;color:#334155">
+              <span>Currículo: 3.480 h · IRA: 3,7508 · MP: 3,8088</span>
+              <button type="button" class="pm-chip" data-goto="progresso" style="min-height:26px;border-color:#bfdbfe;color:#1d4ed8">Detalhar</button>
+            </div>
+          </div>
+
+          <div class="pm-btn-row">
+            <button type="button" class="pm-btn pm-btn-primary" data-toast="Atestado de Matrícula 2026.2 gerado em PDF em 1 toque.">Emitir Atestado</button>
+            <button type="button" class="pm-btn" data-goto="progresso">Emitir Histórico</button>
+          </div>
+
+          <div class="pm-card">
+            <div class="pm-row">
+              <strong style="font-size:11px;color:#003366">Últimas Atualizações</strong>
+              <button type="button" class="pm-dis" disabled>&lt;&lt; Parar &gt;&gt;</button>
+            </div>
+            <div style="font-size:11px;color:#334155;margin-top:3px">11/11/2026 - ECONOMIA DE ENERGIA (2026.2): Tarefa alterada.</div>
+          </div>
+
+          <div class="pm-row" style="margin:4px 0 2px">
+            <strong style="font-size:13px">Turmas do Semestre (2026.2)</strong>
+            <div class="pm-seg pm-seg-2" style="width:120px">
+              <button type="button" class="ativo" data-view="lista">Lista</button>
+              <button type="button" data-view="grade">Grade</button>
+            </div>
+          </div>
+
+          <div id="pm-view-lista" style="display:flex;flex-direction:column;gap:8px">
+            <div class="pm-card">
+              <strong style="font-size:12.5px;color:#003366">QUALIDADE DE SOFTWARE 1</strong>
+              <div class="pm-box-hor">
+                <div><strong>Seg e Qua · 10h00–11h50</strong> (24M34)</div>
+                <div>Local: <strong>FCTE - S6</strong></div>
+              </div>
+              <div class="pm-btn-row">
+                <button type="button" class="pm-btn pm-btn-soft" data-goto="turmas" data-subtab="materiais">Materiais</button>
+                <button type="button" class="pm-btn pm-btn-soft" data-goto="turmas" data-subtab="notas" style="background:#ecfdf5;border-color:#a7f3d0;color:#065f46">Minhas Notas</button>
+              </div>
+            </div>
+            <div class="pm-card">
+              <strong style="font-size:12.5px;color:#003366">ECONOMIA DE ENERGIA</strong>
+              <div class="pm-box-hor">
+                <div><strong>Ter e Qui · 08h00–09h50</strong> (35M12)</div>
+                <div>Local: <strong>FCTE - S5</strong></div>
+              </div>
+              <div class="pm-btn-row">
+                <button type="button" class="pm-btn pm-btn-soft" data-goto="turmas" data-subtab="materiais">Materiais</button>
+                <button type="button" class="pm-btn pm-btn-soft" data-goto="turmas" data-subtab="notas" style="background:#ecfdf5;border-color:#a7f3d0;color:#065f46">Minhas Notas</button>
+              </div>
+            </div>
+            <div class="pm-card">
+              <strong style="font-size:12.5px;color:#003366">PARADIGMAS DE PROGRAMAÇÃO</strong>
+              <div class="pm-box-hor">
+                <div><strong>Qua e Sex · 14h00–15h50</strong> (46T23)</div>
+                <div>Local: <strong>FCTE - S10</strong></div>
+              </div>
+              <div class="pm-btn-row">
+                <button type="button" class="pm-btn pm-btn-soft" data-goto="turmas" data-subtab="materiais">Materiais</button>
+                <button type="button" class="pm-btn pm-btn-soft" data-goto="turmas" data-subtab="notas" style="background:#ecfdf5;border-color:#a7f3d0;color:#065f46">Minhas Notas</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="pm-view-grade" style="display:none">
+            <div class="pm-card">
+              <strong style="font-size:12px;color:#003366">Grade Semanal Integrada (2026.2)</strong>
+              <table class="pm-grade-tbl" style="margin-top:6px">
+                <thead><tr><th>Hora</th><th>Seg/Qua</th><th>Ter/Qui</th><th>Sex</th></tr></thead>
+                <tbody>
+                  <tr><td>08h-10h</td><td>—</td><td>Economia (S5)</td><td>—</td></tr>
+                  <tr><td>10h-12h</td><td>Qualidade (S6)</td><td>—</td><td>—</td></tr>
+                  <tr><td>14h-16h</td><td>Paradigmas (S10)</td><td>—</td><td>Paradigmas (S10)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="pm-card">
+            <strong style="font-size:11.5px;color:#003366">Minhas Atividades e Comunidades</strong>
+            <div style="font-size:11px;color:#334155;margin-top:4px">30/11/2026 23:59 (9 dias) · ECONOMIA DE ENERGIA: Relatório</div>
+            <div style="font-size:10.5px;color:#64748b;margin-top:4px">Comunidades Virtuais: Não participa de nenhuma comunidade virtual.</div>
+            <div class="pm-chip-row" style="margin-top:6px">
+              <button type="button" class="pm-dis" disabled>Ver turmas anteriores</button>
+              <button type="button" class="pm-dis" disabled>Avaliação Institucional</button>
+              <button type="button" class="pm-dis" disabled>Regulamento Graduação</button>
+              <button type="button" class="pm-dis" disabled>Extrato Restaurante (RU)</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ABA 2: TURMAS E NOTAS -->
+        <div id="pm-tab-turmas" class="pm-panel" style="display:none">
+          <div class="pm-card">
+            <strong style="font-size:13px;color:#003366;display:block">QUALIDADE DE SOFTWARE 1 (FGA0315)</strong>
+            <div style="font-size:11px;color:#475569;margin:2px 0 8px">2026.2 · FCTE - S6 · Seg e Qua 10h00–11h50</div>
+            <div class="pm-chip-row">
+              <button type="button" class="pm-chip" style="min-height:30px" data-toast="Seletor de turmas matriculadas aberto.">Trocar turma</button>
+              <button type="button" class="pm-chip" style="min-height:30px" data-toast="Plano de Ensino aberto em PDF.">Plano de Ensino</button>
+              <button type="button" class="pm-dis" disabled>Config. da Turma</button>
+            </div>
+          </div>
+
+          <div class="pm-seg">
+            <button type="button" class="ativo" data-subtab="materiais">Materiais</button>
+            <button type="button" class="subtab-btn" data-subtab="notas">Minhas Notas</button>
+            <button type="button" class="subtab-btn" data-subtab="avisos">Notícias</button>
+          </div>
+
+          <div class="pm-card">
+            <div style="font-size:10px;color:#64748b;margin-bottom:4px">Demais seções da Turma Virtual (fora do escopo):</div>
+            <div class="pm-chip-row">
+              <button type="button" class="pm-dis" disabled>Participantes</button>
+              <button type="button" class="pm-dis" disabled>Frequência</button>
+              <button type="button" class="pm-dis" disabled>Tarefas</button>
+              <button type="button" class="pm-dis" disabled>Fóruns</button>
+              <button type="button" class="pm-dis" disabled>Enquetes</button>
+              <button type="button" class="pm-dis" disabled>Estatísticas</button>
+            </div>
+          </div>
+
+          <div id="pm-sub-materiais" style="display:flex;flex-direction:column;gap:7px">
+            <div class="pm-chip-row">
+              <button type="button" class="pm-chip ativo" data-filter="todos">Todos (3)</button>
+              <button type="button" class="pm-chip" data-filter="arquivo">Arquivos</button>
+              <button type="button" class="pm-chip" data-filter="link">Referências</button>
+            </div>
+            <div class="pm-mat-item" data-tipo="arquivo">
+              <div><strong style="font-size:12px">Plano de Ensino 2026.2</strong><div style="font-size:10.5px;color:#475569">PDF · 240 KB · Anexo principal</div></div>
+              <button type="button" class="pm-icon-btn" data-toast="Download iniciado: Plano_Ensino_2026_2.pdf.">Baixar</button>
+            </div>
+            <div class="pm-mat-item" data-tipo="arquivo">
+              <div><strong style="font-size:12px">Roteiro do Trabalho Final</strong><div style="font-size:10.5px;color:#475569">PDF · 410 KB · Pasta Arquivos</div></div>
+              <button type="button" class="pm-icon-btn" data-toast="Download iniciado: Roteiro_Trabalho_Final.pdf.">Baixar</button>
+            </div>
+            <div class="pm-mat-item" data-tipo="link">
+              <div><strong style="font-size:12px">Norma ISO/IEC 25010:2023</strong><div style="font-size:10.5px;color:#475569">Link externo · Seção Referências</div></div>
+              <button type="button" class="pm-icon-btn" data-toast="Referência externa aberta em nova aba.">Abrir</button>
+            </div>
+          </div>
+
+          <div id="pm-sub-notas" style="display:none;flex-direction:column;gap:8px">
+            <div class="pm-card" style="background:#ecfdf5;border-color:#a7f3d0">
+              <div style="font-size:11.5px;color:#065f46;font-weight:700">Relatório de Notas da Disciplina</div>
+              <div style="font-size:17px;font-weight:700;color:#003366;margin:4px 0">Média parcial: 9,10 (SS)</div>
+              <div style="font-size:11.5px;color:#334155">Frequência registrada: 100% (0 faltas)</div>
+            </div>
+            <div class="pm-card">
+              <div class="pm-row"><strong>Entrega 1</strong><strong>9,2</strong></div>
+              <div class="pm-row" style="margin-top:6px"><strong>Ponto de Controle 2</strong><strong>9,0</strong></div>
+              <div class="pm-row" style="margin-top:6px"><strong>Entrega Final</strong><span style="color:#475569">Aguardando lançamento</span></div>
+            </div>
+          </div>
+
+          <div id="pm-sub-avisos" style="display:none;flex-direction:column;gap:8px">
+            <div class="pm-card">
+              <strong style="font-size:12px">Apresentação da Entrega 2</strong>
+              <div style="font-size:11px;color:#475569;margin-top:2px">Confirmada conforme cronograma oficial da disciplina.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ABA 3: PROGRESSO / INTEGRALIZAÇÃO -->
+        <div id="pm-tab-progresso" class="pm-panel" style="display:none">
+          <div class="pm-card pm-card-navy">
+            <div style="font-size:11px;color:#cbd5e1">Carga Horária Total Pendente para Conclusão</div>
+            <div style="font-size:20px;font-weight:700;margin:4px 0">1.320 horas pendentes</div>
+            <div style="font-size:11px;color:#cbd5e1">2.160 h cumpridas de 3.480 h totais (62% integralizado)</div>
+          </div>
+
+          <div class="pm-card">
+            <strong style="font-size:12px">Por modalidade curricular</strong>
+            <div style="margin-top:6px;font-size:11.5px">
+              <div class="pm-row"><span>CH. Obrigatória</span><strong>1.470 / 2.400 h (Pendente: 930 h)</strong></div>
+              <div class="pm-bar-bg"><div class="pm-bar-fill" style="width:61%;background:#1d4ed8"></div></div>
+              <div class="pm-row"><span>CH. Optativa</span><strong>540 / 930 h (Pendente: 390 h)</strong></div>
+              <div class="pm-bar-bg"><div class="pm-bar-fill" style="width:58%"></div></div>
+              <div class="pm-row"><span>CH. Complementar</span><strong>150 / 150 h (Pendente: 0 h)</strong></div>
+              <div class="pm-bar-bg"><div class="pm-bar-fill" style="width:100%;background:#6366f1"></div></div>
+            </div>
+          </div>
+
+          <div class="pm-card" style="background:#f8fafc">
+            <strong style="font-size:11.5px;color:#003366">Índices Acadêmicos e Dados Institucionais</strong>
+            <div style="font-size:11px;margin-top:4px"><strong>IRA (Índice de Rendimento Acadêmico):</strong> 3,7508</div>
+            <div style="font-size:11px;margin-top:2px"><strong>MP (Média Ponderada):</strong> 3,8088 · Entrada: 2021.2</div>
+            <div class="pm-btn-row" style="margin-top:8px">
+              <button type="button" class="pm-btn pm-btn-primary" style="min-height:38px" data-toast="Atestado de Matrícula emitido em PDF.">Emitir Atestado</button>
+              <button type="button" class="pm-btn" style="min-height:38px" data-toast="Histórico Escolar emitido em PDF.">Emitir Histórico</button>
+            </div>
+          </div>
+
+          <div class="pm-card">
+            <div style="font-size:10.5px;font-weight:700;color:#64748b;margin-bottom:5px">Demais serviços do menu Ensino (fora do escopo):</div>
+            <div class="pm-chip-row">
+              <button type="button" class="pm-dis" disabled>Declaração de Vínculo</button>
+              <button type="button" class="pm-dis" disabled>Passe Livre</button>
+              <button type="button" class="pm-dis" disabled>Carteirinha Estudantil</button>
+              <button type="button" class="pm-dis" disabled>Matrícula On-Line</button>
+              <button type="button" class="pm-dis" disabled>Trancamento</button>
+              <button type="button" class="pm-dis" disabled>Consultas Gerais</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ABA 4: CALENDÁRIO -->
+        <div id="pm-tab-calendario" class="pm-panel" style="display:none">
+          <div class="pm-card">
+            <div class="pm-row">
+              <span style="background:#ecfdf5;color:#065f46;border:1px solid #a7f3d0;padding:3px 8px;border-radius:6px;font-size:10.5px;font-weight:700">Calendário Interno SIGAA</span>
+              <select id="pm-cal-sem" aria-label="Selecionar período do calendário" style="min-height:34px;border-radius:6px;border:1px solid #cbd5e1;padding:4px 8px;font-size:11.5px;font-weight:700;color:#003366">
+                <option value="2026.2" selected>2026.2 (Vigente)</option>
+                <option value="2027.1">2027.1 (Previsto)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="pm-card pm-card-amber">
+            <span style="background:#92400e;color:#fff;padding:2px 7px;border-radius:4px;font-size:9.5px;font-weight:700">PRAZO CRÍTICO DO SEMESTRE</span>
+            <div style="font-size:13.5px;font-weight:700;margin-top:5px" id="pm-cal-destaque-tit">Trancamento Geral e de Turmas</div>
+            <div style="font-size:12.5px;font-weight:700;color:#92400e;margin-top:2px" id="pm-cal-destaque-dt">10/08/2026 até 09/10/2026</div>
+            <div style="font-size:11px;color:#334155;margin-top:3px" id="pm-cal-destaque-desc">Data-limite para trancamento no SIGAA: 09/10/2026.</div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <div class="pm-card" style="border-left:5px solid #065f46">
+              <strong style="color:#065f46;font-size:11.5px">10/08/2026 — Início do Período Letivo</strong>
+              <div style="font-size:11px;color:#334155">Abertura regular das aulas da graduação 2026.2.</div>
+            </div>
+            <div class="pm-card" style="border-left:5px solid #92400e">
+              <strong style="color:#92400e;font-size:11.5px">09/10/2026 — Limite de Trancamento</strong>
+              <div style="font-size:11px;color:#334155">Último dia para trancar disciplinas regulares no SIGAA.</div>
+            </div>
+            <div class="pm-card" style="border-left:5px solid #003366">
+              <strong style="color:#003366;font-size:11.5px">14/12/2026 — Término do Período Letivo</strong>
+              <div style="font-size:11px;color:#334155">Encerramento das aulas e consolidação de menções até 21/12.</div>
+            </div>
+          </div>
+
+          <div class="pm-card">
+            <div style="font-size:10.5px;font-weight:700;color:#64748b;margin-bottom:5px">Documentos normativos (fora do escopo):</div>
+            <div class="pm-chip-row">
+              <button type="button" class="pm-dis" disabled>Regulamento dos Cursos de Graduação</button>
+              <button type="button" class="pm-dis" disabled>Calendário Pós-Graduação</button>
+              <button type="button" class="pm-dis" disabled>Calendários Anteriores</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="pm-nav" aria-label="Navegação principal do protótipo">
+        <button type="button" class="ativo" data-goto="inicio"><span>Início</span></button>
+        <button type="button" data-goto="turmas"><span>Turmas</span></button>
+        <button type="button" data-goto="progresso"><span>Progresso</span></button>
+        <button type="button" data-goto="calendario"><span>Calendário</span></button>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var root = document.getElementById('pm-simulador');
+  if(!root) return;
+  var titulos = {
+    inicio: ['UnB - SIGAA', 'Portal do Discente · 2026.2'],
+    turmas: ['UnB - SIGAA', 'Turma Virtual · Qualidade de Software 1'],
+    progresso: ['UnB - SIGAA', 'Integralização e Ensino · 2026.2'],
+    calendario: ['UnB - SIGAA', 'Calendário Acadêmico · Graduação 2026.2']
+  };
+  var body = document.getElementById('pm-body');
+  var toast = document.getElementById('pm-toast');
+  function irPara(aba, subtab){
+    root.querySelectorAll('.pm-panel').forEach(function(p){ p.style.display='none'; });
+    var alvo = document.getElementById('pm-tab-' + aba);
+    if(alvo) alvo.style.display='flex', alvo.style.flexDirection='column', alvo.style.gap='8px';
+    document.getElementById('pm-title').textContent = titulos[aba][0];
+    document.getElementById('pm-sub').textContent = titulos[aba][1];
+    root.querySelectorAll('.pm-nav button, .pm-guide-btn').forEach(function(b){
+      b.classList.toggle('ativo', b.getAttribute('data-goto') === aba);
+    });
+    if(aba === 'turmas' && subtab) abrirSubtab(subtab);
+    body.scrollTop = 0;
+  }
+  function abrirSubtab(sub){
+    ['materiais','notas','avisos'].forEach(function(s){
+      var el = document.getElementById('pm-sub-' + s);
+      if(el) el.style.display = (s === sub) ? 'flex' : 'none';
+    });
+    root.querySelectorAll('[data-subtab]').forEach(function(b){
+      if(b.closest('.pm-seg')) b.classList.toggle('ativo', b.getAttribute('data-subtab') === sub);
+    });
+  }
+  root.addEventListener('click', function(ev){
+    var g = ev.target.closest('[data-goto]');
+    if(g){ irPara(g.getAttribute('data-goto'), g.getAttribute('data-subtab')); return; }
+    var s = ev.target.closest('[data-subtab]');
+    if(s){ abrirSubtab(s.getAttribute('data-subtab')); return; }
+    var v = ev.target.closest('[data-view]');
+    if(v){
+      var modo = v.getAttribute('data-view');
+      document.getElementById('pm-view-lista').style.display = modo==='lista' ? 'flex' : 'none';
+      document.getElementById('pm-view-grade').style.display = modo==='grade' ? 'block' : 'none';
+      v.parentElement.querySelectorAll('button').forEach(function(b){ b.classList.toggle('ativo', b===v); });
+      return;
+    }
+    var f = ev.target.closest('[data-filter]');
+    if(f){
+      var tipo = f.getAttribute('data-filter');
+      f.parentElement.querySelectorAll('button').forEach(function(b){ b.classList.toggle('ativo', b===f); });
+      root.querySelectorAll('.pm-mat-item').forEach(function(it){
+        it.style.display = (tipo==='todos' || it.getAttribute('data-tipo')===tipo) ? 'flex' : 'none';
+      });
+      return;
+    }
+    var t = ev.target.closest('[data-toast]');
+    if(t){
+      toast.textContent = t.getAttribute('data-toast');
+      toast.classList.add('vis');
+      setTimeout(function(){ toast.classList.remove('vis'); }, 4000);
+    }
+  });
+  document.getElementById('pm-f-up').addEventListener('click', function(){
+    body.classList.remove('fs-sm'); body.classList.add('fs-lg');
+  });
+  document.getElementById('pm-f-down').addEventListener('click', function(){
+    body.classList.remove('fs-lg'); body.classList.add('fs-sm');
+  });
+  var sel = document.getElementById('pm-cal-sem');
+  if(sel){
+    sel.addEventListener('change', function(){
+      var p27 = sel.value === '2027.1';
+      document.getElementById('pm-cal-destaque-tit').textContent = p27 ? 'Calendário Previsto 2027.1' : 'Trancamento Geral e de Turmas';
+      document.getElementById('pm-cal-destaque-dt').textContent = p27 ? 'Previsão de início: 08/03/2027' : '10/08/2026 até 09/10/2026';
+      document.getElementById('pm-cal-destaque-desc').textContent = p27 ? 'Período futuro selecionado manualmente.' : 'Data-limite para trancamento no SIGAA: 09/10/2026.';
+    });
+  }
+  irPara('inicio');
+})();
+</script>
+</body></html>
