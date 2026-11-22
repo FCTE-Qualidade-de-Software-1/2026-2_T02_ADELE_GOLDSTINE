@@ -104,3 +104,10 @@ IQ4,problema_celular,nao_concluiu,5,0.4000,,2 de 5 marcaram em B5
 IQ4,problema_celular,nenhum,5,0.0000,,0 de 5 marcaram em B5
 IQ4,problema_celular,nao_usa,5,0.0000,,0 de 5 marcaram em B5
 HP1,geral,,5,2.0000,,"inconclusiva: grupo com menos de três questionários válidos (começo: 2, meio ou fim: 3); tarefas com mediana menor no começo do curso: T1, T5 (valor = número dessas tarefas; indício descritivo, não confirmação)"
+M15,geral,,1,1.5941,Regular,"1 avaliador(es); Leonardo: Tm = 110.2 s, Td = 69.1 s"
+M15,tarefa,T1,1,1.3922,,recorte por tarefa (regra 3)
+M15,tarefa,T2,1,2.0307,,recorte por tarefa (regra 3)
+M15,tarefa,T3,1,1.0517,,recorte por tarefa (regra 3)
+M15,tarefa,T4,1,1.0937,,recorte por tarefa (regra 3)
+M15,tarefa,T5,1,1.9584,,recorte por tarefa (regra 3)
+M15,tarefa,T6,1,1.8944,,recorte por tarefa (regra 3)
