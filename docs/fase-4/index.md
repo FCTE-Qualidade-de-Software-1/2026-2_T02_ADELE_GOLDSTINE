@@ -19,6 +19,10 @@ Esta fase corresponde à quarta atividade do processo de avaliação de produto 
 
 *Fonte: elaboração da equipe.*
 
+## Julgamento
+
+A comparação de cada métrica com os níveis de pontuação, as respostas às questões Q1 a Q16, a classificação das hipóteses, o julgamento das três características, o ranking das tarefas e a ligação com o propósito da Fase 1 estão em [Julgamento da Avaliação](julgamento.md). Com os dados de 21/11/2026, Capacidade de Interação não atende, Flexibilidade atende parcialmente e Adequação Funcional fica inconclusiva até a inspeção por pares.
+
 ## Referências
 
 [1] ISO/IEC 25040:2024. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Quality evaluation framework*.
@@ -29,3 +33,4 @@ Esta fase corresponde à quarta atividade do processo de avaliação de produto 
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 15/11/2026 | Criação da página da Fase 4 com a situação da coleta | [arthurlleite](https://github.com/arthurlleite) |
 | 1.1 | 21/11/2026 | Atualização da situação de M13 (24/24, concluída com Edge e WebKit) e inclusão dos resultados de M9 (WAVE) | [Felipe Campêlo](https://github.com/felipeacampelo) |
+| 1.2 | 21/11/2026 | Inclusão do link para o julgamento da avaliação | Leonardo Bonetti |
