@@ -12,7 +12,7 @@ Esta fase corresponde à quarta atividade do processo de avaliação de produto 
 | ------ | -------- | -------- | ------ |
 | Teste com usuários e questionário | M3 a M8, M11, M12, MA1 | Concluída com 5 participantes (P1, P2, P3, P4 e P6): M3 (60,0%), M4 (73,3%), M5 (83,3%), M6 (4,39×), M7 (1,46×), M8 (81,25%), M11 (53,3%) e M12 (32,5) | [Teste com usuários (gráficos)](teste-usuarios.md) |
 | Acessibilidade automática (WAVE) | M9 | Concluída: 13,17 erros/página (79 erros em 6 páginas, Insatisfatório) | [Acessibilidade Automática (M9)](acessibilidade.md) |
-| Inspeção por pares | M1, M2, M10, M20 | Não iniciada | - |
+| Inspeção por pares | M1, M2, M10, M20 | Concluída: M1 (77,8%, Regular), M2 (97,0%, Bom), M10 (54,2%, Insatisfatório) e M20 (83,3%, Bom) | [Julgamento da Avaliação](julgamento.md) |
 | Execução instrumentada | M13, M14 | Concluída: M13 (24/24, Excelente) e M14 (0/12, Insatisfatório) | [Flexibilidade](flexibilidade.md) |
 | Execução manual em celular | M15 | Concluída: 1,59 (110,2 s no celular para 69,1 s no computador, Regular) | [Julgamento da Avaliação](julgamento.md) |
 | Dados complementares (fora do julgamento) | Rapidez, responsividade, estabilidade e fluidez | Concluída (46 de 48 execuções válidas) | [Desempenho (complementar)](desempenho.md) |
@@ -21,7 +21,7 @@ Esta fase corresponde à quarta atividade do processo de avaliação de produto 
 
 ## Julgamento
 
-A comparação de cada métrica com os níveis de pontuação, as respostas às questões Q1 a Q16, a classificação das hipóteses, o julgamento das três características, o ranking das tarefas e a ligação com o propósito da Fase 1 estão em [Julgamento da Avaliação](julgamento.md). Capacidade de Interação: ___. Adequação Funcional: ___. Flexibilidade: atende parcialmente.
+A comparação de cada métrica com os níveis de pontuação, as respostas às questões Q1 a Q16, a classificação das hipóteses, o julgamento das três características, o ranking das tarefas e a ligação com o propósito da Fase 1 estão em [Julgamento da Avaliação](julgamento.md). Capacidade de Interação: não atende. Adequação Funcional: atende parcialmente. Flexibilidade: atende parcialmente.
 
 ## Ação de Melhoria Técnica (Seção 3.2)
 
@@ -40,3 +40,4 @@ Com base nos piores resultados medidos (**M14 = 0/12**, **M12 = 32,5**, **M9 = 1
 | 1.2 | 21/11/2026 | Consolidação da conclusão do teste com usuários (P1 a P4 e P6) e inclusão do link para o Protótipo Mobile (Ação de Melhoria Técnica) | [Davi Nobre](https://github.com/Jagaima) |
 | 1.3 | 22/11/2026 | Inclusão do link para o julgamento da avaliação | Leonardo Bonetti |
 | 1.4 | 22/11/2026 | Situação de M15 (concluída, 1,59) | Leonardo Bonetti |
+| 1.5 | 22/11/2026 | Situação da inspeção (M1, M2, M10 e M20 concluídas) | Caio Borges |
