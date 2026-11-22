@@ -107,6 +107,39 @@ A resposta textual de cada questão segue o nível da sua métrica ([Tabela 4 de
 
 Das cinco hipóteses refutadas, duas erraram para melhor (H8 e H14) e três para pior (H3, H6 e H13). As refutações para pior estão todas na percepção e no esforço do estudante: as hipóteses da Fase 1 subestimaram o quanto o uso do SIGAA é demorado e insatisfatório.
 
+## 3. Julgamento das características
+
+A pontuação de cada objetivo é a média dos níveis das questões com dados ([Etapa 2](../fase-2/niveis-pontuacao.md#etapa-2-pontuacao-do-objetivo)), e o julgamento segue a [Tabela 6 de Níveis de Pontuação](../fase-2/niveis-pontuacao.md#etapa-3-julgamento-da-caracteristica), verificando primeiro a condição "Inconclusivo". As características aparecem na ordem de prioridade da Fase 1 ([regra 5](../fase-2/niveis-pontuacao.md#regra-5-ausencia-de-nota-unica)), e não há nota única para o SIGAA.
+
+*Tabela 6 - Julgamento das características em 21/11/2026.*
+
+| Objetivo | Questões com dados | Níveis | Média | Julgamento | Pode mudar com os dados pendentes? |
+| -------- | :----------------: | ------ | :---: | ---------- | ---------------------------------- |
+| G2 - Capacidade de Interação | 8 de 10 | Q4 = 1, Q5 = 2, Q6 = 0, Q7 = 1, Q8 = 2, Q10 = 0, Q12 = 1, Q13 = 0 | 0,88 | **Não atende** | Sim. Com Q9 e Q11, a média chega a 1,0 se M20 e M10 somarem ao menos 3 pontos (por exemplo, um Bom e um Regular), e o julgamento passa a "Atende parcialmente" |
+| G1 - Adequação Funcional | 1 de 3 | Q3 = 0 | - | **Inconclusivo** (mais da metade das questões sem dados) | Sim. Com Q1 e Q2, o julgamento só pode ser "Atende parcialmente" (M1 e M2 somando ao menos 3 pontos) ou "Não atende", porque Q3 Insatisfatória impede "Atende" |
+| G3 - Flexibilidade | 2 de 3 | Q14 = 3, Q15 = 0 | 1,50 | **Atende parcialmente** | Não. Com qualquer nível de M15, a média fica entre 1,00 e 2,00, e Q15 Insatisfatória impede "Atende" |
+
+*Fonte: elaboração da equipe.*
+
+**G2 - Capacidade de Interação: não atende.** Das oito questões com dados, três são Insatisfatórias (tempo, acessibilidade automática e satisfação) e nenhuma é Excelente. O estudante conclui a maior parte das tarefas e se recupera da maior parte dos erros (Q5 e Q8, Bom), mas leva mais de quatro vezes o tempo de um usuário experiente, encontra barreiras de acessibilidade em todas as páginas e avalia o sistema na faixa mais baixa do SUS. As hipóteses H9 e H11 preveem M20 Insatisfatório e M10 Regular; se elas se confirmarem, a soma das duas questões será 1 ponto, e o julgamento continuará "Não atende".
+
+**G1 - Adequação Funcional: inconclusivo.** Só a questão de pertinência funcional (Q3) tem dados, e ela é Insatisfatória. A completude (Q1) e a correção (Q2) dependem da inspeção por pares. Qualquer que seja o resultado da inspeção, a característica não poderá ser julgada "Atende".
+
+**G3 - Flexibilidade: atende parcialmente.** O julgamento já é definitivo. O SIGAA é plenamente compatível com os navegadores de computador (Q14, Excelente) e nada adaptado a telas pequenas e ao toque (Q15, Insatisfatório). A média não representa um sistema "médio": ela soma um ponto forte e um ponto crítico, e a separação por questão mostra onde está o problema.
+
+## 4. Hipóteses de relação entre as características
+
+*Tabela 7 - Verificação das hipóteses de relação.*
+
+| ID | Relação | Resultado | Situação |
+| -- | ------- | --------- | -------- |
+| HR1 | Flexibilidade → Capacidade de Interação | M15 ainda não foi medida. A comparação complementar de M5 e M6 entre computador e celular não se aplica: pelo [protocolo](../fase-3/teste-usuarios.md), todas as sessões do teste com usuários foram feitas em computador | **Pendente** (depende de M15) |
+| HR2 | Capacidade de Interação → Adequação Funcional | MA1 = 0: em nenhuma das 30 tentativas o participante afirmou que uma função existente não existia | **Não estabelecida** |
+
+*Fonte: elaboração da equipe, com os critérios de [Hipóteses de relação](../fase-2/hipoteses.md#hipoteses-de-relacao-entre-as-caracteristicas).*
+
+HR2 previa que a dificuldade de interação levaria o estudante a concluir que uma função não existe. Isso não ocorreu: quando não encontraram a função, os participantes desistiram ou concluíram a tarefa fora do SIGAA, como nos dois casos de T6 em que o link do painel levou ao site da SAA. A dificuldade de interação aparece no tempo, nos desvios e na satisfação, mas não se converteu em percepção de falta de função.
+
 ## Referências
 
 [1] ISO/IEC 25040:2024. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Quality evaluation framework*.
@@ -116,3 +149,4 @@ Das cinco hipóteses refutadas, duas erraram para melhor (H8 e H14) e três para
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 21/11/2026 | Situação das 16 métricas, respostas às questões e classificação das hipóteses H1 a H16 | Leonardo Bonetti |
+| 1.1 | 21/11/2026 | Julgamento de G1, G2 e G3 e verificação das hipóteses de relação HR1 e HR2 | Leonardo Bonetti |
