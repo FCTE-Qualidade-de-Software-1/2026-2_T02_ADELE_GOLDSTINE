@@ -29,7 +29,7 @@ O gráfico abaixo mostra onde caíram as oito métricas do teste com usuários e
 | G2 | Q13 | M12 - Pontuação SUS | 32,5 (5 questionários) | Insatisfatório (0) | Questionário SUS |
 | G3 | Q14 | M13 - Compatibilidade entre navegadores | 100% (24 de 24 combinações) | Excelente (3) | Execução instrumentada |
 | G3 | Q15 | M14 - Páginas adaptadas a telas pequenas | 0% (0 de 12 verificações) | Insatisfatório (0) | Execução instrumentada |
-| G3 | Q16 | M15 - Tempo relativo no celular | ___ | ___ | Execução manual no celular |
+| G3 | Q16 | M15 - Tempo relativo no celular | 1,59 (110,2 s no celular para 69,1 s no computador) | Regular (1) | Execução manual no celular |
 
 *Fonte: elaboração da equipe, a partir de `dados/consolidados/metricas.csv` e das faixas de [Níveis de Pontuação](../fase-2/niveis-pontuacao.md#faixas-por-metrica).*
 
@@ -88,11 +88,13 @@ A resposta textual de cada questão segue o nível da sua métrica ([Tabela 4 de
 | :-----: | ----- | -------- | ------------------- | ------------- |
 | Q14 | Excelente (3) | Sim, plenamente | H14: M13 ≥ 90% e < 100% (Bom) | **Refutada**: M13 = 100% ficou acima da faixa prevista |
 | Q15 | Insatisfatório (0) | Não | H15: M14 < 50% (Insatisfatório) | **Confirmada** |
-| Q16 | ___ | ___ | H16: M15 > 1,5 e ≤ 2,0 (Regular) | ___ |
+| Q16 | Regular (1) | Parcialmente, com dificuldade relevante | H16: M15 > 1,5 e ≤ 2,0 (Regular) | **Confirmada** |
 
-*Fonte: elaboração da equipe, com as classificações de H14 e H15 registradas em [Flexibilidade](flexibilidade.md).*
+*Fonte: elaboração da equipe, com as classificações de H14 e H15 registradas em [Flexibilidade](flexibilidade.md) e os tempos de M15 em [`dados/brutos/flexibilidade/tempos-celular.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/brutos/flexibilidade/tempos-celular.csv).*
 
 **Q14 e Q15.** No computador, as seis tarefas funcionaram nos quatro navegadores; no celular e no tablet, nenhuma das seis páginas se adapta à tela. As duas respostas confirmam o que a Fase 1 apontava (OP-02 e OP-03): o problema de Flexibilidade do SIGAA está na tela pequena e no toque, e não no navegador.
+
+**Q16 (confirmada).** As seis tarefas levaram, no celular, 1,59 vez o tempo no computador, executadas pelo mesmo avaliador, pelo caminho mais curto e na mesma rede. A diferença se concentra nas tarefas em que é preciso ler tabelas pequenas ou tocar em vários alvos: T2 (2,03), T5 (1,96) e T6 (1,89). Nas tarefas que terminam em um PDF ou na leitura do painel inicial, o tempo foi parecido nos dois aparelhos: T3 (1,05) e T4 (1,09). O estudante consegue concluir as tarefas no celular, mas com esforço adicional, como previa H16.
 
 ### 2.4 Síntese das hipóteses
 
@@ -100,7 +102,7 @@ A resposta textual de cada questão segue o nível da sua métrica ([Tabela 4 de
 
 | Classificação | Hipóteses | Total |
 | ------------- | --------- | :---: |
-| Confirmada | H4, H7, H10, H12, H15, ___ | ___ |
+| Confirmada | H4, H7, H10, H12, H15, H16, ___ | ___ |
 | Refutada | H3, H6, H8, H13, H14, ___ | ___ |
 | Inconclusiva | ___ | ___ |
 
@@ -118,7 +120,7 @@ A pontuação de cada objetivo é a média dos níveis das suas questões ([Etap
 | -------- | ------------------- | :---: | ---------- |
 | G2 - Capacidade de Interação | Q4 = 1, Q5 = 2, Q6 = 0, Q7 = 1, Q8 = 2, Q9 = ___, Q10 = 0, Q11 = ___, Q12 = 1, Q13 = 0 | ___ | ___ |
 | G1 - Adequação Funcional | Q1 = ___, Q2 = ___, Q3 = 0 | ___ | ___ |
-| G3 - Flexibilidade | Q14 = 3, Q15 = 0, Q16 = ___ | ___ | **Atende parcialmente** |
+| G3 - Flexibilidade | Q14 = 3, Q15 = 0, Q16 = 1 | 1,33 | **Atende parcialmente** |
 
 *Fonte: elaboração da equipe.*
 
@@ -126,7 +128,7 @@ A pontuação de cada objetivo é a média dos níveis das suas questões ([Etap
 
 **G1 - Adequação Funcional: ___.** A pertinência funcional (Q3) é Insatisfatória, o que impede o julgamento "Atende". ___
 
-**G3 - Flexibilidade: atende parcialmente.** Q15 Insatisfatória impede o julgamento "Atende", e, com Q14 Excelente, a média não fica abaixo de 1,0. O SIGAA é plenamente compatível com os navegadores de computador (Q14, Excelente) e nada adaptado a telas pequenas e ao toque (Q15, Insatisfatório). A média não representa um sistema "médio": ela soma um ponto forte e um ponto crítico, e a separação por questão mostra onde está o problema.
+**G3 - Flexibilidade: atende parcialmente.** Q15 Insatisfatória impede o julgamento "Atende", e a média é 1,33. O SIGAA é plenamente compatível com os navegadores de computador (Q14, Excelente), nada adaptado a telas pequenas e ao toque (Q15, Insatisfatório) e, no celular, exige cerca de 60% mais tempo para as mesmas tarefas (Q16, Regular). A média não representa um sistema "médio": ela soma um ponto forte e um ponto crítico, e a separação por questão mostra onde está o problema.
 
 ## 4. Hipóteses de relação entre as características
 
@@ -134,10 +136,12 @@ A pontuação de cada objetivo é a média dos níveis das suas questões ([Etap
 
 | ID | Relação | Resultado | Situação |
 | -- | ------- | --------- | -------- |
-| HR1 | Flexibilidade → Capacidade de Interação | M15 por tarefa cruzado com M14: ___. A comparação complementar de M5 e M6 entre computador e celular não se aplica: pelo [protocolo](../fase-3/teste-usuarios.md), todas as sessões do teste com usuários foram feitas em computador | ___ |
+| HR1 | Flexibilidade → Capacidade de Interação | M15 = 1,59, acima do limite de 1,5 do critério de refutação. Nenhuma das seis páginas é adaptada (M14 = 0 de 12), e as maiores razões estão em T2 (2,03), T5 (1,96) e T6 (1,89); T5 é a única página que também falha no critério (c) de M14, com texto sobreposto. A comparação complementar de M5 e M6 entre computador e celular não se aplica: pelo [protocolo](../fase-3/teste-usuarios.md), todas as sessões do teste com usuários foram feitas em computador | **Estabelecida, com ressalva** |
 | HR2 | Capacidade de Interação → Adequação Funcional | MA1 = 0: em nenhuma das 30 tentativas o participante afirmou que uma função existente não existia | **Não estabelecida** |
 
 *Fonte: elaboração da equipe, com os critérios de [Hipóteses de relação](../fase-2/hipoteses.md#hipoteses-de-relacao-entre-as-caracteristicas).*
+
+HR1 não foi refutada: o celular exige mais esforço, e as tarefas de maior razão estão em páginas não adaptadas. A ressalva é que M14 não distingue as páginas (todas falham), então o cruzamento não mostra se uma página adaptada teria razão menor; T3 e T4, também em páginas não adaptadas, tiveram razão próxima de 1 porque terminam em um PDF ou na leitura do painel, sem navegação em menus.
 
 HR2 previa que a dificuldade de interação levaria o estudante a concluir que uma função não existe. Isso não ocorreu: quando não encontraram a função, os participantes desistiram ou concluíram a tarefa fora do SIGAA, como nos dois casos de T6 em que o link do painel levou ao site da SAA. A dificuldade de interação aparece no tempo, nos desvios e na satisfação, mas não se converteu em percepção de falta de função.
 
@@ -169,7 +173,7 @@ A Fase 1 definiu as decisões que a avaliação deve apoiar ([Propósito e Parte
 | Decisão a ser apoiada | Quem decide | Resultado que embasa a decisão | O que os resultados indicam |
 | --------------------- | ----------- | ------------------------------ | --------------------------- |
 | Quais telas e fluxos do portal do discente priorizar em um ciclo de melhoria | STI/UnB | Ranking das tarefas (Tabela 8) e julgamento de Capacidade de Interação e Adequação Funcional | Priorizar ___, as tarefas de pior índice. Capacidade de Interação: ___. Adequação Funcional: ___ |
-| Investir ou não em uma interface responsiva ou aplicativo móvel | STI/UnB | Julgamento de Flexibilidade cruzado com o perfil de acesso | Investir na interface responsiva. O SIGAA funciona nos quatro navegadores de computador (M13 = 100%), mas nenhuma página se adapta ao celular (M14 = 0%). Todos os cinco participantes usam o SIGAA no celular, e três o usam como dispositivo principal ou tanto quanto o computador (IQ4) |
+| Investir ou não em uma interface responsiva ou aplicativo móvel | STI/UnB | Julgamento de Flexibilidade cruzado com o perfil de acesso | Investir na interface responsiva. O SIGAA funciona nos quatro navegadores de computador (M13 = 100%), mas nenhuma página se adapta ao celular (M14 = 0%), e as tarefas levam 1,59 vez o tempo do computador (M15). Todos os cinco participantes usam o SIGAA no celular, e três o usam como dispositivo principal ou tanto quanto o computador (IQ4) |
 | Quais procedimentos precisam de tutorial, aviso ou orientação adicional | DEG e coordenações | Tarefas com maior taxa de erro ou abandono e funções de difícil localização | Orientar sobre T4 e T6, as tarefas com menor conclusão sem ajuda (60%) e com dois em cada cinco participantes que já precisaram de ajuda nelas (IQ2). Em T6, o aviso mais direto é sobre o link do painel, que leva ao calendário da Pós-Graduação. Em T2, explicar o código de horário, interpretado corretamente por 40% dos participantes |
 | Se há necessidade de otimizar páginas específicas | STI/UnB | Medidas de comportamento temporal e uso de recursos | Eficiência de Desempenho ficou fora da especificação, e esta decisão não recebe julgamento. Os [dados complementares](desempenho.md) apontam a Turma Virtual (T5) como a página mais pesada: cerca de 1,9 MB transferidos e 19 s de espera no celular em 4G |
 | Qual ação de melhoria executar na Fase 4 | Equipe avaliadora | Problema de maior impacto entre os julgamentos | A característica de pior julgamento é ___, e a tarefa de pior índice é ___ (regra 4). Em Flexibilidade, o problema de maior alcance é a ausência de adaptação ao celular, usado por todos os participantes |
@@ -182,6 +186,7 @@ O julgamento responde ao propósito da avaliação, que é dar à STI e ao DEG e
 
 - **Amostra do teste com usuários.** A coleta terminou com cinco participantes (P1, P2, P3, P4 e P6), recrutados por conveniência na FCTE. O grupo do começo do curso teve dois participantes, e os recortes desse grupo são apenas descritivos (regra 3).
 - **M14 por emulação.** As larguras de 360 e 768 px foram verificadas por emulação no navegador, e não em celular real ([Flexibilidade](flexibilidade.md)).
+- **M15 com um avaliador.** A ficha prevê a média entre avaliadores; M15 foi medida por um avaliador, em um celular (Samsung Galaxy S25 Ultra, Chrome) e uma execução por tarefa. Os tempos foram marcados pela fala do avaliador nas gravações ("começando" e "pronto"), com incerteza de cerca de 0,3 s por marcação; o valor só mudaria de nível com um erro de cerca de 6% no tempo total.
 
 ## Referências
 
@@ -192,3 +197,4 @@ O julgamento responde ao propósito da avaliação, que é dar à STI e ao DEG e
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 21/11/2026 | Criação da página: nível das métricas, respostas às questões Q1 a Q16, classificação das hipóteses H1 a H16, julgamento de G1, G2 e G3, hipóteses de relação, ranking das tarefas e coerência com o propósito da Fase 1 | Leonardo Bonetti |
+| 1.1 | 22/11/2026 | Resultado de M15: resposta a Q16, H16 confirmada, pontuação de G3, verificação de HR1 e limitação de um avaliador | Leonardo Bonetti |
