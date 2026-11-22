@@ -2,21 +2,21 @@
 
 <!-- Critérios F4-C1 a F4-C3: execução conforme o plano da Fase 3, dados brutos rastreáveis e cálculo das métricas. -->
 
-Esta página registra a execução das métricas do objetivo **G3 - Flexibilidade (Portabilidade)**: M13 (compatibilidade entre navegadores) e M14 (páginas adaptadas a telas pequenas e ao toque). M15 (tempo relativo no celular) depende de um avaliador cronometrando as tarefas em um celular real e ainda não foi executada (seção 7). Para cada métrica, a página mostra o que foi medido, com qual instrumento, como o dado bruto virou valor e o que o valor significa para a questão GQM e para a hipótese correspondentes.
+Esta página registra a execução das métricas do objetivo **G3 - Flexibilidade (Portabilidade)**: M13 (compatibilidade entre navegadores), M14 (páginas adaptadas a telas pequenas e ao toque) e M15 (tempo relativo no celular). M13 e M14 foram medidas por execução instrumentada; M15 foi medida manualmente, por um avaliador cronometrando as tarefas no computador e em um celular real (seção 5). Para cada métrica, a página mostra o que foi medido, com qual instrumento, como o dado bruto virou valor e o que o valor significa para a questão GQM e para a hipótese correspondentes.
 
 ## 1. Rastreabilidade
 
 *Tabela 1 - Da característica ao arquivo de dados.*
 
-| Nível | M13 | M14 |
-| ----- | --- | --- |
-| Característica (ISO/IEC 25010:2023) [1] | Flexibilidade, subcaracterística **adaptabilidade** | Flexibilidade, subcaracterística **adaptabilidade** |
-| Medida de referência (ISO/IEC 25023:2016) [2] | Adaptabilidade ao ambiente de *software* do sistema (PAd-2-G): o navegador é o ambiente de *software* em que o produto roda no cliente | Adaptabilidade ao ambiente de *hardware* (PAd-1-G): tamanho de tela e entrada por toque |
-| Questão e hipótese ([Fase 2](../fase-2/hipoteses.md)) | Q14; H14: 22 ou 23 de 24 combinações sem falha (Bom) | Q15; H15: até 5 de 12 verificações adaptadas (Insatisfatório) |
-| Ficha da métrica | [M13](../fase-2/metricas.md#m13-compatibilidade-entre-navegadores) | [M14](../fase-2/metricas.md#m14-proporcao-de-paginas-adaptadas-a-telas-pequenas-e-ao-toque) |
-| Dado bruto | `dados/brutos/flexibilidade/navegadores.csv` e `automatizado/navegadores.jsonl` | `dados/brutos/flexibilidade/paginas-adaptadas.csv` e `automatizado/telas.jsonl` |
-| Evidências | `dados/brutos/flexibilidade/evidencias/navegadores/` | `dados/brutos/flexibilidade/evidencias/telas/` |
-| Valor consolidado | `dados/consolidados/metricas.csv` | `dados/consolidados/metricas.csv` |
+| Nível | M13 | M14 | M15 |
+| ----- | --- | --- | --- |
+| Característica (ISO/IEC 25010:2023) [1] | Flexibilidade, subcaracterística **adaptabilidade** | Flexibilidade, subcaracterística **adaptabilidade** | Flexibilidade, subcaracterística **adaptabilidade** |
+| Medida de referência (ISO/IEC 25023:2016) [2] | Adaptabilidade ao ambiente de *software* do sistema (PAd-2-G): o navegador é o ambiente de *software* em que o produto roda no cliente | Adaptabilidade ao ambiente de *hardware* (PAd-1-G): tamanho de tela e entrada por toque | Sem medida equivalente na norma: razão de tempo definida pela equipe ([ficha de M15](../fase-2/metricas.md#m15-tempo-relativo-no-celular)) |
+| Questão e hipótese ([Fase 2](../fase-2/hipoteses.md)) | Q14; H14: 22 ou 23 de 24 combinações sem falha (Bom) | Q15; H15: até 5 de 12 verificações adaptadas (Insatisfatório) | Q16; H16: M15 > 1,5 e ≤ 2,0 (Regular) |
+| Ficha da métrica | [M13](../fase-2/metricas.md#m13-compatibilidade-entre-navegadores) | [M14](../fase-2/metricas.md#m14-proporcao-de-paginas-adaptadas-a-telas-pequenas-e-ao-toque) | [M15](../fase-2/metricas.md#m15-tempo-relativo-no-celular) |
+| Dado bruto | `dados/brutos/flexibilidade/navegadores.csv` e `automatizado/navegadores.jsonl` | `dados/brutos/flexibilidade/paginas-adaptadas.csv` e `automatizado/telas.jsonl` | `dados/brutos/flexibilidade/tempos-celular.csv` e `coleta/calcular_m15.py` |
+| Evidências | `dados/brutos/flexibilidade/evidencias/navegadores/` | `dados/brutos/flexibilidade/evidencias/telas/` | Gravações de tela `M15_celular` e `M15_computador`, na pasta restrita da equipe (coluna `evidencia` com o trecho de cada tarefa) |
+| Valor consolidado | `dados/consolidados/metricas.csv` | `dados/consolidados/metricas.csv` | `dados/consolidados/metricas.csv` |
 
 *Fonte: elaboração da equipe.*
 
@@ -172,15 +172,17 @@ Dois resultados contrariam parte das expectativas da Fase 1:
 
 **Modo Mobile.** O rodapé de todas as páginas tem um *link* "Modo Mobile | Modo Clássico". Mesmo recebendo o *user agent* de um celular Android, o SIGAA entregou o modo clássico, e o *link* para a versão móvel fica no fim da página, com o mesmo texto reduzido das demais. A avaliação mede as páginas que o estudante recebe ao acessar o sistema, como define a ficha de M14; a cobertura de T1 a T6 pelo Modo Mobile não foi verificada nesta execução e fica registrada como ponto a examinar.
 
-## 5. Julgamento de Q14 e Q15 e classificação de H14 e H15
+## 5. Julgamento de Q14 a Q16 e classificação de H14 a H16
 
-*Tabela 8 - Julgamento parcial do objetivo G3.*
+M15 foi medida em 22/11/2026 por um avaliador, que executou T1 a T6 pelo caminho mais curto, primeiro no computador e depois no celular (Samsung Galaxy S25 Ultra), com o Google Chrome nos dois aparelhos e na mesma rede Wi-Fi. As duas execuções foram gravadas, e o tempo de cada tarefa vai da fala "começando" à fala "pronto" do avaliador.
+
+*Tabela 8 - Julgamento do objetivo G3.*
 
 | Questão | Métrica | Valor | Nível da questão | Hipótese | Classificação |
 | ------- | ------- | ----- | ---------------- | -------- | ------------- |
 | Q14 | M13 | 24 de 24 (100%) | **Excelente (3)** | H14: 22 ou 23 de 24 (Bom) | **Refutada** (superou a faixa prevista: Excelente) |
 | Q15 | M14 | 0 de 12 (0%) | **Insatisfatório (0)** | H15: até 5 de 12 (Insatisfatório) | **Confirmada** |
-| Q16 | M15 | Não executada | Sem dados | H16: 1,5 a 2,0 (Regular) | Inconclusiva por enquanto |
+| Q16 | M15 | 1,59 (110,2 s no celular para 69,1 s no computador) | **Regular (1)** | H16: 1,5 a 2,0 (Regular) | **Confirmada** |
 
 *Fonte: elaboração da equipe, pelas regras de [Níveis de Pontuação](../fase-2/niveis-pontuacao.md#criterios-de-julgamento).*
 
@@ -188,7 +190,9 @@ Dois resultados contrariam parte das expectativas da Fase 1:
 
 **Resposta a Q15** (Tabela 4 de Níveis de Pontuação, nível Insatisfatório): **Não.** As páginas do escopo não se adaptam a telas de celular e tablet: o conteúdo é exibido reduzido, com texto e alvos de toque abaixo dos mínimos, embora os menus respondam ao toque.
 
-**Julgamento parcial de G3:** com Q14 = Excelente (3) e Q15 = Insatisfatório (0), a média parcial é 1,50, e Q16 (M15) segue pendente. Independentemente do nível que M15 venha a receber (de 0 a 3), a média final de G3 ficará entre 1,00 e 2,00 e a presença de uma questão Insatisfatória (Q15) impede os julgamentos *Atende* e *Atende plenamente*; assim, o julgamento final de Flexibilidade será **Atende parcialmente**, aguardando apenas a medição de M15 para o fechamento oficial da pontuação.
+**Resposta a Q16** (Tabela 4 de Níveis de Pontuação, nível Regular): **Parcialmente, com dificuldade relevante.** As seis tarefas foram concluídas no celular, mas com 1,59 vez o tempo do computador. A diferença se concentra nas tarefas que exigem ler tabelas pequenas ou tocar em vários alvos: T2 (2,03), T5 (1,96) e T6 (1,89). T3 (1,05) e T4 (1,09), que terminam em um PDF ou na leitura do painel inicial, tiveram tempos parecidos nos dois aparelhos.
+
+**Julgamento de G3:** com Q14 = Excelente (3), Q15 = Insatisfatório (0) e Q16 = Regular (1), a média é 1,33. A questão Insatisfatória (Q15) impede os julgamentos *Atende* e *Atende plenamente*, e o julgamento de Flexibilidade é **Atende parcialmente**. O julgamento das três características está em [Julgamento da Avaliação](julgamento.md).
 
 ## 6. Triangulação com o teste com usuários
 
@@ -201,12 +205,12 @@ As duas sessões já realizadas (P1 e P3, do grupo do começo do curso) foram fe
 | Precisa de zoom e rolagem | Sim | Sim | (a) e (b) | Não atendidos nas 12 verificações |
 | Botões pequenos | Sim | Sim | (e) | Não atendido nas 12 verificações |
 | Conteúdo cortado | - | Sim | (c) | Não atendido na Turma Virtual (T5) |
-| Menu que não abriu | - | Sim | (d) | Atendido na emulação; a conferir em aparelho real |
-| Não conseguiu concluir uma tarefa | Sim | - | (M15, não executada) | - |
+| Menu que não abriu | - | Sim | (d) | Atendido na emulação e no celular real de M15, em que o menu Ensino abriu ao toque em T1, T3 e T6 |
+| Não conseguiu concluir uma tarefa | Sim | - | (M15) | O avaliador concluiu as seis tarefas no celular, com 1,59 vez o tempo do computador |
 
 *Fonte: `dados/brutos/questionario/respostas.csv` e Tabela 6.*
 
-P3 acessa o SIGAA principalmente pelo celular, o perfil que a Fase 1 associou ao maior impacto de Flexibilidade, e é também o único dos dois que usa ferramenta externa (uma planilha) para planejar o curso. Com dois participantes, a comparação é descritiva; ela mostra, porém, que os problemas medidos são os mesmos que os estudantes percebem, o que reforça a validade de M14 como medida do problema real. Esses dados também alimentam a hipótese de relação HR1 (Flexibilidade → Capacidade de Interação), que só pode ser verificada com M15.
+P3 acessa o SIGAA principalmente pelo celular, o perfil que a Fase 1 associou ao maior impacto de Flexibilidade, e é também o único dos dois que usa ferramenta externa (uma planilha) para planejar o curso. Com dois participantes, a comparação é descritiva; ela mostra, porém, que os problemas medidos são os mesmos que os estudantes percebem, o que reforça a validade de M14 como medida do problema real. Esses dados também alimentam a hipótese de relação HR1 (Flexibilidade → Capacidade de Interação), verificada com M15 em [Julgamento da Avaliação](julgamento.md).
 
 ## 7. Desvios em relação ao plano da Fase 3 e ameaças à validade
 
@@ -214,12 +218,12 @@ P3 acessa o SIGAA principalmente pelo celular, o perfil que a Fase 1 associou ao
 
 | Plano da Fase 3 | O que foi feito | Efeito e tratamento |
 | --------------- | --------------- | ------------------- |
-| M14 em 360 px num **celular real** | Emulação do Chrome com dimensões, toque, escala e *user agent* de um celular Android | O motor de renderização é o mesmo do Chrome para Android. Os critérios que falharam dependem da largura e da falta de *viewport*, que a emulação reproduz. A verificação em um celular real fica para M15, que usa o mesmo aparelho, e confirma ou não os resultados |
+| M14 em 360 px num **celular real** | Emulação do Chrome com dimensões, toque, escala e *user agent* de um celular Android | O motor de renderização é o mesmo do Chrome para Android. Os critérios que falharam dependem da largura e da falta de *viewport*, que a emulação reproduz. Em M15, executada em um celular real, as páginas também apareceram reduzidas, sem adaptação à tela, e os menus abriram ao toque, o que é coerente com o resultado da emulação |
 | M13 em Safari (macOS) | WebKit 27.2 (compilação do Playwright no macOS, mesmo motor de renderização do Safari) | O Playwright automatiza o motor WebKit, não o aplicativo Safari diretamente, de forma análoga ao uso do Firefox compilado pelo Playwright para o motor Gecko. A renderização das páginas e o comportamento dos scripts seguem o motor WebKit nativo do macOS |
 | M13 em T5 com download de arquivo | Em Edge e WebKit (21/11), visualização de notícia na Turma Virtual de *Técnicas de Programação em Plataformas Emergentes* (`--modo-t5 noticia`) | Nenhuma turma matriculada na conta de Felipe em 2026.2 tinha arquivo anexado para download. A navegação dentro da Turma Virtual (entrada na turma, menu lateral e abertura de conteúdo publicado) foi exercitada integralmente e comparada contra a execução de referência no Chrome da mesma conta |
 | Firefox na versão estável vigente | Firefox 159 da compilação do Playwright (motor Gecko com ajustes para automação), à frente do Firefox estável 155 instalado no sistema | O motor é o mesmo, e os ajustes do Playwright servem para controlar o navegador, sem mudar a renderização |
 | Execução por um avaliador em uma conta | Dois avaliadores em contas diferentes (Arthur em Chrome e Firefox; Felipe em Edge e WebKit) | Para que diferenças de histórico entre contas não gerassem falsos positivos na contagem de tabelas, o script executou o Google Chrome também na conta de Felipe como linha de base estrutural (`--apenas-referencia`), mantendo 24 combinações únicas em `navegadores.csv` |
-| M15 | Não executada | Depende de um avaliador cronometrando as tarefas em celular real; segue no cronograma (T08) |
+| M15 com média entre avaliadores e navegador padrão do celular | Um avaliador, uma execução por tarefa, com o Google Chrome no celular e no computador | O mesmo navegador nos dois aparelhos isola o efeito do aparelho. Com um avaliador, o valor não tem média; a marcação pela fala tem incerteza de cerca de 0,3 s por tarefa, e o valor só mudaria de nível com um erro de cerca de 6% no tempo total |
 
 *Fonte: elaboração da equipe.*
 
@@ -245,3 +249,4 @@ Os comandos estão em [`coleta/README.md`](https://github.com/FCTE-Qualidade-de-
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 15/11/2026 | Execução instrumentada de M13 e M14: método, operacionalização dos critérios, resultados, julgamento de Q14 e Q15, triangulação com o teste com usuários e desvios do plano | [arthurlleite](https://github.com/arthurlleite) |
 | 1.1 | 21/11/2026 | Conclusão de M13 com Microsoft Edge 158 e WebKit 27.2 (24/24, Excelente), julgamento de Q14, classificação de H14 e registro dos desvios da coleta no macOS | [Felipe Campêlo](https://github.com/felipeacampelo) |
+| 1.2 | 22/11/2026 | Resultado de M15 (1,59, Regular): rastreabilidade, resposta a Q16, H16 confirmada, julgamento de G3 (1,33), triangulação e desvios | Leonardo Bonetti |
