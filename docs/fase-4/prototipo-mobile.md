@@ -19,7 +19,7 @@ O roteiro da disciplina prevê quatro modalidades possíveis de melhoria (protó
 
 A Tabela 1 estabelece a rastreabilidade direta entre cada evidência empírica coletada na Fase 4 e os dez requisitos de redesenho (`RM-01` a `RM-10`) incorporados ao protótipo.
 
-*Tabela 1 — Rastreabilidade entre evidências da Fase 4 e requisitos do protótipo mobile.*
+*Tabela 1 - Rastreabilidade entre evidências da Fase 4 e requisitos do protótipo mobile.*
 
 | ID | Requisito do Protótipo | Métrica / Evidência de Origem | Diagnóstico Empírico na Fase 4 | Solução Técnica Aplicada |
 | :-: | :--- | :--- | :--- | :--- |
@@ -31,7 +31,7 @@ A Tabela 1 estabelece a rastreabilidade direta entre cada evidência empírica c
 | `RM-06` | Autodescritividade e glossário de siglas | **M11** (`53,3%`), **IQ3** (`D2`), `OP-01` | Termos institucionais abreviados (IRA, MP) e prazos diluídos em tabelas longas reduzem compreensão sem legenda | Siglas expandidas no contexto (*"IRA — Índice de Rendimento Acadêmico"*) e banner superior com a data-limite de trancamento (`09/10/2026`) |
 | `RM-07` | Conformidade WCAG 2.2 níveis A e AA | **M9** (`13,17` erros/pág.; `79` erros: `37` em T5 e `22` em T2) | Falta de `lang="pt-BR"` (`6`), imagens sem `alt` (`47`), botões/links vazios (`14`), campos sem rótulo (`3`) e contraste AA (`3`) | Atributo `lang="pt-BR"`, logo da UnB com texto alternativo explícito, `aria-label` descritivo em todo controle e contraste ≥ `4,5:1` (`#0F172A`/`#003366` sobre `#FFFFFF`) |
 | `RM-08` | Grade semanal e simulador de fluxo | **M3** (`60%`), `OP-07` | P2, P3 e P4 usam *No Fluxo UnB* ou planilha pela dificuldade e baixa clareza do SIGAA | Alternador *Lista / Grade* na tela inicial e listagem de componentes obrigatórios pendentes com status de pré-requisitos na aba *Progresso* |
-| `RM-09` | Orçamento de rede 4G e `CLS = 0` | [Desempenho](desempenho.md) (`T5`: `131` req., `1.955 KB`, `19,04 s` no 4G, `CLS = 1,053`; `T6`: `10,13 s`) | Turma Virtual desloca painéis após carregamento (`CLS = 1,053`); lista histórica de calendários consome metade do tempo de T6 | Carregamento sob demanda por aba sem recarregar bibliotecas globais e abertura direta no calendário vigente `2026.2` |
+| `RM-09` | Orçamento de rede 4G e `CLS = 0` | [Desempenho](desempenho.md) (dados complementares de desempenho, sem nível nem questão associada: `T5` com `131` req., `1.955 KB`, `19,04 s` no 4G e `CLS = 1,053`; `T6` com `10,13 s`) | Turma Virtual desloca painéis após carregamento (`CLS = 1,053`); lista histórica de calendários consome metade do tempo de T6 | Carregamento sob demanda por aba sem recarregar bibliotecas globais e abertura direta no calendário vigente `2026.2` |
 | `RM-10` | Preservação de `A+/A-` e funções fora do escopo | `OP-08` e [Escopo](../fase-1/escopo.md) | Controles `A+ / A-` já apoiam leitores com baixa visão; o portal real reúne dezenas de atalhos além de T1–T6 | Controles `A- / A+` preservados no cabeçalho mobile ao lado da logo da UnB, e manutenção visual (estado desabilitado/não clicável) de todas as funções fora do escopo |
 
 *Fonte: elaboração da equipe, consolidando dados de [`dados/consolidados/metricas.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/consolidados/metricas.csv) e [`dados/consolidados/desempenho.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/dados/consolidados/desempenho.csv).*
@@ -72,9 +72,11 @@ Na avaliação atual, o Portal do Discente concentra o estudante nos códigos `2
 
 ![Tela 1 do protótipo mobile mostrando cabeçalho com logo UnB, barra de módulos, card de integralização, ações rápidas e turmas decodificadas](../assets/prototipo-mobile/tela-1-inicio-t2-t3-t4.png)
 
-*Figura 1 — Tela 1 (Início do Portal Mobile): integralização em 0 cliques (`RM-02`), emissão direta de documentos (`RM-04`), horários decodificados (`RM-03`), grade semanal (`RM-08`) e atalhos institucionais visuais (`RM-10`). Fonte: elaboração da equipe.*
+*Figura 1 - Tela 1 (Início do Portal Mobile): integralização em 0 cliques (`RM-02`), emissão direta de documentos (`RM-04`), horários decodificados (`RM-03`), grade semanal (`RM-08`) e atalhos institucionais visuais (`RM-10`).*
 
-*Tabela 2 — Requisitos aplicados na Tela 1 e impacto sobre T2, T3 e T4.*
+*Fonte: elaboração da equipe.*
+
+*Tabela 2 - Requisitos aplicados na Tela 1 e impacto sobre T2, T3 e T4.*
 
 | Requisito | Componente da Tela 1 | Diagnóstico na Fase 4 | Solução Aplicada |
 | :---: | :--- | :--- | :--- |
@@ -90,13 +92,15 @@ Na avaliação atual, o Portal do Discente concentra o estudante nos códigos `2
 
 ### 4.2 Tela 2 — Turma Virtual Unificada e Minhas Notas (T1 e T5)
 
-A Turma Virtual foi a tela mais crítica nas coletas técnicas: **única reprovada no critério (c) de M14** (botões cobriam o título `"...REDES DE COMPUTAD"` em `360 px` e `768 px`), **37 dos 79 erros automáticos do WAVE em M9** (`46,8%` da amostra), maior peso em 4G (`131` requisições, `1.955 KB`, `19,04 s`) e `CLS = 1,053`. Além disso, `caminhos.csv` registrou **4 rotas distintas** para materiais (`C1` anexos, `C2` Arquivos, `C3` Referências, `C4` Conteúdos), cenário em que P2 acumulou `21` cliques, `8` erros e falha `Document Expired` ao usar o botão Voltar.
+A Turma Virtual foi a tela mais crítica nas coletas técnicas: **única reprovada no critério (c) de M14** (botões cobriam o título `"...REDES DE COMPUTAD"` em `360 px` e `768 px`), **37 dos 79 erros automáticos do WAVE em M9** (`46,8%` da amostra), além de apresentar, nos dados complementares de [Desempenho](desempenho.md) (fora do julgamento GQM), maior peso em 4G (`131` requisições, `1.955 KB`, `19,04 s`) e `CLS = 1,053`. Além disso, `caminhos.csv` registrou **4 rotas distintas** para materiais (`C1` anexos, `C2` Arquivos, `C3` Referências, `C4` Conteúdos), cenário em que P2 acumulou `21` cliques, `8` erros e falha `Document Expired` ao usar o botão Voltar.
 
 A Tela 2 (Figura 2) aplica os requisitos **`RM-01`**, **`RM-05`**, **`RM-07`**, **`RM-09`** e **`RM-10`**: separa o título integral da disciplina dos botões secundários, reúne os 4 locais de materiais em uma central única filtrável, posiciona **Minhas Notas (T1)** em uma aba direta ao lado de **Materiais (T5)** e mantém visíveis, de modo não clicável, os demais submódulos da Turma Virtual (`Participantes`, `Frequência`, `Tarefas`, `Fóruns`, `Enquetes` e `Estatísticas`).
 
 ![Tela 2 do protótipo mobile mostrando Turma Virtual sem sobreposição, abas de Materiais e Notas, funções visuais secundárias e central única de materiais](../assets/prototipo-mobile/tela-2-turma-notas-t1-t5.png)
 
-*Figura 2 — Tela 2 (Turma Virtual Unificada e Notas): fim da sobreposição no cabeçalho (`RM-01`), central única das 4 origens de materiais (`RM-05`), acesso direto a Notas (`T1`), correção dos 37 erros do WAVE (`RM-07`) e manutenção visual dos módulos secundários (`RM-10`). Fonte: elaboração da equipe.*
+*Figura 2 - Tela 2 (Turma Virtual Unificada e Notas): fim da sobreposição no cabeçalho (`RM-01`), central única das 4 origens de materiais (`RM-05`), acesso direto a Notas (`T1`), endereçamento dos 37 erros do WAVE (`RM-07`) e manutenção visual dos módulos secundários (`RM-10`).*
+
+*Fonte: elaboração da equipe.*
 
 ---
 
@@ -106,7 +110,9 @@ No teste com usuários, **T4 apresentou os piores indicadores comportamentais**:
 
 ![Tela 3 do protótipo mobile mostrando carga horária pendente, barras por modalidade, índices explicados e serviços do menu Ensino](../assets/prototipo-mobile/tela-3-integralizacao-t4.png)
 
-*Figura 3 — Tela 3 (Integralização e Ensino): horas pendentes explícitas (`RM-02`), siglas traduzidas (`RM-06`), componentes pendentes para fluxo (`RM-08`), eliminação dos 11 erros de acessibilidade de T4 (`RM-07`) e serviços visuais do menu Ensino (`RM-10`). Fonte: elaboração da equipe.*
+*Figura 3 - Tela 3 (Integralização e Ensino): horas pendentes explícitas (`RM-02`), siglas traduzidas (`RM-06`), componentes pendentes para fluxo (`RM-08`), endereçamento dos 11 erros de acessibilidade de T4 (`RM-07`) e serviços visuais do menu Ensino (`RM-10`).*
+
+*Fonte: elaboração da equipe.*
 
 ---
 
@@ -116,30 +122,32 @@ A consulta ao calendário (**T6**) recebeu a **pior facilidade percebida no ques
 
 ![Tela 4 do protótipo mobile mostrando calendário nativo 2026.2, prazo de trancamento destacado e botões visuais para regulamento e calendários anteriores](../assets/prototipo-mobile/tela-4-calendario-t6.png)
 
-*Figura 4 — Tela 4 (Calendário Acadêmico 2026.2 Integrado): eliminação do redirecionamento ao site da SAA (`RM-04`), abertura direta no período vigente sem a lista desde 2000 (`RM-09`), destaque de prazos com contraste AA (`RM-06` / `RM-07`) e links normativos visuais (`RM-10`). Fonte: elaboração da equipe.*
+*Figura 4 - Tela 4 (Calendário Acadêmico 2026.2 Integrado): eliminação do redirecionamento ao site da SAA (`RM-04`), abertura direta no período vigente sem a lista desde 2000 (`RM-09`), destaque de prazos com contraste AA (`RM-06` / `RM-07`) e links normativos visuais (`RM-10`).*
+
+*Fonte: elaboração da equipe.*
 
 ---
 
 ## 5. Verificação de Conformidade Pós-Melhoria e Impacto Esperado nas Métricas
 
-A Tabela 3 confronta a especificação do protótipo com os cinco critérios da ficha de **M14** e as oito regras do WAVE que falharam em **M9**.
+A Tabela 3 confronta a especificação do protótipo com os cinco critérios da ficha de **M14** e as oito regras do WAVE que falharam em **M9**, indicando os resultados projetados a partir da estrutura HTML/CSS implementada (ainda sem execução dos *scripts* `coleta_wave.py` e `sigaa_coleta.py` sobre o protótipo).
 
-*Tabela 3 — Confronto técnico do protótipo contra as fichas de M14 e M9.*
+*Tabela 3 - Confronto técnico do protótipo contra as fichas de M14 e M9.*
 
-| Métrica / Critério | Estado Atual Medido (`v4.15.10.116`) | Estado no Protótipo Proposto | Situação Esperada |
+| Métrica / Critério | Estado Atual Medido (`v4.15.10.116`) | Estado no Protótipo Proposto | Resultado Projetado |
 | :--- | :--- | :--- | :--- |
-| **M14 (a)** Sem rolagem horizontal / escala 1,0 | `0/12`: largura de *layout* `980 px`, escala `0,37` (360 px) e `0,78` (768 px) | `<meta viewport>` fixa largura no dispositivo (`360 px = 360 px`, escala `1,0`) | **Atende (12/12)** |
-| **M14 (b)** Fontes efetivas `≥ 12 px` | `0/12`: `1.063/1.063` textos abaixo de `12 px` (`2,9` a `3,8 px` em 360 px) | Corpo padrão `13,5–14 px` (expansível até `16 px` via `A+`, escala `1,0`) | **Atende (12/12)** |
-| **M14 (c)** Sem texto sobreposto ou cortado | `10/12`: falha em T5 em `360 px` (3 textos) e `768 px` (4 textos) | Cabeçalho da Turma Virtual em fluxo vertical sem botões flutuantes sobre texto | **Atende (12/12)** |
-| **M14 (d)** Menus acionáveis por toque | `12/12` em emulação, mas `40%` (`P2`, `P3`) falharam em celular real | Menus *hover* substituídos por barra inferior fixa e ações diretas | **Atende (12/12)** |
-| **M14 (e)** Alvos de toque `≥ 24 × 24 px` | `0/12`: item *Ensino* com `22,8 × 8,8 px`; botões de tabela de `4–19 px` | Controles de ação com `44 × 44 px` a `52 px` de altura | **Atende (12/12)** |
-| **M9** Erros automáticos WAVE (WCAG A/AA) | `13,17 erros/pág.` (`79` erros: `alt_missing`, `button_empty`, `language_missing`, `contrast`, `th_empty`, `label_missing`, `link_empty`) | HTML5 com `lang="pt-BR"`, `alt` explícito na logo UnB, botões com `aria-label` + texto, ausência de tabelas de *layout* e contraste > `4,5:1` | **Redução a 0 erros estruturais** |
+| **M14 (a)** Sem rolagem horizontal / escala 1,0 | `0/12`: largura de *layout* `980 px`, escala `0,37` (360 px) e `0,78` (768 px) | `<meta viewport>` fixa largura no dispositivo (`360 px = 360 px`, escala `1,0`) | **Atende (12/12 projetado)** |
+| **M14 (b)** Fontes efetivas `≥ 12 px` | `0/12`: `1.063/1.063` textos abaixo de `12 px` (`2,9` a `3,8 px` em 360 px) | Corpo padrão `13,5–14 px` (expansível até `16 px` via `A+`, escala `1,0`) | **Atende (12/12 projetado)** |
+| **M14 (c)** Sem texto sobreposto ou cortado | `10/12`: falha em T5 em `360 px` (3 textos) e `768 px` (4 textos) | Cabeçalho da Turma Virtual em fluxo vertical sem botões flutuantes sobre texto | **Atende (12/12 projetado)** |
+| **M14 (d)** Menus acionáveis por toque | `12/12` em emulação, mas `40%` (`P2` e `P3`) relataram no questionário menu que não abriu ao tocar | Menus *hover* substituídos por barra inferior fixa e ações diretas | **Atende (12/12 projetado)** |
+| **M14 (e)** Alvos de toque `≥ 24 × 24 px` | `0/12`: item *Ensino* com `22,8 × 8,8 px`; botões de tabela de `4–19 px` | Controles de ação com `44 × 44 px` a `52 px` de altura | **Atende (12/12 projetado)** |
+| **M9** Erros automáticos WAVE (WCAG A/AA) | `13,17 erros/pág.` (`79` erros: `alt_missing`, `button_empty`, `language_missing`, `contrast`, `th_empty`, `label_missing`, `link_empty`) | HTML5 com `lang="pt-BR"`, `alt` explícito na logo UnB, botões com `aria-label` + texto, ausência de tabelas de *layout* e contraste > `4,5:1` | **0 erros estruturais (projetado)** |
 
 *Fonte: elaboração da equipe, a partir das fichas de [`docs/fase-2/metricas.md`](../fase-2/metricas.md) e de `docs/fase-4/`.*
 
-A Tabela 4 sintetiza a redução do caminho mínimo (`C_min`) e das falhas observadas nas seis tarefas do escopo (**T1 a T6**).
+A Tabela 4 sintetiza a redução projetada do caminho mínimo (`C_min`) e das falhas observadas nas seis tarefas do escopo (**T1 a T6**).
 
-*Tabela 4 — Impacto projetado do protótipo por tarefa do escopo (T1 a T6).*
+*Tabela 4 - Impacto projetado do protótipo por tarefa do escopo (T1 a T6).*
 
 | Tarefa | Caminho Mínimo Atual (`caminhos.csv`) e Gargalo Medido | Fluxo no Protótipo Mobile | Métricas Diretamente Beneficiadas |
 | :-: | :--- | :--- | :--- |
@@ -147,7 +155,7 @@ A Tabela 4 sintetiza a redução do caminho mínimo (`C_min`) e das falhas obser
 | **T2 (Horários e local)** | `0` cliques na tabela inicial, mas código críptico gerou `M11 = 40%` e desvios | `0` cliques na Tela 1 com horário traduzido e sala explícita; opção de *Grade* | **M11**, **M3**, **M4**, **M7** |
 | **T3 (Atestado)** | `1` clique dentro do menu *Ensino* (`22,8 × 8,8 px` no celular) | `1` toque direto no botão primário *Emitir Atestado* na Tela 1 | **M4**, **M6**, **M14 (e)** |
 | **T4 (Integralização)** | `0` cliques nominais, mas média real de `5,67` cliques, `M4 = 20%`, `M5 = 60%`, `M6 = 8,48×` | `0` cliques no topo da Tela 1 (`1.320 h pendentes`) + `1` toque para detalhe na Tela 3 | **M4**, **M5**, **M6**, **M7**, **M11** |
-| **T5 (Turma Virtual)** | `2–4` cliques em 4 submenus distintos; P2 fez `21` cliques, `8` erros; falha em `M14 (c)` e `37` erros no WAVE | Central única na Tela 2 com filtros por tipo e `0` sobreposições visuais | **M7**, **M8**, **M9**, **M14 (c)**, **CLS** |
+| **T5 (Turma Virtual)** | `2–4` cliques em 4 submenus distintos; P2 fez `21` cliques, `8` erros; falha em `M14 (c)` e `37` erros no WAVE | Central única na Tela 2 com filtros por tipo e `0` sobreposições visuais | **M7**, **M8**, **M9**, **M14 (c)**; **CLS** (dado complementar de desempenho, fora do julgamento GQM) |
 | **T6 (Calendário)** | `2` passos com link-armadilha para o site da SAA (`3/5` caíram) + lista desde 2000; `M4 = 40%`, `M5 = 60%`, `IQ1 = 2,0` | `1` toque na aba *Calendário* abre direto `2026.2` dentro do SIGAA com trancamento no topo | **M4**, **M5**, **M6**, **M7**, **M8**, **M11**, **IQ1** |
 
 *Fonte: elaboração da equipe.*
@@ -158,7 +166,7 @@ A Tabela 4 sintetiza a redução do caminho mínimo (`C_min`) e das falhas obser
 
 Este protótipo e os resultados da Fase 4 respondem diretamente às decisões planejadas na [Tabela 1 de Propósito e Partes Interessadas](../fase-1/proposito-stakeholders.md#13-como-os-resultados-serao-usados) e às necessidades das [Personas](../fase-1/personas.md):
 
-1. **Para a STI/UnB (Priorização de telas e investimento mobile):** os dados provam que o portal funciona de modo uniforme nos quatro navegadores de computador (**M13 = 100%, Excelente**), mas **falha integralmente em telas móveis (`M14 = 0/12`, Insatisfatório)**. Como **100%** dos participantes testados utilizam o sistema no celular (`IQ4`) e **3 de 5** têm o celular como dispositivo principal ou equivalente, recomenda-se priorizar: (i) remoção do link externo para a SAA em T6 e abertura direta no calendário vigente; (ii) tradução automática do código de horário na tabela inicial (`OP-01`); (iii) adoção gradual do layout responsivo de coluna única com `<meta viewport>` mantendo visualmente as demais funções do portal, e correção das 8 regras estruturais do WAVE em T5 e T2 (eliminando `74,7%` dos erros automáticos).
+1. **Para a STI/UnB (Priorização de telas e investimento mobile):** os dados indicam que o portal funciona de modo uniforme nos quatro navegadores de computador (**M13 = 100%, Excelente**), mas **falha integralmente em telas móveis (`M14 = 0/12`, Insatisfatório)**. Como **100%** dos participantes testados utilizam o sistema no celular (`IQ4`) e **3 de 5** têm o celular como dispositivo principal ou equivalente, recomenda-se priorizar: (i) remoção do link externo para a SAA em T6 e abertura direta no calendário vigente; (ii) tradução automática do código de horário na tabela inicial (`OP-01`); (iii) adoção gradual do layout responsivo de coluna única com `<meta viewport>` mantendo visualmente as demais funções do portal, e correção das 8 regras estruturais do WAVE em T5 e T2 (eliminando `74,7%` dos erros automáticos).
 2. **Para o DEG e Coordenações de Curso:** recomenda-se padronizar avisos sobre prazos de trancamento diretamente no calendário do SIGAA e destacar o resumo de integralização curricular (`T4`), mitigando dúvidas presenciais e chamados em secretarias (Persona 4 — Carlos Eduardo) e atendendo à estudante usuária exclusiva de celular (Persona 1 — Mariana).
 3. **Limitações desta entrega técnica:** o protótipo constitui especificação executável *client-side* em ambiente simulado; sua efetivação em produção depende da camada de apresentação JSF/RichFaces sob gestão da STI/UnB ou da UFRN, seguida de nova rodada de testes com usuários para mensurar o ganho efetivo de **SUS (M12)** e **M6**.
 
@@ -193,3 +201,4 @@ Os arquivos ficam em [`docs/assets/prototipo-mobile/`](https://github.com/FCTE-Q
 | :----: | :--: | :-------: | :---: |
 | 1.0 | 21/11/2026 | Elaboração do Protótipo Mobile-First de alta fidelidade (SVG, PNG e simulador interativo), matriz de rastreabilidade `RM-01` a `RM-10`, justificativa pelas métricas da Fase 4 e recomendações à STI/UnB e ao DEG | [Davi Nobre](https://github.com/Jagaima) |
 | 1.1 | 21/11/2026 | Remoção da figura comparativa Antes/Depois e das caixas explicativas externas nas imagens, inclusão da logo da UnB na versão html e exibição visual de todas as funções do Portal do Discente fora do escopo | [Davi Nobre](https://github.com/Jagaima) |
+| 1.2 | 22/11/2026 | Ajustes da revisão do PR: explicitação de resultados projetados em M14/M9 e dados complementares de desempenho em RM-09/T5, correção de redação em M14 (d) e seção 6, e padronização de legendas de tabelas e figuras | [Davi Nobre](https://github.com/Jagaima) |
