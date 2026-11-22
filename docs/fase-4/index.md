@@ -6,7 +6,7 @@ Esta fase corresponde à quarta atividade do processo de avaliação de produto 
 
 ## Situação da coleta
 
-*Tabela 1 - Situação da coleta por método em 21/11/2026.*
+*Tabela 1 - Situação da coleta por método em 22/11/2026.*
 
 | Método | Métricas | Situação | Página |
 | ------ | -------- | -------- | ------ |
@@ -14,7 +14,7 @@ Esta fase corresponde à quarta atividade do processo de avaliação de produto 
 | Acessibilidade automática (WAVE) | M9 | Concluída: 13,17 erros/página (79 erros em 6 páginas, Insatisfatório) | [Acessibilidade Automática (M9)](acessibilidade.md) |
 | Inspeção por pares | M1, M2, M10, M20 | Não iniciada | - |
 | Execução instrumentada | M13, M14 | Concluída: M13 (24/24, Excelente) e M14 (0/12, Insatisfatório) | [Flexibilidade](flexibilidade.md) |
-| Execução manual em celular | M15 | Não iniciada | - |
+| Execução manual em celular | M15 | Concluída: 1,59 (110,2 s no celular para 69,1 s no computador, Regular) | [Julgamento da Avaliação](julgamento.md) |
 | Dados complementares (fora do julgamento) | Rapidez, responsividade, estabilidade e fluidez | Concluída (46 de 48 execuções válidas) | [Desempenho (complementar)](desempenho.md) |
 
 *Fonte: elaboração da equipe.*
@@ -39,3 +39,4 @@ Com base nos piores resultados medidos (**M14 = 0/12**, **M12 = 32,5**, **M9 = 1
 | 1.1 | 21/11/2026 | Atualização da situação de M13 (24/24, concluída com Edge e WebKit) e inclusão dos resultados de M9 (WAVE) | [Felipe Campêlo](https://github.com/felipeacampelo) |
 | 1.2 | 21/11/2026 | Consolidação da conclusão do teste com usuários (P1 a P4 e P6) e inclusão do link para o Protótipo Mobile (Ação de Melhoria Técnica) | [Davi Nobre](https://github.com/Jagaima) |
 | 1.3 | 22/11/2026 | Inclusão do link para o julgamento da avaliação | Leonardo Bonetti |
+| 1.4 | 22/11/2026 | Situação de M15 (concluída, 1,59) | Leonardo Bonetti |
