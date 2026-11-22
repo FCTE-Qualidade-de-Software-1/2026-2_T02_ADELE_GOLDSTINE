@@ -21,7 +21,7 @@ Esta fase corresponde à quarta atividade do processo de avaliação de produto 
 
 ## Julgamento
 
-A comparação de cada métrica com os níveis de pontuação, as respostas às questões Q1 a Q16, a classificação das hipóteses, o julgamento das três características, o ranking das tarefas e a ligação com o propósito da Fase 1 estão em [Julgamento da Avaliação](julgamento.md). Com os dados de 21/11/2026, Capacidade de Interação não atende, Flexibilidade atende parcialmente e Adequação Funcional fica inconclusiva até a inspeção por pares.
+A comparação de cada métrica com os níveis de pontuação, as respostas às questões Q1 a Q16, a classificação das hipóteses, o julgamento das três características, o ranking das tarefas e a ligação com o propósito da Fase 1 estão em [Julgamento da Avaliação](julgamento.md). Capacidade de Interação: ___. Adequação Funcional: ___. Flexibilidade: atende parcialmente.
 
 ## Referências
 
