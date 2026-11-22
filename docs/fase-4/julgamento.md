@@ -6,6 +6,10 @@ Esta página reúne os resultados de todas as métricas da Fase 4 e aplica a ele
 
 ## 1. Situação das métricas
 
+O gráfico abaixo mostra onde caíram as oito métricas do teste com usuários e do questionário; os demais gráficos desse método estão em [Teste com usuários (gráficos)](teste-usuarios.md). A Tabela 1 traz todas as métricas da avaliação.
+
+[[GRAFICO_TU:painel-metricas]]
+
 *Tabela 1 - Valor e nível de cada métrica.*
 
 | Objetivo | Questão | Métrica | Valor | Nível | Método |
@@ -17,7 +21,7 @@ Esta página reúne os resultados de todas as métricas da Fase 4 e aplica a ele
 | G2 | Q5 | M5 - Conclusão de tarefas sem ajuda | 83,3% (25 de 30 tentativas) | Bom (2) | Teste com usuários |
 | G2 | Q6 | M6 - Tempo relativo de execução | 4,39 (média de 6 tarefas) | Insatisfatório (0) | Teste com usuários |
 | G2 | Q7 | M7 - Desvio de caminho | 1,46 (média de 4 tarefas) | Regular (1) | Teste com usuários |
-| G2 | Q8 | M8 - Recuperação de erros | 81,3% (13 de 16 erros) | Bom (2) | Teste com usuários |
+| G2 | Q8 | M8 - Recuperação de erros | 81,25% (13 de 16 erros) | Bom (2) | Teste com usuários |
 | G2 | Q9 | M20 - Tratamento de cenários de erro | ___ | ___ | Inspeção por pares |
 | G2 | Q10 | M9 - Erros automáticos de acessibilidade | 13,17 erros por página (79 em 6 páginas) | Insatisfatório (0) | WAVE |
 | G2 | Q11 | M10 - Critérios manuais de acessibilidade | ___ | ___ | Inspeção por pares |
@@ -59,7 +63,7 @@ A resposta textual de cada questão segue o nível da sua métrica ([Tabela 4 de
 | Q5 | Bom (2) | Sim | H5: M5 ≥ 78% e < 90% (Bom) e, no recorte de calouros com ao menos três participantes, M5 < 65% | ___ |
 | Q6 | Insatisfatório (0) | Não | H6: M6 > 2,5 e ≤ 4,0 (Regular) | **Refutada**: M6 = 4,39 ficou acima da faixa prevista |
 | Q7 | Regular (1) | Parcialmente, com dificuldade relevante | H7: M7 > 1,33 e ≤ 2,00 (Regular) | **Confirmada** |
-| Q8 | Bom (2) | Sim | H8: M8 ≥ 50% e < 70% (Regular) | **Refutada**: M8 = 81,3% ficou acima da faixa prevista |
+| Q8 | Bom (2) | Sim | H8: M8 ≥ 50% e < 70% (Regular) | **Refutada**: M8 = 81,25% ficou acima da faixa prevista |
 | Q9 | ___ | ___ | H9: M20 < 50% (Insatisfatório) | ___ |
 | Q10 | Insatisfatório (0) | Não | H10: M9 > 5 erros por página (Insatisfatório) | **Confirmada** |
 | Q11 | ___ | ___ | H11: M10 ≥ 75% e < 90% (Regular) | ___ |
