@@ -191,7 +191,4 @@ O julgamento responde ao propósito da avaliação, que é dar à STI e ao DEG e
 
 | Versão | Data | Descrição | Autor |
 | :----: | :--: | :-------: | :---: |
-| 1.0 | 21/11/2026 | Situação das 16 métricas, respostas às questões e classificação das hipóteses H1 a H16 | Leonardo Bonetti |
-| 1.1 | 21/11/2026 | Julgamento de G1, G2 e G3 e verificação das hipóteses de relação HR1 e HR2 | Leonardo Bonetti |
-| 1.2 | 21/11/2026 | Ranking das tarefas pela regra 4 | Leonardo Bonetti |
-| 1.3 | 21/11/2026 | Coerência do julgamento com o propósito da Fase 1, pendências e limitações | Leonardo Bonetti |
+| 1.0 | 21/11/2026 | Criação da página: nível das métricas, respostas às questões Q1 a Q16, classificação das hipóteses H1 a H16, julgamento de G1, G2 e G3, hipóteses de relação, ranking das tarefas e coerência com o propósito da Fase 1 | Leonardo Bonetti |
