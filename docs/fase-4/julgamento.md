@@ -159,6 +159,30 @@ A [regra 4](../fase-2/niveis-pontuacao.md#regra-4-ranking-das-tarefas) ordena as
 
 T4 e T6 são as tarefas de pior índice e as únicas com conclusão sem ajuda no nível Regular: dois em cada cinco participantes não as concluíram. Em T4, a informação está na página inicial, mas os participantes que a encontraram fizeram, em média, 5,67 cliques até ela e levaram 8,48 vezes o tempo do especialista. Em T6, o link do calendário no painel do portal leva ao site da SAA, na página de Pós-Graduação, o que explica dois dos três erros não recuperados do teste. T1 fica em terceiro, apesar da conclusão de 100%, porque o tempo dos participantes foi 4,5 vezes o do especialista.
 
+## 6. Coerência com o propósito da avaliação
+
+A Fase 1 definiu as decisões que a avaliação deve apoiar ([Propósito e Partes Interessadas, Tabela 1](../fase-1/proposito-stakeholders.md#13-como-os-resultados-serao-usados)). A Tabela 9 mostra o que os resultados indicam para cada uma.
+
+*Tabela 9 - Decisões da Fase 1 e o que os resultados indicam.*
+
+| Decisão a ser apoiada | Quem decide | Resultado que embasa a decisão | O que os resultados indicam |
+| --------------------- | ----------- | ------------------------------ | --------------------------- |
+| Quais telas e fluxos do portal do discente priorizar em um ciclo de melhoria | STI/UnB | Ranking das tarefas (Tabela 8) e julgamento de Capacidade de Interação e Adequação Funcional | Priorizar T4 (índices e carga horária pendente) e T6 (calendário acadêmico), as tarefas de pior índice. Capacidade de Interação não atende, e Adequação Funcional não poderá ser julgada "Atende" |
+| Investir ou não em uma interface responsiva ou aplicativo móvel | STI/UnB | Julgamento de Flexibilidade cruzado com o perfil de acesso | Investir na interface responsiva. O SIGAA funciona nos quatro navegadores de computador (M13 = 100%), mas nenhuma página se adapta ao celular (M14 = 0%). Todos os cinco participantes usam o SIGAA no celular, e três o usam como dispositivo principal ou tanto quanto o computador (IQ4) |
+| Quais procedimentos precisam de tutorial, aviso ou orientação adicional | DEG e coordenações | Tarefas com maior taxa de erro ou abandono e funções de difícil localização | Orientar sobre T4 e T6, as tarefas com menor conclusão sem ajuda (60%) e com dois em cada cinco participantes que já precisaram de ajuda nelas (IQ2). Em T6, o aviso mais direto é sobre o link do painel, que leva ao calendário da Pós-Graduação. Em T2, explicar o código de horário, interpretado corretamente por 40% dos participantes |
+| Se há necessidade de otimizar páginas específicas | STI/UnB | Medidas de comportamento temporal e uso de recursos | Eficiência de Desempenho ficou fora da especificação, e esta decisão não recebe julgamento. Os [dados complementares](desempenho.md) apontam a Turma Virtual (T5) como a página mais pesada: cerca de 1,9 MB transferidos e 19 s de espera no celular em 4G |
+| Qual ação de melhoria executar na Fase 4 | Equipe avaliadora | Problema de maior impacto entre os julgamentos | A característica de pior julgamento é Capacidade de Interação, e a tarefa de pior índice é T4 (regra 4). Com Flexibilidade, o problema de maior alcance é a ausência de adaptação ao celular, usado por todos os participantes |
+
+*Fonte: elaboração da equipe.*
+
+O julgamento responde ao propósito da avaliação, que é dar à STI e ao DEG evidências para priorizar melhorias no portal do discente. O SIGAA permite que o estudante conclua a maior parte das tarefas no computador, mas com tempo, desvios e insatisfação altos, barreiras de acessibilidade em todas as páginas e nenhuma adaptação ao celular. As prioridades que saem dos dados são as tarefas de integralização e de calendário, a acessibilidade das páginas e a interface responsiva.
+
+## 7. Pendências e limitações
+
+- **Métricas sem dados.** M1, M2, M10 e M20 dependem da inspeção por pares, e M15 depende da execução das tarefas em celular real. Até que esses dados sejam integrados, G1 fica inconclusivo, G2 tem julgamento provisório, o ranking das tarefas não inclui M1, e HR1 fica pendente. G3 já tem julgamento definitivo.
+- **Amostra do teste com usuários.** A coleta terminou com cinco participantes (P1, P2, P3, P4 e P6), recrutados por conveniência na FCTE. O grupo do começo do curso teve dois participantes, e os recortes desse grupo são apenas descritivos (regra 3); por isso H5 ficou inconclusiva.
+- **M14 por emulação.** As larguras de 360 e 768 px foram verificadas por emulação no navegador, e não em celular real ([Flexibilidade](flexibilidade.md)); a confirmação em aparelho real pode ser feita junto com a coleta de M15.
+
 ## Referências
 
 [1] ISO/IEC 25040:2024. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Quality evaluation framework*.
@@ -170,3 +194,4 @@ T4 e T6 são as tarefas de pior índice e as únicas com conclusão sem ajuda no
 | 1.0 | 21/11/2026 | Situação das 16 métricas, respostas às questões e classificação das hipóteses H1 a H16 | Leonardo Bonetti |
 | 1.1 | 21/11/2026 | Julgamento de G1, G2 e G3 e verificação das hipóteses de relação HR1 e HR2 | Leonardo Bonetti |
 | 1.2 | 21/11/2026 | Ranking das tarefas pela regra 4 | Leonardo Bonetti |
+| 1.3 | 21/11/2026 | Coerência do julgamento com o propósito da Fase 1, pendências e limitações | Leonardo Bonetti |
