@@ -13,6 +13,7 @@ Scripts que executam as tarefas T1 a T6 no SIGAA/UnB com o [Playwright](https://
 | `inspecao_coleta.py` | Primeiro avaliador automatizado da inspeção: critérios (a) a (d) de M10 nas páginas de T1 a T6, cenários C1 a C6 de M20, menus do portal (M1) e, com `documentos`, as páginas e o histórico usados em M2, gravados só numa pasta local fora do repositório |
 | `calcular_inspecao.py` | Gera as linhas de M1, M2, M10 e M20 em `metricas.csv` a partir das colunas `*_final` de `dados/brutos/inspecao/` |
 | `prototipo_mobile.py` | Gera as telas SVG/PNG (`docs/assets/prototipo-mobile/`) e o simulador HTML interativo do Protótipo Mobile-First via hook do MkDocs (`[[PROTOTIPO_MOBILE_INTERATIVO]]`) |
+| `verificar_prototipo.py` | Verificação da ação de melhoria: aplica ao protótipo mobile os mesmos critérios de M14 (e, com `--wave-js`, o WAVE de M9) e grava `dados/brutos/flexibilidade/automatizado/telas-prototipo.jsonl`, as capturas em `dados/brutos/flexibilidade/evidencias/prototipo/` e `dados/consolidados/verificacao-prototipo.csv`, sem alterar `metricas.csv` |
 
 ## Regras de segurança da coleta
 
@@ -58,3 +59,13 @@ Os registros são acrescentados aos arquivos `.jsonl`; para refazer uma coleta d
 | `dados/brutos/desempenho/automatizado/execucoes.jsonl` | Uma linha por tarefa, cenário e repetição, com as medidas de Navigation Timing e Paint Timing de cada página |
 | `dados/brutos/acessibilidade/wave/` | Relatórios JSON sanitizados (`T1-wave.json` a `T6-wave.json`) e resumo tabular (`resumo.csv`) de M9 |
 | `dados/brutos/flexibilidade/evidencias/` | Capturas borradas citadas na coluna `evidencia` das planilhas |
+
+## Verificação do protótipo (M14 e M9)
+
+```bash
+pip install playwright            # usa o Google Chrome instalado (canal "chrome")
+python coleta/prototipo_mobile.py  # regenera docs/assets/prototipo-mobile/prototipo-interativo.html
+python coleta/verificar_prototipo.py [--wave-js caminho/wave.min.js]
+```
+
+O protótipo é aberto em modo tela cheia (sem o guia, a moldura e a barra de status simuladas; página inteira rolando e barra de abas fixa) e levado ao estado final de cada tarefa por toques. Sem `--wave-js`, só M14 é medida.
