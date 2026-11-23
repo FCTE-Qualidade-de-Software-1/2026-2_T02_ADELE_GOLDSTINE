@@ -287,17 +287,31 @@ JS_ASSINATURA = """() => ({
 
 class Sessao:
     def __init__(self, pw, motor: str, dispositivo: str, rede: str = "local",
-                 canal: str | None = None, sem_cache: bool = False):
+                 canal: str | None = None, sem_cache: bool = False,
+                 cfg: dict | None = None, executavel: str | None = None,
+                 argumentos: list[str] | None = None):
+        """`cfg`, `executavel` e `argumentos` são usados pela matriz multiplataforma
+        (matriz_dispositivos.py): perfil de dispositivo próprio e navegadores baseados
+        no Chromium instalados fora do sistema (Edge, Brave, Opera, Vivaldi)."""
         self.motor, self.dispositivo, self.rede = motor, dispositivo, rede
-        cfg = DISPOSITIVOS[dispositivo]
+        cfg = cfg or DISPOSITIVOS[dispositivo]
         tipo = getattr(pw, motor)
-        self.browser = tipo.launch(channel=canal) if canal else tipo.launch()
+        lanc = {"timeout": 90000}
+        if canal:
+            lanc["channel"] = canal
+        if executavel:
+            lanc["executable_path"] = executavel
+        if argumentos:
+            lanc["args"] = argumentos
+        self.browser = tipo.launch(**lanc)
         opts = {"viewport": cfg["viewport"], "locale": "pt-BR", "accept_downloads": True,
                 "has_touch": cfg["toque"]}
         for k in ("device_scale_factor", "user_agent"):
             if k in cfg:
                 opts[k] = cfg[k]
-        if cfg.get("is_mobile") and motor == "chromium":
+        if "user_agent" in opts:  # {v}: versão principal do navegador em execução
+            opts["user_agent"] = opts["user_agent"].replace("{v}", self.browser.version.split(".")[0])
+        if cfg.get("is_mobile") and motor in ("chromium", "webkit"):  # o Firefox não emula is_mobile
             opts["is_mobile"] = True
         self.ctx = self.browser.new_context(**opts)
         self.ctx.add_init_script(JS_OBSERVADORES)
@@ -325,13 +339,22 @@ class Sessao:
         self.versao = self.browser.version
         self.home = None
         self.tentativas_estaticos = 0
+        self.toques_corrigidos = 0
 
     def login(self):
         pg = self.pg
         pg.goto(LOGIN, wait_until="networkidle", timeout=120000)
         pg.fill("input[name=username]", os.environ["SIGAA_USUARIO"])
         pg.fill("input[name=password]", os.environ["SIGAA_SENHA"])
-        pg.click("button[name=submit]")
+        try:
+            pg.click("button[name=submit]", timeout=15000)
+        except Exception:  # noqa: BLE001  (botão instável na animação da página: envia com Enter)
+            pg.press("input[name=password]", "Enter")
+        # No WebKit, o "networkidle" pode chegar antes do redirecionamento do CAS para o SIGAA
+        try:
+            pg.wait_for_url(re.compile(r"https://sigaa?\.unb\.br/"), timeout=60000)
+        except Exception:  # noqa: BLE001
+            pass
         pg.wait_for_load_state("networkidle", timeout=120000)
         if "telaAvisoLogon" in pg.url:
             with pg.expect_navigation(wait_until="load", timeout=120000):
@@ -363,9 +386,29 @@ class Sessao:
         self.pg.goto(self.home, wait_until="networkidle", timeout=180000)
         return self.garantir_estaticos()
 
+    def tocar(self, locator):
+        """Toque na tela.
+
+        No WebKit em modo móvel, o tap() do Playwright usa a posição do elemento em
+        pixels de layout, mas o toque é aplicado em pixels da área visível: quando o
+        navegador reduz a página (sem <meta viewport>), o toque cai em outro ponto. Aqui
+        a posição é convertida pela escala e pelo deslocamento da área visível
+        (visualViewport), e o toque real é enviado nesse ponto; a correção é contada.
+        """
+        if self.motor == "webkit" and self.toque:
+            locator.scroll_into_view_if_needed(timeout=15000)
+            bb = locator.bounding_box(timeout=15000)
+            esc, dx, dy = self.pg.evaluate("[visualViewport.scale, visualViewport.offsetLeft, visualViewport.offsetTop]")
+            x = (bb["x"] + bb["width"] / 2 - dx) * esc
+            y = (bb["y"] + bb["height"] / 2 - dy) * esc
+            self.pg.touchscreen.tap(x, y)
+            self.toques_corrigidos += 1
+        else:
+            locator.tap()
+
     def acionar(self, locator):
         if self.toque:
-            locator.tap()
+            self.tocar(locator)
         else:
             locator.click()
 
@@ -382,7 +425,7 @@ class Sessao:
         self.alvos_usados.append(self.medir_alvo(principal))
         t0 = time.perf_counter()
         if self.toque:
-            principal.tap()
+            self.tocar(principal)
         else:
             principal.hover()
         try:
@@ -396,7 +439,7 @@ class Sessao:
             self.pg.wait_for_timeout(700)
         self.alvos_usados.append(self.medir_alvo(alvo_linha))
         if abriu and self.toque:
-            alvo.tap()
+            self.tocar(alvo)
         else:
             alvo.click()
         return abriu
@@ -508,6 +551,9 @@ def executar_tarefa(s: Sessao, tarefa: str) -> dict:
     reg["erros_js"] = list(s.erros_console)
     reg["alvos_usados"] = list(s.alvos_usados)
     reg["url_final"] = pg.url.split("?")[0]
+    if s.toques_corrigidos:
+        reg["toques_corrigidos"] = s.toques_corrigidos
+        s.toques_corrigidos = 0
     return reg
 
 
