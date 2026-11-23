@@ -4,7 +4,7 @@ Artigo final da avaliação (Fases 1 a 4, julgamento, matriz multiplataforma, a�
 
 - **PDF:** [baixar o artigo](artigo.pdf){ download="artigo-adele-goldstine-final.pdf" } ou [abrir em nova aba](artigo.pdf){ target="_blank" }
 - **Fonte LaTeX:** pasta [`artigo/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/tree/main/artigo) do repositório
-- **Overleaf:** <https://www.overleaf.com/project/6adebc46cbee7aeb66190d80/share#d055fe4415c09eb12ae4905f6f1a72e9c10e86b94b7eb508>
+- **Overleaf:** <https://www.overleaf.com/project/6b04809b6bd87c703701ebf4/share#ec4b766bf0e081e6b89f4427f7486bd96f1c4c0347d4e6d0>
 
 ## Resumo
 
@@ -45,3 +45,4 @@ O Sistema Integrado de Gestão de Atividades Acadêmicas (SIGAA) é o ponto úni
 | 1.1 | 26/10/2026 | Resumo, palavras-chave e mapa das seções do artigo | [arthurlleite](https://github.com/arthurlleite) |
 | 2.0 | 15/11/2026 | Versão do Ponto de Controle 2: resumo, palavras-chave e mapa das seções com as Fases 3 e 4 | [arthurlleite](https://github.com/arthurlleite) |
 | 3.0 | 23/11/2026 | Versão final: resumo, palavras-chave e mapa das seções (Fase 4 completa, ação de melhoria e conclusão; sem gestão da equipe nem apêndice de contribuição) | [arthurlleite](https://github.com/arthurlleite) |
+| 3.1 | 23/11/2026 | Novo link do projeto no Overleaf | [arthurlleite](https://github.com/arthurlleite) |
