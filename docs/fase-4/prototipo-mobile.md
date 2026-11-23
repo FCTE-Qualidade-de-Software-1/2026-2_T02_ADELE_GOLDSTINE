@@ -130,20 +130,22 @@ A consulta ao calendário (**T6**) recebeu a **pior facilidade percebida no ques
 
 ## 5. Verificação de Conformidade Pós-Melhoria e Impacto Esperado nas Métricas
 
-A Tabela 3 confronta a especificação do protótipo com os cinco critérios da ficha de **M14** e as oito regras do WAVE que falharam em **M9**, indicando os resultados projetados a partir da estrutura HTML/CSS implementada (ainda sem execução dos *scripts* `coleta_wave.py` e `sigaa_coleta.py` sobre o protótipo).
+A Tabela 3 confronta o protótipo com os cinco critérios da ficha de **M14** e as oito regras do WAVE que falharam em **M9**. Em 23/11/2026, **M14 foi medida no protótipo** com os mesmos critérios usados no SIGAA: o *script* [`coleta/verificar_prototipo.py`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/coleta/verificar_prototipo.py) reaproveita a verificação de página (`JS_ADAPTACAO`) e os perfis de aparelho de `sigaa_coleta.py` e a função `criterios()` de `calcular.py`, no Google Chrome com emulação de 360 px e 768 px e toque, levando o protótipo ao estado final de cada tarefa por toques. O protótipo é medido em modo tela cheia: sem o guia lateral, a moldura e a barra de status simulada do celular, com a página inteira rolando e a barra de abas fixa no rodapé, como numa página web de celular (o detector trata camadas fixas como no SIGAA). Os dados estão em `dados/brutos/flexibilidade/automatizado/telas-prototipo.jsonl`, as capturas em `dados/brutos/flexibilidade/evidencias/prototipo/` e o resumo em `dados/consolidados/verificacao-prototipo.csv`.
+
+A primeira medição deu **0 de 12**: o critério (b) falhou em todas as páginas, com textos de 9,5 a 11,5 px (rótulos, *chips* e botões fora do escopo), e o critério (e) falhou em 768 px nos botões tracejados de 22 px de altura. O protótipo foi ajustado (`coleta/prototipo_mobile.py`: tamanho mínimo de fonte de 12 px no simulador e altura mínima de 24 px nos botões fora do escopo) e medido de novo: **M14 = 12 de 12 (Excelente)**. M9 continua projetada, porque o motor da extensão WAVE (`wave.min.js`) não estava disponível na máquina da medição.
 
 *Tabela 3 - Confronto técnico do protótipo contra as fichas de M14 e M9.*
 
-| Métrica / Critério | Estado Atual Medido (`v4.15.10.116`) | Estado no Protótipo Proposto | Resultado Projetado |
+| Métrica / Critério | Estado Atual Medido (`v4.15.10.116`) | Estado no Protótipo | Resultado no Protótipo |
 | :--- | :--- | :--- | :--- |
-| **M14 (a)** Sem rolagem horizontal / escala 1,0 | `0/12`: largura de *layout* `980 px`, escala `0,37` (360 px) e `0,78` (768 px) | `<meta viewport>` fixa largura no dispositivo (`360 px = 360 px`, escala `1,0`) | **Atende (12/12 projetado)** |
-| **M14 (b)** Fontes efetivas `≥ 12 px` | `0/12`: `1.063/1.063` textos abaixo de `12 px` (`2,9` a `3,8 px` em 360 px) | Corpo padrão `13,5–14 px` (expansível até `16 px` via `A+`, escala `1,0`) | **Atende (12/12 projetado)** |
-| **M14 (c)** Sem texto sobreposto ou cortado | `10/12`: falha em T5 em `360 px` (3 textos) e `768 px` (4 textos) | Cabeçalho da Turma Virtual em fluxo vertical sem botões flutuantes sobre texto | **Atende (12/12 projetado)** |
-| **M14 (d)** Menus acionáveis por toque | `12/12` em emulação, mas `40%` (`P2` e `P3`) relataram no questionário menu que não abriu ao tocar | Menus *hover* substituídos por barra inferior fixa e ações diretas | **Atende (12/12 projetado)** |
-| **M14 (e)** Alvos de toque `≥ 24 × 24 px` | `0/12`: item *Ensino* com `22,8 × 8,8 px`; botões de tabela de `4–19 px` | Controles de ação com `44 × 44 px` a `52 px` de altura | **Atende (12/12 projetado)** |
-| **M9** Erros automáticos WAVE (WCAG A/AA) | `13,17 erros/pág.` (`79` erros: `alt_missing`, `button_empty`, `language_missing`, `contrast`, `th_empty`, `label_missing`, `link_empty`) | HTML5 com `lang="pt-BR"`, `alt` explícito na logo UnB, botões com `aria-label` + texto, ausência de tabelas de *layout* e contraste > `4,5:1` | **0 erros estruturais (projetado)** |
+| **M14 (a)** Sem rolagem horizontal / escala 1,0 | `0/12`: largura de *layout* `980 px`, escala `0,37` (360 px) e `0,78` (768 px) | `<meta viewport>` fixa largura no dispositivo (`360 px = 360 px`, escala `1,0`) | **Medido: 12/12** |
+| **M14 (b)** Fontes efetivas `≥ 12 px` | `0/12`: `1.063/1.063` textos abaixo de `12 px` (`2,9` a `3,8 px` em 360 px) | Corpo padrão `13,5–14 px` e nenhum texto abaixo de `12 px` após o ajuste (antes: mínimo de `9,5 px`) | **Medido: 12/12** (0/12 antes do ajuste) |
+| **M14 (c)** Sem texto sobreposto ou cortado | `10/12`: falha em T5 em `360 px` (3 textos) e `768 px` (4 textos) | Cabeçalho da Turma Virtual em fluxo vertical sem botões flutuantes sobre texto | **Medido: 12/12** |
+| **M14 (d)** Menus acionáveis por toque | `12/12` em emulação, mas `40%` (`P2` e `P3`) relataram no questionário menu que não abriu ao tocar | Menus *hover* substituídos por barra inferior fixa e ações diretas | **Medido: 12/12** (todos os toques abriram a tela esperada) |
+| **M14 (e)** Alvos de toque `≥ 24 × 24 px` | `0/12`: item *Ensino* com `22,8 × 8,8 px`; botões de tabela de `4–19 px` | Controles de ação com `44 × 44 px` a `52 px` de altura; botões fora do escopo com altura mínima de `24 px` após o ajuste | **Medido: 12/12** (10/12 antes do ajuste) |
+| **M9** Erros automáticos WAVE (WCAG A/AA) | `13,17 erros/pág.` (`79` erros: `alt_missing`, `button_empty`, `language_missing`, `contrast`, `th_empty`, `label_missing`, `link_empty`) | HTML5 com `lang="pt-BR"`, `alt` explícito na logo UnB, botões com `aria-label` + texto, ausência de tabelas de *layout* e contraste > `4,5:1` | **0 erros estruturais (projetado; sem medição)** |
 
-*Fonte: elaboração da equipe, a partir das fichas de [`docs/fase-2/metricas.md`](../fase-2/metricas.md) e de `docs/fase-4/`.*
+*Fonte: elaboração da equipe, a partir das fichas de [`docs/fase-2/metricas.md`](../fase-2/metricas.md), de `docs/fase-4/` e de `dados/consolidados/verificacao-prototipo.csv`.*
 
 A Tabela 4 sintetiza a redução projetada do caminho mínimo (`C_min`) e das falhas observadas nas seis tarefas do escopo (**T1 a T6**).
 
@@ -202,3 +204,4 @@ Os arquivos ficam em [`docs/assets/prototipo-mobile/`](https://github.com/FCTE-Q
 | 1.0 | 21/11/2026 | Elaboração do Protótipo Mobile-First de alta fidelidade (SVG, PNG e simulador interativo), matriz de rastreabilidade `RM-01` a `RM-10`, justificativa pelas métricas da Fase 4 e recomendações à STI/UnB e ao DEG | [Davi Nobre](https://github.com/Jagaima) |
 | 1.1 | 21/11/2026 | Remoção da figura comparativa Antes/Depois e das caixas explicativas externas nas imagens, inclusão da logo da UnB na versão html e exibição visual de todas as funções do Portal do Discente fora do escopo | [Davi Nobre](https://github.com/Jagaima) |
 | 1.2 | 22/11/2026 | Ajustes da revisão do PR: explicitação de resultados projetados em M14/M9 e dados complementares de desempenho em RM-09/T5, correção de redação em M14 (d) e seção 6, e padronização de legendas de tabelas e figuras | [Davi Nobre](https://github.com/Jagaima) |
+| 1.3 | 23/11/2026 | Verificação medida de M14 no protótipo (0/12 na primeira medição, 12/12 após o ajuste de fontes e alvos), com o novo *script* `coleta/verificar_prototipo.py`; M9 segue projetada | Caio Borges |
