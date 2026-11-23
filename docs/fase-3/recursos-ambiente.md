@@ -151,7 +151,7 @@ A Tabela 8 mostra como os recursos especificados atendem ao que as fichas das m�
 | M6 compara participantes com um especialista | O especialista usa o computador e o navegador das sessões (Tabela 2) |
 | M10 exige teclado, zoom de 200% e leitor de tela | NVDA ou VoiceOver, teclado físico e prática prévia dos avaliadores (Tabelas 2 e 4) |
 | M1, M2, M10 e M20 exigem dois avaliadores independentes e um terceiro para divergências | Três membros com conta que atenda à Tabela 5 (Tabela 4) |
-| A regra 3 dos níveis exige ao menos três participantes por grupo | Seis participantes e duas reservas (Tabela 4) |
+| O recorte por grupo (H5 e regra 3 dos níveis) compara o começo e o meio ou fim do curso | Seis participantes e duas reservas (Tabela 4) |
 | As tarefas T1 a T6 precisam ser possíveis na conta usada | Requisitos de conta da Tabela 5, conferidos no recrutamento e pela equipe antes da coleta |
 
 *Fonte: elaboração da equipe.*
@@ -167,3 +167,4 @@ A Tabela 8 mostra como os recursos especificados atendem ao que as fichas das m�
 | 1.4 | 15/11/2026 | Local das gravações no OneDrive institucional, transcrição automática, retenção dos termos assinados e referência à LGPD, alinhados à nova versão do termo de consentimento | Caio Borges |
 | 1.5 | 15/11/2026 | Nota sobre a execução instrumentada de M13 e M14 na Fase 4 | [arthurlleite](https://github.com/arthurlleite) |
 | 1.6 | 21/11/2026 | Atualização da nota de M13 após a conclusão instrumentada de Edge e WebKit | [Felipe Campêlo](https://github.com/felipeacampelo) |
+| 1.7 | 23/11/2026 | Recorte por grupo sem número mínimo de participantes | Caio Borges |

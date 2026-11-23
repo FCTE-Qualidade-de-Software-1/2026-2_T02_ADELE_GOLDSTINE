@@ -35,8 +35,8 @@ M5,tarefa,T3,5,1.0000,,recorte por tarefa (regra 3)
 M5,tarefa,T4,5,0.6000,,recorte por tarefa (regra 3)
 M5,tarefa,T5,5,0.8000,,recorte por tarefa (regra 3)
 M5,tarefa,T6,5,0.6000,,recorte por tarefa (regra 3)
-M5,grupo,comeco,12,0.8333,,recorte descritivo (2 participantes)
-M5,grupo,meio_fim,18,0.8333,,recorte descritivo (3 participantes)
+M5,grupo,comeco,12,0.8333,,"recorte por grupo, regra 3 (2 participantes)"
+M5,grupo,meio_fim,18,0.8333,,"recorte por grupo, regra 3 (3 participantes)"
 M5,grupo,calouros_primeiro_contato,3,1.0000,,"grupo do começo do curso, só tarefas nunca executadas antes (ficha de M5)"
 M6,geral,,6,4.3886,Insatisfatório,média de 6 tarefas
 M6,tarefa,T1,5,4.5000,,Tp = 15.0 s (5 concluídas); Te = 3.3 s (3 execuções)
@@ -62,8 +62,8 @@ M11,tarefa,T2,5,0.4000,,recorte por pergunta
 M11,tarefa,T4,5,0.6000,,recorte por pergunta
 M11,tarefa,T6,5,0.6000,,recorte por pergunta
 M12,geral,,5,32.5000,Insatisfatório,"média de 5 questionários (mín. 17.5, máx. 45)"
-M12,grupo,comeco,2,22.5000,,recorte descritivo (2 participantes)
-M12,grupo,meio_fim,3,39.1667,,recorte descritivo (3 participantes)
+M12,grupo,comeco,2,22.5000,,"recorte por grupo, regra 3 (2 participantes)"
+M12,grupo,meio_fim,3,39.1667,,"recorte por grupo, regra 3 (3 participantes)"
 MA1,geral,,30,0.0000,,0 de 30 tentativas com declaração de função inexistente; sem nível (métrica auxiliar)
 IQ1,tarefa,T1,5,5.0000,,"mediana da facilidade percebida (C1, 1 a 5); sem nível"
 IQ1,tarefa_comeco,T1,2,4.0000,,recorte descritivo (2 participantes)
@@ -103,7 +103,7 @@ IQ4,problema_celular,conteudo_cortado,5,0.2000,,1 de 5 marcaram em B5
 IQ4,problema_celular,nao_concluiu,5,0.4000,,2 de 5 marcaram em B5
 IQ4,problema_celular,nenhum,5,0.0000,,0 de 5 marcaram em B5
 IQ4,problema_celular,nao_usa,5,0.0000,,0 de 5 marcaram em B5
-HP1,geral,,5,2.0000,,"inconclusiva: grupo com menos de três questionários válidos (começo: 2, meio ou fim: 3); tarefas com mediana menor no começo do curso: T1, T5 (valor = número dessas tarefas; indício descritivo, não confirmação)"
+HP1,geral,,5,2.0000,,"sem tendência: mediana do começo menor em 2 de 6 tarefas (começo: 2, meio ou fim: 3); tarefas com mediana menor no começo do curso: T1, T5 (valor = número dessas tarefas; indício descritivo, não confirmação)"
 M15,geral,,1,1.5941,Regular,"1 avaliador(es); Leonardo: Tm = 110.2 s, Td = 69.1 s"
 M15,tarefa,T1,1,1.3922,,recorte por tarefa (regra 3)
 M15,tarefa,T2,1,2.0307,,recorte por tarefa (regra 3)

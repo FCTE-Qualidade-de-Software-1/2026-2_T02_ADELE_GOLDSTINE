@@ -110,3 +110,14 @@
 @media print { .viz-scroll { overflow: visible; } }
 /* O tema centraliza figuras com largura do conteúdo; os gráficos ocupam a coluna inteira */
 .md-typeset figure.viz { display: block; width: 100%; max-width: none; margin: 1.5rem 0; }
+
+/* Gráficos da síntese final (coleta/graficos_finais.py) e slides da apresentação */
+.grafico-final { margin: 1rem 0 .5rem; overflow-x: auto; }
+.grafico-final svg { display: block; width: 100%; height: auto; border-radius: 10px; }
+.grafico-final + details, .md-typeset details.grafico-dados { margin-top: .25rem; }
+.galeria-slides { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; margin: 1rem 0; }
+.galeria-slides figure { margin: 0; }
+.galeria-slides img { width: 100%; border-radius: 8px; box-shadow: 0 2px 10px #0002; }
+.galeria-dispositivos { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .8rem; align-items: start; }
+.galeria-dispositivos figure { margin: 0; text-align: center; font-size: .7rem; }
+.galeria-dispositivos img { width: 100%; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 8px; }

@@ -556,19 +556,19 @@ CSS_INTERATIVO = """
 .pm-guide-btn:hover,.pm-guide-btn.ativo{border-color:#1d4ed8;background:#eff6ff;color:#0f172a}
 .pm-phone{width:360px;max-width:100%;height:730px;background:#1e293b;border-radius:30px;padding:10px;box-shadow:0 16px 36px rgba(15,23,42,.22);display:flex;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#0f172a;box-sizing:border-box}
 .pm-screen{background:#f1f5f9;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;height:100%;position:relative}
-.pm-status{background:#002244;color:#fff;font-size:10.5px;padding:4px 14px;display:flex;justify-content:space-between;font-weight:600;flex:none}
+.pm-status{background:#002244;color:#fff;font-size:12px;padding:4px 14px;display:flex;justify-content:space-between;font-weight:600;flex:none}
 .pm-header{background:#003366;color:#fff;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;gap:8px;flex:none}
 .pm-brand{display:flex;align-items:center;gap:8px}
 .pm-logo-box{background:#fff;border-radius:4px;padding:2px 3px;display:flex;align-items:center;justify-content:center;flex:none}
 .pm-logo-box img{width:38px;height:19px;display:block;object-fit:contain}
 .pm-header-title{font-size:13.5px;font-weight:700;line-height:1.15}
-.pm-header-sub{font-size:10.5px;color:#e2e8f0;margin-top:1px}
+.pm-header-sub{font-size:12px;color:#e2e8f0;margin-top:1px}
 .pm-font-btns{display:flex;gap:5px;flex:none}
-.pm-font-btn{min-width:30px;min-height:30px;border-radius:7px;border:1px solid #60a5fa;background:#0f4c81;color:#fff;font-weight:700;font-size:11px;cursor:pointer}
+.pm-font-btn{min-width:30px;min-height:30px;border-radius:7px;border:1px solid #60a5fa;background:#0f4c81;color:#fff;font-weight:700;font-size:12px;cursor:pointer}
 .pm-utils,.pm-mods{display:flex;flex-wrap:wrap;gap:4px;padding:5px 10px;background:#e2e8f0;border-bottom:1px solid #cbd5e1;flex:none}
 .pm-mods{background:#fff}
-.pm-dis{padding:3px 7px;border-radius:5px;border:1px dashed #cbd5e1;background:#f1f5f9;color:#64748b;font-size:9.5px;font-weight:600;cursor:not-allowed}
-.pm-mod-ativo{padding:3px 9px;border-radius:5px;border:1px solid #1d4ed8;background:#1d4ed8;color:#fff;font-size:9.5px;font-weight:700}
+.pm-dis{min-height:24px;padding:3px 7px;border-radius:5px;border:1px dashed #cbd5e1;background:#f1f5f9;color:#64748b;font-size:12px;font-weight:600;cursor:not-allowed}
+.pm-mod-ativo{padding:3px 9px;border-radius:5px;border:1px solid #1d4ed8;background:#1d4ed8;color:#fff;font-size:12px;font-weight:700}
 .pm-body{flex:1;overflow-y:auto;padding:10px;display:flex;flex-direction:column;gap:8px;font-size:13.5px}
 .pm-body.fs-lg{font-size:15.5px}
 .pm-body.fs-sm{font-size:12px}
@@ -584,20 +584,20 @@ CSS_INTERATIVO = """
 .pm-bar-fill{height:100%;background:#059669;border-radius:4px}
 .pm-seg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:#e2e8f0;padding:4px;border-radius:9px}
 .pm-seg-2{grid-template-columns:repeat(2,1fr)}
-.pm-seg button{min-height:38px;border:none;border-radius:6px;background:transparent;color:#334155;font-weight:600;font-size:11.5px;cursor:pointer}
+.pm-seg button{min-height:38px;border:none;border-radius:6px;background:transparent;color:#334155;font-weight:600;font-size:12px;cursor:pointer}
 .pm-seg button.ativo{background:#1d4ed8;color:#fff}
-.pm-box-hor{background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:7px;margin:6px 0;font-size:11.5px;line-height:1.35}
+.pm-box-hor{background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:7px;margin:6px 0;font-size:12px;line-height:1.35}
 .pm-chip-row{display:flex;flex-wrap:wrap;gap:5px}
-.pm-chip{min-height:32px;padding:4px 9px;border-radius:16px;border:1px solid #cbd5e1;background:#fff;color:#334155;font-size:11px;font-weight:600;cursor:pointer}
+.pm-chip{min-height:32px;padding:4px 9px;border-radius:16px;border:1px solid #cbd5e1;background:#fff;color:#334155;font-size:12px;font-weight:600;cursor:pointer}
 .pm-chip.ativo{background:#003366;border-color:#003366;color:#fff}
 .pm-mat-item{display:flex;justify-content:space-between;align-items:center;gap:8px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;padding:9px}
-.pm-icon-btn{min-width:48px;min-height:44px;border-radius:8px;border:1px solid #bfdbfe;background:#eff6ff;color:#1d4ed8;font-weight:700;font-size:11px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.pm-icon-btn{min-width:48px;min-height:44px;border-radius:8px;border:1px solid #bfdbfe;background:#eff6ff;color:#1d4ed8;font-weight:700;font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center}
 .pm-nav{background:#fff;border-top:1px solid #cbd5e1;display:grid;grid-template-columns:repeat(4,1fr);flex:none}
-.pm-nav button{min-height:52px;border:none;background:#fff;color:#475569;font-size:11px;font-weight:600;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:4px}
+.pm-nav button{min-height:52px;border:none;background:#fff;color:#475569;font-size:12px;font-weight:600;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:4px}
 .pm-nav button.ativo{color:#1d4ed8;font-weight:700;box-shadow:inset 0 3px 0 #1d4ed8}
-.pm-toast{background:#065f46;color:#fff;font-size:11.5px;padding:8px 12px;border-radius:8px;margin-top:4px;display:none}
+.pm-toast{background:#065f46;color:#fff;font-size:12px;padding:8px 12px;border-radius:8px;margin-top:4px;display:none}
 .pm-toast.vis{display:block}
-.pm-grade-tbl{width:100%;border-collapse:collapse;font-size:10.5px;background:#fff}
+.pm-grade-tbl{width:100%;border-collapse:collapse;font-size:12px;background:#fff}
 .pm-grade-tbl th,.pm-grade-tbl td{border:1px solid #cbd5e1;padding:5px 4px;text-align:center}
 .pm-grade-tbl th{background:#eff6ff;color:#003366}
 </style>
@@ -662,7 +662,7 @@ def _html_interativo(logo_uri: str) -> str:
         <!-- ABA 1: INÍCIO -->
         <div id="pm-tab-inicio" class="pm-panel">
           <div class="pm-card">
-            <div style="font-size:10.5px;font-weight:700;color:#003366;margin-bottom:5px">CAMPUS UNB GAMA: FCTE · ENGENHARIA DE SOFTWARE (ATIVO)</div>
+            <div style="font-size:12px;font-weight:700;color:#003366;margin-bottom:5px">CAMPUS UNB GAMA: FCTE · ENGENHARIA DE SOFTWARE (ATIVO)</div>
             <div class="pm-chip-row">
               <button type="button" class="pm-dis" disabled>Abrir Chamado</button>
               <button type="button" class="pm-dis" disabled>Alterar Senha</button>
@@ -676,9 +676,9 @@ def _html_interativo(logo_uri: str) -> str:
               <strong style="color:#003366;font-size:12px">Integralizações e Índices</strong>
               <strong style="color:#065f46;font-size:12px">62% Integralizado</strong>
             </div>
-            <div style="margin-top:3px;font-size:15px;font-weight:700;color:#1d4ed8">1.320 h pendentes <span style="font-size:11px;font-weight:400;color:#475569">(Obrig: 930 h · Opt: 390 h · Comp: 0 h)</span></div>
+            <div style="margin-top:3px;font-size:15px;font-weight:700;color:#1d4ed8">1.320 h pendentes <span style="font-size:12px;font-weight:400;color:#475569">(Obrig: 930 h · Opt: 390 h · Comp: 0 h)</span></div>
             <div class="pm-bar-bg"><div class="pm-bar-fill" style="width:62%"></div></div>
-            <div class="pm-row" style="font-size:11px;color:#334155">
+            <div class="pm-row" style="font-size:12px;color:#334155">
               <span>Currículo: 3.480 h · IRA: 3,7508 · MP: 3,8088</span>
               <button type="button" class="pm-chip" data-goto="progresso" style="min-height:26px;border-color:#bfdbfe;color:#1d4ed8">Detalhar</button>
             </div>
@@ -691,10 +691,10 @@ def _html_interativo(logo_uri: str) -> str:
 
           <div class="pm-card">
             <div class="pm-row">
-              <strong style="font-size:11px;color:#003366">Últimas Atualizações</strong>
+              <strong style="font-size:12px;color:#003366">Últimas Atualizações</strong>
               <button type="button" class="pm-dis" disabled>&lt;&lt; Parar &gt;&gt;</button>
             </div>
-            <div style="font-size:11px;color:#334155;margin-top:3px">11/11/2026 - ECONOMIA DE ENERGIA (2026.2): Tarefa alterada.</div>
+            <div style="font-size:12px;color:#334155;margin-top:3px">11/11/2026 - ECONOMIA DE ENERGIA (2026.2): Tarefa alterada.</div>
           </div>
 
           <div class="pm-row" style="margin:4px 0 2px">
@@ -756,9 +756,9 @@ def _html_interativo(logo_uri: str) -> str:
           </div>
 
           <div class="pm-card">
-            <strong style="font-size:11.5px;color:#003366">Minhas Atividades e Comunidades</strong>
-            <div style="font-size:11px;color:#334155;margin-top:4px">30/11/2026 23:59 (9 dias) · ECONOMIA DE ENERGIA: Relatório</div>
-            <div style="font-size:10.5px;color:#64748b;margin-top:4px">Comunidades Virtuais: Não participa de nenhuma comunidade virtual.</div>
+            <strong style="font-size:12px;color:#003366">Minhas Atividades e Comunidades</strong>
+            <div style="font-size:12px;color:#334155;margin-top:4px">30/11/2026 23:59 (9 dias) · ECONOMIA DE ENERGIA: Relatório</div>
+            <div style="font-size:12px;color:#64748b;margin-top:4px">Comunidades Virtuais: Não participa de nenhuma comunidade virtual.</div>
             <div class="pm-chip-row" style="margin-top:6px">
               <button type="button" class="pm-dis" disabled>Ver turmas anteriores</button>
               <button type="button" class="pm-dis" disabled>Avaliação Institucional</button>
@@ -772,7 +772,7 @@ def _html_interativo(logo_uri: str) -> str:
         <div id="pm-tab-turmas" class="pm-panel" style="display:none">
           <div class="pm-card">
             <strong style="font-size:13px;color:#003366;display:block">QUALIDADE DE SOFTWARE 1 (FGA0315)</strong>
-            <div style="font-size:11px;color:#475569;margin:2px 0 8px">2026.2 · FCTE - S6 · Seg e Qua 10h00–11h50</div>
+            <div style="font-size:12px;color:#475569;margin:2px 0 8px">2026.2 · FCTE - S6 · Seg e Qua 10h00–11h50</div>
             <div class="pm-chip-row">
               <button type="button" class="pm-chip" style="min-height:30px" data-toast="Seletor de turmas matriculadas aberto.">Trocar turma</button>
               <button type="button" class="pm-chip" style="min-height:30px" data-toast="Plano de Ensino aberto em PDF.">Plano de Ensino</button>
@@ -787,7 +787,7 @@ def _html_interativo(logo_uri: str) -> str:
           </div>
 
           <div class="pm-card">
-            <div style="font-size:10px;color:#64748b;margin-bottom:4px">Demais seções da Turma Virtual (fora do escopo):</div>
+            <div style="font-size:12px;color:#64748b;margin-bottom:4px">Demais seções da Turma Virtual (fora do escopo):</div>
             <div class="pm-chip-row">
               <button type="button" class="pm-dis" disabled>Participantes</button>
               <button type="button" class="pm-dis" disabled>Frequência</button>
@@ -805,24 +805,24 @@ def _html_interativo(logo_uri: str) -> str:
               <button type="button" class="pm-chip" data-filter="link">Referências</button>
             </div>
             <div class="pm-mat-item" data-tipo="arquivo">
-              <div><strong style="font-size:12px">Plano de Ensino 2026.2</strong><div style="font-size:10.5px;color:#475569">PDF · 240 KB · Anexo principal</div></div>
+              <div><strong style="font-size:12px">Plano de Ensino 2026.2</strong><div style="font-size:12px;color:#475569">PDF · 240 KB · Anexo principal</div></div>
               <button type="button" class="pm-icon-btn" data-toast="Download iniciado: Plano_Ensino_2026_2.pdf.">Baixar</button>
             </div>
             <div class="pm-mat-item" data-tipo="arquivo">
-              <div><strong style="font-size:12px">Roteiro do Trabalho Final</strong><div style="font-size:10.5px;color:#475569">PDF · 410 KB · Pasta Arquivos</div></div>
+              <div><strong style="font-size:12px">Roteiro do Trabalho Final</strong><div style="font-size:12px;color:#475569">PDF · 410 KB · Pasta Arquivos</div></div>
               <button type="button" class="pm-icon-btn" data-toast="Download iniciado: Roteiro_Trabalho_Final.pdf.">Baixar</button>
             </div>
             <div class="pm-mat-item" data-tipo="link">
-              <div><strong style="font-size:12px">Norma ISO/IEC 25010:2023</strong><div style="font-size:10.5px;color:#475569">Link externo · Seção Referências</div></div>
+              <div><strong style="font-size:12px">Norma ISO/IEC 25010:2023</strong><div style="font-size:12px;color:#475569">Link externo · Seção Referências</div></div>
               <button type="button" class="pm-icon-btn" data-toast="Referência externa aberta em nova aba.">Abrir</button>
             </div>
           </div>
 
           <div id="pm-sub-notas" style="display:none;flex-direction:column;gap:8px">
             <div class="pm-card" style="background:#ecfdf5;border-color:#a7f3d0">
-              <div style="font-size:11.5px;color:#065f46;font-weight:700">Relatório de Notas da Disciplina</div>
+              <div style="font-size:12px;color:#065f46;font-weight:700">Relatório de Notas da Disciplina</div>
               <div style="font-size:17px;font-weight:700;color:#003366;margin:4px 0">Média parcial: 9,10 (SS)</div>
-              <div style="font-size:11.5px;color:#334155">Frequência registrada: 100% (0 faltas)</div>
+              <div style="font-size:12px;color:#334155">Frequência registrada: 100% (0 faltas)</div>
             </div>
             <div class="pm-card">
               <div class="pm-row"><strong>Entrega 1</strong><strong>9,2</strong></div>
@@ -834,7 +834,7 @@ def _html_interativo(logo_uri: str) -> str:
           <div id="pm-sub-avisos" style="display:none;flex-direction:column;gap:8px">
             <div class="pm-card">
               <strong style="font-size:12px">Apresentação da Entrega 2</strong>
-              <div style="font-size:11px;color:#475569;margin-top:2px">Confirmada conforme cronograma oficial da disciplina.</div>
+              <div style="font-size:12px;color:#475569;margin-top:2px">Confirmada conforme cronograma oficial da disciplina.</div>
             </div>
           </div>
         </div>
@@ -842,14 +842,14 @@ def _html_interativo(logo_uri: str) -> str:
         <!-- ABA 3: PROGRESSO / INTEGRALIZAÇÃO -->
         <div id="pm-tab-progresso" class="pm-panel" style="display:none">
           <div class="pm-card pm-card-navy">
-            <div style="font-size:11px;color:#cbd5e1">Carga Horária Total Pendente para Conclusão</div>
+            <div style="font-size:12px;color:#cbd5e1">Carga Horária Total Pendente para Conclusão</div>
             <div style="font-size:20px;font-weight:700;margin:4px 0">1.320 horas pendentes</div>
-            <div style="font-size:11px;color:#cbd5e1">2.160 h cumpridas de 3.480 h totais (62% integralizado)</div>
+            <div style="font-size:12px;color:#cbd5e1">2.160 h cumpridas de 3.480 h totais (62% integralizado)</div>
           </div>
 
           <div class="pm-card">
             <strong style="font-size:12px">Por modalidade curricular</strong>
-            <div style="margin-top:6px;font-size:11.5px">
+            <div style="margin-top:6px;font-size:12px">
               <div class="pm-row"><span>CH. Obrigatória</span><strong>1.470 / 2.400 h (Pendente: 930 h)</strong></div>
               <div class="pm-bar-bg"><div class="pm-bar-fill" style="width:61%;background:#1d4ed8"></div></div>
               <div class="pm-row"><span>CH. Optativa</span><strong>540 / 930 h (Pendente: 390 h)</strong></div>
@@ -860,9 +860,9 @@ def _html_interativo(logo_uri: str) -> str:
           </div>
 
           <div class="pm-card" style="background:#f8fafc">
-            <strong style="font-size:11.5px;color:#003366">Índices Acadêmicos e Dados Institucionais</strong>
-            <div style="font-size:11px;margin-top:4px"><strong>IRA (Índice de Rendimento Acadêmico):</strong> 3,7508</div>
-            <div style="font-size:11px;margin-top:2px"><strong>MP (Média Ponderada):</strong> 3,8088 · Entrada: 2021.2</div>
+            <strong style="font-size:12px;color:#003366">Índices Acadêmicos e Dados Institucionais</strong>
+            <div style="font-size:12px;margin-top:4px"><strong>IRA (Índice de Rendimento Acadêmico):</strong> 3,7508</div>
+            <div style="font-size:12px;margin-top:2px"><strong>MP (Média Ponderada):</strong> 3,8088 · Entrada: 2021.2</div>
             <div class="pm-btn-row" style="margin-top:8px">
               <button type="button" class="pm-btn pm-btn-primary" style="min-height:38px" data-toast="Atestado de Matrícula emitido em PDF.">Emitir Atestado</button>
               <button type="button" class="pm-btn" style="min-height:38px" data-toast="Histórico Escolar emitido em PDF.">Emitir Histórico</button>
@@ -870,7 +870,7 @@ def _html_interativo(logo_uri: str) -> str:
           </div>
 
           <div class="pm-card">
-            <div style="font-size:10.5px;font-weight:700;color:#64748b;margin-bottom:5px">Demais serviços do menu Ensino (fora do escopo):</div>
+            <div style="font-size:12px;font-weight:700;color:#64748b;margin-bottom:5px">Demais serviços do menu Ensino (fora do escopo):</div>
             <div class="pm-chip-row">
               <button type="button" class="pm-dis" disabled>Declaração de Vínculo</button>
               <button type="button" class="pm-dis" disabled>Passe Livre</button>
@@ -886,8 +886,8 @@ def _html_interativo(logo_uri: str) -> str:
         <div id="pm-tab-calendario" class="pm-panel" style="display:none">
           <div class="pm-card">
             <div class="pm-row">
-              <span style="background:#ecfdf5;color:#065f46;border:1px solid #a7f3d0;padding:3px 8px;border-radius:6px;font-size:10.5px;font-weight:700">Calendário Interno SIGAA</span>
-              <select id="pm-cal-sem" aria-label="Selecionar período do calendário" style="min-height:34px;border-radius:6px;border:1px solid #cbd5e1;padding:4px 8px;font-size:11.5px;font-weight:700;color:#003366">
+              <span style="background:#ecfdf5;color:#065f46;border:1px solid #a7f3d0;padding:3px 8px;border-radius:6px;font-size:12px;font-weight:700">Calendário Interno SIGAA</span>
+              <select id="pm-cal-sem" aria-label="Selecionar período do calendário" style="min-height:34px;border-radius:6px;border:1px solid #cbd5e1;padding:4px 8px;font-size:12px;font-weight:700;color:#003366">
                 <option value="2026.2" selected>2026.2 (Vigente)</option>
                 <option value="2027.1">2027.1 (Previsto)</option>
               </select>
@@ -895,29 +895,29 @@ def _html_interativo(logo_uri: str) -> str:
           </div>
 
           <div class="pm-card pm-card-amber">
-            <span style="background:#92400e;color:#fff;padding:2px 7px;border-radius:4px;font-size:9.5px;font-weight:700">PRAZO CRÍTICO DO SEMESTRE</span>
+            <span style="background:#92400e;color:#fff;padding:2px 7px;border-radius:4px;font-size:12px;font-weight:700">PRAZO CRÍTICO DO SEMESTRE</span>
             <div style="font-size:13.5px;font-weight:700;margin-top:5px" id="pm-cal-destaque-tit">Trancamento Geral e de Turmas</div>
             <div style="font-size:12.5px;font-weight:700;color:#92400e;margin-top:2px" id="pm-cal-destaque-dt">10/08/2026 até 09/10/2026</div>
-            <div style="font-size:11px;color:#334155;margin-top:3px" id="pm-cal-destaque-desc">Data-limite para trancamento no SIGAA: 09/10/2026.</div>
+            <div style="font-size:12px;color:#334155;margin-top:3px" id="pm-cal-destaque-desc">Data-limite para trancamento no SIGAA: 09/10/2026.</div>
           </div>
 
           <div style="display:flex;flex-direction:column;gap:7px">
             <div class="pm-card" style="border-left:5px solid #065f46">
-              <strong style="color:#065f46;font-size:11.5px">10/08/2026 — Início do Período Letivo</strong>
-              <div style="font-size:11px;color:#334155">Abertura regular das aulas da graduação 2026.2.</div>
+              <strong style="color:#065f46;font-size:12px">10/08/2026 — Início do Período Letivo</strong>
+              <div style="font-size:12px;color:#334155">Abertura regular das aulas da graduação 2026.2.</div>
             </div>
             <div class="pm-card" style="border-left:5px solid #92400e">
-              <strong style="color:#92400e;font-size:11.5px">09/10/2026 — Limite de Trancamento</strong>
-              <div style="font-size:11px;color:#334155">Último dia para trancar disciplinas regulares no SIGAA.</div>
+              <strong style="color:#92400e;font-size:12px">09/10/2026 — Limite de Trancamento</strong>
+              <div style="font-size:12px;color:#334155">Último dia para trancar disciplinas regulares no SIGAA.</div>
             </div>
             <div class="pm-card" style="border-left:5px solid #003366">
-              <strong style="color:#003366;font-size:11.5px">14/12/2026 — Término do Período Letivo</strong>
-              <div style="font-size:11px;color:#334155">Encerramento das aulas e consolidação de menções até 21/12.</div>
+              <strong style="color:#003366;font-size:12px">14/12/2026 — Término do Período Letivo</strong>
+              <div style="font-size:12px;color:#334155">Encerramento das aulas e consolidação de menções até 21/12.</div>
             </div>
           </div>
 
           <div class="pm-card">
-            <div style="font-size:10.5px;font-weight:700;color:#64748b;margin-bottom:5px">Documentos normativos (fora do escopo):</div>
+            <div style="font-size:12px;font-weight:700;color:#64748b;margin-bottom:5px">Documentos normativos (fora do escopo):</div>
             <div class="pm-chip-row">
               <button type="button" class="pm-dis" disabled>Regulamento dos Cursos de Graduação</button>
               <button type="button" class="pm-dis" disabled>Calendário Pós-Graduação</button>

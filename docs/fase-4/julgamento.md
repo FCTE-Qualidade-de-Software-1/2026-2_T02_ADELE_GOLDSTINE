@@ -64,7 +64,7 @@ A resposta textual de cada questão segue o nível da sua métrica ([Tabela 4 de
 | Questão | Nível | Resposta | Hipótese e critério | Classificação |
 | :-----: | ----- | -------- | ------------------- | ------------- |
 | Q4 | Regular (1) | Parcialmente, com dificuldade relevante | H4: M4 ≥ 50% e < 75% (Regular) | **Confirmada** |
-| Q5 | Bom (2) | Sim | H5: M5 ≥ 78% e < 90% (Bom) e, no recorte de calouros com ao menos três participantes, M5 < 65% | **Inconclusiva**: M5 = 83,3% está na faixa prevista, mas o grupo do começo do curso teve dois participantes (regra 3) |
+| Q5 | Bom (2) | Sim | H5: M5 ≥ 78% e < 90% (Bom) e, no recorte de calouros, M5 < 65% | **Refutada**: M5 = 83,3% está na faixa prevista, mas os calouros concluíram 83,3% das tarefas (10 de 12), o mesmo que o meio ou fim do curso, e 3 de 3 nas tarefas que nunca tinham feito, acima dos 65% previstos |
 | Q6 | Insatisfatório (0) | Não | H6: M6 > 2,5 e ≤ 4,0 (Regular) | **Refutada**: M6 = 4,39 ficou acima da faixa prevista |
 | Q7 | Regular (1) | Parcialmente, com dificuldade relevante | H7: M7 > 1,33 e ≤ 2,00 (Regular) | **Confirmada** |
 | Q8 | Bom (2) | Sim | H8: M8 ≥ 50% e < 70% (Regular) | **Refutada**: M8 = 81,25% ficou acima da faixa prevista |
@@ -80,7 +80,7 @@ A resposta textual de cada questão segue o nível da sua métrica ([Tabela 4 de
 
 **Q6 e Q13 (refutadas para pior).** O tempo e a satisfação ficaram abaixo do previsto. Os participantes levaram, em média, 4,39 vezes o tempo do especialista, com o pior caso em T4 (8,48 vezes), e nenhuma pontuação SUS individual alcançou o limite do nível Regular (entre 17,5 e 45,0). A Fase 1 tratava o SIGAA como "usável, porém trabalhoso"; os dados indicam que o esforço e a insatisfação são maiores que isso.
 
-**Q5 e Q8 (resultados melhores que os de tempo e satisfação).** Os participantes concluíram sem ajuda 25 das 30 tentativas e se recuperaram sozinhos de 13 dos 16 erros. H8 previa recuperação entre 50% e 70%, porque erros como a expiração da sessão obrigariam a refazer passos. Nas sessões, 15 dos 16 erros foram escolhas de item errado, desfeitas pelo próprio participante ao voltar ao portal; o único erro do sistema, a página "Document Expired" depois do botão Voltar na Turma Virtual, obrigou a refazer passos. Os outros dois erros não recuperados vieram do link do calendário no painel do portal, que leva ao site da SAA (T6). As falhas de conclusão concentraram-se em T4 e T6 (60% de conclusão em cada uma). Esses resultados, lidos com Q6 e Q13, indicam que o estudante consegue terminar as tarefas, mas a um custo alto de tempo e de satisfação.
+**Q5 e Q8 (resultados melhores que os de tempo e satisfação).** Os participantes concluíram sem ajuda 25 das 30 tentativas e se recuperaram sozinhos de 13 dos 16 erros. H8 previa recuperação entre 50% e 70%, porque erros como a expiração da sessão obrigariam a refazer passos. Nas sessões, 15 dos 16 erros foram escolhas de item errado, desfeitas pelo próprio participante ao voltar ao portal; o único erro do sistema, a página "Document Expired" depois do botão Voltar na Turma Virtual, obrigou a refazer passos. Os outros dois erros não recuperados vieram do link do calendário no painel do portal, que leva ao site da SAA (T6). As falhas de conclusão concentraram-se em T4 e T6 (60% de conclusão em cada uma). Os dois participantes do começo do curso concluíram tanto quanto os do meio ou fim (83,3% nos dois grupos) e todas as tarefas que faziam pela primeira vez: a falta de experiência não impediu a conclusão. A diferença entre os grupos aparece na satisfação, com SUS médio de 22,5 no começo do curso e 39,2 no meio ou fim. Esses resultados, lidos com Q6 e Q13, indicam que o estudante consegue terminar as tarefas, mas a um custo alto de tempo e de satisfação.
 
 **Q9 (refutada para melhor).** O sistema tratou cinco dos seis cenários: o botão Voltar, a recarga da página e a segunda aba não geraram erro; a matrícula fora do período é bloqueada com mensagem e datas; e o atestado e o histórico abrem sem janela nova, de modo que o bloqueio de pop-ups não os afeta. O cenário não tratado é a sessão expirada (C1, OP-06): depois de 42 minutos parado, o clique em uma função levou de volta ao portal, sem abrir a função e sem mensagem sobre a sessão. A página "Document Expired" vista pelo P2 no teste com usuários não se reproduziu na inspeção, em Chromium, Firefox e WebKit.
 
@@ -111,12 +111,11 @@ A resposta textual de cada questão segue o nível da sua métrica ([Tabela 4 de
 | Classificação | Hipóteses | Total |
 | ------------- | --------- | :---: |
 | Confirmada | H1, H4, H7, H10, H12, H15, H16 | 7 |
-| Refutada | H2, H3, H6, H8, H9, H11, H13, H14 | 8 |
-| Inconclusiva | H5 | 1 |
+| Refutada | H2, H3, H5, H6, H8, H9, H11, H13, H14 | 9 |
 
 *Fonte: elaboração da equipe.*
 
-Entre as hipóteses refutadas, H8, H9 e H14 erraram para melhor, e H2, H3, H6, H11 e H13, para pior. As refutações para pior concentram-se no esforço, na satisfação e na acessibilidade: as hipóteses da Fase 1 subestimaram o quanto o uso do SIGAA é demorado, insatisfatório e dependente do mouse. Em H2, a diferença é pequena (97,0% contra 100%) e não atinge item crítico.
+Entre as hipóteses refutadas, H5, H8, H9 e H14 erraram para melhor, e H2, H3, H6, H11 e H13, para pior. As refutações para pior concentram-se no esforço, na satisfação e na acessibilidade: as hipóteses da Fase 1 subestimaram o quanto o uso do SIGAA é demorado, insatisfatório e dependente do mouse. Em H2, a diferença é pequena (97,0% contra 100%) e não atinge item crítico.
 
 ## 3. Julgamento das características
 
@@ -192,7 +191,7 @@ O julgamento responde ao propósito da avaliação, que é dar à STI e ao DEG e
 
 ## 7. Limitações
 
-- **Amostra do teste com usuários.** A coleta terminou com cinco participantes (P1, P2, P3, P4 e P6), recrutados por conveniência na FCTE. O grupo do começo do curso teve dois participantes, e os recortes desse grupo são apenas descritivos (regra 3).
+- **Amostra do teste com usuários.** A coleta terminou com cinco participantes (P1, P2, P3, P4 e P6), recrutados por conveniência na FCTE. O grupo do começo do curso teve dois participantes e o do meio ou fim, três.
 - **M14 por emulação.** As larguras de 360 e 768 px foram verificadas por emulação no navegador, e não em celular real ([Flexibilidade](flexibilidade.md)).
 - **Inspeção (M1, M2, M10 e M20) sem a equipe completa.** O primeiro avaliador foi um *script* ([`coleta/inspecao_coleta.py`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/coleta/inspecao_coleta.py)) executado na conta de um membro da equipe; o segundo avaliador repetiu manualmente os pontos decisivos (teclado e VoiceOver no Safari, histórico com bloqueio de pop-ups, funções da matrícula) e conferiu as evidências dos demais. Não houve divergência, e por isso não houve terceiro avaliador. O zoom de 200% de M10 foi reproduzido com a janela reduzida à metade (683 × 384 px CSS), e T5 usou uma turma de Sistemas Operacionais. A comparação com o PPC prevista na ficha de M2 não foi feita: M2 usa o histórico, os índices e o calendário publicado pela SAA, que cobrem todos os itens críticos.
 - **M15 com um avaliador.** A ficha prevê a média entre avaliadores; M15 foi medida por um avaliador, em um celular (Samsung Galaxy S25 Ultra, Chrome) e uma execução por tarefa. Os tempos foram marcados pela fala do avaliador nas gravações ("começando" e "pronto"), com incerteza de cerca de 0,3 s por marcação; o valor só mudaria de nível com um erro de cerca de 6% no tempo total.
@@ -208,3 +207,4 @@ O julgamento responde ao propósito da avaliação, que é dar à STI e ao DEG e
 | 1.0 | 21/11/2026 | Criação da página: nível das métricas, respostas às questões Q1 a Q16, classificação das hipóteses H1 a H16, julgamento de G1, G2 e G3, hipóteses de relação, ranking das tarefas e coerência com o propósito da Fase 1 | Leonardo Bonetti |
 | 1.1 | 22/11/2026 | Resultado de M15: resposta a Q16, H16 confirmada, pontuação de G3, verificação de HR1 e limitação de um avaliador | Leonardo Bonetti |
 | 1.2 | 22/11/2026 | Resultados da inspeção (M1, M2, M10 e M20): respostas a Q1, Q2, Q9 e Q11, classificação de H1, H2, H5, H9 e H11, julgamento de G1 e G2, ranking das tarefas, Tabela 9 e limitação da inspeção | Caio Borges |
+| 1.3 | 23/11/2026 | H5 refutada pelo recorte dos calouros, sem número mínimo de participantes; resultado dos calouros em Q5 | Caio Borges |

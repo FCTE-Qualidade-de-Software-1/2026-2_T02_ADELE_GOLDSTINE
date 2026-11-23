@@ -16,12 +16,17 @@ Esta fase corresponde à quarta atividade do processo de avaliação de produto 
 | Execução instrumentada | M13, M14 | Concluída: M13 (24/24, Excelente) e M14 (0/12, Insatisfatório) | [Flexibilidade](flexibilidade.md) |
 | Execução manual em celular | M15 | Concluída: 1,59 (110,2 s no celular para 69,1 s no computador, Regular) | [Julgamento da Avaliação](julgamento.md) |
 | Dados complementares (fora do julgamento) | Rapidez, responsividade, estabilidade e fluidez | Concluída (46 de 48 execuções válidas) | [Desempenho (complementar)](desempenho.md) |
+| Dados complementares (fora do julgamento) | Matriz multiplataforma: 20 perfis de sistema, aparelho e navegador | Concluída em 23/11/2026 | [Matriz Multiplataforma](matriz-multiplataforma.md) |
 
 *Fonte: elaboração da equipe.*
 
 ## Julgamento
 
 A comparação de cada métrica com os níveis de pontuação, as respostas às questões Q1 a Q16, a classificação das hipóteses, o julgamento das três características, o ranking das tarefas e a ligação com o propósito da Fase 1 estão em [Julgamento da Avaliação](julgamento.md). Capacidade de Interação: não atende. Adequação Funcional: atende parcialmente. Flexibilidade: atende parcialmente.
+
+## Síntese e conclusão
+
+Os gráficos de todas as métricas, das hipóteses e do julgamento, a conclusão da avaliação e as melhorias recomendadas estão em [Síntese e Conclusão](sintese-final.md); os slides da apresentação final, em [Apresentação Final](../apresentacao-final.md).
 
 ## Ação de Melhoria Técnica (Seção 3.2)
 
@@ -41,3 +46,4 @@ Com base nos piores resultados medidos (**M14 = 0/12**, **M12 = 32,5**, **M9 = 1
 | 1.3 | 22/11/2026 | Inclusão do link para o julgamento da avaliação | Leonardo Bonetti |
 | 1.4 | 22/11/2026 | Situação de M15 (concluída, 1,59) | Leonardo Bonetti |
 | 1.5 | 22/11/2026 | Situação da inspeção (M1, M2, M10 e M20 concluídas) | Caio Borges |
+| 1.6 | 23/11/2026 | Inclusão da matriz multiplataforma na situação da coleta e dos links para a síntese final e a apresentação | [arthurlleite](https://github.com/arthurlleite) |

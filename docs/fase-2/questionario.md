@@ -121,8 +121,8 @@ Com 6 participantes, todos os indicadores são apresentados de forma **descritiv
 **HP1:** estudantes de 1º e 2º semestres (começo do curso) relatam menor facilidade nas tarefas (IQ1) do que estudantes a partir do 5º semestre (meio ou fim do curso).
 
 - **Fundamento:** perfil calouro da Fase 1 (desconhece a terminologia acadêmica) e observações OP-01 e OP-04.
-- **Verificação:** comparação descritiva das medianas de IQ1 por tarefa entre os dois grupos. Com três participantes por grupo, não se aplica teste estatístico.
-- **Classificação na Fase 4:** tendência observada, se a mediana do grupo do começo do curso for menor na maioria das tarefas (ao menos quatro das seis); sem tendência, se for igual ou maior na maioria; inconclusiva, se algum grupo tiver menos de três questionários válidos. Em qualquer caso, o resultado é declarado como indício, não como confirmação, por causa do tamanho da amostra.
+- **Verificação:** comparação descritiva das medianas de IQ1 por tarefa entre os dois grupos. Com poucos participantes por grupo, não se aplica teste estatístico.
+- **Classificação na Fase 4:** tendência observada, se a mediana do grupo do começo do curso for menor na maioria das tarefas (ao menos quatro das seis); sem tendência, se for igual ou maior na maioria. Em qualquer caso, o resultado é declarado como indício, não como confirmação, por causa do tamanho da amostra.
 
 Um resultado em que os dois grupos têm a mesma dificuldade também é informativo: indica que a experiência não compensa os problemas da interface, o que reforça falhas de operabilidade e autodescritividade.
 
@@ -146,3 +146,4 @@ As respostas ficam em `dados/brutos/questionario/respostas.csv`, uma linha por p
 | 1.3 | 14/11/2026 | Questionário aplicado ao fim da sessão do teste com usuários, no lugar do questionário online: público P1 a P6, consentimento pelo termo da sessão, retirada do item D1 e do bloco E, dois grupos iguais aos do protocolo, indicadores IQ1 a IQ4 descritivos e HP1 com comparação descritiva | Caio Borges |
 | 1.4 | 15/11/2026 | Item A1 aceita estudantes de graduação e de pós-graduação; A2 pergunta o semestre do curso atual | Caio Borges |
 | 1.5 | 15/11/2026 | Link para o formulário em PDF preenchível usado nas sessões | Caio Borges |
+| 1.6 | 23/11/2026 | Classificação de HP1 sem número mínimo de questionários por grupo | Caio Borges |

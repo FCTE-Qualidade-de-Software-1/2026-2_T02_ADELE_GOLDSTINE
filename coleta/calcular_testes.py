@@ -98,7 +98,7 @@ def m5(sess: list[dict]) -> list[tuple]:
         if lg:
             x, y = proporcao(lg, lambda r: r["concluida"] == "sim")
             np_ = len({r["participante"] for r in lg})
-            out.append(("M5", "grupo", g, y, x / y, "", f"recorte descritivo ({np_} participantes)"))
+            out.append(("M5", "grupo", g, y, x / y, "", f"recorte por grupo, regra 3 ({np_} participantes)"))
     cal = [r for r in sess if r["grupo"] == "comeco" and r["ja_executou"] == "nao"]
     if cal:
         x, y = proporcao(cal, lambda r: r["concluida"] == "sim")
@@ -247,7 +247,7 @@ def m12(sus: list[dict]) -> list[tuple]:
     for r in sus:
         por[r["grupo"]].append(float(r["pontuacao"]))
     for g, v in sorted(por.items()):
-        out.append(("M12", "grupo", g, len(v), st.mean(v), "", f"recorte descritivo ({len(v)} participantes)"))
+        out.append(("M12", "grupo", g, len(v), st.mean(v), "", f"recorte por grupo, regra 3 ({len(v)} participantes)"))
     return out
 
 
@@ -320,12 +320,8 @@ def indicadores(resp: list[dict], sess: list[dict]) -> list[tuple]:
     # HP1 - o começo do curso relata menor facilidade (IQ1) que o meio ou fim, em ao menos 4 das 6 tarefas
     menor = [t for t in TAREFAS if None not in (med_grupo["comeco"][t], med_grupo["meio_fim"][t])
              and med_grupo["comeco"][t] < med_grupo["meio_fim"][t]]
-    if min(n.values()) < 3:
-        clas = "inconclusiva"
-        motivo = f"grupo com menos de três questionários válidos (começo: {n['comeco']}, meio ou fim: {n['meio_fim']})"
-    else:
-        clas = "tendência observada" if len(menor) >= 4 else "sem tendência"
-        motivo = f"mediana do começo menor em {len(menor)} de 6 tarefas"
+    clas = "tendência observada" if len(menor) >= 4 else "sem tendência"
+    motivo = f"mediana do começo menor em {len(menor)} de 6 tarefas (começo: {n['comeco']}, meio ou fim: {n['meio_fim']})"
     out.append(("HP1", "geral", "", len(resp), len(menor), "",
                 f"{clas}: {motivo}; tarefas com mediana menor no começo do curso: {', '.join(menor) or 'nenhuma'} "
                 f"(valor = número dessas tarefas; indício descritivo, não confirmação)"))

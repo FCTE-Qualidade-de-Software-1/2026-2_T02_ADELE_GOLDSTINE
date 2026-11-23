@@ -35,6 +35,7 @@ hooks:
   - gestao/esforco.py
   - coleta/graficos_testes.py
   - coleta/prototipo_mobile.py
+  - coleta/graficos_finais.py
 
 markdown_extensions:
   - admonition
@@ -80,9 +81,12 @@ nav:
     - Acessibilidade Automática (M9): fase-4/acessibilidade.md
     - Teste com usuários (gráficos): fase-4/teste-usuarios.md
     - Flexibilidade: fase-4/flexibilidade.md
+    - Matriz Multiplataforma: fase-4/matriz-multiplataforma.md
     - Desempenho (complementar): fase-4/desempenho.md
     - Julgamento: fase-4/julgamento.md
     - Protótipo Mobile (Melhoria): fase-4/prototipo-mobile.md
+    - Síntese e Conclusão: fase-4/sintese-final.md
+  - Apresentação Final: apresentacao-final.md
   - Artigo:
     - Artigo (PDF): artigo/index.md
     - Introdução: artigo/introducao.md

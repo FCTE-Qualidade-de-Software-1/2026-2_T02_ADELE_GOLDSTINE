@@ -1,0 +1,8 @@
+metrica,recorte,n,valor_sigaa,valor_prototipo,nivel_prototipo,observacao
+M14,geral,12,0.0000,1.0000,Excelente,12 de 12 verificações adaptadas; todos os critérios atendidos
+M14,criterio_a,12,,1.0000,,12 de 12 verificações atendem o critério (a)
+M14,criterio_b,12,,1.0000,,12 de 12 verificações atendem o critério (b)
+M14,criterio_c,12,,1.0000,,12 de 12 verificações atendem o critério (c)
+M14,criterio_d,12,,1.0000,,12 de 12 verificações atendem o critério (d)
+M14,criterio_e,12,,1.0000,,12 de 12 verificações atendem o critério (e)
+M9,geral,6,13.1667,0.0000,Excelente,0 erros (Errors + Contrast Errors) em 6 estados

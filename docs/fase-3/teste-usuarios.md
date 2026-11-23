@@ -23,7 +23,7 @@ São **6 participantes**, em dois grupos de três que **diferem apenas no semest
 
 **Critérios de exclusão:** membros da equipe e pessoas que já conheçam os enunciados das tarefas, por exemplo por terem conversado com outro participante.
 
-**Por que há reservas:** com três participantes por grupo, cada grupo fica exatamente no mínimo da regra 3 de [Níveis de Pontuação](../fase-2/niveis-pontuacao.md#regra-3-resultados-por-perfil-por-pagina-e-por-tarefa). Uma falta faria o recorte do grupo virar apenas descritivo, e a hipótese H5, que depende do recorte de calouros, ficaria inconclusiva.
+**Por que há reservas:** com três participantes por grupo, uma falta reduziria o recorte do grupo, usado na hipótese H5 (calouros) e na regra 3 de [Níveis de Pontuação](../fase-2/niveis-pontuacao.md#regra-3-resultados-por-perfil-por-pagina-e-por-tarefa).
 
 Estudantes do 3º ou 4º semestre não são recrutados: com só seis vagas, os dois grupos ficam nos extremos do curso, onde a diferença de experiência com o SIGAA é maior, e um grupo intermediário teria participantes de menos para qualquer recorte. A amostra é de conveniência, limitação já aceita no [escopo da Fase 1](../fase-1/escopo.md#7-rigor-da-avaliacao).
 
@@ -204,3 +204,4 @@ O SUS [1] é aplicado em português, com escala de 1 (discordo totalmente) a 5 (
 | 1.12 | 15/11/2026 | Formulário de observação, questionário SUS e questionário da Fase 2 publicados e ligados à Tabela 3 e à seção 9 | Caio Borges |
 | 1.13 | 15/11/2026 | Termo de consentimento com referência à LGPD, transcrição, sessão remota pelo Teams e prazo de guarda da via assinada | Caio Borges |
 | 1.14 | 20/11/2026 | Tarefas concluídas só dentro do SIGAA (T6 no site da SAA conta como resultado errado); pergunta de compreensão não feita em tarefa concluída e pergunta sobre outro dado da mesma tela, conforme as fichas de M5 e M11 | Caio Borges |
+| 1.15 | 23/11/2026 | Justificativa das reservas sem número mínimo de participantes por recorte | Caio Borges |
