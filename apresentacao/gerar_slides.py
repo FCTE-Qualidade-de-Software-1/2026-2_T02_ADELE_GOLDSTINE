@@ -112,7 +112,7 @@ h1{font-family:Antonio;font-weight:200;color:#7179e6;font-size:76px;text-align:c
 .bloco h3{font-size:25px;margin-bottom:10px}
 .bloco p{font-size:20.5px;line-height:1.38}
 /* grade de hipóteses */
-.hgrid{display:grid;grid-template-columns:repeat(8,1fr);gap:10px;margin-top:22px}
+.hgrid{display:grid;grid-template-columns:repeat(var(--n,8),1fr);gap:10px;margin-top:22px}
 .hq{border-radius:14px;padding:9px 6px;text-align:center;color:#fff}
 .hq b{display:block;font-size:24px}.hq span{font-size:14.5px;display:block;margin-top:3px;line-height:1.2}
 /* melhorias */
@@ -141,10 +141,25 @@ def titulo(t, faixa, topo=False):
 
 
 # ---------------------------------------------------------------------------
-def slide_metricas(t, faixa, codigos, nota, topo=False):
+def mini_barras(titulo_, itens, sufixo="%", vmax=100):
+    """Painel de barras horizontais: itens = [(rótulo, valor, cor)]."""
+    lin = "".join(
+        f'<div style="display:grid;grid-template-columns:190px 1fr;align-items:center;height:27px;gap:10px">'
+        f'<div style="font-size:15.5px;font-weight:600">{r}</div><div class="trilho" style="height:20px;background:#ebebf3;border-radius:4px">'
+        f'<div class="barra" style="height:20px;width:{max(v / vmax * 82, 0.6):.1f}%;background:{c};border-radius:4px"></div>'
+        f'<div class="val" style="left:{v / vmax * 82:.1f}%;font-size:15.5px">{br(v, 0)}{sufixo}</div></div></div>' for r, v, c in itens)
+    return (f'<div style="flex:1;background:#fff;border-radius:16px;padding:12px 18px;box-shadow:0 1px 3px #0001">'
+            f'<div style="font-size:17px;font-weight:800;color:#5a62d4;margin-bottom:6px">{titulo_}</div>{lin}</div>')
+
+
+def cor_pct(v):
+    return "#d8434a" if v < 50 else ("#e39a3b" if v < 75 else ("#7fb0e6" if v < 100 else "#2a6fc9"))
+
+
+def slide_metricas(t, faixa, codigos, nota, topo=False, extra=""):
     m = gf.metricas()
     hip = {mt: (h, prev, cl) for h, (mt, prev, cl) in gf.HIPOTESES.items()}
-    alt = min(112, 410 // len(codigos))
+    alt = min(112 if not extra else 80, 410 // len(codigos))
     linhas = []
     for k in codigos:
         _, nome, lim, f = gf.METRICAS[k]
@@ -164,33 +179,59 @@ def slide_metricas(t, faixa, codigos, nota, topo=False):
             f'<div class="h">{h} previa {gf.NIVEIS[prev]} <span class="chip {cl_cls}">{cl_txt}</span></div></div></div>')
     cab = ('<div class="cab"><div style="font-size:15px;color:#55546a">pior ← → melhor</div><div class="rot">'
            + "".join(f"<span>{n}</span>" for n in gf.NIVEIS) + '</div><div style="padding-left:24px;font-size:15px;color:#55546a">resultado · hipótese</div></div>')
-    return sec(titulo(t, faixa, topo) + f'<div class="corpo" style="top:300px">{cab}{"".join(linhas)}</div><div class="nota">{nota}</div>')
+    extra_html = f'<div style="display:flex;gap:24px;margin-top:16px">{extra}</div>' if extra else ""
+    return sec(titulo(t, faixa, topo) + f'<div class="corpo" style="top:300px">{cab}{"".join(linhas)}{extra_html}</div><div class="nota">{nota}</div>')
 
 
-def slide_hipoteses():
+SISTEMA = ["M1", "M2", "M20", "M9", "M10", "M13", "M14"]  # métricas medidas por script (inspeção automatizada, WAVE e Playwright)
+
+
+def slide_metodo():
+    cards = [
+        ("Playwright", "Navegadores reais", "M13, M14 e matriz",
+         "Chrome, Edge, Firefox e Safari/WebKit executam T1 a T6 sozinhos; os critérios de M14 viram medidas em px de cada texto e botão."),
+        ("WAVE", "Motor oficial 3.3.4", "M9",
+         "O mesmo motor da extensão é injetado na página final de cada tarefa; erros WCAG A e AA por página."),
+        ("Inspeção", "Script + 2º avaliador", "M1, M2, M10 e M20",
+         "Teclado (Tab/Enter), foco, zoom 200%, árvore de acessibilidade, 6 cenários de erro e funções dos menus."),
+    ]
+    cs = "".join(f'<div style="flex:1;border:2px solid #7179e6;border-radius:18px;padding:26px 26px;background:#fff;height:430px">'
+                 f'<div style="font-family:Arial;font-weight:800;font-size:46px;color:#7179e6">{a}</div>'
+                 f'<div style="font-size:19px;font-weight:800;color:#5a62d4;margin-top:20px">{b}</div>'
+                 f'<div style="font-size:19px;font-weight:700;margin-top:4px">{c}</div>'
+                 f'<p style="font-size:18.5px;line-height:1.42;margin-top:16px;color:#3a3a4e">{d}</p></div>' for a, b, c, d in cards)
+    return sec(titulo("Como medimos o sistema", "Scripts em coleta/: o mesmo procedimento, sempre, em qualquer máquina", True)
+               + f'<div class="corpo" style="top:296px"><div style="display:flex;gap:36px">{cs}</div></div>'
+               + '<div class="nota">Só consultas (nunca matrícula ou trancamento) · uma sessão por vez, 3 s entre tarefas · senha só em variável de ambiente · capturas com dados pessoais borrados.</div>')
+
+
+def slide_hipoteses(codigos=None):
     m = gf.metricas()
-    conf = [h for h, v in gf.HIPOTESES.items() if v[2] == "Confirmada"]
-    ref = [h for h, v in gf.HIPOTESES.items() if v[2] == "Refutada"]
-    inc = [h for h, v in gf.HIPOTESES.items() if v[2] == "Inconclusiva"]
+    hips = {h: v for h, v in gf.HIPOTESES.items() if codigos is None or v[0] in codigos}
+    tot = len(hips)
+    conf = [h for h, v in hips.items() if v[2] == "Confirmada"]
+    ref = [h for h, v in hips.items() if v[2] == "Refutada"]
+    sent = {h: gf.SENTIDO.get(h, "melhor" if gf.NIVEIS.index(m[v[0]][1]) > v[1] else "pior") for h, v in hips.items() if v[2] == "Refutada"}
+    piores = sum(1 for x in sent.values() if x == "pior")
     cards = "".join(
         f'<div class="card" style="height:190px;background:{bg}"><b style="color:{cor}">{len(lst)}</b>'
-        f'<span><b style="font-size:30px;color:{cor};font-family:Open Sans">{br(len(lst) / 16 * 100, 2).rstrip("0").rstrip(",")}%</b> {rot}</span></div>'
+        f'<span><b style="font-size:30px;color:{cor};font-family:Open Sans">{br(len(lst) / tot * 100, 1).replace(",0", "")}%</b> {rot}</span></div>'
         for lst, rot, cor, bg in ((conf, "confirmadas", "#2a6fc9", "#dde9f7"), (ref, "refutadas", "#d8434a", "#f9d6d8")))
     cards += ('<div class="card" style="height:190px;background:#e6e6ee;flex-direction:row;gap:28px">'
-              '<div><div style="font-family:Arial;font-weight:800;font-size:76px;color:#d8434a;line-height:1">5 ↓</div>'
+              f'<div><div style="font-family:Arial;font-weight:800;font-size:76px;color:#d8434a;line-height:1">{piores} ↓</div>'
               '<div style="font-size:21px;margin-top:10px">para pior</div></div>'
-              '<div><div style="font-family:Arial;font-weight:800;font-size:76px;color:#2a6fc9;line-height:1">4 ↑</div>'
+              f'<div><div style="font-family:Arial;font-weight:800;font-size:76px;color:#2a6fc9;line-height:1">{len(ref) - piores} ↑</div>'
               '<div style="font-size:21px;margin-top:10px">para melhor</div></div></div>')
     qs = []
-    for h, (mt, prev, cl) in gf.HIPOTESES.items():
+    for h, (mt, prev, cl) in hips.items():
         obt = gf.NIVEIS.index(m[mt][1])
         cor = {"Confirmada": "#2a6fc9", "Refutada": "#d8434a", "Inconclusiva": "#8a8a9c"}[cl]
         seta = "" if cl != "Refutada" else (" ↑" if gf.SENTIDO.get(h, "melhor" if obt > prev else "pior") == "melhor" else " ↓")
         qs.append(f'<div class="hq" style="background:{cor}"><b>{h}{seta}</b><span>{mt}<br>{gf.NIVEIS[prev][:5]}. → {gf.NIVEIS[obt][:5]}.</span></div>')
-    return sec(titulo("Hipóteses da Fase 2", "16 hipóteses escritas antes da coleta: o que previmos × o que medimos")
-               + f'<div class="corpo" style="top:292px"><div class="cards" style="height:190px">{cards}</div><div class="hgrid">{"".join(qs)}</div></div>'
-               + '<div class="nota">↓ pior: H2, H3, H6, H11, H13 (tempo, satisfação, acessibilidade, ferramentas externas) · ↑ melhor: H5, H8, H9, H14. '
-                 'H5: calouros concluíram 10 de 12 (83,3%), não menos de 65%; a diferença está no SUS (22,5 × 39,2).</div>')
+    return sec(titulo("Hipóteses do sistema", f"{tot} hipóteses das métricas medidas por script: o que previmos × o que medimos")
+               + f'<div class="corpo" style="top:292px"><div class="cards" style="height:190px">{cards}</div><div class="hgrid" style="--n:{min(len(qs), 8)}">{"".join(qs)}</div></div>'
+               + '<div class="nota">↓ pior: H2 (2 datas do calendário divergem da SAA) e H11 (menu Ensino sem teclado nem nome no leitor de tela) · '
+                 '↑ melhor: H9 (só a sessão expirada não é tratada) e H14 (funciona nos 4 navegadores).</div>')
 
 
 def slide_julgamento():
@@ -351,30 +392,30 @@ def slide_blocos(t, sub, blocos):
 
 def slide_melhorias():
     itens = [
-        ("Layout responsivo", "&lt;meta viewport&gt; e layout fluido no portal · M14 = 0/12; 5 de 5 usam o celular"),
-        ("Menu acessível", "teclado, leitor de tela e toque · M10 = 54,2%; sem mouse, T1, T3, T4 e T6 não começam"),
-        ("Link do calendário", "abrir o calendário vigente da graduação · T6, pior tarefa; 3 de 5 caíram na Pós"),
-        ("Carga horária em destaque", "horas pendentes e % integralizado no topo · T4: 60% de conclusão, 8,48×"),
-        ("Horário por extenso", "“Seg e Qua, 10h–11h50” ao lado de 24M34 · só 40% leram sem legenda"),
-        ("Erros do WAVE", "idioma, 47 imagens sem alt, rótulos e contraste · M9 = 13,17 por página"),
-        ("Aviso de sessão expirada", "mensagem em vez de voltar ao portal em silêncio · único cenário não tratado (M20)"),
-        ("Turma Virtual mais leve", "carregar sob demanda e reservar espaço · 19 s no 4G; CLS de 1,05"),
-        ("Orientar calouros", "DEG e coordenações: calendário, integralização e código de horário · IQ2"),
-        ("Planejar o curso no SIGAA", "simular semestres e grade antes da matrícula · M3: 60% usam ferramenta externa"),
+        ("Layout responsivo", "&lt;meta viewport&gt; e layout fluido no portal do discente · M14 = 0 de 12; matriz: 0 de 60 páginas"),
+        ("Menu acessível", "foco do teclado, nome no leitor de tela e abertura por toque · M10 = 54,2%"),
+        ("Corrigir os erros do WAVE", "idioma da página, texto alternativo em 47 imagens, rótulos e contraste · M9 = 13,17 por página"),
+        ("Aviso de sessão expirada", "mensagem clara em vez de voltar ao portal em silêncio · único cenário não tratado (M20)"),
+        ("Turma Virtual mais leve", "carregar sob demanda e reservar espaço para os painéis · 19 s no 4G; CLS de 1,05"),
+        ("Planejamento do curso", "fluxo, semestres, grade antes da matrícula e simulação do IRA · as 4 funções ausentes em M1"),
     ]
-    recs = "".join(f'<div class="rec"><div class="nr">{i}</div><div><h4>{h}</h4><p>{p}</p></div></div>' for i, (h, p) in enumerate(itens, 1))
-    return sec(titulo("Melhorias recomendadas", "Em ordem de prioridade, cada uma ligada à evidência que a justifica", True)
-               + f'<div class="corpo" style="top:278px;bottom:24px"><div class="recs">{recs}</div></div>')
+    recs = "".join(f'<div class="rec" style="padding:16px 22px"><div class="nr" style="font-size:52px">{i}</div><div><h4 style="font-size:22px">{h}</h4><p style="font-size:17.5px">{p}</p></div></div>' for i, (h, p) in enumerate(itens, 1))
+    return sec(titulo("Melhorias recomendadas", "Para a STI/UnB, em ordem de prioridade, cada uma ligada à medida que a justifica", True)
+               + f'<div class="corpo" style="top:290px;bottom:30px"><div class="recs" style="gap:18px 30px">{recs}</div></div>')
 
 
 def slide_limitacoes():
-    return sec(titulo("Limitações e próximos passos", "O que os resultados não dizem e como completar a avaliação")
+    return sec(titulo("Limitações e próximos passos", "O que os scripts não medem e como continuar")
                + '<div class="corpo" style="top:300px"><div class="dupla"><div class="col"><h3>Limitações</h3><ul>'
-                 "<li>5 participantes, por conveniência, na FCTE.</li><li>M14 e matriz por emulação: sem o sistema operacional nem o desempenho do aparelho.</li>"
-                 "<li>M15 com um avaliador; desempenho fora do pico de matrícula.</li><li>Matrícula e trancamento fora do escopo: alterariam dados reais.</li>"
+                 "<li>Emulação: reproduz navegador, tela e toque, mas não o sistema operacional nem o desempenho do aparelho.</li>"
+                 "<li>Uma conta de estudante e uma rede; desempenho fora do pico de matrícula.</li>"
+                 "<li>WAVE detecta só parte das barreiras; o resto exige inspeção manual (M10).</li>"
+                 "<li>Matrícula e trancamento fora do escopo: alterariam dados reais.</li>"
                  '</ul></div><div class="col"><h3>Trabalhos futuros</h3><ul>'
-                 "<li>Teste com usuários no protótipo, para medir M5, M6 e M12.</li><li>Matriz em aparelhos reais: iPhone, Android de entrada e tablet.</li>"
-                 "<li>Amostra maior, outros campi e usuários de leitor de tela.</li><li>Desempenho nos períodos de matrícula.</li></ul></div></div></div>")
+                 "<li>Rodar a matriz em aparelhos reais (iPhone, Android de entrada e tablet).</li>"
+                 "<li>Medir o desempenho nos períodos de matrícula, com o servidor sob carga.</li>"
+                 "<li>Rodar os mesmos scripts a cada nova versão do SIGAA, como teste de regressão.</li>"
+                 "<li>Aplicar os scripts às páginas de outras tarefas do portal.</li></ul></div></div></div>")
 
 
 def slide_artigo():
@@ -388,38 +429,59 @@ def slide_artigo():
                f'<b>Fase 4 › Síntese e Conclusão</b>.</p></div></div>')
 
 
+def extra_acess():
+    m9 = {r["valor_recorte"]: float(r["valor"]) for r in ler("metricas.csv") if r["metrica"] == "M9" and r["recorte"] == "pagina"}
+    nomes = {"T1": "T1 Notas", "T2": "T2 Portal", "T3": "T3 Atestado", "T4": "T4 Índices", "T5": "T5 Turma Virtual", "T6": "T6 Calendário"}
+    p1 = mini_barras("M9 · erros WAVE por página (Excelente = 0)",
+                     [(nomes[t], m9[t], "#d8434a" if m9[t] > 5 else ("#e39a3b" if m9[t] > 2 else "#7fb0e6")) for t in sorted(m9)], sufixo="", vmax=40)
+    m10 = {r["valor_recorte"]: float(r["valor"]) * 100 for r in ler("metricas.csv") if r["metrica"] == "M10" and r["recorte"] == "criterio"}
+    rot = {"a": "(a) teclado", "b": "(b) foco visível", "c": "(c) zoom 200%", "d": "(d) nome no leitor"}
+    p2 = mini_barras("M10 · páginas que atendem cada critério (de 6)", [(rot[k], m10[k], cor_pct(m10[k])) for k in "abcd"])
+    return p1 + p2
+
+
+def extra_flex():
+    linhas = list(csv.DictReader((RAIZ / "dados/brutos/flexibilidade/paginas-adaptadas.csv").open(encoding="utf-8")))
+    rot = {"a": "(a) cabe sem zoom", "b": "(b) texto ≥ 12 px", "c": "(c) sem sobreposição", "d": "(d) menu ao toque", "e": "(e) alvo ≥ 24 px"}
+    vals = {k: sum(x["crit_" + k] == "sim" for x in linhas) / len(linhas) * 100 for k in "abcde"}
+    p1 = mini_barras("M14 · verificações que atendem cada critério (de 12)", [(rot[k], vals[k], cor_pct(vals[k])) for k in "abcde"])
+    m13 = [(r["valor_recorte"].split(" (")[0].replace("WebKit", "Safari (WebKit)"), float(r["valor"]) * 100, "#2a6fc9")
+           for r in ler("metricas.csv") if r["metrica"] == "M13" and r["recorte"] == "navegador"]
+    p2 = mini_barras("M13 · tarefas concluídas por navegador (de 6)", m13)
+    return p1 + p2
+
+
 def montar() -> list[str]:
-    s = [
-        slide_metricas("Adequação Funcional", "G1 · as funções existem e os dados estão certos, mas o planejamento fica fora", ["M1", "M2", "M3"],
-                       "Faltam 4 funções de planejamento (fluxo, semestres, grade antes da matrícula, simulação do IRA). As 2 divergências de M2 são datas do calendário, sem item crítico."),
-        slide_metricas("Interação: as tarefas", "G2 · conclui a maioria, mas devagar e com desvios", ["M4", "M5", "M6", "M7", "M8", "M20"],
-                       "O estudante termina 83,3% das tentativas e desfaz sozinho 81% dos erros, mas leva 4,39 vezes o tempo de quem conhece o sistema.", True),
-        slide_metricas("Interação: acesso e satisfação", "G2 · acessibilidade e satisfação no nível mais baixo", ["M9", "M10", "M11", "M12"],
-                       "79 erros WAVE em 6 páginas (37 na Turma Virtual). O menu Ensino não recebe foco do teclado. Nenhum SUS individual chegou a 51 (de 17,5 a 45,0)."),
-        slide_metricas("Flexibilidade", "G3 · perfeito no navegador do computador, nada adaptado ao celular", ["M13", "M14", "M15"],
-                       "No celular real, T2 (2,03×), T5 (1,96×) e T6 (1,89×) são as mais penalizadas: tabelas pequenas e alvos de 22,8 × 8,8 px.", True),
-        slide_hipoteses(),
-        slide_julgamento(),
-        slide_ranking(),
+    return [
+        slide_metodo(),
+        slide_metricas("Funções e erros", "Funções existem, dados corretos e quase todos os erros tratados", ["M1", "M2", "M20"],
+                       "M1: faltam 4 funções de planejamento (fluxo, semestres, grade antes da matrícula, simulação do IRA). M2: 65 de 67 iguais; "
+                       "as 2 divergências são datas do calendário. M20: a sessão expirada volta ao portal sem aviso."),
+        slide_metricas("Acessibilidade", "Barreiras em todas as páginas: o menu principal não funciona sem mouse", ["M9", "M10"], extra=extra_acess(),
+                       nota=
+                       "47 imagens sem texto alternativo, botões vazios, páginas sem idioma · menu Ensino sem foco do teclado e sem nome no leitor de tela.", topo=True),
+        slide_metricas("Flexibilidade", "Perfeito no navegador do computador, nada adaptado à tela pequena", ["M13", "M14"], extra=extra_flex(),
+                       nota=
+                       "M14: sem &lt;meta viewport&gt;, a página de 980 px é reduzida a 37% em 360 px e a 78% em 768 px; nenhum texto chega a 12 px e o item Ensino vira um alvo de 22,8 × 8,8 px."),
+        slide_hipoteses(SISTEMA),
         slide_matriz_cards(),
         slide_matriz_grade(),
         slide_fontes(),
         slide_desempenho(),
-        slide_blocos("Conclusão", "O que a avaliação responde", [
-            ("1", "O núcleo funcional é sólido", "As funções das 6 tarefas existem, os dados estão corretos (97%), 83,3% concluem sem ajuda e tudo funciona em qualquer navegador de computador."),
-            ("2", "O custo está na interação", "4,39× o tempo do especialista, SUS de 32,5 (metade da média 68) e menu principal inacessível sem mouse: Capacidade de Interação não atende."),
-            ("3", "O celular é o ponto crítico", "Nenhuma página se adapta, em nenhum aparelho móvel da matriz, e 5 de 5 participantes usam o SIGAA no celular."),
+        slide_blocos("Conclusão", "O que os scripts mostram sobre o sistema", [
+            ("1", "Funciona e está correto", "As funções das 6 tarefas existem (M1), os dados batem com o histórico (M2 = 97%) e as tarefas rodam em 7 navegadores e 20 perfis (120 de 120)."),
+            ("2", "A acessibilidade exclui", "13,17 erros WAVE por página e 54,2% dos critérios manuais: sem mouse, o menu principal não abre e 4 das 6 tarefas não começam."),
+            ("3", "Não foi feito para o celular", "0 de 60 páginas adaptadas em Android, iOS e iPadOS; texto de 2,9 a 6,8 px. O login da UnB, no mesmo percurso, já é responsivo."),
         ]),
         slide_melhorias(),
         slide_limitacoes(),
         slide_artigo(),
     ]
-    return s
 
 
-NOMES_PECAS = ["01-adequacao-funcional-M1-M3", "02-interacao-tarefas-M4-M8-M20", "03-interacao-acesso-satisfacao-M9-M12",
-               "04-flexibilidade-M13-M15", "05-hipoteses", "06-julgamento", "07-ranking-tarefas", "08-matriz-numeros",
-               "09-matriz-grade", "10-fontes-celular", "11-desempenho", "12-conclusao", "13-melhorias", "14-limitacoes-futuro", "15-artigo"]
+NOMES_PECAS = ["01-como-medimos", "02-funcoes-e-erros-M1-M2-M20", "03-acessibilidade-M9-M10", "04-flexibilidade-M13-M14",
+               "05-hipoteses-do-sistema", "06-matriz-numeros", "07-matriz-grade", "08-fontes-celular", "09-desempenho",
+               "10-conclusao", "11-melhorias", "12-limitacoes-futuro", "13-artigo"]
 
 
 def exportar_pecas(p):
