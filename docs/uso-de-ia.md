@@ -35,6 +35,7 @@ Esta página documenta todos os usos de ferramentas de Inteligência Artificial 
 | Claude Opus 5.5 (Claude Code) | Apoio na revisão do PR #23, conferindo os números do protótipo com `metricas.csv`, e na redação da página Julgamento da Avaliação, aplicando as regras de Níveis de Pontuação. O Leonardo definiu os pontos da revisão e postou o texto. Cada nível, média e classificação foi conferido com as faixas da Fase 2 | 21/11/2026 | Leonardo Bonetti |
 | Claude Opus 5.5 (Claude Code) | Auxílio na coleta das métricas | 22/11/2026 | Caio Borges |
 | Claude Opus 5.5 (Claude Code) e Whisper | Apoio em M15: roteiro da execução, transcrição das gravações para localizar o início e o fim de cada tarefa, `tempos-celular.csv`, `coleta/calcular_m15.py` e atualização das páginas de Julgamento e Flexibilidade. As tarefas foram executadas e gravadas pelo Leonardo; cada tempo foi conferido nos quadros do vídeo, e os valores e textos foram revisados por ele | 22/11/2026 | Leonardo Bonetti |
+| Claude Opus 5.5 (Claude Code) | Apoio na revisão dos *scripts* de coleta, dos slides e do artigo da entrega final. Conteúdo revisado e validado por Arthur | 23/11/2026 | [arthurlleite](https://github.com/arthurlleite) |
 
 ## Histórico de Versão
 
@@ -63,3 +64,4 @@ Esta página documenta todos os usos de ferramentas de Inteligência Artificial 
 | 1.20 | 21/11/2026 | Registro do uso de IA no Protótipo Mobile-First (Fase 4) | [Davi Nobre](https://github.com/Jagaima) |
 | 1.21 | 22/11/2026 | Registro do uso de IA na coleta das métricas | Caio Borges |
 | 1.22 | 22/11/2026 | Registro do uso de IA nas Fases 2 a 4 (25/10 a 22/11) | Leonardo Bonetti |
+| 1.23 | 23/11/2026 | Registro do uso de IA na revisão dos *scripts*, dos slides e do artigo | [arthurlleite](https://github.com/arthurlleite) |
