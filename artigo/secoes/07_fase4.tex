@@ -1,67 +1,123 @@
-\section{Fase 4: execução da avaliação (resultados parciais)}
+\section{Fase 4: execução, resultados e julgamento}
 \label{sec:fase4}
 
-Em 15/11/2026, a Fase 4 estava em andamento: duas das seis sessões do teste com usuários tinham sido realizadas (P1 e P3, ambos do grupo do começo do curso), as inspeções por pares não tinham começado, e a execução instrumentada de Flexibilidade estava concluída para M14 e para metade das combinações de M13. Esta seção apresenta esses resultados; o julgamento de G1 e G2 só é feito com as seis sessões e as inspeções concluídas.
+A coleta ocorreu de 15 a 22/11/2026, na versão v4.15.10.116 do SIGAA (a Fase 1 registrou a v4.15.10.115; a mudança foi registrada, como prevê o plano). Cinco estudantes participaram do teste com usuários, dois do começo e três do meio ou do fim do curso, somando 30 tentativas das seis tarefas; dos seis previstos, a coleta terminou com cinco (P1 a P4 e P6). As inspeções de M1, M2, M10 e M20 tiveram dois avaliadores, o primeiro deles um \textit{script} que registra as evidências e o segundo, humano, que repetiu os pontos decisivos (teclado, leitor de tela e bloqueio de \textit{pop-ups}); não houve divergência. O WAVE foi aplicado às seis páginas finais das tarefas, M13 foi executada em 24 combinações de navegador e tarefa, M14 em 12 verificações (seis páginas em 360 e 768~px) e M15 em um celular real. Todas as 16 métricas foram calculadas, e todas receberam nível.
 
-\subsection{Flexibilidade: M13 e M14}
+\subsection{Resultado das métricas}
 
-As medidas foram obtidas em 15/11/2026 na versão v4.15.10.116 do SIGAA, lida no rodapé de cada página; a Fase 1 havia registrado a v4.15.10.115, e a mudança foi registrada, como prevê o plano. Durante os testes do \textit{script}, o servidor devolveu duas vezes páginas sem CSS nem JavaScript, falha que some ao recarregar. Para que ela não fosse atribuída ao navegador ou ao tamanho de tela, o \textit{script} confere em cada página se todas as folhas de estilo carregaram e, se não, repete a tarefa; nas execuções registradas, nenhuma repetição foi necessária.
-
-\textbf{M13.} As seis tarefas foram concluídas sem falha no Google Chrome 146 e no Firefox 159, 12 de 12 combinações. O Safari exige macOS, e o Edge não estava disponível no ambiente; pela regra de métricas sem dados suficientes, M13 fica \textbf{sem nível} até as 12 combinações restantes serem executadas manualmente, e o valor final ficará entre 12/24 e 24/24. O resultado parcial é coerente com H14: os problemas de Flexibilidade não estão no navegador de computador.
-
-\textbf{M14.} Nenhuma das 12 verificações atendeu aos cinco critérios: \textbf{M14 = 0/12 = 0\%, Insatisfatório}. A Tabela~\ref{tab:m14} resume as medidas. A causa é única e estrutural: as páginas não declaram a \textit{viewport} (\texttt{<meta name=viewport>}) e têm \textit{layout} de 980~px. O navegador do celular as monta com 980~px e as reduz para caber na tela, a 37\% da escala em 360~px e a 78\% em 768~px. A página parece caber, mas nenhum texto atinge os 12~px efetivos da ficha: a menor fonte de cada página fica entre 2,9 e 3,8~px em 360~px e entre 6,3 e 8,2~px em 768~px, e o item ``Ensino'' do menu vira um alvo de 22,8~$\times$~8,8~px. Para ler, o estudante precisa ampliar a página e, então, rolar na horizontal, o que reproduz a observação preliminar OP-03. Na Turma Virtual (T5), além disso, os botões da barra superior cobrem o título e o período da turma nas duas larguras, defeito que não ocorre em 1.366~px. Na emulação, os menus suspensos abriram ao toque em todas as tarefas (critério d atendido), ao contrário do que sugeria a observação OP-02; como P3 relatou um menu que não abriu no celular, esse ponto será conferido em aparelho real.
+A Tabela~\ref{tab:resultados} traz o valor e o nível de cada métrica, que é também o nível da sua questão (etapa 1 do julgamento). Das 16 questões, uma ficou Excelente, quatro Bom, cinco Regular e seis Insatisfatório.
 
 \begin{table}[!t]
-	\caption{M14: medidas por página em 360 e 768~px}
-	\label{tab:m14}
+	\caption{Valor e nível de cada métrica}
+	\label{tab:resultados}
 	\centering
 	\footnotesize
 	\setlength{\tabcolsep}{3pt}
-	\begin{tabularx}{\columnwidth}{L{1.25cm} C{1.05cm} C{1.3cm} C{1.25cm} Y}
+	\begin{tabularx}{\columnwidth}{C{0.55cm} Y C{1.75cm} C{1.25cm}}
 		\toprule
-		\textbf{Largura} & \textbf{Escala} & \textbf{Menor fonte efetiva (px)} & \textbf{Textos $<$12~px} & \textbf{Critérios não atendidos (páginas, de 6)} \\
+		\textbf{Q} & \textbf{Métrica} & \textbf{Valor} & \textbf{Nível} \\
 		\midrule
-		360~px & 0,37 & 2,9--3,8 & 1063 de 1063 & (a) em 6, (b) em 6, (c) em 1, (e) em 6 \\
-		768~px & 0,78 & 6,3--8,2 & 1063 de 1063 & (a) em 6, (b) em 6, (c) em 1, (e) em 6 \\
+		\multicolumn{4}{l}{\textit{G1 -- Adequação Funcional}} \\
+		Q1 & M1 Cobertura funcional & 77,8\% (14/18) & Regular \\
+		Q2 & M2 Correção funcional & 97,0\% (65/67) & Bom \\
+		Q3 & M3 Uso de ferramenta externa & 60\% (3/5) & Insatisf. \\
+		\midrule
+		\multicolumn{4}{l}{\textit{G2 -- Capacidade de Interação}} \\
+		Q4 & M4 Acerto na primeira escolha & 73,3\% (22/30) & Regular \\
+		Q5 & M5 Conclusão sem ajuda & 83,3\% (25/30) & Bom \\
+		Q6 & M6 Tempo relativo ao especialista & 4,39 & Insatisf. \\
+		Q7 & M7 Desvio de caminho & 1,46 & Regular \\
+		Q8 & M8 Recuperação de erros & 81,3\% (13/16) & Bom \\
+		Q9 & M20 Cenários de erro tratados & 83,3\% (5/6) & Bom \\
+		Q10 & M9 Erros WAVE por página & 13,17 (79/6) & Insatisf. \\
+		Q11 & M10 Critérios manuais de acessibilidade & 54,2\% (13/24) & Insatisf. \\
+		Q12 & M11 Leitura correta sem legenda & 53,3\% (8/15) & Regular \\
+		Q13 & M12 Satisfação (SUS) & 32,5 & Insatisf. \\
+		\midrule
+		\multicolumn{4}{l}{\textit{G3 -- Flexibilidade}} \\
+		Q14 & M13 Compatibilidade de navegadores & 100\% (24/24) & Excelente \\
+		Q15 & M14 Páginas adaptadas & 0\% (0/12) & Insatisf. \\
+		Q16 & M15 Tempo no celular & 1,59 & Regular \\
 		\bottomrule
 	\end{tabularx}
-	\fonte{elaborado pela equipe a partir de \texttt{dados/brutos/flexibilidade/}.}
+	\fonte{elaborado pela equipe a partir de \texttt{dados/consolidados/metricas.csv}.}
 \end{table}
 
-Com M14 Insatisfatório, Q15 recebe Insatisfatório (0) e \textbf{H15 é confirmada}. Como Q14 ainda não tem nível e Q16 (M15) não foi executada, G3 ainda não pode ser julgado; pela regra de agregação, uma questão Insatisfatória já impede que Flexibilidade seja julgada como \textit{atende}. A verificação em 360~px foi feita por emulação, e não em celular real; como as falhas decorrem da largura e da falta de \textit{viewport}, que a emulação reproduz, a equipe confirmará o resultado no mesmo celular usado em M15.
+\textbf{Adequação Funcional.} Das 18 funções da lista de referência, 14 existem; todas as funções das tarefas T1 a T6 existem, e as quatro ausentes são de planejamento do curso (fluxo com o que já foi cursado, planejamento dos semestres, grade de horários antes da matrícula e simulação do IRA), justamente as oferecidas pelas ferramentas da comunidade. As 44 menções da tela de notas, o IRA, a MP e as cargas horárias pendentes coincidem com o histórico; as duas divergências de M2 são datas do calendário (um dia no SIGAA, dois no calendário da SAA), sem efeito em prazos do estudante. Três dos cinco participantes planejam o curso fora do SIGAA.
+
+\textbf{Capacidade de Interação.} Os participantes concluíram sem ajuda 25 das 30 tentativas e se recuperaram sozinhos de 13 dos 16 erros, mas levaram, em média, 4,39 vezes o tempo do especialista (8,48 vezes em T4), fizeram 1,46 vez os cliques do caminho mínimo e erraram a primeira escolha de menu em 8 das 30 tentativas. Só 40\% interpretaram sem a legenda o código de horário de T2 (``24M34''). Nenhuma pontuação SUS individual alcançou o nível Regular (de 17,5 a 45,0). Na acessibilidade, o WAVE encontrou 79 erros nas seis páginas, 37 deles na Turma Virtual; na inspeção manual, o menu principal (Ensino) não recebe o foco do teclado e é anunciado pelo leitor de tela sem nome, de modo que T1, T3, T4 e T6, que começam por ele, não podem ser feitas sem mouse. O sistema tratou cinco dos seis cenários de erro; o não tratado é a sessão expirada, que leva de volta ao portal sem mensagem.
+
+\textbf{Flexibilidade.} No computador, as seis tarefas funcionaram nos quatro navegadores do plano (Chrome, Firefox, Edge e Safari/WebKit). No celular e no tablet, nenhuma página se adapta: as páginas não declaram a \textit{viewport} (\texttt{<meta name=viewport>}) e têm \textit{layout} de 980~px, que o navegador reduz a 37\% da escala em 360~px e a 78\% em 768~px. A menor fonte efetiva fica entre 2,9 e 3,8~px em 360~px, todos os 1.063 textos ficam abaixo dos 12~px da ficha, e o item Ensino do menu vira um alvo de 22,8~$\times$~8,8~px. No celular real, as seis tarefas levaram 110,2~s, contra 69,1~s no computador (1,59 vez), com as maiores razões nas páginas de tabelas e menus: T2 (2,03), T5 (1,96) e T6 (1,89). No questionário, os cinco participantes disseram usar o SIGAA no celular e precisar de \textit{zoom} e rolagem lateral.
+
+\subsection{Hipóteses e julgamento}
+
+\textbf{Hipóteses.} Foram confirmadas H1, H4, H7, H10, H12, H15 e H16 (7) e refutadas H2, H3, H5, H6, H8, H9, H11, H13 e H14 (9); nenhuma ficou inconclusiva. H5 foi refutada pelo recorte dos calouros: eles concluíram 10 das 12 tentativas (83,3\%), o mesmo que os estudantes do meio ou do fim do curso, e não menos de 65\%, como previsto; a diferença entre os grupos apareceu na satisfação (SUS médio de 22,5 contra 39,2). As refutações para pior (H2, H3, H6, H11 e H13) concentram-se no tempo, na satisfação, na acessibilidade manual e no uso de ferramentas externas: a Fase 1 tratava o SIGAA como ``usável, porém trabalhoso'', e os dados mostram que ele é mais demorado, menos satisfatório e mais dependente do mouse do que isso. As refutações para melhor (H5, H8, H9 e H14) estão na conclusão pelos calouros, na recuperação de erros, no tratamento de cenários de erro e na compatibilidade entre navegadores.
+
+\textbf{Julgamento.} A Tabela~\ref{tab:julgamento} aplica as etapas 2 e 3 dos critérios de julgamento: a pontuação do objetivo é a média dos níveis das questões; a característica atende com média de pelo menos 2 e nenhuma questão Insatisfatória, e não atende com média abaixo de 1.
+
+\begin{table}[!t]
+	\caption{Julgamento das características}
+	\label{tab:julgamento}
+	\centering
+	\footnotesize
+	\setlength{\tabcolsep}{3pt}
+	\begin{tabularx}{\columnwidth}{L{1.85cm} Y C{0.75cm} L{1.55cm}}
+		\toprule
+		\textbf{Característica} & \textbf{Níveis das questões} & \textbf{Média} & \textbf{Julgamento} \\
+		\midrule
+		Capacidade de Interação & Q4=1, Q5=2, Q6=0, Q7=1, Q8=2, Q9=2, Q10=0, Q11=0, Q12=1, Q13=0 & 0,90 & \textbf{Não atende} \\
+		Adequação Funcional & Q1=1, Q2=2, Q3=0 & 1,00 & \textbf{Atende parcialmente} \\
+		Flexibilidade & Q14=3, Q15=0, Q16=1 & 1,33 & \textbf{Atende parcialmente} \\
+		\bottomrule
+	\end{tabularx}
+	\fonte{elaborado pela equipe.}
+\end{table}
+
+Em Flexibilidade, a média de 1,33 não descreve um sistema ``médio'': ela soma um ponto forte (Q14, Excelente) e um ponto crítico (Q15, Insatisfatório), e é a separação por questão que mostra onde está o problema. A relação HR1 (Flexibilidade $\rightarrow$ Capacidade de Interação) foi \textbf{estabelecida, com ressalva}: o celular exige 1,59 vez o tempo do computador, e as maiores razões estão em páginas não adaptadas; como nenhuma página é adaptada, não há como comparar com uma que seja. A relação HR2 (Capacidade de Interação $\rightarrow$ Adequação Funcional) \textbf{não foi estabelecida}: em nenhuma das 30 tentativas o participante afirmou que uma função existente não existia (MA1 = 0); quem não encontrou a função desistiu ou concluiu a tarefa fora do SIGAA.
+
+\textbf{Ranking das tarefas.} Pela média dos níveis de M5, M6, M7 e M1 por tarefa, as piores são T6 (1,25) e T4 (1,33), as únicas com 60\% de conclusão sem ajuda. Em T6, três dos cinco participantes clicaram no link ``Calendário Acadêmico de Graduação'' do painel do portal, que abre a página de Pós-Graduação do site da SAA: um voltou ao SIGAA, um usou o calendário de fora (o que não conta como conclusão) e um desistiu. Em T4, a carga horária pendente está na página inicial, mas dois participantes desistiram, e os que a encontraram fizeram 5,67 cliques e levaram 8,48 vezes o tempo do especialista.
+
+\subsection{Matriz multiplataforma (dado complementar)}
+\label{sec:matriz}
+
+M13 e M14 cobrem quatro navegadores de computador e duas larguras emuladas no Chrome. Para saber se o resultado de M14 depende do sistema, do aparelho ou do navegador, a equipe ampliou a execução instrumentada para uma matriz de \textbf{20 perfis}: dez de computador (Windows~11 com Chrome, Edge, Firefox, Opera e Brave; macOS com Safari e Chrome; Linux com Chromium, Chrome e Firefox), sete de celular (Android com Chrome em um Galaxy S24 e um Pixel~7, Edge em um Galaxy A55 e Opera em um Moto G4; iOS com Safari em três iPhones) e três de tablet (Galaxy Tab S9, iPad Mini e iPad Pro 11). Cada perfil usa o motor real do navegador (Blink, Gecko ou WebKit), com a largura, a densidade de pixels, o toque, o modo móvel e o \textit{user agent} do aparelho, tomados do catálogo de dispositivos do Playwright \cite{playwright}. Em cada perfil, o \textit{script} mediu a página de login da UnB, entrou no SIGAA, executou T1 a T6 e aplicou às páginas os critérios de M14, com a largura do aparelho no lugar de 360 e 768~px. A emulação não reproduz o sistema operacional em si (fontes, teclado virtual) nem o desempenho do aparelho; por isso, a matriz é dado complementar e não altera M13 nem M14.
+
+\begin{figure*}[!t]
+	\centering
+	\includegraphics[width=0.84\textwidth]{figuras/matriz-multiplataforma.png}
+	\caption{Matriz multiplataforma: página de login da UnB e tarefas T1 a T6 em 20 perfis de sistema, aparelho e navegador. Azul: concluiu e a página cabe na tela; rosa: concluiu, mas a página não se adapta.}
+	\label{fig:matriz}
+	\fonte{elaborado pela equipe a partir de \texttt{dados/consolidados/matriz-dispositivos.csv}.}
+\end{figure*}
+
+A coleta foi feita em 23/11/2026 (Fig.~\ref{fig:matriz}). As 120 execuções de tarefa terminaram com a página final correta, nos três motores, o que estende o resultado de M13 a Opera, Brave, Chromium, Safari no macOS e aos navegadores móveis. Nenhuma das 60 verificações de celular e tablet atendeu aos critérios de M14: o navegador mostra a página a 37\%--49\% da escala nos celulares e a 65\%--85\% nos tablets, e a menor fonte fica entre 2,9 e 3,9~px e entre 5,2 e 6,8~px, respectivamente. O resultado não depende do sistema, do navegador nem do tamanho da tela, de modo que M14 = 0\% não é efeito da emulação no Chrome. Em contraste, a página de login da UnB, no mesmo percurso, declara a \textit{viewport} e cabe na tela nos dez perfis móveis, com fonte mínima de 13 a 14~px; o único defeito, em quatro perfis, é o logotipo cobrir o texto de \textit{copyright} do rodapé. Os menus abriram ao toque nos 50 acionamentos; como a emulação toca o centro exato do alvo, o menu que não abriu para dois participantes é mais bem explicado pelo tamanho do item Ensino (cerca de 23~$\times$~9~px) do que pelo evento de toque. Dois achados de método: no WebKit em modo móvel, o toque do Playwright cai fora do alvo quando a página é reduzida, e o \textit{script} passou a corrigir a posição pela escala da área visível; e o Vivaldi não pôde ser automatizado. Mesmo no computador, a menor fonte do SIGAA é de 8~px em todos os perfis.
 
 \subsection{Dados complementares de desempenho}
 \label{sec:desempenho}
 
-Os dados de Eficiência de Desempenho não têm questão nem nível, porque a característica saiu da especificação, mas foram coletados pelo mesmo \textit{script}, por custarem pouco e por darem evidência objetiva sobre a lentidão relatada pelos estudantes. Em cada página final, o \textit{script} registrou a espera pelo sistema (soma do \texttt{loadEventEnd} das páginas do caminho), o tempo de resposta do servidor (TTFB), o maior conteúdo pintado (LCP), o deslocamento do conteúdo depois de pintado (CLS), as tarefas longas da \textit{thread} principal, o tempo de abertura do menu e a fluidez da rolagem, em dois cenários: computador sem limitação de rede (cinco repetições) e celular de 360~px com a rede 4G e a CPU limitadas pelo perfil de referência do Lighthouse \cite{lighthouse} (três repetições), sempre com o \textit{cache} desativado. Das 48 execuções, 46 foram válidas; as duas descartadas tiveram oscilação da rede local do computador de coleta (Tabela~\ref{tab:desempenho}).
+Os dados de Eficiência de Desempenho não têm questão nem nível, porque a característica saiu da especificação, mas foram coletados pelos mesmos \textit{scripts}, com o \textit{cache} desativado, em dois cenários: computador sem limitação de rede (cinco repetições) e celular de 360~px com a rede 4G e a CPU limitadas pelo perfil do Lighthouse \cite{lighthouse} (três repetições); 46 das 48 execuções foram válidas (Tabela~\ref{tab:desempenho}).
 
 \begin{table}[!t]
-	\caption{Desempenho do lado do cliente (medianas)}
+	\caption{Espera pelo sistema e LCP (medianas)}
 	\label{tab:desempenho}
 	\centering
 	\footnotesize
 	\setlength{\tabcolsep}{2.5pt}
-	\begin{tabularx}{\columnwidth}{L{0.45cm} C{0.85cm} C{0.85cm} C{0.95cm} C{0.7cm} Y C{0.95cm} C{0.95cm}}
+	\begin{tabularx}{\columnwidth}{L{0.45cm} C{0.95cm} C{0.95cm} C{1.0cm} Y C{1.0cm} C{0.9cm}}
 		\toprule
-		& \multicolumn{4}{c}{\textbf{Computador}} & \multicolumn{3}{c}{\textbf{Celular em 4G}} \\
-		\cmidrule(lr){2-5}\cmidrule(lr){6-8}
-		& \textbf{Espera (s)} & \textbf{TTFB (s)} & \textbf{LCP P75 (s)} & \textbf{CLS} & \textbf{Espera (s)} & \textbf{LCP P75 (s)} & \textbf{KB} \\
+		& \multicolumn{3}{c}{\textbf{Computador}} & \multicolumn{3}{c}{\textbf{Celular em 4G}} \\
+		\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+		& \textbf{Espera (s)} & \textbf{TTFB (s)} & \textbf{LCP P75 (s)} & \textbf{Espera (s)} & \textbf{LCP P75 (s)} & \textbf{KB} \\
 		\midrule
-		T1 & 1,11 & 0,93 & 1,1 & 0,00 & 2,81 & 2,1 & 134 \\
-		T2 & 1,03 & 0,35 & 1,2 & 0,13 & 8,55 & 7,0 & 567 \\
-		T3 & 0,62 & 0,22 & 0,6 & 0,00 & 3,55 & 3,0 & 204 \\
-		T4 & 1,62 & 0,98 & 1,7 & 0,00 & 6,51 & 5,4 & 504 \\
-		T5 & 2,13 & 0,55 & 1,9 & 1,05 & 19,04 & 13,7 & 1955 \\
-		T6 & 1,59 & 0,10 & 0,7 & 0,00 & 10,13 & 3,9 & 399 \\
+		T1 & 1,11 & 0,93 & 1,1 & 2,81 & 2,1 & 134 \\
+		T2 & 1,03 & 0,35 & 1,2 & 8,55 & 7,0 & 567 \\
+		T3 & 0,62 & 0,22 & 0,6 & 3,55 & 3,0 & 204 \\
+		T4 & 1,62 & 0,98 & 1,7 & 6,51 & 5,4 & 504 \\
+		T5 & 2,13 & 0,55 & 1,9 & 19,04 & 13,7 & 1955 \\
+		T6 & 1,59 & 0,10 & 0,7 & 10,13 & 3,9 & 399 \\
 		\bottomrule
 	\end{tabularx}
 	\fonte{elaborado pela equipe a partir de \texttt{dados/consolidados/desempenho.csv}. Espera: soma do carregamento das páginas da tarefa; KB: transferido na página final.}
 \end{table}
 
-No computador, e fora do horário de pico, o SIGAA foi rápido e fluido: a espera ficou entre 0,62 e 2,13~s, o LCP no P75 abaixo de 1,9~s (faixa ``boa'' dos Core Web Vitals \cite{webvitals}), não houve tarefas longas, o menu abriu em 32 a 57~ms e a rolagem rodou a 60 quadros por segundo, sem quadros travados. Três pontos, porém, se destacam. (i) O servidor responde devagar nas páginas que calculam dados do estudante: o TTFB das notas (0,93~s) e dos índices (0,98~s) passa do limite ``bom'' de 0,8~s e é cerca de dez vezes o do calendário. (ii) A Turma Virtual se desloca depois de pintada: o CLS ficou entre 0,88 e 1,07 nas cinco execuções, quatro vezes o limite ``ruim'' de 0,25, o que pode levar o estudante a tocar no item errado. (iii) No celular em 4G, a espera passa dos limites de atenção de Nielsen \cite{nielsen1993}: 8,55~s no portal e 19,04~s na Turma Virtual, cujos cerca de 1,9~MB exigem, só para a transferência a 1,47~Mbit/s, ao menos 10,9~s. Esses resultados dão evidência a favor da relação Desempenho $\rightarrow$ Flexibilidade prevista na Fase 1: o estudante que depende do celular é penalizado pela tela, que nenhuma página adapta, e pela rede. Como as medidas foram feitas em uma única noite, longe dos picos de matrícula, os valores do computador tendem a ser otimistas.
-
-\subsection{Teste com usuários: primeiras sessões}
-
-As duas sessões realizadas são do grupo do começo do curso e, como recorte com menos de três participantes, são apresentadas apenas de forma descritiva. Os participantes concluíram 10 das 12 tentativas sem ajuda: P1 desistiu de T4 sem clicar em nenhum item, e P3 desistiu de T6, embora já tivesse consultado o calendário antes. Das seis perguntas de compreensão, três foram respondidas corretamente; P1 só conseguiu interpretar o horário de T2 depois de abrir a ajuda do código de horário, o que, pela ficha de M11, conta como resposta incorreta. As pontuações SUS foram 27,5 e 17,5, muito abaixo da média de referência de 68 \cite{sauro2016}. Nenhum participante declarou inexistente uma função que existe (MA1 = 0).
-
-Os relatos convergem com a medição de Flexibilidade. No questionário, os dois participantes apontaram, entre os problemas que já tiveram no celular, a necessidade de zoom e rolagem e os botões pequenos, exatamente os critérios (a), (b) e (e) que falharam em todas as páginas. P3, que acessa o SIGAA principalmente pelo celular, também marcou conteúdo cortado e menu que não abriu, e é o único que usa ferramenta externa (uma planilha) para planejar o curso.
+No computador, fora do horário de pico, a espera ficou entre 0,62 e 2,13~s e o LCP no P75 abaixo de 1,9~s, na faixa ``boa'' dos Core Web Vitals \cite{webvitals}. Três pontos se destacam: o servidor responde devagar nas páginas que calculam dados do estudante (TTFB de 0,93~s nas notas e 0,98~s nos índices, acima do limite ``bom'' de 0,8~s); a Turma Virtual se desloca depois de pintada (CLS de 1,05, quatro vezes o limite ``ruim'' de 0,25); e, no celular em 4G, a espera passa dos 10~s em que o usuário perde a atenção \cite{nielsen1993} no calendário (10,1~s) e na Turma Virtual (19,0~s, com cerca de 1,9~MB). O estudante que depende do celular é penalizado duas vezes: pela tela, que nenhuma página adapta, e pela rede.
