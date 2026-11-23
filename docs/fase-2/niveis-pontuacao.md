@@ -114,7 +114,7 @@ Menção, IRA e carga horária pendente são itens críticos. Qualquer divergên
 
 #### Regra 3 - Resultados por perfil, por página e por tarefa
 
-Além do valor geral, que é o único usado nas Etapas 1 a 3, os resultados são apresentados por perfil (calouro, veterano e formando, em M5, M6, M7 e M11), por página (M9, M10 e M14) e por tarefa, com as mesmas faixas das Tabelas 2 e 3. Esses recortes localizam os problemas, mas não alteram o nível da questão. Um recorte com menos de três participantes é apresentado apenas de forma descritiva, sem nível.
+Além do valor geral, que é o único usado nas Etapas 1 a 3, os resultados são apresentados por perfil (calouro, veterano e formando, em M5, M6, M7 e M11), por página (M9, M10 e M14) e por tarefa, com as mesmas faixas das Tabelas 2 e 3. Esses recortes localizam os problemas, mas não alteram o nível da questão.
 
 #### Regra 4 - Ranking das tarefas
 
@@ -165,3 +165,4 @@ Pontuação de G3 = (2 + 1 + 1) / 3 = 1,33. Não há questão Insatisfatória, m
 | 2.2 | 25/10/2026 | Remoção das faixas de M16 a M19 e do objetivo G4 (Eficiência de Desempenho); exemplo de aplicação refeito em G3; MA1 ligada à HR2 (antiga HR3) | Leonardo Bonetti |
 | 2.3 | 25/10/2026 | Regra de agregação 1:1 (nível da questão = nível da sua métrica); questões por objetivo na numeração Q1 a Q16; exemplo de G3 com Q14 a Q16 | Leonardo Bonetti |
 | 2.4 | 14/11/2026 | Justificativa das faixas de M3 em participantes, com a correspondência para 6 participantes; faixas mantidas | Caio Borges |
+| 2.5 | 23/11/2026 | Regra 3 sem número mínimo de participantes por recorte | Caio Borges |

@@ -8,7 +8,7 @@ Na Fase 4, cada hipótese será classificada como:
 
 - **Confirmada:** todas as condições do critério de confirmação foram atendidas;
 - **Refutada:** ao menos uma condição com dados não foi atendida;
-- **Inconclusiva:** ao menos uma condição do critério ficou sem dados suficientes (métrica não aplicável, regra 1, ou recorte com menos de três participantes, regra 3 de [Níveis de Pontuação](niveis-pontuacao.md#regras-complementares)), e as demais não bastam para refutar a hipótese.
+- **Inconclusiva:** ao menos uma condição do critério ficou sem dados suficientes (métrica não aplicável, regra 1 de [Níveis de Pontuação](niveis-pontuacao.md#regras-complementares)), e as demais não bastam para refutar a hipótese.
 
 Uma hipótese refutada não é uma falha da avaliação: ela indica que a percepção registrada na Fase 1 não se confirmou e é discutida na Fase 4.
 
@@ -29,7 +29,7 @@ Uma hipótese refutada não é uma falha da avaliação: ela indica que a percep
 | ID | Questão | Hipótese | Critério de confirmação |
 | -- | ------- | -------- | ----------------------- |
 | H4 | Q4 | Entre 50% e 75% das tentativas começam com a primeira escolha de menu correta, porque o menu Ensino reúne cerca de 20 itens de naturezas diferentes em um único nível. Fundamento: OP-04. | M4 ≥ 50% e < 75% (Regular) |
-| H5 | Q5 | Os estudantes concluem a maior parte das tarefas sem ajuda, mas os calouros, por desconhecerem a terminologia acadêmica e a organização dos menus, concluem menos de 65% das tarefas no primeiro contato. Fundamento: OP-01 e OP-04; perfil calouro. | M5 ≥ 78% e < 90% (Bom); no recorte de calouros, com ao menos três participantes, M5 < 65% (Regular ou Insatisfatório) |
+| H5 | Q5 | Os estudantes concluem a maior parte das tarefas sem ajuda, mas os calouros, por desconhecerem a terminologia acadêmica e a organização dos menus, concluem menos de 65% das tarefas no primeiro contato. Fundamento: OP-01 e OP-04; perfil calouro. | M5 ≥ 78% e < 90% (Bom); no recorte de calouros, M5 < 65% (Regular ou Insatisfatório) |
 | H6 | Q6 | Os participantes que concluem as tarefas levam bem mais tempo que o especialista, por causa do menu extenso e das duas estruturas de navegação: o sistema é usável, porém trabalhoso. Fundamento: OP-04 e OP-05; justificativa R = 5 de Capacidade de Interação. | M6 > 2,5 e ≤ 4,0 (Regular) |
 | H7 | Q7 | Os participantes fazem bem mais cliques que o caminho mais curto, porque o menu extenso e as duas estruturas de navegação levam a escolhas erradas e a retornos. Fundamento: OP-04 e OP-05. | M7 > 1,33 e ≤ 2,00 (Regular) |
 | H8 | Q8 | Os estudantes se recuperam sem ajuda e sem retrabalho de 50% a 70% dos erros, porque parte deles, como a expiração da sessão, obriga a refazer passos. Fundamento: OP-06. | M8 ≥ 50% e < 70% (Regular) |
@@ -71,3 +71,4 @@ O roteiro exige discutir, ao final, as relações entre as características (pre
 | 2.2 | 25/10/2026 | Remoção de H13, H14 e das hipóteses de relação com Eficiência de Desempenho (antigas HR2 e HR4); antiga HR3 renumerada para HR2; fundamento de H8 reescrito | Leonardo Bonetti |
 | 2.3 | 25/10/2026 | Uma hipótese por questão (H1 a H16 ↔ Q1 a Q16): H6, H7, H8 e H12 antigas divididas, cada uma com o valor esperado da sua métrica; critérios de classificação por condição | Leonardo Bonetti |
 | 2.4 | 14/11/2026 | H3 expressa em participantes do teste com usuários, que respondem o questionário ao fim da sessão | Caio Borges |
+| 2.5 | 23/11/2026 | Critério de H5 e classificação "inconclusiva" sem número mínimo de participantes no recorte | Caio Borges |
