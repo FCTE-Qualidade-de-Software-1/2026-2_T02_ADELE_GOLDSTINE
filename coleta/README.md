@@ -69,3 +69,11 @@ python coleta/verificar_prototipo.py [--wave-js caminho/wave.min.js]
 ```
 
 O protótipo é aberto em modo tela cheia (sem o guia, a moldura e a barra de status simuladas; página inteira rolando e barra de abas fixa) e levado ao estado final de cada tarefa por toques. Sem `--wave-js`, só M14 é medida.
+
+O `wave.min.js` é o motor da extensão oficial WAVE Evaluation Tool (id `jbbplnpkjmmeebjpijfedlgcdilocofh`). Ele pode ser copiado da pasta da extensão instalada no Chrome ou extraído do pacote da Chrome Web Store:
+
+```bash
+curl -sL -o wave.crx "https://clients2.google.com/service/update2/crx?response=redirect&prodversion=146.0&acceptformat=crx2,crx3&x=id%3Djbbplnpkjmmeebjpijfedlgcdilocofh%26uc"
+unzip -o wave.crx -d wave-ext   # o aviso sobre bytes extras no início é esperado (cabeçalho CRX)
+grep version wave-ext/manifest.json   # a coleta de M9 usou a versão 3.3.4.0
+```
