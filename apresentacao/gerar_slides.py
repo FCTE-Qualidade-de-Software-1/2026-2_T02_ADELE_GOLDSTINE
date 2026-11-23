@@ -555,7 +555,7 @@ def exportar_pecas(p):
     for i, sec_ in enumerate(p.locator("section.s").all()):
         nome = NOMES_PECAS[i] if i < len(NOMES_PECAS) else f"{i + 1:02d}"
         blocos = sec_.locator(".bloco")
-        if blocos.count():
+        if blocos.count() and not sec_.locator(".rec").count():
             for j, b in enumerate(blocos.all(), 1):
                 b.screenshot(path=str(pecas / f"{nome}-{j}.png"), omit_background=True, timeout=60000)
             continue
