@@ -1,7 +1,9 @@
 # Cronograma da Avaliação e Plano de Ação da Entrega 2
 
 <!-- Critério F3-C3: O cronograma é realista e alinha as ações à execução da Fase 4. -->
+
 <!-- Critério F3-C8: Consistência entre as Fases 2 e 3 (rastreabilidade total e justificada). -->
+
 <!-- Entrega 2: 22/11/2026. Ponto de Controle 2 (PC2): release até 15/11/2026, 23h59; apresentação em 16/11/2026. Coordenação das entrevistas: Leonardo Fachinello Bonetti. -->
 
 Este documento estabelece o **cronograma operacional da Entrega 2**, cujo prazo de submissão é **22/11/2026**, com o **Ponto de Controle 2 (PC2)** no meio do caminho: release do PC2 no repositório até **15/11/2026, às 23h59**, e apresentação à professora em **16/11/2026**. Ele organiza as ações das **Fases 3 (Projeto da Avaliação)** e **4 (Execução e Julgamento)** da norma **ISO/IEC 25040**, a condução do **teste com usuários com estudantes do começo e do meio ou fim do curso** (coordenado por **Leonardo Fachinello Bonetti**), o planejamento da **Ação de Melhoria Técnica Obrigatória**, a **2ª versão do Artigo Científico em LaTeX** e o fechamento da **Gestão do Projeto (PSM/CID)**.
@@ -55,9 +57,9 @@ Estudantes do 3º e do 4º semestre não são recrutados. O uso no celular não 
 
 *Tabela 1 — Planejamento do teste com usuários (Coordenação: Leonardo Fachinello Bonetti).*
 
-| Grupo | Participantes | Tarefas | Período de Realização | Instrumentos e Registro | Responsável pela Condução |
-| :--- | :---: | :---: | :---: | :--- | :--- |
-| **Começo do curso** (1º e 2º semestres) | 3, mais 1 reserva | T1 a T6 | 13/11/2026 a 16/11/2026 | Roteiro do protocolo, gravação consentida (TCLE), SUS e questionário | Caio Borges / Daniel Duarte |
+| Grupo                                                   |   Participantes   | Tarefas | Período de Realização | Instrumentos e Registro                                                 | Responsável pela Condução  |
+| :------------------------------------------------------ | :---------------: | :-----: | :----------------------: | :---------------------------------------------------------------------- | :---------------------------- |
+| **Começo do curso** (1º e 2º semestres)        | 3, mais 1 reserva | T1 a T6 | 13/11/2026 a 16/11/2026 | Roteiro do protocolo, gravação consentida (TCLE), SUS e questionário | Caio Borges / Daniel Duarte   |
 | **Meio ou fim do curso** (5º semestre em diante) | 3, mais 1 reserva | T1 a T6 | 13/11/2026 a 16/11/2026 | Roteiro do protocolo, gravação consentida (TCLE), SUS e questionário | Leonardo Bonetti / Davi Nobre |
 
 ---
@@ -145,3 +147,4 @@ A validação do **programado vs. efetivamente feito** é aferida diariamente at
 | 1.2 | 12/11/2026 | Correções da revisão de PR: dateFormat do Gantt, alinhamento de datas entre tabelas, metas do I1, escopo da exclusão de melhorias, descrição do I3 e parágrafo da seção 4 | [Davi Nobre](https://github.com/Jagaima) |
 | 1.4 | 23/11/2026 | Status, fim real e executores de T06 a T22 e P01 a P03, a partir dos PRs #16 a #28; T20 cancelada; Gantt e resultado do I1 em 23/11/2026 | Caio Borges |
 | 1.3 | 14/11/2026 | Entrega em 22/11/2026 e PC2 em 15 e 16/11 (tarefas P01 a P03); teste com usuários alinhado ao protocolo (2 grupos de 3, T1 a T6, até 16/11); datas da análise sem sobreposição; status de T02 a T06; H1 a H16 em T12; metas do I1 recalculadas; I2 sem *milestone*; `inclusiveEndDates` no Gantt | Caio Borges |
+| 1.5 | 24/11/2026 | Remoção da nota de fechamento que contradizia o status cancelado de T20 | Daniel Nunes Duarte |

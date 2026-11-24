@@ -6,15 +6,15 @@ Esta página registra as atividades e o percentual de esforço de cada membro em
 
 *Tabela 1 - Contribuição de cada membro na Entrega 1.*
 
-| Membro | Matrícula | Atividades | Horas | Esforço (%) |
-| ------ | :-------: | ---------- | :---: | :---------: |
-| Arthur Carvalho Leite | 222037595 | Artigo no modelo IEEE (estrutura, redação das seções, diagrama GQM e compilação); [questionário com estudantes](fase-2/questionario.md) (itens, grupos por semestre, indicadores IQ1 a IQ6 e hipótese HP1); página de [gestão PSM/CID](gestao-psm.md) com a primeira medição; revisão de português da Fase 1 | 8,7 | 16,7 |
-| Caio Melo Borges | 211030952 | Fase 1 completa: propósito e partes interessadas, software avaliado, modelo de qualidade, matriz Impacto x Risco, escopo e rigor, ODS; síntese da Fase 1; referências da Fase 1; capturas do SIGAA; integração do PR do artigo | 9,0 | 17,3 |
-| Daniel Nunes Duarte | 211062910 | Apoio à equipe fora do repositório, principalmente na preparação e no dia da apresentação | 7,2 | 13,9 |
-| Davi dos Santos Brito Nobre | 211062929 | Repositório, estrutura MkDocs e publicação da GitPage; primeira versão da Fase 1; integração do PR da Fase 1; organização da equipe, pesquisa e apoio às Fases 1 e 2 fora do repositório | 9,8 | 18,8 |
-| Felipe de Aquino Campêlo | 231011328 | Fase 2: visão geral e rastreabilidade, objetivos G1 a G4, questões Q1 a Q14, métricas M1 a M19, primeira versão dos níveis de pontuação e gráficos GQM | 9,4 | 18,0 |
-| Leonardo Fachinello Bonetti | 221022060 | Fase 2: métricas M20 e MA1, hipóteses H1 a H14 e HR1 a HR4, níveis de pontuação e critérios de julgamento, matriz de rastreabilidade, referências; integração do PR da Fase 2 | 8,0 | 15,3 |
-| **Total** | | | **52,0** | **100,0** |
+| Membro                      | Matrícula | Atividades                                                                                                                                                                                                                                                                                                               |     Horas     |  Esforço (%)  |
+| --------------------------- | :--------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------: | :-------------: |
+| Arthur Carvalho Leite       | 222037595 | Artigo no modelo IEEE (estrutura, redação das seções, diagrama GQM e compilação); [questionário com estudantes](fase-2/questionario.md) (itens, grupos por semestre, indicadores IQ1 a IQ6 e hipótese HP1); página de [gestão PSM/CID](gestao-psm.md) com a primeira medição; revisão de português da Fase 1 |      8,7      |      16,7      |
+| Caio Melo Borges            | 211030952 | Fase 1 completa: propósito e partes interessadas, software avaliado, modelo de qualidade, matriz Impacto x Risco, escopo e rigor, ODS; síntese da Fase 1; referências da Fase 1; capturas do SIGAA; integração do PR do artigo                                                                                      |      9,0      |      17,3      |
+| Daniel Nunes Duarte         | 211062910 | Apoio à equipe fora do repositório, principalmente na preparação e no dia da apresentação                                                                                                                                                                                                                          |      7,2      |      13,9      |
+| Davi dos Santos Brito Nobre | 211062929 | Repositório, estrutura MkDocs e publicação da GitPage; primeira versão da Fase 1; integração do PR da Fase 1; organização da equipe, pesquisa e apoio às Fases 1 e 2 fora do repositório                                                                                                                       |      9,8      |      18,8      |
+| Felipe de Aquino Campêlo   | 231011328 | Fase 2: visão geral e rastreabilidade, objetivos G1 a G4, questões Q1 a Q14, métricas M1 a M19, primeira versão dos níveis de pontuação e gráficos GQM                                                                                                                                                           |      9,4      |      18,0      |
+| Leonardo Fachinello Bonetti | 221022060 | Fase 2: métricas M20 e MA1, hipóteses H1 a H14 e HR1 a HR4, níveis de pontuação e critérios de julgamento, matriz de rastreabilidade, referências; integração do PR da Fase 2                                                                                                                                   |      8,0      |      15,3      |
+| **Total**             |            |                                                                                                                                                                                                                                                                                                                          | **52,0** | **100,0** |
 
 *Fonte: [`gestao/esforco.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/blob/main/gestao/esforco.csv), calculado por `python gestao/esforco.py calcular --entrega E1`.*
 
@@ -29,11 +29,11 @@ A equipe avaliou três unidades para medir a contribuição:
 
 *Tabela 2 - Alternativas de medida de esforço.*
 
-| Medida | Vantagem | Problema neste projeto | Decisão |
-| ------ | -------- | ---------------------- | ------- |
-| *Issues* concluídas | Fácil de contar no GitHub | A equipe não usou *issues* na Entrega 1, e *issues* têm tamanhos muito diferentes (uma página de métricas não equivale a ajustar um link) | Descartada para a E1; adotada na E2 para o I1 e o I2, não para o esforço |
-| *Commits* | Automático | Mede o hábito de *commit*, não o trabalho: Leonardo fez 9 *commits* em 4 minutos e Arthur enviou o artigo inteiro em 1. Reuniões, pesquisa e revisão não geram *commit* | Descartada |
-| **Horas trabalhadas** | Mede o esforço de todas as atividades, inclusive as que não aparecem no Git; é a medida *Personnel Effort* do PSM/CID | Depende do registro de cada membro, que pode ser impreciso | **Adotada**, com validação por evidência (seção 3.2) |
+| Medida                      | Vantagem                                                                                                                   | Problema neste projeto                                                                                                                                                             | Decisão                                                                   |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| *Issues* concluídas      | Fácil de contar no GitHub                                                                                                 | A equipe não usou *issues* na Entrega 1, e *issues* têm tamanhos muito diferentes (uma página de métricas não equivale a ajustar um link)                                 | Descartada para a E1; adotada na E2 para o I1 e o I2, não para o esforço |
+| *Commits*                 | Automático                                                                                                                | Mede o hábito de *commit*, não o trabalho: Leonardo fez 9 *commits* em 4 minutos e Arthur enviou o artigo inteiro em 1. Reuniões, pesquisa e revisão não geram *commit* | Descartada                                                                 |
+| **Horas trabalhadas** | Mede o esforço de todas as atividades, inclusive as que não aparecem no Git; é a medida *Personnel Effort* do PSM/CID | Depende do registro de cada membro, que pode ser impreciso                                                                                                                         | **Adotada**, com validação por evidência (seção 3.2)            |
 
 ## 3. Metodologia
 
@@ -62,12 +62,12 @@ Ficam de fora o modelo IEEE copiado, PDFs, imagens, documentos binários e a pr�
 
 *Tabela 3 - Taxas de produção a partir da Entrega 2.*
 
-| Categoria | Arquivos | Taxa | Justificativa |
-| --------- | -------- | :--: | ------------- |
-| `redacao` | Textos fora de `artigo/` (páginas da GitPage, READMEs) | 1.100 palavras/h | Mesma taxa da Entrega 1 (Tabela 4) |
-| `consolidacao` | Textos em `artigo/` | 2.200 palavras/h | Mesma taxa da Entrega 1 (Tabela 4) |
-| `infraestrutura` | Código e configuração (`.py`, `.yml`, `.css`, `.js`) | 100 linhas/h | Scripts e estilos escritos com apoio de IA e revisados pelo autor. Taxa inicial, a ser calibrada pela equipe como as da Tabela 4 |
-| `revisao` | Revisões e comentários de revisão dos PRs (API do GitHub) | 0,25 h por revisor em cada PR + 1.100 palavras/h dos comentários | Tempo fixo das revisões da Entrega 1 (Tabela 5), mais o texto escrito na revisão |
+| Categoria          | Arquivos                                                        |                               Taxa                               | Justificativa                                                                                                                    |
+| ------------------ | --------------------------------------------------------------- | :---------------------------------------------------------------: | -------------------------------------------------------------------------------------------------------------------------------- |
+| `redacao`        | Textos fora de `artigo/` (páginas da GitPage, READMEs)       |                         1.100 palavras/h                         | Mesma taxa da Entrega 1 (Tabela 4)                                                                                               |
+| `consolidacao`   | Textos em `artigo/`                                           |                         2.200 palavras/h                         | Mesma taxa da Entrega 1 (Tabela 4)                                                                                               |
+| `infraestrutura` | Código e configuração (`.py`, `.yml`, `.css`, `.js`) |                           100 linhas/h                           | Scripts e estilos escritos com apoio de IA e revisados pelo autor. Taxa inicial, a ser calibrada pela equipe como as da Tabela 4 |
+| `revisao`        | Revisões e comentários de revisão dos PRs (API do GitHub)    | 0,25 h por revisor em cada PR + 1.100 palavras/h dos comentários | Tempo fixo das revisões da Entrega 1 (Tabela 5), mais o texto escrito na revisão                                               |
 
 **Passo 3. Revisões de PR.** Revisar não adiciona texto ao repositório, então as revisões são lidas da API do GitHub. Cada membro que revisa um PR recebe **0,25 h fixas**, o mesmo valor atribuído às revisões da Entrega 1 (Tabela 5), mais as **palavras dos seus comentários de revisão** pela taxa de redação. Uma aprovação sem comentário vale 0,25 h, e uma revisão detalhada vale mais. O autor do PR não recebe horas de revisão pelas respostas no próprio PR, porque o trabalho dele já está nos *commits*.
 
@@ -87,35 +87,35 @@ Como não havia registro de horas na Entrega 1, as horas foram estimadas por **e
 
 *Tabela 4 - Taxas de produção usadas na estimativa.*
 
-| Categoria | Arquivos | Taxa | Justificativa |
-| --------- | -------- | :--: | ------------- |
-| `redacao` | Páginas da GitPage (`docs/`) | 1.100 palavras/h | Texto original com pesquisa em normas e no SIGAA, redigido com apoio de IA e revisado pelo autor |
-| `consolidacao` | Artigo em LaTeX (`artigo/`) | 2.200 palavras/h | Reescrita de conteúdo já produzido nas páginas, no formato do artigo (o dobro da taxa de redação) |
+| Categoria        | Arquivos                        |       Taxa       | Justificativa                                                                                          |
+| ---------------- | ------------------------------- | :--------------: | ------------------------------------------------------------------------------------------------------ |
+| `redacao`      | Páginas da GitPage (`docs/`) | 1.100 palavras/h | Texto original com pesquisa em normas e no SIGAA, redigido com apoio de IA e revisado pelo autor       |
+| `consolidacao` | Artigo em LaTeX (`artigo/`)   | 2.200 palavras/h | Reescrita de conteúdo já produzido nas páginas, no formato do artigo (o dobro da taxa de redação) |
 
 **Passo 3. Atividades sem texto.** Atividades que não geram palavras receberam horas fixas, ligadas a uma evidência no repositório ou declaradas pela equipe:
 
 *Tabela 5 - Horas atribuídas a atividades sem texto.*
 
-| Membro | Atividade | Horas | Evidência |
-| ------ | --------- | :---: | --------- |
-| Davi | Repositório, estrutura MkDocs e *workflow* da GitPage | 1,0 | *commit* `ef63af2` |
-| Caio | 8 capturas de tela do SIGAA, com anonimização | 0,5 | *commit* `a311cc4` |
-| Arthur | Configuração do IEEEtran, migração do abnTeX2, figuras e compilação | 1,0 | *commits* `1e073c7` e `ae19094` |
-| Davi, Leonardo, Caio | Revisão e *merge* dos PRs #1, #2 e #3 | 0,25 cada | PRs #1, #2 e #3 |
-| Davi | Trabalho sem registro no Git: organização da equipe, pesquisa e apoio às Fases 1 e 2. A equipe fixou o total de Davi em 9,8 h; esta linha é a diferença sobre as 2,83 h medidas no Git | 6,97 | Declaração da equipe |
-| Daniel | Apoio à equipe sem registro no Git, principalmente na preparação e no dia da apresentação | 7,2 | Declaração da equipe |
-| Caio | Ajuste definido pela equipe na revisão da tabela: o total de Caio foi fixado em 9,0 h, contra 9,78 h estimadas | −0,78 | Declaração da equipe |
+| Membro               | Atividade                                                                                                                                                                                   |   Horas   | Evidência                            |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------: | ------------------------------------- |
+| Davi                 | Repositório, estrutura MkDocs e *workflow* da GitPage                                                                                                                                    |    1,0    | *commit* `ef63af2`                |
+| Caio                 | 8 capturas de tela do SIGAA, com anonimização                                                                                                                                             |    0,5    | *commit* `a311cc4`                |
+| Arthur               | Configuração do IEEEtran, migração do abnTeX2, figuras e compilação                                                                                                                   |    1,0    | *commits* `1e073c7` e `ae19094` |
+| Davi, Leonardo, Caio | Revisão e *merge* dos PRs #1, #2 e #3                                                                                                                                                    | 0,25 cada | PRs #1, #2 e #3                       |
+| Davi                 | Trabalho sem registro no Git: organização da equipe, pesquisa e apoio às Fases 1 e 2. A equipe fixou o total de Davi em 9,8 h; esta linha é a diferença sobre as 2,83 h medidas no Git |   6,97   | Declaração da equipe                |
+| Daniel               | Apoio à equipe sem registro no Git, principalmente na preparação e no dia da apresentação                                                                                              |    7,2    | Declaração da equipe                |
+| Caio                 | Ajuste definido pela equipe na revisão da tabela: o total de Caio foi fixado em 9,0 h, contra 9,78 h estimadas                                                                             |  −0,78  | Declaração da equipe                |
 
 **Passo 4. Sensibilidade.** As taxas são uma escolha da equipe, por isso o cálculo foi repetido com outras taxas:
 
 *Tabela 6 - Esforço (%) da Entrega 1 com taxas diferentes (redação / consolidação, em palavras/h).*
 
-| Taxas | Arthur | Caio | Daniel | Davi | Felipe | Leonardo |
-| ----- | :----: | :--: | :----: | :--: | :----: | :------: |
-| **1.100 / 2.200 (adotada)** | **16,7** | **17,3** | **13,9** | **18,8** | **18,0** | **15,3** |
-| 800 / 1.600 | 17,8 | 19,0 | 11,0 | 15,9 | 19,7 | 16,6 |
-| 1.500 / 3.000 | 15,6 | 15,5 | 16,9 | 22,1 | 16,1 | 13,8 |
-| 1.100 / 1.100 (artigo igual às páginas) | 22,1 | 16,2 | 12,9 | 17,7 | 16,8 | 14,3 |
+| Taxas                                     |     Arthur     |      Caio      |     Daniel     |      Davi      |     Felipe     |    Leonardo    |
+| ----------------------------------------- | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: |
+| **1.100 / 2.200 (adotada)**         | **16,7** | **17,3** | **13,9** | **18,8** | **18,0** | **15,3** |
+| 800 / 1.600                               |      17,8      |      19,0      |      11,0      |      15,9      |      19,7      |      16,6      |
+| 1.500 / 3.000                             |      15,6      |      15,5      |      16,9      |      22,1      |      16,1      |      13,8      |
+| 1.100 / 1.100 (artigo igual às páginas) |      22,1      |      16,2      |      12,9      |      17,7      |      16,8      |      14,3      |
 
 Entre os membros com trabalho medido no Git, mudar as taxas mantendo a proporção entre elas altera os percentuais em até 1,9 ponto percentual. Os percentuais de Daniel e Davi variam mais (11,0% a 16,9% e 15,9% a 22,1%) porque a maior parte das horas deles é declarada e não depende das taxas. Em todos os cenários, todos os membros ficam entre 10% e 40%. Tratar o artigo como texto original favorece Arthur; a equipe considera que o artigo consolida o conteúdo das páginas, o que justifica a taxa maior.
 
