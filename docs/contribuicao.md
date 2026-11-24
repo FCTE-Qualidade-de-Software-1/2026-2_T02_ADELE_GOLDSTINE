@@ -1,6 +1,6 @@
 # Contribuição
 
-Esta página registra as atividades e o percentual de esforço de cada membro em cada entrega. O esforço é medido em **horas-pessoa**, conforme o indicador I3 da [Gestão do Projeto](gestao-psm.md), e a seção 3 descreve como as horas foram obtidas. A mesma tabela está no Apêndice A do artigo.
+Esta página registra as atividades e o percentual de esforço de cada membro em cada entrega. O esforço é medido em **horas-pessoa**, conforme o indicador I3 da [Gestão do Projeto](gestao-psm.md), e a seção 3 descreve como as horas foram obtidas. Por orientação da professora, o artigo trata só da avaliação do SIGAA, sem a gestão nem o esforço da equipe: a contribuição fica registrada apenas nesta página e no [dashboard](gestao-esforco.md).
 
 ## 1. Entrega 1 (Fases 1 e 2)
 
@@ -75,7 +75,7 @@ Ficam de fora o modelo IEEE copiado, PDFs, imagens, documentos binários e a pr�
 
 **Passo 5. Validação no PR.** A cada PR e a cada revisão enviada, o *workflow* `esforco-pr.yml` comenta as horas estimadas de cada autor e revisor e a participação de cada membro na entrega se o PR for integrado, com alerta fora da faixa de 10% a 40% do I3. O revisor confere a estimativa junto com o conteúdo. Mais de 4 h de um membro num único PR exige justificativa na revisão, como o teto de plausibilidade da versão manual.
 
-**Passo 6. Publicação.** A cada publicação do site, o [dashboard de contribuição](gestao-esforco.md) é recalculado com a planilha, o histórico do Git e as revisões dos PRs. Uma linha inválida na planilha, um *commit* de autor desconhecido ou uma falha na API do GitHub interrompem a publicação, para que o painel nunca mostre um total errado. No fechamento da entrega, o responsável pela gestão cria a tag da *release*, roda `python gestao/esforco.py calcular --entrega E2`, copia a tabela para esta página e para o apêndice do artigo, e registra o I3 na [Gestão do Projeto](gestao-psm.md).
+**Passo 6. Publicação.** A cada publicação do site, o [dashboard de contribuição](gestao-esforco.md) é recalculado com a planilha, o histórico do Git e as revisões dos PRs. Uma linha inválida na planilha, um *commit* de autor desconhecido ou uma falha na API do GitHub interrompem a publicação, para que o painel nunca mostre um total errado. No fechamento da entrega, o responsável pela gestão cria a tag da *release*, roda `python gestao/esforco.py calcular --entrega E2`, copia a tabela para esta página e registra o I3 na [Gestão do Projeto](gestao-psm.md).
 
 ### 3.3 Reconstrução das horas da Entrega 1
 
@@ -129,12 +129,13 @@ Entre os membros com trabalho medido no Git, mudar as taxas mantendo a proporç�
 
 ## Histórico de Versão
 
-| Versão |    Data    |                                                                   Descrição                                                                   |                     Autor                     |
-| :-----: | :--------: | :---------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------: |
-|   1.0   | 16/10/2026 |                                                             Criação do documento                                                             |                   Davi Nobre                   |
-|   1.1   | 19/10/2026 |                                     Tabela de contribuição da Entrega 1, com as atividades de cada membro                                     | [arthurlleite](https://github.com/arthurlleite) |
-|   1.2   | 24/10/2026 |                         Metodologia de esforço por horas trabalhadas, estimativa das horas da Entrega 1 e percentuais                         |                  Caio Borges                  |
-|   1.3   | 24/10/2026 |                      Taxas calibradas para no máximo 10 h por membro e inclusão do trabalho de Davi fora do repositório                      |                  Caio Borges                  |
-|   1.4   | 24/10/2026 |                                   Horas declaradas pela equipe para Daniel e Davi e ajuste das horas de Caio                                   |                  Caio Borges                  |
-|   1.5   | 03/11/2026 |                  Matrícula de Caio, descrição das horas declaradas de Davi e Caio e correção da análise de sensibilidade                  |                  Caio Borges                  |
-|   1.6   | 10/11/2026 | Coleta automática do esforço a partir da Entrega 2 (palavras e linhas adicionadas por PR e revisões dos PRs, calculadas pelo GitHub Actions) |                  Caio Borges                  |
+| Versão | Data | Descrição | Autor |
+| :----: | :--: | :-------: | :---: |
+| 1.0 | 16/10/2026 | Criação do documento | Davi Nobre |
+| 1.1 | 19/10/2026 | Tabela de contribuição da Entrega 1, com as atividades de cada membro | [arthurlleite](https://github.com/arthurlleite) |
+| 1.2 | 24/10/2026 | Metodologia de esforço por horas trabalhadas, estimativa das horas da Entrega 1 e percentuais | Caio Borges |
+| 1.3 | 24/10/2026 | Taxas calibradas para no máximo 10 h por membro e inclusão do trabalho de Davi fora do repositório | Caio Borges |
+| 1.4 | 24/10/2026 | Horas declaradas pela equipe para Daniel e Davi e ajuste das horas de Caio | Caio Borges |
+| 1.5 | 03/11/2026 | Matrícula de Caio, descrição das horas declaradas de Davi e Caio e correção da análise de sensibilidade | Caio Borges |
+| 1.6 | 10/11/2026 | Coleta automática do esforço a partir da Entrega 2 (palavras e linhas adicionadas por PR e revisões dos PRs, calculadas pelo GitHub Actions) | Caio Borges |
+| 1.7 | 23/11/2026 | Contribuição fora do artigo, por orientação da professora | Caio Borges |
