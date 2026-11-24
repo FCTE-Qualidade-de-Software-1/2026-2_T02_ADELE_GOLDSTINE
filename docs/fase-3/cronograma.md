@@ -68,8 +68,6 @@ Estudantes do 3º e do 4º semestre não são recrutados. O uso no celular não 
 
 A Tabela 2 apresenta as atividades com prazos diários até a entrega em **22/11/2026**, incluindo as entregas do PC2 (pacote E2-PC2), e serve de base para auditar o **programado contra o efetivamente executado**.
 
-**Atualização de fechamento (23/11/2026):** os estados abaixo foram revistos com base nos artefatos versionados. Quando a data ou a confirmação dependem de registros externos (Moodle, gravações ou planilha de horas), não foram deduzidos do histórico Git. T20 permanece pendente: não há relatos individuais nem apêndice correspondente no artigo/repositório.
-
 *Tabela 2 — Cronograma operacional detalhado para a Entrega 2 (PC2: 15 e 16/11/2026; prazo final: 22/11/2026).*
 
 | ID | Pacote / Atividade | Responsável | Início | Fim Plan. | Esforço (h) | Status | Fim Real | Esforço Real | Desvio / Observações |
@@ -149,3 +147,4 @@ A validação do **programado vs. efetivamente feito** é aferida diariamente at
 | 1.2 | 12/11/2026 | Correções da revisão de PR: dateFormat do Gantt, alinhamento de datas entre tabelas, metas do I1, escopo da exclusão de melhorias, descrição do I3 e parágrafo da seção 4 | [Davi Nobre](https://github.com/Jagaima) |
 | 1.4 | 23/11/2026 | Status, fim real e executores de T06 a T22 e P01 a P03, a partir dos PRs #16 a #28; T20 cancelada; Gantt e resultado do I1 em 23/11/2026 | Caio Borges |
 | 1.3 | 14/11/2026 | Entrega em 22/11/2026 e PC2 em 15 e 16/11 (tarefas P01 a P03); teste com usuários alinhado ao protocolo (2 grupos de 3, T1 a T6, até 16/11); datas da análise sem sobreposição; status de T02 a T06; H1 a H16 em T12; metas do I1 recalculadas; I2 sem *milestone*; `inclusiveEndDates` no Gantt | Caio Borges |
+| 1.5 | 24/11/2026 | Remoção da nota de fechamento que contradizia o status cancelado de T20 | Daniel Nunes Duarte |

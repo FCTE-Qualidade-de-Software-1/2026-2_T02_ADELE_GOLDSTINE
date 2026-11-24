@@ -32,7 +32,7 @@ A Tabela 2 lista os recursos de cada método de coleta da [Tabela 2 da Fase 3](i
 | Acessibilidade manual                   | M10                                | Computador com teclado físico                                                                               | Leitor de tela NVDA com Chrome ou Firefox no Windows, ou VoiceOver com Safari no macOS; zoom do próprio navegador (200%)                                                                                                    |
 | Compatibilidade entre navegadores       | M13                                | Um computador com macOS, necessário para o Safari, e um computador com Windows ou macOS para os demais      | Google Chrome, Mozilla Firefox, Microsoft Edge e Safari, nas versões estáveis vigentes                                                                                                                                     |
 | Adaptação a telas pequenas e ao toque | M14                                | Celular real com tela de cerca de 360 px de largura; computador para a verificação em 768 px               | No celular, o navegador padrão do aparelho. Em 768 px, o modo de dispositivo das ferramentas do desenvolvedor do Chrome, com emulação de toque, ou um tablet real                                                         |
-| Tempo relativo no celular               | M15                                | O mesmo celular de M14 e um computador com tela de pelo menos 1280 px                                        | Gravação de tela nativa do celular (Android ou iOS) e gravador de tela no computador                                                                                                                                       |
+| Tempo relativo no celular | M15 | Samsung Galaxy S25 Ultra usado na coleta e um computador com tela de pelo menos 1280 px | Google Chrome no celular; gravação de tela nativa e gravador de tela no computador |
 
 *Fonte: elaboração da equipe.*
 
@@ -46,7 +46,7 @@ A Tabela 2 lista os recursos de cada método de coleta da [Tabela 2 da Fase 3](i
 | ------------------------ | ----------------- | :---------------------------: | --------------------------------------- | ---------------- | ------------- | -------------------------------------------------------- |
 | Samsung Galaxy S25 Ultra | Não registrada   |        Não registrada        | Google Chrome (versão não registrada) | Leonardo Bonetti | v4.15.10.116  | Wi-Fi residencial, mesma rede no computador e no celular |
 
-**Dados de caracterização ainda necessários:** versão do Android no momento da coleta, versão do Chrome e largura CSS efetiva exibida pelo navegador. 
+**Dados de caracterização ainda necessários:** versão do Android no momento da coleta, versão do Chrome e largura CSS efetiva exibida pelo navegador.
 
 *Fonte: elaboração da equipe.*
 
@@ -149,7 +149,7 @@ A Tabela 8 mostra como os recursos especificados atendem ao que as fichas das m�
 | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | M13 tem 24 combinações (6 tarefas × 4 navegadores)                                     | Computador com macOS para o Safari e os outros três navegadores (Tabela 2)                                                                          |
 | M14 tem 12 verificações (6 páginas × 2 larguras)                                      | Celular real de cerca de 360 px e modo de dispositivo ou tablet em 768 px (Tabelas 2 e 3)                                                            |
-| M15 compara o mesmo avaliador no computador e no celular                                  | Galaxy S25 Ultra, Chrome, avaliador Leonardo e mesma rede Wi-Fi nos dois aparelhos (Seção 2); sistema, versões e largura efetiva não registrados |
+| M15 compara o mesmo avaliador no computador e no celular | Samsung Galaxy S25 Ultra, Chrome, avaliador Leonardo e mesma rede Wi-Fi nos dois aparelhos (Seção 2); versões do sistema e do navegador não registradas |
 | M6 compara participantes com um especialista                                              | O especialista usa o computador e o navegador das sessões (Tabela 2)                                                                                |
 | M10 exige teclado, zoom de 200% e leitor de tela                                          | NVDA ou VoiceOver, teclado físico e prática prévia dos avaliadores (Tabelas 2 e 4)                                                                |
 | M1, M2, M10 e M20 exigem dois avaliadores independentes e um terceiro para divergências  | Três membros com conta que atenda à Tabela 5 (Tabela 4)                                                                                            |
@@ -170,4 +170,4 @@ A Tabela 8 mostra como os recursos especificados atendem ao que as fichas das m�
 |   1.5   | 15/11/2026 |                                                                                       Nota sobre a execução instrumentada de M13 e M14 na Fase 4                                                                                       |   [arthurlleite](https://github.com/arthurlleite)   |
 |   1.6   | 21/11/2026 |                                                                              Atualização da nota de M13 após a conclusão instrumentada de Edge e WebKit                                                                              | [Felipe Campêlo](https://github.com/felipeacampelo) |
 |   1.7   | 23/11/2026 |                                                                                          Recorte por grupo sem número mínimo de participantes                                                                                          |                     Caio Borges                     |
-|   1.8   | 23/11/2026 |                                                                   Registro dos dados comprovados da coleta M15 e indicação explícita dos metadados não registrados                                                                   |                 Daniel Nunes Duarte                 |
+| 1.8 | 24/11/2026 | Registro do Galaxy S25 Ultra usado em M15 e correção da referência ao dispositivo na Tabela 2 | Daniel Nunes Duarte |
