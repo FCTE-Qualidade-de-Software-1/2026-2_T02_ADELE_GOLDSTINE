@@ -6,11 +6,11 @@ Esta página especifica o que é necessário para executar a avaliação na Fase
 
 *Tabela 1 - Produto avaliado.*
 
-| Item | Especificação |
-| ---- | ------------- |
-| Sistema | Portal do discente de graduação do SIGAA/UnB, versão v4.15.10.115, conforme o [objeto da avaliação](../fase-1/escopo.md#1-objeto-da-avaliacao) |
-| Acesso | Interface web em produção, com a conta institucional de um estudante ativo, de graduação ou de pós-graduação, que usa o mesmo Portal do Discente |
-| Tipo de avaliação | Caixa-preta, só por consultas e emissão de documentos, sem alteração de dados acadêmicos ([premissas da Fase 1](../fase-1/escopo.md#6-premissas-e-restricoes)) |
+| Item                | Especificação                                                                                                                                                                                                                                       |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sistema             | Portal do discente de graduação do SIGAA/UnB, versão v4.15.10.115, conforme o [objeto da avaliação](../fase-1/escopo.md#1-objeto-da-avaliacao)                                                                                                    |
+| Acesso              | Interface web em produção, com a conta institucional de um estudante ativo, de graduação ou de pós-graduação, que usa o mesmo Portal do Discente                                                                                               |
+| Tipo de avaliação | Caixa-preta, só por consultas e emissão de documentos, sem alteração de dados acadêmicos ([premissas da Fase 1](../fase-1/escopo.md#6-premissas-e-restricoes))                                                                                    |
 | Controle de versão | A versão exibida no rodapé do SIGAA é conferida no primeiro dia de coleta e em cada dia seguinte. Se mudar durante a Fase 4, a mudança e a data são registradas na página de resultados, e as medidas obtidas antes e depois são identificadas |
 
 *Fonte: elaboração da equipe.*
@@ -21,30 +21,32 @@ A Tabela 2 lista os recursos de cada método de coleta da [Tabela 2 da Fase 3](i
 
 *Tabela 2 - Recursos por método de coleta.*
 
-| Método | Métricas | Hardware | Software |
-| ------ | -------- | -------- | -------- |
-| Teste com usuários | M4, M5, M6, M7, M8, M11, M12 e MA1 | Ver [Protocolo do Teste com Usuários](teste-usuarios.md#3-ambiente-e-materiais) | Ver [Protocolo do Teste com Usuários](teste-usuarios.md#3-ambiente-e-materiais) |
-| Tempos do especialista | M6 | O mesmo computador das sessões, para que T<sub>e</sub> e T<sub>p</sub> sejam medidos nas mesmas condições | Google Chrome, nas mesmas configurações das sessões; gravador de tela |
-| Questionário ao fim da sessão | M3 e lista de referência de M1 | O mesmo das sessões do teste com usuários | Aplicado aos próprios participantes logo depois da entrevista, nos materiais da sessão ([Protocolo](teste-usuarios.md#3-ambiente-e-materiais)), sem Google Forms nem divulgação em grupos; respostas transcritas para CSV |
-| Inspeção de funções e de correção | M1 e M2 | Computador com tela de pelo menos 1280 px | Navegador da escolha do avaliador; fontes de comparação da Seção 4.2 |
-| Cenários de erro | M20 | Computador com tela de pelo menos 1280 px | Google Chrome; bloqueador de janelas no padrão do navegador, para o cenário C6 |
-| Acessibilidade automática | M9 | Computador com tela de pelo menos 1280 px | Extensão WAVE (WebAIM) no Google Chrome |
-| Acessibilidade manual | M10 | Computador com teclado físico | Leitor de tela NVDA com Chrome ou Firefox no Windows, ou VoiceOver com Safari no macOS; zoom do próprio navegador (200%) |
-| Compatibilidade entre navegadores | M13 | Um computador com macOS, necessário para o Safari, e um computador com Windows ou macOS para os demais | Google Chrome, Mozilla Firefox, Microsoft Edge e Safari, nas versões estáveis vigentes |
-| Adaptação a telas pequenas e ao toque | M14 | Celular real com tela de cerca de 360 px de largura; computador para a verificação em 768 px | No celular, o navegador padrão do aparelho. Em 768 px, o modo de dispositivo das ferramentas do desenvolvedor do Chrome, com emulação de toque, ou um tablet real |
-| Tempo relativo no celular | M15 | O mesmo celular de M14 e um computador com tela de pelo menos 1280 px | Gravação de tela nativa do celular (Android ou iOS) e gravador de tela no computador |
+| Método                                 | Métricas                          | Hardware                                                                                                     | Software                                                                                                                                                                                                                     |
+| --------------------------------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Teste com usuários                     | M4, M5, M6, M7, M8, M11, M12 e MA1 | Ver [Protocolo do Teste com Usuários](teste-usuarios.md#3-ambiente-e-materiais)                              | Ver [Protocolo do Teste com Usuários](teste-usuarios.md#3-ambiente-e-materiais)                                                                                                                                              |
+| Tempos do especialista                  | M6                                 | O mesmo computador das sessões, para que T<sub>e</sub> e T<sub>p</sub> sejam medidos nas mesmas condições | Google Chrome, nas mesmas configurações das sessões; gravador de tela                                                                                                                                                     |
+| Questionário ao fim da sessão         | M3 e lista de referência de M1    | O mesmo das sessões do teste com usuários                                                                  | Aplicado aos próprios participantes logo depois da entrevista, nos materiais da sessão ([Protocolo](teste-usuarios.md#3-ambiente-e-materiais)), sem Google Forms nem divulgação em grupos; respostas transcritas para CSV |
+| Inspeção de funções e de correção | M1 e M2                            | Computador com tela de pelo menos 1280 px                                                                    | Navegador da escolha do avaliador; fontes de comparação da Seção 4.2                                                                                                                                                     |
+| Cenários de erro                       | M20                                | Computador com tela de pelo menos 1280 px                                                                    | Google Chrome; bloqueador de janelas no padrão do navegador, para o cenário C6                                                                                                                                             |
+| Acessibilidade automática              | M9                                 | Computador com tela de pelo menos 1280 px                                                                    | Extensão WAVE (WebAIM) no Google Chrome                                                                                                                                                                                     |
+| Acessibilidade manual                   | M10                                | Computador com teclado físico                                                                               | Leitor de tela NVDA com Chrome ou Firefox no Windows, ou VoiceOver com Safari no macOS; zoom do próprio navegador (200%)                                                                                                    |
+| Compatibilidade entre navegadores       | M13                                | Um computador com macOS, necessário para o Safari, e um computador com Windows ou macOS para os demais      | Google Chrome, Mozilla Firefox, Microsoft Edge e Safari, nas versões estáveis vigentes                                                                                                                                     |
+| Adaptação a telas pequenas e ao toque | M14                                | Celular real com tela de cerca de 360 px de largura; computador para a verificação em 768 px               | No celular, o navegador padrão do aparelho. Em 768 px, o modo de dispositivo das ferramentas do desenvolvedor do Chrome, com emulação de toque, ou um tablet real                                                         |
+| Tempo relativo no celular               | M15                                | O mesmo celular de M14 e um computador com tela de pelo menos 1280 px                                        | Gravação de tela nativa do celular (Android ou iOS) e gravador de tela no computador                                                                                                                                       |
 
 *Fonte: elaboração da equipe.*
 
 **Execução instrumentada de M13 e M14:** na Fase 4, as verificações de M13 e M14 foram feitas por um *script* versionado (`coleta/`), que controla navegadores reais com o Playwright e mede os critérios das fichas com as APIs do navegador, em vez da inspeção manual descrita na Tabela 2. Os navegadores (Chrome, Firefox, Edge e WebKit/Safari), as larguras de tela e os desvios em relação a esta tabela (360 px por emulação e WebKit do Playwright no macOS) estão em [Fase 4 - Flexibilidade](../fase-4/flexibilidade.md#7-desvios-em-relacao-ao-plano-da-fase-3-e-ameacas-a-validade).
 
-**Celulares:** os aparelhos usados em M14 e M15 ainda serão definidos pela equipe. A Tabela 3 é preenchida antes da primeira coleta, e o mesmo aparelho é usado em M14 e M15 para que os dois resultados possam ser comparados.
+**Celular da coleta de M15:** o registro de `dados/brutos/flexibilidade/tempos-celular.csv` identifica o Samsung Galaxy S25 Ultra, o Chrome, o avaliador Leonardo e a rede Wi-Fi residencial. O resultado de M15 está associado à versão **v4.15.10.116** do SIGAA, conforme a página de [Flexibilidade](../fase-4/flexibilidade.md). Os demais detalhes do aparelho e do navegador não foram registrados no repositório e permanecem pendentes de confirmação documental; não foram inferidos.
 
 *Tabela 3 - Celulares usados na coleta.*
 
-| Aparelho | Sistema e versão | Largura da área de exibição (px) | Navegador | Avaliador |
-| -------- | ---------------- | :------------------------------: | --------- | --------- |
-| A definir | A definir | A definir | A definir | A definir |
+| Aparelho                 | Sistema e versão | Largura efetiva da área (px) | Navegador e versão                     | Avaliador        | Versão SIGAA | Rede                                                     |
+| ------------------------ | ----------------- | :---------------------------: | --------------------------------------- | ---------------- | ------------- | -------------------------------------------------------- |
+| Samsung Galaxy S25 Ultra | Não registrada   |        Não registrada        | Google Chrome (versão não registrada) | Leonardo Bonetti | v4.15.10.116  | Wi-Fi residencial, mesma rede no computador e no celular |
+
+**Dados de caracterização ainda necessários:** versão do Android no momento da coleta, versão do Chrome e largura CSS efetiva exibida pelo navegador. 
 
 *Fonte: elaboração da equipe.*
 
@@ -56,13 +58,13 @@ A Tabela 2 lista os recursos de cada método de coleta da [Tabela 2 da Fase 3](i
 
 *Tabela 4 - Papéis, quantidade e conhecimento exigido.*
 
-| Papel | Quantidade | Conhecimento em informática | Conhecimento do domínio (SIGAA e vida acadêmica) | Preparação antes da coleta |
-| ----- | :--------: | --------------------------- | ------------------------------------------------ | -------------------------- |
-| Participante do teste com usuários | 6, mais 2 reservas | Uso básico de computador e navegador | Variável por grupo, de propósito: calouros do 1º ou 2º semestre e estudantes a partir do 5º semestre, contados no curso atual, de graduação ou de pós-graduação ([Protocolo](teste-usuarios.md#1-participantes)) | Nenhuma. O participante não recebe treinamento nem explicação do sistema |
-| Moderador | 1 por sessão | Uso de gravador de tela | Conhecer as tarefas T1 a T6 e os enunciados | Leitura do protocolo |
-| Avaliador da gravação | 1 por sessão, de preferência diferente do moderador | Leitura de vídeo com marcação de tempo | Conhecer os caminhos de `caminhos.csv` e as definições comuns de [Métricas](../fase-2/metricas.md#definicoes-comuns) | Leitura da seção 8 do protocolo |
-| Especialista (M6) | 1 | Uso fluente do navegador | Uso frequente do SIGAA; executar as tarefas pelo caminho mais curto sem hesitar | Ensaiar cada tarefa antes das três execuções medidas |
-| Avaliador de inspeção | 2 independentes, mais 1 para desempate, nas métricas cuja ficha o exige (M1, M2, M10 e M20); 1 nas demais | Ferramentas do desenvolvedor do navegador (M14); extensão WAVE (M9); leitor de tela e navegação só por teclado (M10) | Estudante da UnB com acesso ao SIGAA; para M2, leitura do PPC e do calendário acadêmico | Leitura da ficha da métrica. Para M10, cerca de 30 minutos de prática com o leitor de tela fora do SIGAA, porque nenhum membro da equipe o usa no dia a dia |
+| Papel                               |                                                 Quantidade                                                 | Conhecimento em informática                                                                                             | Conhecimento do domínio (SIGAA e vida acadêmica)                                                                                                                                                                        | Preparação antes da coleta                                                                                                                                  |
+| ----------------------------------- | :--------------------------------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Participante do teste com usuários |                                             6, mais 2 reservas                                             | Uso básico de computador e navegador                                                                                    | Variável por grupo, de propósito: calouros do 1º ou 2º semestre e estudantes a partir do 5º semestre, contados no curso atual, de graduação ou de pós-graduação ([Protocolo](teste-usuarios.md#1-participantes)) | Nenhuma. O participante não recebe treinamento nem explicação do sistema                                                                                   |
+| Moderador                           |                                               1 por sessão                                               | Uso de gravador de tela                                                                                                  | Conhecer as tarefas T1 a T6 e os enunciados                                                                                                                                                                               | Leitura do protocolo                                                                                                                                          |
+| Avaliador da gravação             |                           1 por sessão, de preferência diferente do moderador                           | Leitura de vídeo com marcação de tempo                                                                                | Conhecer os caminhos de `caminhos.csv` e as definições comuns de [Métricas](../fase-2/metricas.md#definicoes-comuns)                                                                                                  | Leitura da seção 8 do protocolo                                                                                                                             |
+| Especialista (M6)                   |                                                     1                                                     | Uso fluente do navegador                                                                                                 | Uso frequente do SIGAA; executar as tarefas pelo caminho mais curto sem hesitar                                                                                                                                           | Ensaiar cada tarefa antes das três execuções medidas                                                                                                       |
+| Avaliador de inspeção             | 2 independentes, mais 1 para desempate, nas métricas cuja ficha o exige (M1, M2, M10 e M20); 1 nas demais | Ferramentas do desenvolvedor do navegador (M14); extensão WAVE (M9); leitor de tela e navegação só por teclado (M10) | Estudante da UnB com acesso ao SIGAA; para M2, leitura do PPC e do calendário acadêmico                                                                                                                                 | Leitura da ficha da métrica. Para M10, cerca de 30 minutos de prática com o leitor de tela fora do SIGAA, porque nenhum membro da equipe o usa no dia a dia |
 
 *Fonte: elaboração da equipe.*
 
@@ -78,14 +80,14 @@ Para que as tarefas possam ser executadas, a conta usada precisa ter os dados da
 
 *Tabela 5 - Dados necessários na conta para cada tarefa.*
 
-| Tarefa | Dado necessário na conta | Por que é necessário | Como é conferido |
-| ------ | ------------------------ | -------------------- | ---------------- |
-| T1 | Ao menos uma nota lançada em disciplina do semestre corrente | Sem nota, a página de notas não mostra o que a tarefa pede | Pergunta no recrutamento |
-| T2 | Matrícula em ao menos uma turma do semestre com horário e local cadastrados | A tarefa e a pergunta de compreensão dependem do código de horário | Pergunta no recrutamento |
-| T3 | Vínculo ativo no semestre corrente | Sem vínculo, o atestado não é emitido | Critério de inclusão do protocolo |
-| T4 | Índices acadêmicos e integralização calculados | Calouros do 1º semestre podem ainda não ter índices calculados | Pergunta no recrutamento e conferência na conta de um calouro antes da coleta |
-| T5 | Ao menos um material publicado por professor na Turma Virtual de uma turma do semestre | Sem material, não há o que abrir | Pergunta no recrutamento |
-| T6 | Calendário acadêmico do semestre publicado | A pergunta de compreensão usa o prazo de trancamento | Conferência pela equipe antes da coleta |
+| Tarefa | Dado necessário na conta                                                              | Por que é necessário                                                | Como é conferido                                                              |
+| ------ | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| T1     | Ao menos uma nota lançada em disciplina do semestre corrente                          | Sem nota, a página de notas não mostra o que a tarefa pede          | Pergunta no recrutamento                                                       |
+| T2     | Matrícula em ao menos uma turma do semestre com horário e local cadastrados          | A tarefa e a pergunta de compreensão dependem do código de horário | Pergunta no recrutamento                                                       |
+| T3     | Vínculo ativo no semestre corrente                                                    | Sem vínculo, o atestado não é emitido                              | Critério de inclusão do protocolo                                            |
+| T4     | Índices acadêmicos e integralização calculados                                     | Calouros do 1º semestre podem ainda não ter índices calculados     | Pergunta no recrutamento e conferência na conta de um calouro antes da coleta |
+| T5     | Ao menos um material publicado por professor na Turma Virtual de uma turma do semestre | Sem material, não há o que abrir                                    | Pergunta no recrutamento                                                       |
+| T6     | Calendário acadêmico do semestre publicado                                           | A pergunta de compreensão usa o prazo de trancamento                 | Conferência pela equipe antes da coleta                                       |
 
 *Fonte: elaboração da equipe.*
 
@@ -97,12 +99,12 @@ Como prevê a [ficha de M2](../fase-2/metricas.md#m2-taxa-de-correcao-funcional)
 
 *Tabela 6 - Fontes de comparação de M2.*
 
-| Tipo | Fonte | Usada para conferir |
-| ---- | ----- | ------------------- |
-| Oficial | Projeto Pedagógico do Curso (PPC) do avaliador | Carga horária, créditos e pré-requisitos das disciplinas obrigatórias dos quatro primeiros semestres do fluxo |
-| Oficial | Calendário acadêmico do semestre publicado no site da UnB | Datas exibidas em T6 |
-| Consistência interna | Histórico emitido em T3 | Notas e menções exibidas em T1; índices e carga horária pendente exibidos em T4 |
-| Consistência interna | Turma Virtual | Dia, horário e local da turma exibidos em T2 |
+| Tipo                  | Fonte                                                       | Usada para conferir                                                                                               |
+| --------------------- | ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Oficial               | Projeto Pedagógico do Curso (PPC) do avaliador             | Carga horária, créditos e pré-requisitos das disciplinas obrigatórias dos quatro primeiros semestres do fluxo |
+| Oficial               | Calendário acadêmico do semestre publicado no site da UnB | Datas exibidas em T6                                                                                              |
+| Consistência interna | Histórico emitido em T3                                    | Notas e menções exibidas em T1; índices e carga horária pendente exibidos em T4                               |
+| Consistência interna | Turma Virtual                                               | Dia, horário e local da turma exibidos em T2                                                                     |
 
 *Fonte: elaboração da equipe.*
 
@@ -122,16 +124,16 @@ A premissa 4 da especificação pede as gravações no repositório, e o [escopo
 
 *Tabela 7 - Guarda e acesso às gravações.*
 
-| Item | Definição |
-| ---- | --------- |
-| Local | Pasta no OneDrive institucional da UnB, compartilhada por nome só com os membros da equipe e a professora (nunca por link aberto), com uma subpasta para os termos assinados e outra para as gravações e transcrições |
-| Quem acessa | Membros da equipe e a professora da disciplina |
-| Nome dos arquivos | `Entrevista_<número>_<data>`, por exemplo `Entrevista_3_2026-11-15`. O número é o mesmo do código do participante (`Entrevista_3` corresponde a P3). O nome do participante não aparece no arquivo: a ligação entre código e nome fica só no registro de consentimento, para que os nomes não apareçam se a pasta for compartilhada por engano |
-| Consentimento | Registrado antes de qualquer gravação, conforme o [roteiro do protocolo](teste-usuarios.md#5-roteiro-da-sessao). O termo assinado de cada participante fica na subpasta dos termos, separado das gravações, como promete o termo |
-| Transcrição | Transcrição automática do áudio, gerada pela ferramenta de videochamada nas sessões remotas e prevista no termo. Segue as mesmas regras da gravação, com o nome `Entrevista_<número>_<data>_transcricao`. Antes de ser usada na análise, o nome do participante é trocado pelo código e são removidos matrícula, curso, disciplinas e professores |
-| Ligação com o repositório | No repositório, os dados extraídos das gravações (tempos, cliques, primeira escolha e erros) apontam para o minuto do vídeo na coluna `evidencia` (ex.: `P3 04:12`). O link da pasta é informado à professora junto com a release da Entrega 2 |
-| Retenção | Gravações, transcrições e termos assinados: até 60 dias após a sessão, como informa o [termo de consentimento](termo-consentimento.docx). Depois, são apagados. Sem o termo, os dados do repositório deixam de ter qualquer ligação com o nome do participante |
-| Base legal e direitos | O termo informa o tratamento conforme a LGPD (Lei nº 13.709/2018), com base no consentimento, e os direitos de acesso, correção, exclusão e retirada do consentimento. Se um participante retirar o consentimento, os registros dele são apagados e não entram nos resultados apresentados depois do pedido |
+| Item                         | Definição                                                                                                                                                                                                                                                                                                                                                      |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Local                        | Pasta no OneDrive institucional da UnB, compartilhada por nome só com os membros da equipe e a professora (nunca por link aberto), com uma subpasta para os termos assinados e outra para as gravações e transcrições                                                                                                                                       |
+| Quem acessa                  | Membros da equipe e a professora da disciplina                                                                                                                                                                                                                                                                                                                   |
+| Nome dos arquivos            | `Entrevista_<número>_<data>`, por exemplo `Entrevista_3_2026-11-15`. O número é o mesmo do código do participante (`Entrevista_3` corresponde a P3). O nome do participante não aparece no arquivo: a ligação entre código e nome fica só no registro de consentimento, para que os nomes não apareçam se a pasta for compartilhada por engano  |
+| Consentimento                | Registrado antes de qualquer gravação, conforme o [roteiro do protocolo](teste-usuarios.md#5-roteiro-da-sessao). O termo assinado de cada participante fica na subpasta dos termos, separado das gravações, como promete o termo                                                                                                                              |
+| Transcrição                | Transcrição automática do áudio, gerada pela ferramenta de videochamada nas sessões remotas e prevista no termo. Segue as mesmas regras da gravação, com o nome `Entrevista_<número>_<data>_transcricao`. Antes de ser usada na análise, o nome do participante é trocado pelo código e são removidos matrícula, curso, disciplinas e professores |
+| Ligação com o repositório | No repositório, os dados extraídos das gravações (tempos, cliques, primeira escolha e erros) apontam para o minuto do vídeo na coluna `evidencia` (ex.: `P3 04:12`). O link da pasta é informado à professora junto com a release da Entrega 2                                                                                                        |
+| Retenção                   | Gravações, transcrições e termos assinados: até 60 dias após a sessão, como informa o [termo de consentimento](termo-consentimento.docx). Depois, são apagados. Sem o termo, os dados do repositório deixam de ter qualquer ligação com o nome do participante                                                                                         |
+| Base legal e direitos        | O termo informa o tratamento conforme a LGPD (Lei nº 13.709/2018), com base no consentimento, e os direitos de acesso, correção, exclusão e retirada do consentimento. Se um participante retirar o consentimento, os registros dele são apagados e não entram nos resultados apresentados depois do pedido                                                |
 
 *Fonte: elaboração da equipe.*
 
@@ -143,28 +145,29 @@ A Tabela 8 mostra como os recursos especificados atendem ao que as fichas das m�
 
 *Tabela 8 - Recurso especificado e exigência da Fase 2.*
 
-| Exigência da Fase 2 | Recurso que a atende |
-| ------------------- | -------------------- |
-| M13 tem 24 combinações (6 tarefas × 4 navegadores) | Computador com macOS para o Safari e os outros três navegadores (Tabela 2) |
-| M14 tem 12 verificações (6 páginas × 2 larguras) | Celular real de cerca de 360 px e modo de dispositivo ou tablet em 768 px (Tabelas 2 e 3) |
-| M15 compara o mesmo avaliador no computador e no celular | O mesmo celular de M14, a mesma rede e gravação de tela nos dois aparelhos (Seção 2) |
-| M6 compara participantes com um especialista | O especialista usa o computador e o navegador das sessões (Tabela 2) |
-| M10 exige teclado, zoom de 200% e leitor de tela | NVDA ou VoiceOver, teclado físico e prática prévia dos avaliadores (Tabelas 2 e 4) |
-| M1, M2, M10 e M20 exigem dois avaliadores independentes e um terceiro para divergências | Três membros com conta que atenda à Tabela 5 (Tabela 4) |
-| O recorte por grupo (H5 e regra 3 dos níveis) compara o começo e o meio ou fim do curso | Seis participantes e duas reservas (Tabela 4) |
-| As tarefas T1 a T6 precisam ser possíveis na conta usada | Requisitos de conta da Tabela 5, conferidos no recrutamento e pela equipe antes da coleta |
+| Exigência da Fase 2                                                                      | Recurso que a atende                                                                                                                                 |
+| ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| M13 tem 24 combinações (6 tarefas × 4 navegadores)                                     | Computador com macOS para o Safari e os outros três navegadores (Tabela 2)                                                                          |
+| M14 tem 12 verificações (6 páginas × 2 larguras)                                      | Celular real de cerca de 360 px e modo de dispositivo ou tablet em 768 px (Tabelas 2 e 3)                                                            |
+| M15 compara o mesmo avaliador no computador e no celular                                  | Galaxy S25 Ultra, Chrome, avaliador Leonardo e mesma rede Wi-Fi nos dois aparelhos (Seção 2); sistema, versões e largura efetiva não registrados |
+| M6 compara participantes com um especialista                                              | O especialista usa o computador e o navegador das sessões (Tabela 2)                                                                                |
+| M10 exige teclado, zoom de 200% e leitor de tela                                          | NVDA ou VoiceOver, teclado físico e prática prévia dos avaliadores (Tabelas 2 e 4)                                                                |
+| M1, M2, M10 e M20 exigem dois avaliadores independentes e um terceiro para divergências  | Três membros com conta que atenda à Tabela 5 (Tabela 4)                                                                                            |
+| O recorte por grupo (H5 e regra 3 dos níveis) compara o começo e o meio ou fim do curso | Seis participantes e duas reservas (Tabela 4)                                                                                                        |
+| As tarefas T1 a T6 precisam ser possíveis na conta usada                                 | Requisitos de conta da Tabela 5, conferidos no recrutamento e pela equipe antes da coleta                                                            |
 
 *Fonte: elaboração da equipe.*
 
 ## Histórico de Versão
 
-| Versão | Data | Descrição | Autor |
-| :----: | :--: | :-------: | :---: |
-| 1.0 | 12/11/2026 | Criação da página: produto avaliado, hardware e software por método, pessoas e conhecimento exigido, massa de dados, gravações e coerência com a Fase 2 | [Felipe Campêlo](https://github.com/felipeacampelo) |
-| 1.1 | 14/11/2026 | Ajustes da revisão: retirada da sessão piloto, questionário aplicado ao fim da sessão, nome das gravações sem o nome do participante, fontes de M2 separadas conforme a ficha e justificativa das gravações fora do repositório | [Felipe Campêlo](https://github.com/felipeacampelo) |
-| 1.2 | 14/11/2026 | Retenção das gravações igual à do termo de consentimento (60 dias após a sessão) e data do exemplo de nome de arquivo dentro da janela de coleta | Caio Borges |
-| 1.3 | 15/11/2026 | Conta e participantes do teste com usuários podem ser de graduação ou de pós-graduação, conforme o protocolo | Caio Borges |
-| 1.4 | 15/11/2026 | Local das gravações no OneDrive institucional, transcrição automática, retenção dos termos assinados e referência à LGPD, alinhados à nova versão do termo de consentimento | Caio Borges |
-| 1.5 | 15/11/2026 | Nota sobre a execução instrumentada de M13 e M14 na Fase 4 | [arthurlleite](https://github.com/arthurlleite) |
-| 1.6 | 21/11/2026 | Atualização da nota de M13 após a conclusão instrumentada de Edge e WebKit | [Felipe Campêlo](https://github.com/felipeacampelo) |
-| 1.7 | 23/11/2026 | Recorte por grupo sem número mínimo de participantes | Caio Borges |
+| Versão |    Data    |                                                                                                               Descrição                                                                                                               |                        Autor                        |
+| :-----: | :--------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------: |
+|   1.0   | 12/11/2026 |                                      Criação da página: produto avaliado, hardware e software por método, pessoas e conhecimento exigido, massa de dados, gravações e coerência com a Fase 2                                      | [Felipe Campêlo](https://github.com/felipeacampelo) |
+|   1.1   | 14/11/2026 | Ajustes da revisão: retirada da sessão piloto, questionário aplicado ao fim da sessão, nome das gravações sem o nome do participante, fontes de M2 separadas conforme a ficha e justificativa das gravações fora do repositório | [Felipe Campêlo](https://github.com/felipeacampelo) |
+|   1.2   | 14/11/2026 |                                         Retenção das gravações igual à do termo de consentimento (60 dias após a sessão) e data do exemplo de nome de arquivo dentro da janela de coleta                                         |                     Caio Borges                     |
+|   1.3   | 15/11/2026 |                                                            Conta e participantes do teste com usuários podem ser de graduação ou de pós-graduação, conforme o protocolo                                                            |                     Caio Borges                     |
+|   1.4   | 15/11/2026 |                          Local das gravações no OneDrive institucional, transcrição automática, retenção dos termos assinados e referência à LGPD, alinhados à nova versão do termo de consentimento                          |                     Caio Borges                     |
+|   1.5   | 15/11/2026 |                                                                                       Nota sobre a execução instrumentada de M13 e M14 na Fase 4                                                                                       |   [arthurlleite](https://github.com/arthurlleite)   |
+|   1.6   | 21/11/2026 |                                                                              Atualização da nota de M13 após a conclusão instrumentada de Edge e WebKit                                                                              | [Felipe Campêlo](https://github.com/felipeacampelo) |
+|   1.7   | 23/11/2026 |                                                                                          Recorte por grupo sem número mínimo de participantes                                                                                          |                     Caio Borges                     |
+|   1.8   | 23/11/2026 |                                                                   Registro dos dados comprovados da coleta M15 e indicação explícita dos metadados não registrados                                                                   |                 Daniel Nunes Duarte                 |
