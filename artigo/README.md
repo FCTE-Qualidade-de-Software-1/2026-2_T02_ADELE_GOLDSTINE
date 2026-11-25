@@ -3,7 +3,7 @@
 Artigo do Projeto Final de FGA0315 Qualidade de Software 1, no **modelo IEEE para conferências** (IEEEtran), conforme a premissa 7 do roteiro.
 
 - **PDF:** [`artigo.pdf`](artigo.pdf) (13 páginas com as referências, dentro do limite de 15 da premissa 9; sem apêndice)
-- **Overleaf:** <https://www.overleaf.com/project/6b04809b6bd87c703701ebf4/share#ec4b766bf0e081e6b89f4427f7486bd96f1c4c0347d4e6d0>
+- **Overleaf:** <https://www.overleaf.com/project/6b0636056d70df578eb596a6/share#a607a496e6e275668c3d3387d7f5565e9f7174f64128ad38>
 - **Modelo original do IEEE:** [`modelo-ieee/`](modelo-ieee/) — pacote oficial IEEEtran v1.8b, sem alterações, obtido no CTAN em 19/10/2026 (<https://ctan.org/pkg/ieeetran>, arquivo <https://mirrors.ctan.org/macros/latex/contrib/IEEEtran.zip>). Contém a classe `IEEEtran.cls`, o modelo de conferência `bare_conf.tex`, o estilo de referências `bibtex/IEEEtran.bst` e os manuais `IEEEtran_HOWTO.pdf` e `bibtex/IEEEtran_bst_HOWTO.pdf`.
 
 ## Estrutura

@@ -4,7 +4,7 @@ Artigo final da avaliação (Fases 1 a 4, julgamento, matriz multiplataforma, a�
 
 - **PDF:** [baixar o artigo](artigo.pdf){ download="artigo-adele-goldstine-final.pdf" } ou [abrir em nova aba](artigo.pdf){ target="_blank" }
 - **Fonte LaTeX:** pasta [`artigo/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_ADELE_GOLDSTINE/tree/main/artigo) do repositório
-- **Overleaf:** <https://www.overleaf.com/project/6b04809b6bd87c703701ebf4/share#ec4b766bf0e081e6b89f4427f7486bd96f1c4c0347d4e6d0>
+- **Overleaf:** <https://www.overleaf.com/project/6b0636056d70df578eb596a6/share#a607a496e6e275668c3d3387d7f5565e9f7174f64128ad38>
 
 ## Resumo
 
@@ -46,4 +46,4 @@ O Sistema Integrado de Gestão de Atividades Acadêmicas (SIGAA) é o ponto úni
 | 2.0 | 15/11/2026 | Versão do Ponto de Controle 2: resumo, palavras-chave e mapa das seções com as Fases 3 e 4 | [arthurlleite](https://github.com/arthurlleite) |
 | 3.0 | 23/11/2026 | Versão final: resumo, palavras-chave e mapa das seções (Fase 4 completa, ação de melhoria e conclusão; sem gestão da equipe nem apêndice de contribuição) | [arthurlleite](https://github.com/arthurlleite) |
 | 3.1 | 23/11/2026 | Novo link do projeto no Overleaf | [arthurlleite](https://github.com/arthurlleite) |
-| 3.2 | 24/11/2026 | Revisão final: resumo com menos de 250 palavras, gráficos das métricas e das hipóteses, desvios do plano, aparelho de M15 e datas realizadas da coleta | [arthurlleite](https://github.com/arthurlleite) |
+| 3.2 | 24/11/2026 | Revisão final: resumo com menos de 250 palavras, gráficos das métricas e das hipóteses, desvios do plano, aparelho de M15, datas realizadas da coleta e novo link do Overleaf | [arthurlleite](https://github.com/arthurlleite) |
