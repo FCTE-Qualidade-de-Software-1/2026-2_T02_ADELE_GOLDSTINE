@@ -5,7 +5,7 @@ A Fase 3 transforma a especificação em um plano executável: para cada métric
 
 \subsection{Métodos de coleta e rastreabilidade}
 
-As 16 métricas são obtidas por quatro métodos (Tabela~\ref{tab:metodos}). Cada métrica aponta para um instrumento e para um arquivo de dados em \texttt{dados/brutos/}, com formato e convenções fixados antes da coleta (CSV em UTF-8, datas no formato AAAA-MM-DD, tarefas T1 a T6, participantes P1 a P6 e coluna \texttt{evidencia} com o caminho da captura ou o minuto da gravação). Assim, cada valor calculado na Fase 4 pode ser conferido até a sua origem.
+As 16 métricas são obtidas por quatro métodos (Tabela~\ref{tab:metodos}). Cada métrica aponta para um instrumento e para um arquivo de dados em \texttt{dados/brutos/}, com formato e convenções fixados antes da coleta (CSV em UTF-8, datas no formato AAAA-MM-DD, tarefas T1 a T6, participantes identificados por código (P1, P2, \ldots) e coluna \texttt{evidencia} com o caminho da captura ou o minuto da gravação). Assim, cada valor calculado na Fase 4 pode ser conferido até a sua origem.
 
 \begin{table}[!t]
 	\caption{Métodos de coleta da avaliação}
@@ -16,8 +16,8 @@ As 16 métricas são obtidas por quatro métodos (Tabela~\ref{tab:metodos}). Cad
 		\toprule
 		\textbf{Método} & \textbf{Métricas} & \textbf{Execução} \\
 		\midrule
-		Teste com usuários & M4--M8, M11, M12, MA1 & Seis estudantes, sessão gravada, moderador e avaliador da gravação \\
-		Questionário ao fim da sessão & M3 e insumo de M1 & Os mesmos seis participantes, após o SUS \\
+		Teste com usuários & M4--M8, M11, M12, MA1 & Cinco estudantes, sessão gravada, moderador e avaliador da gravação \\
+		Questionário ao fim da sessão & M3 e insumo de M1 & Os mesmos cinco participantes, após o SUS \\
 		Inspeção pela equipe & M1, M2, M9, M10, M20 & Dois avaliadores independentes e um terceiro para divergências; WAVE em M9 \\
 		Execução instrumentada & M13, M14 (M15 manual) & \textit{Scripts} versionados que executam T1 a T6 em navegadores e larguras de tela \\
 		\bottomrule
@@ -28,9 +28,9 @@ As 16 métricas são obtidas por quatro métodos (Tabela~\ref{tab:metodos}). Cad
 \subsection{Protocolo do teste com usuários}
 \label{sec:protocolo}
 
-Participam seis estudantes ativos, maiores de 18 anos, em dois grupos de três que diferem apenas no semestre do curso atual: \textbf{começo} (1º e 2º semestres, perfil calouro) e \textbf{meio ou fim} (a partir do 5º, perfis veterano e formando), com um reserva por grupo. Estudantes de pós-graduação são aceitos, porque usam o mesmo portal. A sessão, de cerca de 35 minutos, segue um roteiro com falas padronizadas: (1) termo de consentimento livre e esclarecido, em conformidade com a LGPD; (2) perguntas iniciais, incluindo se o participante já executou cada tarefa; (3) entrada no SIGAA com a própria conta, sem o moderador olhar o teclado; (4) instruções; (5) tarefas T1 a T6, entregues em cartões que dizem \textit{o que} obter e nunca \textit{onde} clicar, para não indicar o caminho, com limite de 5 minutos e pergunta de compreensão em T2, T4 e T6; (6) SUS; (7) questionário; e (8) encerramento.
+Participaram cinco estudantes ativos, maiores de 18 anos, em dois grupos que diferem apenas no semestre do curso atual: \textbf{começo} (1º e 2º semestres, perfil calouro), com dois participantes, e \textbf{meio ou fim} (a partir do 5º, perfis veterano e formando), com três. Cada grupo tinha um reserva. Estudantes de pós-graduação são aceitos, porque usam o mesmo portal. A sessão, de cerca de 35 minutos, segue um roteiro com falas padronizadas: (1) termo de consentimento livre e esclarecido, em conformidade com a LGPD; (2) perguntas iniciais, incluindo se o participante já executou cada tarefa; (3) entrada no SIGAA com a própria conta, sem o moderador olhar o teclado; (4) instruções; (5) tarefas T1 a T6, entregues em cartões que dizem \textit{o que} obter e nunca \textit{onde} clicar, para não indicar o caminho, com limite de 5 minutos e pergunta de compreensão em T2, T4 e T6; (6) SUS; (7) questionário; e (8) encerramento.
 
-A ordem das tarefas é rotacionada em três sequências, repetidas em cada grupo, para que cada tarefa apareça no início, no meio e no fim da sessão uma vez por grupo. O fim de cada tarefa é definido por cinco eventos (resultado correto, resultado errado, desistência, pedido de ajuda e tempo esgotado), e o moderador não ajuda o participante. Depois da sessão, um avaliador, de preferência diferente do moderador, extrai da gravação o tempo, os cliques, a primeira escolha e os erros, pelas regras das fichas. A sessão usa o Google Chrome em janela anônima, com zoom de 100\%, em tela de pelo menos 1.280~px: um único navegador evita que diferenças entre navegadores afetem os tempos, que são comparados à parte em M13.
+A ordem das tarefas é rotacionada em três sequências, repetidas em cada grupo, para que cada tarefa apareça em diferentes posições da sessão. O fim de cada tarefa é definido por cinco eventos (resultado correto, resultado errado, desistência, pedido de ajuda e tempo esgotado), e o moderador não ajuda o participante. Depois da sessão, um avaliador, de preferência diferente do moderador, extrai da gravação o tempo, os cliques, a primeira escolha e os erros, pelas regras das fichas. A sessão usa o Google Chrome em janela anônima, com zoom de 100\%, em tela de pelo menos 1.280~px: um único navegador evita que diferenças entre navegadores afetem os tempos, que são comparados à parte em M13.
 
 \subsection{Recursos, ambiente e massa de dados}
 
@@ -45,4 +45,4 @@ Três regras garantem que a coleta seja ética e não intrusiva: o \textit{scrip
 
 \subsection{Período da coleta}
 
-A coleta ocorreu de 15 a 22/11/2026: teste com usuários e questionário, inspeções por pares, execução instrumentada de Flexibilidade e medição de M15 em celular real. Em seguida, as métricas foram calculadas pelos \textit{scripts}, julgadas pelas regras da Fase 2 e usadas para selecionar e verificar a ação de melhoria.
+O teste com usuários e o questionário foram aplicados em 15 e 16/11/2026, com P1 e P3 no primeiro dia e P2, P4 e P6 no segundo. As inspeções por pares, a acessibilidade automática, a execução instrumentada de Flexibilidade e a medição de M15 em celular real terminaram em 22/11/2026, e a matriz multiplataforma, complementar, foi executada em 23/11/2026. Em seguida, as métricas foram calculadas pelos \textit{scripts}, julgadas pelas regras da Fase 2 e usadas para selecionar e verificar a ação de melhoria.

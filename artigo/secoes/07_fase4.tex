@@ -1,11 +1,21 @@
 \section{Fase 4: execução, resultados e julgamento}
 \label{sec:fase4}
 
-A coleta ocorreu de 15 a 22/11/2026, na versão v4.15.10.116 do SIGAA (a Fase 1 registrou a v4.15.10.115; a mudança foi registrada, como prevê o plano). Cinco estudantes participaram do teste com usuários, dois do começo e três do meio ou do fim do curso, somando 30 tentativas das seis tarefas; dos seis previstos, a coleta terminou com cinco (P1 a P4 e P6). As inspeções de M1, M2, M10 e M20 tiveram dois avaliadores, o primeiro deles um \textit{script} que registra as evidências e o segundo, humano, que repetiu os pontos decisivos (teclado, leitor de tela e bloqueio de \textit{pop-ups}); não houve divergência. O WAVE foi aplicado às seis páginas finais das tarefas, M13 foi executada em 24 combinações de navegador e tarefa, M14 em 12 verificações (seis páginas em 360 e 768~px) e M15 em um celular real. Todas as 16 métricas foram calculadas, e todas receberam nível.
+A coleta ocorreu de 15 a 22/11/2026, com a matriz complementar em 23/11, na versão v4.15.10.116 do SIGAA (a Fase 1 registrou a v4.15.10.115; a mudança foi registrada, como prevê o plano). Cinco estudantes participaram do teste com usuários, dois do começo e três do meio ou do fim do curso, somando 30 tentativas das seis tarefas; os participantes são identificados como P1, P2, P3, P4 e P6. As inspeções de M1, M2, M10 e M20 tiveram dois avaliadores, o primeiro deles um \textit{script} que registra as evidências e o segundo, humano, que repetiu os pontos decisivos (teclado, leitor de tela e bloqueio de \textit{pop-ups}); não houve divergência. O WAVE foi aplicado às seis páginas finais das tarefas, M13 foi executada em 24 combinações de navegador e tarefa, M14 em 12 verificações (seis páginas em 360 e 768~px) e M15 em um celular real. Todas as 16 métricas foram calculadas, e todas receberam nível.
+
+\textbf{Desvios do plano.} Quatro desvios foram registrados e tratados: (i) o teste foi feito com cinco estudantes, um a menos que o planejado, e o grupo do começo do curso ficou com dois; (ii) nas inspeções, o primeiro avaliador foi um \textit{script} que registra evidências, e não uma pessoa, e o segundo avaliador repetiu manualmente os pontos decisivos; (iii) M14 foi verificada por emulação, e não em celular real, porque as falhas decorrem da largura e da ausência de \textit{viewport}, que a emulação reproduz (a matriz multiplataforma, Seção~\ref{sec:matriz}, confirma o resultado em 10 perfis móveis); e (iv) Edge e Safari, que exigem outro sistema operacional, foram executados em um computador com macOS por outro membro, com referência própria no Chrome. Nenhum desvio alterou as fichas, as faixas ou as regras de julgamento.
 
 \subsection{Resultado das métricas}
 
-A Tabela~\ref{tab:resultados} traz o valor e o nível de cada métrica, que é também o nível da sua questão (etapa 1 do julgamento). Das 16 questões, uma ficou Excelente, quatro Bom, cinco Regular e seis Insatisfatório.
+A Tabela~\ref{tab:resultados} traz o valor e o nível de cada métrica, que é também o nível da sua questão (etapa 1 do julgamento), e a Fig.~\ref{fig:metricas} mostra onde cada valor caiu nas faixas fixadas na Fase 2. Das 16 questões, uma ficou Excelente (6,25\%), quatro Bom (25\%), cinco Regular (31,25\%) e seis Insatisfatório (37,5\%).
+
+\begin{figure*}[!t]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figuras/metricas.png}
+	\caption{Valor e nível das 16 métricas nas faixas definidas na Fase 2, por característica. As faixas têm a mesma largura; o ponto fica na posição do valor dentro da sua faixa.}
+	\label{fig:metricas}
+	\fonte{elaborado pela equipe a partir de \texttt{dados/consolidados/metricas.csv}.}
+\end{figure*}
 
 \begin{table}[!t]
 	\caption{Valor e nível de cada métrica}
@@ -47,11 +57,19 @@ A Tabela~\ref{tab:resultados} traz o valor e o nível de cada métrica, que é t
 
 \textbf{Capacidade de Interação.} Os participantes concluíram sem ajuda 25 das 30 tentativas e se recuperaram sozinhos de 13 dos 16 erros, mas levaram, em média, 4,39 vezes o tempo do especialista (8,48 vezes em T4), fizeram 1,46 vez os cliques do caminho mínimo e erraram a primeira escolha de menu em 8 das 30 tentativas. Só 40\% interpretaram sem a legenda o código de horário de T2 (``24M34''). Nenhuma pontuação SUS individual alcançou o nível Regular (de 17,5 a 45,0). Na acessibilidade, o WAVE encontrou 79 erros nas seis páginas, 37 deles na Turma Virtual; na inspeção manual, o menu principal (Ensino) não recebe o foco do teclado e é anunciado pelo leitor de tela sem nome, de modo que T1, T3, T4 e T6, que começam por ele, não podem ser feitas sem mouse. O sistema tratou cinco dos seis cenários de erro; o não tratado é a sessão expirada, que leva de volta ao portal sem mensagem.
 
-\textbf{Flexibilidade.} No computador, as seis tarefas funcionaram nos quatro navegadores do plano (Chrome, Firefox, Edge e Safari/WebKit). No celular e no tablet, nenhuma página se adapta: as páginas não declaram a \textit{viewport} (\texttt{<meta name=viewport>}) e têm \textit{layout} de 980~px, que o navegador reduz a 37\% da escala em 360~px e a 78\% em 768~px. A menor fonte efetiva fica entre 2,9 e 3,8~px em 360~px, todos os 1.063 textos ficam abaixo dos 12~px da ficha, e o item Ensino do menu vira um alvo de 22,8~$\times$~8,8~px. No celular real, as seis tarefas levaram 110,2~s, contra 69,1~s no computador (1,59 vez), com as maiores razões nas páginas de tabelas e menus: T2 (2,03), T5 (1,96) e T6 (1,89). No questionário, os cinco participantes disseram usar o SIGAA no celular e precisar de \textit{zoom} e rolagem lateral.
+\textbf{Flexibilidade.} No computador, as seis tarefas funcionaram nos quatro navegadores do plano (Chrome, Firefox, Edge e Safari/WebKit). No celular e no tablet, nenhuma página se adapta: as páginas não declaram a \textit{viewport} (\texttt{<meta name=viewport>}) e têm \textit{layout} de 980~px, que o navegador reduz a 37\% da escala em 360~px e a 78\% em 768~px. A menor fonte efetiva fica entre 2,9 e 3,8~px em 360~px, todos os 1.063 textos ficam abaixo dos 12~px da ficha, e o item Ensino do menu vira um alvo de 22,8~$\times$~8,8~px. No celular real (Samsung Galaxy S25 Ultra, com o Chrome e a mesma rede Wi-Fi do computador), as seis tarefas levaram 110,2~s, contra 69,1~s no computador (1,59 vez), com as maiores razões nas páginas de tabelas e menus: T2 (2,03), T5 (1,96) e T6 (1,89). No questionário, os cinco participantes disseram usar o SIGAA no celular e precisar de \textit{zoom} e rolagem lateral.
 
 \subsection{Hipóteses e julgamento}
 
-\textbf{Hipóteses.} Foram confirmadas H1, H4, H7, H10, H12, H15 e H16 (7) e refutadas H2, H3, H5, H6, H8, H9, H11, H13 e H14 (9); nenhuma ficou inconclusiva. H5 foi refutada pelo recorte dos calouros: eles concluíram 10 das 12 tentativas (83,3\%), o mesmo que os estudantes do meio ou do fim do curso, e não menos de 65\%, como previsto; a diferença entre os grupos apareceu na satisfação (SUS médio de 22,5 contra 39,2). As refutações para pior (H2, H3, H6, H11 e H13) concentram-se no tempo, na satisfação, na acessibilidade manual e no uso de ferramentas externas: a Fase 1 tratava o SIGAA como ``usável, porém trabalhoso'', e os dados mostram que ele é mais demorado, menos satisfatório e mais dependente do mouse do que isso. As refutações para melhor (H5, H8, H9 e H14) estão na conclusão pelos calouros, na recuperação de erros, no tratamento de cenários de erro e na compatibilidade entre navegadores.
+\textbf{Hipóteses.} A Fig.~\ref{fig:hipoteses} compara o nível previsto e o obtido em cada hipótese. Foram confirmadas H1, H4, H7, H10, H12, H15 e H16 (7) e refutadas H2, H3, H5, H6, H8, H9, H11, H13 e H14 (9); nenhuma ficou inconclusiva. H5 foi refutada pelo recorte dos calouros: eles concluíram 10 das 12 tentativas (83,3\%), o mesmo que os estudantes do meio ou do fim do curso, e não menos de 65\%, como previsto; a diferença entre os grupos apareceu na satisfação (SUS médio de 22,5 contra 39,2). As refutações para pior (H2, H3, H6, H11 e H13) concentram-se no tempo, na satisfação, na acessibilidade manual e no uso de ferramentas externas: a Fase 1 tratava o SIGAA como ``usável, porém trabalhoso'', e os dados mostram que ele é mais demorado, menos satisfatório e mais dependente do mouse do que isso. As refutações para melhor (H5, H8, H9 e H14) estão na conclusão pelos calouros, na recuperação de erros, no tratamento de cenários de erro e na compatibilidade entre navegadores.
+
+\begin{figure*}[!t]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figuras/hipoteses.png}
+	\caption{Nível previsto por cada hipótese (círculo vazio) e nível obtido pela métrica (círculo cheio). Quando coincidem, a hipótese foi confirmada.}
+	\label{fig:hipoteses}
+	\fonte{elaborado pela equipe a partir de \texttt{dados/consolidados/metricas.csv} e das hipóteses da Fase 2.}
+\end{figure*}
 
 \textbf{Julgamento.} A Tabela~\ref{tab:julgamento} aplica as etapas 2 e 3 dos critérios de julgamento: a pontuação do objetivo é a média dos níveis das questões; a característica atende com média de pelo menos 2 e nenhuma questão Insatisfatória, e não atende com média abaixo de 1.
 

@@ -16,7 +16,7 @@ Repositório de documentação do Projeto - Turma 02 - Adele Goldstine.
 
 - **PDF:** [`artigo/artigo.pdf`](artigo/artigo.pdf)
 - **Fonte LaTeX (modelo IEEE):** [`artigo/`](artigo/)
-- **Overleaf:** <https://www.overleaf.com/project/6b04809b6bd87c703701ebf4/share#ec4b766bf0e081e6b89f4427f7486bd96f1c4c0347d4e6d0>
+- **Overleaf:** <https://www.overleaf.com/project/6b0636056d70df578eb596a6/share#a607a496e6e275668c3d3387d7f5565e9f7174f64128ad38>
 
 ## Como executar localmente
 
