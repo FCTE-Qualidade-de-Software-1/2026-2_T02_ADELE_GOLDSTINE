@@ -633,8 +633,10 @@ def dashboard_markdown(repo_url=""):
     for aviso in sorted(AVISOS):
         print(f"esforco.py: {aviso}", file=sys.stderr)
         blocos.append(f'<p class="esforco-vazio">⚠ {_html(aviso)}</p>')
-    for entrega in sorted(entregas):
-        registros = entregas[entrega]
+    # O bloco geral vem primeiro e soma os registros de todas as entregas
+    blocos_painel = [(f"Geral ({' + '.join(sorted(entregas))})", [r for e in sorted(entregas) for r in entregas[e]])]
+    blocos_painel += [(e, entregas[e]) for e in sorted(entregas)]
+    for entrega, registros in blocos_painel:
         totais, categorias = somar(registros)
         origens = defaultdict(float)
         for r in registros:
